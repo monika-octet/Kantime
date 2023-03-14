@@ -2,6 +2,7 @@ html {
     font-size: 13px;
     font-weight: 400;
     color: #2e333a;
+    height: 100vh;
 }
 
 body {
@@ -10,6 +11,7 @@ body {
     font-weight: 400;
     color: #2e333a;
     background: #FAFAFA;
+    height: 100vh;
 }
 
 .profile-circle {
@@ -296,7 +298,7 @@ body {
     padding: 0px;
     gap: 10px;
     padding: 15px;
-    height: calc(100vh - 76px);
+    height: calc(100vh - 56px);
     overflow: hidden;
 }
 
@@ -717,10 +719,10 @@ body {
     margin-bottom: 10px;
 }
 
-.assignment-title-row{
+.assignment-title-row {
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 6;
 }
 
 .assignment-content-header {
@@ -733,8 +735,8 @@ body {
     height: 89px;
     background: #F4F8FD;
     position: sticky;
-    top: 44px;
-    z-index: 1;
+    top: 34px;
+    z-index: 5;
 }
 
 .gap-10-flex-column {
@@ -869,6 +871,35 @@ body {
     letter-spacing: 0.01em;
     color: #3D4148;
     border-radius: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 30px;
+}
+
+.arrow-and-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+}
+
+.tasks-count {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.01em;
+    color: #6C737F;
+}
+
+.accordion-button::after {
+    display: none;
+}
+
+.accordion-button.collapsed .accordion-arrow-icon {
+    transform: rotate(90deg);
 }
 
 .accordion-button:not(.collapsed) {
@@ -939,7 +970,11 @@ body {
     color: #6C737F;
 }
 
-.assignment-tab-content{
+.assignment-tab-content {
     height: calc(100% - 50px);
     overflow-y: scroll;
+}
+
+.assignment-tab-content::-webkit-scrollbar {
+    display: none;
 }
