@@ -978,3 +978,33 @@ body {
 .assignment-tab-content::-webkit-scrollbar {
     display: none;
 }
+
+.custom-progress {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px 0px;
+    gap: 5px;
+}
+
+.progress-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.01em;
+    color: #A1A7AF;
+    text-align: left;
+}
+
+.progress-bar {
+    height: 5px;
+    border-radius: 4px;
+}
+
+.bg-success-table{
+    background: #86CC4B;
+}
+
+.bg-yellow-table{
+    background: #FFBA3F;
+}
