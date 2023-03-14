@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="17" height="17" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="_3669361_delete_ic_icon" data-name="3669361_delete_ic_icon" clip-path="url(#clip-path)">
+    <g id="_3669361_delete_ic_icon-2" data-name="3669361_delete_ic_icon">
+      <path id="Path_9209" data-name="Path 9209" d="M10.708,17.333a1.416,1.416,0,0,0,1.417,1.417h5.667a1.416,1.416,0,0,0,1.417-1.417v-8.5h-8.5ZM19.917,6.708H17.438L16.729,6H13.188l-.708.708H10V8.125h9.917Z" transform="translate(-6.458 -3.875)" fill="#fff"/>
+      <path id="Path_9210" data-name="Path 9210" d="M0,0H17V17H0Z" fill="none"/>
+    </g>
+  </g>
+</svg>

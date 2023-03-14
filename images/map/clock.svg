@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <g id="Clock" transform="translate(-241 -283)">
+    <rect id="Rectangle_3788" data-name="Rectangle 3788" width="25" height="25" rx="3" transform="translate(241 283)" fill="#213449" opacity="0.1"/>
+    <path id="Icon_awesome-clock" data-name="Icon awesome-clock" d="M6.563.563a6,6,0,1,0,6,6A6,6,0,0,0,6.563.563Zm1.381,8.47L5.81,7.482a.292.292,0,0,1-.119-.235V3.175a.291.291,0,0,1,.29-.29H7.143a.291.291,0,0,1,.29.29V6.507L8.97,7.625a.29.29,0,0,1,.063.406l-.682.939A.292.292,0,0,1,7.944,9.033Z" transform="translate(247.437 288.437)" fill="#546071"/>
+  </g>
+</svg>
