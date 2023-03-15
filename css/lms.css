@@ -470,12 +470,7 @@ a.breadcrumb-page {
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
-    /* identical to box height, or 125% */
-
     letter-spacing: 0.01em;
-
-    /* Grayscale Blue/500 */
-
     color: #868C97;
 }
 
@@ -483,12 +478,7 @@ a.breadcrumb-page {
     font-weight: 600;
     font-size: 13px;
     line-height: 16px;
-    /* identical to box height, or 123% */
-
     letter-spacing: 0.01em;
-
-    /* Grayscale Blue/800 */
-
     color: #3D4148;
 }
 
@@ -1064,4 +1054,113 @@ a.breadcrumb-page {
 
 .bg-yellow-table {
     background: #FFBA3F;
+}
+
+.add-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    gap: 5px;
+}
+
+.wh-18px-icon-holder {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.agency-setting-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 65px;
+    background: #F4F8FD;
+    border: 1px solid #ECEDEF;
+    border-radius: 4px;
+}
+
+.setting-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+}
+
+.setting-span-upper {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.01em;
+    color: #6C737F;
+}
+
+.setting-span-lower {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.01em;
+    color: #545B64;
+}
+
+.w-646px {
+    max-width: 646px;
+}
+
+.custom-modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+}
+
+.btn-secondary {
+    background: #BDC1C7;
+    border-color: #BDC1C7;
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+}
+
+.btn-secondary:hover {
+    background: #BDC1C7;
+    border-color: #BDC1C7;
+}
+
+.register-agency-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+}
+
+.delete-dropdown-link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height, or 121% */
+
+    letter-spacing: 0.01em;
+
+    /* Error/100 */
+
+    color: #FC2D2D !important;
+}
+
+.radio-text-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
 }
