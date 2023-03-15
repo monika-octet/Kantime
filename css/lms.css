@@ -49,11 +49,11 @@ body {
     height: 56px;
     position: relative;
     z-index: 9;
+    padding: 0 30px;
 }
 
 .kantime-logo {
-    padding: 15px;
-    background: #084093;
+    padding: 15px 0;
 }
 
 .header-right-menu>a {
@@ -86,6 +86,50 @@ body {
 
 
 
+
+.table-pattern-4 {
+    border: 1px solid #ECEDEF;
+    border-radius: 4px;
+}
+
+.table-pattern-4 thead tr th {
+    background: #FAFAFA;
+    color: #A1A7AF;
+    padding: 8px 15px;
+    border: none;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+
+.table-pattern-4 tbody tr td {
+    background: #FFFFFF;
+    padding: 12px 15px;
+    font-size: 13px;
+    color: #546071;
+    border-bottom: 1px solid #ECEDEF;
+
+}
+
+
+
+.table-pattern-4 tbody tr td h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #25282C;
+    margin-bottom: 5px;
+}
+
+.table-pattern-4 tbody tr td p {
+    font-size: 14px;
+    color: #545B64;
+    margin-bottom: 5px;
+}
+
+.table-pattern-4 tbody tr td p:last-of-type {
+    margin-bottom: 0px;
+}
 
 
 
@@ -120,11 +164,9 @@ body {
 
 }
 
-
-
 .table-pattern-5 tbody tr td h3 {
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
     color: #25282C;
     margin-bottom: 5px;
 }
@@ -137,6 +179,11 @@ body {
 
 .table-pattern-5 tbody tr td p:last-of-type {
     margin-bottom: 0px;
+}
+
+.table-pattern-5 .btn-link {
+    font-weight: 500;
+    font-size: 13px;
 }
 
 .status {
@@ -242,6 +289,7 @@ body {
     font-size: 14px;
     letter-spacing: 0.01em;
     border-radius: 4px;
+    height: 34px;
 }
 
 .search-input {
@@ -307,8 +355,8 @@ a.breadcrumb-page {
     padding: 0px;
     gap: 10px;
     padding: 15px;
-    height: calc(100vh - 56px);
-    overflow: hidden;
+    /* height: calc(100vh - 56px);
+    overflow: hidden; */
 }
 
 .details-section {
@@ -500,7 +548,7 @@ a.breadcrumb-page {
     justify-content: space-between;
     align-items: flex-start;
     padding: 0px;
-    gap: 29px;
+    gap: 15px;
 }
 
 .two-columns {
@@ -509,7 +557,7 @@ a.breadcrumb-page {
     justify-content: space-between;
     align-items: center;
     padding: 0px;
-    gap: 20px;
+    gap: 15px;
     align-items: stretch;
 }
 
@@ -980,8 +1028,8 @@ a.breadcrumb-page {
 }
 
 .assignment-tab-content {
-    height: calc(100% - 50px);
-    overflow-y: scroll;
+    /* height: calc(100% - 50px);
+    overflow-y: scroll; */
 }
 
 .assignment-tab-content::-webkit-scrollbar {

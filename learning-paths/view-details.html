@@ -19,7 +19,15 @@
 
     <!-- bootstrap css -->
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
-
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/bootstrap-multiselect.min.css"
+    />
+    <link
+      href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css "
+      rel="stylesheet"
+    />
     <!-- custom css -->
     <link rel="stylesheet" type="text/css" href="../css/common.css" />
     <link rel="stylesheet" type="text/css" href="../css/menu.css" />
@@ -144,19 +152,22 @@
                   <ul
                     class="dropdown-menu"
                     aria-labelledby="dropdownMenuButton1"
-                    style=""
                   >
                     <li>
                       <a
                         class="dropdown-item"
-                        href="#"
                         data-bs-toggle="modal"
-                        data-bs-target="#modal-add-label"
+                        data-bs-target="#modal-edit"
                         >Edit</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item">Change Assignment Group</a>
+                      <a
+                        class="dropdown-item"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modal-change-assignment-group"
+                        >Change Assignment Group</a
+                      >
                     </li>
                     <li><a class="dropdown-item">Export</a></li>
                   </ul>
@@ -1964,6 +1975,432 @@
         </div>
       </div>
     </main>
+    <!-- model Edit -->
+    <div
+      class="modal fade"
+      id="modal-edit"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Learning Path Details
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="alert alert-primary text-center" role="alert">
+              #101 Learning Path Name will be here more here
+            </div>
+            <div class="row mt-5 mb-2">
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Status</label>
+                <div class="form-check form-check-inline" id="manual-checkin">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio1"
+                    value="option1"
+                  />
+                  <label class="form-check-label pe" for="inlineRadio1"
+                    >Active</label
+                  >
+                </div>
+                <div class="form-check form-check-inline" id="fob-checkin">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio2"
+                    value="option2"
+                  />
+                  <label class="form-check-label pe" for="inlineRadio2"
+                    >Inacative</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Product</label>
+                <select class="single-select">
+                  <option>Select type of product</option>
+                  <option>Product 1</option>
+                  <option>Product 1</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Role Type</label>
+                <select class="single-select">
+                  <option>Select type of product</option>
+                  <option>Product 1</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Category</label>
+                <select class="single-select">
+                  <option>Select type of product</option>
+                  <option>Product 1</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Duration</label>
+                <select class="single-select">
+                  <option>Select type of product</option>
+                  <option>Product 1</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Discipline</label>
+                <select class="single-select">
+                  <option>Select type of product</option>
+                  <option>Product 1</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Validity</label>
+                <select class="single-select">
+                  <option>Select type of product</option>
+                  <option>Product 1</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Care Type</label>
+                <select class="single-select">
+                  <option>Select type of product</option>
+                  <option>Product 1</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Certification code</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter certification code"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="add-label-save"
+              data-bs-target="#exampleModalToggle2"
+              data-bs-toggle="modal"
+              data-bs-dismiss="modal"
+            >
+              Continue
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- model Edit Continue-->
+    <div
+      class="modal fade"
+      id="exampleModalToggle2"
+      aria-hidden="true"
+      aria-labelledby="exampleModalToggleLabel2"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalToggleLabel2">
+              Add Assignment Group
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="d-flex align-items-center mb-4">
+              <div class="search-input" style="width: 340px">
+                <input type="text" class="form-control" placeholder="Search" />
+                <img src="../images/search.svg" alt="" />
+              </div>
+              <button class="btn btn-outline ms-2">
+                <img src="../images/filter.svg" class="me-2" />Filter
+              </button>
+            </div>
+            <div class="alert alert-primary text-center mb-4" role="alert">
+              Choose one Assignment group to add in “Learning Path Name”
+            </div>
+            <table class="table align-middle table-pattern-5">
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="radio"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <p class="text-dark">
+                          <span class="me-2 text-12 text-light-4">#ID_101</span
+                          >Assignment Group 1
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="radio"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <p class="text-dark">
+                          <span class="me-2 text-12 text-light-4">#ID_101</span
+                          >Assignment Group 2
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="radio"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <p class="text-dark">
+                          <span class="me-2 text-12 text-light-4">#ID_101</span
+                          >Assignment Group 3
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button class="btn btn-primary" data-bs-dismiss="modal">
+              Save Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- model Edit Continue-->
+    <div
+      class="modal fade"
+      id="modal-change-assignment-group"
+      aria-hidden="true"
+      aria-labelledby="exampleModalToggleLabel2"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalToggleLabel2">
+              Change Assignment group in SN Adult Admission
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="d-flex align-items-center mb-4">
+              <div class="search-input" style="width: 340px">
+                <input type="text" class="form-control" placeholder="Search" />
+                <img src="../images/search.svg" alt="" />
+              </div>
+              <button class="btn btn-outline ms-2">
+                <img src="../images/filter.svg" class="me-2" />Filter
+              </button>
+            </div>
+            <div class="alert alert-primary text-center mb-4" role="alert">
+              Choose one Assignment group to add in “Learning Path Name”
+            </div>
+            <table class="table align-middle table-pattern-4">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Product & category</th>
+                  <th>Learning Paths</th>
+                  <th>Assignments</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="radio"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>SN Adult Admission</h3>
+                        <p>#Code_101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home health</p>
+                    <p>Clinician</p>
+                  </td>
+                  <td class="text-center"><p>10</p></td>
+                  <td class="text-center"><p>3</p></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="radio"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>SN Adult Admission</h3>
+                        <p>#Code_101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home health</p>
+                    <p>Clinician</p>
+                  </td>
+                  <td class="text-center"><p>10</p></td>
+                  <td class="text-center"><p>3</p></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="radio"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>SN Adult Admission</h3>
+                        <p>#Code_101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home health</p>
+                    <p>Clinician</p>
+                  </td>
+                  <td class="text-center"><p>10</p></td>
+                  <td class="text-center"><p>3</p></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="radio"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>SN Adult Admission</h3>
+                        <p>#Code_101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home health</p>
+                    <p>Clinician</p>
+                  </td>
+                  <td class="text-center"><p>10</p></td>
+                  <td class="text-center"><p>3</p></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+              id="success"
+            >
+              Add Assignment
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- JavaScript -->
     <script type="text/javascript" src="../js/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
@@ -2086,6 +2523,11 @@
     </script>
     <!-- custom initialize js -->
     <script type="text/javascript" src="../js/menu.js"></script>
+    <script
+      type="text/javascript"
+      src="../js/bootstrap-multiselect.min.js"
+    ></script>
+    <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js "></script>
     <script type="text/javascript" src="../js/custom.js"></script>
   </body>
 </html>

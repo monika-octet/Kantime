@@ -144,6 +144,10 @@ h3 {
     color: #8B939D;
 }
 
+.text-light-4 {
+    color: #6C737F;
+}
+
 .bg-white {
     background: #fff;
 }
@@ -162,8 +166,9 @@ h3 {
     background: #F4F5F6;
     border-radius: 2px;
     padding: 0px;
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px !important;
+    line-height: 10px !important;
 }
 
 .btn-transparent {
@@ -233,7 +238,7 @@ h3 {
 }
 
 .btn-link {
-    color: #1059C6;
+    color: #0E479A;
     text-decoration: none;
 }
 
@@ -247,9 +252,9 @@ h3 {
 }
 
 .btn-primary {
-    background: #1059C6;
+    background: #135CC8;
     color: #fff;
-    border: 1px solid #1059C6;
+    border: 1px solid #135CC8;
 }
 
 .btn-primary:hover {
@@ -360,13 +365,26 @@ h3 {
 }
 
 .modal-content {
-    border-radius: 0;
+    border-radius: 4px;
 }
 
 .modal-header {
     background: #fff;
     color: #25282C;
-    border-radius: 0;
+    border-radius: 4px 4px 0 0;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ECEDEF;
+}
+
+.modal-header .modal-title {
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    color: #25282C
+}
+
+.modal-footer {
+    border-top: 1px solid #ECEDEF;
 }
 
 .modal-body {
@@ -386,7 +404,7 @@ h3 {
 }
 
 .form-control {
-    border: 1px solid #D3D3D3;
+    border: 1px solid #ECEDEF;
     border-radius: 0px;
     height: 37px;
     font-size: 14px;
@@ -401,7 +419,7 @@ h3 {
 }
 
 .form-select {
-    border: 1px solid #D3D3D3;
+    border: 1px solid #ECEDEF;
     border-radius: 0px;
     height: 37px;
     background-image: url("../images/dd-2.svg");
@@ -416,9 +434,10 @@ h3 {
 }
 
 label.label {
-    font-size: 14px;
-    font-weight: 500;
-    color: #213449;
+    font-size: 13px;
+    font-weight: 600;
+    color: #3D4148;
+    letter-spacing: 0.01em;
     margin-bottom: 8px;
 }
 
@@ -431,7 +450,7 @@ label {
 }
 
 .modal-xl.no-grid .modal-content {
-    display: block
+    display: block;
 }
 
 .form-control:disabled,
@@ -781,7 +800,7 @@ input.md-mobile-picker-input {
     border: 1px solid #EFEFEF;
     border-radius: 0;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 .daterangepicker::before,
@@ -807,7 +826,7 @@ input.md-mobile-picker-input {
 }
 
 .modal-sm {
-    max-width: 650px;
+    max-width: 510px;
 }
 
 #loader {
@@ -1193,56 +1212,29 @@ li.amsify-list-item {
 }
 
 /* sweet alert */
-.swal-modal {
-    border-radius: 0px;
+.swal2-modal {
+    border-radius: 8px;
+    height: 230px;
+    padding-top: 20px !important;
 }
 
-.swal-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: #243756;
+.swal2-title {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    color: #545B64;
     padding-top: 5px;
 }
 
-.swal-text {
-    font-size: 14px;
-    font-weight: 400;
-    color: #243756;
+.swal2-icon.swal2-success .swal2-success-ring {
+    border: .25em solid rgb(211, 226, 247) !important;
 }
 
-.swal-footer {
-    text-align: center;
+.swal2-icon.swal2-success [class^="swal2-success-line"] {
+    background-color: #0747A6 !important;
 }
 
-.swal-button {
-    font-size: 14px;
-    font-weight: 400;
-    border-radius: 2px;
-    padding: 4px 25px;
-}
-
-.swal-button:focus {
-    box-shadow: none;
-    outline: none;
-}
-
-.swal-button--confirm {
-    background: #2558A8;
-}
-
-.swal-button--confirm:hover,
-.swal-button--confirm:not([disabled]):hover {
-    background: #163c7a;
-}
-
-.swal-button--cancel {
-    border: 1px solid #0D87E2;
-    color: #243756;
-    background: #F0F7FC;
-}
-
-.swal-button--cancel:not([disabled]):hover {
-    background-color: #e0f0fc
+.swal2-modal .swal2-icon.swal2-success {
+    color: #0747A6 !important;
 }
 
 /* datalist */
@@ -1345,6 +1337,7 @@ select:valid~span {
 
 .multiselect-container.dropdown-menu {
     padding: 0;
+    width: 100%;
 }
 
 .multiselect-option.dropdown-item:hover,
@@ -1366,6 +1359,14 @@ select:valid~span {
 
 .multiselect-container .multiselect-option {
     border-bottom: 1px solid #F0F0F0;
+}
+
+.single-select~.btn-group .form-check {
+    padding-left: 0;
+}
+
+.single-select~.btn-group .form-check-input {
+    display: none;
 }
 
 .status.square {

@@ -1,3 +1,35 @@
 @media (max-width:1199px) {}
 
 @media (max-width:992px) {}
+
+@media (max-width:767px) {
+    .transparent-tab .nav-link {
+        padding: 10px;
+    }
+
+    .sub-header .btn span {
+        display: none;
+    }
+
+    .sub-header .btn img {
+        margin: 0 !important;
+    }
+
+    .sub-header {
+        padding-bottom: 10px;
+    }
+
+    .sub-header .nav-tabs {
+        margin-bottom: 15px;
+    }
+
+    .main-header {
+        padding: 0 0 0 15px;
+    }
+
+    .table-pattern-5 tbody tr td h3,
+    .table-pattern-5 tbody tr td p {
+        width: max-content;
+        word-break: keep-all;
+    }
+}
