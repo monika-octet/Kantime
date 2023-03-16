@@ -407,7 +407,7 @@ h3 {
     border: 1px solid #ECEDEF;
     border-radius: 0px;
     height: 37px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .form-control:focus {
@@ -455,8 +455,8 @@ label {
 
 .form-control:disabled,
 .form-control[readonly] {
-    background-color: #E7EFF7;
-    border: 1px solid #E7EFF7;
+    background: #F4F5F6;
+    border: 1px solid #ECEDEF;
 }
 
 .form-transparent,
