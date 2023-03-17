@@ -26,6 +26,7 @@
 </head>
 
 <body>
+    <!-- Navbar Start -->
     <header class="header-wrap">
         <div class="main-header d-flex justify-content-between">
             <div class="d-flex">
@@ -87,15 +88,20 @@
             </div>
         </div>
     </header>
+    <!-- Navbar ENd -->
 
     <main class="main-content">
+        <!-- Breadcrumb Start -->
         <div class="mb-0 breadcrumb">
             <a href="assignment.html" class="breadcrumb-page">Assignments</a>
             <span class="breadcrumb-icon"><img src="../images/breadcrumb-arrow.svg" /></span>
             <span class="breadcrumb-page">Assignment 1</span>
         </div>
+        <!-- Breadcrumb End -->
+
 
         <div class="details-section w-100">
+            <!-- left section start -->
             <div class="left-detail-section h-100 min-w-310px">
                 <div class="upper-content w-100">
                     <div class="title-with-more w-100">
@@ -104,6 +110,7 @@
                             <span class="text-light-3 text-14">ID_ADULT_SOC</span>
                             <span class="status published-blue">Published</span>
                         </div>
+                        <!-- dropdown start -->
                         <div class="more-icon">
                             <div class="dropdown">
                                 <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
@@ -129,6 +136,7 @@
                                 </ul>
                             </div>
                         </div>
+                        <!-- dropdown end -->
                     </div>
 
                     <div class="duration-validity">
@@ -166,8 +174,10 @@
                     </div>
                 </div>
             </div>
+            <!-- left section end -->
 
             <div class="right-detail-section w-100 h-100">
+                <!-- tabs start -->
                 <div class="tabs-nav w-100">
                     <ul class="nav nav-tabs transparent-tab" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
@@ -186,8 +196,11 @@
                         </li>
                     </ul>
                 </div>
+                <!-- tabs end -->
+
 
                 <div class="tab-content assignment-tab-content w-100" id="myTabContent">
+                    <!-- Task tab content start -->
                     <div class="tab-pane w-100 fade show active" id="overview" role="tabpanel"
                         aria-labelledby="overview-tab">
                         <div class="title-row assignment-title-row bg-white w-100 justify-content-between mb-10px">
@@ -378,7 +391,9 @@
                             </table>
                         </div>
                     </div>
+                    <!-- Task tab content end -->
 
+                    <!-- Description tab content start -->
                     <div class="tab-pane w-100 fade" id="learning-paths" role="tabpanel"
                         aria-labelledby="assignment-tab">
                         <div class="title-row assignment-title-row bg-white w-100 justify-content-between mb-10px">
@@ -414,13 +429,14 @@
                             </p>
                         </div>
                     </div>
+                    <!-- Description tab content end -->
                 </div>
             </div>
         </div>
     </main>
 
 
-    <!-- Add Assignment Group-->
+    <!-- Add Assignment Group Modal -->
     <div class="modal fade" id="add-assignment-group" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
         tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -714,7 +730,7 @@
         </div>
     </div>
 
-    <!-- Add Learning Path Details -->
+    <!-- Add Learning Path Details Modal  -->
     <div class="modal fade" id="edit-modal-view-details-assignment" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-sm">
@@ -821,6 +837,8 @@
             </div>
         </div>
     </div>
+
+    
     <!-- JavaScript -->
     <script type="text/javascript" src="../js/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
