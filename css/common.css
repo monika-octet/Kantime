@@ -17,6 +17,11 @@ h3 {
     color: #181C32;
 }
 
+.title-2 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
 .tag-list {
     margin-bottom: 0;
 }
@@ -146,6 +151,10 @@ h3 {
 
 .text-light-4 {
     color: #6C737F;
+}
+
+.text-white {
+    color: #fff;
 }
 
 .bg-white {
@@ -1101,7 +1110,7 @@ li.amsify-list-item {
 }
 
 .bg-blue {
-    background: #054FC3
+    background: #0E479A
 }
 
 .bg-lightblue {
@@ -1393,4 +1402,8 @@ select:valid~span {
     letter-spacing: 0.01em;
     color: #545B64;
     padding: 5px;
+}
+
+.container-sm {
+    max-width: 1000px;
 }

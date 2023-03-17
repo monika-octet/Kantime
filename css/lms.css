@@ -1688,6 +1688,8 @@ label span {
     justify-content: center;
 }
 
-.w-22px{
+.w-22px {
     width: 22px;
 }
+
+.preview-info-list {}
