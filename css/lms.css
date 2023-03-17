@@ -2,7 +2,7 @@ html {
     font-size: 13px;
     font-weight: 400;
     color: #2e333a;
-    height: 100vh;
+
 }
 
 body {
@@ -11,7 +11,7 @@ body {
     font-weight: 400;
     color: #2e333a;
     background: #FAFAFA;
-    height: 100vh;
+
 }
 
 .profile-circle {
@@ -41,6 +41,12 @@ body {
     line-height: 56px;
     font-weight: 700;
     padding: 0;
+}
+
+.header-wrap {
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 .main-header {
@@ -359,8 +365,7 @@ a.breadcrumb-page {
     padding: 0px;
     gap: 10px;
     padding: 15px;
-    height: calc(100vh - 56px);
-    overflow: hidden;
+
 }
 
 .details-section {
@@ -369,14 +374,10 @@ a.breadcrumb-page {
     align-items: flex-start;
     padding: 0px;
     gap: 15px;
-    height: calc(100vh - 126px);
-    /* overflow-y: scroll; */
+
 }
 
-/* .tab-content {
-    height: calc(100% - 50px);
-    overflow-y: scroll;
-} */
+
 
 .left-detail-section {
     display: flex;
@@ -389,7 +390,7 @@ a.breadcrumb-page {
     border-radius: 4px;
     max-width: 310px;
     position: sticky;
-    top: 0;
+    top: 75px;
     align-self: stretch;
 }
 
@@ -666,7 +667,7 @@ a.breadcrumb-page {
     flex-direction: row;
     align-items: center;
     padding: 0px;
-    gap: 10px;
+    gap: 8px;
 }
 
 .list-item-text {
@@ -1827,4 +1828,12 @@ table tbody tr:hover {
 
 table tbody tr:hover h3 {
     color: #135CC8;
+}
+
+.modal-body tr:hover p.text-dark {
+    color: #135CC8 !important;
+}
+
+.modal-body tr:hover p.text-dark span {
+    color: #6C737F !important;
 }

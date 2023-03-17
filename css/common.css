@@ -1407,3 +1407,7 @@ select:valid~span {
 .container-sm {
     max-width: 1000px;
 }
+
+.form-check-input[type="checkbox"] {
+    cursor: pointer;
+}
