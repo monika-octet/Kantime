@@ -1,68 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#0D87E2" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/bootstrap-multiselect.min.css"
+    />
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/lms.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <title>KanTime</title>
+  </head>
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
-  <meta name="theme-color" content="#0D87E2" />
-  <link rel="shortcut icon" href="images/favicon.png" />
-  <!-- fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@100&display=swap"
-    rel="stylesheet" />
-  <!-- bootstrap css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="css/bootstrap-multiselect.min.css" />
-  <!-- custom css -->
-  <link rel="stylesheet" type="text/css" href="css/common.css" />
-  <link rel="stylesheet" type="text/css" href="css/menu.css" />
-  <link rel="stylesheet" type="text/css" href="css/lms.css" />
-  <link rel="stylesheet" type="text/css" href="css/responsive.css" />
-  <title>KanTime</title>
-</head>
-
-<body>
-  <header class="header-wrap">
-    <div class="main-header d-flex justify-content-between">
-      <div class="d-flex">
-        <div class="kantime-logo">
-          <img src="images/logo-full.svg" alt="" />
+  <body>
+    <header class="header-wrap">
+      <div class="main-header d-flex justify-content-between">
+        <div class="d-flex">
+          <div class="kantime-logo">
+            <img src="images/logo-full.svg" alt="" />
+          </div>
+          <div class="header-item-center">
+            <div class="overlay"></div>
+            <nav class="menu" id="menu">
+              <div class="menu-mobile-header">
+                <button type="button" class="menu-mobile-arrow">&lt;</button>
+                <div class="menu-mobile-title"></div>
+                <button type="button" class="menu-mobile-close">
+                  &#x2715;
+                </button>
+              </div>
+              <ul class="menu-section">
+                <li class="menu-item"><a href="#">Dashboard</a></li>
+                <li class="menu-item active">
+                  <a href="index.html">Learning Paths</a>
+                </li>
+                <li class="menu-item">
+                  <a href="assignments/assignment.html">Assignments</a>
+                </li>
+                <li class="menu-item">
+                  <a href="agencies/agencies.html">Agencies</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-        <div class="header-item-center">
-          <div class="overlay"></div>
-          <nav class="menu" id="menu">
-            <div class="menu-mobile-header">
-              <button type="button" class="menu-mobile-arrow">&lt;</button>
-              <div class="menu-mobile-title"></div>
-              <button type="button" class="menu-mobile-close">
-                &#x2715;
-              </button>
-            </div>
-            <ul class="menu-section">
-              <li class="menu-item"><a href="#">Dashboard</a></li>
-              <li class="menu-item active"><a href="index.html">Learning Paths</a></li>
-              <li class="menu-item"><a href="#">Assignments</a></li>
-              <li class="menu-item"><a href="agencies/agencies.html">Agencies</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <div>
-        <div class="d-flex align-items-center header-right-menu">
-          <a href="#" class="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notifications">
-            <img src="images/notification.svg" alt="notification" />
-          </a>
-          <a href="#" class="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Messages">
-            <img src="images/settings.svg" alt="mail" />
-          </a>
-          <a tabindex="0" class="profile" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
-            data-bs-html="true" data-bs-custom-class="profile-modal" title="
+        <div>
+          <div class="d-flex align-items-center header-right-menu">
+            <a
+              href="#"
+              class=""
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              title="Notifications"
+            >
+              <img src="images/notification.svg" alt="notification" />
+            </a>
+            <a
+              href="#"
+              class=""
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              title="Messages"
+            >
+              <img src="images/settings.svg" alt="mail" />
+            </a>
+            <a
+              tabindex="0"
+              class="profile"
+              role="button"
+              data-bs-toggle="popover"
+              data-bs-trigger="focus"
+              data-bs-html="true"
+              data-bs-custom-class="profile-modal"
+              title="
                   <div>
                      <h3>John Doe</h3>
                      <p>johndoe1868</p>
-                  </div>" data-bs-content='
+                  </div>"
+              data-bs-content='
                      <ul class="list-unstyled">
                         <li>
                            <a>Last Login at:
@@ -72,1262 +106,1751 @@
                         <li><a href="#">Edit My Profile</a></li>
                         <li><a href="login.html">Logout</a></li>
                      </ul>
-                  '>
-            <span class="profile-circle">J</span>
-          </a>
-          <button type="button" class="menu-mobile-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="sub-header d-flex align-items-center justify-content-between flex-column flex-md-row px-3">
-      <ul class="nav nav-tabs transparent-tab" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
-            role="tab" aria-controls="home" aria-selected="true">
-            All Learning Paths
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
-            role="tab" aria-controls="profile" aria-selected="false">
-            Recently Added
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button"
-            role="tab" aria-controls="contact" aria-selected="false">
-            Most Purchased
-          </button>
-        </li>
-      </ul>
-
-      <div class="d-flex align-items-center">
-        <div class="search-input">
-          <input type="text" class="form-control" placeholder="Search" />
-          <img src="images/search.svg" alt="" />
-        </div>
-        <button class="btn btn-outline ms-2">
-          <img src="images/filter.svg" class="me-2" /><span>Filter</span>
-        </button>
-        <button class="btn btn-primary-light ms-2">
-          <img src="images/export.svg" class="me-2" /><span>Export</span>
-        </button>
-        <button class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#modal-download">
-          <img src="images/download.svg" class="me-2" /><span>Download</span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main class="px-3">
-    <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-        <div class="table-responsive">
-          <table class="table align-middle table-pattern-5">
-            <thead>
-              <tr>
-                <th>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>Name</div>
-                  </div>
-                </th>
-                <th>Product & Category</th>
-                <th>Assignment Group</th>
-                <th class="text-center">Agencies</th>
-                <th class="text-center">Learners</th>
-                <th class="text-center">Status</th>
-                <th class="text-center">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>
-                      <h3>Learning Path Name will be here</h3>
-                      <p>#101</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <p>-</p>
-                </td>
-                <td>
-                  <p>-</p>
-                </td>
-                <td class="text-center">
-                  <p>-</p>
-                </td>
-                <td class="text-center">
-                  <p>-</p>
-                </td>
-                <td class="text-center">
-                  <span class="status yellow">New</span>
-                </td>
-                <td>
-                  <div class="d-flex align-items-center justify-content-center">
-                    <a href="learning-paths/view-details.html" class="btn btn-custom btn-link">
-                      View Details
-                    </a>
-                    <div class="dropdown">
-                      <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="images/dot.svg" />
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                          <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                            data-bs-target="#modal-add-label">Edit</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item">Change Assignment Group</a>
-                        </li>
-                        <li><a class="dropdown-item">Export</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>
-                      <h3>Learning Path Name will be here</h3>
-                      <p>#101</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <p>-</p>
-                </td>
-                <td>
-                  <p>-</p>
-                </td>
-                <td class="text-center">
-                  <p>-</p>
-                </td>
-                <td class="text-center">
-                  <p>-</p>
-                </td>
-                <td class="text-center">
-                  <span class="status yellow">New</span>
-                </td>
-                <td>
-                  <div class="d-flex align-items-center justify-content-center">
-                    <button class="btn btn-custom btn-link">
-                      View Details
-                    </button>
-                    <div class="dropdown">
-                      <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="images/dot.svg" />
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                          <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                            data-bs-target="#modal-add-label">Edit</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item">Change Assignment Group</a>
-                        </li>
-                        <li><a class="dropdown-item">Export</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>
-                      <h3>Learning Path Name will be here</h3>
-                      <p>#101</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <p>-</p>
-                </td>
-                <td>
-                  <p>-</p>
-                </td>
-                <td class="text-center">
-                  <p>-</p>
-                </td>
-                <td class="text-center">
-                  <p>-</p>
-                </td>
-                <td class="text-center">
-                  <span class="status yellow">New</span>
-                </td>
-                <td>
-                  <div class="d-flex align-items-center justify-content-center">
-                    <button class="btn btn-custom btn-link">
-                      View Details
-                    </button>
-                    <div class="dropdown">
-                      <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="images/dot.svg" />
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                          <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                            data-bs-target="#modal-add-label">Edit</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item">Change Assignment Group</a>
-                        </li>
-                        <li><a class="dropdown-item">Export</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>
-                      <h3>Learning Path Name will be here</h3>
-                      <p>#101</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <p>Home Health</p>
-                  <p>Clinical</p>
-                </td>
-                <td>
-                  <p>SN Adult Admission Process</p>
-                </td>
-                <td class="text-center">
-                  <p>50</p>
-                </td>
-                <td class="text-center">
-                  <p>1100</p>
-                </td>
-                <td class="text-center">
-                  <span class="status green">Active</span>
-                </td>
-                <td>
-                  <div class="d-flex align-items-center justify-content-center">
-                    <button class="btn btn-custom btn-link">
-                      View Details
-                    </button>
-                    <div class="dropdown">
-                      <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="images/dot.svg" />
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                          <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                            data-bs-target="#modal-add-label">Edit</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item">Change Assignment Group</a>
-                        </li>
-                        <li><a class="dropdown-item">Export</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>
-                      <h3>Learning Path Name will be here</h3>
-                      <p>#101</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <p>Home Health</p>
-                  <p>Clinical</p>
-                </td>
-                <td>
-                  <p>SN Adult Admission Process</p>
-                </td>
-                <td class="text-center">
-                  <p>50</p>
-                </td>
-                <td class="text-center">
-                  <p>1100</p>
-                </td>
-                <td class="text-center">
-                  <span class="status green">Active</span>
-                </td>
-                <td>
-                  <div class="d-flex align-items-center justify-content-center">
-                    <button class="btn btn-custom btn-link">
-                      View Details
-                    </button>
-                    <div class="dropdown">
-                      <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="images/dot.svg" />
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                          <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                            data-bs-target="#modal-add-label">Edit</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item">Change Assignment Group</a>
-                        </li>
-                        <li><a class="dropdown-item">Export</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>
-                      <h3>Learning Path Name will be here</h3>
-                      <p>#101</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <p>Home Health</p>
-                  <p>Clinical</p>
-                </td>
-                <td>
-                  <p>SN Adult Admission Process</p>
-                </td>
-                <td class="text-center">
-                  <p>50</p>
-                </td>
-                <td class="text-center">
-                  <p>1100</p>
-                </td>
-                <td class="text-center">
-                  <span class="status green">Active</span>
-                </td>
-                <td>
-                  <div class="d-flex align-items-center justify-content-center">
-                    <button class="btn btn-custom btn-link">
-                      View Details
-                    </button>
-                    <div class="dropdown">
-                      <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="images/dot.svg" />
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                          <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                            data-bs-target="#modal-add-label">Edit</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item">Change Assignment Group</a>
-                        </li>
-                        <li><a class="dropdown-item">Export</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>
-                      <h3>Learning Path Name will be here</h3>
-                      <p>#101</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <p>Home Health</p>
-                  <p>Clinical</p>
-                </td>
-                <td>
-                  <p>SN Adult Admission Process</p>
-                </td>
-                <td class="text-center">
-                  <p>50</p>
-                </td>
-                <td class="text-center">
-                  <p>1100</p>
-                </td>
-                <td class="text-center">
-                  <span class="status green">Active</span>
-                </td>
-                <td>
-                  <div class="d-flex align-items-center justify-content-center">
-                    <button class="btn btn-custom btn-link">
-                      View Details
-                    </button>
-                    <div class="dropdown">
-                      <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="images/dot.svg" />
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                          <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                            data-bs-target="#modal-add-label">Edit</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item">Change Assignment Group</a>
-                        </li>
-                        <li><a class="dropdown-item">Export</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>
-                      <h3>Learning Path Name will be here</h3>
-                      <p>#101</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <p>Home Health</p>
-                  <p>Clinical</p>
-                </td>
-                <td>
-                  <p>SN Adult Admission Process</p>
-                </td>
-                <td class="text-center">
-                  <p>50</p>
-                </td>
-                <td class="text-center">
-                  <p>1100</p>
-                </td>
-                <td class="text-center">
-                  <span class="status green">Active</span>
-                </td>
-                <td>
-                  <div class="d-flex align-items-center justify-content-center">
-                    <button class="btn btn-custom btn-link">
-                      View Details
-                    </button>
-                    <div class="dropdown">
-                      <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="images/dot.svg" />
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                          <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                            data-bs-target="#modal-add-label">Edit</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item">Change Assignment Group</a>
-                        </li>
-                        <li><a class="dropdown-item">Export</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>
-                      <h3>Learning Path Name will be here</h3>
-                      <p>#101</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <p>Home Health</p>
-                  <p>Clinical</p>
-                </td>
-                <td>
-                  <p>SN Adult Admission Process</p>
-                </td>
-                <td class="text-center">
-                  <p>50</p>
-                </td>
-                <td class="text-center">
-                  <p>1100</p>
-                </td>
-                <td class="text-center">
-                  <span class="status green">Active</span>
-                </td>
-                <td>
-                  <div class="d-flex align-items-center justify-content-center">
-                    <button class="btn btn-custom btn-link">
-                      View Details
-                    </button>
-                    <div class="dropdown">
-                      <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="images/dot.svg" />
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                          <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                            data-bs-target="#modal-add-label">Edit</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item">Change Assignment Group</a>
-                        </li>
-                        <li><a class="dropdown-item">Export</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <nav aria-label="Page navigation example" class="float-end">
-          <ul class="pagination">
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
-                <span aria-hidden="true">&#60;</span>
-              </a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-                <span aria-hidden="true">&#62;</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-        <div class="table-responsive">
-          <table class="table align-middle table-pattern-5">
-            <thead>
-              <tr>
-                <th>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>Name</div>
-                  </div>
-                </th>
-                <th>Product & Category</th>
-                <th>Assignment Group</th>
-                <th class="text-center">Agencies</th>
-                <th class="text-center">Learners</th>
-                <th class="text-center">Status</th>
-                <th class="text-center">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>
-                      <h3>Learning Path Name will be here</h3>
-                      <p>#101</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <p>Home Health</p>
-                  <p>Clinical</p>
-                </td>
-                <td>
-                  <p>SN Adult Admission Process</p>
-                </td>
-                <td class="text-center">
-                  <p>50</p>
-                </td>
-                <td class="text-center">
-                  <p>1100</p>
-                </td>
-                <td class="text-center">
-                  <span class="status green">Active</span>
-                </td>
-                <td>
-                  <div class="d-flex align-items-center justify-content-center">
-                    <button class="btn btn-custom btn-link">
-                      View Details
-                    </button>
-                    <div class="dropdown">
-                      <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="images/dot.svg" />
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                          <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                            data-bs-target="#modal-add-label">Edit</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item">Change Assignment Group</a>
-                        </li>
-                        <li><a class="dropdown-item">Export</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>
-                      <h3>Learning Path Name will be here</h3>
-                      <p>#101</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <p>Home Health</p>
-                  <p>Clinical</p>
-                </td>
-                <td>
-                  <p>SN Adult Admission Process</p>
-                </td>
-                <td class="text-center">
-                  <p>50</p>
-                </td>
-                <td class="text-center">
-                  <p>1100</p>
-                </td>
-                <td class="text-center">
-                  <span class="status green">Active</span>
-                </td>
-                <td>
-                  <div class="d-flex align-items-center justify-content-center">
-                    <button class="btn btn-custom btn-link">
-                      View Details
-                    </button>
-                    <div class="dropdown">
-                      <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="images/dot.svg" />
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                          <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                            data-bs-target="#modal-add-label">Edit</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item">Change Assignment Group</a>
-                        </li>
-                        <li><a class="dropdown-item">Export</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>
-                      <h3>Learning Path Name will be here</h3>
-                      <p>#101</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <p>Home Health</p>
-                  <p>Clinical</p>
-                </td>
-                <td>
-                  <p>SN Adult Admission Process</p>
-                </td>
-                <td class="text-center">
-                  <p>50</p>
-                </td>
-                <td class="text-center">
-                  <p>1100</p>
-                </td>
-                <td class="text-center">
-                  <span class="status green">Active</span>
-                </td>
-                <td>
-                  <div class="d-flex align-items-center justify-content-center">
-                    <button class="btn btn-custom btn-link">
-                      View Details
-                    </button>
-                    <div class="dropdown">
-                      <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="images/dot.svg" />
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                          <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                            data-bs-target="#modal-add-label">Edit</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item">Change Assignment Group</a>
-                        </li>
-                        <li><a class="dropdown-item">Export</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>
-                      <h3>Learning Path Name will be here</h3>
-                      <p>#101</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <p>Home Health</p>
-                  <p>Clinical</p>
-                </td>
-                <td>
-                  <p>SN Adult Admission Process</p>
-                </td>
-                <td class="text-center">
-                  <p>50</p>
-                </td>
-                <td class="text-center">
-                  <p>1100</p>
-                </td>
-                <td class="text-center">
-                  <span class="status green">Active</span>
-                </td>
-                <td>
-                  <div class="d-flex align-items-center justify-content-center">
-                    <button class="btn btn-custom btn-link">
-                      View Details
-                    </button>
-                    <div class="dropdown">
-                      <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="images/dot.svg" />
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                          <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                            data-bs-target="#modal-add-label">Edit</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item">Change Assignment Group</a>
-                        </li>
-                        <li><a class="dropdown-item">Export</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>
-                      <h3>Learning Path Name will be here</h3>
-                      <p>#101</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <p>Home Health</p>
-                  <p>Clinical</p>
-                </td>
-                <td>
-                  <p>SN Adult Admission Process</p>
-                </td>
-                <td class="text-center">
-                  <p>50</p>
-                </td>
-                <td class="text-center">
-                  <p>1100</p>
-                </td>
-                <td class="text-center">
-                  <span class="status green">Active</span>
-                </td>
-                <td>
-                  <div class="d-flex align-items-center justify-content-center">
-                    <button class="btn btn-custom btn-link">
-                      View Details
-                    </button>
-                    <div class="dropdown">
-                      <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="images/dot.svg" />
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                          <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                            data-bs-target="#modal-add-label">Edit</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item">Change Assignment Group</a>
-                        </li>
-                        <li><a class="dropdown-item">Export</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-        <div class="table-responsive">
-          <table class="table align-middle table-pattern-5">
-            <thead>
-              <tr>
-                <th>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>Name</div>
-                  </div>
-                </th>
-                <th>Product & Category</th>
-                <th>Assignment Group</th>
-                <th class="text-center">Agencies</th>
-                <th class="text-center">Learners</th>
-                <th class="text-center">Status</th>
-                <th class="text-center">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>
-                      <h3>Learning Path Name will be here</h3>
-                      <p>#101</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <p>Home Health</p>
-                  <p>Clinical</p>
-                </td>
-                <td>
-                  <p>SN Adult Admission Process</p>
-                </td>
-                <td class="text-center">
-                  <p>50</p>
-                </td>
-                <td class="text-center">
-                  <p>1100</p>
-                </td>
-                <td class="text-center">
-                  <span class="status green">Active</span>
-                </td>
-                <td>
-                  <div class="d-flex align-items-center justify-content-center">
-                    <button class="btn btn-custom btn-link">
-                      View Details
-                    </button>
-                    <div class="dropdown">
-                      <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="images/dot.svg" />
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                          <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                            data-bs-target="#modal-add-label">Edit</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item">Change Assignment Group</a>
-                        </li>
-                        <li><a class="dropdown-item">Export</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>
-                      <h3>Learning Path Name will be here</h3>
-                      <p>#101</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <p>Home Health</p>
-                  <p>Clinical</p>
-                </td>
-                <td>
-                  <p>SN Adult Admission Process</p>
-                </td>
-                <td class="text-center">
-                  <p>50</p>
-                </td>
-                <td class="text-center">
-                  <p>1100</p>
-                </td>
-                <td class="text-center">
-                  <span class="status green">Active</span>
-                </td>
-                <td>
-                  <div class="d-flex align-items-center justify-content-center">
-                    <button class="btn btn-custom btn-link">
-                      View Details
-                    </button>
-                    <div class="dropdown">
-                      <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="images/dot.svg" />
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                          <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                            data-bs-target="#modal-add-label">Edit</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item">Change Assignment Group</a>
-                        </li>
-                        <li><a class="dropdown-item">Export</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>
-                      <h3>Learning Path Name will be here</h3>
-                      <p>#101</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <p>Home Health</p>
-                  <p>Clinical</p>
-                </td>
-                <td>
-                  <p>SN Adult Admission Process</p>
-                </td>
-                <td class="text-center">
-                  <p>50</p>
-                </td>
-                <td class="text-center">
-                  <p>1100</p>
-                </td>
-                <td class="text-center">
-                  <span class="status green">Active</span>
-                </td>
-                <td>
-                  <div class="d-flex align-items-center justify-content-center">
-                    <button class="btn btn-custom btn-link">
-                      View Details
-                    </button>
-                    <div class="dropdown">
-                      <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="images/dot.svg" />
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                          <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                            data-bs-target="#modal-add-label">Edit</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item">Change Assignment Group</a>
-                        </li>
-                        <li><a class="dropdown-item">Export</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>
-                      <h3>Learning Path Name will be here</h3>
-                      <p>#101</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <p>Home Health</p>
-                  <p>Clinical</p>
-                </td>
-                <td>
-                  <p>SN Adult Admission Process</p>
-                </td>
-                <td class="text-center">
-                  <p>50</p>
-                </td>
-                <td class="text-center">
-                  <p>1100</p>
-                </td>
-                <td class="text-center">
-                  <span class="status green">Active</span>
-                </td>
-                <td>
-                  <div class="d-flex align-items-center justify-content-center">
-                    <button class="btn btn-custom btn-link">
-                      View Details
-                    </button>
-                    <div class="dropdown">
-                      <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="images/dot.svg" />
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                          <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                            data-bs-target="#modal-add-label">Edit</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item">Change Assignment Group</a>
-                        </li>
-                        <li><a class="dropdown-item">Export</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>
-                      <h3>Learning Path Name will be here</h3>
-                      <p>#101</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <p>Home Health</p>
-                  <p>Clinical</p>
-                </td>
-                <td>
-                  <p>SN Adult Admission Process</p>
-                </td>
-                <td class="text-center">
-                  <p>50</p>
-                </td>
-                <td class="text-center">
-                  <p>1100</p>
-                </td>
-                <td class="text-center">
-                  <span class="status green">Active</span>
-                </td>
-                <td>
-                  <div class="d-flex align-items-center justify-content-center">
-                    <button class="btn btn-custom btn-link">
-                      View Details
-                    </button>
-                    <div class="dropdown">
-                      <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="images/dot.svg" />
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                          <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                            data-bs-target="#modal-add-label">Edit</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item">Change Assignment Group</a>
-                        </li>
-                        <li><a class="dropdown-item">Export</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </main>
-  <!-- model Download -->
-  <div class="modal fade" id="modal-download" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">
-            Download New Learning Paths
-          </h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-4">
-          <div class="alert alert-primary text-center" role="alert">
-            4 new learning paths found !
+                  '
+            >
+              <span class="profile-circle">J</span>
+            </a>
+            <button type="button" class="menu-mobile-toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
           </div>
-          <table class="table align-middle table-pattern-5">
-            <thead>
-              <tr>
-                <th>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>Select all</div>
-                  </div>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>
-                      <p class="text-dark">
-                        <span class="me-2 text-12 text-light-4">#ID_101</span>Learning Path Name will be here more here
-                      </p>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>
-                      <p class="text-dark">
-                        <span class="me-2 text-12 text-light-4">#ID_101</span>Learning Path Name will be here
-                      </p>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex">
-                    <div class="form-check me-2">
-                      <input class="form-check-input" style="--c-p: 2px" type="checkbox" value=""
-                        id="flexCheckDefault" />
-                    </div>
-                    <div>
-                      <p class="text-dark">
-                        <span class="me-2 text-12 text-light-4">#ID_101</span>Learning Path Name will be here
-                      </p>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline" data-bs-dismiss="modal">
-            Cancel
+      </div>
+      <div
+        class="sub-header d-flex align-items-center justify-content-between flex-column flex-md-row px-3"
+      >
+        <ul class="nav nav-tabs transparent-tab" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="home-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#home"
+              type="button"
+              role="tab"
+              aria-controls="home"
+              aria-selected="true"
+            >
+              All Learning Paths
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="profile-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#profile"
+              type="button"
+              role="tab"
+              aria-controls="profile"
+              aria-selected="false"
+            >
+              Recently Added
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="contact-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#contact"
+              type="button"
+              role="tab"
+              aria-controls="contact"
+              aria-selected="false"
+            >
+              Most Purchased
+            </button>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center">
+          <div class="search-input">
+            <input type="text" class="form-control" placeholder="Search" />
+            <img src="images/search.svg" alt="" />
+          </div>
+          <button class="btn btn-outline ms-2">
+            <img src="images/filter.svg" class="me-2" /><span>Filter</span>
           </button>
-          <button type="button" class="btn btn-primary" id="add-label-save" data-bs-dismiss="modal">
-            Add Learning Paths
+          <button class="btn btn-primary-light ms-2">
+            <img src="images/export.svg" class="me-2" /><span>Export</span>
+          </button>
+          <button
+            class="btn btn-primary ms-2"
+            data-bs-toggle="modal"
+            data-bs-target="#modal-download"
+          >
+            <img src="images/download.svg" class="me-2" /><span>Download</span>
           </button>
         </div>
       </div>
-    </div>
-  </div>
-  <!-- JavaScript -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <!-- bootstrap js-->
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap-multiselect.min.js"></script>
-  <!-- custom initialize js -->
-  <script type="text/javascript" src="js/menu.js"></script>
-  <script type="text/javascript" src="js/custom.js"></script>
-</body>
+    </header>
 
+    <main class="px-3">
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="home"
+          role="tabpanel"
+          aria-labelledby="home-tab"
+        >
+          <div class="table-responsive">
+            <table class="table align-middle table-pattern-5">
+              <thead>
+                <tr>
+                  <th>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>Name</div>
+                    </div>
+                  </th>
+                  <th>Product & Category</th>
+                  <th>Assignment Group</th>
+                  <th class="text-center">Agencies</th>
+                  <th class="text-center">Learners</th>
+                  <th class="text-center">Status</th>
+                  <th class="text-center">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learning Path Name will be here</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>-</p>
+                  </td>
+                  <td>
+                    <p>-</p>
+                  </td>
+                  <td class="text-center">
+                    <p>-</p>
+                  </td>
+                  <td class="text-center">
+                    <p>-</p>
+                  </td>
+                  <td class="text-center">
+                    <span class="status yellow">New</span>
+                  </td>
+                  <td>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <a
+                        href="learning-paths/view-details.html"
+                        class="btn btn-custom btn-link"
+                      >
+                        View Details
+                      </a>
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-dot dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="images/dot.svg" />
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#modal-add-label"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item">Change Assignment Group</a>
+                          </li>
+                          <li><a class="dropdown-item">Export</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learning Path Name will be here</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>-</p>
+                  </td>
+                  <td>
+                    <p>-</p>
+                  </td>
+                  <td class="text-center">
+                    <p>-</p>
+                  </td>
+                  <td class="text-center">
+                    <p>-</p>
+                  </td>
+                  <td class="text-center">
+                    <span class="status yellow">New</span>
+                  </td>
+                  <td>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <button class="btn btn-custom btn-link">
+                        View Details
+                      </button>
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-dot dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="images/dot.svg" />
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#modal-add-label"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item">Change Assignment Group</a>
+                          </li>
+                          <li><a class="dropdown-item">Export</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learning Path Name will be here</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>-</p>
+                  </td>
+                  <td>
+                    <p>-</p>
+                  </td>
+                  <td class="text-center">
+                    <p>-</p>
+                  </td>
+                  <td class="text-center">
+                    <p>-</p>
+                  </td>
+                  <td class="text-center">
+                    <span class="status yellow">New</span>
+                  </td>
+                  <td>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <button class="btn btn-custom btn-link">
+                        View Details
+                      </button>
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-dot dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="images/dot.svg" />
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#modal-add-label"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item">Change Assignment Group</a>
+                          </li>
+                          <li><a class="dropdown-item">Export</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learning Path Name will be here</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home Health</p>
+                    <p>Clinical</p>
+                  </td>
+                  <td>
+                    <p>SN Adult Admission Process</p>
+                  </td>
+                  <td class="text-center">
+                    <p>50</p>
+                  </td>
+                  <td class="text-center">
+                    <p>1100</p>
+                  </td>
+                  <td class="text-center">
+                    <span class="status green">Active</span>
+                  </td>
+                  <td>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <button class="btn btn-custom btn-link">
+                        View Details
+                      </button>
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-dot dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="images/dot.svg" />
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#modal-add-label"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item">Change Assignment Group</a>
+                          </li>
+                          <li><a class="dropdown-item">Export</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learning Path Name will be here</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home Health</p>
+                    <p>Clinical</p>
+                  </td>
+                  <td>
+                    <p>SN Adult Admission Process</p>
+                  </td>
+                  <td class="text-center">
+                    <p>50</p>
+                  </td>
+                  <td class="text-center">
+                    <p>1100</p>
+                  </td>
+                  <td class="text-center">
+                    <span class="status green">Active</span>
+                  </td>
+                  <td>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <button class="btn btn-custom btn-link">
+                        View Details
+                      </button>
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-dot dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="images/dot.svg" />
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#modal-add-label"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item">Change Assignment Group</a>
+                          </li>
+                          <li><a class="dropdown-item">Export</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learning Path Name will be here</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home Health</p>
+                    <p>Clinical</p>
+                  </td>
+                  <td>
+                    <p>SN Adult Admission Process</p>
+                  </td>
+                  <td class="text-center">
+                    <p>50</p>
+                  </td>
+                  <td class="text-center">
+                    <p>1100</p>
+                  </td>
+                  <td class="text-center">
+                    <span class="status green">Active</span>
+                  </td>
+                  <td>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <button class="btn btn-custom btn-link">
+                        View Details
+                      </button>
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-dot dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="images/dot.svg" />
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#modal-add-label"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item">Change Assignment Group</a>
+                          </li>
+                          <li><a class="dropdown-item">Export</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learning Path Name will be here</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home Health</p>
+                    <p>Clinical</p>
+                  </td>
+                  <td>
+                    <p>SN Adult Admission Process</p>
+                  </td>
+                  <td class="text-center">
+                    <p>50</p>
+                  </td>
+                  <td class="text-center">
+                    <p>1100</p>
+                  </td>
+                  <td class="text-center">
+                    <span class="status green">Active</span>
+                  </td>
+                  <td>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <button class="btn btn-custom btn-link">
+                        View Details
+                      </button>
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-dot dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="images/dot.svg" />
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#modal-add-label"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item">Change Assignment Group</a>
+                          </li>
+                          <li><a class="dropdown-item">Export</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learning Path Name will be here</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home Health</p>
+                    <p>Clinical</p>
+                  </td>
+                  <td>
+                    <p>SN Adult Admission Process</p>
+                  </td>
+                  <td class="text-center">
+                    <p>50</p>
+                  </td>
+                  <td class="text-center">
+                    <p>1100</p>
+                  </td>
+                  <td class="text-center">
+                    <span class="status green">Active</span>
+                  </td>
+                  <td>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <button class="btn btn-custom btn-link">
+                        View Details
+                      </button>
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-dot dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="images/dot.svg" />
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#modal-add-label"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item">Change Assignment Group</a>
+                          </li>
+                          <li><a class="dropdown-item">Export</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learning Path Name will be here</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home Health</p>
+                    <p>Clinical</p>
+                  </td>
+                  <td>
+                    <p>SN Adult Admission Process</p>
+                  </td>
+                  <td class="text-center">
+                    <p>50</p>
+                  </td>
+                  <td class="text-center">
+                    <p>1100</p>
+                  </td>
+                  <td class="text-center">
+                    <span class="status green">Active</span>
+                  </td>
+                  <td>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <button class="btn btn-custom btn-link">
+                        View Details
+                      </button>
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-dot dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="images/dot.svg" />
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#modal-add-label"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item">Change Assignment Group</a>
+                          </li>
+                          <li><a class="dropdown-item">Export</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <nav aria-label="Page navigation example" class="float-end">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&#60;</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&#62;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="profile"
+          role="tabpanel"
+          aria-labelledby="profile-tab"
+        >
+          <div class="table-responsive">
+            <table class="table align-middle table-pattern-5">
+              <thead>
+                <tr>
+                  <th>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>Name</div>
+                    </div>
+                  </th>
+                  <th>Product & Category</th>
+                  <th>Assignment Group</th>
+                  <th class="text-center">Agencies</th>
+                  <th class="text-center">Learners</th>
+                  <th class="text-center">Status</th>
+                  <th class="text-center">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learning Path Name will be here</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home Health</p>
+                    <p>Clinical</p>
+                  </td>
+                  <td>
+                    <p>SN Adult Admission Process</p>
+                  </td>
+                  <td class="text-center">
+                    <p>50</p>
+                  </td>
+                  <td class="text-center">
+                    <p>1100</p>
+                  </td>
+                  <td class="text-center">
+                    <span class="status green">Active</span>
+                  </td>
+                  <td>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <button class="btn btn-custom btn-link">
+                        View Details
+                      </button>
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-dot dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="images/dot.svg" />
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#modal-add-label"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item">Change Assignment Group</a>
+                          </li>
+                          <li><a class="dropdown-item">Export</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learning Path Name will be here</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home Health</p>
+                    <p>Clinical</p>
+                  </td>
+                  <td>
+                    <p>SN Adult Admission Process</p>
+                  </td>
+                  <td class="text-center">
+                    <p>50</p>
+                  </td>
+                  <td class="text-center">
+                    <p>1100</p>
+                  </td>
+                  <td class="text-center">
+                    <span class="status green">Active</span>
+                  </td>
+                  <td>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <button class="btn btn-custom btn-link">
+                        View Details
+                      </button>
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-dot dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="images/dot.svg" />
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#modal-add-label"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item">Change Assignment Group</a>
+                          </li>
+                          <li><a class="dropdown-item">Export</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learning Path Name will be here</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home Health</p>
+                    <p>Clinical</p>
+                  </td>
+                  <td>
+                    <p>SN Adult Admission Process</p>
+                  </td>
+                  <td class="text-center">
+                    <p>50</p>
+                  </td>
+                  <td class="text-center">
+                    <p>1100</p>
+                  </td>
+                  <td class="text-center">
+                    <span class="status green">Active</span>
+                  </td>
+                  <td>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <button class="btn btn-custom btn-link">
+                        View Details
+                      </button>
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-dot dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="images/dot.svg" />
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#modal-add-label"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item">Change Assignment Group</a>
+                          </li>
+                          <li><a class="dropdown-item">Export</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learning Path Name will be here</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home Health</p>
+                    <p>Clinical</p>
+                  </td>
+                  <td>
+                    <p>SN Adult Admission Process</p>
+                  </td>
+                  <td class="text-center">
+                    <p>50</p>
+                  </td>
+                  <td class="text-center">
+                    <p>1100</p>
+                  </td>
+                  <td class="text-center">
+                    <span class="status green">Active</span>
+                  </td>
+                  <td>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <button class="btn btn-custom btn-link">
+                        View Details
+                      </button>
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-dot dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="images/dot.svg" />
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#modal-add-label"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item">Change Assignment Group</a>
+                          </li>
+                          <li><a class="dropdown-item">Export</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learning Path Name will be here</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home Health</p>
+                    <p>Clinical</p>
+                  </td>
+                  <td>
+                    <p>SN Adult Admission Process</p>
+                  </td>
+                  <td class="text-center">
+                    <p>50</p>
+                  </td>
+                  <td class="text-center">
+                    <p>1100</p>
+                  </td>
+                  <td class="text-center">
+                    <span class="status green">Active</span>
+                  </td>
+                  <td>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <button class="btn btn-custom btn-link">
+                        View Details
+                      </button>
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-dot dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="images/dot.svg" />
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#modal-add-label"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item">Change Assignment Group</a>
+                          </li>
+                          <li><a class="dropdown-item">Export</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="contact"
+          role="tabpanel"
+          aria-labelledby="contact-tab"
+        >
+          <div class="table-responsive">
+            <table class="table align-middle table-pattern-5">
+              <thead>
+                <tr>
+                  <th>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>Name</div>
+                    </div>
+                  </th>
+                  <th>Product & Category</th>
+                  <th>Assignment Group</th>
+                  <th class="text-center">Agencies</th>
+                  <th class="text-center">Learners</th>
+                  <th class="text-center">Status</th>
+                  <th class="text-center">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learning Path Name will be here</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home Health</p>
+                    <p>Clinical</p>
+                  </td>
+                  <td>
+                    <p>SN Adult Admission Process</p>
+                  </td>
+                  <td class="text-center">
+                    <p>50</p>
+                  </td>
+                  <td class="text-center">
+                    <p>1100</p>
+                  </td>
+                  <td class="text-center">
+                    <span class="status green">Active</span>
+                  </td>
+                  <td>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <button class="btn btn-custom btn-link">
+                        View Details
+                      </button>
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-dot dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="images/dot.svg" />
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#modal-add-label"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item">Change Assignment Group</a>
+                          </li>
+                          <li><a class="dropdown-item">Export</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learning Path Name will be here</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home Health</p>
+                    <p>Clinical</p>
+                  </td>
+                  <td>
+                    <p>SN Adult Admission Process</p>
+                  </td>
+                  <td class="text-center">
+                    <p>50</p>
+                  </td>
+                  <td class="text-center">
+                    <p>1100</p>
+                  </td>
+                  <td class="text-center">
+                    <span class="status green">Active</span>
+                  </td>
+                  <td>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <button class="btn btn-custom btn-link">
+                        View Details
+                      </button>
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-dot dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="images/dot.svg" />
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#modal-add-label"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item">Change Assignment Group</a>
+                          </li>
+                          <li><a class="dropdown-item">Export</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learning Path Name will be here</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home Health</p>
+                    <p>Clinical</p>
+                  </td>
+                  <td>
+                    <p>SN Adult Admission Process</p>
+                  </td>
+                  <td class="text-center">
+                    <p>50</p>
+                  </td>
+                  <td class="text-center">
+                    <p>1100</p>
+                  </td>
+                  <td class="text-center">
+                    <span class="status green">Active</span>
+                  </td>
+                  <td>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <button class="btn btn-custom btn-link">
+                        View Details
+                      </button>
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-dot dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="images/dot.svg" />
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#modal-add-label"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item">Change Assignment Group</a>
+                          </li>
+                          <li><a class="dropdown-item">Export</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learning Path Name will be here</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home Health</p>
+                    <p>Clinical</p>
+                  </td>
+                  <td>
+                    <p>SN Adult Admission Process</p>
+                  </td>
+                  <td class="text-center">
+                    <p>50</p>
+                  </td>
+                  <td class="text-center">
+                    <p>1100</p>
+                  </td>
+                  <td class="text-center">
+                    <span class="status green">Active</span>
+                  </td>
+                  <td>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <button class="btn btn-custom btn-link">
+                        View Details
+                      </button>
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-dot dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="images/dot.svg" />
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#modal-add-label"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item">Change Assignment Group</a>
+                          </li>
+                          <li><a class="dropdown-item">Export</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learning Path Name will be here</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home Health</p>
+                    <p>Clinical</p>
+                  </td>
+                  <td>
+                    <p>SN Adult Admission Process</p>
+                  </td>
+                  <td class="text-center">
+                    <p>50</p>
+                  </td>
+                  <td class="text-center">
+                    <p>1100</p>
+                  </td>
+                  <td class="text-center">
+                    <span class="status green">Active</span>
+                  </td>
+                  <td>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <button class="btn btn-custom btn-link">
+                        View Details
+                      </button>
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-dot dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="images/dot.svg" />
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#modal-add-label"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item">Change Assignment Group</a>
+                          </li>
+                          <li><a class="dropdown-item">Export</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- model Download -->
+    <div
+      class="modal fade"
+      id="modal-download"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Download New Learning Paths
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="alert alert-primary text-center" role="alert">
+              4 new learning paths found !
+            </div>
+            <table class="table align-middle table-pattern-5">
+              <thead>
+                <tr>
+                  <th>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>Select all</div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <p class="text-dark">
+                          <span class="me-2 text-12 text-light-4">#ID_101</span
+                          >Learning Path Name will be here more here
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <p class="text-dark">
+                          <span class="me-2 text-12 text-light-4">#ID_101</span
+                          >Learning Path Name will be here
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <p class="text-dark">
+                          <span class="me-2 text-12 text-light-4">#ID_101</span
+                          >Learning Path Name will be here
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="add-label-save"
+              data-bs-dismiss="modal"
+            >
+              Add Learning Paths
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- bootstrap js-->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script
+      type="text/javascript"
+      src="js/bootstrap-multiselect.min.js"
+    ></script>
+    <!-- custom initialize js -->
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+  </body>
 </html>
