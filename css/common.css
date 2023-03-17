@@ -1320,6 +1320,10 @@ select:valid~span {
     min-width: auto !important;
 }
 
+.w-50 {
+    width: 50%;
+}
+
 .btn-sm {
     font-size: 13px;
     font-weight: 500;

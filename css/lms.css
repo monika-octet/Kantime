@@ -100,7 +100,7 @@ body {
 
 .table-pattern-4 thead tr th {
     background: #FAFAFA;
-    color: #A1A7AF;
+    color: #6C737F;
     padding: 8px 15px;
     border: none;
     font-size: 13px;
@@ -1324,6 +1324,8 @@ a.breadcrumb-page {
     background: #E8F0FD;
 }
 
+
+
 .step-text {
     font-weight: 400;
     font-size: 13px;
@@ -1337,7 +1339,7 @@ a.breadcrumb-page {
     font-size: 15px;
     line-height: 18px;
     letter-spacing: 0.01em;
-    color: #0A316B;
+    color: #3D4148;
 }
 
 .step-count-holder.checked {
@@ -1352,7 +1354,7 @@ a.breadcrumb-page {
     color: #FFFFFF;
 }
 
-.step-count-holder.active .step-desc {
+.step-count-holder.active~.step-desc {
     font-weight: 600;
     font-size: 15px;
     line-height: 18px;
@@ -1373,7 +1375,7 @@ a.breadcrumb-page {
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    gap: 10px;
+    gap: 4px;
 }
 
 .radio-row {
