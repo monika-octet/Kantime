@@ -1713,18 +1713,19 @@
       <p class="mb-0">Kantime - LMS Control Panel</p>
       <p class="mb-0">Version 1.0</p>
     </footer>
-    <!-- model Edit -->
+    <!-- model add details -->
+
     <div
       class="modal fade"
       id="modal-edit"
       tabindex="-1"
-      aria-labelledby="exampleModalLabel"
+      aria-labelledby="exampleModalToggleLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-centered modal-sm">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
+            <h5 class="modal-title" id="exampleModalToggleLabel">
               Learning Path Details
             </h5>
             <button
@@ -1845,8 +1846,7 @@
             <button
               type="button"
               class="btn btn-primary"
-              id="add-label-save"
-              data-bs-target="#exampleModalToggle2"
+              data-bs-target="#modal-assign"
               data-bs-toggle="modal"
               data-bs-dismiss="modal"
             >
@@ -1982,6 +1982,119 @@
               data-bs-dismiss="modal"
             >
               Add Learning Paths
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- model add assignment -->
+    <div
+      class="modal fade"
+      id="modal-assign"
+      tabindex="-1"
+      aria-labelledby="exampleModalToggleLabel2"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalToggleLabel2">
+              Add Assignment Group
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="alert alert-primary text-center" role="alert">
+              Choose one Assignment group to add in “Learning Path Name”
+            </div>
+            <table class="table align-middle table-pattern-5">
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="radio"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <p class="text-dark">
+                          <span class="me-2 text-12 text-light-4">#ID_101</span
+                          >Assignment Group 1
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="radio"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <p class="text-dark">
+                          <span class="me-2 text-12 text-light-4">#ID_101</span
+                          >Assignment Group 2
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="radio"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <p class="text-dark">
+                          <span class="me-2 text-12 text-light-4">#ID_101</span
+                          >Assignment Group 3
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="add-label-save"
+              data-bs-dismiss="modal"
+            >
+              Save Details
             </button>
           </div>
         </div>
