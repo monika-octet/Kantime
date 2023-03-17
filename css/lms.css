@@ -945,13 +945,18 @@ a.breadcrumb-page {
     display: none;
 }
 
-.accordion-button.collapsed .accordion-arrow-icon {
+.accordion-button .accordion-arrow-icon {
     transform: rotate(90deg);
+}
+
+.accordion-button.collapsed .accordion-arrow-icon {
+    transform: rotate(0deg);
 }
 
 .accordion-button:not(.collapsed) {
     color: #3D4148;
     box-shadow: none;
+
 }
 
 .accordion-button:focus {
@@ -1692,4 +1697,70 @@ label span {
     width: 22px;
 }
 
-.preview-info-list {}
+.preview-header {
+    border-radius: 4px 4px 0 0;
+}
+
+.preview-info-list {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    min-width: 450px;
+
+}
+
+@media(max-width:767px) {
+    .preview-info-list {
+        min-width: 100%;
+    }
+}
+
+.preview-info-list div {
+    position: relative;
+    text-align: center;
+}
+
+.preview-info-list div:after {
+    content: '';
+    width: 1px;
+    background: rgba(255, 255, 255, 0.08);
+    height: 30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: -100%;
+}
+
+.preview-info-list div:last-child::after {
+    content: none;
+}
+
+.preview-info-list p {
+    font-weight: 400;
+    margin-bottom: 3px;
+    font-size: 12px;
+}
+
+.preview-info-list h4 {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    margin-bottom: 0;
+}
+
+.preview .accordion-item {
+    border-bottom: 1px solid #DFE2E6;
+}
+
+.preview .accordion-item:last-child {
+    border-bottom: none;
+}
+
+.preview .assignment-details {
+    padding: 20px 70px 20px 70px;
+}
