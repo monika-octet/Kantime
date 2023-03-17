@@ -81,3 +81,10 @@ $('.assign-auto-btn').on('click', function () {
   $('.after-auto-publish-btn').removeClass('btn-secondary');
   $('.after-auto-publish-btn').addClass('btn-primary');
 });
+
+
+// Select all checkboxes
+
+$("#checkAll").click(function () {
+  $('input:checkbox').not(this).prop('checked', this.checked);
+});

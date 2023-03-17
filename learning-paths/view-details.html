@@ -95,8 +95,8 @@
       <span class="breadcrumb-page">SN Adult Admission Process</span>
     </div>
 
-    <div class="details-section h-100 w-100">
-      <div class="left-detail-section h-100">
+    <div class="details-section w-100">
+      <div class="left-detail-section">
         <div class="upper-content">
           <div class="title-with-more">
             <div class="title-lp">
@@ -110,7 +110,7 @@
                   data-bs-toggle="dropdown" aria-expanded="false">
                   <img src="../images/dot.svg" />
                 </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
                   <li>
                     <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modal-edit">Edit</a>
                   </li>
@@ -119,6 +119,7 @@
                       data-bs-target="#modal-change-assignment-group">Change Assignment Group</a>
                   </li>
                   <li><a class="dropdown-item">Export</a></li>
+                  <li><a class="dropdown-item delete-dropdown-link">Delete</a></li>
                 </ul>
               </div>
             </div>
@@ -154,6 +155,11 @@
           </div>
 
           <div class="detail-block">
+            <span class="duration-upper-text">Category</span>
+            <span class="duration-lower-text">Clinician</span>
+          </div>
+
+          <div class="detail-block">
             <span class="duration-upper-text">Care Type</span>
             <span class="duration-lower-text">Clinician</span>
           </div>
@@ -175,7 +181,7 @@
         </div>
       </div>
 
-      <div class="right-detail-section w-100 h-100">
+      <div class="right-detail-section w-100">
         <div class="tabs-nav w-100">
           <ul class="nav nav-tabs transparent-tab" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
@@ -375,7 +381,8 @@
           <div class="tab-pane w-100 fade" id="assignment" role="tabpanel" aria-labelledby="assignment-tab">
             <div class="title-row assignment-title-row bg-white w-100 justify-content-between mb-10px">
               <span class="title-row-heading">Assignments</span>
-              <button class="btn btn-primary">Change Assignment Group</button>
+              <button class="btn btn-primary" data-bs-toggle="modal"
+              data-bs-target="#modal-change-assignment-group">Change Assignment Group</button>
             </div>
 
             <div class="right-section-data w-100">
@@ -773,7 +780,7 @@
             </div>
 
             <div class="right-section-data w-100">
-              <table class="table align-middle table-pattern-5 mb-0">
+              <table class="table align-middle table-pattern-4 mb-0">
                 <thead>
                   <tr>
                     <th>Agencies</th>
@@ -789,7 +796,7 @@
                     <td>
                       <div class="d-flex">
                         <div>
-                          <h3>Learning Path Name will be here</h3>
+                          <h3 class="fw-600">Learning Path Name will be here</h3>
                           <p>#101</p>
                         </div>
                       </div>
@@ -811,22 +818,6 @@
                         <a href="learning-paths/view-details.html" class="btn btn-custom btn-link">
                           View Details
                         </a>
-                        <div class="dropdown">
-                          <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="../images/dot.svg" />
-                          </button>
-                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li>
-                              <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                data-bs-target="#modal-add-label">Edit</a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item">Change Assignment Group</a>
-                            </li>
-                            <li><a class="dropdown-item">Export</a></li>
-                          </ul>
-                        </div>
                       </div>
                     </td>
                   </tr>
@@ -835,7 +826,7 @@
                     <td>
                       <div class="d-flex">
                         <div>
-                          <h3>Horizon Adult Healthcare</h3>
+                          <h3 class="fw-600">Horizon Adult Healthcare</h3>
                           <p>#101</p>
                         </div>
                       </div>
@@ -857,22 +848,6 @@
                         <a href="learning-paths/view-details.html" class="btn btn-custom btn-link">
                           View Details
                         </a>
-                        <div class="dropdown">
-                          <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="../images/dot.svg" />
-                          </button>
-                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li>
-                              <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                data-bs-target="#modal-add-label">Edit</a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item">Change Assignment Group</a>
-                            </li>
-                            <li><a class="dropdown-item">Export</a></li>
-                          </ul>
-                        </div>
                       </div>
                     </td>
                   </tr>
@@ -881,7 +856,7 @@
                     <td>
                       <div class="d-flex">
                         <div>
-                          <h3>Horizon Adult Healthcare</h3>
+                          <h3 class="fw-600">Horizon Adult Healthcare</h3>
                           <p>#101</p>
                         </div>
                       </div>
@@ -903,22 +878,6 @@
                         <a href="learning-paths/view-details.html" class="btn btn-custom btn-link">
                           View Details
                         </a>
-                        <div class="dropdown">
-                          <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="../images/dot.svg" />
-                          </button>
-                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li>
-                              <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                data-bs-target="#modal-add-label">Edit</a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item">Change Assignment Group</a>
-                            </li>
-                            <li><a class="dropdown-item">Export</a></li>
-                          </ul>
-                        </div>
                       </div>
                     </td>
                   </tr>
@@ -927,7 +886,7 @@
                     <td>
                       <div class="d-flex">
                         <div>
-                          <h3>Horizon Adult Healthcare</h3>
+                          <h3 class="fw-600">Horizon Adult Healthcare</h3>
                           <p>#101</p>
                         </div>
                       </div>
@@ -949,22 +908,6 @@
                         <a href="learning-paths/view-details.html" class="btn btn-custom btn-link">
                           View Details
                         </a>
-                        <div class="dropdown">
-                          <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="../images/dot.svg" />
-                          </button>
-                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li>
-                              <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                data-bs-target="#modal-add-label">Edit</a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item">Change Assignment Group</a>
-                            </li>
-                            <li><a class="dropdown-item">Export</a></li>
-                          </ul>
-                        </div>
                       </div>
                     </td>
                   </tr>
@@ -973,7 +916,7 @@
                     <td>
                       <div class="d-flex">
                         <div>
-                          <h3>Horizon Adult Healthcare</h3>
+                          <h3 class="fw-600">Horizon Adult Healthcare</h3>
                           <p>#101</p>
                         </div>
                       </div>
@@ -995,22 +938,6 @@
                         <a href="learning-paths/view-details.html" class="btn btn-custom btn-link">
                           View Details
                         </a>
-                        <div class="dropdown">
-                          <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="../images/dot.svg" />
-                          </button>
-                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li>
-                              <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                data-bs-target="#modal-add-label">Edit</a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item">Change Assignment Group</a>
-                            </li>
-                            <li><a class="dropdown-item">Export</a></li>
-                          </ul>
-                        </div>
                       </div>
                     </td>
                   </tr>
@@ -1019,7 +946,7 @@
                     <td>
                       <div class="d-flex">
                         <div>
-                          <h3>Horizon Adult Healthcare</h3>
+                          <h3 class="fw-600">Horizon Adult Healthcare</h3>
                           <p>#101</p>
                         </div>
                       </div>
@@ -1041,22 +968,6 @@
                         <a href="learning-paths/view-details.html" class="btn btn-custom btn-link">
                           View Details
                         </a>
-                        <div class="dropdown">
-                          <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="../images/dot.svg" />
-                          </button>
-                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li>
-                              <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                data-bs-target="#modal-add-label">Edit</a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item">Change Assignment Group</a>
-                            </li>
-                            <li><a class="dropdown-item">Export</a></li>
-                          </ul>
-                        </div>
                       </div>
                     </td>
                   </tr>
@@ -1099,7 +1010,7 @@
             </div>
 
             <div class="right-section-data w-100">
-              <table class="table align-middle table-pattern-5 mb-0">
+              <table class="table align-middle table-pattern-4 mb-0">
                 <thead>
                   <tr>
                     <th>Learners name</th>
@@ -1322,7 +1233,7 @@
             </div>
 
             <div class="right-section-data w-100">
-              <table class="table align-middle table-pattern-5 mb-0">
+              <table class="table align-middle table-pattern-4 mb-0">
                 <thead>
                   <tr>
                     <th>Learners name</th>
