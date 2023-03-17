@@ -1825,6 +1825,11 @@ table tbody tr:hover {
     background: #F4F5F6;
 }
 
+table tbody tr:hover .btn-dot {
+    background: #F4F5F6;
+    border: 1px solid #ECEDEF;
+}
+
 table tbody tr:hover h3 {
     color: #135CC8;
 }
