@@ -244,6 +244,7 @@ h3 {
     vertical-align: 0.255em;
     content: url("../images/dropdown.svg");
     border: none;
+    margin-top: -3px;
 }
 
 .btn-link {

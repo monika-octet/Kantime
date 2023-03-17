@@ -170,12 +170,27 @@ body {
 
 }
 
-.table-pattern-5 tbody tr td h3 {
+.table-pattern-5 tbody tr td h3,
+.table-pattern-4 tbody tr td h3 {
     font-size: 15px;
     font-weight: 500;
     color: #25282C;
     margin-bottom: 5px;
 }
+
+.table-pattern-5 tbody tr td h3 a,
+.table-pattern-4 tbody tr td h3 a {
+    color: #25282C;
+    text-decoration: none;
+}
+
+.table-pattern-5 tbody tr:hover h3 a,
+.table-pattern-5 tbody tr:hover h3,
+.table-pattern-4 tbody tr:hover h3 a,
+.table-pattern-4 tbody tr:hover h3 {
+    color: #135CC8;
+}
+
 
 .table-pattern-5 tbody tr td p {
     font-size: 14px;
@@ -1835,9 +1850,6 @@ table tbody tr:hover .btn-dot {
     border: 1px solid #ECEDEF;
 }
 
-table tbody tr:hover h3 {
-    color: #135CC8;
-}
 
 .modal-body tr:hover p.text-dark {
     color: #135CC8 !important;
@@ -1868,4 +1880,8 @@ footer p {
 
 [data-bs-toggle="modal"] {
     cursor: pointer;
+}
+
+.modal-body .row {
+    width: 100%;
 }
