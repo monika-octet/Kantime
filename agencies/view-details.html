@@ -13,97 +13,80 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@100&display=swap"
     rel="stylesheet" />
 
-  <body>
-    <header class="header-wrap">
-      <div class="main-header d-flex justify-content-between">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap-multiselect.min.css" />
+  <link href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css " rel="stylesheet" />
+  <!-- custom css -->
+  <link rel="stylesheet" type="text/css" href="../css/common.css" />
+  <link rel="stylesheet" type="text/css" href="../css/menu.css" />
+  <link rel="stylesheet" type="text/css" href="../css/lms.css" />
+  <link rel="stylesheet" type="text/css" href="../css/responsive.css" />
+  <title>View Details</title>
+</head>
+
+<body>
+  <header class="header-wrap">
+    <div class="main-header d-flex justify-content-between">
         <div class="d-flex">
-          <div class="kantime-logo">
-            <img src="../images/logo-full.svg" alt="" />
-          </div>
-          <div class="header-item-center">
-            <div class="overlay"></div>
-            <nav class="menu" id="menu">
-              <div class="menu-mobile-header">
-                <button type="button" class="menu-mobile-arrow">&lt;</button>
-                <div class="menu-mobile-title"></div>
-                <button type="button" class="menu-mobile-close">
-                  &#x2715;
-                </button>
-              </div>
-              <ul class="menu-section">
-                <li class="menu-item"><a href="#">Dashboard</a></li>
-                <li class="menu-item">
-                  <a href="../index.html">Learning Paths</a>
-                </li>
-                <li class="menu-item">
-                  <a href="../assignments/assignment.html">Assignments</a>
-                </li>
-                <li class="menu-item active">
-                  <a href="agencies.html">Agencies</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <div class="header-item-center">
-          <div class="overlay"></div>
-          <nav class="menu" id="menu">
-            <div class="menu-mobile-header">
-              <button type="button" class="menu-mobile-arrow">&lt;</button>
-              <div class="menu-mobile-title"></div>
-              <button type="button" class="menu-mobile-close">
-                &#x2715;
-              </button>
+            <div class="kantime-logo">
+                <img src="../images/logo-full.svg" alt="" />
             </div>
-            <ul class="menu-section">
-              <li class="menu-item"><a href="#">Dashboard</a></li>
-              <li class="menu-item">
-                <a href="../index.html">Learning Paths</a>
-              </li>
-              <li class="menu-item"><a href="#">Assignments</a></li>
-              <li class="menu-item active">
-                <a href="agencies.html">Agencies</a>
-              </li>
-            </ul>
-          </nav>
+            <div class="header-item-center">
+                <div class="overlay"></div>
+                <nav class="menu" id="menu">
+                    <div class="menu-mobile-header">
+                        <button type="button" class="menu-mobile-arrow">&lt;</button>
+                        <div class="menu-mobile-title"></div>
+                        <button type="button" class="menu-mobile-close">
+                            &#x2715;
+                        </button>
+                    </div>
+                    <ul class="menu-section">
+                        <li class="menu-item"><a href="#">Dashboard</a></li>
+                        <li class="menu-item"><a href="../index.html">Learning Paths</a></li>
+                        <li class="menu-item active"><a href="assignment.html">Assignments</a></li>
+                        <li class="menu-item"><a href="../agencies/agencies.html">Agencies</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-      </div>
-      <div>
-        <div class="d-flex align-items-center header-right-menu">
-          <a href="#" class="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notifications">
-            <img src="../images/notification.svg" alt="notification" />
-          </a>
-          <a href="#" class="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Messages">
-            <img src="../images/settings.svg" alt="mail" />
-          </a>
-          <a tabindex="0" class="profile" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
-            data-bs-html="true" data-bs-custom-class="profile-modal" title="
-                  <div>
-                     <h3>John Doe</h3>
-                     <p>johndoe1868</p>
-                  </div>" data-bs-content='
-                     <ul class="list-unstyled">
-                        <li>
-                           <a>Last Login at:
-                              <p class="mb-0">Aug 21, 2021 09:45 AM</p>
-                           </a>
-                        </li>
-                        <li><a href="#">Edit My Profile</a></li>
-                        <li><a href="login.html">Logout</a></li>
-                     </ul>
-                  '>
-            <span class="profile-circle">J</span>
-          </a>
-          <button type="button" class="menu-mobile-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+        <div>
+            <div class="d-flex align-items-center header-right-menu">
+                <a href="#" class="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notifications">
+                    <img src="../images/notification.svg" alt="notification" />
+                </a>
+                <a href="#" class="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Messages">
+                    <img src="../images/settings.svg" alt="mail" />
+                </a>
+                <a tabindex="0" class="profile" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                    data-bs-html="true" data-bs-custom-class="profile-modal" title="
+              <div>
+                 <h3>John Doe</h3>
+                 <p>johndoe1868</p>
+              </div>" data-bs-content='
+                 <ul class="list-unstyled">
+                    <li>
+                       <a>Last Login at:
+                          <p class="mb-0">Aug 21, 2021 09:45 AM</p>
+                       </a>
+                    </li>
+                    <li><a href="#">Edit My Profile</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                 </ul>
+              '>
+                    <span class="profile-circle">J</span>
+                </a>
+                <button type="button" class="menu-mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
-      </div>
     </div>
-  </header>
+</header>
 
   <main class="main-content">
     <!-- Breadcrumb Starts -->
