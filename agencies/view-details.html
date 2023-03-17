@@ -13,24 +13,37 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@100&display=swap"
     rel="stylesheet" />
 
-  <!-- bootstrap css -->
-  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="../css/bootstrap-multiselect.min.css" />
-  <link href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css " rel="stylesheet" />
-  <!-- custom css -->
-  <link rel="stylesheet" type="text/css" href="../css/common.css" />
-  <link rel="stylesheet" type="text/css" href="../css/menu.css" />
-  <link rel="stylesheet" type="text/css" href="../css/lms.css" />
-  <link rel="stylesheet" type="text/css" href="../css/responsive.css" />
-  <title>View Details</title>
-</head>
-
-<body>
-  <header class="header-wrap">
-    <div class="main-header d-flex justify-content-between">
-      <div class="d-flex">
-        <div class="kantime-logo">
-          <img src="../images/logo-full.svg" alt="" />
+  <body>
+    <header class="header-wrap">
+      <div class="main-header d-flex justify-content-between">
+        <div class="d-flex">
+          <div class="kantime-logo">
+            <img src="../images/logo-full.svg" alt="" />
+          </div>
+          <div class="header-item-center">
+            <div class="overlay"></div>
+            <nav class="menu" id="menu">
+              <div class="menu-mobile-header">
+                <button type="button" class="menu-mobile-arrow">&lt;</button>
+                <div class="menu-mobile-title"></div>
+                <button type="button" class="menu-mobile-close">
+                  &#x2715;
+                </button>
+              </div>
+              <ul class="menu-section">
+                <li class="menu-item"><a href="#">Dashboard</a></li>
+                <li class="menu-item">
+                  <a href="../index.html">Learning Paths</a>
+                </li>
+                <li class="menu-item">
+                  <a href="../assignments/assignment.html">Assignments</a>
+                </li>
+                <li class="menu-item active">
+                  <a href="agencies.html">Agencies</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
         <div class="header-item-center">
           <div class="overlay"></div>
@@ -1529,7 +1542,7 @@
       </div>
     </div>
   </div>
-  
+
   <!-- JavaScript -->
   <script type="text/javascript" src="../js/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
