@@ -404,6 +404,7 @@ a.breadcrumb-page {
     border: 1px solid #ECEDEF;
     border-radius: 4px;
     align-self: stretch;
+    min-height: calc(100vh - 130px);
 }
 
 .upper-content {
@@ -1041,6 +1042,7 @@ a.breadcrumb-page {
 .assignment-tab-content {
     /* height: calc(100% - 50px);
     overflow-y: scroll; */
+
 }
 
 .assignment-tab-content::-webkit-scrollbar,
