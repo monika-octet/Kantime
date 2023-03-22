@@ -1,0 +1,2436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#0D87E2" />
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/bootstrap-multiselect.min.css"
+    />
+    <link
+      href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css "
+      rel="stylesheet"
+    />
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="../css/lms.css" />
+    <link rel="stylesheet" type="text/css" href="../css/responsive.css" />
+    <title>View Details</title>
+  </head>
+
+  <body>
+    <!-- Navbar Start -->
+    <header class="header-wrap">
+      <div class="main-header d-flex justify-content-between">
+        <div class="d-flex">
+          <div class="kantime-logo">
+            <img src="../images/logo-full.svg" alt="" />
+          </div>
+          <div class="header-item-center">
+            <div class="overlay"></div>
+            <nav class="menu" id="menu">
+              <div class="menu-mobile-header">
+                <button type="button" class="menu-mobile-arrow">&lt;</button>
+                <div class="menu-mobile-title"></div>
+                <button type="button" class="menu-mobile-close">
+                  &#x2715;
+                </button>
+              </div>
+              <ul class="menu-section">
+                <li class="menu-item"><a href="#">Dashboard</a></li>
+                <li class="menu-item active">
+                  <a href="../index.html">Learning Paths</a>
+                </li>
+                <li class="menu-item">
+                  <a href="../assignments/assignment.html">Assignments</a>
+                </li>
+                <li class="menu-item">
+                  <a href="../agencies/agencies.html">Agencies</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div>
+          <div class="d-flex align-items-center header-right-menu">
+            <a
+              href="#"
+              class=""
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              title="Notifications"
+            >
+              <img src="../images/notification.svg" alt="notification" />
+            </a>
+            <a
+              href="#"
+              class=""
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              title="Messages"
+            >
+              <img src="../images/settings.svg" alt="mail" />
+            </a>
+            <a
+              tabindex="0"
+              class="profile"
+              role="button"
+              data-bs-toggle="popover"
+              data-bs-trigger="focus"
+              data-bs-html="true"
+              data-bs-custom-class="profile-modal"
+              title="
+                  <div>
+                     <h3>John Doe</h3>
+                     <p>johndoe1868</p>
+                  </div>"
+              data-bs-content='
+                     <ul class="list-unstyled">
+                        <li>
+                           <a>Last Login at:
+                              <p class="mb-0">Aug 21, 2021 09:45 AM</p>
+                           </a>
+                        </li>
+                        <li><a href="#">Edit My Profile</a></li>
+                        <li><a href="login.html">Logout</a></li>
+                     </ul>
+                  '
+            >
+              <span class="profile-circle">J</span>
+            </a>
+            <button type="button" class="menu-mobile-toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Navbar End -->
+
+    <main class="main-content">
+      <!-- Breadcrumb Start -->
+      <div class="mb-0 breadcrumb">
+        <a href="../index.html" class="breadcrumb-page">Learning Path</a>
+        <span class="breadcrumb-icon"
+          ><img src="../images/breadcrumb-arrow.svg"
+        /></span>
+        <span class="breadcrumb-page">SN Adult Admission Process</span>
+      </div>
+      <!-- Breadcrumb End -->
+
+      <div class="details-section w-100">
+        <!-- Left Section Start -->
+        <div class="left-detail-section">
+          <!-- left section upper column start -->
+          <div class="upper-content">
+            <div class="title-with-more">
+              <div class="title-lp">
+                <span class="title-lp-heading">SN Adult Admission Process</span>
+                <span class="text-light-3 text-14">#ID_101</span>
+                <span class="status green">Active</span>
+              </div>
+              <!-- Dropdown Icon Start-->
+              <div class="more-icon">
+                <div class="dropdown">
+                  <button
+                    class="btn btn-dot dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img src="../images/dot.svg" />
+                  </button>
+                  <ul
+                    class="dropdown-menu dropdown-menu-end"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modal-edit"
+                        >Edit</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modal-change-assignment-group"
+                        >Change Assignment Group</a
+                      >
+                    </li>
+                    <li><a class="dropdown-item">Export</a></li>
+                    <li>
+                      <a class="dropdown-item delete-dropdown-link">Delete</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Dropdown Icon End-->
+            </div>
+
+            <div class="duration-validity">
+              <div class="duration">
+                <div class="clock-holder">
+                  <img src="../images/clock-new.svg" />
+                </div>
+                <div class="duration-text">
+                  <span class="duration-upper-text">Duration</span>
+                  <span class="duration-lower-text">3 months</span>
+                </div>
+              </div>
+
+              <div class="duration">
+                <div class="clock-holder">
+                  <img src="../images/validity.svg" />
+                </div>
+                <div class="duration-text">
+                  <span class="duration-upper-text">Validity</span>
+                  <span class="duration-lower-text">1 Year</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- left section upper column End -->
+
+          <!-- Right section upper column start -->
+          <div class="lower-content">
+            <div class="detail-block">
+              <span class="duration-upper-text">Product</span>
+              <span class="duration-lower-text">Hospice</span>
+            </div>
+
+            <div class="detail-block">
+              <span class="duration-upper-text">Category</span>
+              <span class="duration-lower-text">Clinician</span>
+            </div>
+
+            <div class="detail-block">
+              <span class="duration-upper-text">Care Type</span>
+              <span class="duration-lower-text">Clinician</span>
+            </div>
+
+            <div class="detail-block">
+              <span class="duration-upper-text">Discipline</span>
+              <span class="duration-lower-text">Physiotherapy</span>
+            </div>
+
+            <div class="detail-block">
+              <span class="duration-upper-text">Role Type</span>
+              <span class="duration-lower-text">Admission</span>
+            </div>
+
+            <div class="detail-block">
+              <span class="duration-upper-text">Certification Code</span>
+              <span class="duration-lower-text">Admission</span>
+            </div>
+          </div>
+          <!-- Right section upper column End -->
+        </div>
+        <!-- Left Section End -->
+
+        <!-- Right Section Start -->
+        <div class="right-detail-section w-100">
+          <!-- Right Section Tabs Start -->
+          <div class="tabs-nav w-100">
+            <ul class="nav nav-tabs transparent-tab" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="overview-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#overview"
+                  type="button"
+                  role="tab"
+                  aria-controls="overview"
+                  aria-selected="true"
+                >
+                  Overview
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="assignment-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#assignment"
+                  type="button"
+                  role="tab"
+                  aria-controls="assignment"
+                  aria-selected="false"
+                >
+                  Assignments
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="agencies-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#agencies"
+                  type="button"
+                  role="tab"
+                  aria-controls="agencies"
+                  aria-selected="false"
+                >
+                  Agencies
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="learner-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#learner"
+                  type="button"
+                  role="tab"
+                  aria-controls="learner"
+                  aria-selected="false"
+                >
+                  Learners
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="certified-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#certified"
+                  type="button"
+                  role="tab"
+                  aria-controls="certified"
+                  aria-selected="false"
+                >
+                  Certified
+                </button>
+              </li>
+            </ul>
+          </div>
+          <!-- Right Section Tabs End -->
+
+          <div
+            class="tab-content assignment-tab-content w-100"
+            id="myTabContent"
+          >
+            <!-- Overview Tab Start -->
+            <div
+              class="tab-pane w-100 fade show active"
+              id="overview"
+              role="tabpanel"
+              aria-labelledby="overview-tab"
+            >
+              <div class="title-row mb-10px">
+                <span class="title-row-heading">Overview</span>
+              </div>
+              <div class="right-section-data w-100">
+                <div class="right-section-data-content w-100">
+                  <div class="upper-content-columns w-100">
+                    <div class="left-data-4-columns flex-fill">
+                      <div class="two-columns w-100">
+                        <div class="data-column flex-fill col">
+                          <div class="data-column-row">
+                            <div class="text-data">
+                              <span class="data-title">Total learners</span>
+                              <span class="data-count">22</span>
+                            </div>
+                            <div class="data-icon-holder">
+                              <img src="../images/learners.svg" />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="data-column flex-fill col">
+                          <div class="data-column-row">
+                            <div class="text-data">
+                              <span class="data-title">Active learners</span>
+                              <span class="data-count">22</span>
+                            </div>
+                            <div class="data-icon-holder">
+                              <img src="../images/learners.svg" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="two-columns w-100">
+                        <div class="data-column flex-fill col">
+                          <div class="data-column-row">
+                            <div class="text-data">
+                              <span class="data-title">Total Agencies</span>
+                              <span class="data-count">22</span>
+                            </div>
+                            <div class="data-icon-holder">
+                              <img src="../images/agencies.svg" />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="data-column flex-fill col">
+                          <div class="data-column-row">
+                            <div class="text-data">
+                              <span class="data-title">Active Agencies</span>
+                              <span class="data-count">22</span>
+                            </div>
+                            <div class="data-icon-holder">
+                              <img src="../images/agencies.svg" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="right-circle-graph">
+                      <span class="data-title">Learners Overview</span>
+                      <div class="graph-row">
+                        <div class="circle-holder">
+                          <div id="learners"></div>
+                        </div>
+
+                        <div class="graph-list">
+                          <div class="graph-list-item">
+                            <div class="icon-title">
+                              <div class="list-icon-holder">
+                                <span class="list-icon bg-active"></span>
+                              </div>
+                              <span class="list-item-text"
+                                >Active Learners</span
+                              >
+                            </div>
+
+                            <span class="percentage">72%</span>
+                          </div>
+
+                          <div class="graph-list-item">
+                            <div class="icon-title">
+                              <div class="list-icon-holder">
+                                <span class="list-icon bg-inactive"></span>
+                              </div>
+                              <span class="list-item-text"
+                                >Inactive Learners</span
+                              >
+                            </div>
+
+                            <span class="percentage">10%</span>
+                          </div>
+
+                          <div class="graph-list-item">
+                            <div class="icon-title">
+                              <div class="list-icon-holder">
+                                <span class="list-icon bg-certified"></span>
+                              </div>
+                              <span class="list-item-text"
+                                >Certified Learners</span
+                              >
+                            </div>
+
+                            <span class="percentage">72%</span>
+                          </div>
+
+                          <div class="graph-list-item">
+                            <div class="icon-title">
+                              <div class="list-icon-holder">
+                                <span class="list-icon bg-dropped"></span>
+                              </div>
+                              <span class="list-item-text"
+                                >Dropped Learners</span
+                              >
+                            </div>
+
+                            <span class="percentage">72%</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="lower-graph-layout flex-fill">
+                    <div class="certification-trend w-100">
+                      <div class="certification-trend-left">
+                        <span class="data-title">Certification Trend</span>
+                        <div class="certification-row">
+                          <div class="icon-title">
+                            <div class="list-icon-holder">
+                              <span class="list-icon bg-active"></span>
+                            </div>
+                            <span class="list-item-text">Certified</span>
+                          </div>
+
+                          <div class="icon-title">
+                            <div class="list-icon-holder">
+                              <span class="list-icon bg-dropped"></span>
+                            </div>
+                            <span class="list-item-text">Dropped</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="dropdown year-dropdown">
+                        <button
+                          class="btn btn-outline bg-white dropdown-toggle"
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          2023
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a class="dropdown-item">2022</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item">2021</a>
+                          </li>
+                          <li><a class="dropdown-item">2020</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div id="trend"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Overview Tab End -->
+
+            <!-- Assignment Tab Start -->
+            <div
+              class="tab-pane w-100 fade"
+              id="assignment"
+              role="tabpanel"
+              aria-labelledby="assignment-tab"
+            >
+              <div
+                class="title-row assignment-title-row bg-white w-100 justify-content-between mb-10px"
+              >
+                <span class="title-row-heading">Assignments</span>
+                <button
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-change-assignment-group"
+                >
+                  Change Assignment Group
+                </button>
+              </div>
+
+              <div class="right-section-data w-100">
+                <div class="assignment-content w-100">
+                  <!-- Accordion Header Start -->
+                  <div class="assignment-content-header">
+                    <div class="gap-10-flex-column w-100">
+                      <div class="gap-10-flex-row w-100">
+                        <span class="assignment-header-title"
+                          >SN Adult Admission</span
+                        >
+                        <div class="gap-15-flex-row">
+                          <div class="assignment-task">
+                            <div class="gap-5-flex-row">
+                              <span class="assignment-task-title"
+                                >Assignments</span
+                              >
+                              <div class="count-holder">
+                                <span class="count-text">5</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="assignment-task">
+                            <div class="gap-5-flex-row">
+                              <span class="assignment-task-title">Tasks</span>
+                              <div class="count-holder">
+                                <span class="count-text">12</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="gap-50-flex-row">
+                        <div class="product-category">
+                          <span class="product-left-text">Product:</span>
+                          <span class="product-right-text">Hospice</span>
+                        </div>
+
+                        <div class="product-category">
+                          <span class="product-left-text">Category:</span>
+                          <span class="product-right-text">Clinician</span>
+                        </div>
+
+                        <div class="product-category">
+                          <span class="product-left-text">Duration:</span>
+                          <span class="product-right-text">1 Month</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion Header End -->
+
+                  <!-- Accordian Start -->
+                  <div class="accordion w-100" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button
+                          class="accordion-button"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          <div class="arrow-and-title">
+                            <img
+                              class="accordion-arrow-icon"
+                              src="../images/accordian-arrow.svg"
+                            />Start Of Care Admission Process
+                          </div>
+                          <span class="tasks-count">(2 tasks)</span>
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseOne"
+                        class="accordion-collapse collapse show"
+                        aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                          <div class="assignment-details">
+                            <div class="text-column-1">
+                              <span class="accordion-title">Description</span>
+                              <span class="accordion-desc">
+                                Lorem ipsum dolor sit amet consectetur. Quis id
+                                a dictum erat in neque odio aenean id. Euismod
+                                consectetur at eget a sed congue. Lorem aliquam
+                                sit dictumst neque elit. Elit eget ultricies
+                                vestibulum morbi elit. Massa tristique mauris
+                                ornare eleifend et dolor. Sed sollicitudin
+                                tellus cras sollicitudin quis ultricies sodales
+                                nunc adipiscing. Fermentum gravida tellus ut
+                                faucibus pellentesque ipsum elit facilisis. Diam
+                                leo ipsum aliquet in eget. Sit id amet viverra
+                                nisl lectus lacus eget interdum.Tempor vulputate
+                                sed tortor vel turpis erat at. Consectetur ipsum
+                                nec tempus placerat duis gravida tortor
+                                ultricies. Magna enim urna nulla egestas egestas
+                                tellus consequat. Ac eget in dui mauris lectus.
+                                Id vitae interdum molestie leo ullamcorper sit
+                                ac pulvinar odio. Sed magna viverra integer
+                                blandit habitasse. Posuere mauris risus urna
+                                habitant lectus. Ornare sem urna malesuada
+                                egestas nunc nibh.
+                              </span>
+                            </div>
+
+                            <div class="text-column-2">
+                              <div
+                                class="d-flex align-items-center w-100 justify-content-between"
+                              >
+                                <span class="accordion-title"
+                                  >Basic Navigation in KanTime</span
+                                >
+                                <span class="weightage">Weightage : 50</span>
+                              </div>
+
+                              <span class="accordion-desc">
+                                Lorem ipsum dolor sit amet consectetur. Quis
+                                neque mus mi eget etiam purus euismod fringilla
+                                vel. Turpis quisque amet dolor at cursus
+                                faucibus. Odio dignissim neque dui hendrerit in.
+                                Velit pellentesque at est orci faucibus. Vel in
+                                mauris tempus sapien facilisis sollicitudin non
+                                purus placerat mauris.
+                              </span>
+                            </div>
+
+                            <div class="text-column-2">
+                              <div
+                                class="d-flex align-items-center w-100 justify-content-between"
+                              >
+                                <span class="accordion-title"
+                                  >Basic Navigation in KanTime</span
+                                >
+                                <span class="weightage">Weightage : 50</span>
+                              </div>
+
+                              <span class="accordion-desc">
+                                Lorem ipsum dolor sit amet consectetur. Quis
+                                neque mus mi eget etiam purus euismod fringilla
+                                vel. Turpis quisque amet dolor at cursus
+                                faucibus. Odio dignissim neque dui hendrerit in.
+                                Velit pellentesque at est orci faucibus. Vel in
+                                mauris tempus sapien facilisis sollicitudin non
+                                purus placerat mauris.
+                              </span>
+                            </div>
+
+                            <div class="text-column-2">
+                              <div
+                                class="d-flex align-items-center w-100 justify-content-between"
+                              >
+                                <span class="accordion-title"
+                                  >Basic Navigation in KanTime</span
+                                >
+                                <span class="weightage">Weightage : 50</span>
+                              </div>
+
+                              <span class="accordion-desc">
+                                Lorem ipsum dolor sit amet consectetur. Quis
+                                neque mus mi eget etiam purus euismod fringilla
+                                vel. Turpis quisque amet dolor at cursus
+                                faucibus. Odio dignissim neque dui hendrerit in.
+                                Velit pellentesque at est orci faucibus. Vel in
+                                mauris tempus sapien facilisis sollicitudin non
+                                purus placerat mauris.
+                              </span>
+                            </div>
+
+                            <div class="text-column-2">
+                              <div
+                                class="d-flex align-items-center w-100 justify-content-between"
+                              >
+                                <span class="accordion-title"
+                                  >Basic Navigation in KanTime</span
+                                >
+                                <span class="weightage">Weightage : 50</span>
+                              </div>
+
+                              <span class="accordion-desc">
+                                Lorem ipsum dolor sit amet consectetur. Quis
+                                neque mus mi eget etiam purus euismod fringilla
+                                vel. Turpis quisque amet dolor at cursus
+                                faucibus. Odio dignissim neque dui hendrerit in.
+                                Velit pellentesque at est orci faucibus. Vel in
+                                mauris tempus sapien facilisis sollicitudin non
+                                purus placerat mauris.
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="collapseTwo"
+                        >
+                          <div class="arrow-and-title">
+                            <img
+                              class="accordion-arrow-icon"
+                              src="../images/accordian-arrow.svg"
+                            />Assignment 2
+                          </div>
+                          <span class="tasks-count">(2 tasks)</span>
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseTwo"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                          <div class="assignment-details">
+                            <div class="text-column-1">
+                              <span class="accordion-title">Description</span>
+                              <span class="accordion-desc">
+                                Lorem ipsum dolor sit amet consectetur. Quis id
+                                a dictum erat in neque odio aenean id. Euismod
+                                consectetur at eget a sed congue. Lorem aliquam
+                                sit dictumst neque elit. Elit eget ultricies
+                                vestibulum morbi elit. Massa tristique mauris
+                                ornare eleifend et dolor. Sed sollicitudin
+                                tellus cras sollicitudin quis ultricies sodales
+                                nunc adipiscing. Fermentum gravida tellus ut
+                                faucibus pellentesque ipsum elit facilisis. Diam
+                                leo ipsum aliquet in eget. Sit id amet viverra
+                                nisl lectus lacus eget interdum.Tempor vulputate
+                                sed tortor vel turpis erat at. Consectetur ipsum
+                                nec tempus placerat duis gravida tortor
+                                ultricies. Magna enim urna nulla egestas egestas
+                                tellus consequat. Ac eget in dui mauris lectus.
+                                Id vitae interdum molestie leo ullamcorper sit
+                                ac pulvinar odio. Sed magna viverra integer
+                                blandit habitasse. Posuere mauris risus urna
+                                habitant lectus. Ornare sem urna malesuada
+                                egestas nunc nibh.
+                              </span>
+                            </div>
+
+                            <div class="text-column-2">
+                              <div
+                                class="d-flex align-items-center w-100 justify-content-between"
+                              >
+                                <span class="accordion-title"
+                                  >Basic Navigation in KanTime</span
+                                >
+                                <span class="weightage">Weightage : 50</span>
+                              </div>
+
+                              <span class="accordion-desc">
+                                Lorem ipsum dolor sit amet consectetur. Quis
+                                neque mus mi eget etiam purus euismod fringilla
+                                vel. Turpis quisque amet dolor at cursus
+                                faucibus. Odio dignissim neque dui hendrerit in.
+                                Velit pellentesque at est orci faucibus. Vel in
+                                mauris tempus sapien facilisis sollicitudin non
+                                purus placerat mauris.
+                              </span>
+                            </div>
+
+                            <div class="text-column-2">
+                              <div
+                                class="d-flex align-items-center w-100 justify-content-between"
+                              >
+                                <span class="accordion-title"
+                                  >Basic Navigation in KanTime</span
+                                >
+                                <span class="weightage">Weightage : 50</span>
+                              </div>
+
+                              <span class="accordion-desc">
+                                Lorem ipsum dolor sit amet consectetur. Quis
+                                neque mus mi eget etiam purus euismod fringilla
+                                vel. Turpis quisque amet dolor at cursus
+                                faucibus. Odio dignissim neque dui hendrerit in.
+                                Velit pellentesque at est orci faucibus. Vel in
+                                mauris tempus sapien facilisis sollicitudin non
+                                purus placerat mauris.
+                              </span>
+                            </div>
+
+                            <div class="text-column-2">
+                              <div
+                                class="d-flex align-items-center w-100 justify-content-between"
+                              >
+                                <span class="accordion-title"
+                                  >Basic Navigation in KanTime</span
+                                >
+                                <span class="weightage">Weightage : 50</span>
+                              </div>
+
+                              <span class="accordion-desc">
+                                Lorem ipsum dolor sit amet consectetur. Quis
+                                neque mus mi eget etiam purus euismod fringilla
+                                vel. Turpis quisque amet dolor at cursus
+                                faucibus. Odio dignissim neque dui hendrerit in.
+                                Velit pellentesque at est orci faucibus. Vel in
+                                mauris tempus sapien facilisis sollicitudin non
+                                purus placerat mauris.
+                              </span>
+                            </div>
+
+                            <div class="text-column-2">
+                              <div
+                                class="d-flex align-items-center w-100 justify-content-between"
+                              >
+                                <span class="accordion-title"
+                                  >Basic Navigation in KanTime</span
+                                >
+                                <span class="weightage">Weightage : 50</span>
+                              </div>
+
+                              <span class="accordion-desc">
+                                Lorem ipsum dolor sit amet consectetur. Quis
+                                neque mus mi eget etiam purus euismod fringilla
+                                vel. Turpis quisque amet dolor at cursus
+                                faucibus. Odio dignissim neque dui hendrerit in.
+                                Velit pellentesque at est orci faucibus. Vel in
+                                mauris tempus sapien facilisis sollicitudin non
+                                purus placerat mauris.
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseThree"
+                          aria-expanded="false"
+                          aria-controls="collapseThree"
+                        >
+                          <div class="arrow-and-title">
+                            <img
+                              class="accordion-arrow-icon"
+                              src="../images/accordian-arrow.svg"
+                            />Assignment 3
+                          </div>
+                          <span class="tasks-count">(2 tasks)</span>
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseThree"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                          <div class="assignment-details">
+                            <div class="text-column-1">
+                              <span class="accordion-title">Description</span>
+                              <span class="accordion-desc">
+                                Lorem ipsum dolor sit amet consectetur. Quis id
+                                a dictum erat in neque odio aenean id. Euismod
+                                consectetur at eget a sed congue. Lorem aliquam
+                                sit dictumst neque elit. Elit eget ultricies
+                                vestibulum morbi elit. Massa tristique mauris
+                                ornare eleifend et dolor. Sed sollicitudin
+                                tellus cras sollicitudin quis ultricies sodales
+                                nunc adipiscing. Fermentum gravida tellus ut
+                                faucibus pellentesque ipsum elit facilisis. Diam
+                                leo ipsum aliquet in eget. Sit id amet viverra
+                                nisl lectus lacus eget interdum.Tempor vulputate
+                                sed tortor vel turpis erat at. Consectetur ipsum
+                                nec tempus placerat duis gravida tortor
+                                ultricies. Magna enim urna nulla egestas egestas
+                                tellus consequat. Ac eget in dui mauris lectus.
+                                Id vitae interdum molestie leo ullamcorper sit
+                                ac pulvinar odio. Sed magna viverra integer
+                                blandit habitasse. Posuere mauris risus urna
+                                habitant lectus. Ornare sem urna malesuada
+                                egestas nunc nibh.
+                              </span>
+                            </div>
+
+                            <div class="text-column-2">
+                              <div
+                                class="d-flex align-items-center w-100 justify-content-between"
+                              >
+                                <span class="accordion-title"
+                                  >Basic Navigation in KanTime</span
+                                >
+                                <span class="weightage">Weightage : 50</span>
+                              </div>
+
+                              <span class="accordion-desc">
+                                Lorem ipsum dolor sit amet consectetur. Quis
+                                neque mus mi eget etiam purus euismod fringilla
+                                vel. Turpis quisque amet dolor at cursus
+                                faucibus. Odio dignissim neque dui hendrerit in.
+                                Velit pellentesque at est orci faucibus. Vel in
+                                mauris tempus sapien facilisis sollicitudin non
+                                purus placerat mauris.
+                              </span>
+                            </div>
+
+                            <div class="text-column-2">
+                              <div
+                                class="d-flex align-items-center w-100 justify-content-between"
+                              >
+                                <span class="accordion-title"
+                                  >Basic Navigation in KanTime</span
+                                >
+                                <span class="weightage">Weightage : 50</span>
+                              </div>
+
+                              <span class="accordion-desc">
+                                Lorem ipsum dolor sit amet consectetur. Quis
+                                neque mus mi eget etiam purus euismod fringilla
+                                vel. Turpis quisque amet dolor at cursus
+                                faucibus. Odio dignissim neque dui hendrerit in.
+                                Velit pellentesque at est orci faucibus. Vel in
+                                mauris tempus sapien facilisis sollicitudin non
+                                purus placerat mauris.
+                              </span>
+                            </div>
+
+                            <div class="text-column-2">
+                              <div
+                                class="d-flex align-items-center w-100 justify-content-between"
+                              >
+                                <span class="accordion-title"
+                                  >Basic Navigation in KanTime</span
+                                >
+                                <span class="weightage">Weightage : 50</span>
+                              </div>
+
+                              <span class="accordion-desc">
+                                Lorem ipsum dolor sit amet consectetur. Quis
+                                neque mus mi eget etiam purus euismod fringilla
+                                vel. Turpis quisque amet dolor at cursus
+                                faucibus. Odio dignissim neque dui hendrerit in.
+                                Velit pellentesque at est orci faucibus. Vel in
+                                mauris tempus sapien facilisis sollicitudin non
+                                purus placerat mauris.
+                              </span>
+                            </div>
+
+                            <div class="text-column-2">
+                              <div
+                                class="d-flex align-items-center w-100 justify-content-between"
+                              >
+                                <span class="accordion-title"
+                                  >Basic Navigation in KanTime</span
+                                >
+                                <span class="weightage">Weightage : 50</span>
+                              </div>
+
+                              <span class="accordion-desc">
+                                Lorem ipsum dolor sit amet consectetur. Quis
+                                neque mus mi eget etiam purus euismod fringilla
+                                vel. Turpis quisque amet dolor at cursus
+                                faucibus. Odio dignissim neque dui hendrerit in.
+                                Velit pellentesque at est orci faucibus. Vel in
+                                mauris tempus sapien facilisis sollicitudin non
+                                purus placerat mauris.
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordian End -->
+                </div>
+              </div>
+            </div>
+            <!-- Assignment Tab End -->
+
+            <!-- Agencies Tab Start -->
+            <div
+              class="tab-pane w-100 fade"
+              id="agencies"
+              role="tabpanel"
+              aria-labelledby="agencies-tab"
+            >
+              <div
+                class="title-row assignment-title-row bg-white w-100 justify-content-between mb-10px"
+              >
+                <span class="title-row-heading">Agencies</span>
+                <button class="btn btn-outline ms-2">
+                  <img src="../images/filter.svg" class="me-2" />Filter
+                </button>
+              </div>
+
+              <div class="right-section-data w-100">
+                <!-- Table Start -->
+                <table class="table align-middle table-pattern-4 mb-0">
+                  <thead>
+                    <tr>
+                      <th>Agencies</th>
+                      <th class="text-center">Learners</th>
+                      <th class="text-center">Certified</th>
+                      <th class="text-center">Dropped</th>
+                      <th class="text-center">Status</th>
+                      <th class="text-center">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3 class="fw-600">
+                              Learning Path Name will be here
+                            </h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>10</p>
+                      </td>
+                      <td class="text-center">
+                        <p>50</p>
+                      </td>
+                      <td class="text-center">
+                        <p>1100</p>
+                      </td>
+                      <td class="text-center">
+                        <span class="status yellow">New</span>
+                      </td>
+                      <td>
+                        <div
+                          class="d-flex align-items-center justify-content-center"
+                        >
+                          <a
+                            href="learning-paths/view-details.html"
+                            class="btn btn-custom btn-link"
+                          >
+                            View Details
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3 class="fw-600">Horizon Adult Healthcare</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>25</p>
+                      </td>
+                      <td class="text-center">
+                        <p>18</p>
+                      </td>
+                      <td class="text-center">
+                        <p>225</p>
+                      </td>
+                      <td class="text-center">
+                        <span class="status green">Active</span>
+                      </td>
+                      <td>
+                        <div
+                          class="d-flex align-items-center justify-content-center"
+                        >
+                          <a
+                            href="learning-paths/view-details.html"
+                            class="btn btn-custom btn-link"
+                          >
+                            View Details
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3 class="fw-600">Horizon Adult Healthcare</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>25</p>
+                      </td>
+                      <td class="text-center">
+                        <p>18</p>
+                      </td>
+                      <td class="text-center">
+                        <p>225</p>
+                      </td>
+                      <td class="text-center">
+                        <span class="status green">Active</span>
+                      </td>
+                      <td>
+                        <div
+                          class="d-flex align-items-center justify-content-center"
+                        >
+                          <a
+                            href="learning-paths/view-details.html"
+                            class="btn btn-custom btn-link"
+                          >
+                            View Details
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3 class="fw-600">Horizon Adult Healthcare</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>25</p>
+                      </td>
+                      <td class="text-center">
+                        <p>18</p>
+                      </td>
+                      <td class="text-center">
+                        <p>225</p>
+                      </td>
+                      <td class="text-center">
+                        <span class="status green">Active</span>
+                      </td>
+                      <td>
+                        <div
+                          class="d-flex align-items-center justify-content-center"
+                        >
+                          <a
+                            href="learning-paths/view-details.html"
+                            class="btn btn-custom btn-link"
+                          >
+                            View Details
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3 class="fw-600">Horizon Adult Healthcare</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>25</p>
+                      </td>
+                      <td class="text-center">
+                        <p>18</p>
+                      </td>
+                      <td class="text-center">
+                        <p>225</p>
+                      </td>
+                      <td class="text-center">
+                        <span class="status green">Active</span>
+                      </td>
+                      <td>
+                        <div
+                          class="d-flex align-items-center justify-content-center"
+                        >
+                          <a
+                            href="learning-paths/view-details.html"
+                            class="btn btn-custom btn-link"
+                          >
+                            View Details
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3 class="fw-600">Horizon Adult Healthcare</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>25</p>
+                      </td>
+                      <td class="text-center">
+                        <p>18</p>
+                      </td>
+                      <td class="text-center">
+                        <p>225</p>
+                      </td>
+                      <td class="text-center">
+                        <span class="status green">Active</span>
+                      </td>
+                      <td>
+                        <div
+                          class="d-flex align-items-center justify-content-center"
+                        >
+                          <a
+                            href="learning-paths/view-details.html"
+                            class="btn btn-custom btn-link"
+                          >
+                            View Details
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- Table End -->
+
+                <!-- Pagination Start -->
+                <div class="d-flex justify-content-end w-100">
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination mb-0">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&#60;</span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&#62;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <!-- Pagination End -->
+              </div>
+            </div>
+            <!-- Agencies Tab End -->
+
+            <!-- Learners Tab Start -->
+            <div
+              class="tab-pane w-100 fade"
+              id="learner"
+              role="tabpanel"
+              aria-labelledby="learner-tab"
+            >
+              <div
+                class="title-row assignment-title-row bg-white w-100 justify-content-between mb-10px"
+              >
+                <span class="title-row-heading">Learners</span>
+                <button class="btn btn-outline">
+                  <img src="../images/filter.svg" class="me-2" />Filter
+                </button>
+              </div>
+
+              <div class="right-section-data w-100">
+                <!-- Table Start -->
+                <table class="table align-middle table-pattern-4 mb-0">
+                  <thead>
+                    <tr>
+                      <th>Learners name</th>
+                      <th class="text-center">Agency Name</th>
+                      <th class="text-center">Start Date</th>
+                      <th class="text-center">End Date</th>
+                      <th class="text-center">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Kristin Watson</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <div class="custom-progress">
+                          <div class="progress w-100">
+                            <div
+                              class="progress-bar bg-yellow-table"
+                              role="progressbar"
+                              aria-label="Success example"
+                              style="width: 45%"
+                              aria-valuenow="45"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                          <span class="progress-text">45% Completed</span>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Ronald Richards</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <div class="custom-progress">
+                          <div class="progress w-100">
+                            <div
+                              class="progress-bar bg-success-table"
+                              role="progressbar"
+                              aria-label="Success example"
+                              style="width: 70%"
+                              aria-valuenow="70"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                          <span class="progress-text">70% Completed</span>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Esther Howard</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <div class="custom-progress">
+                          <div class="progress w-100">
+                            <div
+                              class="progress-bar bg-yellow-table"
+                              role="progressbar"
+                              aria-label="Success example"
+                              style="width: 45%"
+                              aria-valuenow="45"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                          <span class="progress-text">45% Completed</span>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Kristin Watson</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <div class="custom-progress">
+                          <div class="progress w-100">
+                            <div
+                              class="progress-bar bg-success-table"
+                              role="progressbar"
+                              aria-label="Success example"
+                              style="width: 70%"
+                              aria-valuenow="70"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                          <span class="progress-text">70% Completed</span>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Cody Fisher</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <div class="custom-progress">
+                          <div class="progress w-100">
+                            <div
+                              class="progress-bar bg-yellow-table"
+                              role="progressbar"
+                              aria-label="Success example"
+                              style="width: 45%"
+                              aria-valuenow="45"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                          <span class="progress-text">45% Completed</span>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Savannah Nguyen</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <div class="custom-progress">
+                          <div class="progress w-100">
+                            <div
+                              class="progress-bar bg-success-table"
+                              role="progressbar"
+                              aria-label="Success example"
+                              style="width: 70%"
+                              aria-valuenow="70"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                          <span class="progress-text">70% Completed</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- Table End -->
+
+                <!-- Pagination Start -->
+                <div class="d-flex justify-content-end w-100">
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination mb-0">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&#60;</span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&#62;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <!-- Pagination End -->
+              </div>
+            </div>
+            <!-- Learners Tab End -->
+
+            <!-- Certified Tab Start -->
+            <div
+              class="tab-pane w-100 fade"
+              id="certified"
+              role="tabpanel"
+              aria-labelledby="certified-tab"
+            >
+              <div
+                class="title-row assignment-title-row bg-white w-100 justify-content-between mb-10px"
+              >
+                <span class="title-row-heading">Certified</span>
+                <button class="btn btn-primary-light">
+                  <img src="../images/export.svg" class="me-2" />Export
+                </button>
+              </div>
+
+              <div class="right-section-data w-100">
+                <!-- Table Start -->
+                <table class="table align-middle table-pattern-4 mb-0">
+                  <thead>
+                    <tr>
+                      <th>Learners name</th>
+                      <th class="text-center">Agency Name</th>
+                      <th class="text-center">Start Date</th>
+                      <th class="text-center">End Date</th>
+                      <th class="text-center">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Kathryn Murphy</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <div class="custom-progress">
+                          <div class="progress w-100">
+                            <div
+                              class="progress-bar bg-success-table"
+                              role="progressbar"
+                              aria-label="Success example"
+                              style="width: 100%"
+                              aria-valuenow="100"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                          <span class="progress-text">100% Completed</span>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Dianne Russell</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <div class="custom-progress">
+                          <div class="progress w-100">
+                            <div
+                              class="progress-bar bg-success-table"
+                              role="progressbar"
+                              aria-label="Success example"
+                              style="width: 100%"
+                              aria-valuenow="100"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                          <span class="progress-text">100% Completed</span>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Marvin McKinney</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <div class="custom-progress">
+                          <div class="progress w-100">
+                            <div
+                              class="progress-bar bg-success-table"
+                              role="progressbar"
+                              aria-label="Success example"
+                              style="width: 100%"
+                              aria-valuenow="100"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                          <span class="progress-text">100% Completed</span>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Arlene McCoy</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <div class="custom-progress">
+                          <div class="progress w-100">
+                            <div
+                              class="progress-bar bg-success-table"
+                              role="progressbar"
+                              aria-label="Success example"
+                              style="width: 100%"
+                              aria-valuenow="100"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                          <span class="progress-text">100% Completed</span>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Albert Flores</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <div class="custom-progress">
+                          <div class="progress w-100">
+                            <div
+                              class="progress-bar bg-success-table"
+                              role="progressbar"
+                              aria-label="Success example"
+                              style="width: 100%"
+                              aria-valuenow="100"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                          <span class="progress-text">100% Completed</span>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Eleanor Pena</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <div class="custom-progress">
+                          <div class="progress w-100">
+                            <div
+                              class="progress-bar bg-success-table"
+                              role="progressbar"
+                              aria-label="Success example"
+                              style="width: 100%"
+                              aria-valuenow="100"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                          <span class="progress-text">100% Completed</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- Table End -->
+
+                <!-- Pagination Start -->
+                <div class="d-flex justify-content-end w-100">
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination mb-0">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&#60;</span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&#62;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <!-- Pagination End -->
+              </div>
+            </div>
+            <!-- Certified Tab End -->
+          </div>
+        </div>
+        <!-- Right Section End -->
+      </div>
+    </main>
+    <footer class="d-flex justify-content-between footer">
+      <p class="mb-0">Kantime - LMS Control Panel</p>
+      <p class="mb-0">Version 1.0</p>
+    </footer>
+
+    <!-- model Edit -->
+    <div
+      class="modal fade"
+      id="modal-edit"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Learning Path Details
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="alert alert-primary text-center" role="alert">
+              #101 Learning Path Name will be here more here
+            </div>
+            <div class="row mt-5 mb-2">
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Status</label>
+                <div class="form-check form-check-inline" id="manual-checkin">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio1"
+                    value="option1"
+                  />
+                  <label class="form-check-label pe" for="inlineRadio1"
+                    >Active</label
+                  >
+                </div>
+                <div class="form-check form-check-inline" id="fob-checkin">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio2"
+                    value="option2"
+                  />
+                  <label class="form-check-label pe" for="inlineRadio2"
+                    >Inacative</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Product</label>
+                <select class="single-select">
+                  <option>Select type of product</option>
+                  <option>Product 1</option>
+                  <option>Product 1</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Role Type</label>
+                <select class="single-select">
+                  <option>Select type of product</option>
+                  <option>Product 1</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Category</label>
+                <select class="single-select">
+                  <option>Select type of product</option>
+                  <option>Product 1</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Duration</label>
+                <select class="single-select">
+                  <option>Select type of product</option>
+                  <option>Product 1</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Discipline</label>
+                <select class="single-select">
+                  <option>Select type of product</option>
+                  <option>Product 1</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Validity</label>
+                <select class="single-select">
+                  <option>Select type of product</option>
+                  <option>Product 1</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Care Type</label>
+                <select class="single-select">
+                  <option>Select type of product</option>
+                  <option>Product 1</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Certification code</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter certification code"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="add-label-save"
+              data-bs-target="#exampleModalToggle2"
+              data-bs-toggle="modal"
+              data-bs-dismiss="modal"
+            >
+              Continue
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- model Edit Continue-->
+    <div
+      class="modal fade"
+      id="exampleModalToggle2"
+      aria-hidden="true"
+      aria-labelledby="exampleModalToggleLabel2"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalToggleLabel2">
+              Add Assignment Group
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="d-flex align-items-center mb-4">
+              <div class="search-input" style="width: 340px">
+                <input type="text" class="form-control" placeholder="Search" />
+                <img src="../images/search.svg" alt="" />
+              </div>
+              <button class="btn btn-outline ms-2">
+                <img src="../images/filter.svg" class="me-2" />Filter
+              </button>
+            </div>
+            <div class="alert alert-primary text-center mb-4" role="alert">
+              Choose one Assignment group to add in “Learning Path Name”
+            </div>
+            <table class="table align-middle table-pattern-5">
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="radio"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <p class="text-dark">
+                          <span class="me-2 text-12 text-light-4">#ID_101</span
+                          >Assignment Group 1
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="radio"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <p class="text-dark">
+                          <span class="me-2 text-12 text-light-4">#ID_101</span
+                          >Assignment Group 2
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="radio"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <p class="text-dark">
+                          <span class="me-2 text-12 text-light-4">#ID_101</span
+                          >Assignment Group 3
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button class="btn btn-primary" data-bs-dismiss="modal">
+              Save Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- model Edit Continue-->
+    <div
+      class="modal fade"
+      id="modal-change-assignment-group"
+      aria-hidden="true"
+      aria-labelledby="exampleModalToggleLabel2"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalToggleLabel2">
+              Change Assignment group in SN Adult Admission
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="d-flex align-items-center mb-4">
+              <div class="search-input" style="width: 340px">
+                <input type="text" class="form-control" placeholder="Search" />
+                <img src="../images/search.svg" alt="" />
+              </div>
+              <button class="btn btn-outline ms-2">
+                <img src="../images/filter.svg" class="me-2" />Filter
+              </button>
+            </div>
+            <div class="alert alert-primary text-center mb-4" role="alert">
+              Choose one Assignment group to add in “Learning Path Name”
+            </div>
+            <table class="table align-middle table-pattern-4">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Product & category</th>
+                  <th>Learning Paths</th>
+                  <th>Assignments</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="radio"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>SN Adult Admission</h3>
+                        <p>#Code_101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home health</p>
+                    <p>Clinician</p>
+                  </td>
+                  <td class="text-center">
+                    <p>10</p>
+                  </td>
+                  <td class="text-center">
+                    <p>3</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="radio"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>SN Adult Admission</h3>
+                        <p>#Code_101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home health</p>
+                    <p>Clinician</p>
+                  </td>
+                  <td class="text-center">
+                    <p>10</p>
+                  </td>
+                  <td class="text-center">
+                    <p>3</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="radio"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>SN Adult Admission</h3>
+                        <p>#Code_101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home health</p>
+                    <p>Clinician</p>
+                  </td>
+                  <td class="text-center">
+                    <p>10</p>
+                  </td>
+                  <td class="text-center">
+                    <p>3</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="radio"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>SN Adult Admission</h3>
+                        <p>#Code_101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home health</p>
+                    <p>Clinician</p>
+                  </td>
+                  <td class="text-center">
+                    <p>10</p>
+                  </td>
+                  <td class="text-center">
+                    <p>3</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+              id="success"
+            >
+              Add Assignment
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <!-- bootstrap js-->
+    <script type="text/javascript" src="../js/popper.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+      var options = {
+        series: [35, 5, 67, 10],
+        chart: {
+          height: 200,
+          width: 200,
+          type: "pie",
+        },
+        colors: ["#ADE571", "#91B3F5", "#4772E0", "#FD6E61"],
+        labels: [
+          "Certified Learners",
+          "Dropped Learners",
+          "Active Learners",
+          "Inactive Learners",
+        ],
+        legend: {
+          show: false,
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        stroke: {
+          show: false,
+        },
+        responsive: [
+          {
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 200,
+              },
+            },
+          },
+        ],
+      };
+
+      var chart = new ApexCharts(document.querySelector("#learners"), options);
+      chart.render();
+
+      var trendoptions = {
+        series: [
+          {
+            name: "Certified",
+            data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 50, 70, 80],
+          },
+          {
+            name: "Dropped",
+            data: [20, 30, 15, 35, 45, 34, 29, 50, 46, 20, 34, 45],
+          },
+        ],
+        colors: ["#7398EC", "#B7D0FB"],
+        chart: {
+          type: "bar",
+          height: 250,
+          width: 1000,
+          toolbar: {
+            show: false,
+          },
+        },
+        plotOptions: {
+          bar: {
+            horizontal: false,
+            columnWidth: "30%",
+            endingShape: "rounded",
+          },
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        stroke: {
+          show: true,
+          width: 3,
+          colors: ["transparent"],
+        },
+        xaxis: {
+          categories: [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+          ],
+        },
+        yaxis: {
+          title: {
+            text: "",
+          },
+        },
+        fill: {
+          opacity: 1,
+        },
+        tooltip: {
+          y: {
+            formatter: function (val) {
+              return "" + val + " ";
+            },
+          },
+        },
+      };
+
+      var trend = new ApexCharts(
+        document.querySelector("#trend"),
+        trendoptions
+      );
+      trend.render();
+    </script>
+    <!-- custom initialize js -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script
+      type="text/javascript"
+      src="../js/bootstrap-multiselect.min.js"
+    ></script>
+    <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js "></script>
+    <script type="text/javascript" src="../js/custom.js"></script>
+  </body>
+</html>

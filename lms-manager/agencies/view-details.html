@@ -1,0 +1,1981 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#0D87E2" />
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/bootstrap-multiselect.min.css"
+    />
+    <link
+      href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css "
+      rel="stylesheet"
+    />
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="../css/lms.css" />
+    <link rel="stylesheet" type="text/css" href="../css/responsive.css" />
+    <title>View Details</title>
+  </head>
+
+  <body>
+    <header class="header-wrap">
+      <div class="main-header d-flex justify-content-between">
+        <div class="d-flex">
+          <div class="kantime-logo">
+            <img src="../images/logo-full.svg" alt="" />
+          </div>
+          <div class="header-item-center">
+            <div class="overlay"></div>
+            <nav class="menu" id="menu">
+              <div class="menu-mobile-header">
+                <button type="button" class="menu-mobile-arrow">&lt;</button>
+                <div class="menu-mobile-title"></div>
+                <button type="button" class="menu-mobile-close">
+                  &#x2715;
+                </button>
+              </div>
+              <ul class="menu-section">
+                <li class="menu-item"><a href="#">Dashboard</a></li>
+                <li class="menu-item">
+                  <a href="../index.html">Learning Paths</a>
+                </li>
+                <li class="menu-item">
+                  <a href="../assignments/assignment.html">Assignments</a>
+                </li>
+                <li class="menu-item active">
+                  <a href="agencies.html">Agencies</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div>
+          <div class="d-flex align-items-center header-right-menu">
+            <a
+              href="#"
+              class=""
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              title="Notifications"
+            >
+              <img src="../images/notification.svg" alt="notification" />
+            </a>
+            <a
+              href="#"
+              class=""
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              title="Messages"
+            >
+              <img src="../images/settings.svg" alt="mail" />
+            </a>
+            <a
+              tabindex="0"
+              class="profile"
+              role="button"
+              data-bs-toggle="popover"
+              data-bs-trigger="focus"
+              data-bs-html="true"
+              data-bs-custom-class="profile-modal"
+              title="
+              <div>
+                 <h3>John Doe</h3>
+                 <p>johndoe1868</p>
+              </div>"
+              data-bs-content='
+                 <ul class="list-unstyled">
+                    <li>
+                       <a>Last Login at:
+                          <p class="mb-0">Aug 21, 2021 09:45 AM</p>
+                       </a>
+                    </li>
+                    <li><a href="#">Edit My Profile</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                 </ul>
+              '
+            >
+              <span class="profile-circle">J</span>
+            </a>
+            <button type="button" class="menu-mobile-toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <!-- Breadcrumb Starts -->
+      <div class="mb-0 breadcrumb">
+        <a href="agencies.html" class="breadcrumb-page">Agencies</a>
+        <span class="breadcrumb-icon"
+          ><img src="../images/breadcrumb-arrow.svg"
+        /></span>
+        <span class="breadcrumb-page">Horizon Adult Healthcare</span>
+      </div>
+      <!-- Breadcrumb Ends -->
+
+      <div class="details-section w-100">
+        <!-- left section start -->
+        <div class="left-detail-section">
+          <div class="upper-content">
+            <div class="title-with-more">
+              <div class="title-lp">
+                <span class="title-lp-heading">Horizon Adult Healthcare</span>
+                <span class="text-light-3 text-14">#ID_101</span>
+                <span class="status green">Active</span>
+              </div>
+              <!-- dropdown icon start -->
+              <div class="more-icon">
+                <div class="dropdown">
+                  <button
+                    class="btn btn-dot dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img src="../images/dot.svg" />
+                  </button>
+                  <ul
+                    class="dropdown-menu dropdown-menu-end"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        data-bs-toggle="modal"
+                        data-bs-target="#assign-learning-path"
+                        >Assign Learning Paths</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item">Export</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item delete-dropdown-link">Delete</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- dropdown icon end -->
+            </div>
+
+            <div class="duration-validity">
+              <div class="duration">
+                <div class="clock-holder">
+                  <img src="../images/calendar.svg" />
+                </div>
+                <div class="duration-text">
+                  <span class="duration-upper-text">Registered on</span>
+                  <span class="duration-lower-text">01-01-2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lower-content">
+            <div class="detail-block">
+              <span class="duration-upper-text">Product</span>
+              <span class="duration-lower-text">Hospice</span>
+            </div>
+
+            <div class="detail-block">
+              <span class="duration-upper-text">Location</span>
+              <span class="duration-lower-text">New York, U.S</span>
+            </div>
+
+            <div class="detail-block">
+              <span class="duration-upper-text">Manager</span>
+              <span class="duration-lower-text">Jane Cooper</span>
+            </div>
+
+            <div class="detail-block">
+              <span class="duration-upper-text">Email</span>
+              <span class="duration-lower-text">Jane.Cooper@example.com</span>
+            </div>
+          </div>
+        </div>
+        <!-- left section end -->
+
+        <!-- right section start -->
+        <div class="right-detail-section w-100 h-100">
+          <!-- tabs start -->
+          <div class="tabs-nav w-100">
+            <ul class="nav nav-tabs transparent-tab" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="overview-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#overview"
+                  type="button"
+                  role="tab"
+                  aria-controls="overview"
+                  aria-selected="true"
+                >
+                  Overview
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="learning-paths-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#learning-paths"
+                  type="button"
+                  role="tab"
+                  aria-controls="learning-paths"
+                  aria-selected="false"
+                >
+                  Learning Paths
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="learner-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#learner"
+                  type="button"
+                  role="tab"
+                  aria-controls="learner"
+                  aria-selected="false"
+                >
+                  Learners
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="certified-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#certified"
+                  type="button"
+                  role="tab"
+                  aria-controls="certified"
+                  aria-selected="false"
+                >
+                  Certified
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="agency-settings-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#agency-settings"
+                  type="button"
+                  role="tab"
+                  aria-controls="agency-settings"
+                  aria-selected="false"
+                >
+                  Agency settings
+                </button>
+              </li>
+            </ul>
+          </div>
+          <!-- tabs end -->
+
+          <div
+            class="tab-content assignment-tab-content w-100"
+            id="myTabContent"
+          >
+            <!-- Overview tab start -->
+            <div
+              class="tab-pane w-100 fade show active"
+              id="overview"
+              role="tabpanel"
+              aria-labelledby="overview-tab"
+            >
+              <div class="title-row mb-10px">
+                <span class="title-row-heading">Overview</span>
+              </div>
+              <div class="right-section-data w-100">
+                <div class="right-section-data-content w-100">
+                  <div class="upper-content-columns w-100">
+                    <div class="right-circle-graph">
+                      <span class="data-title">Learners Overview</span>
+                      <div class="graph-row">
+                        <div class="circle-holder">
+                          <div id="learners"></div>
+                        </div>
+
+                        <div class="graph-list">
+                          <div class="graph-list-item">
+                            <div class="icon-title">
+                              <div class="list-icon-holder">
+                                <span class="list-icon bg-active"></span>
+                              </div>
+                              <span class="list-item-text"
+                                >Active Learners</span
+                              >
+                            </div>
+
+                            <span class="percentage">72%</span>
+                          </div>
+
+                          <div class="graph-list-item">
+                            <div class="icon-title">
+                              <div class="list-icon-holder">
+                                <span class="list-icon bg-inactive"></span>
+                              </div>
+                              <span class="list-item-text"
+                                >Inactive Learners</span
+                              >
+                            </div>
+
+                            <span class="percentage">10%</span>
+                          </div>
+
+                          <div class="graph-list-item">
+                            <div class="icon-title">
+                              <div class="list-icon-holder">
+                                <span class="list-icon bg-certified"></span>
+                              </div>
+                              <span class="list-item-text"
+                                >Certified Learners</span
+                              >
+                            </div>
+
+                            <span class="percentage">72%</span>
+                          </div>
+
+                          <div class="graph-list-item">
+                            <div class="icon-title">
+                              <div class="list-icon-holder">
+                                <span class="list-icon bg-dropped"></span>
+                              </div>
+                              <span class="list-item-text"
+                                >Dropped Learners</span
+                              >
+                            </div>
+
+                            <span class="percentage">72%</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="left-data-4-columns flex-fill">
+                      <div class="two-columns w-100">
+                        <div class="data-column col">
+                          <div class="data-column-row">
+                            <div class="text-data">
+                              <span class="data-title">Total learners</span>
+                              <span class="data-count">22</span>
+                            </div>
+                            <div class="data-icon-holder">
+                              <img src="../images/learners.svg" />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="data-column col">
+                          <div class="data-column-row">
+                            <div class="text-data">
+                              <span class="data-title">Active learners</span>
+                              <span class="data-count">22</span>
+                            </div>
+                            <div class="data-icon-holder">
+                              <img src="../images/learners.svg" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="two-columns w-100">
+                        <div class="data-column col">
+                          <div class="data-column-row">
+                            <div class="text-data">
+                              <span class="data-title"
+                                >Active Learning Paths</span
+                              >
+                              <span class="data-count">22</span>
+                            </div>
+                            <div class="data-icon-holder">
+                              <img src="../images/learning-paths.svg" />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="data-column col">
+                          <div class="data-column-row">
+                            <div class="text-data">
+                              <span class="data-title">Dropped Learners</span>
+                              <span class="data-count">22</span>
+                            </div>
+                            <div class="data-icon-holder">
+                              <img src="../images/dropped.svg" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="lower-graph-layout flex-fill">
+                    <div class="certification-trend w-100">
+                      <div class="certification-trend-left">
+                        <span class="data-title">Certification Trend</span>
+                        <div class="certification-row">
+                          <div class="icon-title">
+                            <div class="list-icon-holder">
+                              <span class="list-icon bg-active"></span>
+                            </div>
+                            <span class="list-item-text">Certified</span>
+                          </div>
+
+                          <div class="icon-title">
+                            <div class="list-icon-holder">
+                              <span class="list-icon bg-dropped"></span>
+                            </div>
+                            <span class="list-item-text">Dropped</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="dropdown year-dropdown">
+                        <button
+                          class="btn btn-outline bg-white dropdown-toggle"
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          2023
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a class="dropdown-item">2022</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item">2021</a>
+                          </li>
+                          <li><a class="dropdown-item">2020</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div id="trend"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Overview tab end -->
+
+            <!-- Learning Path tab start -->
+            <div
+              class="tab-pane w-100 fade"
+              id="learning-paths"
+              role="tabpanel"
+              aria-labelledby="assignment-tab"
+            >
+              <div
+                class="title-row assignment-title-row bg-white w-100 justify-content-between mb-10px"
+              >
+                <span class="title-row-heading">Learning Paths</span>
+                <a
+                  class="btn btn-primary add-btn"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#add-new-learning-path"
+                >
+                  <div class="wh-18px-icon-holder">
+                    <img src="../images/plus.svg" />
+                  </div>
+                  <span>Add New</span>
+                </a>
+              </div>
+
+              <div class="right-section-data w-100">
+                <table class="table align-middle table-pattern-4 mb-0">
+                  <thead>
+                    <tr>
+                      <th width="30%">Name</th>
+                      <th width="15%">Product & Category</th>
+                      <th width="20%" class="text-center">Learners</th>
+                      <th width="15%" class="text-center">Status</th>
+                      <th width="15%" class="text-center">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Learning Path Name</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <p>Home Health</p>
+                            <p>Clinical</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>1000</p>
+                      </td>
+                      <td class="text-center">
+                        <span class="status green">Active</span>
+                      </td>
+                      <td>
+                        <div
+                          class="d-flex align-items-center justify-content-center"
+                        >
+                          <a
+                            href="learning-paths/view-details.html"
+                            class="btn btn-custom btn-link"
+                          >
+                            View Details
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Learning Path Name</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <p>Home Health</p>
+                            <p>Clinical</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>1000</p>
+                      </td>
+                      <td class="text-center">
+                        <span class="status green">Active</span>
+                      </td>
+                      <td>
+                        <div
+                          class="d-flex align-items-center justify-content-center"
+                        >
+                          <a
+                            href="learning-paths/view-details.html"
+                            class="btn btn-custom btn-link"
+                          >
+                            View Details
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Learning Path Name</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <p>Home Health</p>
+                            <p>Clinical</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>1000</p>
+                      </td>
+                      <td class="text-center">
+                        <span class="status green">Active</span>
+                      </td>
+                      <td>
+                        <div
+                          class="d-flex align-items-center justify-content-center"
+                        >
+                          <a
+                            href="learning-paths/view-details.html"
+                            class="btn btn-custom btn-link"
+                          >
+                            View Details
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Learning Path Name</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <p>Home Health</p>
+                            <p>Clinical</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>1000</p>
+                      </td>
+                      <td class="text-center">
+                        <span class="status green">Active</span>
+                      </td>
+                      <td>
+                        <div
+                          class="d-flex align-items-center justify-content-center"
+                        >
+                          <a
+                            href="learning-paths/view-details.html"
+                            class="btn btn-custom btn-link"
+                          >
+                            View Details
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Learning Path Name</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <p>Home Health</p>
+                            <p>Clinical</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>1000</p>
+                      </td>
+                      <td class="text-center">
+                        <span class="status green">Active</span>
+                      </td>
+                      <td>
+                        <div
+                          class="d-flex align-items-center justify-content-center"
+                        >
+                          <a
+                            href="learning-paths/view-details.html"
+                            class="btn btn-custom btn-link"
+                          >
+                            View Details
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Learning Path Name</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <p>Home Health</p>
+                            <p>Clinical</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <p>1000</p>
+                      </td>
+                      <td class="text-center">
+                        <span class="status green">Active</span>
+                      </td>
+                      <td>
+                        <div
+                          class="d-flex align-items-center justify-content-center"
+                        >
+                          <a
+                            href="learning-paths/view-details.html"
+                            class="btn btn-custom btn-link"
+                          >
+                            View Details
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="d-flex justify-content-end w-100">
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination mb-0">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&#60;</span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&#62;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <!-- Learning Path tab end -->
+
+            <!-- Learner tab start -->
+            <div
+              class="tab-pane w-100 fade"
+              id="learner"
+              role="tabpanel"
+              aria-labelledby="learner-tab"
+            >
+              <div
+                class="title-row assignment-title-row bg-white w-100 justify-content-between mb-10px"
+              >
+                <span class="title-row-heading">Ongoing Learners</span>
+                <button class="btn btn-primary-light">
+                  <img src="../images/export.svg" class="me-2" />Export
+                </button>
+              </div>
+
+              <div class="right-section-data w-100">
+                <table class="table align-middle table-pattern-4 mb-0">
+                  <thead>
+                    <tr>
+                      <th>Learners name</th>
+                      <th>Learning Path</th>
+                      <th class="text-center">Start Date</th>
+                      <th class="text-center">End Date</th>
+                      <th class="text-center">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Kristin Watson</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <div class="custom-progress">
+                          <div class="progress w-100">
+                            <div
+                              class="progress-bar bg-success-table"
+                              role="progressbar"
+                              aria-label="Success example"
+                              style="width: 70%"
+                              aria-valuenow="70"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                          <span class="progress-text">70% Completed</span>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Kristin Watson</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <div class="custom-progress">
+                          <div class="progress w-100">
+                            <div
+                              class="progress-bar bg-success-table"
+                              role="progressbar"
+                              aria-label="Success example"
+                              style="width: 70%"
+                              aria-valuenow="70"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                          <span class="progress-text">70% Completed</span>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Kristin Watson</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <div class="custom-progress">
+                          <div class="progress w-100">
+                            <div
+                              class="progress-bar bg-success-table"
+                              role="progressbar"
+                              aria-label="Success example"
+                              style="width: 70%"
+                              aria-valuenow="70"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                          <span class="progress-text">70% Completed</span>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Kristin Watson</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <div class="custom-progress">
+                          <div class="progress w-100">
+                            <div
+                              class="progress-bar bg-success-table"
+                              role="progressbar"
+                              aria-label="Success example"
+                              style="width: 70%"
+                              aria-valuenow="70"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                          <span class="progress-text">70% Completed</span>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Kristin Watson</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <div class="custom-progress">
+                          <div class="progress w-100">
+                            <div
+                              class="progress-bar bg-success-table"
+                              role="progressbar"
+                              aria-label="Success example"
+                              style="width: 70%"
+                              aria-valuenow="70"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                          <span class="progress-text">70% Completed</span>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Kristin Watson</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <div class="custom-progress">
+                          <div class="progress w-100">
+                            <div
+                              class="progress-bar bg-success-table"
+                              role="progressbar"
+                              aria-label="Success example"
+                              style="width: 70%"
+                              aria-valuenow="70"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                          <span class="progress-text">70% Completed</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="d-flex justify-content-end w-100">
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination mb-0">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&#60;</span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&#62;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <!-- Learner tab end -->
+
+            <!-- Certified tab start -->
+            <div
+              class="tab-pane w-100 fade"
+              id="certified"
+              role="tabpanel"
+              aria-labelledby="certified-tab"
+            >
+              <div
+                class="title-row assignment-title-row bg-white w-100 justify-content-between mb-10px"
+              >
+                <span class="title-row-heading">Certified</span>
+                <button class="btn btn-primary-light">
+                  <img src="../images/export.svg" class="me-2" />Export
+                </button>
+              </div>
+
+              <div class="right-section-data w-100">
+                <table class="table align-middle table-pattern-4 mb-0">
+                  <thead>
+                    <tr>
+                      <th>Learners name</th>
+                      <th>Learning Path</th>
+                      <th class="text-center">Start Date</th>
+                      <th class="text-center">End Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Kathryn Murphy</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Kathryn Murphy</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Kathryn Murphy</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Kathryn Murphy</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Kathryn Murphy</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div>
+                            <h3>Kathryn Murphy</h3>
+                            <p>#101</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p>Lorem Ipsum Agency Pvt Ltd</p>
+                      </td>
+                      <td class="text-center">
+                        <p>01-01-2023</p>
+                      </td>
+                      <td class="text-center">
+                        <p>30-01-2023</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="d-flex justify-content-end w-100">
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination mb-0">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&#60;</span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&#62;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <!-- Certified tab end -->
+
+            <!-- Agency tab start -->
+            <div
+              class="tab-pane w-100 fade"
+              id="agency-settings"
+              role="tabpanel"
+              aria-labelledby="agencies-tab"
+            >
+              <div
+                class="title-row assignment-title-row bg-white w-100 justify-content-between mb-10px"
+              >
+                <span class="title-row-heading">Certified</span>
+              </div>
+
+              <div class="right-section-data w-100">
+                <div class="agency-setting-div w-100">
+                  <div class="setting-block">
+                    <span class="setting-span-upper">Organization ID</span>
+                    <span class="setting-span-lower">ID_organiz12345</span>
+                  </div>
+
+                  <div class="setting-block">
+                    <span class="setting-span-upper">Department ID</span>
+                    <span class="setting-span-lower">ID_Depart12345</span>
+                  </div>
+
+                  <div class="setting-block">
+                    <span class="setting-span-upper">Subdepartment ID</span>
+                    <span class="setting-span-lower">ID_subdepart12345</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Agency tab ends -->
+          </div>
+        </div>
+        <!-- right section end -->
+      </div>
+    </main>
+    <footer class="d-flex justify-content-between footer">
+      <p class="mb-0">Kantime - LMS Control Panel</p>
+      <p class="mb-0">Version 1.0</p>
+    </footer>
+    <!-- Assign Learning Path -->
+    <div
+      class="modal fade"
+      id="assign-learning-path"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Assign Learning Paths
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body custom-modal-body">
+            <div class="d-flex align-items-center w-100 mb-2">
+              <div class="search-input col-md-7">
+                <input type="text" class="form-control" placeholder="Search" />
+                <img src="../images/search.svg" alt="" />
+              </div>
+              <button class="btn btn-outline ms-2">
+                <img src="../images/filter.svg" class="me-2" />Filter
+              </button>
+            </div>
+
+            <table class="table align-middle table-pattern-5">
+              <thead>
+                <tr>
+                  <th>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>Select all</div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <p class="text-dark">
+                          <span class="me-2 text-12 text-light-4">#ID_101</span
+                          >Learning Path Name will be here more here
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <p class="text-dark">
+                          <span class="me-2 text-12 text-light-4">#ID_101</span
+                          >Learning Path Name will be here
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <p class="text-dark">
+                          <span class="me-2 text-12 text-light-4">#ID_101</span
+                          >Learning Path Name will be here
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              id="add-label-save"
+              data-bs-target="#exampleModalToggle2"
+              data-bs-toggle="modal"
+              data-bs-dismiss="modal"
+            >
+              Assign Learning Paths
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add New Learning Path -->
+    <div
+      class="modal fade"
+      id="add-new-learning-path"
+      aria-hidden="true"
+      aria-labelledby="exampleModalToggleLabel2"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalToggleLabel2">
+              Assign Learning Paths
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="d-flex align-items-center w-100 mb-4">
+              <div class="search-input col-md-7">
+                <input type="text" class="form-control" placeholder="Search" />
+                <img src="../images/search.svg" alt="" />
+              </div>
+              <button class="btn btn-outline ms-2">
+                <img src="../images/filter.svg" class="me-2" />Filter
+              </button>
+            </div>
+            <div class="alert alert-primary text-center mb-4" role="alert">
+              Select Learning Paths to assign to “Horizon Adult Healthcare”
+            </div>
+            <table class="table align-middle table-pattern-5">
+              <thead>
+                <th>
+                  <div class="d-flex">
+                    <div class="form-check me-2">
+                      <input
+                        class="form-check-input"
+                        style="--c-p: 2px"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault"
+                      />
+                    </div>
+                    <div>Select all</div>
+                  </div>
+                </th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <p class="text-dark">
+                          <span class="me-2 text-12 text-light-4">#ID_101</span
+                          >Learning Path Name will be here more here
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <p class="text-dark">
+                          <span class="me-2 text-12 text-light-4">#ID_101</span
+                          >Learning Path Name will be here
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <p class="text-dark">
+                          <span class="me-2 text-12 text-light-4">#ID_101</span
+                          >Learning Path Name will be here
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <p class="text-dark">
+                          <span class="me-2 text-12 text-light-4">#ID_101</span
+                          >Learning Path Name will be here
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button class="btn btn-primary" data-bs-dismiss="modal">
+              Add Learning Paths
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Learning Path Details -->
+    <div
+      class="modal fade"
+      id="add-learning-path-details"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Learning Path Details
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="alert alert-primary text-center" role="alert">
+              #101 Learning Path Name will be here more here
+            </div>
+            <div class="row mt-5 mb-2">
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Status</label>
+                <div class="form-check form-check-inline" id="manual-checkin">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio1"
+                    value="option1"
+                  />
+                  <label class="form-check-label pe" for="inlineRadio1"
+                    >Active</label
+                  >
+                </div>
+                <div class="form-check form-check-inline" id="fob-checkin">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio2"
+                    value="option2"
+                  />
+                  <label class="form-check-label pe" for="inlineRadio2"
+                    >Inacative</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Product</label>
+                <select class="single-select">
+                  <option>Select type of product</option>
+                  <option>Product 1</option>
+                  <option>Product 1</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Role Type</label>
+                <select class="single-select">
+                  <option>Select type of product</option>
+                  <option>Product 1</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Category</label>
+                <select class="single-select">
+                  <option>Select type of product</option>
+                  <option>Product 1</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Duration</label>
+                <select class="single-select">
+                  <option>Select type of product</option>
+                  <option>Product 1</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Discipline</label>
+                <select class="single-select">
+                  <option>Select type of product</option>
+                  <option>Product 1</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Validity</label>
+                <select class="single-select">
+                  <option>Select type of product</option>
+                  <option>Product 1</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Care Type</label>
+                <select class="single-select">
+                  <option>Select type of product</option>
+                  <option>Product 1</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="" class="w-100 label">Certification code</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter certification code"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="add-label-save"
+              data-bs-target="#add-assignment-group"
+              data-bs-toggle="modal"
+              data-bs-dismiss="modal"
+            >
+              Continue
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Assignment Group-->
+    <div
+      class="modal fade"
+      id="add-assignment-group"
+      aria-hidden="true"
+      aria-labelledby="exampleModalToggleLabel2"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalToggleLabel2">
+              Add Assignment Group
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="d-flex align-items-center mb-4 w-100">
+              <div class="search-input col-md-7">
+                <input type="text" class="form-control" placeholder="Search" />
+                <img src="../images/search.svg" alt="" />
+              </div>
+              <button class="btn btn-outline ms-2">
+                <img src="../images/filter.svg" class="me-2" />Filter
+              </button>
+            </div>
+            <div class="alert alert-primary text-center mb-4" role="alert">
+              Choose one Assignment group to add in “Learning Path Name”
+            </div>
+            <table class="table align-middle table-pattern-4">
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="radio"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div class="radio-text-row">
+                        <span class="setting-span-upper">#ID_101</span>
+                        <span class="setting-span-lower"
+                          >Assignment Group 1</span
+                        >
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="radio"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div class="radio-text-row">
+                        <span class="setting-span-upper">#ID_101</span>
+                        <span class="setting-span-lower"
+                          >Assignment Group 2</span
+                        >
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="radio"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div class="radio-text-row">
+                        <span class="setting-span-upper">#ID_101</span>
+                        <span class="setting-span-lower"
+                          >Assignment Group 3</span
+                        >
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="radio"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div class="radio-text-row">
+                        <span class="setting-span-upper">#ID_101</span>
+                        <span class="setting-span-lower"
+                          >Assignment Group 4</span
+                        >
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+              id="success"
+            >
+              Save Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <!-- bootstrap js-->
+    <script type="text/javascript" src="../js/popper.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+      var options = {
+        series: [35, 5, 67, 10],
+        chart: {
+          height: 200,
+          width: 200,
+          type: "pie",
+        },
+        colors: ["#ADE571", "#91B3F5", "#4772E0", "#FD6E61"],
+        labels: [
+          "Certified Learners",
+          "Dropped Learners",
+          "Active Learners",
+          "Inactive Learners",
+        ],
+        legend: {
+          show: false,
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        stroke: {
+          show: false,
+        },
+        responsive: [
+          {
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 200,
+              },
+            },
+          },
+        ],
+      };
+
+      var chart = new ApexCharts(document.querySelector("#learners"), options);
+      chart.render();
+
+      var trendoptions = {
+        series: [
+          {
+            name: "Certified",
+            data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 50, 70, 80],
+          },
+          {
+            name: "Dropped",
+            data: [20, 30, 15, 35, 45, 34, 29, 50, 46, 20, 34, 45],
+          },
+        ],
+        colors: ["#7398EC", "#B7D0FB"],
+        chart: {
+          type: "bar",
+          height: 250,
+          width: 1000,
+          toolbar: {
+            show: false,
+          },
+        },
+        legend: {
+          show: false,
+        },
+        plotOptions: {
+          bar: {
+            horizontal: false,
+            columnWidth: "30%",
+            endingShape: "rounded",
+          },
+        },
+        dataLabels: {
+          enabled: false,
+        },
+
+        stroke: {
+          show: true,
+          width: 3,
+          colors: ["transparent"],
+        },
+        xaxis: {
+          categories: [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+          ],
+        },
+        yaxis: {
+          title: {
+            text: "",
+          },
+        },
+        fill: {
+          opacity: 1,
+        },
+        tooltip: {
+          y: {
+            formatter: function (val) {
+              return "" + val + " ";
+            },
+          },
+        },
+      };
+
+      var trend = new ApexCharts(
+        document.querySelector("#trend"),
+        trendoptions
+      );
+      trend.render();
+    </script>
+    <!-- custom initialize js -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script
+      type="text/javascript"
+      src="../js/bootstrap-multiselect.min.js"
+    ></script>
+    <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js "></script>
+    <script type="text/javascript" src="../js/custom.js"></script>
+  </body>
+</html>
