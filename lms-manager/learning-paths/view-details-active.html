@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../css/menu.css" />
     <link rel="stylesheet" type="text/css" href="../css/lms.css" />
     <link rel="stylesheet" type="text/css" href="../css/responsive.css" />
-    <title>View Details</title>
+    <title>View Details Active</title>
   </head>
 
   <body>
@@ -57,7 +57,7 @@
               <ul class="menu-section">
                 <li class="menu-item"><a href="#">Dashboard</a></li>
                 <li class="menu-item active">
-                  <a href="../index.html">Learning Paths</a>
+                  <a href="../learning-path.html">Learning Paths</a>
                 </li>
                 <li class="menu-item">
                   <a href="../assignments/assignment.html">Assignments</a>
@@ -131,7 +131,7 @@
     <main class="main-content">
       <!-- Breadcrumb Start -->
       <div class="mb-0 breadcrumb">
-        <a href="../index.html" class="breadcrumb-page">Learning Path</a>
+        <a href="../learning-paths/learning-path.html" class="breadcrumb-page">Learning Path</a>
         <span class="breadcrumb-icon"
           ><img src="../images/breadcrumb-arrow.svg"
         /></span>
@@ -166,25 +166,9 @@
                     class="dropdown-menu dropdown-menu-end"
                     aria-labelledby="dropdownMenuButton1"
                   >
+                   
                     <li>
-                      <a
-                        class="dropdown-item"
-                        data-bs-toggle="modal"
-                        data-bs-target="#modal-edit"
-                        >Edit</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        data-bs-toggle="modal"
-                        data-bs-target="#modal-change-assignment-group"
-                        >Change Assignment Group</a
-                      >
-                    </li>
-                    <li><a class="dropdown-item">Export</a></li>
-                    <li>
-                      <a class="dropdown-item delete-dropdown-link">Delete</a>
+                      <a class="dropdown-item  deactivateRed">Request to Deactivate</a>
                     </li>
                   </ul>
                 </div>
@@ -247,6 +231,11 @@
               <span class="duration-upper-text">Certification Code</span>
               <span class="duration-lower-text">Admission</span>
             </div>
+
+            <div class="detail-block">
+              <span class="duration-upper-text">Subscription Date</span>
+              <span class="duration-lower-text">12-02-2023</span>
+            </div>
           </div>
           <!-- Right section upper column End -->
         </div>
@@ -285,20 +274,7 @@
                   Assignments
                 </button>
               </li>
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link"
-                  id="agencies-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#agencies"
-                  type="button"
-                  role="tab"
-                  aria-controls="agencies"
-                  aria-selected="false"
-                >
-                  Agencies
-                </button>
-              </li>
+             
               <li class="nav-item" role="presentation">
                 <button
                   class="nav-link"
@@ -313,20 +289,7 @@
                   Learners
                 </button>
               </li>
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link"
-                  id="certified-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#certified"
-                  type="button"
-                  role="tab"
-                  aria-controls="certified"
-                  aria-selected="false"
-                >
-                  Certified
-                </button>
-              </li>
+            
             </ul>
           </div>
           <!-- Right Section Tabs End -->
@@ -354,7 +317,7 @@
                           <div class="data-column-row">
                             <div class="text-data">
                               <span class="data-title">Total learners</span>
-                              <span class="data-count">22</span>
+                              <span class="data-count">133</span>
                             </div>
                             <div class="data-icon-holder">
                               <img src="../images/learners.svg" />
@@ -365,7 +328,7 @@
                         <div class="data-column flex-fill col">
                           <div class="data-column-row">
                             <div class="text-data">
-                              <span class="data-title">Active learners</span>
+                              <span class="data-title">Ongoing learners</span>
                               <span class="data-count">22</span>
                             </div>
                             <div class="data-icon-holder">
@@ -379,11 +342,11 @@
                         <div class="data-column flex-fill col">
                           <div class="data-column-row">
                             <div class="text-data">
-                              <span class="data-title">Total Agencies</span>
-                              <span class="data-count">22</span>
+                              <span class="data-title">Dropped learners</span>
+                              <span class="data-count">09</span>
                             </div>
                             <div class="data-icon-holder">
-                              <img src="../images/agencies.svg" />
+                              <img src="../images/dropped.svg" />
                             </div>
                           </div>
                         </div>
@@ -391,11 +354,11 @@
                         <div class="data-column flex-fill col">
                           <div class="data-column-row">
                             <div class="text-data">
-                              <span class="data-title">Active Agencies</span>
-                              <span class="data-count">22</span>
+                              <span class="data-title">Certified learners</span>
+                              <span class="data-count">42</span>
                             </div>
                             <div class="data-icon-holder">
-                              <img src="../images/agencies.svg" />
+                              <img src="../images/medal.svg" />
                             </div>
                           </div>
                         </div>
@@ -528,13 +491,7 @@
                 class="title-row assignment-title-row bg-white w-100 justify-content-between mb-10px"
               >
                 <span class="title-row-heading">Assignments</span>
-                <button
-                  class="btn btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#modal-change-assignment-group"
-                >
-                  Change Assignment Group
-                </button>
+                
               </div>
 
               <div class="right-section-data w-100">
@@ -582,7 +539,7 @@
 
                         <div class="product-category">
                           <span class="product-left-text">Duration:</span>
-                          <span class="product-right-text">1 Month</span>
+                          <span class="product-right-text">3 Month</span>
                         </div>
                       </div>
                     </div>
@@ -1018,283 +975,7 @@
             </div>
             <!-- Assignment Tab End -->
 
-            <!-- Agencies Tab Start -->
-            <div
-              class="tab-pane w-100 fade"
-              id="agencies"
-              role="tabpanel"
-              aria-labelledby="agencies-tab"
-            >
-              <div
-                class="title-row assignment-title-row bg-white w-100 justify-content-between mb-10px"
-              >
-                <span class="title-row-heading">Agencies</span>
-                <button class="btn btn-outline ms-2">
-                  <img src="../images/filter.svg" class="me-2" />Filter
-                </button>
-              </div>
-
-              <div class="right-section-data w-100">
-                <!-- Table Start -->
-                <table class="table align-middle table-pattern-4 mb-0">
-                  <thead>
-                    <tr>
-                      <th>Agencies</th>
-                      <th class="text-center">Learners</th>
-                      <th class="text-center">Certified</th>
-                      <th class="text-center">Dropped</th>
-                      <th class="text-center">Status</th>
-                      <th class="text-center">Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="d-flex">
-                          <div>
-                            <h3 class="fw-600">
-                              Learning Path Name will be here
-                            </h3>
-                            <p>#101</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <p>10</p>
-                      </td>
-                      <td class="text-center">
-                        <p>50</p>
-                      </td>
-                      <td class="text-center">
-                        <p>1100</p>
-                      </td>
-                      <td class="text-center">
-                        <span class="status yellow">New</span>
-                      </td>
-                      <td>
-                        <div
-                          class="d-flex align-items-center justify-content-center"
-                        >
-                          <a
-                            href="learning-paths/view-details.html"
-                            class="btn btn-custom btn-link"
-                          >
-                            View Details
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <div class="d-flex">
-                          <div>
-                            <h3 class="fw-600">Horizon Adult Healthcare</h3>
-                            <p>#101</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <p>25</p>
-                      </td>
-                      <td class="text-center">
-                        <p>18</p>
-                      </td>
-                      <td class="text-center">
-                        <p>225</p>
-                      </td>
-                      <td class="text-center">
-                        <span class="status green">Active</span>
-                      </td>
-                      <td>
-                        <div
-                          class="d-flex align-items-center justify-content-center"
-                        >
-                          <a
-                            href="learning-paths/view-details.html"
-                            class="btn btn-custom btn-link"
-                          >
-                            View Details
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <div class="d-flex">
-                          <div>
-                            <h3 class="fw-600">Horizon Adult Healthcare</h3>
-                            <p>#101</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <p>25</p>
-                      </td>
-                      <td class="text-center">
-                        <p>18</p>
-                      </td>
-                      <td class="text-center">
-                        <p>225</p>
-                      </td>
-                      <td class="text-center">
-                        <span class="status green">Active</span>
-                      </td>
-                      <td>
-                        <div
-                          class="d-flex align-items-center justify-content-center"
-                        >
-                          <a
-                            href="learning-paths/view-details.html"
-                            class="btn btn-custom btn-link"
-                          >
-                            View Details
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <div class="d-flex">
-                          <div>
-                            <h3 class="fw-600">Horizon Adult Healthcare</h3>
-                            <p>#101</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <p>25</p>
-                      </td>
-                      <td class="text-center">
-                        <p>18</p>
-                      </td>
-                      <td class="text-center">
-                        <p>225</p>
-                      </td>
-                      <td class="text-center">
-                        <span class="status green">Active</span>
-                      </td>
-                      <td>
-                        <div
-                          class="d-flex align-items-center justify-content-center"
-                        >
-                          <a
-                            href="learning-paths/view-details.html"
-                            class="btn btn-custom btn-link"
-                          >
-                            View Details
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <div class="d-flex">
-                          <div>
-                            <h3 class="fw-600">Horizon Adult Healthcare</h3>
-                            <p>#101</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <p>25</p>
-                      </td>
-                      <td class="text-center">
-                        <p>18</p>
-                      </td>
-                      <td class="text-center">
-                        <p>225</p>
-                      </td>
-                      <td class="text-center">
-                        <span class="status green">Active</span>
-                      </td>
-                      <td>
-                        <div
-                          class="d-flex align-items-center justify-content-center"
-                        >
-                          <a
-                            href="learning-paths/view-details.html"
-                            class="btn btn-custom btn-link"
-                          >
-                            View Details
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <div class="d-flex">
-                          <div>
-                            <h3 class="fw-600">Horizon Adult Healthcare</h3>
-                            <p>#101</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <p>25</p>
-                      </td>
-                      <td class="text-center">
-                        <p>18</p>
-                      </td>
-                      <td class="text-center">
-                        <p>225</p>
-                      </td>
-                      <td class="text-center">
-                        <span class="status green">Active</span>
-                      </td>
-                      <td>
-                        <div
-                          class="d-flex align-items-center justify-content-center"
-                        >
-                          <a
-                            href="learning-paths/view-details.html"
-                            class="btn btn-custom btn-link"
-                          >
-                            View Details
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <!-- Table End -->
-
-                <!-- Pagination Start -->
-                <div class="d-flex justify-content-end w-100">
-                  <nav aria-label="Page navigation example">
-                    <ul class="pagination mb-0">
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                          <span aria-hidden="true">&#60;</span>
-                        </a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">1</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">2</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">3</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                          <span aria-hidden="true">&#62;</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-                <!-- Pagination End -->
-              </div>
-            </div>
-            <!-- Agencies Tab End -->
-
-            <!-- Learners Tab Start -->
+           <!-- Learners Tab Start -->
             <div
               class="tab-pane w-100 fade"
               id="learner"
@@ -1304,9 +985,9 @@
               <div
                 class="title-row assignment-title-row bg-white w-100 justify-content-between mb-10px"
               >
-                <span class="title-row-heading">Learners</span>
-                <button class="btn btn-outline">
-                  <img src="../images/filter.svg" class="me-2" />Filter
+                <span class="title-row-heading">Learning paths</span>
+                <button class="btn btn-primary-light">
+                  <img src="../images/export.svg" class="me-2" />Export
                 </button>
               </div>
 
@@ -1315,8 +996,7 @@
                 <table class="table align-middle table-pattern-4 mb-0">
                   <thead>
                     <tr>
-                      <th>Learners name</th>
-                      <th class="text-center">Agency Name</th>
+                      <th>Learners path</th>
                       <th class="text-center">Start Date</th>
                       <th class="text-center">End Date</th>
                       <th class="text-center">Status</th>
@@ -1327,13 +1007,10 @@
                       <td>
                         <div class="d-flex">
                           <div>
-                            <h3>Kristin Watson</h3>
+                            <h3>SN Adult Admission Process</h3>
                             <p>#101</p>
                           </div>
                         </div>
-                      </td>
-                      <td class="text-center">
-                        <p>Lorem Ipsum Agency Pvt Ltd</p>
                       </td>
                       <td class="text-center">
                         <p>01-01-2023</p>
@@ -1341,6 +1018,7 @@
                       <td class="text-center">
                         <p>30-01-2023</p>
                       </td>
+                      
                       <td class="text-center">
                         <div class="custom-progress">
                           <div class="progress w-100">
@@ -1363,13 +1041,10 @@
                       <td>
                         <div class="d-flex">
                           <div>
-                            <h3>Ronald Richards</h3>
+                            <h3>SN Adult Admission Process</h3>
                             <p>#101</p>
                           </div>
                         </div>
-                      </td>
-                      <td class="text-center">
-                        <p>Lorem Ipsum Agency Pvt Ltd</p>
                       </td>
                       <td class="text-center">
                         <p>01-01-2023</p>
@@ -1377,6 +1052,7 @@
                       <td class="text-center">
                         <p>30-01-2023</p>
                       </td>
+                      
                       <td class="text-center">
                         <div class="custom-progress">
                           <div class="progress w-100">
@@ -1399,13 +1075,10 @@
                       <td>
                         <div class="d-flex">
                           <div>
-                            <h3>Esther Howard</h3>
+                            <h3>SN Adult Admission Process</h3>
                             <p>#101</p>
                           </div>
                         </div>
-                      </td>
-                      <td class="text-center">
-                        <p>Lorem Ipsum Agency Pvt Ltd</p>
                       </td>
                       <td class="text-center">
                         <p>01-01-2023</p>
@@ -1413,6 +1086,7 @@
                       <td class="text-center">
                         <p>30-01-2023</p>
                       </td>
+                      
                       <td class="text-center">
                         <div class="custom-progress">
                           <div class="progress w-100">
@@ -1435,13 +1109,10 @@
                       <td>
                         <div class="d-flex">
                           <div>
-                            <h3>Kristin Watson</h3>
+                            <h3>SN Adult Admission Process</h3>
                             <p>#101</p>
                           </div>
                         </div>
-                      </td>
-                      <td class="text-center">
-                        <p>Lorem Ipsum Agency Pvt Ltd</p>
                       </td>
                       <td class="text-center">
                         <p>01-01-2023</p>
@@ -1449,6 +1120,7 @@
                       <td class="text-center">
                         <p>30-01-2023</p>
                       </td>
+                      
                       <td class="text-center">
                         <div class="custom-progress">
                           <div class="progress w-100">
@@ -1471,13 +1143,10 @@
                       <td>
                         <div class="d-flex">
                           <div>
-                            <h3>Cody Fisher</h3>
+                            <h3>SN Adult Admission Process</h3>
                             <p>#101</p>
                           </div>
                         </div>
-                      </td>
-                      <td class="text-center">
-                        <p>Lorem Ipsum Agency Pvt Ltd</p>
                       </td>
                       <td class="text-center">
                         <p>01-01-2023</p>
@@ -1485,6 +1154,7 @@
                       <td class="text-center">
                         <p>30-01-2023</p>
                       </td>
+                      
                       <td class="text-center">
                         <div class="custom-progress">
                           <div class="progress w-100">
@@ -1507,13 +1177,10 @@
                       <td>
                         <div class="d-flex">
                           <div>
-                            <h3>Savannah Nguyen</h3>
+                            <h3>SN Adult Admission Process</h3>
                             <p>#101</p>
                           </div>
                         </div>
-                      </td>
-                      <td class="text-center">
-                        <p>Lorem Ipsum Agency Pvt Ltd</p>
                       </td>
                       <td class="text-center">
                         <p>01-01-2023</p>
@@ -1521,6 +1188,7 @@
                       <td class="text-center">
                         <p>30-01-2023</p>
                       </td>
+                      
                       <td class="text-center">
                         <div class="custom-progress">
                           <div class="progress w-100">
@@ -1573,284 +1241,7 @@
             </div>
             <!-- Learners Tab End -->
 
-            <!-- Certified Tab Start -->
-            <div
-              class="tab-pane w-100 fade"
-              id="certified"
-              role="tabpanel"
-              aria-labelledby="certified-tab"
-            >
-              <div
-                class="title-row assignment-title-row bg-white w-100 justify-content-between mb-10px"
-              >
-                <span class="title-row-heading">Certified</span>
-                <button class="btn btn-primary-light">
-                  <img src="../images/export.svg" class="me-2" />Export
-                </button>
-              </div>
-
-              <div class="right-section-data w-100">
-                <!-- Table Start -->
-                <table class="table align-middle table-pattern-4 mb-0">
-                  <thead>
-                    <tr>
-                      <th>Learners name</th>
-                      <th class="text-center">Agency Name</th>
-                      <th class="text-center">Start Date</th>
-                      <th class="text-center">End Date</th>
-                      <th class="text-center">Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="d-flex">
-                          <div>
-                            <h3>Kathryn Murphy</h3>
-                            <p>#101</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <p>Lorem Ipsum Agency Pvt Ltd</p>
-                      </td>
-                      <td class="text-center">
-                        <p>01-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <p>30-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <div class="custom-progress">
-                          <div class="progress w-100">
-                            <div
-                              class="progress-bar bg-success-table"
-                              role="progressbar"
-                              aria-label="Success example"
-                              style="width: 100%"
-                              aria-valuenow="100"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            ></div>
-                          </div>
-                          <span class="progress-text">100% Completed</span>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <div class="d-flex">
-                          <div>
-                            <h3>Dianne Russell</h3>
-                            <p>#101</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <p>Lorem Ipsum Agency Pvt Ltd</p>
-                      </td>
-                      <td class="text-center">
-                        <p>01-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <p>30-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <div class="custom-progress">
-                          <div class="progress w-100">
-                            <div
-                              class="progress-bar bg-success-table"
-                              role="progressbar"
-                              aria-label="Success example"
-                              style="width: 100%"
-                              aria-valuenow="100"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            ></div>
-                          </div>
-                          <span class="progress-text">100% Completed</span>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <div class="d-flex">
-                          <div>
-                            <h3>Marvin McKinney</h3>
-                            <p>#101</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <p>Lorem Ipsum Agency Pvt Ltd</p>
-                      </td>
-                      <td class="text-center">
-                        <p>01-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <p>30-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <div class="custom-progress">
-                          <div class="progress w-100">
-                            <div
-                              class="progress-bar bg-success-table"
-                              role="progressbar"
-                              aria-label="Success example"
-                              style="width: 100%"
-                              aria-valuenow="100"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            ></div>
-                          </div>
-                          <span class="progress-text">100% Completed</span>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <div class="d-flex">
-                          <div>
-                            <h3>Arlene McCoy</h3>
-                            <p>#101</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <p>Lorem Ipsum Agency Pvt Ltd</p>
-                      </td>
-                      <td class="text-center">
-                        <p>01-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <p>30-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <div class="custom-progress">
-                          <div class="progress w-100">
-                            <div
-                              class="progress-bar bg-success-table"
-                              role="progressbar"
-                              aria-label="Success example"
-                              style="width: 100%"
-                              aria-valuenow="100"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            ></div>
-                          </div>
-                          <span class="progress-text">100% Completed</span>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <div class="d-flex">
-                          <div>
-                            <h3>Albert Flores</h3>
-                            <p>#101</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <p>Lorem Ipsum Agency Pvt Ltd</p>
-                      </td>
-                      <td class="text-center">
-                        <p>01-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <p>30-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <div class="custom-progress">
-                          <div class="progress w-100">
-                            <div
-                              class="progress-bar bg-success-table"
-                              role="progressbar"
-                              aria-label="Success example"
-                              style="width: 100%"
-                              aria-valuenow="100"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            ></div>
-                          </div>
-                          <span class="progress-text">100% Completed</span>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <div class="d-flex">
-                          <div>
-                            <h3>Eleanor Pena</h3>
-                            <p>#101</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <p>Lorem Ipsum Agency Pvt Ltd</p>
-                      </td>
-                      <td class="text-center">
-                        <p>01-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <p>30-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <div class="custom-progress">
-                          <div class="progress w-100">
-                            <div
-                              class="progress-bar bg-success-table"
-                              role="progressbar"
-                              aria-label="Success example"
-                              style="width: 100%"
-                              aria-valuenow="100"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            ></div>
-                          </div>
-                          <span class="progress-text">100% Completed</span>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <!-- Table End -->
-
-                <!-- Pagination Start -->
-                <div class="d-flex justify-content-end w-100">
-                  <nav aria-label="Page navigation example">
-                    <ul class="pagination mb-0">
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                          <span aria-hidden="true">&#60;</span>
-                        </a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">1</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">2</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">3</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                          <span aria-hidden="true">&#62;</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-                <!-- Pagination End -->
-              </div>
-            </div>
-            <!-- Certified Tab End -->
+          
           </div>
         </div>
         <!-- Right Section End -->

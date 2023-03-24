@@ -32,6 +32,30 @@
   </head>
 
   <body>
+
+    <!-- popup code -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content pop-up-borderStyle">
+          <div class="">
+          </div>
+          <div class="modal-body pop-up-content">
+            <div class="pop-up-image-box">
+              <image src="../images/popup.svg" class="pop-up-image"></image> 
+              <h2 class="popUp-title">Are you sure?</h2>
+            </div>
+            <p>Learner won't be able to access this Learning path !</p>
+
+          </div>
+          <div class="modal-footer no-border">
+            <button type="button" class="btn  btn-white pop-up-cancel" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-white btn-outline-secondary pop-up-btn">Deactivate</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- pop up code end here -->
+
     <!-- Navbar Starts -->
     <header class="header-wrap">
       <div class="main-header d-flex justify-content-between">
@@ -142,7 +166,7 @@
             aria-controls="home"
             aria-selected="true"
           >
-            Agencies
+          Active
           </button>
         </li>
         <li class="nav-item" role="presentation">
@@ -156,7 +180,7 @@
             aria-controls="profile"
             aria-selected="false"
           >
-            Archieved
+          Inactive
           </button>
         </li>
       </ul>
@@ -172,15 +196,7 @@
         <button class="btn btn-primary-light ms-2">
           <img src="../images/export.svg" class="me-2" /><span>Export</span>
         </button>
-        <button
-          class="btn btn-primary ms-2"
-          data-bs-toggle="modal"
-          data-bs-target="#register-new-agency"
-        >
-          <img src="../images/download.svg" class="me-2" /><span
-            >Register New Agency</span
-          >
-        </button>
+        
       </div>
     </div>
     <!-- Tab Buttons Row End -->
@@ -200,22 +216,14 @@
                 <tr>
                   <th width="25%">
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
-                      <div>Agencies</div>
+                      
+                      <div>Name</div>
                     </div>
                   </th>
-                  <th width="10%">Location</th>
-                  <th class="text-center" width="15%">Learning Paths</th>
-                  <th class="text-center" width="10%">Learner</th>
-                  <th class="text-center" width="10%">Certified</th>
+                  <th width="10%">Product & Category</th>
+                  <th class="text-center" width="15%">Assignment Group</th>
+                  <th class="text-center" width="10%">Subscription Date</th>
+                  <th class="text-center" width="10%">Learners</th>
                   <th class="text-center" width="10%">Status</th>
                   <th class="text-center" width="12%">Actions</th>
                 </tr>
@@ -224,19 +232,11 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                      
                       <div>
                         <h3>
-                          <a href="view-details.html"
-                            >Horizon Adult Healthcare</a
+                          <a href="view-details-active.html"
+                            >SN Adult Admission Process</a
                           >
                         </h3>
                         <p>#101</p>
@@ -244,13 +244,13 @@
                     </div>
                   </td>
                   <td>
-                    <p>New York, U.S</p>
+                    <p>Home Health Clinical</p>
                   </td>
                   <td class="text-center">
-                    <p>25</p>
+                    <p>SN Adult Admission Process</p>
                   </td>
                   <td class="text-center">
-                    <p>536</p>
+                    <p>12-09-2022</p>
                   </td>
                   <td class="text-center">
                     <p>150</p>
@@ -262,12 +262,7 @@
                     <div
                       class="d-flex align-items-center justify-content-center gap-10px"
                     >
-                      <a
-                        href="view-details.html"
-                        class="btn btn-custom btn-link"
-                      >
-                        View Details
-                      </a>
+                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -287,10 +282,10 @@
                               class="dropdown-item"
                               data-bs-target="#modal-add-lp"
                               data-bs-toggle="modal"
-                              >Assign Learning Paths</a
+                              >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item">Export</a></li>
+                          <li><a class="dropdown-item deactivateRed" data-bs-toggle="modal" data-bs-target="#exampleModal">Request to Deactivate</a></li>
                         </ul>
                       </div>
                     </div>
@@ -299,32 +294,24 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                      
                       <div>
-                        <h3><a href="view-details.html">Feeney-Bosco</a></h3>
+                        <h3><a href="view-details-active.html">SN Adult Admission Process</a></h3>
                         <p>#101</p>
                       </div>
                     </div>
                   </td>
                   <td>
-                    <p>Georgia</p>
+                    <p>Home Health Clinical</p>
                   </td>
                   <td class="text-center">
-                    <p>25</p>
+                    <p>SN Adult Admission Process</p>
                   </td>
                   <td class="text-center">
-                    <p>877</p>
+                    <p>12-09-2022</p>
                   </td>
                   <td class="text-center">
-                    <p>350</p>
+                    <p>150</p>
                   </td>
                   <td class="text-center">
                     <span class="status green">Active</span>
@@ -333,12 +320,7 @@
                     <div
                       class="d-flex align-items-center justify-content-center gap-10px"
                     >
-                      <a
-                        href="view-details.html"
-                        class="btn btn-custom btn-link"
-                      >
-                        View Details
-                      </a>
+                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -358,10 +340,10 @@
                               class="dropdown-item"
                               data-bs-target="#modal-add-lp"
                               data-bs-toggle="modal"
-                              >Assign Learning Paths</a
+                              >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item">Export</a></li>
+                          <li><a class="dropdown-item deactivateRed" data-bs-toggle="modal" data-bs-target="#exampleModal">Request to Deactivate</a></li>
                         </ul>
                       </div>
                     </div>
@@ -370,34 +352,26 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                       
                       <div>
                         <h3>
-                          <a href="view-details.html">Cole, Herman and Purdy</a>
+                          <a href="view-details-active.html">SN Adult Admission Process</a>
                         </h3>
                         <p>#101</p>
                       </div>
                     </div>
                   </td>
                   <td>
-                    <p>Afghanistan</p>
+                    <p>Home Health Clinical</p>
                   </td>
                   <td class="text-center">
-                    <p>25</p>
+                    <p>SN Adult Admission Process</p>
                   </td>
                   <td class="text-center">
-                    <p>453</p>
+                    <p>12-09-2022</p>
                   </td>
                   <td class="text-center">
-                    <p>100</p>
+                    <p>150</p>
                   </td>
                   <td class="text-center">
                     <span class="status green">Active</span>
@@ -406,12 +380,7 @@
                     <div
                       class="d-flex align-items-center justify-content-center gap-10px"
                     >
-                      <a
-                        href="view-details.html"
-                        class="btn btn-custom btn-link"
-                      >
-                        View Details
-                      </a>
+                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -431,10 +400,10 @@
                               class="dropdown-item"
                               data-bs-target="#modal-add-lp"
                               data-bs-toggle="modal"
-                              >Assign Learning Paths</a
+                              >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item">Export</a></li>
+                          <li><a class="dropdown-item deactivateRed" data-bs-toggle="modal" data-bs-target="#exampleModal">Request to Deactivate</a></li>
                         </ul>
                       </div>
                     </div>
@@ -443,19 +412,11 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                      
                       <div>
                         <h3>
-                          <a href="view-details.html"
-                            >Brekke, Aufderhar and Pfannerstill</a
+                          <a href="view-details-active.html"
+                            >SN Adult Admission Process</a
                           >
                         </h3>
                         <p>#101</p>
@@ -463,16 +424,16 @@
                     </div>
                   </td>
                   <td>
-                    <p>Vietnam</p>
+                    <p>Home Health Clinical</p>
                   </td>
                   <td class="text-center">
-                    <p>25</p>
+                    <p>SN Adult Admission Process</p>
                   </td>
                   <td class="text-center">
-                    <p>556</p>
+                    <p>12-09-2022</p>
                   </td>
                   <td class="text-center">
-                    <p>220</p>
+                    <p>150</p>
                   </td>
                   <td class="text-center">
                     <span class="status green">Active</span>
@@ -481,12 +442,7 @@
                     <div
                       class="d-flex align-items-center justify-content-center gap-10px"
                     >
-                      <a
-                        href="view-details.html"
-                        class="btn btn-custom btn-link"
-                      >
-                        View Details
-                      </a>
+                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -506,10 +462,10 @@
                               class="dropdown-item"
                               data-bs-target="#modal-add-lp"
                               data-bs-toggle="modal"
-                              >Assign Learning Paths</a
+                              >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item">Export</a></li>
+                          <li><a class="dropdown-item deactivateRed" data-bs-toggle="modal" data-bs-target="#exampleModal">Request to Deactivate</a></li>
                         </ul>
                       </div>
                     </div>
@@ -518,19 +474,11 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                     
                       <div>
                         <h3>
-                          <a href="view-details.html"
-                            >Horizon Adult Healthcare</a
+                          <a href="view-details-active.html"
+                            >SN Adult Admission Process</a
                           >
                         </h3>
                         <p>#101</p>
@@ -538,16 +486,16 @@
                     </div>
                   </td>
                   <td>
-                    <p>Poland</p>
+                    <p>Home Health Clinical</p>
                   </td>
                   <td class="text-center">
-                    <p>25</p>
+                    <p>SN Adult Admission Process</p>
                   </td>
                   <td class="text-center">
-                    <p>447</p>
+                    <p>12-09-2022</p>
                   </td>
                   <td class="text-center">
-                    <p>190</p>
+                    <p>150</p>
                   </td>
                   <td class="text-center">
                     <span class="status green">Active</span>
@@ -556,12 +504,7 @@
                     <div
                       class="d-flex align-items-center justify-content-center gap-10px"
                     >
-                      <a
-                        href="view-details.html"
-                        class="btn btn-custom btn-link"
-                      >
-                        View Details
-                      </a>
+                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -581,10 +524,10 @@
                               class="dropdown-item"
                               data-bs-target="#modal-add-lp"
                               data-bs-toggle="modal"
-                              >Assign Learning Paths</a
+                              >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item">Export</a></li>
+                          <li><a class="dropdown-item deactivateRed" data-bs-toggle="modal" data-bs-target="#exampleModal">Request to Deactivate</a></li>
                         </ul>
                       </div>
                     </div>
@@ -593,19 +536,11 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                    
                       <div>
                         <h3>
-                          <a href="view-details.html"
-                            >Brekke, Aufderhar and Pfannerstill</a
+                          <a href="view-details-active.html"
+                            >SN Adult Admission Process</a
                           >
                         </h3>
                         <p>#101</p>
@@ -613,16 +548,16 @@
                     </div>
                   </td>
                   <td>
-                    <p>Monaco</p>
+                    <p>Home Health Clinical</p>
                   </td>
                   <td class="text-center">
-                    <p>25</p>
+                    <p>SN Adult Admission Process</p>
                   </td>
                   <td class="text-center">
-                    <p>798</p>
+                    <p>12-09-2022</p>
                   </td>
                   <td class="text-center">
-                    <p>500</p>
+                    <p>150</p>
                   </td>
                   <td class="text-center">
                     <span class="status green">Active</span>
@@ -631,12 +566,7 @@
                     <div
                       class="d-flex align-items-center justify-content-center gap-10px"
                     >
-                      <a
-                        href="view-details.html"
-                        class="btn btn-custom btn-link"
-                      >
-                        View Details
-                      </a>
+                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -656,10 +586,10 @@
                               class="dropdown-item"
                               data-bs-target="#modal-add-lp"
                               data-bs-toggle="modal"
-                              >Assign Learning Paths</a
+                              >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item">Export</a></li>
+                          <li><a class="dropdown-item deactivateRed" data-bs-toggle="modal" data-bs-target="#exampleModal">Request to Deactivate</a></li>
                         </ul>
                       </div>
                     </div>
@@ -668,19 +598,11 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                     
                       <div>
                         <h3>
-                          <a href="view-details.html"
-                            >Horizon Adult Healthcare</a
+                          <a href="view-details-active.html"
+                            >SN Adult Admission Process</a
                           >
                         </h3>
                         <p>#101</p>
@@ -688,16 +610,16 @@
                     </div>
                   </td>
                   <td>
-                    <p>Monaco</p>
+                    <p>Home Health Clinical</p>
                   </td>
                   <td class="text-center">
-                    <p>25</p>
+                    <p>SN Adult Admission Process</p>
                   </td>
                   <td class="text-center">
-                    <p>883</p>
+                    <p>12-09-2022</p>
                   </td>
                   <td class="text-center">
-                    <p>350</p>
+                    <p>150</p>
                   </td>
                   <td class="text-center">
                     <span class="status green">Active</span>
@@ -706,12 +628,7 @@
                     <div
                       class="d-flex align-items-center justify-content-center gap-10px"
                     >
-                      <a
-                        href="view-details.html"
-                        class="btn btn-custom btn-link"
-                      >
-                        View Details
-                      </a>
+                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -731,10 +648,10 @@
                               class="dropdown-item"
                               data-bs-target="#modal-add-lp"
                               data-bs-toggle="modal"
-                              >Assign Learning Paths</a
+                              >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item">Export</a></li>
+                          <li><a class="dropdown-item deactivateRed" data-bs-toggle="modal" data-bs-target="#exampleModal">Request to Deactivate</a></li>
                         </ul>
                       </div>
                     </div>
@@ -743,34 +660,26 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                     
                       <div>
                         <h3>
-                          <a href="view-details.html">Cole, Herman and Purdy</a>
+                          <a href="view-details-active.html">SN Adult Admission Process</a>
                         </h3>
                         <p>#101</p>
                       </div>
                     </div>
                   </td>
                   <td>
-                    <p>Georgia</p>
+                    <p>Home Health Clinical</p>
                   </td>
                   <td class="text-center">
-                    <p>25</p>
+                    <p>SN Adult Admission Process</p>
                   </td>
                   <td class="text-center">
-                    <p>492</p>
+                    <p>12-09-2022</p>
                   </td>
                   <td class="text-center">
-                    <p>200</p>
+                    <p>150</p>
                   </td>
                   <td class="text-center">
                     <span class="status green">Active</span>
@@ -779,12 +688,7 @@
                     <div
                       class="d-flex align-items-center justify-content-center gap-10px"
                     >
-                      <a
-                        href="view-details.html"
-                        class="btn btn-custom btn-link"
-                      >
-                        View Details
-                      </a>
+                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -804,10 +708,10 @@
                               class="dropdown-item"
                               data-bs-target="#modal-add-lp"
                               data-bs-toggle="modal"
-                              >Assign Learning Paths</a
+                              >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item">Export</a></li>
+                          <li><a class="dropdown-item deactivateRed" data-bs-toggle="modal" data-bs-target="#exampleModal">Request to Deactivate</a></li>
                         </ul>
                       </div>
                     </div>
@@ -849,22 +753,14 @@
                 <tr>
                   <th width="25%">
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                     
                       <div>Agencies</div>
                     </div>
                   </th>
-                  <th width="10%">Location</th>
-                  <th class="text-center" width="15%">Learning Paths</th>
-                  <th class="text-center" width="10%">Learner</th>
-                  <th class="text-center" width="10%">Certified</th>
+                  <th width="10%">Product & Category</th>
+                  <th class="text-center" width="15%">Discipline</th>
+                  <th class="text-center" width="10%">Care Type</th>
+                  <th class="text-center" width="10%">Assignment Group</th>
                   <th class="text-center" width="10%">Status</th>
                   <th class="text-center" width="12%">Actions</th>
                 </tr>
@@ -873,19 +769,11 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                     
                       <div>
                         <h3>
-                          <a href="view-details.html"
-                            >Horizon Adult Healthcare</a
+                          <a href="view-details-inactive.html"
+                            >SN Adult Admission Process</a
                           >
                         </h3>
                         <p>#101</p>
@@ -893,30 +781,25 @@
                     </div>
                   </td>
                   <td>
-                    <p>New York, U.S</p>
+                    <p>Home Health Clinical</p>
                   </td>
                   <td class="text-center">
-                    <p>25</p>
+                    <p>RN</p>
                   </td>
                   <td class="text-center">
-                    <p>536</p>
+                    <p>Adult Care</p>
                   </td>
                   <td class="text-center">
-                    <p>150</p>
+                    <p>SN Adult Admission Process</p>
                   </td>
                   <td class="text-center">
-                    <span class="status green">Active</span>
+                    <span class="status pink">Inactive</span>
                   </td>
                   <td>
                     <div
                       class="d-flex align-items-center justify-content-center"
                     >
-                      <a
-                        href="view-details.html"
-                        class="btn btn-custom btn-link"
-                      >
-                        View Details
-                      </a>
+                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -936,10 +819,10 @@
                               class="dropdown-item"
                               data-bs-target="#modal-add-lp"
                               data-bs-toggle="modal"
-                              >Assign Learning Paths</a
+                              >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item">Export</a></li>
+                          <li><a class="dropdown-item ">Request to Activate</a></li>
                         </ul>
                       </div>
                     </div>
@@ -948,46 +831,33 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                     
                       <div>
-                        <h3><a href="view-details.html">Feeney-Bosco</a></h3>
+                        <h3><a href="view-details-inactive.html">SN Adult Admission Process</a></h3>
                         <p>#101</p>
                       </div>
                     </div>
                   </td>
                   <td>
-                    <p>Georgia</p>
+                    <p>Home Health Clinical</p>
                   </td>
                   <td class="text-center">
-                    <p>25</p>
+                    <p>RN</p>
                   </td>
                   <td class="text-center">
-                    <p>877</p>
+                    <p>Adult Care</p>
                   </td>
                   <td class="text-center">
-                    <p>350</p>
+                    <p>SN Adult Admission Process</p>
                   </td>
                   <td class="text-center">
-                    <span class="status green">Active</span>
+                    <span class="status pink">Inactive</span>
                   </td>
                   <td>
                     <div
                       class="d-flex align-items-center justify-content-center"
                     >
-                      <a
-                        href="view-details.html"
-                        class="btn btn-custom btn-link"
-                      >
-                        View Details
-                      </a>
+                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -1007,10 +877,10 @@
                               class="dropdown-item"
                               data-bs-target="#modal-add-lp"
                               data-bs-toggle="modal"
-                              >Assign Learning Paths</a
+                              >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item">Export</a></li>
+                          <li><a class="dropdown-item ">Request to Activate</a></li>
                         </ul>
                       </div>
                     </div>
@@ -1019,48 +889,35 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                     
                       <div>
                         <h3>
-                          <a href="view-details.html">Cole, Herman and Purdy</a>
+                          <a href="view-details-inactive.html">SN Adult Admission Process</a>
                         </h3>
                         <p>#101</p>
                       </div>
                     </div>
                   </td>
                   <td>
-                    <p>Afghanistan</p>
+                    <p>Home Health Clinical</p>
                   </td>
                   <td class="text-center">
-                    <p>25</p>
+                    <p>RN</p>
                   </td>
                   <td class="text-center">
-                    <p>453</p>
+                    <p>Adult Care</p>
                   </td>
                   <td class="text-center">
-                    <p>100</p>
+                    <p>SN Adult Admission Process</p>
                   </td>
                   <td class="text-center">
-                    <span class="status green">Active</span>
+                    <span class="status pink">Inactive</span>
                   </td>
                   <td>
                     <div
                       class="d-flex align-items-center justify-content-center"
                     >
-                      <a
-                        href="view-details.html"
-                        class="btn btn-custom btn-link"
-                      >
-                        View Details
-                      </a>
+                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -1080,10 +937,10 @@
                               class="dropdown-item"
                               data-bs-target="#modal-add-lp"
                               data-bs-toggle="modal"
-                              >Assign Learning Paths</a
+                              >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item">Export</a></li>
+                          <li><a class="dropdown-item ">Request to Activate</a></li>
                         </ul>
                       </div>
                     </div>
@@ -1092,19 +949,11 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                     
                       <div>
                         <h3>
-                          <a href="view-details.html"
-                            >Brekke, Aufderhar and Pfannerstill</a
+                          <a href="view-details-inactive.html"
+                            >SN Adult Admission Process</a
                           >
                         </h3>
                         <p>#101</p>
@@ -1112,30 +961,25 @@
                     </div>
                   </td>
                   <td>
-                    <p>Vietnam</p>
+                    <p>Home Health Clinical</p>
                   </td>
                   <td class="text-center">
-                    <p>25</p>
+                    <p>RN</p>
                   </td>
                   <td class="text-center">
-                    <p>556</p>
+                    <p>Adult Care</p>
                   </td>
                   <td class="text-center">
-                    <p>220</p>
+                    <p>SN Adult Admission Process</p>
                   </td>
                   <td class="text-center">
-                    <span class="status green">Active</span>
+                    <span class="status pink">Inactive</span>
                   </td>
                   <td>
                     <div
                       class="d-flex align-items-center justify-content-center"
                     >
-                      <a
-                        href="view-details.html"
-                        class="btn btn-custom btn-link"
-                      >
-                        View Details
-                      </a>
+                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -1155,10 +999,10 @@
                               class="dropdown-item"
                               data-bs-target="#modal-add-lp"
                               data-bs-toggle="modal"
-                              >Assign Learning Paths</a
+                              >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item">Export</a></li>
+                          <li><a class="dropdown-item ">Request to Activate</a></li>
                         </ul>
                       </div>
                     </div>
@@ -1167,19 +1011,11 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                     
                       <div>
                         <h3>
-                          <a href="view-details.html"
-                            >Horizon Adult Healthcare</a
+                          <a href="view-details-inactive.html"
+                            >SN Adult Admission Process</a
                           >
                         </h3>
                         <p>#101</p>
@@ -1187,30 +1023,25 @@
                     </div>
                   </td>
                   <td>
-                    <p>Poland</p>
+                    <p>Home Health Clinical</p>
                   </td>
                   <td class="text-center">
-                    <p>25</p>
+                    <p>RN</p>
                   </td>
                   <td class="text-center">
-                    <p>447</p>
+                    <p>Adult Care</p>
                   </td>
                   <td class="text-center">
-                    <p>190</p>
+                    <p>SN Adult Admission Process</p>
                   </td>
                   <td class="text-center">
-                    <span class="status green">Active</span>
+                    <span class="status pink">Inactive</span>
                   </td>
                   <td>
                     <div
                       class="d-flex align-items-center justify-content-center"
                     >
-                      <a
-                        href="view-details.html"
-                        class="btn btn-custom btn-link"
-                      >
-                        View Details
-                      </a>
+                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -1230,10 +1061,10 @@
                               class="dropdown-item"
                               data-bs-target="#modal-add-lp"
                               data-bs-toggle="modal"
-                              >Assign Learning Paths</a
+                              >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item">Export</a></li>
+                          <li><a class="dropdown-item ">Request to Activate</a></li>
                         </ul>
                       </div>
                     </div>
@@ -1242,19 +1073,11 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                     
                       <div>
                         <h3>
-                          <a href="view-details.html"
-                            >Brekke, Aufderhar and Pfannerstill</a
+                          <a href="view-details-inactive.html"
+                            >SN Adult Admission Process</a
                           >
                         </h3>
                         <p>#101</p>
@@ -1262,30 +1085,25 @@
                     </div>
                   </td>
                   <td>
-                    <p>Monaco</p>
+                    <p>Home Health Clinical</p>
                   </td>
                   <td class="text-center">
-                    <p>25</p>
+                    <p>RN</p>
                   </td>
                   <td class="text-center">
-                    <p>798</p>
+                    <p>Adult Care</p>
                   </td>
                   <td class="text-center">
-                    <p>500</p>
+                    <p>SN Adult Admission Process</p>
                   </td>
                   <td class="text-center">
-                    <span class="status green">Active</span>
+                    <span class="status pink">Inactive</span>
                   </td>
                   <td>
                     <div
                       class="d-flex align-items-center justify-content-center"
                     >
-                      <a
-                        href="view-details.html"
-                        class="btn btn-custom btn-link"
-                      >
-                        View Details
-                      </a>
+                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -1305,10 +1123,10 @@
                               class="dropdown-item"
                               data-bs-target="#modal-add-lp"
                               data-bs-toggle="modal"
-                              >Assign Learning Paths</a
+                              >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item">Export</a></li>
+                          <li><a class="dropdown-item ">Request to Activate</a></li>
                         </ul>
                       </div>
                     </div>
@@ -1317,19 +1135,11 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                     
                       <div>
                         <h3>
-                          <a href="view-details.html"
-                            >Horizon Adult Healthcare</a
+                          <a href="view-details-inactive.html"
+                            >SN Adult Admission Process</a
                           >
                         </h3>
                         <p>#101</p>
@@ -1337,30 +1147,25 @@
                     </div>
                   </td>
                   <td>
-                    <p>Monaco</p>
+                    <p>Home Health Clinical</p>
                   </td>
                   <td class="text-center">
-                    <p>25</p>
+                    <p>RN</p>
                   </td>
                   <td class="text-center">
-                    <p>883</p>
+                    <p>Adult Care</p>
                   </td>
                   <td class="text-center">
-                    <p>350</p>
+                    <p>SN Adult Admission Process</p>
                   </td>
                   <td class="text-center">
-                    <span class="status green">Active</span>
+                    <span class="status pink">Inactive</span>
                   </td>
                   <td>
                     <div
                       class="d-flex align-items-center justify-content-center"
                     >
-                      <a
-                        href="view-details.html"
-                        class="btn btn-custom btn-link"
-                      >
-                        View Details
-                      </a>
+                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -1380,10 +1185,10 @@
                               class="dropdown-item"
                               data-bs-target="#modal-add-lp"
                               data-bs-toggle="modal"
-                              >Assign Learning Paths</a
+                              >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item">Export</a></li>
+                          <li><a class="dropdown-item ">Request to Activate</a></li>
                         </ul>
                       </div>
                     </div>
@@ -1392,48 +1197,35 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                     
                       <div>
                         <h3>
-                          <a href="view-details.html">Cole, Herman and Purdy</a>
+                          <a href="view-details-inactive.html">SN Adult Admission Process</a>
                         </h3>
                         <p>#101</p>
                       </div>
                     </div>
                   </td>
                   <td>
-                    <p>Georgia</p>
+                    <p>Home Health Clinical</p>
                   </td>
                   <td class="text-center">
-                    <p>25</p>
+                    <p>RN</p>
                   </td>
                   <td class="text-center">
-                    <p>492</p>
+                    <p>Adult Care</p>
                   </td>
                   <td class="text-center">
-                    <p>200</p>
+                    <p>SN Adult Admission Process</p>
                   </td>
                   <td class="text-center">
-                    <span class="status green">Active</span>
+                    <span class="status pink">Inactive</span>
                   </td>
                   <td>
                     <div
                       class="d-flex align-items-center justify-content-center"
                     >
-                      <a
-                        href="view-details.html"
-                        class="btn btn-custom btn-link"
-                      >
-                        View Details
-                      </a>
+                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -1453,10 +1245,10 @@
                               class="dropdown-item"
                               data-bs-target="#modal-add-lp"
                               data-bs-toggle="modal"
-                              >Assign Learning Paths</a
+                              >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item">Export</a></li>
+                          <li><a class="dropdown-item ">Request to Activate</a></li>
                         </ul>
                       </div>
                     </div>
@@ -1502,7 +1294,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">
-              Assign Learning Paths
+              View Details
             </h5>
             <button
               type="button"
@@ -1527,15 +1319,7 @@
                 <tr>
                   <th>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                     
                       <div>Select all</div>
                     </div>
                   </th>
@@ -1545,15 +1329,7 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                     
                       <div>
                         <p class="text-dark">
                           <span class="me-2 text-12 text-light-4">#ID_101</span
@@ -1566,15 +1342,7 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                     
                       <div>
                         <p class="text-dark">
                           <span class="me-2 text-12 text-light-4">#ID_101</span
@@ -1587,15 +1355,7 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                     
                       <div>
                         <p class="text-dark">
                           <span class="me-2 text-12 text-light-4">#ID_101</span
@@ -1624,7 +1384,7 @@
               data-bs-toggle="modal"
               data-bs-dismiss="modal"
             >
-              Assign Learning Paths
+              View Details
             </button>
           </div>
         </div>
@@ -1670,15 +1430,7 @@
                 <tr>
                   <th>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                     
                       <div>Select all</div>
                     </div>
                   </th>
@@ -1703,7 +1455,7 @@
                           <span class="me-2 text-12 text-light-4">#ID_101</span
                           >Learning Path Name will be here more here
                         </p>
-                        <span class="setting-span-upper">New York, U.S</span>
+                        <span class="setting-span-upper">Home Health Clinical</span>
                       </div>
                     </div>
                   </td>
@@ -1711,21 +1463,13 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                     
                       <div class="register-agency-col">
                         <p class="text-dark mb-0">
                           <span class="me-2 text-12 text-light-4">#ID_101</span
                           >Learning Path Name will be here more here
                         </p>
-                        <span class="setting-span-upper">Afghanistan</span>
+                        <span class="setting-span-upper">Home Health Clinical</span>
                       </div>
                     </div>
                   </td>
@@ -1733,21 +1477,13 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                     
                       <div class="register-agency-col">
                         <p class="text-dark mb-0">
                           <span class="me-2 text-12 text-light-4">#ID_101</span
                           >Learning Path Name will be here more here
                         </p>
-                        <span class="setting-span-upper">Poland</span>
+                        <span class="setting-span-upper">Home Health Clinical</span>
                       </div>
                     </div>
                   </td>
@@ -1755,21 +1491,13 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
+                     
                       <div class="register-agency-col">
                         <p class="text-dark mb-0">
                           <span class="me-2 text-12 text-light-4">#ID_101</span
                           >Learning Path Name will be here more here
                         </p>
-                        <span class="setting-span-upper">Georgia</span>
+                        <span class="setting-span-upper">Home Health Clinical</span>
                       </div>
                     </div>
                   </td>
