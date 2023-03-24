@@ -813,6 +813,7 @@ input.md-mobile-picker-input {
     border-radius: 0;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
     font-family: 'Lato', sans-serif;
+    margin-top: 0;
 }
 
 .daterangepicker::before,
@@ -1416,5 +1417,30 @@ select:valid~span {
 }
 
 .form-check-input[type="checkbox"] {
+    cursor: pointer;
+}
+
+label sup {
+    color: #FD6E61;
+}
+
+.weeklyrange {
+    border: none;
+    width: 215px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.singleDatePicker {
+    position: relative;
+    line-height: 25px;
+}
+
+.singleDatePicker img {
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    right: 2px;
+    margin: auto;
     cursor: pointer;
 }

@@ -26,7 +26,14 @@ $("#success2").click(function () {
     window.location = "assignment.html";
   });
 });
-
+$("#successEnroll").click(function () {
+  Swal.fire({
+    icon: "success",
+    title: "Enrollment Successful",
+    showConfirmButton: false,
+    timer: 1500,
+  });
+});
 // create new group flow
 
 $(".add-assignment-content").hide();

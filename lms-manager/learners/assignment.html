@@ -37,7 +37,7 @@
       <div class="main-header d-flex justify-content-between">
         <div class="d-flex">
           <div class="kantime-logo">
-            <img src="../images/logo-full.svg" alt="" />
+            <img src="images/logo-full.svg" alt="" />
           </div>
           <div class="header-item-center">
             <div class="overlay"></div>
@@ -51,14 +51,14 @@
               </div>
               <ul class="menu-section">
                 <li class="menu-item"><a href="#">Dashboard</a></li>
-                <li class="menu-item">
-                  <a href="../index.html">Learning Paths</a>
-                </li>
                 <li class="menu-item active">
-                  <a href="assignment.html">Assignments</a>
+                  <a href="index.html">Learners</a>
                 </li>
                 <li class="menu-item">
-                  <a href="../agencies/agencies.html">Agencies</a>
+                  <a href="assignments/assignment.html">Users</a>
+                </li>
+                <li class="menu-item">
+                  <a href="agencies/agencies.html">Learning Paths</a>
                 </li>
               </ul>
             </nav>
@@ -73,7 +73,7 @@
               data-bs-placement="bottom"
               title="Notifications"
             >
-              <img src="../images/notification.svg" alt="notification" />
+              <img src="images/notification.svg" alt="notification" />
             </a>
             <a
               href="#"
@@ -82,7 +82,7 @@
               data-bs-placement="bottom"
               title="Messages"
             >
-              <img src="../images/settings.svg" alt="mail" />
+              <img src="images/settings.svg" alt="mail" />
             </a>
             <a
               tabindex="0"
@@ -109,7 +109,7 @@
                      </ul>
                   '
             >
-              <span class="profile-circle">J</span>
+              <span class="profile-circle">S</span>
             </a>
             <button type="button" class="menu-mobile-toggle">
               <span></span>
@@ -127,29 +127,15 @@
           <li class="nav-item" role="presentation">
             <button
               class="nav-link active"
-              id="groups-tab"
+              id="home-tab"
               data-bs-toggle="tab"
-              data-bs-target="#groups"
+              data-bs-target="#home"
               type="button"
               role="tab"
-              aria-controls="groups"
+              aria-controls="home"
               aria-selected="true"
             >
-              Groups
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="assignment-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#assignment"
-              type="button"
-              role="tab"
-              aria-controls="assignment"
-              aria-selected="false"
-            >
-              Assignment
+              All Users
             </button>
           </li>
         </ul>
@@ -157,30 +143,14 @@
         <div class="d-flex align-items-center">
           <div class="search-input">
             <input type="text" class="form-control" placeholder="Search" />
-            <img src="../images/search.svg" alt="" />
+            <img src="images/search.svg" alt="" />
           </div>
           <button class="btn btn-outline ms-2">
-            <img src="../images/filter.svg" class="me-2" /><span>Filter</span>
+            <img src="images/filter.svg" class="me-2" /><span>Filter</span>
           </button>
           <button class="btn btn-primary-light ms-2">
-            <img src="../images/export.svg" class="me-2" /><span>Export</span>
+            <img src="images/export.svg" class="me-2" /><span>Export</span>
           </button>
-
-          <div id="create-group">
-            <a
-              href="create-new-group.html"
-              class="btn btn-primary ms-2 d-flex align-items-center justify-content-center"
-              >Create New</a
-            >
-          </div>
-
-          <div id="create-assignment">
-            <a
-              href="create-new-assignment.html"
-              class="btn btn-primary ms-2 d-flex align-items-center justify-content-center"
-              >Create New</a
-            >
-          </div>
         </div>
       </div>
     </header>
