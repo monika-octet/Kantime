@@ -62,9 +62,7 @@
                 <li class="menu-item">
                   <a href="../assignments/assignment.html">Assignments</a>
                 </li>
-                <li class="menu-item">
-                  <a href="../agencies/agencies.html">Agencies</a>
-                </li>
+               
               </ul>
             </nav>
           </div>
@@ -366,8 +364,8 @@
                     </div>
 
                     <div class="right-circle-graph">
-                      <span class="data-title">Learners Overview</span>
-                      <div class="graph-row">
+                      <span class="data-title graph-title">Learners Overview</span>
+                      <div class="graph-row graph-row-pad">
                         <div class="circle-holder">
                           <div id="learners"></div>
                         </div>
@@ -985,10 +983,27 @@
               <div
                 class="title-row assignment-title-row bg-white w-100 justify-content-between mb-10px"
               >
-                <span class="title-row-heading">Learning paths</span>
-                <button class="btn btn-primary-light">
-                  <img src="../images/export.svg" class="me-2" />Export
-                </button>
+                <span class="title-row-heading">Learners</span>
+                  <div class="d-flex align-items-center learners-dropdown-box">
+                    <select class="single-select">
+                      <option selected>All</option>
+                      <option>Ongoing (3)</option>
+                      <option>Not started (0)</option>
+                      <option>Completed (0)</option>
+                      <option>Certified (0)</option>
+                      <option>Overdue (0)</option>
+                      <option>Dropped (0)</option>
+                      <option>Expired Certification (0)</option>
+                    </select>
+                    <button class="btn btn-primary-light">
+                      <img src="../images/export.svg" class="me-2" />Export
+                    </button>
+                  </div>
+                </div>
+
+
+                
+              </div>
               </div>
 
               <div class="right-section-data w-100">
@@ -996,7 +1011,7 @@
                 <table class="table align-middle table-pattern-4 mb-0">
                   <thead>
                     <tr>
-                      <th>Learners path</th>
+                      <th>Learner Name</th>
                       <th class="text-center">Start Date</th>
                       <th class="text-center">End Date</th>
                       <th class="text-center">Status</th>
