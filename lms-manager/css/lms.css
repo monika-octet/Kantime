@@ -1984,3 +1984,6 @@ footer p {
     line-height: 18px;
     letter-spacing: 1%;
 }
+.filter-bold{
+    font-weight: 600;
+}
