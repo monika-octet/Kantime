@@ -319,6 +319,7 @@ body {
 
 .search-input {
     position: relative;
+    width: 220px;
 }
 
 .search-input input {
@@ -326,7 +327,7 @@ body {
     height: 34px;
     border-color: #ECEDEF;
     border-radius: 4px;
-    width: 220px;
+    width: 100%;
 }
 
 .search-input img {
@@ -2042,4 +2043,11 @@ footer p {
 }
 .filter-bold{
     font-weight: 600;
+}
+
+.semi-bold{
+    font-weight: 600;
+}
+.width-100{
+    width: 100%;
 }
