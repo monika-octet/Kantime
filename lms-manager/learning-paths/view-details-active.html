@@ -37,6 +37,39 @@
   </head>
 
   <body>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content pop-up-borderStyle">
+          <div class=""></div>
+          <div class="modal-body pop-up-content">
+            <div class="pop-up-image-box">
+              <image src="../images/popup.svg" class="pop-up-image"></image>
+              <h2 class="popUp-title">Are you sure?</h2>
+            </div>
+            <p>Learner won't be able to access this Learning path !</p>
+          </div>
+          <div class="modal-footer no-border">
+            <button
+              type="button"
+              class="btn btn-outline"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="btn btn-outline text-red-light">
+              Deactivate
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Navbar Start -->
     <header class="header-wrap">
       <div class="main-header d-flex justify-content-between">
@@ -171,7 +204,7 @@
                     aria-labelledby="dropdownMenuButton1"
                   >
                     <li>
-                      <a class="dropdown-item deactivateRed"
+                      <a class="dropdown-item deactivateRed" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         >Request to Deactivate</a
                       >
                     </li>
