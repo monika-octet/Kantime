@@ -8,7 +8,7 @@
       content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
     />
     <meta name="theme-color" content="#0D87E2" />
-    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="shortcut icon" href="images/favicon.png" />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,21 +18,21 @@
     />
 
     <!-- bootstrap css -->
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link
       rel="stylesheet"
       type="text/css"
-      href="../css/bootstrap-multiselect.min.css"
+      href="css/bootstrap-multiselect.min.css"
     />
     <link
       href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css "
       rel="stylesheet"
     />
     <!-- custom css -->
-    <link rel="stylesheet" type="text/css" href="../css/common.css" />
-    <link rel="stylesheet" type="text/css" href="../css/menu.css" />
-    <link rel="stylesheet" type="text/css" href="../css/lms.css" />
-    <link rel="stylesheet" type="text/css" href="../css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/lms.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
     <title>View Details</title>
   </head>
 
@@ -41,13 +41,13 @@
       <div class="main-header d-flex justify-content-between">
         <div class="d-flex">
           <div class="kantime-logo">
-            <img src="../images/logo-full.svg" alt="" />
+            <img src="images/logo-full.svg" alt="" />
           </div>
         </div>
         <div>
           <div class="d-flex align-items-center header-right-menu">
             <a href="#">
-              <img src="../images/info.svg" alt="info" />
+              <img src="images/info.svg" alt="info" />
             </a>
           </div>
         </div>
@@ -58,25 +58,46 @@
       <div class="container-sm h-100 w-80">
         <!-- breadcrumb start -->
         <div class="mb-3 breadcrumb">
-          <a href="assignment.html" class="breadcrumb-page"
-            >Assignment Groups
-          </a>
+          <a href="index.html" class="breadcrumb-page">Learners </a>
           <span class="breadcrumb-icon"
-            ><img src="../images/breadcrumb-arrow.svg"
+            ><img src="images/breadcrumb-arrow.svg"
           /></span>
           <span class="breadcrumb-page">SN Adult Admission Process</span>
         </div>
         <!-- breadcrumb end -->
-
+        <div class="text-end mb-3">
+          <button class="btn btn-primary">Login to KanTime</button>
+        </div>
         <div class="w-100 h-100 preview">
           <!-- Accordion Header Start -->
           <div
             class="preview-header bg-blue d-flex flex-column flex-md-row align-items-start justify-content-between w-100 p-4 text-white"
           >
             <div>
-              <h3 class="title-2 text-white mb-3 mb-md-5">
+              <h3 class="title-2 text-white mb-3 mb-md-1">
                 SN Adult Admission Process
               </h3>
+              <div class="row d-flex align-items-center mb-4">
+                <div style="width: 115px">
+                  <span class="text-white w-auto">10% Completed</span>
+                </div>
+                <div style="width: 150px">
+                  <div class="custom-progress">
+                    <div class="progress w-100">
+                      <div
+                        class="progress-bar bg-success-table"
+                        role="progressbar"
+                        aria-label="Success example"
+                        style="width: 30%"
+                        aria-valuenow="30"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div class="preview-info-list mb-3 mb-md-0">
                 <div>
                   <p>Product</p>
@@ -89,6 +110,14 @@
                 <div>
                   <p>Duration</p>
                   <h4>1 Month</h4>
+                </div>
+                <div>
+                  <p>Start Date</p>
+                  <h4>01-03-2023</h4>
+                </div>
+                <div>
+                  <p>Days Left</p>
+                  <h4>16</h4>
                 </div>
               </div>
             </div>
@@ -118,13 +147,23 @@
                     aria-expanded="true"
                     aria-controls="collapseOne"
                   >
-                    <div class="arrow-and-title">
-                      <img
-                        class="accordion-arrow-icon"
-                        src="../images/accordian-arrow.svg"
-                      />Start Of Care Admission Process
+                    <div
+                      class="d-flex align-items-center justify-content-between w-100"
+                    >
+                      <div class="d-flex align-items-center">
+                        <div class="arrow-and-title">
+                          <img
+                            class="accordion-arrow-icon"
+                            src="images/accordian-arrow.svg"
+                          />Start Of Care Admission Process
+                        </div>
+                        <span class="tasks-count ms-2">(4 tasks)</span>
+                      </div>
+                      <div>
+                        <span class="status yellow">Started</span>
+                        <span class="tasks-count ms-2">(2 Completed)</span>
+                      </div>
                     </div>
-                    <span class="tasks-count">(4 tasks)</span>
                   </button>
                 </h2>
                 <div
@@ -160,80 +199,98 @@
                         </span>
                       </div>
 
-                      <div class="text-column-2">
-                        <div
-                          class="d-flex align-items-center w-100 justify-content-between"
-                        >
-                          <span class="accordion-title"
-                            >Basic Navigation in KanTime</span
+                      <div class="row text-column-2">
+                        <div class="col-md-10 pe-5 border-end">
+                          <div
+                            class="d-flex align-items-center w-100 justify-content-between"
                           >
-                        </div>
+                            <span class="accordion-title"
+                              >Basic Navigation in KanTime</span
+                            >
+                          </div>
 
-                        <span class="accordion-desc">
-                          Lorem ipsum dolor sit amet consectetur. Quis neque mus
-                          mi eget etiam purus euismod fringilla vel. Turpis
-                          quisque amet dolor at cursus faucibus. Odio dignissim
-                          neque dui hendrerit in. Velit pellentesque at est orci
-                          faucibus. Vel in mauris tempus sapien facilisis
-                          sollicitudin non purus placerat mauris.
-                        </span>
+                          <span class="accordion-desc">
+                            Lorem ipsum dolor sit amet consectetur. Quis neque
+                            mus mi eget etiam purus euismod fringilla vel.
+                            Turpis quisque amet dolor at cursus faucibus. Odio
+                            dignissim neque dui hendrerit in. Velit pellentesque
+                            at est orci faucibus. Vel in mauris tempus sapien
+                            facilisis sollicitudin non purus placerat mauris.
+                          </span>
+                        </div>
+                        <div class="col-md-2 text-center">
+                          <span class="status green">Completed</span>
+                        </div>
                       </div>
 
-                      <div class="text-column-2">
-                        <div
-                          class="d-flex align-items-center w-100 justify-content-between"
-                        >
-                          <span class="accordion-title"
-                            >Basic Navigation in KanTime</span
+                      <div class="row text-column-2">
+                        <div class="col-md-10 pe-5 border-end">
+                          <div
+                            class="d-flex align-items-center w-100 justify-content-between"
                           >
-                        </div>
+                            <span class="accordion-title"
+                              >Basic Navigation in KanTime</span
+                            >
+                          </div>
 
-                        <span class="accordion-desc">
-                          Lorem ipsum dolor sit amet consectetur. Quis neque mus
-                          mi eget etiam purus euismod fringilla vel. Turpis
-                          quisque amet dolor at cursus faucibus. Odio dignissim
-                          neque dui hendrerit in. Velit pellentesque at est orci
-                          faucibus. Vel in mauris tempus sapien facilisis
-                          sollicitudin non purus placerat mauris.
-                        </span>
+                          <span class="accordion-desc">
+                            Lorem ipsum dolor sit amet consectetur. Quis neque
+                            mus mi eget etiam purus euismod fringilla vel.
+                            Turpis quisque amet dolor at cursus faucibus. Odio
+                            dignissim neque dui hendrerit in. Velit pellentesque
+                            at est orci faucibus. Vel in mauris tempus sapien
+                            facilisis sollicitudin non purus placerat mauris.
+                          </span>
+                        </div>
+                        <div class="col-md-2 text-center">
+                          <span class="status green">Completed</span>
+                        </div>
                       </div>
-
-                      <div class="text-column-2">
-                        <div
-                          class="d-flex align-items-center w-100 justify-content-between"
-                        >
-                          <span class="accordion-title"
-                            >Basic Navigation in KanTime</span
+                      <div class="row text-column-2">
+                        <div class="col-md-10 pe-5 border-end">
+                          <div
+                            class="d-flex align-items-center w-100 justify-content-between"
                           >
-                        </div>
+                            <span class="accordion-title"
+                              >Basic Navigation in KanTime</span
+                            >
+                          </div>
 
-                        <span class="accordion-desc">
-                          Lorem ipsum dolor sit amet consectetur. Quis neque mus
-                          mi eget etiam purus euismod fringilla vel. Turpis
-                          quisque amet dolor at cursus faucibus. Odio dignissim
-                          neque dui hendrerit in. Velit pellentesque at est orci
-                          faucibus. Vel in mauris tempus sapien facilisis
-                          sollicitudin non purus placerat mauris.
-                        </span>
+                          <span class="accordion-desc">
+                            Lorem ipsum dolor sit amet consectetur. Quis neque
+                            mus mi eget etiam purus euismod fringilla vel.
+                            Turpis quisque amet dolor at cursus faucibus. Odio
+                            dignissim neque dui hendrerit in. Velit pellentesque
+                            at est orci faucibus. Vel in mauris tempus sapien
+                            facilisis sollicitudin non purus placerat mauris.
+                          </span>
+                        </div>
+                        <div class="col-md-2 text-center">
+                          <span class="status blue">Pending</span>
+                        </div>
                       </div>
-
-                      <div class="text-column-2">
-                        <div
-                          class="d-flex align-items-center w-100 justify-content-between"
-                        >
-                          <span class="accordion-title"
-                            >Basic Navigation in KanTime</span
+                      <div class="row text-column-2">
+                        <div class="col-md-10 pe-5 border-end">
+                          <div
+                            class="d-flex align-items-center w-100 justify-content-between"
                           >
-                        </div>
+                            <span class="accordion-title"
+                              >Basic Navigation in KanTime</span
+                            >
+                          </div>
 
-                        <span class="accordion-desc">
-                          Lorem ipsum dolor sit amet consectetur. Quis neque mus
-                          mi eget etiam purus euismod fringilla vel. Turpis
-                          quisque amet dolor at cursus faucibus. Odio dignissim
-                          neque dui hendrerit in. Velit pellentesque at est orci
-                          faucibus. Vel in mauris tempus sapien facilisis
-                          sollicitudin non purus placerat mauris.
-                        </span>
+                          <span class="accordion-desc">
+                            Lorem ipsum dolor sit amet consectetur. Quis neque
+                            mus mi eget etiam purus euismod fringilla vel.
+                            Turpis quisque amet dolor at cursus faucibus. Odio
+                            dignissim neque dui hendrerit in. Velit pellentesque
+                            at est orci faucibus. Vel in mauris tempus sapien
+                            facilisis sollicitudin non purus placerat mauris.
+                          </span>
+                        </div>
+                        <div class="col-md-2 text-center">
+                          <span class="status blue">Pending</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -249,13 +306,23 @@
                     aria-expanded="false"
                     aria-controls="collapseTwo"
                   >
-                    <div class="arrow-and-title">
-                      <img
-                        class="accordion-arrow-icon"
-                        src="../images/accordian-arrow.svg"
-                      />Assignment 2
+                    <div
+                      class="d-flex align-items-center justify-content-between w-100"
+                    >
+                      <div class="d-flex align-items-center">
+                        <div class="arrow-and-title">
+                          <img
+                            class="accordion-arrow-icon"
+                            src="images/accordian-arrow.svg"
+                          />SN Adult Admission
+                        </div>
+                        <span class="tasks-count ms-2">(4 tasks)</span>
+                      </div>
+                      <div>
+                        <span class="status yellow">Started</span>
+                        <span class="tasks-count ms-2">(2 Completed)</span>
+                      </div>
                     </div>
-                    <span class="tasks-count">(4 tasks)</span>
                   </button>
                 </h2>
                 <div
@@ -291,80 +358,98 @@
                         </span>
                       </div>
 
-                      <div class="text-column-2">
-                        <div
-                          class="d-flex align-items-center w-100 justify-content-between"
-                        >
-                          <span class="accordion-title"
-                            >Basic Navigation in KanTime</span
+                      <div class="row text-column-2">
+                        <div class="col-md-10 pe-5 border-end">
+                          <div
+                            class="d-flex align-items-center w-100 justify-content-between"
                           >
-                        </div>
+                            <span class="accordion-title"
+                              >Basic Navigation in KanTime</span
+                            >
+                          </div>
 
-                        <span class="accordion-desc">
-                          Lorem ipsum dolor sit amet consectetur. Quis neque mus
-                          mi eget etiam purus euismod fringilla vel. Turpis
-                          quisque amet dolor at cursus faucibus. Odio dignissim
-                          neque dui hendrerit in. Velit pellentesque at est orci
-                          faucibus. Vel in mauris tempus sapien facilisis
-                          sollicitudin non purus placerat mauris.
-                        </span>
+                          <span class="accordion-desc">
+                            Lorem ipsum dolor sit amet consectetur. Quis neque
+                            mus mi eget etiam purus euismod fringilla vel.
+                            Turpis quisque amet dolor at cursus faucibus. Odio
+                            dignissim neque dui hendrerit in. Velit pellentesque
+                            at est orci faucibus. Vel in mauris tempus sapien
+                            facilisis sollicitudin non purus placerat mauris.
+                          </span>
+                        </div>
+                        <div class="col-md-2 text-center">
+                          <span class="status green">Completed</span>
+                        </div>
                       </div>
 
-                      <div class="text-column-2">
-                        <div
-                          class="d-flex align-items-center w-100 justify-content-between"
-                        >
-                          <span class="accordion-title"
-                            >Basic Navigation in KanTime</span
+                      <div class="row text-column-2">
+                        <div class="col-md-10 pe-5 border-end">
+                          <div
+                            class="d-flex align-items-center w-100 justify-content-between"
                           >
-                        </div>
+                            <span class="accordion-title"
+                              >Basic Navigation in KanTime</span
+                            >
+                          </div>
 
-                        <span class="accordion-desc">
-                          Lorem ipsum dolor sit amet consectetur. Quis neque mus
-                          mi eget etiam purus euismod fringilla vel. Turpis
-                          quisque amet dolor at cursus faucibus. Odio dignissim
-                          neque dui hendrerit in. Velit pellentesque at est orci
-                          faucibus. Vel in mauris tempus sapien facilisis
-                          sollicitudin non purus placerat mauris.
-                        </span>
+                          <span class="accordion-desc">
+                            Lorem ipsum dolor sit amet consectetur. Quis neque
+                            mus mi eget etiam purus euismod fringilla vel.
+                            Turpis quisque amet dolor at cursus faucibus. Odio
+                            dignissim neque dui hendrerit in. Velit pellentesque
+                            at est orci faucibus. Vel in mauris tempus sapien
+                            facilisis sollicitudin non purus placerat mauris.
+                          </span>
+                        </div>
+                        <div class="col-md-2 text-center">
+                          <span class="status green">Completed</span>
+                        </div>
                       </div>
-
-                      <div class="text-column-2">
-                        <div
-                          class="d-flex align-items-center w-100 justify-content-between"
-                        >
-                          <span class="accordion-title"
-                            >Basic Navigation in KanTime</span
+                      <div class="row text-column-2">
+                        <div class="col-md-10 pe-5 border-end">
+                          <div
+                            class="d-flex align-items-center w-100 justify-content-between"
                           >
-                        </div>
+                            <span class="accordion-title"
+                              >Basic Navigation in KanTime</span
+                            >
+                          </div>
 
-                        <span class="accordion-desc">
-                          Lorem ipsum dolor sit amet consectetur. Quis neque mus
-                          mi eget etiam purus euismod fringilla vel. Turpis
-                          quisque amet dolor at cursus faucibus. Odio dignissim
-                          neque dui hendrerit in. Velit pellentesque at est orci
-                          faucibus. Vel in mauris tempus sapien facilisis
-                          sollicitudin non purus placerat mauris.
-                        </span>
+                          <span class="accordion-desc">
+                            Lorem ipsum dolor sit amet consectetur. Quis neque
+                            mus mi eget etiam purus euismod fringilla vel.
+                            Turpis quisque amet dolor at cursus faucibus. Odio
+                            dignissim neque dui hendrerit in. Velit pellentesque
+                            at est orci faucibus. Vel in mauris tempus sapien
+                            facilisis sollicitudin non purus placerat mauris.
+                          </span>
+                        </div>
+                        <div class="col-md-2 text-center">
+                          <span class="status blue">Pending</span>
+                        </div>
                       </div>
-
-                      <div class="text-column-2">
-                        <div
-                          class="d-flex align-items-center w-100 justify-content-between"
-                        >
-                          <span class="accordion-title"
-                            >Basic Navigation in KanTime</span
+                      <div class="row text-column-2">
+                        <div class="col-md-10 pe-5 border-end">
+                          <div
+                            class="d-flex align-items-center w-100 justify-content-between"
                           >
-                        </div>
+                            <span class="accordion-title"
+                              >Basic Navigation in KanTime</span
+                            >
+                          </div>
 
-                        <span class="accordion-desc">
-                          Lorem ipsum dolor sit amet consectetur. Quis neque mus
-                          mi eget etiam purus euismod fringilla vel. Turpis
-                          quisque amet dolor at cursus faucibus. Odio dignissim
-                          neque dui hendrerit in. Velit pellentesque at est orci
-                          faucibus. Vel in mauris tempus sapien facilisis
-                          sollicitudin non purus placerat mauris.
-                        </span>
+                          <span class="accordion-desc">
+                            Lorem ipsum dolor sit amet consectetur. Quis neque
+                            mus mi eget etiam purus euismod fringilla vel.
+                            Turpis quisque amet dolor at cursus faucibus. Odio
+                            dignissim neque dui hendrerit in. Velit pellentesque
+                            at est orci faucibus. Vel in mauris tempus sapien
+                            facilisis sollicitudin non purus placerat mauris.
+                          </span>
+                        </div>
+                        <div class="col-md-2 text-center">
+                          <span class="status blue">Pending</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -380,13 +465,23 @@
                     aria-expanded="false"
                     aria-controls="collapseThree"
                   >
-                    <div class="arrow-and-title">
-                      <img
-                        class="accordion-arrow-icon"
-                        src="../images/accordian-arrow.svg"
-                      />Assignment 3
+                    <div
+                      class="d-flex align-items-center justify-content-between w-100"
+                    >
+                      <div class="d-flex align-items-center">
+                        <div class="arrow-and-title">
+                          <img
+                            class="accordion-arrow-icon"
+                            src="images/accordian-arrow.svg"
+                          />Assignment 3
+                        </div>
+                        <span class="tasks-count ms-2">(4 tasks)</span>
+                      </div>
+                      <div>
+                        <span class="status yellow">Started</span>
+                        <span class="tasks-count ms-2">(1 Completed)</span>
+                      </div>
                     </div>
-                    <span class="tasks-count">(4 tasks)</span>
                   </button>
                 </h2>
                 <div
@@ -422,80 +517,98 @@
                         </span>
                       </div>
 
-                      <div class="text-column-2">
-                        <div
-                          class="d-flex align-items-center w-100 justify-content-between"
-                        >
-                          <span class="accordion-title"
-                            >Basic Navigation in KanTime</span
+                      <div class="row text-column-2">
+                        <div class="col-md-10 pe-5 border-end">
+                          <div
+                            class="d-flex align-items-center w-100 justify-content-between"
                           >
-                        </div>
+                            <span class="accordion-title"
+                              >Basic Navigation in KanTime</span
+                            >
+                          </div>
 
-                        <span class="accordion-desc">
-                          Lorem ipsum dolor sit amet consectetur. Quis neque mus
-                          mi eget etiam purus euismod fringilla vel. Turpis
-                          quisque amet dolor at cursus faucibus. Odio dignissim
-                          neque dui hendrerit in. Velit pellentesque at est orci
-                          faucibus. Vel in mauris tempus sapien facilisis
-                          sollicitudin non purus placerat mauris.
-                        </span>
+                          <span class="accordion-desc">
+                            Lorem ipsum dolor sit amet consectetur. Quis neque
+                            mus mi eget etiam purus euismod fringilla vel.
+                            Turpis quisque amet dolor at cursus faucibus. Odio
+                            dignissim neque dui hendrerit in. Velit pellentesque
+                            at est orci faucibus. Vel in mauris tempus sapien
+                            facilisis sollicitudin non purus placerat mauris.
+                          </span>
+                        </div>
+                        <div class="col-md-2 text-center">
+                          <span class="status green">Completed</span>
+                        </div>
                       </div>
 
-                      <div class="text-column-2">
-                        <div
-                          class="d-flex align-items-center w-100 justify-content-between"
-                        >
-                          <span class="accordion-title"
-                            >Basic Navigation in KanTime</span
+                      <div class="row text-column-2">
+                        <div class="col-md-10 pe-5 border-end">
+                          <div
+                            class="d-flex align-items-center w-100 justify-content-between"
                           >
-                        </div>
+                            <span class="accordion-title"
+                              >Basic Navigation in KanTime</span
+                            >
+                          </div>
 
-                        <span class="accordion-desc">
-                          Lorem ipsum dolor sit amet consectetur. Quis neque mus
-                          mi eget etiam purus euismod fringilla vel. Turpis
-                          quisque amet dolor at cursus faucibus. Odio dignissim
-                          neque dui hendrerit in. Velit pellentesque at est orci
-                          faucibus. Vel in mauris tempus sapien facilisis
-                          sollicitudin non purus placerat mauris.
-                        </span>
+                          <span class="accordion-desc">
+                            Lorem ipsum dolor sit amet consectetur. Quis neque
+                            mus mi eget etiam purus euismod fringilla vel.
+                            Turpis quisque amet dolor at cursus faucibus. Odio
+                            dignissim neque dui hendrerit in. Velit pellentesque
+                            at est orci faucibus. Vel in mauris tempus sapien
+                            facilisis sollicitudin non purus placerat mauris.
+                          </span>
+                        </div>
+                        <div class="col-md-2 text-center">
+                          <span class="status blue">Pending</span>
+                        </div>
                       </div>
-
-                      <div class="text-column-2">
-                        <div
-                          class="d-flex align-items-center w-100 justify-content-between"
-                        >
-                          <span class="accordion-title"
-                            >Basic Navigation in KanTime</span
+                      <div class="row text-column-2">
+                        <div class="col-md-10 pe-5 border-end">
+                          <div
+                            class="d-flex align-items-center w-100 justify-content-between"
                           >
-                        </div>
+                            <span class="accordion-title"
+                              >Basic Navigation in KanTime</span
+                            >
+                          </div>
 
-                        <span class="accordion-desc">
-                          Lorem ipsum dolor sit amet consectetur. Quis neque mus
-                          mi eget etiam purus euismod fringilla vel. Turpis
-                          quisque amet dolor at cursus faucibus. Odio dignissim
-                          neque dui hendrerit in. Velit pellentesque at est orci
-                          faucibus. Vel in mauris tempus sapien facilisis
-                          sollicitudin non purus placerat mauris.
-                        </span>
+                          <span class="accordion-desc">
+                            Lorem ipsum dolor sit amet consectetur. Quis neque
+                            mus mi eget etiam purus euismod fringilla vel.
+                            Turpis quisque amet dolor at cursus faucibus. Odio
+                            dignissim neque dui hendrerit in. Velit pellentesque
+                            at est orci faucibus. Vel in mauris tempus sapien
+                            facilisis sollicitudin non purus placerat mauris.
+                          </span>
+                        </div>
+                        <div class="col-md-2 text-center">
+                          <span class="status blue">Pending</span>
+                        </div>
                       </div>
-
-                      <div class="text-column-2">
-                        <div
-                          class="d-flex align-items-center w-100 justify-content-between"
-                        >
-                          <span class="accordion-title"
-                            >Basic Navigation in KanTime</span
+                      <div class="row text-column-2">
+                        <div class="col-md-10 pe-5 border-end">
+                          <div
+                            class="d-flex align-items-center w-100 justify-content-between"
                           >
-                        </div>
+                            <span class="accordion-title"
+                              >Basic Navigation in KanTime</span
+                            >
+                          </div>
 
-                        <span class="accordion-desc">
-                          Lorem ipsum dolor sit amet consectetur. Quis neque mus
-                          mi eget etiam purus euismod fringilla vel. Turpis
-                          quisque amet dolor at cursus faucibus. Odio dignissim
-                          neque dui hendrerit in. Velit pellentesque at est orci
-                          faucibus. Vel in mauris tempus sapien facilisis
-                          sollicitudin non purus placerat mauris.
-                        </span>
+                          <span class="accordion-desc">
+                            Lorem ipsum dolor sit amet consectetur. Quis neque
+                            mus mi eget etiam purus euismod fringilla vel.
+                            Turpis quisque amet dolor at cursus faucibus. Odio
+                            dignissim neque dui hendrerit in. Velit pellentesque
+                            at est orci faucibus. Vel in mauris tempus sapien
+                            facilisis sollicitudin non purus placerat mauris.
+                          </span>
+                        </div>
+                        <div class="col-md-2 text-center">
+                          <span class="status blue">Pending</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -511,13 +624,23 @@
                     aria-expanded="false"
                     aria-controls="collapse4"
                   >
-                    <div class="arrow-and-title">
-                      <img
-                        class="accordion-arrow-icon"
-                        src="../images/accordian-arrow.svg"
-                      />Assignment 2
+                    <div
+                      class="d-flex align-items-center justify-content-between w-100"
+                    >
+                      <div class="d-flex align-items-center">
+                        <div class="arrow-and-title">
+                          <img
+                            class="accordion-arrow-icon"
+                            src="images/accordian-arrow.svg"
+                          />Assignment 2
+                        </div>
+                        <span class="tasks-count ms-2">(4 tasks)</span>
+                      </div>
+                      <div>
+                        <span class="status green">Completed</span>
+                        <span class="tasks-count ms-2">(1 Completed)</span>
+                      </div>
                     </div>
-                    <span class="tasks-count">(4 tasks)</span>
                   </button>
                 </h2>
                 <div
@@ -553,80 +676,98 @@
                         </span>
                       </div>
 
-                      <div class="text-column-2">
-                        <div
-                          class="d-flex align-items-center w-100 justify-content-between"
-                        >
-                          <span class="accordion-title"
-                            >Basic Navigation in KanTime</span
+                      <div class="row text-column-2">
+                        <div class="col-md-10 pe-5 border-end">
+                          <div
+                            class="d-flex align-items-center w-100 justify-content-between"
                           >
-                        </div>
+                            <span class="accordion-title"
+                              >Basic Navigation in KanTime</span
+                            >
+                          </div>
 
-                        <span class="accordion-desc">
-                          Lorem ipsum dolor sit amet consectetur. Quis neque mus
-                          mi eget etiam purus euismod fringilla vel. Turpis
-                          quisque amet dolor at cursus faucibus. Odio dignissim
-                          neque dui hendrerit in. Velit pellentesque at est orci
-                          faucibus. Vel in mauris tempus sapien facilisis
-                          sollicitudin non purus placerat mauris.
-                        </span>
+                          <span class="accordion-desc">
+                            Lorem ipsum dolor sit amet consectetur. Quis neque
+                            mus mi eget etiam purus euismod fringilla vel.
+                            Turpis quisque amet dolor at cursus faucibus. Odio
+                            dignissim neque dui hendrerit in. Velit pellentesque
+                            at est orci faucibus. Vel in mauris tempus sapien
+                            facilisis sollicitudin non purus placerat mauris.
+                          </span>
+                        </div>
+                        <div class="col-md-2 text-center">
+                          <span class="status green">Completed</span>
+                        </div>
                       </div>
 
-                      <div class="text-column-2">
-                        <div
-                          class="d-flex align-items-center w-100 justify-content-between"
-                        >
-                          <span class="accordion-title"
-                            >Basic Navigation in KanTime</span
+                      <div class="row text-column-2">
+                        <div class="col-md-10 pe-5 border-end">
+                          <div
+                            class="d-flex align-items-center w-100 justify-content-between"
                           >
-                        </div>
+                            <span class="accordion-title"
+                              >Basic Navigation in KanTime</span
+                            >
+                          </div>
 
-                        <span class="accordion-desc">
-                          Lorem ipsum dolor sit amet consectetur. Quis neque mus
-                          mi eget etiam purus euismod fringilla vel. Turpis
-                          quisque amet dolor at cursus faucibus. Odio dignissim
-                          neque dui hendrerit in. Velit pellentesque at est orci
-                          faucibus. Vel in mauris tempus sapien facilisis
-                          sollicitudin non purus placerat mauris.
-                        </span>
+                          <span class="accordion-desc">
+                            Lorem ipsum dolor sit amet consectetur. Quis neque
+                            mus mi eget etiam purus euismod fringilla vel.
+                            Turpis quisque amet dolor at cursus faucibus. Odio
+                            dignissim neque dui hendrerit in. Velit pellentesque
+                            at est orci faucibus. Vel in mauris tempus sapien
+                            facilisis sollicitudin non purus placerat mauris.
+                          </span>
+                        </div>
+                        <div class="col-md-2 text-center">
+                          <span class="status blue">Pending</span>
+                        </div>
                       </div>
-
-                      <div class="text-column-2">
-                        <div
-                          class="d-flex align-items-center w-100 justify-content-between"
-                        >
-                          <span class="accordion-title"
-                            >Basic Navigation in KanTime</span
+                      <div class="row text-column-2">
+                        <div class="col-md-10 pe-5 border-end">
+                          <div
+                            class="d-flex align-items-center w-100 justify-content-between"
                           >
-                        </div>
+                            <span class="accordion-title"
+                              >Basic Navigation in KanTime</span
+                            >
+                          </div>
 
-                        <span class="accordion-desc">
-                          Lorem ipsum dolor sit amet consectetur. Quis neque mus
-                          mi eget etiam purus euismod fringilla vel. Turpis
-                          quisque amet dolor at cursus faucibus. Odio dignissim
-                          neque dui hendrerit in. Velit pellentesque at est orci
-                          faucibus. Vel in mauris tempus sapien facilisis
-                          sollicitudin non purus placerat mauris.
-                        </span>
+                          <span class="accordion-desc">
+                            Lorem ipsum dolor sit amet consectetur. Quis neque
+                            mus mi eget etiam purus euismod fringilla vel.
+                            Turpis quisque amet dolor at cursus faucibus. Odio
+                            dignissim neque dui hendrerit in. Velit pellentesque
+                            at est orci faucibus. Vel in mauris tempus sapien
+                            facilisis sollicitudin non purus placerat mauris.
+                          </span>
+                        </div>
+                        <div class="col-md-2 text-center">
+                          <span class="status blue">Pending</span>
+                        </div>
                       </div>
-
-                      <div class="text-column-2">
-                        <div
-                          class="d-flex align-items-center w-100 justify-content-between"
-                        >
-                          <span class="accordion-title"
-                            >Basic Navigation in KanTime</span
+                      <div class="row text-column-2">
+                        <div class="col-md-10 pe-5 border-end">
+                          <div
+                            class="d-flex align-items-center w-100 justify-content-between"
                           >
-                        </div>
+                            <span class="accordion-title"
+                              >Basic Navigation in KanTime</span
+                            >
+                          </div>
 
-                        <span class="accordion-desc">
-                          Lorem ipsum dolor sit amet consectetur. Quis neque mus
-                          mi eget etiam purus euismod fringilla vel. Turpis
-                          quisque amet dolor at cursus faucibus. Odio dignissim
-                          neque dui hendrerit in. Velit pellentesque at est orci
-                          faucibus. Vel in mauris tempus sapien facilisis
-                          sollicitudin non purus placerat mauris.
-                        </span>
+                          <span class="accordion-desc">
+                            Lorem ipsum dolor sit amet consectetur. Quis neque
+                            mus mi eget etiam purus euismod fringilla vel.
+                            Turpis quisque amet dolor at cursus faucibus. Odio
+                            dignissim neque dui hendrerit in. Velit pellentesque
+                            at est orci faucibus. Vel in mauris tempus sapien
+                            facilisis sollicitudin non purus placerat mauris.
+                          </span>
+                        </div>
+                        <div class="col-md-2 text-center">
+                          <span class="status blue">Pending</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -642,13 +783,23 @@
                     aria-expanded="false"
                     aria-controls="collapse5"
                   >
-                    <div class="arrow-and-title">
-                      <img
-                        class="accordion-arrow-icon"
-                        src="../images/accordian-arrow.svg"
-                      />Assignment 3
+                    <div
+                      class="d-flex align-items-center justify-content-between w-100"
+                    >
+                      <div class="d-flex align-items-center">
+                        <div class="arrow-and-title">
+                          <img
+                            class="accordion-arrow-icon"
+                            src="images/accordian-arrow.svg"
+                          />Assignment 3
+                        </div>
+                        <span class="tasks-count ms-2">(4 tasks)</span>
+                      </div>
+                      <div>
+                        <span class="status blue">Pending</span>
+                        <span class="tasks-count ms-2">(0 Completed)</span>
+                      </div>
                     </div>
-                    <span class="tasks-count">(4 tasks)</span>
                   </button>
                 </h2>
                 <div
@@ -684,80 +835,98 @@
                         </span>
                       </div>
 
-                      <div class="text-column-2">
-                        <div
-                          class="d-flex align-items-center w-100 justify-content-between"
-                        >
-                          <span class="accordion-title"
-                            >Basic Navigation in KanTime</span
+                      <div class="row text-column-2">
+                        <div class="col-md-10 pe-5 border-end">
+                          <div
+                            class="d-flex align-items-center w-100 justify-content-between"
                           >
-                        </div>
+                            <span class="accordion-title"
+                              >Basic Navigation in KanTime</span
+                            >
+                          </div>
 
-                        <span class="accordion-desc">
-                          Lorem ipsum dolor sit amet consectetur. Quis neque mus
-                          mi eget etiam purus euismod fringilla vel. Turpis
-                          quisque amet dolor at cursus faucibus. Odio dignissim
-                          neque dui hendrerit in. Velit pellentesque at est orci
-                          faucibus. Vel in mauris tempus sapien facilisis
-                          sollicitudin non purus placerat mauris.
-                        </span>
+                          <span class="accordion-desc">
+                            Lorem ipsum dolor sit amet consectetur. Quis neque
+                            mus mi eget etiam purus euismod fringilla vel.
+                            Turpis quisque amet dolor at cursus faucibus. Odio
+                            dignissim neque dui hendrerit in. Velit pellentesque
+                            at est orci faucibus. Vel in mauris tempus sapien
+                            facilisis sollicitudin non purus placerat mauris.
+                          </span>
+                        </div>
+                        <div class="col-md-2 text-center">
+                          <span class="status blue">Pending</span>
+                        </div>
                       </div>
 
-                      <div class="text-column-2">
-                        <div
-                          class="d-flex align-items-center w-100 justify-content-between"
-                        >
-                          <span class="accordion-title"
-                            >Basic Navigation in KanTime</span
+                      <div class="row text-column-2">
+                        <div class="col-md-10 pe-5 border-end">
+                          <div
+                            class="d-flex align-items-center w-100 justify-content-between"
                           >
-                        </div>
+                            <span class="accordion-title"
+                              >Basic Navigation in KanTime</span
+                            >
+                          </div>
 
-                        <span class="accordion-desc">
-                          Lorem ipsum dolor sit amet consectetur. Quis neque mus
-                          mi eget etiam purus euismod fringilla vel. Turpis
-                          quisque amet dolor at cursus faucibus. Odio dignissim
-                          neque dui hendrerit in. Velit pellentesque at est orci
-                          faucibus. Vel in mauris tempus sapien facilisis
-                          sollicitudin non purus placerat mauris.
-                        </span>
+                          <span class="accordion-desc">
+                            Lorem ipsum dolor sit amet consectetur. Quis neque
+                            mus mi eget etiam purus euismod fringilla vel.
+                            Turpis quisque amet dolor at cursus faucibus. Odio
+                            dignissim neque dui hendrerit in. Velit pellentesque
+                            at est orci faucibus. Vel in mauris tempus sapien
+                            facilisis sollicitudin non purus placerat mauris.
+                          </span>
+                        </div>
+                        <div class="col-md-2 text-center">
+                          <span class="status blue">Pending</span>
+                        </div>
                       </div>
-
-                      <div class="text-column-2">
-                        <div
-                          class="d-flex align-items-center w-100 justify-content-between"
-                        >
-                          <span class="accordion-title"
-                            >Basic Navigation in KanTime</span
+                      <div class="row text-column-2">
+                        <div class="col-md-10 pe-5 border-end">
+                          <div
+                            class="d-flex align-items-center w-100 justify-content-between"
                           >
-                        </div>
+                            <span class="accordion-title"
+                              >Basic Navigation in KanTime</span
+                            >
+                          </div>
 
-                        <span class="accordion-desc">
-                          Lorem ipsum dolor sit amet consectetur. Quis neque mus
-                          mi eget etiam purus euismod fringilla vel. Turpis
-                          quisque amet dolor at cursus faucibus. Odio dignissim
-                          neque dui hendrerit in. Velit pellentesque at est orci
-                          faucibus. Vel in mauris tempus sapien facilisis
-                          sollicitudin non purus placerat mauris.
-                        </span>
+                          <span class="accordion-desc">
+                            Lorem ipsum dolor sit amet consectetur. Quis neque
+                            mus mi eget etiam purus euismod fringilla vel.
+                            Turpis quisque amet dolor at cursus faucibus. Odio
+                            dignissim neque dui hendrerit in. Velit pellentesque
+                            at est orci faucibus. Vel in mauris tempus sapien
+                            facilisis sollicitudin non purus placerat mauris.
+                          </span>
+                        </div>
+                        <div class="col-md-2 text-center">
+                          <span class="status blue">Pending</span>
+                        </div>
                       </div>
-
-                      <div class="text-column-2">
-                        <div
-                          class="d-flex align-items-center w-100 justify-content-between"
-                        >
-                          <span class="accordion-title"
-                            >Basic Navigation in KanTime</span
+                      <div class="row text-column-2">
+                        <div class="col-md-10 pe-5 border-end">
+                          <div
+                            class="d-flex align-items-center w-100 justify-content-between"
                           >
-                        </div>
+                            <span class="accordion-title"
+                              >Basic Navigation in KanTime</span
+                            >
+                          </div>
 
-                        <span class="accordion-desc">
-                          Lorem ipsum dolor sit amet consectetur. Quis neque mus
-                          mi eget etiam purus euismod fringilla vel. Turpis
-                          quisque amet dolor at cursus faucibus. Odio dignissim
-                          neque dui hendrerit in. Velit pellentesque at est orci
-                          faucibus. Vel in mauris tempus sapien facilisis
-                          sollicitudin non purus placerat mauris.
-                        </span>
+                          <span class="accordion-desc">
+                            Lorem ipsum dolor sit amet consectetur. Quis neque
+                            mus mi eget etiam purus euismod fringilla vel.
+                            Turpis quisque amet dolor at cursus faucibus. Odio
+                            dignissim neque dui hendrerit in. Velit pellentesque
+                            at est orci faucibus. Vel in mauris tempus sapien
+                            facilisis sollicitudin non purus placerat mauris.
+                          </span>
+                        </div>
+                        <div class="col-md-2 text-center">
+                          <span class="status blue">Pending</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -795,10 +964,10 @@
             <div class="d-flex align-items-center mb-4 w-100">
               <div class="search-input col-md-7">
                 <input type="text" class="form-control" placeholder="Search" />
-                <img src="../images/search.svg" alt="" />
+                <img src="images/search.svg" alt="" />
               </div>
               <button class="btn btn-outline ms-2">
-                <img src="../images/filter.svg" class="me-2" />Filter
+                <img src="images/filter.svg" class="me-2" />Filter
               </button>
             </div>
             <div class="alert alert-primary text-center mb-4" role="alert">
@@ -938,10 +1107,10 @@
             <div class="d-flex align-items-center w-100">
               <div class="search-input flex-fill">
                 <input type="text" class="form-control" placeholder="Search" />
-                <img src="../images/search.svg" alt="" />
+                <img src="images/search.svg" alt="" />
               </div>
               <button class="btn btn-outline ms-2">
-                <img src="../images/filter.svg" class="me-2" />Filter
+                <img src="images/filter.svg" class="me-2" />Filter
               </button>
             </div>
             <span class="table-title">Select Assignments to add</span>
@@ -1090,11 +1259,11 @@
       </div>
     </div>
     <!-- JavaScript -->
-    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
     <!-- bootstrap js-->
-    <script type="text/javascript" src="../js/popper.min.js"></script>
-    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
     <script>
@@ -1211,12 +1380,12 @@
       trend.render();
     </script>
     <!-- custom initialize js -->
-    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
     <script
       type="text/javascript"
-      src="../js/bootstrap-multiselect.min.js"
+      src="js/bootstrap-multiselect.min.js"
     ></script>
     <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js "></script>
-    <script type="text/javascript" src="../js/custom.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
   </body>
 </html>
