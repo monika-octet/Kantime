@@ -315,6 +315,7 @@ body {
     letter-spacing: 0.01em;
     border-radius: 4px;
     height: 34px;
+    min-width: fit-content;
 }
 
 .search-input {
@@ -2024,7 +2025,7 @@ footer p {
 }
 
 .learners-dropdown-box {
-    width: 250px;
+    /* width: 250px; */
 }
 
 .multiselect-native-select .btn-group {
