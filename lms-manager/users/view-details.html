@@ -38,6 +38,29 @@
   </head>
 
   <body>
+
+    <!-- popup code -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content pop-up-borderStyle">
+          <div class="">
+          </div>
+          <div class="modal-body pop-up-content">
+            <div class="pop-up-image-box">
+              <image src="../images/popup.svg" class="pop-up-image"></image> 
+              <h2 class="popUp-title">Are you sure?</h2>
+            </div>
+            <p>Learner won't be able to access this Learning path !</p>
+
+          </div>
+          <div class="modal-footer no-border">
+            <button type="button" class="btn  btn-white pop-up-cancel" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-white btn-outline-secondary pop-up-btn">Deactivate</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- pop up code end here -->
     <header class="header-wrap">
       <div class="main-header d-flex justify-content-between">
         <div class="d-flex">
@@ -150,6 +173,34 @@
                 <h2 class="title-lp-heading">Learners 1</h2>
                 <span class="text-light-3 text-14">#ID_101</span>
                 <span class="status green">Active</span>
+              </div>
+              <div class="d-flex align-items-center justify-content-center gap-10px">
+                <div class="dropdown">
+                  <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="../images/dot.svg">
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="">
+                     
+                    <li>
+                      <a class="dropdown-item" href="#"  >Add Assignment</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"  >Edit</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"  >Preview</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"  >Move to Draft</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"  >Export</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item red-link" href="#"  >Delete</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -339,9 +390,9 @@
                 class="title-row assignment-title-row d-flex align-items-center justify-content-between mb-4"
               >
                 <h3 class="title-row-heading mb-0">Learning paths</h3>
-                <div class="d-flex align-items-center">
-                  <select class="single-select">
-                    <option selected>Select Agency</option>
+                <div class="d-flex align-items-center ">
+                  <select class="single-select" style="width:250px ;">
+                    <option selected>All</option>
                     <option>Ongoing (3)</option>
                     <option>Not started (0)</option>
                     <option>Completed (0)</option>
@@ -372,7 +423,7 @@
                         <div class="d-flex">
                           <div>
                             <h3>SN Adult Admission Process</h3>
-                            <p>#101</p>
+                            <p class="learner-path-number">#101</p>
                           </div>
                         </div>
                       </td>
@@ -428,7 +479,7 @@
                                 >
                               </li>
                               <li>
-                                <a class="dropdown-item red-link" href="#"
+                                <a class="dropdown-item red-link" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
                                   >Unregister Learner</a
                                 >
                               </li>
@@ -442,7 +493,7 @@
                         <div class="d-flex">
                           <div>
                             <h3>SN Adult Admission Process</h3>
-                            <p>#101</p>
+                            <p class="learner-path-number">#101</p>
                           </div>
                         </div>
                       </td>
@@ -492,8 +543,14 @@
                               <li>
                                 <a
                                   class="dropdown-item"
-                                  href="view-details.html"
-                                  >View user profile</a
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#assignment-status"
+                                  >Show Assignment Status</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item red-link" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                  >Unregister Learner</a
                                 >
                               </li>
                             </ul>
@@ -506,7 +563,7 @@
                         <div class="d-flex">
                           <div>
                             <h3>SN Adult Admission Process</h3>
-                            <p>#101</p>
+                            <p class="learner-path-number">#101</p>
                           </div>
                         </div>
                       </td>
@@ -562,7 +619,7 @@
                                 >
                               </li>
                               <li>
-                                <a class="dropdown-item red-link" href="#"
+                                <a class="dropdown-item red-link" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
                                   >Unregister Learner</a
                                 >
                               </li>
@@ -576,7 +633,7 @@
                         <div class="d-flex">
                           <div>
                             <h3>SN Adult Admission Process</h3>
-                            <p>#101</p>
+                            <p class="learner-path-number">#101</p>
                           </div>
                         </div>
                       </td>
@@ -626,8 +683,14 @@
                               <li>
                                 <a
                                   class="dropdown-item"
-                                  href="view-details.html"
-                                  >View user profile</a
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#assignment-status"
+                                  >Show Assignment Status</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item red-link" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                  >Unregister Learner</a
                                 >
                               </li>
                             </ul>
@@ -640,7 +703,7 @@
                         <div class="d-flex">
                           <div>
                             <h3>SN Adult Admission Process</h3>
-                            <p>#101</p>
+                            <p class="learner-path-number">#101</p>
                           </div>
                         </div>
                       </td>
@@ -696,7 +759,7 @@
                                 >
                               </li>
                               <li>
-                                <a class="dropdown-item red-link" href="#"
+                                <a class="dropdown-item red-link" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
                                   >Unregister Learner</a
                                 >
                               </li>
@@ -710,7 +773,7 @@
                         <div class="d-flex">
                           <div>
                             <h3>SN Adult Admission Process</h3>
-                            <p>#101</p>
+                            <p class="learner-path-number">#101</p>
                           </div>
                         </div>
                       </td>
@@ -760,8 +823,14 @@
                               <li>
                                 <a
                                   class="dropdown-item"
-                                  href="view-details.html"
-                                  >View user profile</a
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#assignment-status"
+                                  >Show Assignment Status</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item red-link" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                  >Unregister Learner</a
                                 >
                               </li>
                             </ul>
@@ -893,7 +962,7 @@
                       </div>
                       <div>
                         <h3>Learning path name</h3>
-                        <p>#101</p>
+                        <p class="learner-path-number">#101</p>
                       </div>
                     </div>
                   </td>
@@ -922,7 +991,7 @@
                       </div>
                       <div>
                         <h3>Learning path name</h3>
-                        <p>#101</p>
+                        <p class="learner-path-number">#101</p>
                       </div>
                     </div>
                   </td>
@@ -951,7 +1020,7 @@
                       </div>
                       <div>
                         <h3>Learning path name</h3>
-                        <p>#101</p>
+                        <p class="learner-path-number">#101</p>
                       </div>
                     </div>
                   </td>

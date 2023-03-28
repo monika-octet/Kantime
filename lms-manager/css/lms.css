@@ -55,7 +55,7 @@ body {
     height: 56px;
     position: relative;
     z-index: 9;
-    padding: 0 30px;
+    padding: 0 20px;
 }
 
 .kantime-logo {
@@ -129,7 +129,7 @@ body {
 
 .table-pattern-4 tbody tr td p {
     font-size: 14px;
-    color: #545B64;
+    color: #8B939D;
     margin-bottom: 5px;
 }
 
@@ -173,7 +173,7 @@ body {
 .table-pattern-5 tbody tr td h3,
 .table-pattern-4 tbody tr td h3 {
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
     color: #25282C;
     margin-bottom: 5px;
 }
@@ -326,6 +326,7 @@ body {
     height: 34px;
     border-color: #ECEDEF;
     border-radius: 4px;
+    width: 220px;
 }
 
 .search-input img {
@@ -370,6 +371,7 @@ a.breadcrumb-page {
     line-height: 15px;
     letter-spacing: 0.01em;
     color: #6C737F;
+    margin: 0 10px;
 }
 
 
@@ -442,10 +444,10 @@ a.breadcrumb-page {
 .title-with-more {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: flex-start;
     padding: 0px;
-    gap: 33px;
+    gap: 133px;
 }
 
 .title-lp {
@@ -614,7 +616,7 @@ a.breadcrumb-page {
 }
 
 .data-title {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14px;
     line-height: 17px;
     letter-spacing: 0.03em;
@@ -645,7 +647,7 @@ a.breadcrumb-page {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px;
+
     gap: 20px;
     background: #FAFAFA;
     border: 1px solid #ECEDEF;
@@ -658,7 +660,7 @@ a.breadcrumb-page {
     flex-direction: row;
     align-items: center;
     padding: 0px;
-    gap: 30px;
+    gap: 20px;
 }
 
 .graph-list {
@@ -1209,6 +1211,7 @@ a.breadcrumb-page {
     align-items: flex-start;
     padding: 0px;
     gap: 10px;
+
 }
 
 .filter-box {
@@ -2008,4 +2011,32 @@ footer p {
 
 .no-border {
     border: none !important
+}
+
+.graph-title {
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.graph-row-pad {
+    padding-right: 20px;
+}
+
+.learners-dropdown-box {
+    width: 250px;
+}
+
+.multiselect-native-select .btn-group {
+    width: 250px !important;
+}
+
+.modal-footer {
+    box-shadow: 0px -2px 8px 0px #CFCFCF26 !important;
+}
+
+.custom-modal-body label:first-child {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 1%;
 }
