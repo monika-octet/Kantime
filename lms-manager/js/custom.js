@@ -5,8 +5,7 @@ var tooltipTriggerList = [].slice.call(
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl);
 });
-// toast initialize
-$("select").multiselect();
+
 //success
 $("#success").click(function () {
   Swal.fire({
@@ -34,38 +33,16 @@ $("#successEnroll").click(function () {
     timer: 1500,
   });
 });
-// create new group flow
-
-$(".add-assignment-content").hide();
-$(".step-2-footer").hide();
-
-$(".step-1-save-btn").on("click", function () {
-  $(".step-1-content").hide();
-  $(".add-assignment-content").show();
-  $(".step-1-footer").hide();
-  $(".step-2-footer").show();
+$("#unregister").click(function () {
+  Swal.fire({
+    icon: "success",
+    title: "Learner Unregistered Successfully!",
+    showConfirmButton: false,
+    timer: 1500,
+  });
 });
-
-$("#publish-check").on("click", function () {
-  if ($("#publish-check").is(":checked")) {
-    $(".step-2-publish-btn").removeClass("btn-secondary");
-    $(".step-2-publish-btn").addClass("btn-primary");
-  }
-});
-
-// Assignment Tab Btn (Create New Link Change)
-$("#create-assignment").hide();
-
-$("#assignment-tab").on("click", function () {
-  $("#create-group").hide();
-  $("#create-assignment").show();
-});
-
-$("#groups-tab").on("click", function () {
-  $("#create-assignment").hide();
-  $("#create-group").show();
-});
-
+// toast initialize
+$("select").multiselect();
 // Add Task Table Row
 $(".added-task").hide();
 $(".added-task-auto-assign").hide();

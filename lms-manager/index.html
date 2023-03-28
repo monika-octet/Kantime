@@ -16,8 +16,19 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@100&display=swap"
       rel="stylesheet"
     />
+    <!-- select -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/bootstrap-multiselect.min.css"
+    />
     <!-- bootstrap css -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css "
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       type="text/css"
@@ -134,7 +145,7 @@
               aria-controls="home"
               aria-selected="true"
             >
-              All Users
+              Learners Queue
             </button>
           </li>
         </ul>
@@ -150,6 +161,13 @@
           <button class="btn btn-primary-light ms-2">
             <img src="images/export.svg" class="me-2" /><span>Export</span>
           </button>
+          <button
+            class="btn btn-primary ms-2"
+            data-bs-toggle="modal"
+            data-bs-target="#assignment-status"
+          >
+            <span>New Enrollment</span>
+          </button>
         </div>
       </div>
     </header>
@@ -162,561 +180,613 @@
           role="tabpanel"
           aria-labelledby="home-tab"
         >
-          <div class="table-responsive">
-            <table class="table align-middle table-pattern-5">
-              <thead>
-                <tr>
-                  <th>
-                    <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="checkAll"
-                        />
+          <div class="filter-grid mt-4">
+            <div class="filter-list-box">
+              <div class="filter-title">Status</div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item" id="all">All (896)</li>
+                <li class="list-group-item" id="registered">
+                  Registered / not started (896)
+                </li>
+                <li class="list-group-item" id="ongoing">Ongoing (896)</li>
+                <li class="list-group-item" id="completed">Completed (896)</li>
+                <li class="list-group-item" id="certified">Certified (896)</li>
+                <li class="list-group-item" id="overdue">Overdue (896)</li>
+                <li class="list-group-item" id="dropped">Dropped (896)</li>
+                <li class="list-group-item" id="expired">
+                  Expired Certification (896)
+                </li>
+              </ul>
+            </div>
+            <div class="table-responsive">
+              <table class="table align-middle table-pattern-4">
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="d-flex">
+                        <div class="form-check me-2">
+                          <input
+                            class="form-check-input"
+                            style="--c-p: 2px"
+                            type="checkbox"
+                            value=""
+                            id="checkAll"
+                          />
+                        </div>
+                        <div>Learners Name</div>
                       </div>
-                      <div>Learners Name</div>
-                    </div>
-                  </th>
-                  <th class="text-center">Learning Path</th>
-                  <th>Location</th>
-                  <th>Department & Discipline</th>
-                  <th class="text-center">User Role</th>
-                  <th class="text-center">Hired On</th>
-                  <th class="text-center">Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
-                      <div>
-                        <h3>
-                          <a href="./learning-paths/view-details.html"
-                            >Ronald Richards</a
-                          >
-                        </h3>
-                        <p>#101</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <p>1</p>
-                  </td>
-                  <td>
-                    <p>New York, U.S</p>
-                  </td>
-                  <td class="text-center">
-                    <p>LVN Clinician</p>
-                    <p>RNN</p>
-                  </td>
-                  <td class="text-center">
-                    <p>Admin</p>
-                  </td>
-                  <td class="text-center">
-                    <p>12-01-2023</p>
-                  </td>
-                  <td>
-                    <div
-                      class="d-flex align-items-center justify-content-center gap-10px"
-                    >
-                      <a
-                        href="learning-paths/view-details.html"
-                        class="btn btn-custom btn-link"
-                      >
-                        View Details
-                      </a>
-                      <div class="dropdown">
-                        <button
-                          class="btn btn-dot dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          <img src="images/dot.svg" />
-                        </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton1"
-                        >
-                          <li>
-                            <a
-                              class="dropdown-item"
-                              data-bs-toggle="modal"
-                              data-bs-target="#modal-edit"
-                              >View user profile</a
+                    </th>
+                    <th>Learning Path</th>
+                    <th>Location</th>
+                    <th>Department & Discipline</th>
+                    <th class="text-center">Status</th>
+                    <th class="text-center">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="registered">
+                    <td>
+                      <div class="d-flex">
+                        <div class="form-check me-2">
+                          <input
+                            class="form-check-input"
+                            style="--c-p: 2px"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckDefault"
+                          />
+                        </div>
+                        <div>
+                          <h3>
+                            <a href="./learning-paths/view-details.html"
+                              >John Doe</a
                             >
-                          </li>
-                        </ul>
+                          </h3>
+                          <p>#101</p>
+                        </div>
                       </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
+                    </td>
+                    <td>
+                      <p>SN Adult Admission Process</p>
+                    </td>
+                    <td>
+                      <p>New York, U.S</p>
+                    </td>
+                    <td>
+                      <p>LVN Clinician</p>
+                      <p>RNN</p>
+                    </td>
+                    <td>
+                      <div class="custom-progress">
+                        <div class="progress w-100">
+                          <div
+                            class="progress-bar bg-success-table"
+                            role="progressbar"
+                            aria-label="Success example"
+                            style="width: 0%"
+                            aria-valuenow="0"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                        <span class="progress-text">0% Completed</span>
                       </div>
-                      <div>
-                        <h3>
-                          <a href="./learning-paths/view-details.html"
-                            >Ronald Richards</a
-                          >
-                        </h3>
-                        <p>#101</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <p>1</p>
-                  </td>
-                  <td>
-                    <p>New York, U.S</p>
-                  </td>
-                  <td class="text-center">
-                    <p>LVN Clinician</p>
-                    <p>RNN</p>
-                  </td>
-                  <td class="text-center">
-                    <p>Admin</p>
-                  </td>
-                  <td class="text-center">
-                    <p>12-01-2023</p>
-                  </td>
-                  <td>
-                    <div
-                      class="d-flex align-items-center justify-content-center gap-10px"
-                    >
-                      <a
-                        href="learning-paths/view-details.html"
-                        class="btn btn-custom btn-link"
+                    </td>
+                    <td>
+                      <div
+                        class="d-flex align-items-center justify-content-center gap-10px"
                       >
-                        View Details
-                      </a>
-                      <div class="dropdown">
-                        <button
-                          class="btn btn-dot dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          <img src="images/dot.svg" />
-                        </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton1"
-                        >
-                          <li>
-                            <a
-                              class="dropdown-item"
-                              data-bs-toggle="modal"
-                              data-bs-target="#modal-edit"
-                              >View user profile</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
-                      <div>
-                        <h3>
-                          <a href="./learning-paths/view-details.html"
-                            >Ronald Richards</a
+                        <div class="dropdown">
+                          <button
+                            class="btn btn-dot dropdown-toggle"
+                            type="button"
+                            id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
                           >
-                        </h3>
-                        <p>#101</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <p>1</p>
-                  </td>
-                  <td>
-                    <p>New York, U.S</p>
-                  </td>
-                  <td class="text-center">
-                    <p>LVN Clinician</p>
-                    <p>RNN</p>
-                  </td>
-                  <td class="text-center">
-                    <p>Admin</p>
-                  </td>
-                  <td class="text-center">
-                    <p>12-01-2023</p>
-                  </td>
-                  <td>
-                    <div
-                      class="d-flex align-items-center justify-content-center gap-10px"
-                    >
-                      <a
-                        href="learning-paths/view-details.html"
-                        class="btn btn-custom btn-link"
-                      >
-                        View Details
-                      </a>
-                      <div class="dropdown">
-                        <button
-                          class="btn btn-dot dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          <img src="images/dot.svg" />
-                        </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton1"
-                        >
-                          <li>
-                            <a
-                              class="dropdown-item"
-                              data-bs-toggle="modal"
-                              data-bs-target="#modal-edit"
-                              >View user profile</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
-                      <div>
-                        <h3>
-                          <a href="./learning-paths/view-details.html"
-                            >Ronald Richards</a
+                            <img src="images/dot.svg" />
+                          </button>
+                          <ul
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownMenuButton1"
                           >
-                        </h3>
-                        <p>#101</p>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="show-assignment.html"
+                                >Show Assignment Status</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="./users/view-details.html"
+                                >View User Profile</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-red-light"
+                                >Unregister Learner</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item">Reregister Learner</a>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
-                  </td>
-                  <td>
-                    <p>1</p>
-                  </td>
-                  <td>
-                    <p>New York, U.S</p>
-                  </td>
-                  <td class="text-center">
-                    <p>LVN Clinician</p>
-                    <p>RNN</p>
-                  </td>
-                  <td class="text-center">
-                    <p>Admin</p>
-                  </td>
-                  <td class="text-center">
-                    <p>12-01-2023</p>
-                  </td>
-                  <td>
-                    <div
-                      class="d-flex align-items-center justify-content-center gap-10px"
-                    >
-                      <a
-                        href="learning-paths/view-details.html"
-                        class="btn btn-custom btn-link"
-                      >
-                        View Details
-                      </a>
-                      <div class="dropdown">
-                        <button
-                          class="btn btn-dot dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          <img src="images/dot.svg" />
-                        </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton1"
-                        >
-                          <li>
-                            <a
-                              class="dropdown-item"
-                              data-bs-toggle="modal"
-                              data-bs-target="#modal-edit"
-                              >View user profile</a
+                    </td>
+                  </tr>
+                  <tr class="ongoing">
+                    <td>
+                      <div class="d-flex">
+                        <div class="form-check me-2">
+                          <input
+                            class="form-check-input"
+                            style="--c-p: 2px"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckDefault"
+                          />
+                        </div>
+                        <div>
+                          <h3>
+                            <a href="./learning-paths/view-details.html"
+                              >John Doe</a
                             >
-                          </li>
-                        </ul>
+                          </h3>
+                          <p>#101</p>
+                        </div>
                       </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
+                    </td>
+                    <td>
+                      <p>SN Adult Admission Process</p>
+                    </td>
+                    <td>
+                      <p>New York, U.S</p>
+                    </td>
+                    <td>
+                      <p>LVN Clinician</p>
+                      <p>RNN</p>
+                    </td>
+                    <td>
+                      <div class="custom-progress">
+                        <div class="progress w-100">
+                          <div
+                            class="progress-bar bg-yellow-table"
+                            role="progressbar"
+                            aria-label="Success example"
+                            style="width: 40%"
+                            aria-valuenow="40"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                        <span class="progress-text">45% Completed</span>
                       </div>
-                      <div>
-                        <h3>
-                          <a href="./learning-paths/view-details.html"
-                            >Ronald Richards</a
+                    </td>
+                    <td>
+                      <div
+                        class="d-flex align-items-center justify-content-center gap-10px"
+                      >
+                        <div class="dropdown">
+                          <button
+                            class="btn btn-dot dropdown-toggle"
+                            type="button"
+                            id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
                           >
-                        </h3>
-                        <p>#101</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <p>1</p>
-                  </td>
-                  <td>
-                    <p>New York, U.S</p>
-                  </td>
-                  <td class="text-center">
-                    <p>LVN Clinician</p>
-                    <p>RNN</p>
-                  </td>
-                  <td class="text-center">
-                    <p>Admin</p>
-                  </td>
-                  <td class="text-center">
-                    <p>12-01-2023</p>
-                  </td>
-                  <td>
-                    <div
-                      class="d-flex align-items-center justify-content-center gap-10px"
-                    >
-                      <a
-                        href="learning-paths/view-details.html"
-                        class="btn btn-custom btn-link"
-                      >
-                        View Details
-                      </a>
-                      <div class="dropdown">
-                        <button
-                          class="btn btn-dot dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          <img src="images/dot.svg" />
-                        </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton1"
-                        >
-                          <li>
-                            <a
-                              class="dropdown-item"
-                              data-bs-toggle="modal"
-                              data-bs-target="#modal-edit"
-                              >View user profile</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
-                      </div>
-                      <div>
-                        <h3>
-                          <a href="./learning-paths/view-details.html"
-                            >Ronald Richards</a
+                            <img src="images/dot.svg" />
+                          </button>
+                          <ul
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownMenuButton1"
                           >
-                        </h3>
-                        <p>#101</p>
+                            <li>
+                              <a class="dropdown-item"
+                                >Show Assignment Status</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="./users/view-details.html"
+                                >View User Profile</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item text-red-light"
+                                >Unregister Learner</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
-                  </td>
-                  <td>
-                    <p>1</p>
-                  </td>
-                  <td>
-                    <p>New York, U.S</p>
-                  </td>
-                  <td class="text-center">
-                    <p>LVN Clinician</p>
-                    <p>RNN</p>
-                  </td>
-                  <td class="text-center">
-                    <p>Admin</p>
-                  </td>
-                  <td class="text-center">
-                    <p>12-01-2023</p>
-                  </td>
-                  <td>
-                    <div
-                      class="d-flex align-items-center justify-content-center gap-10px"
-                    >
-                      <a
-                        href="learning-paths/view-details.html"
-                        class="btn btn-custom btn-link"
-                      >
-                        View Details
-                      </a>
-                      <div class="dropdown">
-                        <button
-                          class="btn btn-dot dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          <img src="images/dot.svg" />
-                        </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton1"
-                        >
-                          <li>
-                            <a
-                              class="dropdown-item"
-                              data-bs-toggle="modal"
-                              data-bs-target="#modal-edit"
-                              >View user profile</a
+                    </td>
+                  </tr>
+                  <tr class="completed">
+                    <td>
+                      <div class="d-flex">
+                        <div class="form-check me-2">
+                          <input
+                            class="form-check-input"
+                            style="--c-p: 2px"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckDefault"
+                          />
+                        </div>
+                        <div>
+                          <h3>
+                            <a href="./learning-paths/view-details.html"
+                              >John Doe</a
                             >
-                          </li>
-                        </ul>
+                          </h3>
+                          <p>#101</p>
+                        </div>
                       </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex">
-                      <div class="form-check me-2">
-                        <input
-                          class="form-check-input"
-                          style="--c-p: 2px"
-                          type="checkbox"
-                          value=""
-                          id="flexCheckDefault"
-                        />
+                    </td>
+                    <td>
+                      <p>SN Adult Admission Process</p>
+                    </td>
+                    <td>
+                      <p>New York, U.S</p>
+                    </td>
+                    <td>
+                      <p>LVN Clinician</p>
+                      <p>RNN</p>
+                    </td>
+                    <td>
+                      <div class="custom-progress">
+                        <div class="progress w-100">
+                          <div
+                            class="progress-bar bg-success-table"
+                            role="progressbar"
+                            aria-label="Success example"
+                            style="width: 100%"
+                            aria-valuenow="100"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                        <span class="progress-text">45% Completed</span>
                       </div>
-                      <div>
-                        <h3>
-                          <a href="./learning-paths/view-details.html"
-                            >Ronald Richards</a
+                    </td>
+                    <td>
+                      <div
+                        class="d-flex align-items-center justify-content-center gap-10px"
+                      >
+                        <div class="dropdown">
+                          <button
+                            class="btn btn-dot dropdown-toggle"
+                            type="button"
+                            id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
                           >
-                        </h3>
-                        <p>#101</p>
+                            <img src="images/dot.svg" />
+                          </button>
+                          <ul
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownMenuButton1"
+                          >
+                            <li>
+                              <a class="dropdown-item"
+                                >Show Assignment Status</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="./users/view-details.html"
+                                >View User Profile</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
-                  </td>
-                  <td>
-                    <p>1</p>
-                  </td>
-                  <td>
-                    <p>New York, U.S</p>
-                  </td>
-                  <td class="text-center">
-                    <p>LVN Clinician</p>
-                    <p>RNN</p>
-                  </td>
-                  <td class="text-center">
-                    <p>Admin</p>
-                  </td>
-                  <td class="text-center">
-                    <p>12-01-2023</p>
-                  </td>
-                  <td>
-                    <div
-                      class="d-flex align-items-center justify-content-center gap-10px"
-                    >
-                      <a
-                        href="learning-paths/view-details.html"
-                        class="btn btn-custom btn-link"
-                      >
-                        View Details
-                      </a>
-                      <div class="dropdown">
-                        <button
-                          class="btn btn-dot dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          <img src="images/dot.svg" />
-                        </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton1"
-                        >
-                          <li>
-                            <a
-                              class="dropdown-item"
-                              data-bs-toggle="modal"
-                              data-bs-target="#modal-edit"
-                              >View user profile</a
+                    </td>
+                  </tr>
+                  <tr class="certified">
+                    <td>
+                      <div class="d-flex">
+                        <div class="form-check me-2">
+                          <input
+                            class="form-check-input"
+                            style="--c-p: 2px"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckDefault"
+                          />
+                        </div>
+                        <div>
+                          <h3>
+                            <a href="./learning-paths/view-details.html"
+                              >John Doe</a
                             >
-                          </li>
-                        </ul>
+                          </h3>
+                          <p>#101</p>
+                        </div>
                       </div>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                    </td>
+                    <td>
+                      <p>SN Adult Admission Process</p>
+                    </td>
+                    <td>
+                      <p>New York, U.S</p>
+                    </td>
+                    <td>
+                      <p>LVN Clinician</p>
+                      <p>RNN</p>
+                    </td>
+                    <td class="text-center">
+                      <p class="text-green">Certified</p>
+                      <p>(01-02-2023)</p>
+                    </td>
+                    <td>
+                      <div
+                        class="d-flex align-items-center justify-content-center gap-10px"
+                      >
+                        <div class="dropdown">
+                          <button
+                            class="btn btn-dot dropdown-toggle"
+                            type="button"
+                            id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <img src="images/dot.svg" />
+                          </button>
+                          <ul
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownMenuButton1"
+                          >
+                            <li>
+                              <a class="dropdown-item"
+                                >Show Assignment Status</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="./users/view-details.html"
+                                >View User Profile</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="overdue">
+                    <td>
+                      <div class="d-flex">
+                        <div class="form-check me-2">
+                          <input
+                            class="form-check-input"
+                            style="--c-p: 2px"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckDefault"
+                          />
+                        </div>
+                        <div>
+                          <h3>
+                            <a href="./learning-paths/view-details.html"
+                              >John Doe</a
+                            >
+                          </h3>
+                          <p>#101</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <p>SN Adult Admission Process</p>
+                    </td>
+                    <td>
+                      <p>New York, U.S</p>
+                    </td>
+                    <td>
+                      <p>LVN Clinician</p>
+                      <p>RNN</p>
+                    </td>
+                    <td class="text-center">
+                      <p class="text-red-light">Overdue</p>
+                      <p>(01-02-2023)</p>
+                    </td>
+                    <td>
+                      <div
+                        class="d-flex align-items-center justify-content-center gap-10px"
+                      >
+                        <div class="dropdown">
+                          <button
+                            class="btn btn-dot dropdown-toggle"
+                            type="button"
+                            id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <img src="images/dot.svg" />
+                          </button>
+                          <ul
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownMenuButton1"
+                          >
+                            <li>
+                              <a class="dropdown-item"
+                                >Show Assignment Status</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                data-bs-target="#extend-due-date"
+                                data-bs-toggle="modal"
+                                >Extend Due date</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                data-bs-target="#reregister-learner"
+                                data-bs-toggle="modal"
+                                >Reregister Learner</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item text-red-light"
+                                data-bs-target="#unregister-learner"
+                                data-bs-toggle="modal"
+                                >Unregister Learner</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="dropped">
+                    <td>
+                      <div class="d-flex">
+                        <div class="form-check me-2">
+                          <input
+                            class="form-check-input"
+                            style="--c-p: 2px"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckDefault"
+                          />
+                        </div>
+                        <div>
+                          <h3>
+                            <a href="./learning-paths/view-details.html"
+                              >John Doe</a
+                            >
+                          </h3>
+                          <p>#101</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <p>SN Adult Admission Process</p>
+                    </td>
+                    <td>
+                      <p>New York, U.S</p>
+                    </td>
+                    <td>
+                      <p>LVN Clinician</p>
+                      <p>RNN</p>
+                    </td>
+                    <td class="text-center">
+                      <p class="text-red-light">Dropped</p>
+                      <p>(01-02-2023)</p>
+                    </td>
+                    <td>
+                      <div
+                        class="d-flex align-items-center justify-content-center gap-10px"
+                      >
+                        <div class="dropdown">
+                          <button
+                            class="btn btn-dot dropdown-toggle"
+                            type="button"
+                            id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <img src="images/dot.svg" />
+                          </button>
+                          <ul
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownMenuButton1"
+                          >
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="./users/view-details.html"
+                                >View User Profile</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="expired">
+                    <td>
+                      <div class="d-flex">
+                        <div class="form-check me-2">
+                          <input
+                            class="form-check-input"
+                            style="--c-p: 2px"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckDefault"
+                          />
+                        </div>
+                        <div>
+                          <h3>
+                            <a href="./learning-paths/view-details.html"
+                              >John Doe</a
+                            >
+                          </h3>
+                          <p>#101</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <p>SN Adult Admission Process</p>
+                    </td>
+                    <td>
+                      <p>New York, U.S</p>
+                    </td>
+                    <td>
+                      <p>LVN Clinician</p>
+                      <p>RNN</p>
+                    </td>
+                    <td class="text-center">
+                      <p class="text-red-light">Expired</p>
+                      <p>(01-02-2023)</p>
+                    </td>
+                    <td>
+                      <div
+                        class="d-flex align-items-center justify-content-center gap-10px"
+                      >
+                        <div class="dropdown">
+                          <button
+                            class="btn btn-dot dropdown-toggle"
+                            type="button"
+                            id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <img src="images/dot.svg" />
+                          </button>
+                          <ul
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownMenuButton1"
+                          >
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="./users/view-details.html"
+                                >View User Profile</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item">Reregister</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
+
           <nav aria-label="Page navigation example" class="float-end">
             <ul class="pagination">
               <li class="page-item">
@@ -741,15 +811,577 @@
       <p class="mb-0">Kantime - LMS Control Panel</p>
       <p class="mb-0">Version 1.0</p>
     </footer>
+    <!-- Assign learner -->
+    <div
+      class="modal fade"
+      id="assignment-status"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Assign Learner</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body custom-modal-body">
+            <div class="row">
+              <div class="col-md-12">
+                <label for="">Select Learner </label>
+                <div class="d-flex align-items-center w-100 mb-2">
+                  <div class="search-input col-md-7">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Search"
+                    />
+                    <img src="images/search.svg" alt="" />
+                  </div>
+                  <button class="btn btn-outline ms-2">
+                    <img src="images/filter.svg" class="me-2" />Filter
+                  </button>
+                </div>
+              </div>
+            </div>
 
+            <table class="table align-middle table-pattern-4">
+              <thead>
+                <tr>
+                  <th>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>Learners Name</div>
+                    </div>
+                  </th>
+                  <th>Learning Path</th>
+                  <th>Location</th>
+                  <th>Discipline</th>
+                  <th>Department</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learner Name</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>1</p>
+                  </td>
+                  <td>
+                    <p>RNN</p>
+                  </td>
+                  <td>
+                    <p>New York, U.S</p>
+                  </td>
+                  <td>
+                    <p>LVN Clinician</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learner Name</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>1</p>
+                  </td>
+                  <td>
+                    <p>RNN</p>
+                  </td>
+                  <td>
+                    <p>New York, U.S</p>
+                  </td>
+                  <td>
+                    <p>LVN Clinician</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learner Name</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>1</p>
+                  </td>
+                  <td>
+                    <p>RNN</p>
+                  </td>
+                  <td>
+                    <p>New York, U.S</p>
+                  </td>
+                  <td>
+                    <p>LVN Clinician</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+              data-bs-target="#assign-learning-path"
+              data-bs-toggle="modal"
+            >
+              Continue
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Assign Learning Path -->
+    <div
+      class="modal fade"
+      id="assign-learning-path"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Assign Learning Paths
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body custom-modal-body">
+            <div class="row">
+              <div class="col-md-4">
+                <label for="">Start Date<sup>*</sup> </label>
+                <div id="weeklyrange" class="form-control singleDatePicker">
+                  <span></span>
+                  <img src="images/calendar-2.svg" alt="" />
+                </div>
+              </div>
+              <div class="col-md-12 mt-4">
+                <label for="">Select learning path to assign </label>
+                <div class="d-flex align-items-center w-100 mb-2">
+                  <div class="search-input col-md-7">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Search"
+                    />
+                    <img src="../images/search.svg" alt="" />
+                  </div>
+                  <button class="btn btn-outline ms-2">
+                    <img src="images/filter.svg" class="me-2" />Filter
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <table class="table align-middle table-pattern-4">
+              <thead>
+                <tr>
+                  <th>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>Title</div>
+                    </div>
+                  </th>
+                  <th>Product & Category</th>
+                  <th>Discipline</th>
+                  <th>Care Type</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learning path name</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home Health</p>
+                    <p>Clinical</p>
+                  </td>
+                  <td>
+                    <p>1</p>
+                  </td>
+                  <td>
+                    <p>Oasis</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learning path name</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home Health</p>
+                    <p>Clinical</p>
+                  </td>
+                  <td>
+                    <p>1</p>
+                  </td>
+                  <td>
+                    <p>Oasis</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div class="form-check me-2">
+                        <input
+                          class="form-check-input"
+                          style="--c-p: 2px"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                      <div>
+                        <h3>Learning path name</h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home Health</p>
+                    <p>Clinical</p>
+                  </td>
+                  <td>
+                    <p>1</p>
+                  </td>
+                  <td>
+                    <p>Oasis</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+              id="successEnroll"
+            >
+              Activate
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Extend Due Date  -->
+    <div
+      class="modal fade"
+      id="extend-due-date"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Extend Due Date</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body custom-modal-body align-items-center">
+            <div class="row">
+              <div class="col-md-12">
+                <p class="modal-label-info">
+                  Learner Name : <span class="ms-3">Learning Path Name</span>
+                </p>
+                <p class="modal-label-id">#User_ID</p>
+              </div>
+              <div class="col-md-12 mt-4">
+                <label for="" class="label">Extend for </label>
+                <select class="single-select">
+                  <option value="2 days">2 Days</option>
+                  <option value="3 days">3 Days</option>
+                  <option value="5 days">5 Days</option>
+                  <option value="7 days">7 Days</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Extend
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Re-Registration  -->
+    <div
+      class="modal fade"
+      id="reregister-learner"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Re-Registration</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body custom-modal-body align-items-center">
+            <div class="row">
+              <div class="col-md-12">
+                <p class="modal-label-info">
+                  Learner Name : <span class="ms-3">Learning Path Name</span>
+                </p>
+                <p class="modal-label-id">#User_ID</p>
+              </div>
+              <div class="col-md-12 mt-4">
+                <label for="" class="label">Start Date </label>
+                <div id="weeklyrange" class="form-control singleDatePicker">
+                  <span></span>
+                  <img src="images/calendar-2.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Activate
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- unregister learner  -->
+    <div
+      class="modal fade"
+      id="unregister-learner"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content pop-up-borderStyle">
+          <div class=""></div>
+          <div class="modal-body pop-up-content">
+            <div class="pop-up-image-box">
+              <image src="images/popup.svg" class="pop-up-image"></image>
+              <h2 class="popUp-title">Are you sure?</h2>
+            </div>
+            <p>Learner won’t be able to access this Learning path !</p>
+          </div>
+          <div class="modal-footer no-border">
+            <button
+              type="button"
+              class="btn btn-outline"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline text-red-light"
+              data-bs-dismiss="modal"
+              id="unregister"
+            >
+              Unregister
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- pop up code end here -->
     <!-- JavaScript -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <!-- bootstrap js-->
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- select -->
+    <script
+      type="text/javascript"
+      src="js/bootstrap-multiselect.min.js"
+    ></script>
+    <!-- datepicker js -->
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
 
+    <script>
+      // datepicker
+      $(function () {
+        var start = moment();
+        var end = moment();
+
+        function cb(start, end) {
+          $("#weeklyrange span").html(start.format("D MMM YYYY"));
+        }
+
+        $("#weeklyrange").daterangepicker(
+          {
+            startDate: start,
+            endDate: end,
+            opens: "center",
+            singleDatePicker: true,
+          },
+          cb
+        );
+
+        cb(start, end);
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js "></script>
     <!-- custom initialize js -->
     <script type="text/javascript" src="js/menu.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
+    <script>
+      $("#registered").click(function () {
+        $("tbody tr:not(.registered)").hide();
+        $("tbody tr.registered").show();
+      });
+      $("#ongoing").click(function () {
+        $("tbody tr:not(.ongoing)").hide();
+        $("tbody tr.ongoing").show();
+      });
+      $("#completed").click(function () {
+        $("tbody tr:not(.completed)").hide();
+        $("tbody tr.completed").show();
+      });
+      $("#certified").click(function () {
+        $("tbody tr:not(.certified)").hide();
+        $("tbody tr.certified").show();
+      });
+      $("#overdue").click(function () {
+        $("tbody tr:not(.overdue)").hide();
+        $("tbody tr.overdue").show();
+      });
+      $("#dropped").click(function () {
+        $("tbody tr:not(.dropped)").hide();
+        $("tbody tr.dropped").show();
+      });
+      $("#expired").click(function () {
+        $("tbody tr:not(.expired)").hide();
+        $("tbody tr.expired").show();
+      });
+      $("#all").click(function () {
+        $("tbody tr").show();
+      });
+    </script>
   </body>
 </html>

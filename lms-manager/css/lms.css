@@ -1025,10 +1025,14 @@ a.breadcrumb-page {
 .text-column-2 {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 20px 0px;
-    gap: 10px;
+
     border-top: 1px solid #ECEDEF;
+}
+
+.preview .text-column-2 {
+    flex-direction: row;
 }
 
 .accordion-title {
@@ -1746,7 +1750,7 @@ label span {
     justify-content: space-around;
     align-items: center;
     padding: 10px;
-    min-width: 450px;
+    min-width: 750px;
 
 }
 
@@ -1861,7 +1865,7 @@ table tbody tr:hover .btn-dot {
 }
 
 header~main {
-    min-height: calc(100vh - 150px);
+    min-height: calc(100vh - 165px);
 }
 
 footer {
@@ -1897,62 +1901,111 @@ footer p {
     color: #2553c9;
 }
 
-/* LEARNING PATHS changes by ANSHUMAN */
-.deactivateRed{
-    color:#FD6E61 !important;
+/* learners */
+.filter-grid {
+    display: grid;
+    grid-template-columns: 216px auto;
+    grid-gap: 15px;
+    align-items: start;
 }
 
-.pop-up-btn{
-    border:1px solid #ECEDEF;
-    color:#FC2D2D;
-    font-weight: 600;
+.filter-list-box {
+    background: #FAFAFA;
+    border: 1px solid #ECEDEF;
+    position: sticky;
+    top: 120px;
+
+}
+
+.filter-title {
+    background: #FAFAFA;
+    font-family: 'Lato';
+    font-weight: 700;
     font-size: 14px;
-    line-height: 16.8px;
-    letter-spacing: 1%;
-
+    line-height: 17px;
+    padding: 7px 10px;
 }
-.pop-up-cancel{
-    border:1px solid #ECEDEF;
-    color:#3D4148;
+
+.filter-list-box ul {}
+
+.filter-list-box ul li {
+    font-weight: 400;
+    font-size: 13px;
+    color: #3D4148;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    height: 42px;
+    line-height: 30px;
+}
+
+.filter-list-box ul li:hover {
+    color: #3D4148;
     font-weight: 600;
-    font-size: 14px;
-    line-height: 16.8px;
-    letter-spacing: 1%;
+    font-size: 13px;
+    line-height: 16px;
+    cursor: pointer;
+    background: #E8F0FD;
+    height: 42px;
+    line-height: 30px;
 }
 
-.pop-up-btn:hover{
-    background-color: #F4F5F6;
-    color:#FC2D2D;
-    border: transparent;
+.filter-list-box~.table-responsive {
+    min-height: calc(100vh - 240px);
+    background: #fff;
+    margin-bottom: 20px;
 }
-.pop-up-image{
+
+.modal-label-info {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #42526D;
+    letter-spacing: 0.01em;
+    margin-bottom: 0px;
+}
+
+.modal-label-id {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: #9C9C9C;
+}
+
+/* LEARNING PATHS changes  */
+
+
+.pop-up-image {
     width: 20px;
     height: 20px;
 }
 
-.popUp-title{
+.popUp-title {
     font-weight: 700 !important;
     font-size: 18px;
     line-height: 20px;
-    letter-spacing: 1%;
+    letter-spacing: 0.01em;
 }
-.pop-up-image-box{
+
+.pop-up-image-box {
     display: flex;
-    gap:10px;
+    gap: 10px;
 }
-.pop-up-content{
+
+.pop-up-content {
     display: flex;
     flex-direction: column;
     align-items: self-start;
     margin-left: 50px;
 }
-.pop-up-borderStyle{
-    border-top: 6px solid #DB627E !important;
+
+.pop-up-borderStyle {
+    border-top: 6px solid #FE9680 !important;
     border-radius: 4px;
     padding-top: 39px;
 
 }
 
-.no-border{
-    border:none !important
+.no-border {
+    border: none !important
 }

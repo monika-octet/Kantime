@@ -32,24 +32,35 @@
   </head>
 
   <body>
-
     <!-- popup code -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content pop-up-borderStyle">
-          <div class="">
-          </div>
+          <div class=""></div>
           <div class="modal-body pop-up-content">
             <div class="pop-up-image-box">
-              <image src="../images/popup.svg" class="pop-up-image"></image> 
+              <image src="../images/popup.svg" class="pop-up-image"></image>
               <h2 class="popUp-title">Are you sure?</h2>
             </div>
             <p>Learner won't be able to access this Learning path !</p>
-
           </div>
           <div class="modal-footer no-border">
-            <button type="button" class="btn  btn-white pop-up-cancel" data-bs-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-white btn-outline-secondary pop-up-btn">Deactivate</button>
+            <button
+              type="button"
+              class="btn btn-outline"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="btn btn-outline text-red-light">
+              Deactivate
+            </button>
           </div>
         </div>
       </div>
@@ -166,7 +177,7 @@
             aria-controls="home"
             aria-selected="true"
           >
-          Active
+            Active
           </button>
         </li>
         <li class="nav-item" role="presentation">
@@ -180,7 +191,7 @@
             aria-controls="profile"
             aria-selected="false"
           >
-          Inactive
+            Inactive
           </button>
         </li>
       </ul>
@@ -196,7 +207,6 @@
         <button class="btn btn-primary-light ms-2">
           <img src="../images/export.svg" class="me-2" /><span>Export</span>
         </button>
-        
       </div>
     </div>
     <!-- Tab Buttons Row End -->
@@ -216,7 +226,6 @@
                 <tr>
                   <th width="25%">
                     <div class="d-flex">
-                      
                       <div>Name</div>
                     </div>
                   </th>
@@ -232,7 +241,6 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                      
                       <div>
                         <h3>
                           <a href="view-details-active.html"
@@ -262,7 +270,6 @@
                     <div
                       class="d-flex align-items-center justify-content-center gap-10px"
                     >
-                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -280,70 +287,18 @@
                           <li>
                             <a
                               class="dropdown-item"
-                              data-bs-target="#modal-add-lp"
-                              data-bs-toggle="modal"
+                              href="view-details-active.html"
                               >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item deactivateRed" data-bs-toggle="modal" data-bs-target="#exampleModal">Request to Deactivate</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex">
-                      
-                      <div>
-                        <h3><a href="view-details-active.html">SN Adult Admission Process</a></h3>
-                        <p>#101</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <p>Home Health Clinical</p>
-                  </td>
-                  <td class="text-center">
-                    <p>SN Adult Admission Process</p>
-                  </td>
-                  <td class="text-center">
-                    <p>12-09-2022</p>
-                  </td>
-                  <td class="text-center">
-                    <p>150</p>
-                  </td>
-                  <td class="text-center">
-                    <span class="status green">Active</span>
-                  </td>
-                  <td>
-                    <div
-                      class="d-flex align-items-center justify-content-center gap-10px"
-                    >
-                      
-                      <div class="dropdown">
-                        <button
-                          class="btn btn-dot dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          <img src="../images/dot.svg" />
-                        </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton1"
-                        >
                           <li>
                             <a
-                              class="dropdown-item"
-                              data-bs-target="#modal-add-lp"
+                              class="dropdown-item text-red-light"
                               data-bs-toggle="modal"
-                              >View Details</a
+                              data-bs-target="#exampleModal"
+                              >Request to Deactivate</a
                             >
                           </li>
-                          <li><a class="dropdown-item deactivateRed" data-bs-toggle="modal" data-bs-target="#exampleModal">Request to Deactivate</a></li>
                         </ul>
                       </div>
                     </div>
@@ -352,67 +307,6 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                       
-                      <div>
-                        <h3>
-                          <a href="view-details-active.html">SN Adult Admission Process</a>
-                        </h3>
-                        <p>#101</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <p>Home Health Clinical</p>
-                  </td>
-                  <td class="text-center">
-                    <p>SN Adult Admission Process</p>
-                  </td>
-                  <td class="text-center">
-                    <p>12-09-2022</p>
-                  </td>
-                  <td class="text-center">
-                    <p>150</p>
-                  </td>
-                  <td class="text-center">
-                    <span class="status green">Active</span>
-                  </td>
-                  <td>
-                    <div
-                      class="d-flex align-items-center justify-content-center gap-10px"
-                    >
-                      
-                      <div class="dropdown">
-                        <button
-                          class="btn btn-dot dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          <img src="../images/dot.svg" />
-                        </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton1"
-                        >
-                          <li>
-                            <a
-                              class="dropdown-item"
-                              data-bs-target="#modal-add-lp"
-                              data-bs-toggle="modal"
-                              >View Details</a
-                            >
-                          </li>
-                          <li><a class="dropdown-item deactivateRed" data-bs-toggle="modal" data-bs-target="#exampleModal">Request to Deactivate</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex">
-                      
                       <div>
                         <h3>
                           <a href="view-details-active.html"
@@ -442,7 +336,6 @@
                     <div
                       class="d-flex align-items-center justify-content-center gap-10px"
                     >
-                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -460,12 +353,18 @@
                           <li>
                             <a
                               class="dropdown-item"
-                              data-bs-target="#modal-add-lp"
-                              data-bs-toggle="modal"
+                              href="view-details-active.html"
                               >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item deactivateRed" data-bs-toggle="modal" data-bs-target="#exampleModal">Request to Deactivate</a></li>
+                          <li>
+                            <a
+                              class="dropdown-item text-red-light"
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModal"
+                              >Request to Deactivate</a
+                            >
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -474,7 +373,6 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                     
                       <div>
                         <h3>
                           <a href="view-details-active.html"
@@ -504,7 +402,6 @@
                     <div
                       class="d-flex align-items-center justify-content-center gap-10px"
                     >
-                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -522,12 +419,18 @@
                           <li>
                             <a
                               class="dropdown-item"
-                              data-bs-target="#modal-add-lp"
-                              data-bs-toggle="modal"
+                              href="view-details-active.html"
                               >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item deactivateRed" data-bs-toggle="modal" data-bs-target="#exampleModal">Request to Deactivate</a></li>
+                          <li>
+                            <a
+                              class="dropdown-item text-red-light"
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModal"
+                              >Request to Deactivate</a
+                            >
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -536,7 +439,6 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                    
                       <div>
                         <h3>
                           <a href="view-details-active.html"
@@ -566,7 +468,6 @@
                     <div
                       class="d-flex align-items-center justify-content-center gap-10px"
                     >
-                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -584,12 +485,18 @@
                           <li>
                             <a
                               class="dropdown-item"
-                              data-bs-target="#modal-add-lp"
-                              data-bs-toggle="modal"
+                              href="view-details-active.html"
                               >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item deactivateRed" data-bs-toggle="modal" data-bs-target="#exampleModal">Request to Deactivate</a></li>
+                          <li>
+                            <a
+                              class="dropdown-item text-red-light"
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModal"
+                              >Request to Deactivate</a
+                            >
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -598,7 +505,6 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                     
                       <div>
                         <h3>
                           <a href="view-details-active.html"
@@ -628,7 +534,6 @@
                     <div
                       class="d-flex align-items-center justify-content-center gap-10px"
                     >
-                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -646,12 +551,18 @@
                           <li>
                             <a
                               class="dropdown-item"
-                              data-bs-target="#modal-add-lp"
-                              data-bs-toggle="modal"
+                              href="view-details-active.html"
                               >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item deactivateRed" data-bs-toggle="modal" data-bs-target="#exampleModal">Request to Deactivate</a></li>
+                          <li>
+                            <a
+                              class="dropdown-item text-red-light"
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModal"
+                              >Request to Deactivate</a
+                            >
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -660,10 +571,11 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                     
                       <div>
                         <h3>
-                          <a href="view-details-active.html">SN Adult Admission Process</a>
+                          <a href="view-details-active.html"
+                            >SN Adult Admission Process</a
+                          >
                         </h3>
                         <p>#101</p>
                       </div>
@@ -688,7 +600,6 @@
                     <div
                       class="d-flex align-items-center justify-content-center gap-10px"
                     >
-                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -706,12 +617,150 @@
                           <li>
                             <a
                               class="dropdown-item"
-                              data-bs-target="#modal-add-lp"
-                              data-bs-toggle="modal"
+                              href="view-details-active.html"
                               >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item deactivateRed" data-bs-toggle="modal" data-bs-target="#exampleModal">Request to Deactivate</a></li>
+                          <li>
+                            <a
+                              class="dropdown-item text-red-light"
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModal"
+                              >Request to Deactivate</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div>
+                        <h3>
+                          <a href="view-details-active.html"
+                            >SN Adult Admission Process</a
+                          >
+                        </h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home Health Clinical</p>
+                  </td>
+                  <td class="text-center">
+                    <p>SN Adult Admission Process</p>
+                  </td>
+                  <td class="text-center">
+                    <p>12-09-2022</p>
+                  </td>
+                  <td class="text-center">
+                    <p>150</p>
+                  </td>
+                  <td class="text-center">
+                    <span class="status green">Active</span>
+                  </td>
+                  <td>
+                    <div
+                      class="d-flex align-items-center justify-content-center gap-10px"
+                    >
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-dot dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="../images/dot.svg" />
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="view-details-active.html"
+                              >View Details</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item text-red-light"
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModal"
+                              >Request to Deactivate</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div>
+                        <h3>
+                          <a href="view-details-active.html"
+                            >SN Adult Admission Process</a
+                          >
+                        </h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home Health Clinical</p>
+                  </td>
+                  <td class="text-center">
+                    <p>SN Adult Admission Process</p>
+                  </td>
+                  <td class="text-center">
+                    <p>12-09-2022</p>
+                  </td>
+                  <td class="text-center">
+                    <p>150</p>
+                  </td>
+                  <td class="text-center">
+                    <span class="status green">Active</span>
+                  </td>
+                  <td>
+                    <div
+                      class="d-flex align-items-center justify-content-center gap-10px"
+                    >
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-dot dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="../images/dot.svg" />
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="view-details-active.html"
+                              >View Details</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item text-red-light"
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModal"
+                              >Request to Deactivate</a
+                            >
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -753,7 +802,6 @@
                 <tr>
                   <th width="25%">
                     <div class="d-flex">
-                     
                       <div>Agencies</div>
                     </div>
                   </th>
@@ -769,7 +817,6 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                     
                       <div>
                         <h3>
                           <a href="view-details-inactive.html"
@@ -799,7 +846,6 @@
                     <div
                       class="d-flex align-items-center justify-content-center"
                     >
-                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -817,70 +863,13 @@
                           <li>
                             <a
                               class="dropdown-item"
-                              data-bs-target="#modal-add-lp"
-                              data-bs-toggle="modal"
+                              href="view-details-inactive.html"
                               >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item ">Request to Activate</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex">
-                     
-                      <div>
-                        <h3><a href="view-details-inactive.html">SN Adult Admission Process</a></h3>
-                        <p>#101</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <p>Home Health Clinical</p>
-                  </td>
-                  <td class="text-center">
-                    <p>RN</p>
-                  </td>
-                  <td class="text-center">
-                    <p>Adult Care</p>
-                  </td>
-                  <td class="text-center">
-                    <p>SN Adult Admission Process</p>
-                  </td>
-                  <td class="text-center">
-                    <span class="status pink">Inactive</span>
-                  </td>
-                  <td>
-                    <div
-                      class="d-flex align-items-center justify-content-center"
-                    >
-                      
-                      <div class="dropdown">
-                        <button
-                          class="btn btn-dot dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          <img src="../images/dot.svg" />
-                        </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton1"
-                        >
                           <li>
-                            <a
-                              class="dropdown-item"
-                              data-bs-target="#modal-add-lp"
-                              data-bs-toggle="modal"
-                              >View Details</a
-                            >
+                            <a class="dropdown-item">Request to Activate</a>
                           </li>
-                          <li><a class="dropdown-item ">Request to Activate</a></li>
                         </ul>
                       </div>
                     </div>
@@ -889,67 +878,6 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                     
-                      <div>
-                        <h3>
-                          <a href="view-details-inactive.html">SN Adult Admission Process</a>
-                        </h3>
-                        <p>#101</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <p>Home Health Clinical</p>
-                  </td>
-                  <td class="text-center">
-                    <p>RN</p>
-                  </td>
-                  <td class="text-center">
-                    <p>Adult Care</p>
-                  </td>
-                  <td class="text-center">
-                    <p>SN Adult Admission Process</p>
-                  </td>
-                  <td class="text-center">
-                    <span class="status pink">Inactive</span>
-                  </td>
-                  <td>
-                    <div
-                      class="d-flex align-items-center justify-content-center"
-                    >
-                      
-                      <div class="dropdown">
-                        <button
-                          class="btn btn-dot dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          <img src="../images/dot.svg" />
-                        </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton1"
-                        >
-                          <li>
-                            <a
-                              class="dropdown-item"
-                              data-bs-target="#modal-add-lp"
-                              data-bs-toggle="modal"
-                              >View Details</a
-                            >
-                          </li>
-                          <li><a class="dropdown-item ">Request to Activate</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex">
-                     
                       <div>
                         <h3>
                           <a href="view-details-inactive.html"
@@ -979,7 +907,6 @@
                     <div
                       class="d-flex align-items-center justify-content-center"
                     >
-                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -997,12 +924,13 @@
                           <li>
                             <a
                               class="dropdown-item"
-                              data-bs-target="#modal-add-lp"
-                              data-bs-toggle="modal"
+                              href="view-details-inactive.html"
                               >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item ">Request to Activate</a></li>
+                          <li>
+                            <a class="dropdown-item">Request to Activate</a>
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -1011,7 +939,6 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                     
                       <div>
                         <h3>
                           <a href="view-details-inactive.html"
@@ -1041,7 +968,6 @@
                     <div
                       class="d-flex align-items-center justify-content-center"
                     >
-                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -1059,12 +985,13 @@
                           <li>
                             <a
                               class="dropdown-item"
-                              data-bs-target="#modal-add-lp"
-                              data-bs-toggle="modal"
+                              href="view-details-inactive.html"
                               >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item ">Request to Activate</a></li>
+                          <li>
+                            <a class="dropdown-item">Request to Activate</a>
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -1073,7 +1000,6 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                     
                       <div>
                         <h3>
                           <a href="view-details-inactive.html"
@@ -1103,7 +1029,6 @@
                     <div
                       class="d-flex align-items-center justify-content-center"
                     >
-                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -1121,12 +1046,13 @@
                           <li>
                             <a
                               class="dropdown-item"
-                              data-bs-target="#modal-add-lp"
-                              data-bs-toggle="modal"
+                              href="view-details-inactive.html"
                               >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item ">Request to Activate</a></li>
+                          <li>
+                            <a class="dropdown-item">Request to Activate</a>
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -1135,7 +1061,6 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                     
                       <div>
                         <h3>
                           <a href="view-details-inactive.html"
@@ -1165,7 +1090,6 @@
                     <div
                       class="d-flex align-items-center justify-content-center"
                     >
-                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -1183,12 +1107,13 @@
                           <li>
                             <a
                               class="dropdown-item"
-                              data-bs-target="#modal-add-lp"
-                              data-bs-toggle="modal"
+                              href="view-details-inactive.html"
                               >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item ">Request to Activate</a></li>
+                          <li>
+                            <a class="dropdown-item">Request to Activate</a>
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -1197,10 +1122,11 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                     
                       <div>
                         <h3>
-                          <a href="view-details-inactive.html">SN Adult Admission Process</a>
+                          <a href="view-details-inactive.html"
+                            >SN Adult Admission Process</a
+                          >
                         </h3>
                         <p>#101</p>
                       </div>
@@ -1225,7 +1151,6 @@
                     <div
                       class="d-flex align-items-center justify-content-center"
                     >
-                      
                       <div class="dropdown">
                         <button
                           class="btn btn-dot dropdown-toggle"
@@ -1243,12 +1168,135 @@
                           <li>
                             <a
                               class="dropdown-item"
-                              data-bs-target="#modal-add-lp"
-                              data-bs-toggle="modal"
+                              href="view-details-inactive.html"
                               >View Details</a
                             >
                           </li>
-                          <li><a class="dropdown-item ">Request to Activate</a></li>
+                          <li>
+                            <a class="dropdown-item">Request to Activate</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div>
+                        <h3>
+                          <a href="view-details-inactive.html"
+                            >SN Adult Admission Process</a
+                          >
+                        </h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home Health Clinical</p>
+                  </td>
+                  <td class="text-center">
+                    <p>RN</p>
+                  </td>
+                  <td class="text-center">
+                    <p>Adult Care</p>
+                  </td>
+                  <td class="text-center">
+                    <p>SN Adult Admission Process</p>
+                  </td>
+                  <td class="text-center">
+                    <span class="status pink">Inactive</span>
+                  </td>
+                  <td>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-dot dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="../images/dot.svg" />
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="view-details-inactive.html"
+                              >View Details</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item">Request to Activate</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <div>
+                        <h3>
+                          <a href="view-details-inactive.html"
+                            >SN Adult Admission Process</a
+                          >
+                        </h3>
+                        <p>#101</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Home Health Clinical</p>
+                  </td>
+                  <td class="text-center">
+                    <p>RN</p>
+                  </td>
+                  <td class="text-center">
+                    <p>Adult Care</p>
+                  </td>
+                  <td class="text-center">
+                    <p>SN Adult Admission Process</p>
+                  </td>
+                  <td class="text-center">
+                    <span class="status pink">Inactive</span>
+                  </td>
+                  <td>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-dot dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="../images/dot.svg" />
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="view-details-inactive.html"
+                              >View Details</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item">Request to Activate</a>
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -1293,9 +1341,7 @@
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
-              View Details
-            </h5>
+            <h5 class="modal-title" id="exampleModalLabel">View Details</h5>
             <button
               type="button"
               class="btn-close"
@@ -1319,7 +1365,6 @@
                 <tr>
                   <th>
                     <div class="d-flex">
-                     
                       <div>Select all</div>
                     </div>
                   </th>
@@ -1329,7 +1374,6 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                     
                       <div>
                         <p class="text-dark">
                           <span class="me-2 text-12 text-light-4">#ID_101</span
@@ -1342,7 +1386,6 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                     
                       <div>
                         <p class="text-dark">
                           <span class="me-2 text-12 text-light-4">#ID_101</span
@@ -1355,7 +1398,6 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                     
                       <div>
                         <p class="text-dark">
                           <span class="me-2 text-12 text-light-4">#ID_101</span
@@ -1430,7 +1472,6 @@
                 <tr>
                   <th>
                     <div class="d-flex">
-                     
                       <div>Select all</div>
                     </div>
                   </th>
@@ -1455,7 +1496,9 @@
                           <span class="me-2 text-12 text-light-4">#ID_101</span
                           >Learning Path Name will be here more here
                         </p>
-                        <span class="setting-span-upper">Home Health Clinical</span>
+                        <span class="setting-span-upper"
+                          >Home Health Clinical</span
+                        >
                       </div>
                     </div>
                   </td>
@@ -1463,13 +1506,14 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                     
                       <div class="register-agency-col">
                         <p class="text-dark mb-0">
                           <span class="me-2 text-12 text-light-4">#ID_101</span
                           >Learning Path Name will be here more here
                         </p>
-                        <span class="setting-span-upper">Home Health Clinical</span>
+                        <span class="setting-span-upper"
+                          >Home Health Clinical</span
+                        >
                       </div>
                     </div>
                   </td>
@@ -1477,13 +1521,14 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                     
                       <div class="register-agency-col">
                         <p class="text-dark mb-0">
                           <span class="me-2 text-12 text-light-4">#ID_101</span
                           >Learning Path Name will be here more here
                         </p>
-                        <span class="setting-span-upper">Home Health Clinical</span>
+                        <span class="setting-span-upper"
+                          >Home Health Clinical</span
+                        >
                       </div>
                     </div>
                   </td>
@@ -1491,13 +1536,14 @@
                 <tr>
                   <td>
                     <div class="d-flex">
-                     
                       <div class="register-agency-col">
                         <p class="text-dark mb-0">
                           <span class="me-2 text-12 text-light-4">#ID_101</span
                           >Learning Path Name will be here more here
                         </p>
-                        <span class="setting-span-upper">Home Health Clinical</span>
+                        <span class="setting-span-upper"
+                          >Home Health Clinical</span
+                        >
                       </div>
                     </div>
                   </td>
