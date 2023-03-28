@@ -581,7 +581,8 @@ a.breadcrumb-page {
 .two-columns {
     display: grid;
     align-items: center;
-    gap: 15px;  grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .data-column {
@@ -1939,7 +1940,8 @@ footer p {
     line-height: 30px;
 }
 
-.filter-list-box ul li:hover,.filter-list-box ul li.active {
+.filter-list-box ul li:hover,
+.filter-list-box ul li.active {
     color: #3D4148;
     font-weight: 600;
     font-size: 13px;
@@ -1948,7 +1950,7 @@ footer p {
     background: #E8F0FD;
     height: 42px;
     line-height: 30px;
-    border: 1px solid rgba(0,0,0,.125);
+    border-color: rgba(0, 0, 0, .125);
 }
 
 .filter-list-box~.table-responsive {
@@ -2039,13 +2041,15 @@ footer p {
     line-height: 18px;
     letter-spacing: 1%;
 }
-.filter-bold{
+
+.filter-bold {
     font-weight: 600;
 }
 
-.semi-bold{
+.semi-bold {
     font-weight: 600;
 }
-.width-100{
+
+.width-100 {
     width: 100%;
 }

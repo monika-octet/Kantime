@@ -38,24 +38,38 @@
   </head>
 
   <body>
-
     <!-- popup code -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content pop-up-borderStyle">
-          <div class="">
-          </div>
+          <div class=""></div>
           <div class="modal-body pop-up-content">
             <div class="pop-up-image-box">
-              <image src="../images/popup.svg" class="pop-up-image"></image> 
+              <image src="../images/popup.svg" class="pop-up-image"></image>
               <h2 class="popUp-title">Are you sure?</h2>
             </div>
             <p>Learner won't be able to access this Learning path !</p>
-
           </div>
           <div class="modal-footer no-border">
-            <button type="button" class="btn  btn-white pop-up-cancel" data-bs-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-white btn-outline-secondary pop-up-btn">Deactivate</button>
+            <button
+              type="button"
+              class="btn btn-white pop-up-cancel"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-white btn-outline-secondary pop-up-btn"
+            >
+              Deactivate
+            </button>
           </div>
         </div>
       </div>
@@ -174,17 +188,34 @@
                 <span class="text-light-3 text-14">#ID_101</span>
                 <span class="status green">Active</span>
               </div>
-              <div class="d-flex align-items-center justify-content-center gap-10px">
+              <div
+                class="d-flex align-items-center justify-content-center gap-10px"
+              >
                 <div class="dropdown">
-                  <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="../images/dot.svg">
+                  <button
+                    class="btn btn-dot dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img src="../images/dot.svg" />
                   </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="">
-                     
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton1"
+                    style=""
+                  >
                     <li>
-                      <a class="dropdown-item red-link" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"  >Unregister from all</a>
+                      <a
+                        class="dropdown-item red-link"
+                        href="#"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                        >Unregister from all</a
+                      >
                     </li>
-                   
                   </ul>
                 </div>
               </div>
@@ -373,11 +404,11 @@
               aria-labelledby="learningPath-tab"
             >
               <div
-                class="title-row assignment-title-row d-flex align-items-center justify-content-between mb-4"
+                class="title-row assignment-title-row d-flex flex-column flex-md-row align-items-center justify-content-between mb-4"
               >
                 <h3 class="title-row-heading mb-0">Learning paths</h3>
-                <div class="d-flex align-items-center ">
-                  <select class="single-select" style="width:250px ;">
+                <div class="d-flex align-items-center">
+                  <select class="single-select" style="width: 250px">
                     <option selected>All</option>
                     <option>Ongoing (3)</option>
                     <option>Not started (0)</option>
@@ -387,445 +418,477 @@
                     <option>Dropped (0)</option>
                     <option>Expired Certification (0)</option>
                   </select>
-                  <button class="btn btn-primary ms-3" data-bs-toggle="modal" data-bs-target="#assignment-status">New Enrollment</button>
+                  <button
+                    class="btn btn-primary ms-3"
+                    data-bs-toggle="modal"
+                    data-bs-target="#assignment-status"
+                  >
+                    New Enrollment
+                  </button>
                 </div>
               </div>
 
-              <div class="right-section-data w-100">
-                <table class="table align-middle table-pattern-4 mb-0">
-                  <thead>
-                    <tr>
-                      <th>Learning Path Names</th>
-                      <th>Last Login</th>
-                      <th class="text-center">Start Date</th>
-                      <th class="text-center">End Date</th>
-                      <th class="text-center">Status</th>
-                      <th class="text-center">Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="d-flex">
-                          <div>
-                            <h3>SN Adult Admission Process</h3>
-                            <p class="learner-path-number">#101</p>
+              <div class="p-4">
+                <div class="table-responsive w-100">
+                  <table class="table align-middle table-pattern-4 mb-0">
+                    <thead>
+                      <tr>
+                        <th>Learning Path Names</th>
+                        <th>Last Login</th>
+                        <th class="text-center">Start Date</th>
+                        <th class="text-center">End Date</th>
+                        <th class="text-center">Status</th>
+                        <th class="text-center">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="d-flex">
+                            <div>
+                              <h3>SN Adult Admission Process</h3>
+                              <p class="learner-path-number">#101</p>
+                            </div>
                           </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p>12 Jan - 01:10 PM</p>
-                      </td>
-                      <td class="text-center">
-                        <p>01-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <p>30-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <div class="custom-progress">
-                          <div class="progress w-100">
-                            <div
-                              class="progress-bar bg-success-table"
-                              role="progressbar"
-                              aria-label="Success example"
-                              style="width: 70%"
-                              aria-valuenow="70"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            ></div>
+                        </td>
+                        <td>
+                          <p>12 Jan - 01:10 PM</p>
+                        </td>
+                        <td class="text-center">
+                          <p>01-01-2023</p>
+                        </td>
+                        <td class="text-center">
+                          <p>30-01-2023</p>
+                        </td>
+                        <td class="text-center">
+                          <div class="custom-progress">
+                            <div class="progress w-100">
+                              <div
+                                class="progress-bar bg-success-table"
+                                role="progressbar"
+                                aria-label="Success example"
+                                style="width: 70%"
+                                aria-valuenow="70"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              ></div>
+                            </div>
+                            <span class="progress-text">70% Completed</span>
                           </div>
-                          <span class="progress-text">70% Completed</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div
-                          class="d-flex align-items-center justify-content-center gap-10px"
-                        >
-                          <div class="dropdown">
-                            <button
-                              class="btn btn-dot dropdown-toggle"
-                              type="button"
-                              id="dropdownMenuButton1"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <img src="../images/dot.svg" />
-                            </button>
-                            <ul
-                              class="dropdown-menu"
-                              aria-labelledby="dropdownMenuButton1"
-                            >
-                              <li>
-                                <a
-                                  href="../show-assignment.html"
-                                  class="dropdown-item"
-                                  
-                                  >Show Assignment Status</a
-                                >
-                              </li>
-                              <li>
-                                <a class="dropdown-item red-link" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                  >Unregister Learner</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex">
-                          <div>
-                            <h3>SN Adult Admission Process</h3>
-                            <p class="learner-path-number">#101</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p>12 Jan - 01:10 PM</p>
-                      </td>
-                      <td class="text-center">
-                        <p>01-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <p>30-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <div class="custom-progress">
-                          <div class="progress w-100">
-                            <div
-                              class="progress-bar bg-yellow-table"
-                              role="progressbar"
-                              aria-label="warning example"
-                              style="width: 70%"
-                              aria-valuenow="70"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            ></div>
-                          </div>
-                          <span class="progress-text">45% Completed</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div
-                          class="d-flex align-items-center justify-content-center gap-10px"
-                        >
-                          <div class="dropdown">
-                            <button
-                              class="btn btn-dot dropdown-toggle"
-                              type="button"
-                              id="dropdownMenuButton1"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <img src="../images/dot.svg" />
-                            </button>
-                            <ul
-                              class="dropdown-menu"
-                              aria-labelledby="dropdownMenuButton1"
-                            >
-                            <li>
-                              <a
-                                href="../show-assignment.html"
-                                class="dropdown-item"
-                                
-                                >Show Assignment Status</a
+                        </td>
+                        <td>
+                          <div
+                            class="d-flex align-items-center justify-content-center gap-10px"
+                          >
+                            <div class="dropdown">
+                              <button
+                                class="btn btn-dot dropdown-toggle"
+                                type="button"
+                                id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
                               >
-                            </li>
-                              <li>
-                                <a class="dropdown-item red-link" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                  >Unregister Learner</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex">
-                          <div>
-                            <h3>SN Adult Admission Process</h3>
-                            <p class="learner-path-number">#101</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p>12 Jan - 01:10 PM</p>
-                      </td>
-                      <td class="text-center">
-                        <p>01-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <p>30-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <div class="custom-progress">
-                          <div class="progress w-100">
-                            <div
-                              class="progress-bar bg-success-table"
-                              role="progressbar"
-                              aria-label="Success example"
-                              style="width: 70%"
-                              aria-valuenow="70"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            ></div>
-                          </div>
-                          <span class="progress-text">70% Completed</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div
-                          class="d-flex align-items-center justify-content-center gap-10px"
-                        >
-                          <div class="dropdown">
-                            <button
-                              class="btn btn-dot dropdown-toggle"
-                              type="button"
-                              id="dropdownMenuButton1"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <img src="../images/dot.svg" />
-                            </button>
-                            <ul
-                              class="dropdown-menu"
-                              aria-labelledby="dropdownMenuButton1"
-                            >
-                            <li>
-                              <a
-                                href="../show-assignment.html"
-                                class="dropdown-item"
-                                
-                                >Show Assignment Status</a
+                                <img src="../images/dot.svg" />
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton1"
                               >
-                            </li>
-                              <li>
-                                <a class="dropdown-item red-link" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                  >Unregister Learner</a
-                                >
-                              </li>
-                            </ul>
+                                <li>
+                                  <a
+                                    href="../show-assignment.html"
+                                    class="dropdown-item"
+                                    >Show Assignment Status</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item red-link"
+                                    href="#"
+                                    class="btn btn-primary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal"
+                                    >Unregister Learner</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
                           </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex">
-                          <div>
-                            <h3>SN Adult Admission Process</h3>
-                            <p class="learner-path-number">#101</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex">
+                            <div>
+                              <h3>SN Adult Admission Process</h3>
+                              <p class="learner-path-number">#101</p>
+                            </div>
                           </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p>12 Jan - 01:10 PM</p>
-                      </td>
-                      <td class="text-center">
-                        <p>01-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <p>30-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <div class="custom-progress">
-                          <div class="progress w-100">
-                            <div
-                              class="progress-bar bg-yellow-table"
-                              role="progressbar"
-                              aria-label="warning example"
-                              style="width: 70%"
-                              aria-valuenow="70"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            ></div>
+                        </td>
+                        <td>
+                          <p>12 Jan - 01:10 PM</p>
+                        </td>
+                        <td class="text-center">
+                          <p>01-01-2023</p>
+                        </td>
+                        <td class="text-center">
+                          <p>30-01-2023</p>
+                        </td>
+                        <td class="text-center">
+                          <div class="custom-progress">
+                            <div class="progress w-100">
+                              <div
+                                class="progress-bar bg-yellow-table"
+                                role="progressbar"
+                                aria-label="warning example"
+                                style="width: 70%"
+                                aria-valuenow="70"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              ></div>
+                            </div>
+                            <span class="progress-text">45% Completed</span>
                           </div>
-                          <span class="progress-text">45% Completed</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div
-                          class="d-flex align-items-center justify-content-center gap-10px"
-                        >
-                          <div class="dropdown">
-                            <button
-                              class="btn btn-dot dropdown-toggle"
-                              type="button"
-                              id="dropdownMenuButton1"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <img src="../images/dot.svg" />
-                            </button>
-                            <ul
-                              class="dropdown-menu"
-                              aria-labelledby="dropdownMenuButton1"
-                            >
-                            <li>
-                              <a
-                                href="../show-assignment.html"
-                                class="dropdown-item"
-                                
-                                >Show Assignment Status</a
+                        </td>
+                        <td>
+                          <div
+                            class="d-flex align-items-center justify-content-center gap-10px"
+                          >
+                            <div class="dropdown">
+                              <button
+                                class="btn btn-dot dropdown-toggle"
+                                type="button"
+                                id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
                               >
-                            </li>
-                              <li>
-                                <a class="dropdown-item red-link" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                  >Unregister Learner</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex">
-                          <div>
-                            <h3>SN Adult Admission Process</h3>
-                            <p class="learner-path-number">#101</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p>12 Jan - 01:10 PM</p>
-                      </td>
-                      <td class="text-center">
-                        <p>01-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <p>30-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <div class="custom-progress">
-                          <div class="progress w-100">
-                            <div
-                              class="progress-bar bg-success-table"
-                              role="progressbar"
-                              aria-label="Success example"
-                              style="width: 70%"
-                              aria-valuenow="70"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            ></div>
-                          </div>
-                          <span class="progress-text">70% Completed</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div
-                          class="d-flex align-items-center justify-content-center gap-10px"
-                        >
-                          <div class="dropdown">
-                            <button
-                              class="btn btn-dot dropdown-toggle"
-                              type="button"
-                              id="dropdownMenuButton1"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <img src="../images/dot.svg" />
-                            </button>
-                            <ul
-                              class="dropdown-menu"
-                              aria-labelledby="dropdownMenuButton1"
-                            >
-                            <li>
-                              <a
-                                href="../show-assignment.html"
-                                class="dropdown-item"
-                                
-                                >Show Assignment Status</a
+                                <img src="../images/dot.svg" />
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton1"
                               >
-                            </li>
-                              <li>
-                                <a class="dropdown-item red-link" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                  >Unregister Learner</a
-                                >
-                              </li>
-                            </ul>
+                                <li>
+                                  <a
+                                    href="../show-assignment.html"
+                                    class="dropdown-item"
+                                    >Show Assignment Status</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item red-link"
+                                    href="#"
+                                    class="btn btn-primary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal"
+                                    >Unregister Learner</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
                           </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex">
-                          <div>
-                            <h3>SN Adult Admission Process</h3>
-                            <p class="learner-path-number">#101</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex">
+                            <div>
+                              <h3>SN Adult Admission Process</h3>
+                              <p class="learner-path-number">#101</p>
+                            </div>
                           </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p>12 Jan - 01:10 PM</p>
-                      </td>
-                      <td class="text-center">
-                        <p>01-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <p>30-01-2023</p>
-                      </td>
-                      <td class="text-center">
-                        <div class="custom-progress">
-                          <div class="progress w-100">
-                            <div
-                              class="progress-bar bg-yellow-table"
-                              role="progressbar"
-                              aria-label="warning example"
-                              style="width: 70%"
-                              aria-valuenow="70"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            ></div>
+                        </td>
+                        <td>
+                          <p>12 Jan - 01:10 PM</p>
+                        </td>
+                        <td class="text-center">
+                          <p>01-01-2023</p>
+                        </td>
+                        <td class="text-center">
+                          <p>30-01-2023</p>
+                        </td>
+                        <td class="text-center">
+                          <div class="custom-progress">
+                            <div class="progress w-100">
+                              <div
+                                class="progress-bar bg-success-table"
+                                role="progressbar"
+                                aria-label="Success example"
+                                style="width: 70%"
+                                aria-valuenow="70"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              ></div>
+                            </div>
+                            <span class="progress-text">70% Completed</span>
                           </div>
-                          <span class="progress-text">45% Completed</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div
-                          class="d-flex align-items-center justify-content-center gap-10px"
-                        >
-                          <div class="dropdown">
-                            <button
-                              class="btn btn-dot dropdown-toggle"
-                              type="button"
-                              id="dropdownMenuButton1"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <img src="../images/dot.svg" />
-                            </button>
-                            <ul
-                              class="dropdown-menu"
-                              aria-labelledby="dropdownMenuButton1"
-                            >
-                            <li>
-                              <a
-                                href="../show-assignment.html"
-                                class="dropdown-item"
-                                
-                                >Show Assignment Status</a
+                        </td>
+                        <td>
+                          <div
+                            class="d-flex align-items-center justify-content-center gap-10px"
+                          >
+                            <div class="dropdown">
+                              <button
+                                class="btn btn-dot dropdown-toggle"
+                                type="button"
+                                id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
                               >
-                            </li>
-                              <li>
-                                <a class="dropdown-item red-link" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                  >Unregister Learner</a
-                                >
-                              </li>
-                            </ul>
+                                <img src="../images/dot.svg" />
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton1"
+                              >
+                                <li>
+                                  <a
+                                    href="../show-assignment.html"
+                                    class="dropdown-item"
+                                    >Show Assignment Status</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item red-link"
+                                    href="#"
+                                    class="btn btn-primary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal"
+                                    >Unregister Learner</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
                           </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex">
+                            <div>
+                              <h3>SN Adult Admission Process</h3>
+                              <p class="learner-path-number">#101</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p>12 Jan - 01:10 PM</p>
+                        </td>
+                        <td class="text-center">
+                          <p>01-01-2023</p>
+                        </td>
+                        <td class="text-center">
+                          <p>30-01-2023</p>
+                        </td>
+                        <td class="text-center">
+                          <div class="custom-progress">
+                            <div class="progress w-100">
+                              <div
+                                class="progress-bar bg-yellow-table"
+                                role="progressbar"
+                                aria-label="warning example"
+                                style="width: 70%"
+                                aria-valuenow="70"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              ></div>
+                            </div>
+                            <span class="progress-text">45% Completed</span>
+                          </div>
+                        </td>
+                        <td>
+                          <div
+                            class="d-flex align-items-center justify-content-center gap-10px"
+                          >
+                            <div class="dropdown">
+                              <button
+                                class="btn btn-dot dropdown-toggle"
+                                type="button"
+                                id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                <img src="../images/dot.svg" />
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton1"
+                              >
+                                <li>
+                                  <a
+                                    href="../show-assignment.html"
+                                    class="dropdown-item"
+                                    >Show Assignment Status</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item red-link"
+                                    href="#"
+                                    class="btn btn-primary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal"
+                                    >Unregister Learner</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex">
+                            <div>
+                              <h3>SN Adult Admission Process</h3>
+                              <p class="learner-path-number">#101</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p>12 Jan - 01:10 PM</p>
+                        </td>
+                        <td class="text-center">
+                          <p>01-01-2023</p>
+                        </td>
+                        <td class="text-center">
+                          <p>30-01-2023</p>
+                        </td>
+                        <td class="text-center">
+                          <div class="custom-progress">
+                            <div class="progress w-100">
+                              <div
+                                class="progress-bar bg-success-table"
+                                role="progressbar"
+                                aria-label="Success example"
+                                style="width: 70%"
+                                aria-valuenow="70"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              ></div>
+                            </div>
+                            <span class="progress-text">70% Completed</span>
+                          </div>
+                        </td>
+                        <td>
+                          <div
+                            class="d-flex align-items-center justify-content-center gap-10px"
+                          >
+                            <div class="dropdown">
+                              <button
+                                class="btn btn-dot dropdown-toggle"
+                                type="button"
+                                id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                <img src="../images/dot.svg" />
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton1"
+                              >
+                                <li>
+                                  <a
+                                    href="../show-assignment.html"
+                                    class="dropdown-item"
+                                    >Show Assignment Status</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item red-link"
+                                    href="#"
+                                    class="btn btn-primary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal"
+                                    >Unregister Learner</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex">
+                            <div>
+                              <h3>SN Adult Admission Process</h3>
+                              <p class="learner-path-number">#101</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p>12 Jan - 01:10 PM</p>
+                        </td>
+                        <td class="text-center">
+                          <p>01-01-2023</p>
+                        </td>
+                        <td class="text-center">
+                          <p>30-01-2023</p>
+                        </td>
+                        <td class="text-center">
+                          <div class="custom-progress">
+                            <div class="progress w-100">
+                              <div
+                                class="progress-bar bg-yellow-table"
+                                role="progressbar"
+                                aria-label="warning example"
+                                style="width: 70%"
+                                aria-valuenow="70"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              ></div>
+                            </div>
+                            <span class="progress-text">45% Completed</span>
+                          </div>
+                        </td>
+                        <td>
+                          <div
+                            class="d-flex align-items-center justify-content-center gap-10px"
+                          >
+                            <div class="dropdown">
+                              <button
+                                class="btn btn-dot dropdown-toggle"
+                                type="button"
+                                id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                <img src="../images/dot.svg" />
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton1"
+                              >
+                                <li>
+                                  <a
+                                    href="../show-assignment.html"
+                                    class="dropdown-item"
+                                    >Show Assignment Status</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item red-link"
+                                    href="#"
+                                    class="btn btn-primary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal"
+                                    >Unregister Learner</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
                 <div class="d-flex justify-content-end w-100">
                   <nav aria-label="Page navigation example">
                     <ul class="pagination mb-0">

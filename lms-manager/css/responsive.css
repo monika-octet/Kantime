@@ -32,4 +32,40 @@
         width: max-content;
         word-break: keep-all;
     }
+
+    .filter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-list-box {
+        position: relative;
+        top: 0;
+    }
+
+    .text-column-2 .border-end {
+        border: none !important
+    }
+
+    .preview-info-list div::after {
+        content: none;
+    }
+
+    .details-section {
+        flex-flow: column;
+    }
+
+    .left-detail-section {
+        width: 100%;
+        position: relative;
+        top: 0;
+        height: 100%;
+    }
+
+    .detail-box-listing {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .title-row {
+        height: auto;
+    }
 }
