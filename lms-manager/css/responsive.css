@@ -49,11 +49,11 @@
     .sub-header .btn span {
         display: none;
     }
-
+    
     .sub-header .btn img {
         margin: 0 !important;
     }
-
+    
     .sub-header {
         padding-bottom: 10px;
     }
@@ -71,11 +71,11 @@
         width: max-content;
         word-break: keep-all;
     }
-
+    
     .filter-grid {
         grid-template-columns: 1fr;
     }
-
+    
     .filter-list-box {
         position: relative;
         top: 0;
@@ -84,15 +84,15 @@
     .text-column-2 .border-end {
         border: none !important
     }
-
+    
     .preview-info-list div::after {
         content: none;
     }
-
+    
     .details-section {
         flex-flow: column;
     }
-
+    
     .left-detail-section {
         width: 100%;
         position: relative;
@@ -108,7 +108,7 @@
         height: auto;
     }
 
-
+    
     /* resposive for learning path */
     .right-detail-section{
         width: 100% !important;
@@ -123,4 +123,42 @@
     
 
 
+}
+@media (max-width:420px){
+    .graph-row-pad{
+        gap: 0px;
+    }
+    .graph-list-item{
+        gap: 0px;
+       
+    }
+    .graph-row-pad{
+        padding-bottom: 10px;
+    }
+    .assignment-content-header{
+        height: auto;
+    }
+    .assignment-task-title{
+        font-size: 13px;
+    }
+    .gap-50-flex-row{
+        flex-direction: column;
+    }
+    .assignment-details{
+        padding: 20px 20px;
+    }
+    .title-row{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+  
+    .learners-dropdown-box{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .export-responsive{
+        align-self: flex-start !important;
+        margin-left: 0px !important;
+    }
+    
 }
