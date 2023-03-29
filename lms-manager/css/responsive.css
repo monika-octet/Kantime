@@ -160,5 +160,14 @@
         align-self: flex-start !important;
         margin-left: 0px !important;
     }
-    
+    .user-responsive{
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+    .assignment-title-row{
+        position:  relative !important;
+    }
+    .tasks-count{
+        width: 74px;
+    }
 }
