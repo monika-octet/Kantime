@@ -1,42 +1,47 @@
 @media (max-width:1396px) {
-    .left-detail-section{
+    .left-detail-section {
         overflow: auto;
-    } 
+    }
 
-    .upper-content-columns{
+    .upper-content-columns {
         flex-direction: column;
     }
 
-    .right-detail-section{
+    .right-detail-section {
         width: 75% !important;
     }
-    .upper-content-columns{
+
+    .upper-content-columns {
         align-items: stretch;
     }
-    .lower-graph-layout{
+
+    .lower-graph-layout {
         /* overflow: scroll; */
     }
 }
 
 @media (max-width:1199px) {
 
-    .right-detail-section{
+    .right-detail-section {
         width: 70% !important;
     }
-    .gap-50-flex-row{
+
+    .gap-50-flex-row {
         gap: 30px;
     }
 }
 
 @media (max-width:992px) {
-    .right-detail-section{
+    .right-detail-section {
         width: 60% !important;
         margin: 0 auto;
     }
-    .gap-50-flex-row{
+
+    .gap-50-flex-row {
         gap: 20px;
     }
-    .product-category{
+
+    .product-category {
         padding: 0;
     }
 }
@@ -49,11 +54,11 @@
     .sub-header .btn span {
         display: none;
     }
-    
+
     .sub-header .btn img {
         margin: 0 !important;
     }
-    
+
     .sub-header {
         padding-bottom: 10px;
     }
@@ -71,11 +76,11 @@
         width: max-content;
         word-break: keep-all;
     }
-    
+
     .filter-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .filter-list-box {
         position: relative;
         top: 0;
@@ -84,15 +89,15 @@
     .text-column-2 .border-end {
         border: none !important
     }
-    
+
     .preview-info-list div::after {
         content: none;
     }
-    
+
     .details-section {
         flex-flow: column;
     }
-    
+
     .left-detail-section {
         width: 100%;
         position: relative;
@@ -108,66 +113,105 @@
         height: auto;
     }
 
-    
+
     /* resposive for learning path */
-    .right-detail-section{
+    .right-detail-section {
         width: 100% !important;
     }
 
-    .upper-content, .title-with-more{
+    .upper-content,
+    .title-with-more {
         width: 100%;
     }
-    .title-with-more{
+
+    .title-with-more {
         justify-content: space-between;
     }
-    
 
+    .preview .assignment-details {
+        padding: 15px;
+    }
 
+    .preview-info-list {
+        min-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .gap-10-flex-row {
+        flex-flow: column;
+    }
 }
-@media (max-width:420px){
-    .graph-row-pad{
+
+@media (max-width:420px) {
+
+
+    .graph-list-item {
         gap: 0px;
+
     }
-    .graph-list-item{
-        gap: 0px;
-       
+
+    .pop-up-content {
+        margin: 10px;
     }
-    .graph-row-pad{
-        padding-bottom: 10px;
+
+    .graph-row-pad {
+        display: flex;
+        flex-flow: column;
     }
-    .assignment-content-header{
+
+    .right-circle-graph {
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+
+    .assignment-content-header {
         height: auto;
     }
-    .assignment-task-title{
+
+    .assignment-task-title {
         font-size: 13px;
     }
-    .gap-50-flex-row{
+
+    .gap-50-flex-row {
         flex-direction: column;
     }
-    .assignment-details{
+
+    .assignment-details {
         padding: 20px 20px;
     }
-    .title-row{
+
+    .title-row {
         flex-direction: column;
         align-items: flex-start;
     }
-  
-    .learners-dropdown-box{
+
+    .learners-dropdown-box {
         flex-direction: column;
         gap: 10px;
     }
-    .export-responsive{
+
+    .export-responsive {
         align-self: flex-start !important;
         margin-left: 0px !important;
     }
-    .user-responsive{
+
+    .user-responsive {
         flex-direction: column !important;
         gap: 10px !important;
     }
-    .assignment-title-row{
-        position:  relative !important;
+
+    .assignment-title-row {
+        position: relative !important;
     }
-    .tasks-count{
+
+    .tasks-count {
         width: 74px;
     }
 }
