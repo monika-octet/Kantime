@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#0D87E2" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <!-- select -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/bootstrap-multiselect.min.css"
+    />
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/echart.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <title>KanTime | eChart</title>
+  </head>
+
+  <body>
+    <main class="modal-full-screen bg-white">
+      <section>
+        <div
+          class="d-flex justify-content-between align-items-center border-bottom"
+        >
+          <div class="title px-3">Start Documentation</div>
+          <img src="images/close.svg" alt="" class="pe p-4 border-start" />
+        </div>
+        <div class="mfs-height">
+          <div class="container-1 py-25">
+            <div class="row">
+              <div class="col-md-12">
+                <h2>Patient Details</h2>
+                <div class="border p-20 mt-15 data-grid-1">
+                  <div>
+                    <p class="info-label">Client Name</p>
+                    <p class="info-detail">John Doe</p>
+                  </div>
+                  <div>
+                    <p class="info-label">Visit Date</p>
+                    <p class="info-detail">03/05/1991</p>
+                  </div>
+                  <div>
+                    <p class="info-label">Clinician</p>
+                    <p class="info-detail">Demo, Test_RN_Clinician</p>
+                  </div>
+                  <div>
+                    <p class="info-label">HCPCS</p>
+                    <p class="info-detail">Completed</p>
+                  </div>
+                  <div>
+                    <p class="info-label">Service</p>
+                    <p class="info-detail">Pediatric SN Eval VN-211</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-25">
+              <div class="col-md-6">
+                <div class="card-2" style="min-height: 390px">
+                  <h2>Check In Details</h2>
+                  <div class="row mt-4">
+                    <div class="col-md-4">
+                      <label for="" class="label"
+                        >EVV Token Code (Check In)</label
+                      >
+                      <input type="text" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="row mt-4">
+                    <div class="col-md-12">
+                      <label for="" class="label"
+                        >Check In Treatment Location</label
+                      >
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          id="client"
+                          value="client"
+                          name="client-other"
+                        />
+                        <label class="form-check-label" for="client"
+                          >Client Address</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          id="other"
+                          value="other"
+                          name="client-other"
+                        />
+                        <label class="form-check-label" for="other"
+                          >Other Treatment Address</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-4 d-none jq-client-info">
+                    <div class="col-md-12">
+                      <label for="" class="label">Address</label>
+                      <p class="fw-medium">
+                        40 Gasko Avenue, Nr. Beach County, Miami, NY, 25485
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row mt-4 d-none jq-other-info">
+                    <div class="col-md-6">
+                      <label for="" class="label">Location</label>
+                      <select class="single-select">
+                        <option selected>Select Location</option>
+                        <option>50 Oakland Avenue, Miami, 32104</option>
+                        <option>147 Gasko Avenue, Miami, NY, 25485</option>
+                        <option>B-22 Oakland City, Florida, NY, 48756</option>
+                        <option>BD - 02 Kennif City Place, US, 02157</option>
+                      </select>
+                    </div>
+                    <div class="col-md-12 mt-4">
+                      <label for="" class="label">Address</label>
+                      <p class="fw-medium">50 Oakland Avenue, Miami, 32104</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card-2" style="min-height: 390px">
+                  <h2>Service Details</h2>
+                  <div class="row">
+                    <div class="col-md-7">
+                      <label for="" class="label">Place of Service</label>
+                      <select class="single-select">
+                        <option selected>Select Place of Service</option>
+                        <option>Patient's Home / Residence</option>
+                        <option>ABNY Laboratory</option>
+                        <option>Residence Avenue</option>
+                        <option>Residence Laboratory</option>
+                      </select>
+                    </div>
+                    <div class="col-md-12 mt-4">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="confirm"
+                          value="confirm"
+                        />
+                        <label class="form-check-label" for="confirm"
+                          >Confirm the place of service of the visit is accurate
+                          to proceed</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="info-bar mt-25">
+              <img src="images/info-filled.svg" alt="" />
+              <span>
+                To begin documentation on this e-chart, please click on
+                ‘check-in’ button</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="d-flex justify-content-end align-items-center border-top p-4"
+        >
+          <a href="#" class="btn btn-outline-primary">Close</a>
+          <a href="patient-info.html" class="btn btn-primary ms-3">Check In</a>
+        </div>
+      </section>
+    </main>
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- bootstrap js-->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script
+      type="text/javascript"
+      src="js/bootstrap-multiselect.min.js"
+    ></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <!-- page level script -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#client").change(function (e) {
+          if ($(this).prop("checked")) {
+            $(".jq-client-info").removeClass("d-none").addClass("d-block");
+            $(".jq-other-info").addClass("d-none").removeClass("d-block");
+          } else {
+            $(".jq-client-info").addClass("d-none").removeClass("d-block");
+          }
+        });
+        $("#other").change(function (e) {
+          if ($(this).prop("checked")) {
+            $(".jq-other-info").removeClass("d-none").addClass("d-block");
+            $(".jq-client-info").addClass("d-none").removeClass("d-block");
+          } else {
+            $(".jq-other-info").addClass("d-none").removeClass("d-block");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

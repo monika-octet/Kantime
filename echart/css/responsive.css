@@ -1,0 +1,15 @@
+@media (max-width:1396px) {}
+
+@media (max-width:1199px) {}
+
+@media (max-width:992px) {}
+
+@media (max-width:767px) {
+    .data-grid-1 {
+        display: flex;
+        flex-flow: column;
+        gap: 30px;
+    }
+}
+
+@media (max-width:420px) {}
