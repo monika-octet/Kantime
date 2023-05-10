@@ -1,653 +1,682 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
-    />
-    <meta name="theme-color" content="#0D87E2" />
-    <link rel="shortcut icon" href="images/favicon.png" />
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@100&display=swap"
-      rel="stylesheet"
-    />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- bootstrap css -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <!-- select -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="css/bootstrap-multiselect.min.css"
-    />
-    <!-- datepicker -->
-    <link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+  <meta name="theme-color" content="#0D87E2" />
+  <link rel="shortcut icon" href="images/favicon.png" />
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@100&display=swap"
+    rel="stylesheet" />
 
-    <!-- custom css -->
-    <link rel="stylesheet" type="text/css" href="css/common.css" />
-    <link rel="stylesheet" type="text/css" href="css/echart.css" />
-    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
-    <title>KanTime | eChart</title>
-  </head>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <!-- bootstrap css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <!-- select -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-multiselect.min.css" />
+  <!-- datepicker -->
+  <link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
 
-  <body>
-    <header>
-      <div
-        class="d-flex justify-content-between align-items-center border-bottom"
-      >
-        <div class="title px-3">John Doe</div>
-        <div class="d-flex align-items-center">
-          <span class="ms-3">Auto Saved <b>2 mins ago</b></span>
-          <a href="#" class="btn btn-primary ms-3">Submit to QA</a>
-          <div class="dropdown ms-3">
-            <button
-              class="btn btn-dot dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <img src="images/h-dot.svg" />
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li>
-                <a href="#" class="dropdown-item">Print</a>
-              </li>
-              <li>
-                <a href="#" class="dropdown-item">View POC</a>
-              </li>
-              <li>
-                <a href="#" class="dropdown-item">Billing DX Codes</a>
-              </li>
-              <li>
-                <a href="#" class="dropdown-item">Split Schedule</a>
-              </li>
-              <li>
-                <a
-                  class="dropdown-item red-link"
-                  href="#"
-                  class="btn btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
-                  >Edit Diagnosis</a
-                >
-              </li>
-              <li>
-                <a href="#" class="dropdown-item">Check Out</a>
-              </li>
-            </ul>
+  <!-- custom css -->
+  <link rel="stylesheet" type="text/css" href="css/common.css" />
+  <link rel="stylesheet" type="text/css" href="css/echart.css" />
+  <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+  <title>KanTime | eChart</title>
+</head>
+
+<body>
+  <header>
+    <div class="d-flex justify-content-between align-items-center border-bottom">
+      <div class="d-flex  ">
+        <div class="title px-3">SN Pediatric Supervisory Note VN - 116</div>
+        <div class="green-tag fw-medium">Open</div>
+      </div>
+      <div class="d-flex align-items-center">
+        <span class="ms-3">Auto Saved <b>2 mins ago</b></span>
+        <a href="#" class="btn btn-primary ms-3">Submit to QA</a>
+        <div class="dropdown ms-3">
+          <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <img src="images/h-dot.svg" />
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <a href="#" class="dropdown-item">Print</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-item">View POC</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-item">Billing DX Codes</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-item">Split Schedule</a>
+            </li>
+            <li>
+              <a class="dropdown-item red-link" href="#" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">Edit Diagnosis</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-item">Check Out</a>
+            </li>
+          </ul>
+        </div>
+        <img src="images/close.svg" alt="" class="pe p-4 border-start ms-3" />
+      </div>
+    </div>
+  </header>
+  <main class="timesheet-wrap">
+    <section class="sticky-0">
+      <h3 class="sidebar-title">
+        <img src="images/check2.svg" alt="" class="me-1" /> Patient &
+        Timesheet Info
+      </h3>
+      <ul class="sidebar-menu">
+        <li class="has-subchild active">
+          <a href="#">Supervisory Visit Form</a>
+          <ul>
+            <li><a href="#">Prerequisites</a></li>
+            <li><a href="#">Vital Signs</a></li>
+            <li><a href="#">Diagnosis</a></li>
+            <li class="has-subchild">
+              <a href="#">Patient Supervision</a>
+              <ul>
+                <li><a href="#">Cardiovascular</a></li>
+                <li><a href="#">Neurological</a></li>
+                <li><a href="#">Musculo Skeletal</a></li>
+                <li><a href="#">Pulmonary</a></li>
+                <li><a href="#">Genitourinary</a></li>
+                <li><a href="#">Gastrointestinal</a></li>
+                <li><a href="#">Integumentary</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Competency</a></li>
+            <li><a href="#">Supervision of Care</a></li>
+            <li><a href="#">Today's Note</a></li>
+            <li><a href="#">Care Coordination</a></li>
+            <li><a href="#">Risk of Hospitalisation</a></li>
+            <li><a href="#">Plan For Next Visit</a></li>
+            <li><a href="#">Signature</a></li>
+          </ul>
+        </li>
+
+        <li class="has-subchild">
+          <a href="#">Interventions</a>
+          <ul style="display: none">
+            <li><a href="#">All Details</a></li>
+          </ul>
+        </li>
+
+        <li class="has-subchild">
+          <a href="#">Goal</a>
+          <ul>
+            <li><a href="#">Short Term Goals</a></li>
+            <li><a href="#">Long Term Goals</a></li>
+          </ul>
+        </li>
+
+        <li class="has-subchild">
+          <a href="#">Medications</a>
+          <ul>
+            <li><a href="#">All Details</a></li>
+          </ul>
+        </li>
+
+        <li class="has-subchild">
+          <a href="#">Supplies</a>
+          <ul>
+            <li><a href="#">All Details</a></li>
+          </ul>
+        </li>
+
+        <li class="has-subchild">
+          <a href="#">Forms</a>
+          <ul>
+            <li><a href="#">All Details</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <div class="container-fluid bg-white p-3">
+        <div class="row">
+          <div class="col-md-12 d-flex align-items-center justify-content-between">
+            <h2 class="mb-0">Patient & Timesheet Information</h2>
+            <div class="dropdown ms-3">
+              <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="images/h-dot.svg" />
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li>
+                  <a href="#" class="dropdown-item">Action 1</a>
+                </li>
+                <li>
+                  <a href="#" class="dropdown-item">Action 2</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <img src="images/close.svg" alt="" class="pe p-4 border-start ms-3" />
         </div>
       </div>
-    </header>
-    <main class="timesheet-wrap">
-      <section class="sticky-0">
-        <h3 class="sidebar-title">
-          <img src="images/check2.svg" alt="" class="me-1" /> Patient &
-          Timesheet Info
-        </h3>
-        <ul class="sidebar-menu">
-          <li class="has-subchild active">
-            <a href="#">Supervisory Visit Form</a>
-            <ul>
-              <li><a href="#">Prerequisites</a></li>
-              <li><a href="#">Vital Signs</a></li>
-              <li><a href="#">Diagnosis</a></li>
-              <li class="has-subchild">
-                <a href="#">Patient Supervision</a>
-                <ul>
-                  <li><a href="#">Cardiovascular</a></li>
-                  <li><a href="#">Neurological</a></li>
-                  <li><a href="#">Musculo Skeletal</a></li>
-                  <li><a href="#">Pulmonary</a></li>
-                  <li><a href="#">Genitourinary</a></li>
-                  <li><a href="#">Gastrointestinal</a></li>
-                  <li><a href="#">Integumentary</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Competency</a></li>
-              <li><a href="#">Supervision of Care</a></li>
-              <li><a href="#">Today's Note</a></li>
-              <li><a href="#">Care Coordination</a></li>
-              <li><a href="#">Risk of Hospitalisation</a></li>
-              <li><a href="#">Plan For Next Visit</a></li>
-              <li><a href="#">Signature</a></li>
-            </ul>
-          </li>
+      <div class="container-fluid mt-3">
+        <div class="row gx-3">
+          <div class="col-md-4">
+            <div class="header-fill">
+              <h2 class="title">Patient Information</h2>
+            </div>
+            <div class="bg-white p-3">
+              <div class="row mb-4">
+                <div class="col-md-4">
+                  <img src="images/john-dow.png" alt="" class="img-fluid w-100" />
+                </div>
+                <div class="col-md-8">
+                  <div class="d-flex align-items-center justify-content-between mb-2">
+                    <h2 class="mb-0 info-name">John Doe</h2>
+                    <div>
+                      <img src="images/mic.svg" alt="" />
+                      <span>Record Message</span>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <p class="info-label mb-0">DOB:&nbsp;</p>
+                    <p class="info-detail text-dark">03-05-1991</p>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <p class="info-label mb-0">Email:&nbsp;</p>
+                    <p class="info-detail text-dark">johndoe@gmail.com</p>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <p class="info-label mb-0">Mobile:&nbsp;</p>
+                    <p class="info-detail d-flex align-items-center text-dark">
+                      (425) 555-1212
+                      <span class="ms-4 pe"><img src="images/edit-sm.svg" alt="" class="me-2" />Edit</span>
+                    </p>
+                  </div>
+                  <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#emergencyContacts-Modal"
+                    class="link-blue">Emergency Contacts</a>
+                </div>
+              </div>
 
-          <li class="has-subchild">
-            <a href="#">Interventions</a>
-            <ul style="display: none">
-              <li><a href="#">All Details</a></li>
-            </ul>
-          </li>
-
-          <li class="has-subchild">
-            <a href="#">Goal</a>
-            <ul>
-              <li><a href="#">Short Term Goals</a></li>
-              <li><a href="#">Long Term Goals</a></li>
-            </ul>
-          </li>
-
-          <li class="has-subchild">
-            <a href="#">Medications</a>
-            <ul>
-              <li><a href="#">All Details</a></li>
-            </ul>
-          </li>
-
-          <li class="has-subchild">
-            <a href="#">Supplies</a>
-            <ul>
-              <li><a href="#">All Details</a></li>
-            </ul>
-          </li>
-
-          <li class="has-subchild">
-            <a href="#">Forms</a>
-            <ul>
-              <li><a href="#">All Details</a></li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-      <section>
-        <div class="container-fluid bg-white p-3">
+              <hr class="custom-hr" />
+              <div class="row">
+                <div class="col-md-12">
+                  <p class="info-label">Clinician</p>
+                  <p class="info-detail">Demo, Test_RN_Clinician</p>
+                </div>
+                <div class="col-md-12 mt-25">
+                  <p class="info-label">Certification Period</p>
+                  <p class="info-detail">01/01/2023 - 02/28/2023</p>
+                </div>
+                <div class="col-md-12 mt-25">
+                  <p class="info-label">Allergies</p>
+                  <p class="info-detail">Type 1, Type 2</p>
+                </div>
+                <div class="col-md-12 mt-25">
+                  <p class="info-label">Primary Payer Source</p>
+                  <p class="info-detail">Avi_PediatricPayer</p>
+                </div>
+                <div class="col-md-12 mt-25">
+                  <p class="info-label">Physician</p>
+                  <p class="info-detail d-flex align-items-center">
+                    Avi_PediatricPayer
+                    <span class="ms-4"><img src="images/call-grey.svg" alt="" class="me-2" />(425) 555-1414</span>
+                  </p>
+                </div>
+                <div class="col-md-12 mt-25">
+                  <p class="info-label">SOC</p>
+                  <p class="info-detail">01/01/2023</p>
+                </div>
+                <div class="col-md-12 mt-25">
+                  <p class="info-label">Hospital</p>
+                  <p class="info-detail d-flex align-items-center">
+                    01/01/2023
+                    <span class="ms-4"><img src="images/call-grey.svg" alt="" class="me-2" />(425) 555-1414</span>
+                  </p>
+                </div>
+                <div class="col-md-12 mt-25">
+                  <p class="info-label">Service</p>
+                  <p class="info-detail">
+                    Paediatric ROC Supervisory VN - 109
+                  </p>
+                </div>
+                <div class="col-md-12 mt-25">
+                  <p class="info-label">HCPCS</p>
+                  <p class="info-detail">Demo, Test_RN_HCPS</p>
+                </div>
+                <div class="col-md-12 mt-25">
+                  <p class="info-label">Supervisor/Cosign</p>
+                  <p class="info-detail">Demo, Test_RN_Supervisor</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="header-fill">
+              <h2 class="title">Timesheet</h2>
+            </div>
+            <div class="bg-white p-3 timesheet">
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="" class="label">Visit Date<sup>*</sup></label>
+                  <div id="weeklyrange" class="form-control singleDatePicker">
+                    <span></span>
+                    <img src="../images/calendar-1.svg" alt="" />
+                  </div>
+                  <p class="error text-red">*This is required field.</p>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-3">
+                  <label for="" class="label">Check In</label>
+                  <div class="c-timepicker">
+                    <select class="single-select">
+                      <option selected>12:08 PM</option>
+                      <option>01:08 PM</option>
+                      <option>02:08 PM</option>
+                      <option>03:08 PM</option>
+                      <option>04:08 PM</option>
+                      <option>05:08 PM</option>
+                      <option>01:08 AM</option>
+                      <option>02:08 AM</option>
+                      <option>03:08 AM</option>
+                      <option>04:08 AM</option>
+                      <option>05:08 AM</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <label for="" class="label">Check Out</label>
+                  <div class="c-timepicker">
+                    <select class="single-select">
+                      <option selected>03:08 PM</option>
+                      <option>01:08 PM</option>
+                      <option>02:08 PM</option>
+                      <option>03:08 PM</option>
+                      <option>04:08 PM</option>
+                      <option>05:08 PM</option>
+                      <option>01:08 AM</option>
+                      <option>02:08 AM</option>
+                      <option>03:08 AM</option>
+                      <option>04:08 AM</option>
+                      <option>05:08 AM</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <label for="" class="label">Total Time</label>
+                  <input type="text" class="form-control" placeholder="01:15:00" />
+                </div>
+              </div>
+              <hr class="custom-hr" />
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="" class="label">Place of Service</label>
+                  <input type="text" class="form-control" value="Patient's Home / Residence" />
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-3">
+                  <label for="" class="label">Payer Hours</label>
+                  <input type="text" class="form-control" value="01:15:00" />
+                </div>
+                <div class="col-md-3">
+                  <label for="" class="label">Miles</label>
+                  <input type="text" class="form-control" value="00" />
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-3">
+                  <label for="" class="label">Doc Time</label>
+                  <input type="text" class="form-control" value="213 mins" />
+                </div>
+                <div class="col-md-3">
+                  <label for="" class="label">Travel Time</label>
+                  <input type="text" class="form-control" value="1232 mins" />
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-3">
+                  <label for="" class="label">Check In Code</label>
+                  <input type="text" class="form-control" value="" />
+                </div>
+                <div class="col-md-3">
+                  <label for="" class="label">Check Out Code</label>
+                  <input type="text" class="form-control" value="" />
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-3">
+                  <label for="" class="label">Shift Name</label>
+                  <input type="text" class="form-control" value="Morning" />
+                </div>
+                <div class="col-md-3">
+                  <label for="" class="label">POC Status</label>
+                  <input type="text" class="form-control" value="Open" />
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-3">
+                  <label for="" class="label">Initial Submission</label>
+                  <input type="text" class="form-control" value="Lorem ipsum" />
+                </div>
+                <div class="col-md-3">
+                  <label for="" class="label">Final Submission</label>
+                  <input type="text" class="form-control" value="Open" />
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label fw-medium" for="flexCheckDefault">
+                      Visit's Place of Service is Confirmed
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <hr class="custom-hr" />
+              <h2 class="text-13 fw-medium">Split Details</h2>
+              <div class="table-responsive">
+                <table class="table table-striped table-type-1">
+                  <thead>
+                    <tr>
+                      <th>Time</th>
+                      <th>Payer</th>
+                      <th>Service</th>
+                      <th>HCPCS Code</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>05:00 PM - 05:30 PM</td>
+                      <td>Avi_PediatricPayer</td>
+                      <td>SN Pediatric Supervisory Note VN - 116</td>
+                      <td>ST-34234</td>
+                    </tr>
+                    <tr>
+                      <td>05:00 PM - 05:30 PM</td>
+                      <td>Avi_PediatricPayer</td>
+                      <td>SN Pediatric Supervisory Note VN - 116</td>
+                      <td>ST-34234</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="d-flex justify-content-end align-items-center border-top p-4">
+      <a href="#" class="level-arrow"><img src="images/level2-up.svg" /></a>
+      <a href="#" class="level-arrow"><img src="images/level1-up.svg" /></a>
+      <span class="fw-medium text-13 ms-3">Patient & Timesheet Info</span>
+      <a href="#" class="level-arrow"><img src="images/level1-down.svg" /></a>
+      <a href="#" class="level-arrow active"><img src="images/level2-down.svg" /></a>
+    </div>
+  </footer>
+  <!-- popup -->
+  <div class="modal" tabindex="-1" id="emergencyContacts-Modal">
+    <div class="modal-dialog modal-xl modal-dialog-centered emergency">
+      <div class="modal-content">
+        <div class="modal-header bg-lightblue">
+          <h5 class="modal-title">Emergency Contact Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-3">
           <div class="row">
-            <div
-              class="col-md-12 d-flex align-items-center justify-content-between"
-            >
-              <h2 class="mb-0">Patient & Timesheet Information</h2>
-              <div class="dropdown ms-3">
-                <button
-                  class="btn btn-dot dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton1"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <img src="images/h-dot.svg" />
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li>
-                    <a href="#" class="dropdown-item">Action 1</a>
-                  </li>
-                  <li>
-                    <a href="#" class="dropdown-item">Action 2</a>
-                  </li>
-                </ul>
+            <div class="col-md-12">
+              <h2>Patient Details</h2>
+              <div class="mt-15 data-grid-1">
+                <div>
+                  <p class="info-label">Client Name</p>
+                  <p class="info-detail">John Doe</p>
+                </div>
+                <div>
+                  <p class="info-label">DOB</p>
+                  <p class="info-detail">03/05/1991</p>
+                </div>
+                <div>
+                  <p class="info-label">Gender</p>
+                  <p class="info-detail">Male</p>
+                </div>
+                <div>
+                  <p class="info-label">SOC</p>
+                  <p class="info-detail">01/01/2023</p>
+                </div>
+                <div>
+                  <p class="info-label">Insurance ID</p>
+                  <p class="info-detail">42342342</p>
+                </div>
+                <div>
+                  <p class="info-label">Insurance</p>
+                  <p class="info-detail">Avi_PediatricPayer</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="container-fluid mt-3">
-          <div class="row gx-3">
-            <div class="col-md-4">
-              <div class="header-fill">
-                <h2 class="title">Patient Information</h2>
+          <hr class="custom-hr my-3" />
+
+          <div class="contact-container">
+            <div class="contact-info-container">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="form-check form-check-inline ">
+                <input class="form-check-input" type="checkbox" id="confirm" value="confirm">
+                <label class="form-check-label" for="confirm">Contact</label>
               </div>
-              <div class="bg-white p-3">
-                <div class="row mb-4">
-                  <div class="col-md-4">
-                    <img
-                      src="images/john-dow.png"
-                      alt=""
-                      class="img-fluid w-100"
-                    />
-                  </div>
-                  <div class="col-md-8">
-                    <div
-                      class="d-flex align-items-center justify-content-between mb-2"
-                    >
-                      <h2 class="mb-0">John Doe</h2>
-                      <div>
-                        <img src="images/mic.svg" alt="" />
-                        <span>Record Message</span>
-                      </div>
-                    </div>
-                    <div class="d-flex align-items-center mb-2">
-                      <p class="info-label mb-0">DOB:&nbsp;</p>
-                      <p class="info-detail">03-05-1991</p>
-                    </div>
-                    <div class="d-flex align-items-center mb-2">
-                      <p class="info-label mb-0">Email:&nbsp;</p>
-                      <p class="info-detail">johndoe@gmail.com</p>
-                    </div>
-                    <div class="d-flex align-items-center mb-2">
-                      <p class="info-label mb-0">Mobile:&nbsp;</p>
-                      <p class="info-detail d-flex align-items-center">
-                        (425) 555-1212
-                        <span class="ms-4 pe"
-                          ><img
-                            src="images/edit-sm.svg"
-                            alt=""
-                            class="me-2"
-                          />Edit</span
-                        >
-                      </p>
-                    </div>
-                    <a
-                      href="javascript:void(0)"
-                      data-bs-toggle="modal"
-                      data-bs-target="#emergencyContacts-Modal"
-                      class="link-blue"
-                      >Emergency Contacts</a
-                    >
-                  </div>
+              <div class="add-contact mr-25" id="add-contact-container" data-bs-toggle="tooltip"
+                data-bs-placement="bottom" data-bs-offset="-40, -15" title="Add New Contact">
+                <p class="add-btn">Add</p>
+                <!-- <span class="tooltiptext">Add New Contact</span> -->
+              </div>
+            </div>
+            <div class="info-box">
+              <div class="row">
+                <div class="col">
+                  <label class="label">
+                    Name
+                    <sup>*</sup>
+                  </label>
+                  <input type="text" class="form-control" placeholder="Enter Name" />
+                  <p class="error text-red">*This is required field.</p>
+                </div>
+                <div class="col">
+                  <label class="label">Relation</label>
+                  <input type="text" class="form-control" placeholder="Cousin" />
+                </div>
+                <div class="col">
+                  <label class="label">Priority</label>
+                  <select class="single-select">
+                    <option selected>Select Priority</option>
+                    <option>Primary</option>
+                    <option>Secondary</option>
+                    <option>Tertiary</option>
+                  </select>
                 </div>
 
-                <hr class="custom-hr" />
-                <div class="row">
-                  <div class="col-md-12">
-                    <p class="info-label">Clinician</p>
-                    <p class="info-detail">Demo, Test_RN_Clinician</p>
-                  </div>
-                  <div class="col-md-12 mt-25">
-                    <p class="info-label">Certification Period</p>
-                    <p class="info-detail">01/01/2023 - 02/28/2023</p>
-                  </div>
-                  <div class="col-md-12 mt-25">
-                    <p class="info-label">Allergies</p>
-                    <p class="info-detail">Type 1, Type 2</p>
-                  </div>
-                  <div class="col-md-12 mt-25">
-                    <p class="info-label">Primary Payer Source</p>
-                    <p class="info-detail">Avi_PediatricPayer</p>
-                  </div>
-                  <div class="col-md-12 mt-25">
-                    <p class="info-label">Physician</p>
-                    <p class="info-detail d-flex align-items-center">
-                      Avi_PediatricPayer
-                      <span class="ms-4"
-                        ><img
-                          src="images/call-grey.svg"
-                          alt=""
-                          class="me-2"
-                        />(425) 555-1414</span
-                      >
-                    </p>
-                  </div>
-                  <div class="col-md-12 mt-25">
-                    <p class="info-label">SOC</p>
-                    <p class="info-detail">01/01/2023</p>
-                  </div>
-                  <div class="col-md-12 mt-25">
-                    <p class="info-label">Hospital</p>
-                    <p class="info-detail d-flex align-items-center">
-                      01/01/2023
-                      <span class="ms-4"
-                        ><img
-                          src="images/call-grey.svg"
-                          alt=""
-                          class="me-2"
-                        />(425) 555-1414</span
-                      >
-                    </p>
-                  </div>
-                  <div class="col-md-12 mt-25">
-                    <p class="info-label">Service</p>
-                    <p class="info-detail">
-                      Paediatric ROC Supervisory VN - 109
-                    </p>
-                  </div>
-                  <div class="col-md-12 mt-25">
-                    <p class="info-label">HCPCS</p>
-                    <p class="info-detail">Demo, Test_RN_HCPS</p>
-                  </div>
-                  <div class="col-md-12 mt-25">
-                    <p class="info-label">Supervisor/Cosign</p>
-                    <p class="info-detail">Demo, Test_RN_Supervisor</p>
-                  </div>
+                <div class="col">
+                  <label class="label">Gender</label>
+                  <select class="single-select">
+                    <option selected>Select Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
                 </div>
+                <div class="col">
+                  <label class="label">Age</label>
+                  <input type="text" class="form-control" placeholder="Enter Age" value="42" />
+                </div>
+                <hr class="custom-hr my-3">
               </div>
+
+              <div class="row">
+                <div class="col">
+                  <label class="label">
+                    Address 1
+                  </label>
+                  <input type="text" class="form-control" placeholder="Enter Address" value="50 Oakland Avenue," />
+
+                </div>
+                <div class="col">
+                  <label class="label">Address 2</label>
+                  <input type="text" class="form-control" placeholder="Enter Address" value="Nr. Palm Beach County" />
+                </div>
+                <div class="col">
+                  <label class="label">Zip</label>
+                  <input type="number" class="form-control" placeholder="Enter Zip" value="32104" />
+                </div>
+                <div class="col">
+                  <label class="label">City</label>
+                  <input type="text" class="form-control" placeholder="Enter City" value="Miami" />
+                </div>
+
+                <div class="col">
+                  <label class="label">State</label>
+                  <input type="text" class="form-control" placeholder="Enter State" value="Florida" />
+                </div>
+                <hr class="custom-hr my-3">
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <label class="label">
+                    Home Phone
+                  </label>
+                  <input type="text" class="form-control" placeholder="Enter Home Number" value="(425) 555-1212" />
+
+                </div>
+                <div class="col">
+                  <label class="label">Cell Phone</label>
+                  <input type="text" class="form-control" placeholder="Enter Cell Phone" value="(917)924-5855" />
+                </div>
+                <div class="col">
+                  <label class="label">Work Phone</label>
+                  <input type="text" class="form-control" placeholder="Enter Work Phone" value="(917)924-8485" />
+                </div>
+                <div class="col">
+                  <label class="label">Fax</label>
+                  <input type="text" class="form-control" placeholder="Enter Fax" value="423-4234" />
+                </div>
+
+                <div class="col">
+                  <label class="label">Email</label>
+                  <input type="text" class="form-control" placeholder="Enter Email" value="doejohn64@example.com" />
+                </div>
+                <hr class="custom-hr my-3">
+              </div>
+
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="POA" value="POA">
+                <label class="poa-label" for="POA">Copy of POA paper on file</label>
+
+              </div>
+              <hr class="custom-hr my-3">
+              <div class="comment-container">
+                <h2 class="fw-medium comment-info">Comments</h2>
+                <textarea class="contact-comment" placeholder="Type Here..." rows="4" cols="50">
+
+                </textarea>
+              </div>
+            <!-- Commnent section comes here -->
             </div>
-            <div class="col-md-8">
-              <div class="header-fill">
-                <h2 class="title">Timesheet</h2>
-              </div>
-              <div class="bg-white p-3">
-                <div class="row">
-                  <div class="col-md-3">
-                    <label for="" class="label">Visit Date<sup>*</sup></label>
-                    <div id="weeklyrange" class="form-control singleDatePicker">
-                      <span></span>
-                      <img src="../images/calendar-1.svg" alt="" />
-                    </div>
-                  </div>
-                </div>
-                <div class="row mt-4">
-                  <div class="col-md-3">
-                    <label for="" class="label">Check In</label>
-                    <div class="c-timepicker">
-                      <select class="single-select">
-                        <option selected>12:08 PM</option>
-                        <option>01:08 PM</option>
-                        <option>02:08 PM</option>
-                        <option>03:08 PM</option>
-                        <option>04:08 PM</option>
-                        <option>05:08 PM</option>
-                        <option>01:08 AM</option>
-                        <option>02:08 AM</option>
-                        <option>03:08 AM</option>
-                        <option>04:08 AM</option>
-                        <option>05:08 AM</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <label for="" class="label">Check Out</label>
-                    <div class="c-timepicker">
-                      <select class="single-select">
-                        <option selected>03:08 PM</option>
-                        <option>01:08 PM</option>
-                        <option>02:08 PM</option>
-                        <option>03:08 PM</option>
-                        <option>04:08 PM</option>
-                        <option>05:08 PM</option>
-                        <option>01:08 AM</option>
-                        <option>02:08 AM</option>
-                        <option>03:08 AM</option>
-                        <option>04:08 AM</option>
-                        <option>05:08 AM</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <label for="" class="label">Total Time</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="01:15:00"
-                    />
-                  </div>
-                </div>
-                <hr class="custom-hr" />
-                <div class="row">
-                  <div class="col-md-6">
-                    <label for="" class="label">Place of Service</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      value="Patient's Home / Residence"
-                    />
-                  </div>
-                </div>
-                <div class="row mt-4">
-                  <div class="col-md-3">
-                    <label for="" class="label">Payer Hours</label>
-                    <input type="text" class="form-control" value="01:15:00" />
-                  </div>
-                  <div class="col-md-3">
-                    <label for="" class="label">Miles</label>
-                    <input type="text" class="form-control" value="00" />
-                  </div>
-                </div>
-                <div class="row mt-4">
-                  <div class="col-md-3">
-                    <label for="" class="label">Doc Time</label>
-                    <input type="text" class="form-control" value="213 mins" />
-                  </div>
-                  <div class="col-md-3">
-                    <label for="" class="label">Travel Time</label>
-                    <input type="text" class="form-control" value="1232 mins" />
-                  </div>
-                </div>
-                <div class="row mt-4">
-                  <div class="col-md-3">
-                    <label for="" class="label">Check In Code</label>
-                    <input type="text" class="form-control" value="" />
-                  </div>
-                  <div class="col-md-3">
-                    <label for="" class="label">Check Out Code</label>
-                    <input type="text" class="form-control" value="" />
-                  </div>
-                </div>
-                <div class="row mt-4">
-                  <div class="col-md-3">
-                    <label for="" class="label">Shift Name</label>
-                    <input type="text" class="form-control" value="Morning" />
-                  </div>
-                  <div class="col-md-3">
-                    <label for="" class="label">POC Status</label>
-                    <input type="text" class="form-control" value="Open" />
-                  </div>
-                </div>
-                <div class="row mt-4">
-                  <div class="col-md-3">
-                    <label for="" class="label">Initial Submission</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      value="Lorem ipsum"
-                    />
-                  </div>
-                  <div class="col-md-3">
-                    <label for="" class="label">Final Submission</label>
-                    <input type="text" class="form-control" value="Open" />
-                  </div>
-                </div>
-                <div class="row mt-4">
-                  <div class="col-md-12">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="flexCheckDefault"
-                      />
-                      <label class="form-check-label" for="flexCheckDefault">
-                        Visit's Place of Service is Confirmed
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <hr class="custom-hr" />
-                <h2 class="text-13 fw-medium">Split Details</h2>
-                <div class="table-responsive">
-                  <table class="table table-striped table-type-1">
-                    <thead>
-                      <tr>
-                        <th>Time</th>
-                        <th>Payer</th>
-                        <th>Service</th>
-                        <th>HCPCS Code</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>05:00 PM - 05:30 PM</td>
-                        <td>Avi_PediatricPayer</td>
-                        <td>SN Pediatric Supervisory Note VN - 116</td>
-                        <td>ST-34234</td>
-                      </tr>
-                      <tr>
-                        <td>05:00 PM - 05:30 PM</td>
-                        <td>Avi_PediatricPayer</td>
-                        <td>SN Pediatric Supervisory Note VN - 116</td>
-                        <td>ST-34234</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
             </div>
           </div>
         </div>
-      </section>
-    </main>
-    <footer>
-      <div class="d-flex justify-content-end align-items-center border-top p-4">
-        <a href="#" class="level-arrow"><img src="images/level2-up.svg" /></a>
-        <a href="#" class="level-arrow"><img src="images/level1-up.svg" /></a>
-        <span class="fw-medium text-13 ms-3">Patient & Timesheet Info</span>
-        <a href="#" class="level-arrow"><img src="images/level1-down.svg" /></a>
-        <a href="#" class="level-arrow active"
-          ><img src="images/level2-down.svg"
-        /></a>
-      </div>
-    </footer>
-    <!-- popup -->
-    <div class="modal" tabindex="-1" id="emergencyContacts-Modal">
-      <div class="modal-dialog modal-xl modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header bg-lightblue">
-            <h5 class="modal-title">Emergency Contact Details</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body p-3">
-            <div class="row">
-              <div class="col-md-12">
-                <h2>Patient Details</h2>
-                <div class="mt-15 data-grid-1">
-                  <div>
-                    <p class="info-label">Client Name</p>
-                    <p class="info-detail">John Doe</p>
-                  </div>
-                  <div>
-                    <p class="info-label">DOB</p>
-                    <p class="info-detail">03/05/1991</p>
-                  </div>
-                  <div>
-                    <p class="info-label">Gender</p>
-                    <p class="info-detail">Male</p>
-                  </div>
-                  <div>
-                    <p class="info-label">SOC</p>
-                    <p class="info-detail">01/01/2023</p>
-                  </div>
-                  <div>
-                    <p class="info-label">Insurance ID</p>
-                    <p class="info-detail">42342342</p>
-                  </div>
-                  <div>
-                    <p class="info-label">Insurance</p>
-                    <p class="info-detail">Avi_PediatricPayer</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <hr class="custom-hr my-3" />
-            <div class="row">
-              <div class="col"></div>
-              <div class="col"></div>
-              <div class="col">
-                <label class="label">Gender</label>
-                <select class="single-select">
-                  <option selected>Select Gender</option>
-                  <option>Male</option>
-                  <option>Female</option>
-                </select>
-              </div>
-              <div class="col">
-                <label class="label">Gender</label>
-                <select class="single-select">
-                  <option selected>Select Gender</option>
-                  <option>Male</option>
-                  <option>Female</option>
-                </select>
-              </div>
-              <div class="col">
-                <label class="label">Age</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Enter Age"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- JavaScript -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <!-- bootstrap js-->
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script
-      type="text/javascript"
-      src="js/bootstrap-multiselect.min.js"
-    ></script>
-    <!-- datepicker js -->
-    <script type="text/javascript" src="js/moment.min.js"></script>
-    <script type="text/javascript" src="js/daterangepicker.js"></script>
+  <!-- JavaScript -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- bootstrap js-->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap-multiselect.min.js"></script>
+  <!-- datepicker js -->
+  <script type="text/javascript" src="js/moment.min.js"></script>
+  <script type="text/javascript" src="js/daterangepicker.js"></script>
 
-    <script type="text/javascript" src="js/custom.js"></script>
-    <!-- page level script -->
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $("#client").change(function (e) {
-          if ($(this).prop("checked")) {
-            $(".jq-client-info").removeClass("d-none").addClass("d-block");
-            $(".jq-other-info").addClass("d-none").removeClass("d-block");
-          } else {
-            $(".jq-client-info").addClass("d-none").removeClass("d-block");
-          }
-        });
-        $("#other").change(function (e) {
-          if ($(this).prop("checked")) {
-            $(".jq-other-info").removeClass("d-none").addClass("d-block");
-            $(".jq-client-info").addClass("d-none").removeClass("d-block");
-          } else {
-            $(".jq-other-info").addClass("d-none").removeClass("d-block");
-          }
-        });
-
-        $(".has-subchild > a").click(function (e) {
-          e.preventDefault();
-          $(this).toggleClass("active");
-          $(this).siblings("ul").slideToggle();
-          $(this).parents("li").toggleClass("wrap-blue");
-        });
-      });
-      // datepicker
-      $(function () {
-        var start = moment();
-        var end = moment();
-
-        function cb(start, end) {
-          $("#weeklyrange span").html(start.format("D/MM/YYYY"));
+  <script type="text/javascript" src="js/custom.js"></script>
+  <!-- page level script -->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#client").change(function (e) {
+        if ($(this).prop("checked")) {
+          $(".jq-client-info").removeClass("d-none").addClass("d-block");
+          $(".jq-other-info").addClass("d-none").removeClass("d-block");
+        } else {
+          $(".jq-client-info").addClass("d-none").removeClass("d-block");
         }
-
-        $("#weeklyrange").daterangepicker(
-          {
-            startDate: start,
-            endDate: end,
-            opens: "center",
-            singleDatePicker: true,
-          },
-          cb
-        );
-
-        cb(start, end);
       });
-    </script>
-  </body>
+      $("#other").change(function (e) {
+        if ($(this).prop("checked")) {
+          $(".jq-other-info").removeClass("d-none").addClass("d-block");
+          $(".jq-client-info").addClass("d-none").removeClass("d-block");
+        } else {
+          $(".jq-other-info").addClass("d-none").removeClass("d-block");
+        }
+      });
+
+      $(".has-subchild > a").click(function (e) {
+        e.preventDefault();
+        $(this).toggleClass("active");
+        $(this).siblings("ul").slideToggle();
+        $(this).parents("li").toggleClass("wrap-blue");
+      });
+    });
+    // datepicker
+    $(function () {
+      var start = moment();
+      var end = moment();
+
+      function cb(start, end) {
+        $("#weeklyrange span").html(start.format("D/MM/YYYY"));
+      }
+
+      $("#weeklyrange").daterangepicker(
+        {
+          startDate: start,
+          endDate: end,
+          opens: "center",
+          singleDatePicker: true,
+        },
+        cb
+      );
+
+      cb(start, end);
+    });
+
+
+    document.getElementById("add-contact-container").addEventListener('click', function () {
+     
+      var container=document.querySelector(".contact-container");
+      
+      var oldContact=document.querySelector(".contact-info-container");
+      var newContact=oldContact.cloneNode(true);
+      container.insertBefore(newContact,container.firstChild)
+    })
+
+    // functionality to show and hide comment section
+    const toggleButton = document.querySelector('.comment-container');
+    const textareaElement = document.querySelector('.contact-comment');
+    toggleButton.addEventListener('click', () => {
+    textareaElement.style.display = textareaElement.style.display === 'none' ? 'block' : 'none';
+});
+  </script>
+</body>
+
 </html>

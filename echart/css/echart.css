@@ -26,19 +26,21 @@ h2 {
     border: 1px solid #649DF1;
     border-radius: 3px;
     padding: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 10px;
 }
 
 .container-1 {
-    width: 90%;
+    width: 70%;
     max-width: 1206px;
     margin: auto;
 }
 
-
-
 .mfs-height {
     height: calc(100vh - 125px);
     overflow-y: auto;
+    background-color: #E7EBEF;
 }
 
 .py-25 {
@@ -49,6 +51,9 @@ h2 {
 .p-20 {
     padding: 20px;
 }
+.pt-10 {
+    padding-top: 10px;
+}
 
 .mt-15 {
     margin-top: 15px;
@@ -56,6 +61,10 @@ h2 {
 
 .mt-25 {
     margin-top: 25px;
+}
+
+.mr-25{
+    margin-right: 25px;
 }
 
 .info-label {
@@ -73,7 +82,9 @@ h2 {
     color: #181C32;
     margin-bottom: 0;
 }
-
+.error{
+    margin-top: 8px;
+}
 .data-grid-1 {
     display: flex;
     gap: 65px;
@@ -81,13 +92,13 @@ h2 {
 
 .card-2 {
     padding: 20px;
-    background: rgba(248, 249, 251, 0.7);
+    background:#ffffff;
     border: 1px solid #EFEFEF;
 }
 
 .label {
     font-weight: 400 !important;
-    font-size: 14px;
+    font-size: 14px !important;
     line-height: 20px;
     color: #243756;
     width: 100%;
@@ -96,12 +107,15 @@ h2 {
 .form-control {
     height: 30px;
     padding: 0 15px;
+    font-weight: 500;
+    border: 1px solid #d9d9d9;
 }
 
 .form-select {
     height: 30px;
     padding: 0px 15px;
     font-size: 13px;
+    border: 1px solid #D9D9D9;
 }
 
 .dropdown-menu .dropdown-item {
@@ -163,7 +177,7 @@ h2 {
 }
 
 .custom-hr {
-    background-color: #d9d9d9;
+    background-color: #EFEFEF;
 }
 
 .table-type-1 {
@@ -175,7 +189,7 @@ h2 {
     font-weight: 500;
     font-size: 12px;
     color: #243756;
-    padding: 15px 10px;
+    padding: 15px;
     border: none;
 }
 
@@ -204,6 +218,7 @@ h2 {
 
 .singleDatePicker {
     line-height: 27px;
+    margin-bottom: 8px;
 }
 
 .singleDatePicker img {
@@ -221,6 +236,7 @@ h2 {
 
 .multiselect-selected-text {
     color: #33373E;
+    font-weight: 500;
 }
 
 .multiselect-container {
@@ -287,7 +303,8 @@ li.has-subchild a,
 }
 
 .sidebar-menu li.has-subchild>a::before {
-    content: url('../images/check1.svg');
+ 
+    content: url('../images/check1Down.svg');
     position: absolute;
     top: 0;
     bottom: 0;
@@ -295,8 +312,10 @@ li.has-subchild a,
     left: 7px;
     height: 22px;
     display: block;
+    transition: transform 0.3s ease-in-out;
 
 }
+
 
 .has-subchild .has-subchild a {
     padding-left: 40px;
@@ -331,6 +350,7 @@ li.has-subchild a,
     border: 1px solid #EFEFEF;
     padding: 10px 6px;
     margin-bottom: 0;
+    visibility: hidden;
 }
 
 .link-blue {
@@ -346,4 +366,91 @@ li.has-subchild a,
 
 .modal.show .modal-dialog.modal-xl {
     transform: none !important;
+}
+
+.title-details{
+    padding: 20px 0 0 20px;
+}
+
+.documentation .multiselect-native-select .btn-group{
+    width: 50%;
+}
+
+.text-red{
+    color: #D92121;
+}
+
+h2.info-name{
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 19.5px;
+}
+
+.info-detail.text-dark{
+    color: #181C32 !important;
+}
+
+.green-tag{
+    border-radius: 100px;
+    background-color:#D9F1D3;
+    color:#181C32;
+    padding: 3px 15px;
+    border: none;
+
+}
+.sidebar-menu li a:hover{
+    background-color: #F0F7FC;
+    color: #0D87E2;
+}
+.timesheet .form-control,.multiselect-native-select .btn-group{
+    width: 70%;
+}
+
+.emergency .form-check-label{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.info-box{
+    border: 1px solid #EFEFEF;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+.poa-label{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+    color: #181C32;
+}
+
+.add-btn::before{
+    content: url("../images/add-contact-icon.svg");
+    margin-right: 5px;
+    
+}
+
+.tooltip-inner {
+    background-color:#043B8B;
+    color:#fff;
+    opacity: 1 !important;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 3px 10px 3px 10px;
+}
+.tooltip .tooltip-arrow {
+    margin-left:px ; /* Adjust the margin value to move the arrow position */
+  }
+
+.comment-info::before{
+    content:"\+";
+    margin-right: 6px;
+}
+
+.contact-comment{
+    display: none;
+    font-weight: 400;
+    border: 1px solid #d9d9d9;
+    font-size: 13px;
+    line-height: 19px;
 }
