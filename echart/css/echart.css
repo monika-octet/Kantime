@@ -32,7 +32,7 @@ h2 {
 }
 
 .container-1 {
-    width: 70%;
+    width: 90%;
     max-width: 1206px;
     margin: auto;
 }
@@ -350,7 +350,7 @@ li.has-subchild a,
     border: 1px solid #EFEFEF;
     padding: 10px 6px;
     margin-bottom: 0;
-    visibility: hidden;
+   
 }
 
 .link-blue {
@@ -406,6 +406,9 @@ h2.info-name{
     width: 70%;
 }
 
+.emergency .form-control,.multiselect-native-select .btn-group{
+    width: 100%;
+}
 .emergency .form-check-label{
     font-weight: 600;
     font-size: 14px;
@@ -438,9 +441,7 @@ h2.info-name{
     line-height: 20px;
     padding: 3px 10px 3px 10px;
 }
-.tooltip .tooltip-arrow {
-    margin-left:px ; /* Adjust the margin value to move the arrow position */
-  }
+
 
 .comment-info::before{
     content:"\+";
@@ -454,3 +455,15 @@ h2.info-name{
     font-size: 13px;
     line-height: 19px;
 }
+.overflow-auto{
+    overflow: auto;
+}
+
+.custom-modal {
+    position: relative;
+    transform: translate(50%,-50%);
+    max-width: fit-content !important;
+    max-height: fit-content !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
