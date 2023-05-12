@@ -79,7 +79,7 @@
       </h3>
       <ul class="sidebar-menu">
         <li class="has-subchild active">
-          <a href="#">Supervisory Visit Form</a>
+          <a href="#">Supervisory Visit Form </a>
           <ul>
             <li><a href="#">Prerequisites</a></li>
             <li><a href="#">Vital Signs</a></li>
@@ -141,7 +141,10 @@
             <li><a href="#">All Details</a></li>
           </ul>
         </li>
+        
       </ul>
+
+
     </section>
     <section>
       <div class="container-fluid bg-white p-3">
@@ -269,7 +272,7 @@
                     <span></span>
                     <img src="../echart/images/calIcon.svg" alt="" />
                   </div>
-                  <p class="error text-red">*This is required field.</p>
+                  <p class="error text-red" id="dateError">*This is required field.</p>
                 </div>
               </div>
               <div class="row mt-4">
@@ -426,7 +429,7 @@
   </footer>
   <!-- popup -->
   <div class="modal" tabindex="-1" id="emergencyContacts-Modal">
-    <div class="modal-dialog custom-modal emergency">
+    <div class="modal-dialog custom-modal modal-dialog-scrollable emergency">
       <div class="modal-content overflow-auto">
         <div class="modal-header bg-lightblue">
           <h5 class="modal-title">Emergency Contact Details</h5>
@@ -486,8 +489,8 @@
                       Name
                       <sup>*</sup>
                     </label>
-                    <input type="text" class="form-control" placeholder="Enter Name" />
-                    <p class="error text-red">*This is required field.</p>
+                    <input id="nameInput" type="text" class="form-control" placeholder="Enter Name" />
+                    <p class="error text-red" id="errorTxt">*This is required field.</p>
                   </div>
                   <div class="col">
                     <label class="label">Relation</label>
@@ -582,17 +585,20 @@
                 <hr class="custom-hr my-3">
                 <!-- Commnent section comes here -->
                 <div class="comment-container">
-                  <h2 class="fw-medium comment-info">Comments</h2>
-                  <textarea class="contact-comment" placeholder="Type Here..." rows="4" cols="50">
-
-                  </textarea>
+                  <h2 class="fw-medium plus-icon hide-toggle">Comments</h2>
+                  <textarea class="contact-comment hidden" placeholder="Type Here..." rows="4" cols="50"></textarea>
                 </div>
+                <hr class="custom-hr my-3">
+                <div class="">
+
+                </div>
+
               </div>
             </div>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">
             Close
           </button>
           <button type="button" class="btn btn-primary">Save changes</button>
@@ -603,8 +609,8 @@
 
   <!--Billing DX Codes Popup-->
   <div class="modal" tabindex="-1" id="billingDxCodes-Modal">
-    <div class="modal-dialog custom-modal modal-dialog-centered">
-      <div class="modal-content">
+    <div class="modal-dialog custom-modal modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content billingDxCodes">
         <div class="modal-header bg-lightblue">
           <h5 class="modal-title">Billing DX Codes</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -748,9 +754,272 @@
               </tbody>
             </table>
           </div>
+          <div class="comment-container">
+            <h2 class="fw-medium plus-icon hide-toggle h2-tags">Comments</h2>
+            <textarea class="contact-comment hidden" placeholder="Type Here..." rows="4" cols="50"></textarea>
+          </div>
+          <hr class="custom-hr my-3" />
+          <!-- split schedule starts -->
+          <div class="schedule-container">
+            <h2 class="fw-medium plus-icon hide-toggle h2-tags">Split Schedule</h2>
+            <div class="custom-border hidden">
+              <div class="row ">
+                <div class="col-md-12 checkbox-group">
+                  <label for="" class="label h2-tags">Split Schedule<sup>*</sup></label>
+                  <p class="text-red">*This is required field.</p>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="client" value="client" name="client-other">
+
+                    <label class="form-check-label" for="client">Split In Invoice</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="other" value="other" name="client-other">
+                    <label class="form-check-label" for="other">Split In Payroll</label>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <label for="" class="label">Number of Split Schedules</label>
+                  <select class="single-select">
+                    <option disabled selected>Select Number</option>
+                    <option>Number 1</option>
+                    <option>Number 2</option>
+                    <option>Number 3</option>
+                    <option>Number 4</option>
+                  </select>
+                  <p class="error text-red">*This is required field.</p>
+                </div>
+              </div>
+              <hr class="custom-hr my-3">
+              <div class="table-responsive">
+                <table class="table table-striped table-type-1">
+                  <thead>
+                    <tr>
+                      <th>Payer</th>
+                      <th>Service</th>
+                      <th>HCPCS & Modifiers</th>
+                      <th>Minutes</th>
+                      <th>Dx Order 1</th>
+                      <th>Dx Order 2 </th>
+                      <th>Dx Order 3</th>
+                      <th>Dx Order 4 </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Avi_PediatricPayer</td>
+                      <td>Pediatric SN Eval VN - 211</td>
+                      <td>2142412432</td>
+                      <td>01</td>
+                      <td><select class="single-select">
+                          <option selected>Select</option>
+                          <option>Select 1</option>
+                          <option>Select 2</option>
+                          <option>Select 3</option>
+                        </select></td>
+                      <td>
+                        <select class="single-select">
+                          <option selected>Select</option>
+                          <option>Select 1</option>
+                          <option>Select 2</option>
+                          <option>Select 3</option>
+                        </select>
+    
+                      </td>
+                      <td>
+                        <select class="single-select">
+                          <option selected>Select</option>
+                          <option>Select 1</option>
+                          <option>Select 2</option>
+                          <option>Select 3</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select class="single-select">
+                          <option selected>Select</option>
+                          <option>Select 1</option>
+                          <option>Select 2</option>
+                          <option>Select 3</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Avi_PediatricPayer</td>
+                      <td>Pediatric SN Eval VN - 211</td>
+                      <td>2142412432</td>
+                      <td>01</td>
+                      <td>
+                        <select class="single-select">
+                          <option selected>Select</option>
+                          <option>Select 1</option>
+                          <option>Select 2</option>
+                          <option>Select 3</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select class="single-select">
+                          <option selected>Select</option>
+                          <option>Select 1</option>
+                          <option>Select 2</option>
+                          <option>Select 3</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select class="single-select">
+                          <option selected>Select</option>
+                          <option>Select 1</option>
+                          <option>Select 2</option>
+                          <option>Select 3</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select class="single-select">
+                          <option selected>Select</option>
+                          <option>Select 1</option>
+                          <option>Select 2</option>
+                          <option>Select 3</option>
+                        </select>
+                      </td>
+    
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="comment-container">
+                <h2 class="fw-medium plus-icon hide-toggle h2-tags">Comments</h2>
+                <textarea class="contact-comment hidden" placeholder="Type Here..." rows="4" cols="50"></textarea>
+              </div>
+            </div>
+            
+          </div>
+          <hr class="custom-hr my-3" />
+
+          <!-- Edit diagnosis starts -->
+          <div class="diagnosis-container">
+            <h2 class="fw-medium plus-icon hide-toggle h2-tags">Edit Diagnosis</h2>
+            <div class="custom-border hidden">
+              <div class="row ">
+                <div class="col-md-12">
+                  <label for="" class="label h2-tags">Primary Diagnosis<sup>*</sup></label>
+                  <p class="text-red">*This is required field.</p>
+                  <div class="table-responsive">
+                    <table class="table table-striped table-type-1">
+                      <thead>
+                        <tr>
+                          <th>Description</th>
+                          <th>Severity Level</th>
+                          <th>Date </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="col-md-6">
+                             <input type="text" class="form-control border-hide" value="Abrasion, left knee, initial encounter">
+                            </div>
+                          </td>
+                          <td class="d-flex">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                              <label class="form-check-label" for="flexRadioDefault1">
+                               1
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                              <label class="form-check-label" for="flexRadioDefault2">
+                               2
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                              <label class="form-check-label" for="flexRadioDefault2">
+                               3
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                              <label class="form-check-label" for="flexRadioDefault2">
+                              4
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="col-md-3">
+                            
+                              <div id="weeklyrange" class="form-control singleDatePicker">
+                                <span></span>
+                                <img src="../echart/images/calIcon.svg" alt="" />
+                              </div>
+                            </div>
+                            
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="row ">
+                <div class="col-md-12">
+                  <label for="" class="label h2-tags">Surgical Procedure<sup>*</sup></label>
+                  <p class="text-red">*This is required field.</p>
+                  <div class="table-responsive">
+                    
+                      <table class="table table-type-1">
+                        <thead>
+                          <tr class="header-row">
+                            <th scope="col"><input type="checkbox"></th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Date</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                           
+                            <td><input type="checkbox"></td>
+                            <td> <div class="col-md-6">
+                              <input type="text" class="form-control border-hide" value="Abrasion, left knee, initial encounter">
+                            </div>
+                          </td>
+                            <td><div id="weeklyrange" class="form-control singleDatePicker">
+                              <span></span>
+                              <img src="../echart/images/calIcon.svg" alt="" />
+                            </div></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox"></td>
+                            <td> <div class="col-md-6">
+                              <input type="text" class="form-control border-hide" value="Abrasion, left knee, initial encounter">
+                            </div>
+                          </td>
+                            <td><div id="weeklyrange" class="form-control singleDatePicker">
+                              <span></span>
+                              <img src="../echart/images/calIcon.svg" alt="" />
+                            </div></td>
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+                    </div>
+                    
+                  </div>
+              </div>
+              <div class="row">
+                <label for="" class="label h2-tags">Other Diagnosis <sup>*</sup></label>
+                
+              </div>
+
+
+
+          </div>
+          
+          <!-- edit dignosis ends -->
+
+
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">
             Close
           </button>
           <button type="button" class="btn btn-primary">Save changes</button>
@@ -820,6 +1089,9 @@
     });
 
 
+
+    //add new contact form on add button click
+
     document.getElementById("add-contact-container").addEventListener('click', function () {
 
       var container = document.querySelector(".contact-container");
@@ -830,11 +1102,29 @@
     })
 
     // functionality to show and hide comment section
-    const toggleButton = document.querySelector('.comment-container');
-    const textareaElement = document.querySelector('.contact-comment');
-    toggleButton.addEventListener('click', () => {
-      textareaElement.style.display = textareaElement.style.display === 'none' ? 'block' : 'none';
+    // const toggleButton = document.querySelectorA('.comment-container');
+    // const textareaElement = document.querySelectorAll('.contact-comment');
+    // toggleButton.addEventListener('click', () => {
+    //   console.log('hello')
+    //   textareaElement.style.display = textareaElement.style.display === 'none' ? 'block' : 'none';
+    // });
+
+    // hide and show error message 
+    const nameInput = document.getElementById('nameInput');
+    nameInput.addEventListener('input', function () {
+      const nameError = document.getElementById('errorTxt');
+      nameError.style.display = nameInput.value.trim() === '' ? 'block' : 'none'; 
     });
+
+
+    document.addEventListener('click', function(event) {
+      if (event.target.classList.contains('hide-toggle')) {
+        
+        var textarea = event.target.nextElementSibling;
+        textarea.classList.toggle('hidden');
+      }
+    });
+
   </script>
 </body>
 

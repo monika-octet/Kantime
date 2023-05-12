@@ -30,7 +30,7 @@
   <main class="modal-full-screen bg-white">
     <section>
       <div class="d-flex justify-content-between align-items-center border-bottom">
-        <div class="title px-3">Start Documentation</div>
+        <div class="title px-3">Start Visit Documentation</div>
         <img src="images/close.svg" alt="" class="pe p-4 border-start" />
       </div>
       <div class="mfs-height">
@@ -53,7 +53,7 @@
                   <p class="info-detail">John Doe</p>
                 </div>
                 <div>
-                  <p class="info-label">Visit Date</p>
+                  <p class="info-label superscript">Visit Date <sup><img src="../echart/images/EVV.svg" alt="Superscript Image"></sup></p>
                   <p class="info-detail">03/05/1991</p>
                 </div>
                 <div>
@@ -78,15 +78,15 @@
                 <div class="row mt-4">
                   <div class="col-md-4">
                     <label for="" class="label">EVV Token Code (Check In)</label>
-                    <input type="text" class="form-control w-50" placeholder="Enter EVV Token Code" />
+                    <input type="text" class="form-control w-fit" placeholder="Enter EVV Token Code" />
                   </div>
                 </div>
                 <div class="row mt-4">
                   <div class="col-md-12 checkbox-group">
-                    <label for="" class="label">Check In Treatment Location</label>
-                    <p class="error text-red">*This is required field.</p>
+                    <label for="" class="label">Check In Treatment Location<sup>*</sup></label>
+                    <p class="text-red">*This is required field.</p>
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input largerCheckbox radio"   type="checkbox" id="client" value="client"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="client" value="client"
                         name="client-other" />
 
                       <label class="form-check-label" for="client">Client Address</label>
@@ -117,7 +117,7 @@
                       <option>BD - 02 Kennif City Place, US, 02157</option>
                     </select>
                   </div>
-                  <div class="col-md-12 mt-4">
+                  <div class="col-md-12 mt-4 hidden ">
                     <label for="" class="label">Address</label>
                     <p class="fw-medium">50 Oakland Avenue, Miami, 32104</p>
                   </div>
@@ -129,7 +129,7 @@
                   <div class="col-md-7">
                     <label for="" class="label">Place of Service</label>
                     <select class="single-select">
-                      <option selected>Select Place of Service</option>
+                      <option disabled selected>Select Place of Service</option>
                       <option>Patient's Home / Residence</option>
                       <option>ABNY Laboratory</option>
                       <option>Residence Avenue</option>
@@ -208,18 +208,34 @@
 
 
     // functionality to  show error message when no checkbox selected
-      $(document).ready(function(){
-        $(".largerCheckbox").click(function(){
-          if($("input:checkbox").filter(":checked").length<1){
-            $(".error").show();
-            return false;
+    
+    let checkboxes = document.querySelectorAll(".largerCheckbox");
+    let errorDiv = document.querySelector(".error");
+
+    for (var i = 0; i < checkboxes.length; i++) {
+      checkboxes[i].addEventListener("change", function () {
+        var isChecked = false;
+
+        for (var j = 0; j < checkboxes.length; j++) {
+          if (checkboxes[j].checked) {
+            isChecked = true;
+            break;
           }
-          else{
-            $(".error").hide();
-            return true;
-          }
-        })
+        }
+
+        if (!isChecked) {
+          errorDiv.style.display = "block";
+        } else {
+          errorDiv.style.display = "none";
+        }
       });
+    }
+
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+dropdownToggle.addEventListener('click', function() {
+  this.classList.toggle('active');
+});
+
 
   </script>
 </body>
