@@ -56,14 +56,15 @@
                 class="dropdown-item">Billing DX Codes</a>
             </li>
             <li>
-              <a href="#" class="dropdown-item">Split Schedule</a>
+              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#splitSchedule-Modal"
+                class="dropdown-item">Split Schedule</a>
             </li>
             <li>
-              <a class="dropdown-item red-link" href="#" class="btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#exampleModal">Edit Diagnosis</a>
+              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#editDiagnosis-Modal"
+                class="dropdown-item">Edit Diagnosis</a>
             </li>
             <li>
-              <a href="#" class="dropdown-item">Check Out</a>
+              <a href="check-out.html" class="dropdown-item">Check Out</a>
             </li>
           </ul>
         </div>
@@ -141,7 +142,7 @@
             <li><a href="#">All Details</a></li>
           </ul>
         </li>
-        
+
       </ul>
 
 
@@ -429,7 +430,7 @@
   </footer>
   <!-- popup -->
   <div class="modal" tabindex="-1" id="emergencyContacts-Modal">
-    <div class="modal-dialog custom-modal modal-dialog-scrollable emergency">
+    <div class="modal-dialog custom-modal-1 modal-dialog-scrollable emergency">
       <div class="modal-content overflow-auto">
         <div class="modal-header bg-lightblue">
           <h5 class="modal-title">Emergency Contact Details</h5>
@@ -609,7 +610,7 @@
 
   <!--Billing DX Codes Popup-->
   <div class="modal" tabindex="-1" id="billingDxCodes-Modal">
-    <div class="modal-dialog custom-modal modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-dialog custom-modal-1 modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content billingDxCodes">
         <div class="modal-header bg-lightblue">
           <h5 class="modal-title">Billing DX Codes</h5>
@@ -768,18 +769,20 @@
                   <label for="" class="label h2-tags">Split Schedule<sup>*</sup></label>
                   <p class="text-red">*This is required field.</p>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="client" value="client" name="client-other">
+                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="client" value="client"
+                      name="client-other">
 
                     <label class="form-check-label" for="client">Split In Invoice</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="other" value="other" name="client-other">
+                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="other" value="other"
+                      name="client-other">
                     <label class="form-check-label" for="other">Split In Payroll</label>
                   </div>
                 </div>
                 <div class="col-md-7">
-                  <label for="" class="label">Number of Split Schedules</label>
-                  <select class="single-select">
+                  <label for="" class="label f-13 mt-10">Number of Split Schedules <sup>*</sup></label>
+                  <select class="single-select w-dropdown-lg form-select">
                     <option disabled selected>Select Number</option>
                     <option>Number 1</option>
                     <option>Number 2</option>
@@ -795,35 +798,26 @@
                   <thead>
                     <tr>
                       <th>Payer</th>
-                      <th>Service</th>
                       <th>HCPCS & Modifiers</th>
                       <th>Minutes</th>
-                      <th>Dx Order 1</th>
-                      <th>Dx Order 2 </th>
-                      <th>Dx Order 3</th>
-                      <th>Dx Order 4 </th>
+                      <th>Payer</th>
+                      <th>Service</th>
+                      <th>Billable </th>
+                      <th>Payable</th>
+                      <th>Lost Revenue </th>
+                      <th>Non Billable Reason</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Avi_PediatricPayer</td>
-                      <td>Pediatric SN Eval VN - 211</td>
-                      <td>2142412432</td>
-                      <td>01</td>
-                      <td><select class="single-select">
-                          <option selected>Select</option>
-                          <option>Select 1</option>
-                          <option>Select 2</option>
-                          <option>Select 3</option>
-                        </select></td>
+                      <td>01/01/2023</td>
+                      <td>04:54-04:55 AM</td>
                       <td>
-                        <select class="single-select">
-                          <option selected>Select</option>
-                          <option>Select 1</option>
-                          <option>Select 2</option>
-                          <option>Select 3</option>
-                        </select>
-    
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input largerCheckbox radio" type="checkbox" id="client"
+                            value="client" name="client-other">
+                          <label class="form-check-label" for="client">01</label>
+                        </div>
                       </td>
                       <td>
                         <select class="single-select">
@@ -840,20 +834,45 @@
                           <option>Select 2</option>
                           <option>Select 3</option>
                         </select>
+                      </td>
+                      <td>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input largerCheckbox radio" type="checkbox" id="client"
+                            value="client" name="client-other">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input largerCheckbox radio" type="checkbox" id="client"
+                            value="client" name="client-other">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input largerCheckbox radio" type="checkbox" id="client"
+                            value="client" name="client-other">
+                        </div>
+                      </td>
+                      <td class="custom-center">
+                        <select class="single-select">
+                          <option selected>Select</option>
+                          <option>Select 1</option>
+                          <option>Select 2</option>
+                          <option>Select 3</option>
+                        </select>
+
+                        <span>Lorem ipsum</span>
                       </td>
                     </tr>
                     <tr>
-                      <td>Avi_PediatricPayer</td>
-                      <td>Pediatric SN Eval VN - 211</td>
-                      <td>2142412432</td>
-                      <td>01</td>
+                      <td>01/01/2023</td>
+                      <td>04:54-04:55 AM</td>
                       <td>
-                        <select class="single-select">
-                          <option selected>Select</option>
-                          <option>Select 1</option>
-                          <option>Select 2</option>
-                          <option>Select 3</option>
-                        </select>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input largerCheckbox radio" type="checkbox" id="client"
+                            value="client" name="client-other">
+                          <label class="form-check-label" for="client">01</label>
+                        </div>
                       </td>
                       <td>
                         <select class="single-select">
@@ -872,14 +891,32 @@
                         </select>
                       </td>
                       <td>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input largerCheckbox radio" type="checkbox" id="client"
+                            value="client" name="client-other">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input largerCheckbox radio" type="checkbox" id="client"
+                            value="client" name="client-other">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input largerCheckbox radio" type="checkbox" id="client"
+                            value="client" name="client-other">
+                        </div>
+                      </td>
+                      <td class="custom-center">
                         <select class="single-select">
                           <option selected>Select</option>
                           <option>Select 1</option>
                           <option>Select 2</option>
                           <option>Select 3</option>
                         </select>
+                        <span>Lorem ipsum</span>
                       </td>
-    
                     </tr>
                   </tbody>
                 </table>
@@ -889,7 +926,7 @@
                 <textarea class="contact-comment hidden" placeholder="Type Here..." rows="4" cols="50"></textarea>
               </div>
             </div>
-            
+
           </div>
           <hr class="custom-hr my-3" />
 
@@ -914,50 +951,55 @@
                         <tr>
                           <td>
                             <div class="col-md-6">
-                             <input type="text" class="form-control border-hide" value="Abrasion, left knee, initial encounter">
+                              <input type="text" class="form-control border-hide"
+                                value="Abrasion, left knee, initial encounter">
                             </div>
                           </td>
                           <td class="d-flex">
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault1">
                               <label class="form-check-label" for="flexRadioDefault1">
-                               1
+                                1
                               </label>
                             </div>
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                              <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault2" checked>
                               <label class="form-check-label" for="flexRadioDefault2">
-                               2
+                                2
                               </label>
                             </div>
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                              <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault2" checked>
                               <label class="form-check-label" for="flexRadioDefault2">
-                               3
+                                3
                               </label>
                             </div>
                             <div class="form-check">
-                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                              <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault2" checked>
                               <label class="form-check-label" for="flexRadioDefault2">
-                              4
+                                4
                               </label>
                             </div>
                           </td>
                           <td>
                             <div class="col-md-3">
-                            
+
                               <div id="weeklyrange" class="form-control singleDatePicker">
                                 <span></span>
                                 <img src="../echart/images/calIcon.svg" alt="" />
                               </div>
                             </div>
-                            
+
                           </td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
-                  
+
                 </div>
               </div>
               <div class="row ">
@@ -965,56 +1007,255 @@
                   <label for="" class="label h2-tags">Surgical Procedure<sup>*</sup></label>
                   <p class="text-red">*This is required field.</p>
                   <div class="table-responsive">
-                    
-                      <table class="table table-type-1">
-                        <thead>
-                          <tr class="header-row">
-                            <th scope="col"><input type="checkbox"></th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Date</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                           
-                            <td><input type="checkbox"></td>
-                            <td> <div class="col-md-6">
-                              <input type="text" class="form-control border-hide" value="Abrasion, left knee, initial encounter">
+
+                    <table class="table table-type-1">
+                      <thead>
+                        <tr class="header-row">
+                          <th scope="col"><input type="checkbox"></th>
+                          <th scope="col">Description</th>
+                          <th scope="col">Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+
+                          <td><input type="checkbox"></td>
+                          <td>
+                            <div class="col-md-6">
+                              <input type="text" class="form-control border-hide"
+                                value="Abrasion, left knee, initial encounter">
                             </div>
                           </td>
-                            <td><div id="weeklyrange" class="form-control singleDatePicker">
+                          <td>
+                            <div id="weeklyrange" class="form-control singleDatePicker">
                               <span></span>
                               <img src="../echart/images/calIcon.svg" alt="" />
-                            </div></td>
-                          </tr>
-                          <tr>
-                            <td><input type="checkbox"></td>
-                            <td> <div class="col-md-6">
-                              <input type="text" class="form-control border-hide" value="Abrasion, left knee, initial encounter">
                             </div>
                           </td>
-                            <td><div id="weeklyrange" class="form-control singleDatePicker">
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>
+                            <div class="col-md-6">
+                              <input type="text" class="form-control border-hide"
+                                value="Abrasion, left knee, initial encounter">
+                            </div>
+                          </td>
+                          <td>
+                            <div id="weeklyrange" class="form-control singleDatePicker">
                               <span></span>
                               <img src="../echart/images/calIcon.svg" alt="" />
-                            </div></td>
-                          </tr>
-                         
-                        </tbody>
-                      </table>
-                    </div>
-                    
+                            </div>
+                          </td>
+                        </tr>
+
+                      </tbody>
+                    </table>
                   </div>
+
+                </div>
               </div>
               <div class="row">
                 <label for="" class="label h2-tags">Other Diagnosis <sup>*</sup></label>
-                
+
               </div>
 
 
 
+            </div>
+
+            <!-- edit dignosis ends -->
+
+
           </div>
-          
-          <!-- edit dignosis ends -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Split schedule Popup -->
+  <div class="modal" tabindex="-1" id="splitSchedule-Modal">
+    <div class="modal-dialog custom-modal-1 modal-dialog-scrollable splitSchedule">
+      <div class="modal-content overflow-auto">
+        <div class="modal-header bg-lightblue">
+          <h5 class="modal-title">Split Schedule</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-3">
+          <div class="schedule-container">
+            <h2 class="fw-medium h2-tags">Split Schedule</h2>
+            <div class="custom-border">
+              <div class="row ">
+                <div class="col-md-12 checkbox-group">
+                  <label for="" class="label h2-tags">Split Schedule<sup>*</sup></label>
+                  <p class="text-red">*This is required field.</p>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="client" value="client"
+                      name="client-other">
+
+                    <label class="form-check-label" for="client">Split In Invoice</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="other" value="other"
+                      name="client-other">
+                    <label class="form-check-label" for="other">Split In Payroll</label>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <label for="" class="label">Number of Split Schedules</label>
+                  <select class="single-select">
+                    <option disabled selected>Select Number</option>
+                    <option>Number 1</option>
+                    <option>Number 2</option>
+                    <option>Number 3</option>
+                    <option>Number 4</option>
+                  </select>
+                  <p class="error text-red">*This is required field.</p>
+                </div>
+              </div>
+              <hr class="custom-hr my-3">
+              <div class="table-responsive">
+                <table class="table table-striped table-type-1">
+                  <thead>
+                    <tr>
+                      <th>Payer</th>
+                      <th>HCPCS & Modifiers</th>
+                      <th>Minutes</th>
+                      <th>Payer</th>
+                      <th>Service</th>
+                      <th>Billable </th>
+                      <th>Payable</th>
+                      <th>Lost Revenue </th>
+                      <th>Non Billable Reason</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>01/01/2023</td>
+                      <td>04:54-04:55 AM</td>
+                      <td>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input largerCheckbox radio" type="checkbox" id="client"
+                            value="client" name="client-other">
+                          <label class="form-check-label" for="client">01</label>
+                        </div>
+                      </td>
+                      <td>
+                        <select class="single-select">
+                          <option selected>Select</option>
+                          <option>Select 1</option>
+                          <option>Select 2</option>
+                          <option>Select 3</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select class="single-select">
+                          <option selected>Select</option>
+                          <option>Select 1</option>
+                          <option>Select 2</option>
+                          <option>Select 3</option>
+                        </select>
+                      </td>
+                      <td>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input largerCheckbox radio" type="checkbox" id="client"
+                            value="client" name="client-other">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input largerCheckbox radio" type="checkbox" id="client"
+                            value="client" name="client-other">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input largerCheckbox radio" type="checkbox" id="client"
+                            value="client" name="client-other">
+                        </div>
+                      </td>
+                      <td class="custom-center">
+                        <select class="single-select">
+                          <option selected>Select</option>
+                          <option>Select 1</option>
+                          <option>Select 2</option>
+                          <option>Select 3</option>
+                        </select>
+
+                        <span>Lorem ipsum</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>01/01/2023</td>
+                      <td>04:54-04:55 AM</td>
+                      <td>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input largerCheckbox radio" type="checkbox" id="client"
+                            value="client" name="client-other">
+                          <label class="form-check-label" for="client">01</label>
+                        </div>
+                      </td>
+                      <td>
+                        <select class="single-select">
+                          <option selected>Select</option>
+                          <option>Select 1</option>
+                          <option>Select 2</option>
+                          <option>Select 3</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select class="single-select">
+                          <option selected>Select</option>
+                          <option>Select 1</option>
+                          <option>Select 2</option>
+                          <option>Select 3</option>
+                        </select>
+                      </td>
+                      <td>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input largerCheckbox radio" type="checkbox" id="client"
+                            value="client" name="client-other">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input largerCheckbox radio" type="checkbox" id="client"
+                            value="client" name="client-other">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input largerCheckbox radio" type="checkbox" id="client"
+                            value="client" name="client-other">
+                        </div>
+                      </td>
+                      <td class="custom-center">
+                        <select class="single-select">
+                          <option selected>Select</option>
+                          <option>Select 1</option>
+                          <option>Select 2</option>
+                          <option>Select 3</option>
+                        </select>
+                        <span>Lorem ipsum</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="comment-container">
+                <h2 class="fw-medium plus-icon hide-toggle h2-tags">Comments</h2>
+                <textarea class="contact-comment hidden" placeholder="Type Here..." rows="4" cols="50"></textarea>
+              </div>
+            </div>
+
+          </div>
 
 
         </div>
@@ -1027,6 +1268,166 @@
       </div>
     </div>
   </div>
+
+  <!-- Split schedule pop -->
+
+  <!--edit diagnosis popup start  -->
+
+  <div class="modal" tabindex="-1" id="editDiagnosis-Modal">
+    <div class="modal-dialog custom-modal-1 modal-dialog-scrollable editDiagnosis">
+      <div class="modal-content overflow-auto">
+        <div class="modal-header bg-lightblue">
+          <h5 class="modal-title">Edit Diagnosis</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-3">
+          <div class="row ">
+                <div class="col-md-12 checkbox-group">
+                  <label for="" class="label h2-tags">Primary Diagnosis<sup>*</sup></label>
+                  <p class="text-red">*This is required field.</p>
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-striped table-type-1">
+                  <thead>
+                    <tr>
+                      <th>Description</th>
+                      <th>Severity Level</th>
+                      <th>Date </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="col-md-6">
+                          <input type="text" class="form-control border-hide"
+                            value="Abrasion, left knee, initial encounter">
+                        </div>
+                      </td>
+                      <td class="d-flex">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                          <label class="form-check-label" for="flexRadioDefault1">
+                            1
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                            checked>
+                          <label class="form-check-label" for="flexRadioDefault2">
+                            2
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                            checked>
+                          <label class="form-check-label" for="flexRadioDefault2">
+                            3
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                            checked>
+                          <label class="form-check-label" for="flexRadioDefault2">
+                            4
+                          </label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="col-md-3">
+
+                          <div id="weeklyrange" class="form-control singleDatePicker">
+                            <span></span>
+                            <img src="../echart/images/calIcon.svg" alt="" />
+                          </div>
+                        </div>
+
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row ">
+                <div class="col-md-12">
+                  <label for="" class="label h2-tags">Surgical Procedure<sup>*</sup></label>
+                  <p class="text-red">*This is required field.</p>
+                  <div class="table-responsive">
+
+                    <table class="table table-type-1">
+                      <thead>
+                        <tr class="header-row">
+                          <th scope="col">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                              <label class="form-check-label" for="flexCheckDefault">
+                                Description
+                              </label>
+                            </div>
+                          </th>
+                          <th scope="col">Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+
+                          <td><input type="checkbox"></td>
+                          <td>
+                            <div class="col-md-6">
+                              <input type="text" class="form-control border-hide"
+                                value="Abrasion, left knee, initial encounter">
+                            </div>
+                          </td>
+                          <td>
+                            <div id="weeklyrange" class="form-control singleDatePicker">
+                              <span></span>
+                              <img src="../echart/images/calIcon.svg" alt="" />
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"></td>
+                          <td>
+                            <div class="col-md-6">
+                              <input type="text" class="form-control border-hide"
+                                value="Abrasion, left knee, initial encounter">
+                            </div>
+                          </td>
+                          <td>
+                            <div id="weeklyrange" class="form-control singleDatePicker">
+                              <span></span>
+                              <img src="../echart/images/calIcon.svg" alt="" />
+                            </div>
+                          </td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+
+                </div>
+              </div>
+              <div class="row">
+                <label for="" class="label h2-tags">Other Diagnosis <sup>*</sup></label>
+
+              </div>
+
+          
+
+       
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">
+            Close
+          </button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--edit diagnosis popup end  -->
 
   <!-- JavaScript -->
   <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -1113,13 +1514,13 @@
     const nameInput = document.getElementById('nameInput');
     nameInput.addEventListener('input', function () {
       const nameError = document.getElementById('errorTxt');
-      nameError.style.display = nameInput.value.trim() === '' ? 'block' : 'none'; 
+      nameError.style.display = nameInput.value.trim() === '' ? 'block' : 'none';
     });
 
 
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
       if (event.target.classList.contains('hide-toggle')) {
-        
+
         var textarea = event.target.nextElementSibling;
         textarea.classList.toggle('hidden');
       }
