@@ -12,4 +12,70 @@
     }
 }
 
-@media (max-width:420px) {}
+@media (max-width:420px) {
+
+
+    .title {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 21px;
+        letter-spacing: 0em;
+
+
+    }
+
+    .info-bar {
+        margin-top: 0;
+        line-height: 20px
+    }
+
+    .container-1 {
+        width: 100%;
+
+    }
+
+    .mfs-height {
+        padding: 16px;
+    }
+
+    .btn-primary,
+    .btn-outline-primary {
+        width: 50%;
+        padding: 9px 20px;
+        border-radius: 4px;
+    }
+
+    .mob-arrow {
+        width: 28px;
+        height: 27px;
+        border-radius: 3px;
+        background-color: #2134491A;
+    }
+
+    .title-details {
+        padding: 20px 20px 0 20px;
+    }
+
+    #client-info {
+        height: 203px;
+    }
+
+    .info-label {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .info-detail {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    
+
+}

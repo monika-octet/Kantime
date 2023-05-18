@@ -43,11 +43,14 @@
               ‘check-in’ button</span>
           </div>
           <div class="bg-white">
-            <div class="col-md-12">
-              <div class="title-details">
+            <div class="col-md-12"  id="client-info">
+              <div class=" title-details d-flex justify-content-between align-items-center">
                 <h2>Patient Details</h2>
+                <div class="mob-arrow d-sm-none d-flex justify-content-center align-items-center" onclick="increaseWidth()"  id="arrow-icon">
+                  <img src="../echart//images/arrowIcon.svg" alt="arrow icon" />
+                </div>
               </div>
-              <div class="p-20 mt-15 data-grid-1">
+              <div class="p-20 mt-15 data-grid-1 ">
                 <div>
                   <p class="info-label">Client Name</p>
                   <p class="info-detail">John Doe</p>
@@ -83,7 +86,7 @@
                 </div>
                 <div class="row mt-4">
                   <div class="col-md-12 checkbox-group">
-                    <label for="" class="label">Check In Treatment Location<sup>*</sup></label>
+                    <label for="" class="label mb-5">Check In Treatment Location<sup>*</sup></label>
                     <p class="error text-red">*This is required field.</p>
                     <div class="form-check form-check-inline">
                       <input class="form-check-input largerCheckbox radio" type="checkbox" id="client" value="client"
@@ -107,7 +110,7 @@
                   </div>
                 </div>
                 <div class="row mt-4 d-none jq-other-info">
-                  <div class="col-md-6 w-60">
+                  <div class="col-md-8">
                     <label for="" class="label">Location</label>
                     <select class="single-select">
                       <option class="d-none" disabled selected>Select Location</option>
@@ -235,6 +238,36 @@
 dropdownToggle.addEventListener('click', function() {
   this.classList.toggle('active');
 });
+
+
+// RESPONSIVE SCRIPT
+
+// Script to icnrease the height of Patient details div on arrow click
+
+function increaseWidth() {
+  var divElement = document.getElementById("client-info");
+  var newHeight = divElement.offsetHeight; 
+
+  divElement.style.height = newHeight + "px";
+}
+
+$(document).ready(function() {
+  var divElement = $("#client-info");
+  var originalHeight = divElement.height();
+  var isTall = false;
+
+  $("#arrow-icon").click(function() {
+    if (isTall) {
+      divElement.height(originalHeight);
+      isTall = false;
+    } else {
+      divElement.height(432);
+      isTall = true;
+    }
+  });
+});
+
+
 
 
   </script>
