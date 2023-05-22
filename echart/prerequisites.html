@@ -32,13 +32,17 @@
 <body>
   <header>
     <div class="d-flex justify-content-between align-items-center border-bottom">
-      <div class="d-flex  ">
+      <div class="d-flex align-items-center ">
         <div class="title px-3">SN Pediatric Supervisory Note VN - 116</div>
-        <div class="green-tag fw-medium">Open</div>
+        <div class="green-tag fw-medium">
+          <span>Open</span>
+        </div>
       </div>
       <div class="d-flex align-items-center">
-        <span class="ms-3">Auto Saved <b>2 mins ago</b></span>
-        <a href="#" class="btn btn-primary ms-3">Submit to QA</a>
+        <span class="ms-3 d-none d-md-block">Auto Saved <b>2 mins ago</b></span>
+        <!-- <a href="#" class="btn btn-primary ms-3 d-none d-md-block">Submit to QA</a> -->
+        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#completeDoc-Modal"
+        class="btn btn-primary ms-3 d-none d-md-block">Submit to QA</a>
         <div class="dropdown ms-3">
           <button class="btn btn-dot dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
             aria-expanded="false">
@@ -73,12 +77,12 @@
     </div>
   </header>
   <main class="timesheet-wrap">
-    <section class="sticky-0">
+    <section class="sticky-0 d-none d-md-block">
       <h3 class="sidebar-title">
         <img src="images/check2.svg" alt="" class="me-1" />
-         <a class="timesheet-info-link" href="patient-info.html">Patient & Timesheet Info
+        <a class="timesheet-info-link" href="patient-info.html">Patient & Timesheet Info
 
-         </a>
+        </a>
       </h3>
       <ul class="sidebar-menu">
         <li class="has-subchild active">
@@ -456,13 +460,14 @@
                   <label for="" class="label h2-tags">Were there any incidents like - ER Visit, Fall, Medication Problem
                     etc.?</label>
                   <div class="form-check form-check-inline">
-                    <input checked class="form-check-input largerCheckbox radio" type="checkbox" id="yes" value="yes"
-                      name="yes" />
-                    <label class="form-check-label" for="yes">Yes</label>
+                    <input checked class="form-check-input largerCheckbox radio" type="checkbox" id="yesIncident"
+                      value="" name="yesIncident" />
+                    <label class="form-check-label" for="yesIncident">Yes</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="no" value="no" name="No" />
-                    <label class="form-check-label" for="no">No</label>
+                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="noIncident"
+                      value="noIncident" name="NoIncident" />
+                    <label class="form-check-label" for="noIncident">No</label>
                   </div>
                 </div>
                 <div class="row mt-4 ">
@@ -476,13 +481,14 @@
                 <div class="col-md-12 checkbox-group">
                   <label for="" class="label h2-tags">Has a fall or near fall occurred from the last visit?</label>
                   <div class="form-check form-check-inline">
-                    <input checked class="form-check-input largerCheckbox radio" type="checkbox" id="yes" value="yes"
-                      name="Yes" />
-                    <label class="form-check-label" for="yes">Yes</label>
+                    <input checked class="form-check-input largerCheckbox radio" type="checkbox" id="yesFall" value=""
+                      name="YesFall" />
+                    <label class="form-check-label" for="yesFall">Yes</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="no" value="no" name="No" />
-                    <label class="form-check-label" for="no">No</label>
+                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="noFall" value=""
+                      name="NoFall" />
+                    <label class="form-check-label" for="noFall">No</label>
                   </div>
                 </div>
                 <div class="row mt-4 ">
@@ -493,30 +499,29 @@
 
               <hr class="custom-hr mt-10 mb-10" />
 
-              <div class="row">
-                <label for="" class="label h2-tags">Has a fall or near fall occurred from the last
-                  visit?<sup>*</sup></label>
+              <div class=" row">
+                <label for="" class="label h2-tags">Acuity Level</label>
                 <p class="text-red">*This is required field.</p>
-                <div class="d-flex gap-40">
-                  <div class="form-check">
+                <div class="d-flex row col-md-7">
+                  <div class="col-5 col-md-2 form-check">
                     <input class="form-check-input" type="radio" name="flexRadioDefault">
                     <label class="form-check-label" for="flexRadioDefault1">
                       1 - RED
                     </label>
                   </div>
-                  <div class="form-check">
+                  <div class="col-6 col-md-2 form-check">
                     <input class="form-check-input" type="radio" name="flexRadioDefault">
                     <label class="form-check-label" for="flexRadioDefault2">
                       2 - ORANGE
                     </label>
                   </div>
-                  <div class="form-check">
+                  <div class="col-5 col-md-2 form-check">
                     <input class="form-check-input" type="radio" name="flexRadioDefault">
                     <label class="form-check-label" for="flexRadioDefault2">
                       3 - YELLOW
                     </label>
                   </div>
-                  <div class="form-check">
+                  <div class="col-6 col-md-2 form-check">
                     <input class="form-check-input" type="radio" name="flexRadioDefault">
                     <label class="form-check-label" for="flexRadioDefault2">
                       4 - GREEN
@@ -529,20 +534,20 @@
               <div class="row">
                 <label for="" class="label h2-tags">Transportation Assistance Level<sup>*</sup></label>
                 <p class="text-red">*This is required field.</p>
-                <div class="d-flex gap-40">
-                  <div class="form-check">
+                <div class="d-flex row col-md-6">
+                  <div class="col-12 col-md-4 form-check">
                     <input class="form-check-input" type="radio" name="flexRadioDefault">
                     <label class="form-check-label" for="flexRadioDefault1">
                       Non-ambulatory [TAL–1]
                     </label>
                   </div>
-                  <div class="form-check">
+                  <div class="col-12 col-md-4 form-check">
                     <input class="form-check-input" type="radio" name="flexRadioDefault">
                     <label class="form-check-label" for="flexRadioDefault2">
                       Wheelchair [TAL–2]
                     </label>
                   </div>
-                  <div class="form-check">
+                  <div class="col-12 col-md-4 form-check">
                     <input class="form-check-input" type="radio" name="flexRadioDefault">
                     <label class="form-check-label" for="flexRadioDefault2">
                       Ambulatory [TAL-3]
@@ -555,7 +560,7 @@
               <div class="row ">
                 <label for="" class="label h2-tags">Patient Identification was done with<sup>*</sup></label>
                 <p class="text-red">*This is required field.</p>
-                <div class="col-md-12 checkbox-group checkbox-group-w1">
+                <div class="col-md-12 checkbox-group checkbox-group-w1 custom-grid-responsive">
                   <div class="form-check form-check-inline flex-items">
                     <input checked class="form-check-input largerCheckbox radio" type="checkbox" id="fullName"
                       value="fullName" name="fullName" />
@@ -607,17 +612,17 @@
                   <label for="" class="label h2-tags">Language Interpreter was used <sup>*</sup></label>
                   <p class="text-red">*This is required field.</p>
                   <div class="form-check form-check-inline">
-                    <input checked class="form-check-input largerCheckbox radio" type="checkbox" id="no" value="no"
-                      name="no" />
-                    <label class="form-check-label" for="no">No</label>
+                    <input checked class="form-check-input largerCheckbox lang-used radio" type="checkbox"
+                      id="noInterpreter" value="" name="noInterpreter" />
+                    <label class="form-check-label" for="noInterpreter">No</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="Yes" value="Yes"
-                      name="Yes" />
-                    <label class="form-check-label" for="Yes">Yes</label>
+                    <input class="form-check-input largerCheckbox lang-used radio" type="checkbox" id="YesInterpreter"
+                      value="YesInterpreter" name="YesInterpreter" />
+                    <label class="form-check-label" for="YesInterpreter">Yes</label>
                   </div>
                 </div>
-                <div class="row">
+                <div class="row  enter-lang">
                   <div class="col-md-4 d-none">
                     <input type="text" class="form-control " placeholder="Enter Language" />
                   </div>
@@ -754,130 +759,130 @@
                 <label for="" class=" sub-section-header">CARDIOVASCULAR<sup>*</sup></label>
                 <p class="text-red">*This is required field.</p>
                 <div class="custom-border mb-25">
-                <div class="row">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="">
-                    <label class="form-check-label h2-tags" for="">
-                      Central line Site Intact
-                    </label>
-                  </div>
-                </div>
-
-                <hr class="custom-hr mt-10 mb-10" />
-
-                <div class="row">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="">
-                    <label class="form-check-label h2-tags" for="">
-                      HR
-                    </label>
-                  </div>
-                  <div class="d-flex gap-40">
+                  <div class="row">
                     <div class="form-check">
-                      <input class="form-check-input radio-small" type="radio" name="flexRadioDefault">
-                      <label class="form-check-label">
-                        Regular
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input radio-small" type="radio" name="flexRadioDefault">
-                      <label class="form-check-label">
-                        Iregular
+                      <input class="form-check-input" type="checkbox" value="">
+                      <label class="form-check-label h2-tags" for="">
+                        Central line Site Intact
                       </label>
                     </div>
                   </div>
-                </div>
 
-                <hr class="custom-hr mt-10 mb-10" />
+                  <hr class="custom-hr mt-10 mb-10" />
 
-                <div class="row">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="">
-                    <label class="form-check-label h2-tags" for="">
-                      Cap Refill
-                    </label>
-                  </div>
-                  <div class="d-flex gap-40">
+                  <div class="row">
                     <div class="form-check">
-                      <input class="form-check-input radio-small" type="radio" name="flexRadioDefault">
-                      <label class="form-check-label">
-                        &lt; 3 Sec
+                      <input class="form-check-input" type="checkbox" value="">
+                      <label class="form-check-label h2-tags" for="">
+                        HR
                       </label>
                     </div>
-                    <div class="form-check">
-                      <input class="form-check-input radio-small" type="radio" name="flexRadioDefault">
-                      <label class="form-check-label">
-                        &gt; 3 Sec
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <hr class="custom-hr mt-10 mb-10" />
-
-                <div class="row">
-                  <div class="col-md-12 checkbox-group">
-                    <div class="form-check form-check-inline">
-                      <input checked class="form-check-input largerCheckbox radio" type="checkbox" id="poorEndurance"
-                        value="poorEndurance" name="poorEndurance" />
-                      <label class="form-check-label" for="poorEndurance">Poor Endurance</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input checked class="form-check-input largerCheckbox radio" type="checkbox" id="PPP" value="PPP"
-                        name="PPP" />
-                      <label class="form-check-label" for="PPP">PPP</label>
+                    <div class="d-flex gap-40">
+                      <div class="form-check">
+                        <input class="form-check-input radio-small" type="radio" name="flexRadioDefault">
+                        <label class="form-check-label">
+                          Regular
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input radio-small" type="radio" name="flexRadioDefault">
+                        <label class="form-check-label">
+                          Iregular
+                        </label>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <hr class="custom-hr mt-10 mb-10" />
+                  <hr class="custom-hr mt-10 mb-10" />
 
-                <div class="row">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="">
-                    <label class="form-check-label h2-tags" for="">
-                      Edema: None/SlightStandard Precautions Observed
-                    </label>
-                  </div>
-                  <div class="d-flex gap-40">
+                  <div class="row">
                     <div class="form-check">
-                      <input class="form-check-input radio-small" type="radio">
-                      <label class="form-check-label">
-                        1+
+                      <input class="form-check-input" type="checkbox" value="">
+                      <label class="form-check-label h2-tags" for="">
+                        Cap Refill
                       </label>
                     </div>
-                    <div class="form-check">
-                      <input class="form-check-input radio-small" type="radio">
-                      <label class="form-check-label">
-                        2+
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input radio-small" type="radio">
-                      <label class="form-check-label">
-                        3+
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input radio-small" type="radio">
-                      <label class="form-check-label">
-                        4+
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input radio-small" type="radio">
-                      <label class="form-check-label">
-                        5+
-                      </label>
+                    <div class="d-flex gap-40">
+                      <div class="form-check">
+                        <input class="form-check-input radio-small" type="radio" name="flexRadioDefault">
+                        <label class="form-check-label">
+                          &lt; 3 Sec
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input radio-small" type="radio" name="flexRadioDefault">
+                        <label class="form-check-label">
+                          &gt; 3 Sec
+                        </label>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <hr class="custom-hr mt-10 mb-10" />
+                  <hr class="custom-hr mt-10 mb-10" />
 
-                <div class="comment-container col-md-8">
-                  <h2 class="fw-medium plus-icon hide-toggle">Comments</h2>
-                  <textarea class="contact-comment hidden w-100" placeholder="Type Here..." rows="4"
-                    cols="50"></textarea>
-                </div>
+                  <div class="row">
+                    <div class="col-md-12 checkbox-group">
+                      <div class="form-check form-check-inline">
+                        <input checked class="form-check-input largerCheckbox radio" type="checkbox" id="poorEndurance"
+                          value="poorEndurance" name="poorEndurance" />
+                        <label class="form-check-label" for="poorEndurance">Poor Endurance</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input checked class="form-check-input largerCheckbox radio" type="checkbox" id="PPP"
+                          value="PPP" name="PPP" />
+                        <label class="form-check-label" for="PPP">PPP</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="custom-hr mt-10 mb-10" />
+
+                  <div class="row">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="">
+                      <label class="form-check-label h2-tags" for="">
+                        Edema: None/SlightStandard Precautions Observed
+                      </label>
+                    </div>
+                    <div class="d-flex gap-40">
+                      <div class="form-check">
+                        <input class="form-check-input radio-small" type="radio">
+                        <label class="form-check-label">
+                          1+
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input radio-small" type="radio">
+                        <label class="form-check-label">
+                          2+
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input radio-small" type="radio">
+                        <label class="form-check-label">
+                          3+
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input radio-small" type="radio">
+                        <label class="form-check-label">
+                          4+
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input radio-small" type="radio">
+                        <label class="form-check-label">
+                          5+
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="custom-hr mt-10 mb-10" />
+
+                  <div class="comment-container col-md-8">
+                    <h2 class="fw-medium plus-icon hide-toggle">Comments</h2>
+                    <textarea class="contact-comment hidden w-100" placeholder="Type Here..." rows="4"
+                      cols="50"></textarea>
+                  </div>
                 </div>
               </div>
 
@@ -886,80 +891,80 @@
                 <label for="" class=" sub-section-header ">NEUROLOGICAL<sup>*</sup></label>
                 <p class="text-red">*This is required field.</p>
                 <div class="custom-border mb-25">
-                <div class="col-md-12 checkbox-group checkbox-group-w2">
-                  <div class="form-check form-check-inline flex-items">
-                    <input checked class="form-check-input largerCheckbox radio" type="checkbox" id="alert"
-                      value="alert" name="alert" />
-                    <label class="form-check-label" for="alert">Alert</label>
-                  </div>
-                  <div class="form-check form-check-inline flex-items">
-                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="awake" value="awake"
-                      name="awake" />
-                    <label class="form-check-label" for="awake">Awake</label>
-                  </div>
-                  <div class="form-check form-check-inline flex-items">
-                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="oriented" value="oriented"
-                      name="oriented" />
-                    <label class="form-check-label" for="oriented">Oriented</label>
-                  </div>
-                  <div class="form-check form-check-inline flex-items">
-                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="disoriented"
-                      value="disoriented" name="disoriented" />
-                    <label class="form-check-label" for="disoriented">Disoriented</label>
-                  </div>
-                  <div class="form-check form-check-inline flex-items">
-                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="perrla" value="perrla"
-                      name="perrla" />
-                    <label class="form-check-label" for="perrla">PERRLA</label>
-                  </div>
-                  <div class="form-check form-check-inline flex-items">
-                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="blindness"
-                      value="blindness" name="blindness" />
-                    <label class="form-check-label" for="blindness">Blindness </label>
-                  </div>
-                  <div class="form-check form-check-inline flex-items">
-                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="unableToSee"
-                      value="unableToSee" name="unableToSee" />
-                    <label class="form-check-label" for="unableToSee">Unable to assess</label>
-                  </div>
-                  <div class="form-check form-check-inline flex-items">
-                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="VisionImpared"
-                      value="VisionImpared" name="VisionImpared" />
-                    <label class="form-check-label" for="VisionImpared">Vision Impaired</label>
-                  </div>
+                  <div class="col-md-12 checkbox-group checkbox-group-w2">
+                    <div class="form-check form-check-inline flex-items">
+                      <input checked class="form-check-input largerCheckbox radio" type="checkbox" id="alert"
+                        value="alert" name="alert" />
+                      <label class="form-check-label" for="alert">Alert</label>
+                    </div>
+                    <div class="form-check form-check-inline flex-items">
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="awake" value="awake"
+                        name="awake" />
+                      <label class="form-check-label" for="awake">Awake</label>
+                    </div>
+                    <div class="form-check form-check-inline flex-items">
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="oriented"
+                        value="oriented" name="oriented" />
+                      <label class="form-check-label" for="oriented">Oriented</label>
+                    </div>
+                    <div class="form-check form-check-inline flex-items">
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="disoriented"
+                        value="disoriented" name="disoriented" />
+                      <label class="form-check-label" for="disoriented">Disoriented</label>
+                    </div>
+                    <div class="form-check form-check-inline flex-items">
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="perrla" value="perrla"
+                        name="perrla" />
+                      <label class="form-check-label" for="perrla">PERRLA</label>
+                    </div>
+                    <div class="form-check form-check-inline flex-items">
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="blindness"
+                        value="blindness" name="blindness" />
+                      <label class="form-check-label" for="blindness">Blindness </label>
+                    </div>
+                    <div class="form-check form-check-inline flex-items">
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="unableToSee"
+                        value="unableToSee" name="unableToSee" />
+                      <label class="form-check-label" for="unableToSee">Unable to assess</label>
+                    </div>
+                    <div class="form-check form-check-inline flex-items">
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="VisionImpared"
+                        value="VisionImpared" name="VisionImpared" />
+                      <label class="form-check-label" for="VisionImpared">Vision Impaired</label>
+                    </div>
 
-                  <div class="form-check form-check-inline flex-items">
-                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="paralysis"
-                      value="paralysis" name="paralysis" />
-                    <label class="form-check-label" for="paralysis">Paralysis</label>
+                    <div class="form-check form-check-inline flex-items">
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="paralysis"
+                        value="paralysis" name="paralysis" />
+                      <label class="form-check-label" for="paralysis">Paralysis</label>
+                    </div>
+
+                    <div class="form-check form-check-inline flex-items">
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="deaf" value="deaf"
+                        name="deaf" />
+                      <label class="form-check-label" for="deaf  ">Deaf</label>
+                    </div>
+
+                    <div class="form-check form-check-inline flex-items">
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="seizures"
+                        value="seizures" name="seizures" />
+                      <label class="form-check-label" for="seizures">Seizures</label>
+                    </div>
+
+                    <div class="form-check form-check-inline flex-items">
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="ostomy"
+                        value="developmentDelay" name="developmentDelay" />
+                      <label class="form-check-label" for="developmentDelay">Developmental delay </label>
+                    </div>
+
+
                   </div>
-
-                  <div class="form-check form-check-inline flex-items">
-                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="deaf" value="deaf"
-                      name="deaf" />
-                    <label class="form-check-label" for="deaf  ">Deaf</label>
+                  <hr class="custom-hr mt-10 mb-10" />
+                  <div class="comment-container col-md-8">
+                    <h2 class="fw-medium plus-icon hide-toggle">Comments</h2>
+                    <textarea class="contact-comment hidden w-100" placeholder="Type Here..." rows="4"
+                      cols="50"></textarea>
                   </div>
-
-                  <div class="form-check form-check-inline flex-items">
-                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="seizures" value="seizures"
-                      name="seizures" />
-                    <label class="form-check-label" for="seizures">Seizures</label>
-                  </div>
-
-                  <div class="form-check form-check-inline flex-items">
-                    <input class="form-check-input largerCheckbox radio" type="checkbox" id="ostomy"
-                      value="developmentDelay" name="developmentDelay" />
-                    <label class="form-check-label" for="developmentDelay">Developmental delay </label>
-                  </div>
-
-
-                </div>
-                <hr class="custom-hr mt-10 mb-10" />
-                <div class="comment-container col-md-8">
-                  <h2 class="fw-medium plus-icon hide-toggle">Comments</h2>
-                  <textarea class="contact-comment hidden w-100" placeholder="Type Here..." rows="4"
-                    cols="50"></textarea>
-                </div>
                 </div>
               </div>
 
@@ -969,107 +974,107 @@
                 <label for="" class=" sub-section-header ">MUSCULO SKELETAL<sup>*</sup></label>
                 <p class="text-red">*This is required field.</p>
                 <div class="custom-border mb-25">
-                    <div class="col-md-12 checkbox-group d-flex gap-40">
+                  <div class="col-md-12 checkbox-group d-flex gap-40">
                     <div class="form-check form-check-inline flex-items">
-                        <input checked class="form-check-input largerCheckbox radio" type="checkbox" id="gait" value="gait"
-                        name="gait" />
-                        <label class="form-check-label" for="gait">Gait</label>
+                      <input checked class="form-check-input largerCheckbox radio" type="checkbox" id="gait"
+                        value="gait" name="gait" />
+                      <label class="form-check-label" for="gait">Gait</label>
                     </div>
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="nonAmbulatory"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="nonAmbulatory"
                         value="nonAmbulatory" name="nonAmbulatory" />
-                        <label class="form-check-label" for="nonAmbulatory">Non-ambulatory</label>
+                      <label class="form-check-label" for="nonAmbulatory">Non-ambulatory</label>
                     </div>
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="contractures"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="contractures"
                         value="contractures" name="contractures" />
-                        <label class="form-check-label" for="contractures">Contractures</label>
+                      <label class="form-check-label" for="contractures">Contractures</label>
                     </div>
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="ambulatoryAssitance"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="ambulatoryAssitance"
                         value="ambulatoryAssitance" name="ambulatoryAssitance" />
-                        <label class="form-check-label" for="ambulatoryAssitance">Ambulatory with Assistance</label>
+                      <label class="form-check-label" for="ambulatoryAssitance">Ambulatory with Assistance</label>
                     </div>
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="rom" value="rom"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="rom" value="rom"
                         name="rom" />
-                        <label class="form-check-label" for="rom">ROM Intact or Limited</label>
+                      <label class="form-check-label" for="rom">ROM Intact or Limited</label>
                     </div>
-                    </div>
-                    <hr class="custom-hr mt-10 mb-10" />
-                    <div class="d-flex gap-40">
+                  </div>
+                  <hr class="custom-hr mt-10 mb-10" />
+                  <div class="d-flex gap-40">
                     <div class="form-check">
-                        <input class="form-check-input radio-small" type="radio" name="flexRadioDefault">
-                        <label class="form-check-label">
+                      <input class="form-check-input radio-small" type="radio" name="flexRadioDefault">
+                      <label class="form-check-label">
                         Splints
-                        </label>
+                      </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input radio-small" type="radio" name="flexRadioDefault">
-                        <label class="form-check-label">
+                      <input class="form-check-input radio-small" type="radio" name="flexRadioDefault">
+                      <label class="form-check-label">
                         Cast
-                        </label>
+                      </label>
                     </div>
-                    </div>
-                    <hr class="custom-hr mt-10 mb-10" />
-                    <div class="col-md-12 checkbox-group d-flex gap-40">
+                  </div>
+                  <hr class="custom-hr mt-10 mb-10" />
+                  <div class="col-md-12 checkbox-group d-flex gap-40">
                     <div class="form-check form-check-inline flex-items">
-                        <input checked class="form-check-input largerCheckbox radio" type="checkbox" id="spasticity"
+                      <input checked class="form-check-input largerCheckbox radio" type="checkbox" id="spasticity"
                         value="spasticity" name="spasticity" />
-                        <label class="form-check-label" for="gait">Spasticity</label>
+                      <label class="form-check-label" for="gait">Spasticity</label>
                     </div>
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="fracture" value="fracture"
-                        name="fracture" />
-                        <label class="form-check-label" for="fracture">Fracture</label>
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="fracture"
+                        value="fracture" name="fracture" />
+                      <label class="form-check-label" for="fracture">Fracture</label>
                     </div>
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="AFO" value="AFO"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="AFO" value="AFO"
                         name="AFO" />
-                        <label class="form-check-label" for="AFO">AFO</label>
+                      <label class="form-check-label" for="AFO">AFO</label>
                     </div>
-                    </div>
-                    <hr class="custom-hr mt-10 mb-10" />
+                  </div>
+                  <hr class="custom-hr mt-10 mb-10" />
 
-                    <div class="col-md-12">
+                  <div class="col-md-12">
 
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <label class="form-check-label h2-tags" for="">
+                      <input class="form-check-input" type="checkbox" value="">
+                      <label class="form-check-label h2-tags" for="">
                         Requires Assistive Device
-                        </label>
+                      </label>
                     </div>
                     <div class="checkbox-group d-flex gap-40 ml-25">
-                        <div class="form-check form-check-inline flex-items">
+                      <div class="form-check form-check-inline flex-items">
                         <input checked class="form-check-input largerCheckbox radio" type="checkbox" id="cane"
-                            value="cane" name="cane" />
+                          value="cane" name="cane" />
                         <label class="form-check-label" for="cane">Cane</label>
-                        </div>
-                        <div class="form-check form-check-inline flex-items">
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
                         <input class="form-check-input largerCheckbox radio" type="checkbox" id="walker" value="walker"
-                            name="walker" />
+                          name="walker" />
                         <label class="form-check-label" for="walker">Walker</label>
-                        </div>
-                        <div class="form-check form-check-inline flex-items">
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
                         <input class="form-check-input largerCheckbox radio" type="checkbox" id="crutch" value="crutch"
-                            name="crutch" />
+                          name="crutch" />
                         <label class="form-check-label" for="crutch">Crutch(es)</label>
-                        </div>
-                        <div class="form-check form-check-inline flex-items">
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
                         <input class="form-check-input largerCheckbox radio" type="checkbox" id="wheelchair"
-                            value="wheelchair" name="wheelchair" />
+                          value="wheelchair" name="wheelchair" />
                         <label class="form-check-label" for="wheelchair">Wheelchair</label>
-                        </div>
+                      </div>
                     </div>
 
-                    </div>
+                  </div>
 
-                    <hr class="custom-hr mt-10 mb-10" />
-                    <div class="comment-container col-md-8">
+                  <hr class="custom-hr mt-10 mb-10" />
+                  <div class="comment-container col-md-8">
                     <h2 class="fw-medium plus-icon hide-toggle">Comments</h2>
                     <textarea class="contact-comment hidden w-100" placeholder="Type Here..." rows="4"
-                        cols="50"></textarea>
-                    </div>
+                      cols="50"></textarea>
+                  </div>
 
                 </div>
               </div>
@@ -1078,190 +1083,190 @@
                 <label for="" class=" sub-section-header ">PULMONARY<sup>*</sup></label>
                 <p class="text-red">*This is required field.</p>
                 <div class="custom-border mb-25">
-                    <div class="col-md-12">
+                  <div class="col-md-12">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <label class="form-check-label h2-tags" for="">
+                      <input class="form-check-input" type="checkbox" value="">
+                      <label class="form-check-label h2-tags" for="">
                         Clear Breath Sounds
-                        </label>
+                      </label>
                     </div>
                     <div class="checkbox-group d-flex gap-40 ml-25">
-                        <div class="form-check form-check-inline flex-items">
+                      <div class="form-check form-check-inline flex-items">
                         <input class="form-check-input largerCheckbox radio" type="checkbox" id="o2" value="o2"
-                            name="o2" />
+                          name="o2" />
                         <label class="form-check-label" for="o2">O2@</label>
-                        </div>
-                        <div class="form-check form-check-inline flex-items">
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
                         <input class="form-check-input largerCheckbox radio" type="checkbox" id="trach" value="trach"
-                            name="trach" />
+                          name="trach" />
                         <label class="form-check-label" for="trach">Trach</label>
-                        </div>
-                        <div class="form-check form-check-inline flex-items">
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
                         <input class="form-check-input largerCheckbox radio" type="checkbox" id="ltc" value="ltc"
-                            name="ltc" />
+                          name="ltc" />
                         <label class="form-check-label" for="ltc">Last Trach Changed</label>
-                        </div>
+                      </div>
                     </div>
-                    </div>
-                    <hr class="custom-hr mt-10 mb-10" />
-                    <div class="col-md-12 checkbox-group checkbox-group-w2 d-flex gap-20">
+                  </div>
+                  <hr class="custom-hr mt-10 mb-10" />
+                  <div class="col-md-12 checkbox-group checkbox-group-w2 d-flex gap-20">
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="wnl" value="wnl"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="wnl" value="wnl"
                         name="wnl" />
-                        <label class="form-check-label" for="wnl">Rate WNL</label>
+                      <label class="form-check-label" for="wnl">Rate WNL</label>
                     </div>
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="wnlRhythm"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="wnlRhythm"
                         value="wnlRhythm" name="wnlRhythm" />
-                        <label class="form-check-label" for="wnlRhythm">Rhythm WNL</label>
+                      <label class="form-check-label" for="wnlRhythm">Rhythm WNL</label>
                     </div>
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="retractions"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="retractions"
                         value="retractions" name="retractions" />
-                        <label class="form-check-label" for="retractions">Retractions</label>
+                      <label class="form-check-label" for="retractions">Retractions</label>
                     </div>
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="nasalFlaring"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="nasalFlaring"
                         value="nasalFlaring" name="nasalFlaring" />
-                        <label class="form-check-label" for="nasalFlaring">Nasal flaring</label>
+                      <label class="form-check-label" for="nasalFlaring">Nasal flaring</label>
                     </div>
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="rhonchi" value="rhonchi"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="rhonchi" value="rhonchi"
                         name="rhonchi" />
-                        <label class="form-check-label" for="rhonchi">Rhonchi</label>
+                      <label class="form-check-label" for="rhonchi">Rhonchi</label>
                     </div>
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="crackles" value="crackles"
-                        name="crackles" />
-                        <label class="form-check-label" for="crackles">Crackles</label>
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="crackles"
+                        value="crackles" name="crackles" />
+                      <label class="form-check-label" for="crackles">Crackles</label>
                     </div>
-                    </div>
-                    <hr class="custom-hr mt-10 mb-10" />
-                    <div class="col-md-12">
+                  </div>
+                  <hr class="custom-hr mt-10 mb-10" />
+                  <div class="col-md-12">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <label class="form-check-label h2-tags" for="">
+                      <input class="form-check-input" type="checkbox" value="">
+                      <label class="form-check-label h2-tags" for="">
                         Suctioning
-                        </label>
+                      </label>
                     </div>
                     <div class="checkbox-group d-flex gap-40 ml-25">
-                        <div class="form-check form-check-inline flex-items">
+                      <div class="form-check form-check-inline flex-items">
                         <input class="form-check-input largerCheckbox radio" type="checkbox" id="oral" value="oral"
-                            name="oral" />
+                          name="oral" />
                         <label class="form-check-label" for="oral">Oral</label>
-                        </div>
-                        <div class="form-check form-check-inline flex-items">
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
                         <input class="form-check-input largerCheckbox radio" type="checkbox" id="nasal" value="nasal"
-                            name="nasal" />
+                          name="nasal" />
                         <label class="form-check-label" for="nasal">Nasal</label>
-                        </div>
-                        <div class="form-check form-check-inline flex-items">
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
                         <input class="form-check-input largerCheckbox radio" type="checkbox" id="trach" value="trach"
-                            name="trach" />
+                          name="trach" />
                         <label class="form-check-label" for="trach">Trach</label>
-                        </div>
+                      </div>
                     </div>
-                    </div>
-                    <hr class="custom-hr mt-10 mb-10" />
-                    <div class="col-md-12 checkbox-group d-flex gap-40">
+                  </div>
+                  <hr class="custom-hr mt-10 mb-10" />
+                  <div class="col-md-12 checkbox-group d-flex gap-40">
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="nonPCough"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="nonPCough"
                         value="nonPCough" name="nonPCough" />
-                        <label class="form-check-label" for="nonPCough">Non-Prod. Cough</label>
+                      <label class="form-check-label" for="nonPCough">Non-Prod. Cough</label>
                     </div>
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="pCough" value="pCough"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="pCough" value="pCough"
                         name="pCough" />
-                        <label class="form-check-label" for="pCough">Prod. Cough</label>
+                      <label class="form-check-label" for="pCough">Prod. Cough</label>
                     </div>
-                    </div>
-                    <hr class="custom-hr mt-10 mb-10" />
-                    <div class="col-md-12">
+                  </div>
+                  <hr class="custom-hr mt-10 mb-10" />
+                  <div class="col-md-12">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <label class="form-check-label h2-tags" for="">
+                      <input class="form-check-input" type="checkbox" value="">
+                      <label class="form-check-label h2-tags" for="">
                         Sputum
-                        </label>
+                      </label>
                     </div>
                     <div class="d-flex gap-40 ml-25">
-                        <div class="form-check">
+                      <div class="form-check">
                         <input class="form-check-input radio-small" type="radio" id="c">
                         <label class="form-check-label" for="c">
-                            C
+                          C
                         </label>
-                        </div>
-                        <div class="form-check">
+                      </div>
+                      <div class="form-check">
                         <input class="form-check-input radio-small" type="radio" id="g">
                         <label class="form-check-label" for="g">
-                            G
+                          G
                         </label>
-                        </div>
-                        <div class="form-check">
+                      </div>
+                      <div class="form-check">
                         <input class="form-check-input radio-small" type="radio" id="y">
                         <label class="form-check-label" for="y">
-                            Y
+                          Y
                         </label>
-                        </div>
-                        <div class="form-check">
+                      </div>
+                      <div class="form-check">
                         <input class="form-check-input radio-small" type="radio" id="w">
                         <label class="form-check-label" for="w">
-                            W
+                          W
                         </label>
-                        </div>
+                      </div>
                     </div>
-                    </div>
-                    <hr class="custom-hr mt-10 mb-10" />
-                    <div class="col-md-12">
+                  </div>
+                  <hr class="custom-hr mt-10 mb-10" />
+                  <div class="col-md-12">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <label class="form-check-label h2-tags" for="">
+                      <input class="form-check-input" type="checkbox" value="">
+                      <label class="form-check-label h2-tags" for="">
                         Wheezing
-                        </label>
+                      </label>
                     </div>
                     <div class="d-flex gap-40 ml-25">
-                        <div class="form-check">
+                      <div class="form-check">
                         <input class="form-check-input radio-small" type="radio" id="expiratory">
                         <label class="form-check-label" for="expiratory">
-                            Expiratory
+                          Expiratory
                         </label>
-                        </div>
-                        <div class="form-check">
+                      </div>
+                      <div class="form-check">
                         <input class="form-check-input radio-small" type="radio" id="inspiratory">
                         <label class="form-check-label" for="inspiratory">
-                            Inspiratory
+                          Inspiratory
                         </label>
-                        </div>
+                      </div>
                     </div>
-                    </div>
-                    <hr class="custom-hr mt-10 mb-10" />
-                    <div class="col-md-12 checkbox-group d-flex gap-40">
+                  </div>
+                  <hr class="custom-hr mt-10 mb-10" />
+                  <div class="col-md-12 checkbox-group d-flex gap-40">
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="ventilator"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="ventilator"
                         value="ventilator" name="ventilator" />
-                        <label class="form-check-label" for="ventilator">Ventilator</label>
+                      <label class="form-check-label" for="ventilator">Ventilator</label>
                     </div>
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="bipap" value="bipap"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="bipap" value="bipap"
                         name="bipap" />
-                        <label class="form-check-label" for="bipap">Bipap</label>
+                      <label class="form-check-label" for="bipap">Bipap</label>
                     </div>
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="apneaMonitor"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="apneaMonitor"
                         value="apneaMonitor" name="apneaMonitor" />
-                        <label class="form-check-label" for="apneaMonitor">Apnea Monitor</label>
+                      <label class="form-check-label" for="apneaMonitor">Apnea Monitor</label>
                     </div>
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="ambuBagPresent"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="ambuBagPresent"
                         value="ambuBagPresent" name="ambuBagPresent" />
-                        <label class="form-check-label" for="ambuBagPresent">Ambu bag present</label>
+                      <label class="form-check-label" for="ambuBagPresent">Ambu bag present</label>
                     </div>
-                    </div>
-                    <hr class="custom-hr mt-10 mb-10" />
-                    <div class="comment-container col-md-8">
+                  </div>
+                  <hr class="custom-hr mt-10 mb-10" />
+                  <div class="comment-container col-md-8">
                     <h2 class="fw-medium plus-icon hide-toggle">Comments</h2>
                     <textarea class="contact-comment hidden w-100" placeholder="Type Here..." rows="4"
-                        cols="50"></textarea>
-                    </div>
+                      cols="50"></textarea>
+                  </div>
 
                 </div>
               </div>
@@ -1270,371 +1275,372 @@
                 <label for="" class=" sub-section-header ">GENITOURINARY<sup>*</sup></label>
                 <p class="text-red">*This is required field.</p>
                 <div class="custom-border mb-25">
-                    <div class="col-md-12 checkbox-group d-flex gap-40">
+                  <div class="col-md-12 checkbox-group d-flex gap-40">
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="ventilator"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="ventilator"
                         value="ventilator" name="ventilator" />
-                        <label class="form-check-label" for="ventilator">Ventilator</label>
+                      <label class="form-check-label" for="ventilator">Ventilator</label>
                     </div>
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="bipap" value="bipap"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="bipap" value="bipap"
                         name="bipap" />
-                        <label class="form-check-label" for="bipap">Bipap</label>
+                      <label class="form-check-label" for="bipap">Bipap</label>
                     </div>
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="apneaMonitor"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="apneaMonitor"
                         value="apneaMonitor" name="apneaMonitor" />
-                        <label class="form-check-label" for="apneaMonitor">Apnea Monitor</label>
+                      <label class="form-check-label" for="apneaMonitor">Apnea Monitor</label>
                     </div>
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="ambuBagPresent"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="ambuBagPresent"
                         value="ambuBagPresent" name="ambuBagPresent" />
-                        <label class="form-check-label" for="ambuBagPresent">Ambu bag present</label>
+                      <label class="form-check-label" for="ambuBagPresent">Ambu bag present</label>
                     </div>
-                    </div>
-                    <hr class="custom-hr mt-10 mb-10" />
-                    <div class="col-md-12">
+                  </div>
+                  <hr class="custom-hr mt-10 mb-10" />
+                  <div class="col-md-12">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <label class="form-check-label h2-tags" for="">
+                      <input class="form-check-input" type="checkbox" value="">
+                      <label class="form-check-label h2-tags" for="">
                         Urine
-                        </label>
+                      </label>
                     </div>
                     <div class="checkbox-group d-flex gap-40 ml-25">
-                        <div class="form-check form-check-inline flex-items">
+                      <div class="form-check form-check-inline flex-items">
                         <input class="form-check-input largerCheckbox radio" type="checkbox" id="clear" value="clear"
-                            name="clear" />
+                          name="clear" />
                         <label class="form-check-label" for="clear">Clear</label>
-                        </div>
-                        <div class="form-check form-check-inline flex-items">
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
                         <input class="form-check-input largerCheckbox radio" type="checkbox" id="cloudy" value="cloudy"
-                            name="cloudy" />
+                          name="cloudy" />
                         <label class="form-check-label" for="cloudy">Cloudy</label>
-                        </div>
+                      </div>
                     </div>
-                    </div>
-                    <hr class="custom-hr mt-10 mb-10" />
-                    <div class="col-md-12 checkbox-group d-flex gap-40">
+                  </div>
+                  <hr class="custom-hr mt-10 mb-10" />
+                  <div class="col-md-12 checkbox-group d-flex gap-40">
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="ventilator"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="ventilator"
                         value="ventilator" name="ventilator" />
-                        <label class="form-check-label" for="ventilator">Straight Cath</label>
+                      <label class="form-check-label" for="ventilator">Straight Cath</label>
                     </div>
-                    </div>
-                    <hr class="custom-hr mt-10 mb-10" />
-                    <div class="col-md-12">
+                  </div>
+                  <hr class="custom-hr mt-10 mb-10" />
+                  <div class="col-md-12">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <label class="form-check-label h2-tags" for="">
+                      <input class="form-check-input" type="checkbox" value="">
+                      <label class="form-check-label h2-tags" for="">
                         Foley Catheter
-                        </label>
+                      </label>
                     </div>
                     <div class="checkbox-group d-flex gap-40 ml-25">
-                        <div class="row d-flex" ;>
+                      <div class="row d-flex" ;>
                         <div class="input-group">
-                            <label for="" class="label h3-tags">Size</label>
-                            <input type="text" class="form-control w-fit" placeholder="Enter Size">
+                          <label for="" class="label h3-tags">Size</label>
+                          <input type="text" class="form-control w-fit" placeholder="Enter Size">
                         </div>
                         <div class="input-group">
-                            <label for="" class="label h3-tags">Fr</label>
-                            <input type="text" class="form-control w-fit" placeholder="Enter Fr">
-                            <span class="input-group-text">CC Balloon</span>
+                          <label for="" class="label h3-tags">Fr</label>
+                          <input type="text" class="form-control w-fit" placeholder="Enter Fr">
+                          <span class="input-group-text">CC Balloon</span>
                         </div>
-                        </div>
+                      </div>
                     </div>
-                    </div>
-                    <hr class="custom-hr mt-10 mb-10" />
-                    <div class="comment-container col-md-8">
+                  </div>
+                  <hr class="custom-hr mt-10 mb-10" />
+                  <div class="comment-container col-md-8">
                     <h2 class="fw-medium plus-icon hide-toggle">Comments</h2>
                     <textarea class="contact-comment hidden w-100" placeholder="Type Here..." rows="4"
-                        cols="50"></textarea>
-                    </div>
+                      cols="50"></textarea>
+                  </div>
 
                 </div>
               </div>
 
               <div class="row" id="gastrointestinal">
-              <label for="" class=" sub-section-header">GASTROINTESTINAL<sup>*</sup></label>
-              <p class="text-red">*This is required field.</p>
-              <div class="custom-border mb-25">
-                <div class="col-md-12">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="">
-                    <label class="form-check-label h2-tags" for="">
-                      Diet
-                    </label>
-                  </div>
-                  <div class="checkbox-group d-flex gap-40 ml-25">
-                    <div class="form-check form-check-inline flex-items">
-                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="oral" value="oral"
-                        name="oral" />
-                      <label class="form-check-label" for="oral">Oral</label>
+                <label for="" class=" sub-section-header">GASTROINTESTINAL<sup>*</sup></label>
+                <p class="text-red">*This is required field.</p>
+                <div class="custom-border mb-25">
+                  <div class="col-md-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="">
+                      <label class="form-check-label h2-tags" for="">
+                        Diet
+                      </label>
                     </div>
-                    <div class="form-check form-check-inline flex-items">
-                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="GT" value="GT"
-                        name="GT" />
-                      <label class="form-check-label" for="GT">GT</label>
-                    </div>
-                    <div class="form-check form-check-inline flex-items">
-                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="PO" value="PO"
-                        name="PO" />
-                      <label class="form-check-label" for="PO">PO</label>
-                    </div>
-                    <div class="form-check form-check-inline flex-items">
-                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="JT" value="JT"
-                        name="JT" />
-                      <label class="form-check-label" for="JT">JT</label>
-                    </div>
-                  </div>
-                </div>
-                <hr class="custom-hr mt-10 mb-10" />
-                <div class="col-md-12">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="">
-                    <label class="form-check-label h2-tags" for="">
-                      G-Tube last changed
-                    </label>
-                  </div>
-                  <div class="checkbox-group d-flex gap-40 ml-25">
-                    <div class="row d-flex" ;>
-                      <div class="input-group">
-                        <input type="text" class="form-control w-fit" placeholder="Enter G-Tube">
+                    <div class="checkbox-group d-flex gap-40 ml-25">
+                      <div class="form-check form-check-inline flex-items">
+                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="oral" value="oral"
+                          name="oral" />
+                        <label class="form-check-label" for="oral">Oral</label>
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
+                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="GT" value="GT"
+                          name="GT" />
+                        <label class="form-check-label" for="GT">GT</label>
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
+                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="PO" value="PO"
+                          name="PO" />
+                        <label class="form-check-label" for="PO">PO</label>
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
+                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="JT" value="JT"
+                          name="JT" />
+                        <label class="form-check-label" for="JT">JT</label>
                       </div>
                     </div>
                   </div>
-                </div>
-                <hr class="custom-hr mt-10 mb-10" />
-                <div class="d-flex">
-                  <div class="checkbox-group d-flex gap-40">
-                    <div class="form-check form-check-inline flex-items">
-                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="bsQuads" value="bsQuads"
-                        name="bsQuads" />
-                      <label class="form-check-label" for="bsQuads">BS all quads</label>
+                  <hr class="custom-hr mt-10 mb-10" />
+                  <div class="col-md-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="">
+                      <label class="form-check-label h2-tags" for="">
+                        G-Tube last changed
+                      </label>
+                    </div>
+                    <div class="checkbox-group d-flex gap-40 ml-25">
+                      <div class="row d-flex" ;>
+                        <div class="input-group">
+                          <input type="text" class="form-control w-fit" placeholder="Enter G-Tube">
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="checkbox-group d-flex gap-40">
-                    <div class="form-check form-check-inline flex-items">
-                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="lastBM" value="lastBM"
-                        name="lastBM" />
-                      <label class="form-check-label" for="lastBM">Last BM</label>
+                  <hr class="custom-hr mt-10 mb-10" />
+                  <div class="d-flex">
+                    <div class="checkbox-group d-flex gap-40">
+                      <div class="form-check form-check-inline flex-items">
+                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="bsQuads"
+                          value="bsQuads" name="bsQuads" />
+                        <label class="form-check-label" for="bsQuads">BS all quads</label>
+                      </div>
+                    </div>
+                    <div class="checkbox-group d-flex gap-40">
+                      <div class="form-check form-check-inline flex-items">
+                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="lastBM" value="lastBM"
+                          name="lastBM" />
+                        <label class="form-check-label" for="lastBM">Last BM</label>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <hr class="custom-hr mt-10 mb-10" />
-                <div class="col-md-12">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="abdomen">
-                    <label class="form-check-label h2-tags" for="abdomen">
-                      Abdomen
-                    </label>
+                  <hr class="custom-hr mt-10 mb-10" />
+                  <div class="col-md-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="abdomen">
+                      <label class="form-check-label h2-tags" for="abdomen">
+                        Abdomen
+                      </label>
+                    </div>
+                    <div class="col-md-12 checkbox-group checkbox-group-w2 ml-25">
+                      <div class="form-check form-check-inline flex-items">
+                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="Soft" value="soft"
+                          name="soft" />
+                        <label class="form-check-label" for="soft">Soft</label>
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
+                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="flat" value="flat"
+                          name="flat" />
+                        <label class="form-check-label" for="flat">Flat</label>
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
+                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="rigid" value="rigid"
+                          name="rigid" />
+                        <label class="form-check-label" for="rigid">Rigid</label>
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
+                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="tender" value="tender"
+                          name="tender" />
+                        <label class="form-check-label" for="tender">Tender</label>
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
+                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="distended"
+                          value="distended" name="distended" />
+                        <label class="form-check-label" for="distended">Distended</label>
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
+                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="diarrhea"
+                          value="diarrhea" name="diarrhea" />
+                        <label class="form-check-label" for="diarrhea">D iarrhea </label>
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
+                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="nausea" value="nausea"
+                          name="nausea" />
+                        <label class="form-check-label" for="nausea">Nausea</label>
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
+                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="constipation"
+                          value="constipation" name="constipation" />
+                        <label class="form-check-label" for="constipation">Constipation </label>
+                      </div>
+
+                      <div class="form-check form-check-inline flex-items">
+                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="continent"
+                          value="continent" name="continent" />
+                        <label class="form-check-label" for="continent">Continent</label>
+                      </div>
+
+                      <div class="form-check form-check-inline flex-items">
+                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="continent"
+                          value="continent" name="continent" />
+                        <label class="form-check-label" for="continent  ">Continent</label>
+                      </div>
+
+                      <div class="form-check form-check-inline flex-items">
+                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="incontinent"
+                          value="incontinent" name="incontinent" />
+                        <label class="form-check-label" for="incontinent">Incontinent</label>
+                      </div>
+
+                      <div class="form-check form-check-inline flex-items">
+                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="ostomy" value="ostomy"
+                          name="ostomy" />
+                        <label class="form-check-label" for="ostomy">Ostomy</label>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-md-12 checkbox-group checkbox-group-w2 ml-25">
-                    <div class="form-check form-check-inline flex-items">
-                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="Soft" value="soft"
-                        name="soft" />
-                      <label class="form-check-label" for="soft">Soft</label>
-                    </div>
-                    <div class="form-check form-check-inline flex-items">
-                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="flat" value="flat"
-                        name="flat" />
-                      <label class="form-check-label" for="flat">Flat</label>
-                    </div>
-                    <div class="form-check form-check-inline flex-items">
-                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="rigid" value="rigid"
-                        name="rigid" />
-                      <label class="form-check-label" for="rigid">Rigid</label>
-                    </div>
-                    <div class="form-check form-check-inline flex-items">
-                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="tender" value="tender"
-                        name="tender" />
-                      <label class="form-check-label" for="tender">Tender</label>
-                    </div>
-                    <div class="form-check form-check-inline flex-items">
-                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="distended"
-                        value="distended" name="distended" />
-                      <label class="form-check-label" for="distended">Distended</label>
-                    </div>
-                    <div class="form-check form-check-inline flex-items">
-                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="diarrhea"
-                        value="diarrhea" name="diarrhea" />
-                      <label class="form-check-label" for="diarrhea">D iarrhea </label>
-                    </div>
-                    <div class="form-check form-check-inline flex-items">
-                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="nausea" value="nausea"
-                        name="nausea" />
-                      <label class="form-check-label" for="nausea">Nausea</label>
-                    </div>
-                    <div class="form-check form-check-inline flex-items">
-                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="constipation"
-                        value="constipation" name="constipation" />
-                      <label class="form-check-label" for="constipation">Constipation </label>
-                    </div>
-
-                    <div class="form-check form-check-inline flex-items">
-                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="continent"
-                        value="continent" name="continent" />
-                      <label class="form-check-label" for="continent">Continent</label>
-                    </div>
-
-                    <div class="form-check form-check-inline flex-items">
-                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="continent"
-                        value="continent" name="continent" />
-                      <label class="form-check-label" for="continent  ">Continent</label>
-                    </div>
-
-                    <div class="form-check form-check-inline flex-items">
-                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="incontinent"
-                        value="incontinent" name="incontinent" />
-                      <label class="form-check-label" for="incontinent">Incontinent</label>
-                    </div>
-
-                    <div class="form-check form-check-inline flex-items">
-                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="ostomy" value="ostomy"
-                        name="ostomy" />
-                      <label class="form-check-label" for="ostomy">Ostomy</label>
-                    </div>
+                  <hr class="custom-hr mt-10 mb-10" />
+                  <div class="comment-container col-md-8">
+                    <h2 class="fw-medium plus-icon hide-toggle">Comments</h2>
+                    <textarea class="contact-comment hidden w-100" placeholder="Type Here..." rows="4"
+                      cols="50"></textarea>
                   </div>
-                </div>
-                <hr class="custom-hr mt-10 mb-10" />
-                <div class="comment-container col-md-8">
-                  <h2 class="fw-medium plus-icon hide-toggle">Comments</h2>
-                  <textarea class="contact-comment hidden w-100" placeholder="Type Here..." rows="4"
-                    cols="50"></textarea>
-                </div>
 
-              </div>
+                </div>
               </div>
 
               <div class="row" id="integumentary">
                 <label for="" class="sub-section-header">INTEGUMENTARY<sup>*</sup></label>
                 <p class="text-red">*This is required field.</p>
                 <div class="custom-border mb-25">
-                    <div class="col-md-12 checkbox-group d-flex gap-40">
+                  <div class="col-md-12 checkbox-group d-flex gap-40">
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="warm" value="warm"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="warm" value="warm"
                         name="warm" />
-                        <label class="form-check-label" for="warm">Warm</label>
+                      <label class="form-check-label" for="warm">Warm</label>
                     </div>
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="dry" value="dry"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="dry" value="dry"
                         name="dry" />
-                        <label class="form-check-label" for="dry">Dry</label>
+                      <label class="form-check-label" for="dry">Dry</label>
                     </div>
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="intact" value="intact"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="intact" value="intact"
                         name="intact" />
-                        <label class="form-check-label" for="intact">Intact</label>
+                      <label class="form-check-label" for="intact">Intact</label>
                     </div>
                     <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="diaphoresis"
+                      <input class="form-check-input largerCheckbox radio" type="checkbox" id="diaphoresis"
                         value="diaphoresis" name="diaphoresis" />
-                        <label class="form-check-label" for="diaphoresis">Diaphoresis</label>
+                      <label class="form-check-label" for="diaphoresis">Diaphoresis</label>
                     </div>
-                    </div>
-                    <hr class="custom-hr mt-10 mb-10" />
-                    <div class="col-md-12">
+                  </div>
+                  <hr class="custom-hr mt-10 mb-10" />
+                  <div class="col-md-12">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="turgor">
-                        <label class="form-check-label h2-tags" for="turgor">
+                      <input class="form-check-input" type="checkbox" value="" id="turgor">
+                      <label class="form-check-label h2-tags" for="turgor">
                         Turgor
-                        </label>
+                      </label>
                     </div>
                     <div class="checkbox-group d-flex gap-40 ml-25">
-                        <div class="form-check form-check-inline flex-items">
+                      <div class="form-check form-check-inline flex-items">
                         <input class="form-check-input largerCheckbox radio" type="checkbox" id="good" value="good"
-                            name="good" />
+                          name="good" />
                         <label class="form-check-label" for="good">Good</label>
-                        </div>
-                        <div class="form-check form-check-inline flex-items">
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
                         <input class="form-check-input largerCheckbox radio" type="checkbox" id="poor" value="poor"
-                            name="poor" />
+                          name="poor" />
                         <label class="form-check-label" for="poor">Poor</label>
-                        </div>
+                      </div>
                     </div>
-                    </div>
-                    <hr class="custom-hr mt-10 mb-10" />
-                    <div class="col-md-12">
+                  </div>
+                  <hr class="custom-hr mt-10 mb-10" />
+                  <div class="col-md-12">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="color">
-                        <label class="form-check-label h2-tags" for="color">
+                      <input class="form-check-input" type="checkbox" value="" id="color">
+                      <label class="form-check-label h2-tags" for="color">
                         Color
-                        </label>
+                      </label>
                     </div>
                     <div class="col-md-12 checkbox-group checkbox-group-w2 ml-25">
-                        <div class="form-check form-check-inline flex-items">
+                      <div class="form-check form-check-inline flex-items">
                         <input class="form-check-input largerCheckbox radio" type="checkbox" id="WNL" value="WNL"
-                            name="WNL" />
+                          name="WNL" />
                         <label class="form-check-label" for="WNL">WNL</label>
-                        </div>
-                        <div class="form-check form-check-inline flex-items">
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
                         <input class="form-check-input largerCheckbox radio" type="checkbox" id="pale" value="pale"
-                            name="pale" />
+                          name="pale" />
                         <label class="form-check-label" for="pale">Pale</label>
-                        </div>
-                        <div class="form-check form-check-inline flex-items">
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
                         <input class="form-check-input largerCheckbox radio" type="checkbox" id="dusky" value="dusky"
-                            name="dusky" />
+                          name="dusky" />
                         <label class="form-check-label" for="dusky">Dusky</label>
-                        </div>
-                        <div class="form-check form-check-inline flex-items">
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
                         <input class="form-check-input largerCheckbox radio" type="checkbox" id="jaundice"
-                            value="jaundice" name="jaundice" />
+                          value="jaundice" name="jaundice" />
                         <label class="form-check-label" for="jaundice">Jaundice</label>
-                        </div>
-                        <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="mottled" value="mottled"
-                            name="mottled" />
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
+                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="mottled"
+                          value="mottled" name="mottled" />
                         <label class="form-check-label" for="mottled">Mottled</label>
-                        </div>
-                        <div class="form-check form-check-inline flex-items">
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
                         <input class="form-check-input largerCheckbox radio" type="checkbox" id="irritation"
-                            value="irritation" name="irritation" />
+                          value="irritation" name="irritation" />
                         <label class="form-check-label" for="irritation">irritation </label>
-                        </div>
-                        <div class="form-check form-check-inline flex-items">
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
                         <input class="form-check-input largerCheckbox radio" type="checkbox" id="bruising"
-                            value="bruising" name="bruising" />
+                          value="bruising" name="bruising" />
                         <label class="form-check-label" for="bruising">Bruising</label>
-                        </div>
-                        <div class="form-check form-check-inline flex-items">
+                      </div>
+                      <div class="form-check form-check-inline flex-items">
                         <input class="form-check-input largerCheckbox radio" type="checkbox" id="abrasion"
-                            value="abrasion" name="abrasion" />
+                          value="abrasion" name="abrasion" />
                         <label class="form-check-label" for="abrasion">Abrasion(s) </label>
-                        </div>
+                      </div>
 
-                        <div class="form-check form-check-inline flex-items">
+                      <div class="form-check form-check-inline flex-items">
                         <input class="form-check-input largerCheckbox radio" type="checkbox" id="rash" value="rash"
-                            name="rash" />
+                          name="rash" />
                         <label class="form-check-label" for="rash">Rash</label>
-                        </div>
+                      </div>
 
-                        <div class="form-check form-check-inline flex-items">
-                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="blister" value="blister"
-                            name="blister" />
+                      <div class="form-check form-check-inline flex-items">
+                        <input class="form-check-input largerCheckbox radio" type="checkbox" id="blister"
+                          value="blister" name="blister" />
                         <label class="form-check-label" for="blister  ">Blister(S)</label>
-                        </div>
+                      </div>
 
                     </div>
-                    </div>
-                    <hr class="custom-hr mt-10 mb-10" />
-                    <div class="col-md-12">
+                  </div>
+                  <hr class="custom-hr mt-10 mb-10" />
+                  <div class="col-md-12">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="others">
-                        <label class="form-check-label h2-tags" for="color">
+                      <input class="form-check-input" type="checkbox" value="" id="others">
+                      <label class="form-check-label h2-tags" for="color">
                         Other
-                        </label>
+                      </label>
                     </div>
-                    <textarea class="hidden" id="other-comment" placeholder="Type Here..." rows="4" cols="50"></textarea>
-                    </div>
-                    <hr class="custom-hr mt-10 mb-10" />
+                    <textarea class="hidden" id="other-comment" placeholder="Type Here..." rows="4"
+                      cols="50"></textarea>
+                  </div>
+                  <hr class="custom-hr mt-10 mb-10" />
 
 
 
-                    <div class="comment-container col-md-8">
+                  <div class="comment-container col-md-8">
                     <h2 class="fw-medium plus-icon hide-toggle">Comments</h2>
                     <textarea class="contact-comment hidden w-100" placeholder="Type Here..." rows="4"
-                        cols="50"></textarea>
-                    </div>
+                      cols="50"></textarea>
+                  </div>
 
                 </div>
               </div>
@@ -2915,14 +2921,44 @@
     <!-- Vital signs ends-->
   </main>
   <footer>
-    <div class="d-flex justify-content-end align-items-center border-top p-4">
+    <div class="auto-save d-block d-md-none"> Auto Saved <strong>2 mins ago</strong></div>
+    <div class="d-block d-md-none d-flex justify-content-between align-items-center border-top p-4">
+      <div class="d-flex ">
+        <a href="#" class="">
+          <img src="../echart/images/arrow_left.svg" />
+        </a>
+        <spna class="fw-medium text-13 ms-3">Prev</spna>
+      </div>
+      <div class="">
+        <span class="fw-medium text-13 ">Patient & Timesheet Info</span>
+      </div>
+      <div class="d-flex">
+        <spna class="fw-medium text-13 me-3">Next</spna>
+        <a href="#" class="">
+          <img src="../echart/images/arrow_right.svg" />
+        </a>
+      </div>
+
+
+      <!-- <a href="#" class="level-arrow"><img src="images/level2-up.svg" /></a>
+      <a href="#" class="level-arrow"><img src="images/level1-up.svg" /></a>
+      <span class="fw-medium text-13 ms-3">Patient & Timesheet Info</span>
+      <a href="#" class="level-arrow"><img src="images/level1-down.svg" /></a>
+      <a href="prerequisites.html" class="level-arrow active"><img src="images/level2-down.svg" /></a> -->
+    </div>
+
+
+    <div class="d-none d-md-flex d-flex justify-content-end align-items-center border-top p-4">
       <a href="#" class="level-arrow"><img src="images/level2-up.svg" /></a>
       <a href="#" class="level-arrow"><img src="images/level1-up.svg" /></a>
       <span class="fw-medium text-13 ms-3">Patient & Timesheet Info</span>
       <a href="#" class="level-arrow"><img src="images/level1-down.svg" /></a>
-      <a href="#" class="level-arrow active"><img src="images/level2-down.svg" /></a>
+      <a href="prerequisites.html" class="level-arrow active"><img src="images/level2-down.svg" /></a>
     </div>
+
   </footer>
+
+
   <!-- popup -->
   <div class="modal" tabindex="-1" id="emergencyContacts-Modal">
     <div class="modal-dialog custom-modal-1 modal-dialog-scrollable emergency">
@@ -4080,7 +4116,54 @@
               </div>
             </div>
             <hr class="custom-hr mt-10 mb-10" />
+            <div class="row ">
+              <div class="col-md-12 ">
+                <label for="" class="info-detail mb-10">Attachments</label>
+                <div class="col-12 py-12 px-15 d-flex align-items-center" style="background: #EFEFEF66" ;>
+                  <div class="d-flex col-md-10 justify-content-between">
+                    <div class="form-check">
+                      <input class="form-check-input largerCheckbox" checked type="checkbox" value="" id="firstNameATT">
+                      <label class="form-check-label" for="firstNameATT">
+                        First name
+                      </label>
+                    </div>
+                    <p>Updated Date</p>
+                    <p>Updated By</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
           </div>
+
+          <hr class="custom-hr mt-10 mb-10" />
+          <div class="row">
+            <div class="col-md-12">
+              <label for="" class="info-detail mb-10">Signature</label>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="signature">
+                <label class="form-check-label" for="signature">
+                  By Checking this box, you will be applying your digital signature indicating you have verified and
+                  read back the Report as per your Agency Policies
+                </label>
+              </div>
+
+            </div>
+            <div class="col-md-12">
+              <label for="" class="info-detail mb-10">Supervisor Signature</label>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="supervisorSign">
+                <label class="form-check-label" for="supervisorSign">
+                  By Checking this box, you will be applying your digital signature indicating you have verified and read back the Report as per your Agency Policies
+                </label>
+              </div>
+
+            </div>
+            
+          </div>
+
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">
@@ -4093,6 +4176,139 @@
   </div>
 
   <!-- Report incident popup end -->
+
+  <!-- Complete documentation pop up -->
+  <div class="modal" tabindex="-1" id="completeDoc-Modal">
+    <div class="modal-dialog custom-modal-3 modal-dialog-scrollable">
+      <div class="modal-content overflow-auto">
+        <div class="modal-header bg-lightblue">
+          <h5 class="modal-title">Complete Documentation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-3">
+
+          <div class="info-bar mt-20">
+            <img src="images/info-filled.svg" alt="" />
+            <span>
+              You are about to complete this note and submit it for further processing. Please ensure you have verified
+              your documentation.</span>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 checkbox-group">
+              <label for="" class="label h2-tags">Service Details</label>
+            </div>
+          </div>
+          <div class=" custom-border">
+            <div class="row gy-3">
+              <div class="col-md-3">
+                <label for="" class="label f-13">Place of Service</label>
+                <select class="single-select w-dropdown-lg form-select">
+                  <option class="d-none" disabled selected>Select Place of Service</option>
+                  <option>Patient's Home / Residence</option>
+                  <option>ABNY Laboratory </option>
+                  <option>Residence Avenue</option>
+                  <option>Residence Laboratory </option>
+                </select>
+              </div>
+
+              <div class="col-12">
+                <!-- info-label -->
+                <div class="form-check">
+                  <input checked class="form-check-input largerCheckbox" type="checkbox" value="" id="visitPlace">
+                  <label class="form-check-label" for="visitPlace">
+                    Visit's Place of Service is Confirmed
+                  </label>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="row mt-25">
+            <div class="col-md-12 checkbox-group">
+              <label for="" class="label h2-tags">Check In Details</label>
+            </div>
+          </div>
+
+          <div class="custom-border">
+            <div class="row col-md-12">
+              <div class="col-md-3">
+                <label for="" class="label">EVV Token Code (Check In)<sup>*</sup></label>
+                <input type="text" class="form-control w-fit" placeholder="Enter EVV Token Code" />
+                <p class="error text-red mt-8">*This is required field.</p>
+              </div>
+              <div class="d-flex flex-column flex-md-row col-md-6 gap-40 ">
+                <div>
+                  <p class="info-label superscript">Check Out Treatment Location</p>
+                  <p class="info-detail">50 Oakland Avenue, Miami, 32104 </p>
+                </div>
+                <div>
+                  <p class="info-label">Check In</p>
+                  <p class="info-detail">04:54 AM</p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row mt-25 ">
+            <div class="col-md-12 checkbox-group">
+              <label for="" class="label h2-tags">Check Out Details</label>
+            </div>
+          </div>
+
+          <div class="custom-border">
+            <div class="row col-md-12">
+              <div class="col-md-3">
+                <label for="" class="label">EVV Token Code (Check In)<sup>*</sup></label>
+                <input type="text" class="form-control w-fit" placeholder="Enter EVV Token Code" />
+                <p class="error text-red mt-8">*This is required field.</p>
+              </div>
+              <div class="d-flex flex-column flex-md-row col-md-6 gap-40 ">
+                <div>
+                  <p class="info-label superscript">Check Out Treatment Location</p>
+                  <p class="info-detail">50 Oakland Avenue, Miami, 32104 </p>
+                </div>
+                <div>
+                  <p class="info-label">Check In</p>
+                  <p class="info-detail">04:54 AM</p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row mt-25">
+            <div class="col-md-12 checkbox-group">
+              <label for="" class="label h2-tags">Record Voice Message</label>
+            </div>
+          </div>
+          <div class="custom-border">
+            <div class="col-12">
+              <div class="">
+                <img src="images/mic.svg" alt=""/>
+                <span class=" ml-5">Record Message</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">
+            Close
+          </button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Complete documentation pop up  end-->
+
 
   <!-- JavaScript -->
   <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -4224,7 +4440,19 @@
       image.classList.toggle("hidden");
     }
 
-   
+
+    // show hide inputbox on checkbox select
+
+    $(document).ready(function () {
+      $("#YesInterpreter").change(function (e) {
+        if ($(this).prop("checked")) {
+          // $(".enter-lang").removeClass("d-none").addClass("d-block");
+          $(".enter-lang").toggle("d-block");
+        }
+      });
+    });
+
+
 
   </script>
 </body>

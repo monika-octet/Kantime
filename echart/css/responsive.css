@@ -8,11 +8,11 @@
     .data-grid-1 {
         display: flex;
         flex-flow: column;
-        gap: 30px;
+        gap: 25px;
     }
 }
 
-@media (max-width:420px) {
+@media (max-width:480px) {
 
 
     .title {
@@ -21,6 +21,16 @@
         line-height: 21px;
         letter-spacing: 0em;
 
+
+    }
+
+    .h2-mobile {
+
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
 
     }
 
@@ -60,12 +70,26 @@
         height: 203px;
     }
 
+    .arrow-icon {
+        width: 10px;
+        height: 5px;
+
+    }
+
     .info-label {
         font-size: 14px;
         font-weight: 500;
         line-height: 20px;
         letter-spacing: 0em;
         text-align: left;
+    }
+
+    .patient-info-mobile .info-label {
+
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 17px;
+        letter-spacing: 0em;
     }
 
     .info-detail {
@@ -76,6 +100,76 @@
         text-align: left;
     }
 
-    
+    .rotate {
+        transform: rotate(180deg);
+    }
+
+    .documentation .multiselect-native-select .btn-group {
+        width: 66.4%;
+    }
+
+    .label {
+        font-size: 14px !important;
+        line-height: 20px;
+    }
+
+    .form-check-input {
+        height: 18px;
+        width: 18px;
+    }
+
+    .form-check-input[type="checkbox"] {
+        border-radius: 2.2px;
+    }
+
+    .form-check-label {
+
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0em;
+        color: #181C32;
+
+    }
+
+
+    /* navigation css */
+
+    .green-tag {
+
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 14px;
+        letter-spacing: 0em;
+        padding: 5px 15px;
+    }
+
+    /* timesheet-wrap */
+
+    .timesheet-wrap {
+        grid-template-columns: 100%;
+    }
+
+    .patient-info-box {}
+
+    .timesheet .form-control,
+    .multiselect-native-select .btn-group {
+        width: 100%; 
+    }
+
+    .span-sm {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 19px;
+        color: #181C32;
+    }
+
+    .modal-footer {
+        flex-wrap: nowrap;
+    }
+
+    .custom-grid-responsive {
+        grid-template-columns: 1fr 1fr;
+    }
 
 }

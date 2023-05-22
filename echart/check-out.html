@@ -47,7 +47,7 @@
                             <div class="title-details">
                                 <h2>Check In Details</h2>
                             </div>
-                            <div class="p-20 mt-15 d-flex gap-40 ">
+                            <div class="p-20 mt-15 d-flex flex-column flex-md-row gap-40 ">
                                 <div>
                                     <p class="info-label">Check In</p>
                                     <p class="info-detail">04:54 AM</p>
@@ -66,19 +66,19 @@
                     </div>
                     <div class="row mt-15">
                         <div class="col-md-12">
-                            <div class="card-2 b-none">
+                            <div class="card-2 p-20 b-none">
                                 <h2>Check Out Details</h2>
                                 <div class="row mt-4">
                                     <div class="col-md-12 checkbox-group">
                                         <label for="" class="label">Check Out Treatment Location<sup>*</sup></label>
                                         <p class="text-red">*This is required field.</p>
-                                        <div class="form-check form-check-inline">
+                                        <div class="col-12 col-md-2 form-check form-check-inline">
                                             <input class="form-check-input largerCheckbox radio" type="checkbox"
                                                 id="client" value="client" name="client-other" />
 
                                             <label class="form-check-label" for="client">Client Address</label>
                                         </div>
-                                        <div class="form-check form-check-inline">
+                                        <div class="col-12 col-md-3 form-check form-check-inline">
                                             <input class="form-check-input largerCheckbox radio" type="checkbox"
                                                 id="other" value="other" name="client-other" />
                                             <label class="form-check-label" for="other">Other Treatment Address</label>
@@ -94,10 +94,10 @@
                                     </div>
                                 </div>
                                 <div class="row mt-4 d-none jq-other-info">
-                                    <div class="col-md-6 w-60">
+                                    <div class="col-md-4">
                                         <label for="" class="label">Location</label>
                                         <select class="single-select">
-                                            <option selected>Select Location</option>
+                                            <option class="d-none" disabled selected>Select Location</option>
                                             <option>50 Oakland Avenue, Miami, 32104</option>
                                             <option>147 Gasko Avenue, Miami, NY, 25485</option>
                                             <option>B-22 Oakland City, Florida, NY, 48756</option>
@@ -110,12 +110,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-2 b-none">
+                            <div class="card-2 p-20 b-none">
                                 <div class="col-md-3">
                                     <label for="" class="label">Check Out</label>
                                     <input type="text" class="form-control w-text" value="">
                                 </div>
-                                <p class=" error text-red">*This is required field.</p>
+                                <p class="mt-8 error text-red">*This is required field.</p>
                             </div>
                         </div>
                         <!-- <div class="col-md-6">
