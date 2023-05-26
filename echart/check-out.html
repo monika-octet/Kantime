@@ -66,17 +66,17 @@
                     </div>
                     <div class="row mt-15">
                         <div class="col-md-12">
-                            <div class="card-2 p-20 b-none">
+                            <div class="card-2  px-4 pt-4 pb-2  pt-4 pb-md-2 b-none b-none">
                                 <h2>Check Out Details</h2>
                                 <div class="row mt-4">
                                     <div class="col-md-12 checkbox-group">
-                                        <label for="" class="label">Check Out Treatment Location<sup>*</sup></label>
-                                        <p class="text-red">*This is required field.</p>
+                                        <label for="" class="label">Check Out Treatment Location<sup class="d-none d-md-block">*</sup></label>
+                                        <p class="text-red d-none d-md-block">*This is required field.</p>
                                         <div class="col-12 col-md-2 form-check form-check-inline">
                                             <input class="form-check-input largerCheckbox radio" type="checkbox"
                                                 id="client" value="client" name="client-other" />
 
-                                            <label class="form-check-label" for="client">Client Address</label>
+                                            <label class="form-check-label " for="client">Client Address</label>
                                         </div>
                                         <div class="col-12 col-md-3 form-check form-check-inline">
                                             <input class="form-check-input largerCheckbox radio" type="checkbox"
@@ -110,12 +110,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-2 p-20 b-none">
+                            <div class="card-2 px-4 pt-2 pb-4 p-md-4 b-none">
                                 <div class="col-md-3">
                                     <label for="" class="label">Check Out</label>
                                     <input type="text" class="form-control w-text" value="">
                                 </div>
-                                <p class="mt-8 error text-red">*This is required field.</p>
+                                <p class="mt-8 error text-red d-none d-md-block">*This is required field.</p>
                             </div>
                         </div>
                         <!-- <div class="col-md-6">
@@ -156,22 +156,22 @@
                         </div>
                         <div class="col-md-12 checkbox-group mt-10">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input largerCheckbox radio" type="checkbox" id="client"
-                                    value="client" name="client-other" />
+                                <input class="form-check-input largerCheckbox radio" type="checkbox" id="clientDemo"
+                                    value="clientDemo" name="clientDemo" />
 
-                                <label class="form-check-label" for="client">Client: Demo, TestPatient</label>
+                                <label class="form-check-label" for="clientDemo">Client: Demo, TestPatient</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input largerCheckbox radio" type="checkbox" id="other"
-                                    value="other" name="client-other" />
-                                <label class="form-check-label" for="other">Other</label>
+                                <input class="form-check-input largerCheckbox radio" type="checkbox" id="clientOther"
+                                    value="clientOther" name="clientOther" />
+                                <label class="form-check-label" for="clientOther">Other</label>
                             </div>
                         </div>
                         <div class="col-md-12 checkbox-group mt-15">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input largerCheckbox radio" type="checkbox" id="other"
-                                    value="other" name="client-other" />
-                                <label class="form-check-label" for="other">By Signing, I am confirming that I have
+                                <input class="form-check-input largerCheckbox radio" type="checkbox" id="timesheetReviewed"
+                                    value="timesheetReviewed" name="timesheetReviewed" />
+                                <label class="form-check-label" style="display: inline;" for="timesheetReviewed">By Signing, I am confirming that I have
                                     reviewed this timesheet</label>
                             </div>
                         </div>

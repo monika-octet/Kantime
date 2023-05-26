@@ -54,14 +54,16 @@ h2 {
     padding-bottom: 25px;
 }
 
-.py-12{
+.py-12 {
     padding-top: 12px;
     padding-bottom: 12px;
 }
-.px-15{
+
+.px-15 {
     padding-left: 15px;
     padding-right: 15px;
 }
+
 
 .p-20 {
     padding: 20px;
@@ -70,7 +72,8 @@ h2 {
 .pt-10 {
     padding-top: 10px;
 }
-.mt-8{
+
+.mt-8 {
     margin-top: 8px;
 }
 
@@ -98,7 +101,8 @@ h2 {
 .mr-5 {
     margin-right: 5px;
 }
-.ml-5{
+
+.ml-5 {
     margin-left: 5px;
 }
 
@@ -140,6 +144,9 @@ h2 {
     width: 80%;
 }
 
+.w-auto{
+    width: auto;
+}
 .d-block {
     display: block;
 }
@@ -288,7 +295,7 @@ input.form-control::placeholder {
 }
 
 .w-100 {
-    width: 100px;
+    width: 100px !important;
 }
 
 .input-cal {
@@ -324,7 +331,7 @@ input.form-control::placeholder {
     gap: 40px;
 }
 
-.h-200 {
+.diagnosis {
     height: 200px;
 }
 
@@ -637,8 +644,8 @@ li.has-subchild a,
     text-decoration-line: underline;
 }
 
-.link-black{
-  
+.link-black {
+
     font-size: 15px;
     font-weight: 500;
     line-height: 20px;
@@ -648,10 +655,10 @@ li.has-subchild a,
     text-decoration: none;
     margin-top: 25px;
     margin-bottom: 20px;
-   
+
 }
 
-.link-black:hover{
+.link-black:hover {
     color: #181C32;
 }
 
@@ -796,6 +803,10 @@ h2.info-name {
 
 .hidden {
     display: none;
+}
+
+.visible-none {
+    visibility: hidden;
 }
 
 .show {
@@ -1085,12 +1096,27 @@ select:valid~span {
     letter-spacing: 0em;
 }
 
-.custom-grid-responsive{
+.custom-grid-responsive {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    
+
 }
 
-.pointer{
+.pointer {
     cursor: pointer;
+}
+
+.navigation-link-mobile {
+
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #181C32;
+    text-decoration: none;
+
+}
+.navigation-link-mobile:hover{
+    color: #181C32;
 }
