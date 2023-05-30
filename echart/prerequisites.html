@@ -50,7 +50,11 @@
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             <li>
-              <a href="#" class="dropdown-item">Print</a>
+              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#completeDoc-Modal"
+              class="dropdown-item">Submit to QA</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="dropdown-item" data-bs-toggle="modal" data-bs-target="">Print</a>
             </li>
             <li>
               <a href="#" class="dropdown-item">View POC</a>
@@ -497,7 +501,7 @@
                 </div>
               </div>
 
-              <hr class="custom-hr mt-10 mb-10" />
+              <hr class="custom-hr " />
 
               <div class="p-2">
                 <label for="" class="label h2-tags">Acuity Level</label>
@@ -3605,10 +3609,10 @@
                     action</label>
                     <textarea class="contact-comment col-12 col-md-8" id="RN" placeholder="Type Here..." rows="4" cols="50"></textarea>
                 </div>
-                <hr class="custom-hr mt-10 mb-10" />
+                <hr class="custom-hr " />
                 <div class="d-flex flex-col">
-                  <div class="col-12 col-md-8 row mb-10">
-                    <label class="form-check-label col-md-3" for="">
+                  <div class="col-12 col-md-8  mb-10">
+                    <label class="form-check-label col-md-3 mx-0" for="">
                       Range of Hours:
                     </label>
                     <div class="form-check col-6 col-md-3">
@@ -3637,11 +3641,11 @@
 
                   </div>
                 </div>
-                <hr class="custom-hr mt-10 mb-10" />
+                <hr class="custom-hr" />
                 <div class="col-md-6">
                   <label for="patientLifting" class="label h3-tags">Patient lifting requirements are<sup>*</sup></label>
                   <input id="patientLifting" type="text" class="form-control " placeholder="Type here...">
-                  <p class="error text-red" id="errorTxt">*This is required field.</p>
+                  <p class="error text-red mt-2" id="errorTxt">*This is required field.</p>
                 </div>
 
               </div>
@@ -4361,7 +4365,7 @@
                     <option>Number 3</option>
                     <option>Number 4</option>
                   </select>
-                  <p class="error text-red mt-8">*This is required field.</p>
+                  <p class="error text-red mt-8 mb-0">*This is required field.</p>
                 </div>
               </div>
               <hr class="custom-hr">

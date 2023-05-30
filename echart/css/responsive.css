@@ -35,14 +35,14 @@
         font-weight: 600;
         line-height: 22px;
         letter-spacing: 0em;
-        
+
     }
 
-    .h2-tags{
+    .h2-tags {
         margin-bottom: 15px;
     }
 
-    .singleDatePicker{
+    .singleDatePicker {
         line-height: 39px;
     }
 
@@ -52,12 +52,12 @@
         position: relative;
     }
 
-    .info-bar img{
+    .info-bar img {
         position: absolute;
         top: 13px;
     }
 
-    .info-bar span{
+    .info-bar span {
         margin-left: 25px;
     }
 
@@ -122,7 +122,7 @@
         text-align: left;
     }
 
-    .info-detail-mobile{
+    .info-detail-mobile {
         margin-top: 2px;
         margin-left: 10px;
     }
@@ -132,7 +132,7 @@
     }
 
     .documentation .multiselect-native-select .btn-group {
-        width:90%;
+        width: 90%;
     }
 
     .label {
@@ -200,7 +200,7 @@
     }
 
     .custom-grid-responsive {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
     }
 
 
@@ -220,7 +220,7 @@
 
     }
 
-    .card-border{
+    .card-border {
         border: 1px solid #D9D9D9;
     }
 
@@ -270,7 +270,7 @@
     }
 
     /* dropDown */
-   
+
 
     .dropdown-menu .dropdown-item {
         font-size: 14px;
@@ -307,7 +307,7 @@
         padding: 15px !important;
     }
 
-    #navigation-Modal-Mobile.modal{
+    #navigation-Modal-Mobile.modal {
         margin-top: 0px;
     }
 
@@ -338,81 +338,88 @@
 
     }
 
-     #navigation-Modal-Mobile .sidebar-menu li.has-subchild > a::after{
-    content: url('../images/arrow_down.svg');
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    right: 15px;
-    height: 22px;
-    display: block;
-    transition: transform 0.3s ease-in-out;
-    } 
+    #navigation-Modal-Mobile .sidebar-menu li.has-subchild>a::after {
+        content: url('../images/arrow_down.svg');
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        right: 15px;
+        height: 22px;
+        display: block;
+        transition: transform 0.3s ease-in-out;
+    }
 
-    .table-card{
+    .table-card {
         padding: 15px;
         border-bottom: 1px solid #EFEFEF;
     }
+
     .table-card-container .table-card:nth-child(2n) {
         background-color: #F8F9FB;
-      }
+    }
 
-    
+
 
     /* css for buttons  */
 
 
-      .modal-dialog-scrollable{
+    .modal-dialog-scrollable {
         height: calc(100% - 8rem);
-      }
-  
-     #patientInfo-Modal .btn-outline-primary,
-     #timeSheetView-Modal .btn-outline-primary{
-        width: 100%;
-      }
+    }
 
-    .sidebar-menu{
+    #patientInfo-Modal .btn-outline-primary,
+    #timeSheetView-Modal .btn-outline-primary {
+        width: 100%;
+    }
+
+    .sidebar-menu {
         padding-left: 8px;
     }
 
-    .description-box:active{
+    .description-box:active {
         border: 1px solid #C5C5C5;
 
     }
 
-    .header-fill .title{
-        padding:20px 15px;
+    .header-fill .title {
+        padding: 20px 15px;
     }
-    .form-control,.form-select{
+
+    .form-control,
+    .form-select {
         height: 40px;
     }
 
-    .poa-label{
+    .poa-label {
         display: block;
         margin-bottom: 10px;
+        margin-left: 10px;
+        margin-top: 2px;
     }
 
-    #patientInfo-Modal .modal-dialog, #timeSheetView-Modal .modal-dialog {
+    #patientInfo-Modal .modal-dialog,
+    #timeSheetView-Modal .modal-dialog {
         margin: 0;
     }
-    
-    #clientSignature-Modal .form-check-label{
+
+    #clientSignature-Modal .form-check-label {
         font-size: 13px;
     }
-    .input-group-text{
+
+    .input-group-text {
         line-height: 2.1;
     }
 
-    .input-group{
+    .input-group {
         margin-bottom: 15px;
     }
 
-    .table-card > label{
+    .table-card>label {
         margin-left: 0;
     }
 
-    #competency .card-body{
+    #competency .card-body {
         padding: 0;
     }
 
