@@ -47,7 +47,7 @@
                             <div class="title-details">
                                 <h2>Check In Details</h2>
                             </div>
-                            <div class="p-20 mt-15 d-flex flex-column flex-md-row gap-40 ">
+                            <div class="p-20 mt-15 d-flex flex-column flex-md-row gap-20 ">
                                 <div>
                                     <p class="info-label">Check In</p>
                                     <p class="info-detail">04:54 AM</p>
@@ -132,12 +132,17 @@
             </div>
         </section>
     </main>
+
+    <!-- client signature modal -->
     <div class="modal" tabindex="-1" id="clientSignature-Modal">
         <div class="modal-dialog custom-modal-2 modal-dialog-scrollable clientSignature">
             <div class="modal-content overflow-auto">
+                <div class="d-flex justify-content-center align-items-center close-line-container d-block d-md-none">
+                    <button class="close-line" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
                 <div class="modal-header bg-lightblue">
                     <h5 class="modal-title">Client Signature</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                 </div>
                 <div class="modal-body p-3">
                     <div class="row">
@@ -259,6 +264,8 @@
         // hide ans show sign images
         function toggleImage() {
             var image = document.getElementById("sign");
+            var imageBox=document.querySelector('.sign-box')
+            imageBox.style.backgroundColor = "white"
             image.classList.toggle("hidden");
         }
 

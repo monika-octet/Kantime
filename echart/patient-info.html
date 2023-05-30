@@ -204,10 +204,9 @@
                     <p class="info-label mb-0">Email:&nbsp;</p>
                     <p class="info-detail text-dark">johndoe@gmail.com</p>
                   </div>
-                  <div class="d-flex align-items-center mb-2">
-                    <p class="info-label mb-0">Mobile:&nbsp;</p>
+                  <div class="d-flex align-items-center justify-content-between justify-content-md-start mb-2">
+                    <p class="info-label mb-0">Mobile: (425) 555-1212&nbsp;</p>
                     <p class="info-detail d-flex align-items-center text-dark">
-                      (425) 555-1212
                       <span class="ms-4 pe span-sm"><img src="images/edit-sm.svg" alt="" class="me-2" />Edit</span>
                     </p>
                   </div>
@@ -309,7 +308,7 @@
 
             <div class="bg-white p-3 timesheet d-block d-md-none">
               <div class="row">
-                <div class="col-7 col-md-3">
+                <div class="col-6 col-md-3">
                   <label for="" class="label">Visit Date<sup>*</sup></label>
                   <div id="weeklyrange" class="form-control singleDatePicker">
                     <span></span>
@@ -366,7 +365,7 @@
 
             <div class="bg-white p-3 timesheet d-none d-md-block">
               <div class="row">
-                <div class="col-7 col-md-3">
+                <div class="col-6 col-md-3">
                   <label for="" class="label">Visit Date<sup>*</sup></label>
                   <div id="weeklyrange" class="form-control singleDatePicker">
                     <span></span>
@@ -3049,16 +3048,16 @@
           <div class="row d-block d-md-none">
             <div class="col-md-12">
               <label for="" class="label h2-tags">Patient Details</label>
-              <div class="p-3 ">
+              <div class="p-3 card-border">
                 <div class="mt-15 data-grid-1">
                   <div class="d-flex justify-center-between align-items-center">
                     <div>
                       <p class="info-label">Client Name</p>
                       <p class="info-detail">John Doe</p>
                     </div>
-                    <div class="d-flex justify-content-center align-items-center mob-arrow" data-bs-toggle="collapse"
+                    <div class="d-flex justify-content-center align-items-center mob-arrow" onclick="rotateArrow()" data-bs-toggle="collapse"
                       href="#emergency-Collapes" role="button" aria-expanded="false" aria-controls="collapseExample">
-                      <img src="../echart//images/arrowIcon.svg" id="arrow-img" alt="arrow icon">
+                      <img src="../echart//images/arrowIcon.svg" class="arrow-img" alt="arrow icon">
                     </div>
                   </div>
                   <div>
@@ -3066,39 +3065,41 @@
                     <p class="info-detail">03/05/1991</p>
                   </div>
                 </div>
-              </div>
 
-            </div>
-          </div>
-          <div class="p-3 pt-0">
-            <div class="collapse " id="emergency-Collapes">
-              <div class="card card-body">
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="mt-15 data-grid-1">
-                      <div>
-                        <p class="info-label">Gender</p>
-                        <p class="info-detail">Male</p>
+                <div class=" pt-0">
+                  <div class="collapse " id="emergency-Collapes">
+                    <div class="card card-body">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="mt-15 data-grid-1">
+                            <div>
+                              <p class="info-label">Gender</p>
+                              <p class="info-detail">Male</p>
+                            </div>
+                            <div>
+                              <p class="info-label">SOC</p>
+                              <p class="info-detail">01/01/2023</p>
+                            </div>
+                            <div>
+                              <p class="info-label">Insurance ID</p>
+                              <p class="info-detail">42342342</p>
+                            </div>
+                            <div>
+                              <p class="info-label">Insurance</p>
+                              <p class="info-detail">Avi_PediatricPayer</p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div>
-                        <p class="info-label">SOC</p>
-                        <p class="info-detail">01/01/2023</p>
-                      </div>
-                      <div>
-                        <p class="info-label">Insurance ID</p>
-                        <p class="info-detail">42342342</p>
-                      </div>
-                      <div>
-                        <p class="info-label">Insurance</p>
-                        <p class="info-detail">Avi_PediatricPayer</p>
-                      </div>
+      
                     </div>
                   </div>
                 </div>
-
               </div>
+
             </div>
           </div>
+       
           <!-- mobile view popup end -->
 
 
@@ -3139,8 +3140,12 @@
 
 
           <!-- mobile responsive for emergency contact -->
-          <label for="" class="label h2-tags">Contact Details</label>
-          <div class="p-3 d-block d-md-none">
+     
+          <div class="d-flex align-items-center mt-25 mb-10">
+            <label for="" class="label h2-tags">Contact Details</label>
+            <img src="../echart//images/Delete_mobile.svg" class="delete-icon">
+          </div>
+          <div class="p-3 card-border d-block d-md-none mb-3">
             <div class="mt-15 data-grid-1">
               <div class="d-flex justify-center-between align-items-center">
                 <div class="form-check form-check-inline ">
@@ -3148,9 +3153,9 @@
                   <label class="form-check-label bolder" for="confirm">Contact 1</label>
                 </div>
                 <div class="d-flex justify-content-center align-items-center mob-arrow collapsed"
-                  data-bs-toggle="collapse" href="#contactDetails-Collapes" role="button" aria-expanded="false"
+                  data-bs-toggle="collapse" onclick="rotateArrow()" href="#contactDetails-Collapes" role="button" aria-expanded="false"
                   aria-controls="collapseExample">
-                  <img src="../echart//images/arrowIcon.svg" id="arrow-img" alt="arrow icon">
+                  <img src="../echart//images/arrowIcon.svg" class="arrow-img" alt="arrow icon">
                 </div>
               </div>
 
@@ -3169,9 +3174,9 @@
                   <label for="" class="label">Priority</label>
                   <select class="single-select">
                     <option class="d-none" selected>Select</option>
-                    <option>Select 1</option>
-                    <option>Select 2</option>
-                    <option>Select 3</option>
+                    <option>Primary </option>
+                    <option>Secondary</option>
+                    <option>Tertiary </option>
                   </select>
                 </div>
               </div>
@@ -3179,104 +3184,105 @@
 
 
             </div>
-          </div>
-          <div class="p-3 d-block d-md-none">
-            <div class="collapse collapse-content" id="contactDetails-Collapes">
-              <div class="card card-body">
-                <div class="row gy-4 gy-md-0">
-                  <div class="col-6 col-md-2">
-                    <label for="" class="label">Gender</label>
-                    <select class="single-select">
-                      <option class="d-none" selected>Select</option>
-                      <option>Male</option>
-                      <option>Female</option>
-
-                    </select>
-
+            <div class="mt-4 d-block d-md-none">
+              <div class="collapse collapse-content" id="contactDetails-Collapes">
+                <div class="card card-body">
+                  <div class="row gy-4 gy-md-0">
+                    <div class="col-6 col-md-2">
+                      <label for="" class="label">Gender</label>
+                      <select class="single-select">
+                        <option class="d-none" selected>Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+  
+                      </select>
+  
+                    </div>
+                    <div class=" col-6 col-md-2">
+                      <label for="age" class="label">Age</label>
+                      <input type="text" class="form-control" value="42" id="age">
+                    </div>
                   </div>
-                  <div class=" col-6 col-md-2">
-                    <label for="age" class="label">Age</label>
-                    <input type="text" class="form-control" value="42" id="age">
+  
+                  <div class="row mt-25">
+                    <div class="col-md-5">
+                      <label for="address-1" class="label">Address 1</label>
+                      <input type="text" class="form-control" value="50 Oakland Avenue" id="address-1">
+                    </div>
                   </div>
+  
+                  <div class="row mt-25">
+                    <div class="col-md-5">
+                      <label for="address-2" class="label">Address 2</label>
+                      <input type="text" class="form-control" value="Nr. Palm Beach County" id="address-2">
+                    </div>
+                  </div>
+  
+                  <div class="row mt-25 ">
+                    <div class="col-6 col-md-2">
+                      <label for="zip" class="label">Zip</label>
+                      <input type="text" class="form-control" value="32104" id="zip">
+                    </div>
+                    <div class=" col-6 col-md-2">
+                      <label for="city" class="mobile-label">Miami</label>
+                      <input type="text" class="form-control" value="42" id="city">
+                    </div>
+                  </div>
+  
+                  <div class="row mt-25 ">
+                    <div class="col-6 col-md-2">
+                      <label for="state" class="label">State</label>
+                      <input type="text" class="form-control" value="Florida" id="state">
+                    </div>
+                    <div class=" col-6 col-md-2">
+                      <label for="city" class="mobile-label">Home Phone</label>
+                      <input type="text" class="form-control" value="(425) 55-1212" id="city">
+                    </div>
+                  </div>
+  
+                  <div class="row mt-25 ">
+                    <div class="col-6 col-md-2">
+                      <label for="cellPhone" class="label">Cell Phone</label>
+                      <input type="text" class="form-control" value="(917) 924-5855" id="cellPhone">
+                    </div>
+                    <div class=" col-6 col-md-2">
+                      <label for="workPhone" class="mobile-label">Work Phone</label>
+                      <input type="text" class="form-control" value="(917) 924-5855" id="workPhone">
+                    </div>
+                  </div>
+  
+                  <div class="row mt-25">
+                    <div class="col-md-5">
+                      <label for="fax" class="label">Fax</label>
+                      <input type="text" class="form-control" value="423-4234" id="fax">
+                    </div>
+                  </div>
+  
+                  <div class="row mt-25">
+                    <div class="col-md-5">
+                      <label for="email" class="label">Email</label>
+                      <input type="email" class="form-control" value="doejohn64@example.com" id="email">
+                    </div>
+                  </div>
+                  <hr class="custom-hr" />
+  
+                  <div class="form-check form-check-inline mb-3">
+                    <input class="form-check-input" type="checkbox" id="POA" value="POA">
+                    <label class="poa-label" for="POA">Copy of POA paper on file</label>
+  
+                  </div>
+  
+  
                 </div>
-
-                <div class="row mt-25">
-                  <div class="col-md-5">
-                    <label for="address-1" class="label">Address 1</label>
-                    <input type="text" class="form-control" value="50 Oakland Avenue" id="address-1">
-                  </div>
-                </div>
-
-                <div class="row mt-25">
-                  <div class="col-md-5">
-                    <label for="address-2" class="label">Address 2</label>
-                    <input type="text" class="form-control" value="Nr. Palm Beach County" id="address-2">
-                  </div>
-                </div>
-
-                <div class="row mt-25 ">
-                  <div class="col-6 col-md-2">
-                    <label for="zip" class="label">Zip</label>
-                    <input type="text" class="form-control" value="32104" id="zip">
-                  </div>
-                  <div class=" col-6 col-md-2">
-                    <label for="city" class="mobile-label">Miami</label>
-                    <input type="text" class="form-control" value="42" id="city">
-                  </div>
-                </div>
-
-                <div class="row mt-25 ">
-                  <div class="col-6 col-md-2">
-                    <label for="state" class="label">State</label>
-                    <input type="text" class="form-control" value="Florida" id="state">
-                  </div>
-                  <div class=" col-6 col-md-2">
-                    <label for="city" class="mobile-label">Home Phone</label>
-                    <input type="text" class="form-control" value="(425) 55-1212" id="city">
-                  </div>
-                </div>
-
-                <div class="row mt-25 ">
-                  <div class="col-6 col-md-2">
-                    <label for="cellPhone" class="label">Cell Phone</label>
-                    <input type="text" class="form-control" value="(917) 924-5855" id="cellPhone">
-                  </div>
-                  <div class=" col-6 col-md-2">
-                    <label for="workPhone" class="mobile-label">Work Phone</label>
-                    <input type="text" class="form-control" value="(917) 924-5855" id="workPhone">
-                  </div>
-                </div>
-
-                <div class="row mt-25">
-                  <div class="col-md-5">
-                    <label for="fax" class="label">Fax</label>
-                    <input type="text" class="form-control" value="423-4234" id="fax">
-                  </div>
-                </div>
-
-                <div class="row mt-25">
-                  <div class="col-md-5">
-                    <label for="email" class="label">Email</label>
-                    <input type="email" class="form-control" value="doejohn64@example.com" id="email">
-                  </div>
-                </div>
-                <hr class="custom-hr" />
-
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="POA" value="POA">
-                  <label class="poa-label" for="POA">Copy of POA paper on file</label>
-
-                </div>
-
-
+              </div>
+              <div class="custom-border">
+                <h2 class="fw-medium plus-icon ">Add New Contact</h2>
               </div>
             </div>
-            <div class="custom-border">
-              <h2 class="fw-medium plus-icon ">Add New Contact</h2>
-            </div>
           </div>
+        
 
-          <div class="p-3 d-block d-md-none">
+          <div class="p-3 card-border d-block d-md-none">
             <div class="mt-15 data-grid-1">
               <div class="d-flex justify-center-between align-items-center">
                 <div class="form-check form-check-inline ">
@@ -3284,9 +3290,9 @@
                   <label class="form-check-label bolder" for="confirm">Contact 2</label>
                 </div>
                 <div class="d-flex justify-content-center align-items-center mob-arrow collapsed"
-                  data-bs-toggle="collapse" href="#contactDetails-Collapes-2" role="button" aria-expanded="false"
+                  data-bs-toggle="collapse" onclick="rotateArrow()" href="#contactDetails-Collapes-2" role="button" aria-expanded="false"
                   aria-controls="collapseExample">
-                  <img src="../echart//images/arrowIcon.svg" id="arrow-img" alt="arrow icon">
+                  <img src="../echart//images/arrowIcon.svg" class="arrow-img" alt="arrow icon">
                 </div>
               </div>
 
@@ -3305,9 +3311,9 @@
                   <label for="" class="label">Priority</label>
                   <select class="single-select">
                     <option class="d-none" selected>Select</option>
-                    <option>Select 1</option>
-                    <option>Select 2</option>
-                    <option>Select 3</option>
+                    <option>Primary </option>
+                    <option>Secondary</option>
+                    <option>Tertiary </option>
                   </select>
                 </div>
               </div>
@@ -3315,102 +3321,103 @@
 
 
             </div>
-          </div>
-          <div class="p-3 d-block d-md-none">
-            <div class="collapse collapse-content" id="contactDetails-Collapes-2">
-              <div class="card card-body">
-                <div class="row gy-4 gy-md-0">
-                  <div class="col-6 col-md-2">
-                    <label for="" class="label">Gender</label>
-                    <select class="single-select">
-                      <option class="d-none" selected>Select</option>
-                      <option>Male</option>
-                      <option>Female</option>
-
-                    </select>
-
+            <div class=" d-block d-md-none">
+              <div class="collapse collapse-content" id="contactDetails-Collapes-2">
+                <div class="card card-body">
+                  <div class="row gy-4 gy-md-0">
+                    <div class="col-6 col-md-2">
+                      <label for="" class="label">Gender</label>
+                      <select class="single-select">
+                        <option class="d-none" selected>Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+  
+                      </select>
+  
+                    </div>
+                    <div class=" col-6 col-md-2">
+                      <label for="age" class="label">Age</label>
+                      <input type="text" class="form-control" value="42" id="age">
+                    </div>
                   </div>
-                  <div class=" col-6 col-md-2">
-                    <label for="age" class="label">Age</label>
-                    <input type="text" class="form-control" value="42" id="age">
+  
+                  <div class="row mt-25">
+                    <div class="col-md-5">
+                      <label for="address-1" class="label">Address 1</label>
+                      <input type="text" class="form-control" value="50 Oakland Avenue" id="address-1">
+                    </div>
                   </div>
+  
+                  <div class="row mt-25">
+                    <div class="col-md-5">
+                      <label for="address-2" class="label">Address 2</label>
+                      <input type="text" class="form-control" value="Nr. Palm Beach County" id="address-2">
+                    </div>
+                  </div>
+  
+                  <div class="row mt-25 ">
+                    <div class="col-6 col-md-2">
+                      <label for="zip" class="label">Zip</label>
+                      <input type="text" class="form-control" value="32104" id="zip">
+                    </div>
+                    <div class=" col-6 col-md-2">
+                      <label for="city" class="mobile-label">Miami</label>
+                      <input type="text" class="form-control" value="42" id="city">
+                    </div>
+                  </div>
+  
+                  <div class="row mt-25 ">
+                    <div class="col-6 col-md-2">
+                      <label for="state" class="label">State</label>
+                      <input type="text" class="form-control" value="Florida" id="state">
+                    </div>
+                    <div class=" col-6 col-md-2">
+                      <label for="city" class="mobile-label">Home Phone</label>
+                      <input type="text" class="form-control" value="(425) 55-1212" id="city">
+                    </div>
+                  </div>
+  
+                  <div class="row mt-25 ">
+                    <div class="col-6 col-md-2">
+                      <label for="cellPhone" class="label">Cell Phone</label>
+                      <input type="text" class="form-control" value="(917) 924-5855" id="cellPhone">
+                    </div>
+                    <div class=" col-6 col-md-2">
+                      <label for="workPhone" class="mobile-label">Work Phone</label>
+                      <input type="text" class="form-control" value="(917) 924-5855" id="workPhone">
+                    </div>
+                  </div>
+  
+                  <div class="row mt-25">
+                    <div class="col-md-5">
+                      <label for="fax" class="label">Fax</label>
+                      <input type="text" class="form-control" value="423-4234" id="fax">
+                    </div>
+                  </div>
+  
+                  <div class="row mt-25">
+                    <div class="col-md-5">
+                      <label for="email" class="label">Email</label>
+                      <input type="email" class="form-control" value="doejohn64@example.com" id="email">
+                    </div>
+                  </div>
+                  <hr class="custom-hr" />
+  
+                  <div class="form-check form-check-inline mb-3">
+                    <input class="form-check-input" type="checkbox" id="POA" value="POA">
+                    <label class="poa-label" for="POA">Copy of POA paper on file</label>
+  
+                  </div>
+  
+  
                 </div>
-
-                <div class="row mt-25">
-                  <div class="col-md-5">
-                    <label for="address-1" class="label">Address 1</label>
-                    <input type="text" class="form-control" value="50 Oakland Avenue" id="address-1">
-                  </div>
-                </div>
-
-                <div class="row mt-25">
-                  <div class="col-md-5">
-                    <label for="address-2" class="label">Address 2</label>
-                    <input type="text" class="form-control" value="Nr. Palm Beach County" id="address-2">
-                  </div>
-                </div>
-
-                <div class="row mt-25 ">
-                  <div class="col-6 col-md-2">
-                    <label for="zip" class="label">Zip</label>
-                    <input type="text" class="form-control" value="32104" id="zip">
-                  </div>
-                  <div class=" col-6 col-md-2">
-                    <label for="city" class="mobile-label">Miami</label>
-                    <input type="text" class="form-control" value="42" id="city">
-                  </div>
-                </div>
-
-                <div class="row mt-25 ">
-                  <div class="col-6 col-md-2">
-                    <label for="state" class="label">State</label>
-                    <input type="text" class="form-control" value="Florida" id="state">
-                  </div>
-                  <div class=" col-6 col-md-2">
-                    <label for="city" class="mobile-label">Home Phone</label>
-                    <input type="text" class="form-control" value="(425) 55-1212" id="city">
-                  </div>
-                </div>
-
-                <div class="row mt-25 ">
-                  <div class="col-6 col-md-2">
-                    <label for="cellPhone" class="label">Cell Phone</label>
-                    <input type="text" class="form-control" value="(917) 924-5855" id="cellPhone">
-                  </div>
-                  <div class=" col-6 col-md-2">
-                    <label for="workPhone" class="mobile-label">Work Phone</label>
-                    <input type="text" class="form-control" value="(917) 924-5855" id="workPhone">
-                  </div>
-                </div>
-
-                <div class="row mt-25">
-                  <div class="col-md-5">
-                    <label for="fax" class="label">Fax</label>
-                    <input type="text" class="form-control" value="423-4234" id="fax">
-                  </div>
-                </div>
-
-                <div class="row mt-25">
-                  <div class="col-md-5">
-                    <label for="email" class="label">Email</label>
-                    <input type="email" class="form-control" value="doejohn64@example.com" id="email">
-                  </div>
-                </div>
-                <hr class="custom-hr" />
-
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="POA" value="POA">
-                  <label class="poa-label" for="POA">Copy of POA paper on file</label>
-
-                </div>
-
-
+              </div>
+              <div class="custom-border">
+                <h2 class="fw-medium plus-icon  ">Add New Contact</h2>
               </div>
             </div>
-            <div class="custom-border">
-              <h2 class="fw-medium plus-icon  ">Add New Contact</h2>
-            </div>
           </div>
+        
 
           <!-- mobile responsive for emergency contact end -->
 
@@ -3582,8 +3589,8 @@
                     <p class="info-detail">John Doe</p>
                   </div>
                   <div class="d-flex justify-content-center align-items-center mob-arrow" data-bs-toggle="collapse"
-                    href="#billingDX-Collapes" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    <img src="../echart//images/arrowIcon.svg" id="arrow-img" alt="arrow icon">
+                    href="#billingDX-Collapes" onclick="rotateArrow()" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <img src="../echart//images/arrowIcon.svg" class="arrow-img" alt="arrow icon">
                   </div>
                 </div>
                 <div>
@@ -3684,8 +3691,8 @@
           <hr class="custom-hr" />
 
           <!-- table turned into card for mobile -->
-          <div class="row gy-3 mb-25 d-block d-md-none">
-            <div class="card">
+          <div class=" mb-25 d-block d-md-none">
+            <div class="card mb-15">
 
               <div class="card-body">
 
@@ -3946,7 +3953,7 @@
 
           <div class="comment-container col-md-8">
             <h2 class="fw-medium plus-icon hide-toggle h2-tags">Comments</h2>
-            <textarea class="contact-comment hidden col-8" placeholder="Type Here..." rows="2" cols=""></textarea>
+            <textarea class="contact-comment hidden col-12 col-md-8" placeholder="Type Here..." rows="2" cols=""></textarea>
           </div>
           <hr class="custom-hr" />
           <!-- split schedule starts -->
@@ -3970,7 +3977,7 @@
                     <label class="form-check-label" for="splitInPayroll">Split In Payroll</label>
                   </div>
                 </div>
-                <div class="col-md-3 mt-20">
+                <div class="col-md-3 mt-10">
                   <label for="split-schedules" class="label f-13 mt-10">Number of Split Schedules <sup>*</sup></label>
                   <select id="split-schedules" class="single-select w-dropdown-lg form-select">
                     <option class="d-none" disabled selected>Select Number</option>
@@ -3979,15 +3986,15 @@
                     <option>Number 3</option>
                     <option>Number 4</option>
                   </select>
-                  <p class="error text-red mt-8">*This is required field.</p>
+                  <span class="error text-red mt-8">*This is required field.</span>
                 </div>
               </div>
               <hr class="custom-hr">
 
               <!-- table for mobile responsive split schedule -->
 
-              <div class="row gy-3 mb-25 d-block d-md-none">
-                <div class="card">
+              <div class="mb-25 d-block d-md-none">
+                <div class="card mb-3">
                   <div class="card-body">
                     <div class="row">
                       <div class="col-md-12">
@@ -4334,26 +4341,26 @@
                             <label for="" class="mobile-label">Severity Level</label>
                             <div class="d-flex gap-20">
                               <div class="form-check">
-                                <input id="severity-1" class="form-check-input" type="radio" name="severityLevel">
-                                <label for="severity-1" class="form-check-label" for="flexRadioDefault1">
+                                <input id="severity-1" class="form-check-input" type="radio" name="severityLevel"  id="severityMobile-1">
+                                <label for="severity-1" class="form-check-label" for="severityMobile-1">
                                   1
                                 </label>
                               </div>
                               <div class="form-check">
-                                <input id="severity-2" class="form-check-input" type="radio" name="severityLevel">
-                                <label for="severity-2" class="form-check-label" for="flexRadioDefault2">
+                                <input id="severity-2" class="form-check-input" type="radio" name="severityLevel" id="severityMobile-2">
+                                <label for="severity-2" class="form-check-label" for="severityMobile-2">
                                   2
                                 </label>
                               </div>
                               <div class=" form-check">
-                                <input id="severity-3" class="form-check-input" type="radio" name="severityLevel">
-                                <label for="severity-4" class="form-check-label" for="flexRadioDefault2">
+                                <input id="severity-3" class="form-check-input" type="radio" name="severityLevel" id="severityMobile-3">
+                                <label for="severity-4" class="form-check-label" for="severityMobile-3">
                                   3
                                 </label>
                               </div>
                               <div class=" form-check">
-                                <input id="severity-4" class="form-check-input" type="radio" name="severityLevel">
-                                <label for="severity-4" class="form-check-label" for="flexRadioDefault2">
+                                <input id="severity-4" class="form-check-input" type="radio" name="severityLevel" id="severityMobile-4">
+                                <label for="severity-4" class="form-check-label" for="severityMobile-4">
                                   4
                                 </label>
                               </div>
@@ -4362,7 +4369,7 @@
                           </div>
 
                           <div class="col-12 d-flex gap-20 ">
-                            <div class="col-5">
+                            <div class="col-6">
                               <label for="" class="label">Date</label>
                               <div id="weeklyrange" class=" col-4 form-control singleDatePicker">
                                 <span></span>
@@ -4384,7 +4391,10 @@
                         </div>
                       </div>
                     </div>
-                    <label for="" class="label h2-tags mt-25">Surgical Procedure</label>
+                    <div class="d-flex align-items-center mt-25 mb-10">
+                      <label for="" class="label h2-tags ">Surgical Procedure</label>
+                      <img src="../echart//images/Delete_mobile.svg" class="delete-icon" />
+                    </div>
                     <div class="card">
                       <div class="card-body">
                         <div class="row gy-3">
@@ -4398,13 +4408,13 @@
                           </div>
                           <div class="col-12">
                             <label for="description" class="mobile-label">Description</label>
-                            <input type="text" id="description" class="form-control"
+                            <input type="text" id="description-1" class="form-control description-box"
                               value="Abrasion, left knee, initial encounter">
 
                           </div>
 
                           <div class="col-12 d-flex gap-20 ">
-                            <div class="col-5">
+                            <div class="col-6">
                               <label for="" class="label">Date</label>
                               <div id="weeklyrange" class=" col-4 form-control singleDatePicker">
                                 <span></span>
@@ -4430,13 +4440,13 @@
                           </div>
                           <div class="col-12">
                             <label for="description" class="mobile-label">Description</label>
-                            <input type="text" id="description" class="form-control"
+                            <input type="text" id="description-2" class="form-control description-box"
                               value="Abrasion, left knee, initial encounter">
 
                           </div>
 
                           <div class="col-12 d-flex gap-20 ">
-                            <div class="col-5">
+                            <div class="col-6">
                               <label for="" class="label">Date</label>
                               <div id="weeklyrange" class=" col-4 form-control singleDatePicker">
                                 <span></span>
@@ -4659,11 +4669,12 @@
                 <option>Number 3</option>
                 <option>Number 4</option>
               </select>
-              <p class="error text-red">*This is required field.</p>
+              <p class="text-red my-3">*This is required field.</p>
+              <hr class="custom-hr my-4">
             </div>
           </div>
-          <div class="row gy-3 mb-25 d-block d-md-none">
-            <div class="card">
+          <div class=" mb-25 d-block d-md-none">
+            <div class="card mb-15">
               <div class="card-body">
                 <div class="row">
                   <div class="col-md-12">
@@ -4848,7 +4859,7 @@
           </div>
           <div class="comment-container col-md-8 d-block d-md-none">
             <h2 class="fw-medium plus-icon hide-toggle h2-tags">Comments</h2>
-            <textarea class="contact-comment hidden col-8" placeholder="Type Here..." rows="2" cols=""></textarea>
+            <textarea class="contact-comment hidden col-12 col-md-8" placeholder="Type Here..." rows="2" cols=""></textarea>
           </div>
           <!-- Mobile version for individual split schedule popup end -->
 
@@ -5147,26 +5158,26 @@
                     <label for="" class="mobile-label">Severity Level</label>
                     <div class="d-flex gap-20">
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault">
-                        <label class="form-check-label" for="flexRadioDefault1">
+                        <input class="form-check-input" type="radio" name="severity" id="severity-1">
+                        <label class="form-check-label" for="severity-1">
                           1
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault">
-                        <label class="form-check-label" for="flexRadioDefault2">
+                        <input class="form-check-input" type="radio" name="severity" id="severity-2">
+                        <label class="form-check-label" for="severity-2">
                           2
                         </label>
                       </div>
                       <div class=" form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault">
-                        <label class="form-check-label" for="flexRadioDefault2">
+                        <input class="form-check-input" type="radio" name="severity" id="severity-3">
+                        <label class="form-check-label" for="severity-3">
                           3
                         </label>
                       </div>
                       <div class=" form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault">
-                        <label class="form-check-label" for="flexRadioDefault2">
+                        <input class="form-check-input" type="radio" name="severity" id="severity-4">
+                        <label class="form-check-label" for="severity-4">
                           4
                         </label>
                       </div>
@@ -5197,7 +5208,10 @@
                 </div>
               </div>
             </div>
-            <label for="" class="label h2-tags mt-25">Surgical Procedure</label>
+            <div class="d-flex align-items-center mt-25 mb-10">
+              <label for="" class="label h2-tags ">Surgical Procedure</label>
+              <img src="../echart//images/Delete_mobile.svg" class="delete-icon">
+            </div>
             <div class="card">
               <div class="card-body">
                 <div class="row gy-3">
@@ -5651,7 +5665,7 @@
                 <input type="text" class="form-control w-fit" placeholder="Enter EVV Token Code" />
                 <p class="error text-red mt-8">*This is required field.</p>
               </div>
-              <div class="d-flex flex-column flex-md-row col-md-6 gap-40 ">
+              <div class="d-flex flex-column flex-md-row col-md-6 gap-4 ">
                 <div>
                   <p class="info-label superscript">Check Out Treatment Location</p>
                   <p class="info-detail">50 Oakland Avenue, Miami, 32104 </p>
@@ -5679,7 +5693,7 @@
                 <input type="text" class="form-control w-fit" placeholder="Enter EVV Token Code" />
                 <p class="error text-red mt-8">*This is required field.</p>
               </div>
-              <div class="d-flex flex-column flex-md-row col-md-6 gap-40 ">
+              <div class="d-flex flex-column flex-md-row col-md-6 gap-4 ">
                 <div>
                   <p class="info-label superscript">Check Out Treatment Location</p>
                   <p class="info-detail">50 Oakland Avenue, Miami, 32104 </p>
@@ -5699,7 +5713,7 @@
               <label for="" class="label h2-tags">Record Voice Message</label>
             </div>
           </div>
-          <div class="custom-border">
+          <div class="custom-border mb-3">
             <div class="col-12">
               <div class="">
                 <img src="images/mic.svg" alt="" />
@@ -5734,7 +5748,7 @@
           <button class="close-line" type="button" data-bs-dismiss="modal" aria-label="Close" ></button>
         </div>
         <div class="modal-header">
-          <h5 class="modal-title">Patient & Timesheet Information</h5>
+          <h5 class="modal-title">Patient Information</h5>
           <button type="button" class="btn-close d-none d-md-block" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -5792,12 +5806,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <div class="d-flex me-auto " data-bs-dismiss="modal">
-            <a href="patient-info.html" class="">
-              <img src="../echart/images/arrow_left.svg" />
-            </a>
-            <spna class="fw-medium text-13 ms-3 pointer">Back</spna>
-          </div>
+          <a href="patient-info.html" class="btn btn-outline-primary">Close</a>
 
         </div>
       </div>
@@ -5819,7 +5828,7 @@
         <div class="modal-body">
           <div class="bg-white p-3 timesheet d-block d-md-none">
             <div class="row">
-              <div class="col-7 col-md-3">
+              <div class="col-6 col-md-3">
                 <label for="" class="label">Visit Date<sup>*</sup></label>
                 <div id="weeklyrange" class="form-control singleDatePicker">
                   <span></span>
@@ -5878,51 +5887,51 @@
               </div>
             </div>
             <div class="row mt-4">
-              <div class="col-5 col-md-3">
+              <div class="col-6 col-md-3">
                 <label for="" class="label">Payer Hours</label>
                 <input type="text" class="form-control" value="01:15:00" />
               </div>
-              <div class="col-5 col-md-3">
+              <div class="col-6 col-md-3">
                 <label for="" class="label">Miles</label>
                 <input type="text" class="form-control" value="00" />
               </div>
             </div>
             <div class="row mt-4">
-              <div class="col-5 col-md-3">
+              <div class="col-6 col-md-3">
                 <label for="" class="label">Doc Time</label>
                 <input type="text" class="form-control" value="213 mins" />
               </div>
-              <div class="col-5 col-md-3">
+              <div class="col-6 col-md-3">
                 <label for="" class="label">Travel Time</label>
                 <input type="text" class="form-control" value="1232 mins" />
               </div>
             </div>
             <div class="row mt-4">
-              <div class="col-5 col-md-3">
+              <div class="col-6 col-md-3">
                 <label for="" class="label">Check In Code</label>
                 <input type="text" class="form-control" value="" />
               </div>
-              <div class="col-5 col-md-3">
+              <div class="col-6 col-md-3">
                 <label for="" class="label">Check Out Code</label>
                 <input type="text" class="form-control" value="" />
               </div>
             </div>
             <div class="row mt-4">
-              <div class="col-5 col-md-3">
+              <div class="col-6 col-md-3">
                 <label for="" class="label">Shift Name</label>
                 <input type="text" class="form-control" value="Morning" />
               </div>
-              <div class="col-5 col-md-3">
+              <div class="col-6 col-md-3">
                 <label for="" class="label">POC Status</label>
                 <input type="text" class="form-control" value="Open" />
               </div>
             </div>
             <div class="row mt-4">
-              <div class="col-5 col-md-3">
+              <div class="col-6 col-md-3">
                 <label for="" class="label">Initial Submission</label>
                 <input type="text" class="form-control" value="Lorem ipsum" />
               </div>
-              <div class="col-5 col-md-3">
+              <div class="col-6 col-md-3">
                 <label for="" class="label">Final Submission</label>
                 <input type="text" class="form-control" value="Open" />
               </div>
@@ -6036,12 +6045,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <div class="d-flex me-auto " data-bs-dismiss="modal">
-            <a href="patient-info.html" class="">
-              <img src="../echart/images/arrow_left.svg" />
-            </a>
-            <spna class="fw-medium text-13 ms-3 pointer">Back</spna>
-          </div>
+          <a href="patient-info.html" class="btn btn-outline-primary">Close</a>
 
         </div>
       </div>
@@ -6079,14 +6083,14 @@
                 Timesheet Info</a>
             </h3> -->
             <ul class="sidebar-menu">
-              <li class="has-subchild active">
+              <li class="has-subchild">
                 <a href="#">Supervisory Visit Form </a>
                 
                  <ul>
                   <li><a href="prerequisites.html" class="nav-link-popup">Prerequisites</a></li>
                   <li><a href="#vitalGraph" class="nav-link-popup">Vital Signs</a></li>
                   <li><a href="#diagnosis" class="nav-link-popup">Diagnosis</a></li>
-                  <li class="has-subchild" class="nav-link-popup">
+                  <li class="has-subchild " class="nav-link-popup">
                     <a href="#supervision">Patient Supervision</a>
                     <ul>
                       <li><a href="#cardiovascular" class="nav-link-popup">Cardiovascular</a></li>
@@ -6280,8 +6284,14 @@
     }
 
 
-    
-
+  
+    function rotateArrow() {
+  var arrowImgs = document.getElementsByClassName('arrow-img');
+  
+  for (var i = 0; i < arrowImgs.length; i++) {
+    arrowImgs[i].classList.toggle('rotate');
+  }
+}
    
 
 

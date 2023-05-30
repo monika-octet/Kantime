@@ -35,13 +35,26 @@
         font-weight: 600;
         line-height: 22px;
         letter-spacing: 0em;
-        text-align: left;
+        
+    }
 
+    .h2-tags{
+        margin-bottom: 10px;
     }
 
     .info-bar {
         margin-top: 0;
-        line-height: 20px
+        line-height: 20px;
+        position: relative;
+    }
+
+    .info-bar img{
+        position: absolute;
+        top: 13px;
+    }
+
+    .info-bar span{
+        margin-left: 25px;
     }
 
     .container-1 {
@@ -110,7 +123,7 @@
     }
 
     .documentation .multiselect-native-select .btn-group {
-        width: 66.4%;
+        width:90%;
     }
 
     .label {
@@ -131,9 +144,9 @@
 
     .form-check-label {
 
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 400;
-        line-height: 19px;
+        line-height: 20px;
         letter-spacing: 0em;
         color: #181C32;
 
@@ -196,6 +209,10 @@
 
     }
 
+    .card-border{
+        border: 1px solid #D9D9D9;
+    }
+
     #billingDX-Collapes .card-body,
     #emergency-Collapes .card-body,
     .collapse-content .card-body {
@@ -248,7 +265,7 @@
         font-weight: 500;
         line-height: 20px;
         letter-spacing: 0em;
-        padding: 14px 15px;
+        padding: 10px 15px;
 
     }
 
@@ -323,9 +340,45 @@
 
     .table-card{
         padding: 15px;
+        border-bottom: 1px solid #EFEFEF;
     }
     .table-card-container .table-card:nth-child(2n) {
         background-color: #F8F9FB;
       }
 
+    
+
+    /* css for buttons  */
+
+
+      .modal-dialog-scrollable{
+        height: calc(100% - 8rem);
+      }
+  
+     #patientInfo-Modal .btn-outline-primary,
+     #timeSheetView-Modal .btn-outline-primary{
+        width: 100%;
+      }
+
+    .sidebar-menu{
+        padding-left: 8px;
+    }
+
+    .description-box:active{
+        border: 1px solid #C5C5C5;
+
+    }
+
+    .header-fill .title{
+        padding:20px 15px;
+    }
+    .form-control{
+        height: 40px;
+    }
+
+    .poa-label{
+        display: block;
+        margin-bottom: 10px;
+    }
+    
 }
