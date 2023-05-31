@@ -423,4 +423,11 @@
         padding: 0;
     }
 
+    .sub-section-header{
+        margin-bottom: 12px;
+    } 
+
+    #competency .poa-label{
+        margin-left: 0;
+    }
 }
