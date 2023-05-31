@@ -219,8 +219,15 @@ h2 {
 }
 
 .form-control:focus {
-    border: 1px solid #D9D9D9;
+    border: 1px solid #d9d9d9;
 }
+
+.form-control:active {
+    border: 1px solid #C5C5C5;
+}
+
+
+
 
 input.form-control::placeholder {
     color: #85909F;
@@ -339,6 +346,17 @@ input.form-control::placeholder {
     width: 14px !important;
     height: 14px !important;
 }
+
+
+
+
+
+
+
+  
+  .form-control + .form-control {
+    margin-top: 1em;
+  }
 
 .btn-dot img:hover {
     filter: brightness(.97);
@@ -507,9 +525,9 @@ hr {
     padding: 5px 10px;
 }
 
-.multiselect-native-select:hover .multiselect-selected-text {
+/* .multiselect-native-select:hover .multiselect-selected-text {
     color: #546071;
-}
+} */
 
 
 
@@ -759,9 +777,32 @@ h2.info-name {
 .plus-icon::before {
     content: "\+";
     margin-right: 6px;
+    margin-bottom: 0;
 }
 
-.contact-comment {
+textarea{
+    border: 1px solid #d9d9d9;
+}
+
+textarea:hover {
+    border: 1px solid #C5C5C5;
+}
+
+textarea:focus {
+    border: 1px solid #d9d9d9;
+}
+
+textarea:active {
+    border: 1px solid #C5C5C5;
+}
+
+
+textarea:focus-visible{
+    outline: none
+}
+/* textarea:focus:not(:focus-visible) { outline: none } */
+
+.contact-comment,textarea {
 
     font-weight: 400;
     border: 1px solid #d9d9d9;
@@ -907,6 +948,7 @@ sup {
     font-weight: 500 !important;
     line-height: 20px !important;
     color: #181C32 !important;
+  
 }
 
 .h3-tags {
@@ -1005,7 +1047,8 @@ input.b-none:hover {
 }
 
 .sign-box:hover {
-    outline: 1px solid rgba(197, 197, 197, 1);
+    /* outline: 1px solid rgba(197, 197, 197, 1); */
+    border-color:#C5C5C5 ;
 }
 
 .delete-btn {
@@ -1027,7 +1070,7 @@ select:valid~span {
 }
 
 .checkbox-group-w2 div {
-    width: 160px;
+    width: 165px;
 }
 
 .checkbox-group-w3 div {
@@ -1120,3 +1163,45 @@ select:valid~span {
 .navigation-link-mobile:hover{
     color: #181C32;
 }
+
+.custom-select {
+    position: relative;
+  }
+
+.custom-select .arrow {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+  }
+  
+  .custom-select.open .arrow {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+.attachment-box{
+    padding: 12px 15px;
+    background-color: #EFEFEF66;
+
+}
+
+#pulmonary .input-group, #gastrointestinal .input-group{
+    margin:10px 0 10px -20px;
+}
+
+#vital-graphs{
+    margin-right: 20px;
+}
+
+.input-group-text{
+    line-height: 1.4;
+}
+
+.schedule-container .largerCheckbox{
+    margin-right: 0;
+}
+.schedule-container .form-check-label{
+    margin-left:10px;
+}
+

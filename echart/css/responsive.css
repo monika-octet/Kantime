@@ -35,13 +35,30 @@
         font-weight: 600;
         line-height: 22px;
         letter-spacing: 0em;
-        text-align: left;
 
+    }
+
+    .h2-tags {
+        margin-bottom: 15px;
+    }
+
+    .singleDatePicker {
+        line-height: 39px;
     }
 
     .info-bar {
         margin-top: 0;
-        line-height: 20px
+        line-height: 20px;
+        position: relative;
+    }
+
+    .info-bar img {
+        position: absolute;
+        top: 13px;
+    }
+
+    .info-bar span {
+        margin-left: 25px;
     }
 
     .container-1 {
@@ -105,12 +122,17 @@
         text-align: left;
     }
 
+    .info-detail-mobile {
+        margin-top: 2px;
+        margin-left: 10px;
+    }
+
     .rotate {
         transform: rotate(180deg);
     }
 
     .documentation .multiselect-native-select .btn-group {
-        width: 66.4%;
+        width: 90%;
     }
 
     .label {
@@ -121,6 +143,7 @@
     .form-check-input {
         height: 18px;
         width: 18px;
+        margin-right: 0;
     }
 
     .form-check-input[type="checkbox"] {
@@ -133,9 +156,10 @@
 
         font-size: 13px;
         font-weight: 400;
-        line-height: 19px;
+        line-height: 20px;
         letter-spacing: 0em;
         color: #181C32;
+        margin-left: 10px;
 
     }
 
@@ -176,7 +200,7 @@
     }
 
     .custom-grid-responsive {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
 
@@ -196,6 +220,10 @@
 
     }
 
+    .card-border {
+        border: 1px solid #D9D9D9;
+    }
+
     #billingDX-Collapes .card-body,
     #emergency-Collapes .card-body,
     .collapse-content .card-body {
@@ -210,11 +238,12 @@
         line-height: 20px;
         letter-spacing: 0em;
         color: #546071;
+        margin-bottom: 8px;
 
     }
 
     .checkbox-group-w3 div {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 
     /* .modal */
@@ -241,14 +270,14 @@
     }
 
     /* dropDown */
-   
+
 
     .dropdown-menu .dropdown-item {
         font-size: 14px;
         font-weight: 500;
         line-height: 20px;
         letter-spacing: 0em;
-        padding: 14px 15px;
+        padding: 10px 15px;
 
     }
 
@@ -278,7 +307,7 @@
         padding: 15px !important;
     }
 
-    #navigation-Modal-Mobile.modal{
+    #navigation-Modal-Mobile.modal {
         margin-top: 0px;
     }
 
@@ -309,23 +338,96 @@
 
     }
 
-    /* #navigation-Modal-Mobile .sidebar-menu li.has-subchild > a::after{
-    content: url('../images/arrow_down.svg');
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    right: 15px;
-    height: 22px;
-    display: block;
-    transition: transform 0.3s ease-in-out;
-    } */
-
-    .table-card{
-        padding: 15px;
+    #navigation-Modal-Mobile .sidebar-menu li.has-subchild>a::after {
+        content: url('../images/arrow_down.svg');
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        right: 15px;
+        height: 22px;
+        display: block;
+        transition: transform 0.3s ease-in-out;
     }
+
+    .table-card {
+        padding: 15px;
+        border-bottom: 1px solid #EFEFEF;
+    }
+
     .table-card-container .table-card:nth-child(2n) {
         background-color: #F8F9FB;
-      }
+    }
 
+
+
+    /* css for buttons  */
+
+
+    .modal-dialog-scrollable {
+        height: calc(100% - 8rem);
+    }
+
+    #patientInfo-Modal .btn-outline-primary,
+    #timeSheetView-Modal .btn-outline-primary {
+        width: 100%;
+    }
+
+    .sidebar-menu {
+        padding-left: 8px;
+    }
+
+    .description-box:active {
+        border: 1px solid #C5C5C5;
+
+    }
+
+    .header-fill .title {
+        padding: 20px 15px;
+    }
+
+    .form-control,
+    .form-select {
+        height: 40px;
+    }
+
+    .poa-label {
+        display: block;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-top: 2px;
+    }
+
+    #patientInfo-Modal .modal-dialog,
+    #timeSheetView-Modal .modal-dialog {
+        margin: 0;
+    }
+
+    #clientSignature-Modal .form-check-label {
+        font-size: 13px;
+    }
+
+    .input-group-text {
+        line-height: 2.1;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+    }
+
+    .table-card>label {
+        margin-left: 0;
+    }
+
+    #competency .card-body {
+        padding: 0;
+    }
+
+    .sub-section-header{
+        margin-bottom: 12px;
+    } 
+
+    #competency .poa-label{
+        margin-left: 0;
+    }
 }
