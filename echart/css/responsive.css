@@ -419,7 +419,8 @@
     }
 
     .input-group {
-        margin-bottom: 15px;
+       
+        width: 164px;
     }
 
     .table-card>label {
@@ -458,5 +459,9 @@
 
     .sidebar-menu .has-subchild.wrap-blue>ul li {
         border-left: 3px solid #0D87E2;
+    }
+
+    .checkbox-group-w2 div{
+        width: 160px;
     }
 }

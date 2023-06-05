@@ -422,7 +422,7 @@ input.form-control::placeholder {
     height: calc(100vh - 130px);
     overflow-y: auto;
     align-items: start;
-    margin-top:10px;
+    margin:10px 0;
 }
 
 .timesheet-inner-wrap {
@@ -570,6 +570,7 @@ hr {
 .sticky-0 {
     position: sticky;
     top: 0px;
+    
 }
 
 .sidebar-menu,
@@ -580,7 +581,7 @@ hr {
     padding: 0;
 }
 
-.sidebar-menu li a {
+.sidebar-menu li.has-subchild a {
     font-weight: 500;
     font-size: 13px;
     color: #546071;
@@ -588,7 +589,7 @@ hr {
     padding: 12px;
     border-bottom: 1px solid #EFEFEF;
     display: block;
-    padding-left: 30px;
+    padding-left: 40px;
 
 }
 
@@ -610,7 +611,7 @@ li.has-subchild a,
     top: 0;
     bottom: 0;
     margin: auto;
-    left: 7px;
+    left: 15px;
     height: 16px;
     display: block;
 }
@@ -625,7 +626,7 @@ li.has-subchild a,
     top: 0;
     bottom: 0;
     margin: auto;
-    left: 10px;
+    left: 20px;
     height: 22px;
     display: block;
     transition: transform 0.3s ease-in-out;
@@ -982,6 +983,7 @@ sup {
 
 input.b-none:hover {
     border: 1px solid #d9d9d9;
+    transition: none;
 }
 
 .border-hide {
@@ -1002,6 +1004,7 @@ input.b-none:hover {
 
 .border-hide:hover {
     border: 1px solid #D9D9D9;
+    transition:none;
 }
 
 .header-row {
@@ -1205,6 +1208,7 @@ select:valid~span {
 .attachment-box{
     padding: 12px 15px;
     background-color: #EFEFEF66;
+    height: 44px;
 
 }
 
@@ -1238,3 +1242,13 @@ select:valid~span {
     margin-left: 10px;
 }
 
+.patient-info-box{
+    /* height: 975px; */
+}
+
+.requirment-2 tbody tr td div{
+    width: 54px;
+}
+.fit-content{
+    width: fit-content !important;
+}
