@@ -301,7 +301,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-8 mb-3">
             <div class="header-fill">
               <h2 class="title">Timesheet</h2>
             </div>
@@ -310,7 +310,7 @@
               <div class="row">
                 <div class="col-6 col-md-3">
                   <label for="" class="label">Visit Date<sup>*</sup></label>
-                  <div id="weeklyrange" class="form-control singleDatePicker">
+                  <div id="weeklyrange-16" class="form-control singleDatePicker">
                     <span></span>
                     <img src="../echart/images/calIcon.svg" alt="" />
                   </div>
@@ -367,7 +367,7 @@
               <div class="row">
                 <div class="col-6 col-md-3">
                   <label for="" class="label">Visit Date<sup>*</sup></label>
-                  <div id="weeklyrange" class="form-control singleDatePicker">
+                  <div id="weeklyrange-15" class="form-control singleDatePicker">
                     <span></span>
                     <img src="../echart/images/calIcon.svg" alt="" />
                   </div>
@@ -486,7 +486,7 @@
               <hr class="custom-hr" />
               <h2 class="text-13 fw-medium">Split Details</h2>
               <div class="table-responsive">
-                <table class="table table-striped table-type-1">
+                <table class="table table-striped table-type-1 mb-0">
                   <thead>
                     <tr>
                       <th>Time</th>
@@ -3000,7 +3000,7 @@
 
         <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#navigation-Modal-Mobile"
           class="navigation-link-mobile">
-          <span class="fw-medium text-13 mr-5">Patient & Timesheet Info</span>
+          <span class="nav-title">Patient & Timesheet Info</span>
           <img src="../echart//images/arrow_down.svg" />
         </a>
 
@@ -3032,7 +3032,7 @@
   </footer>
   <!-- popup -->
   <div class="modal" tabindex="-1" id="emergencyContacts-Modal">
-    <div class="modal-dialog custom-modal-1 modal-dialog-scrollable emergency">
+    <div class="modal-dialog custom-modal-1 modal-dialog-centered modal-dialog-scrollable emergency">
       <div class="modal-content overflow-auto">
         <div class="d-flex justify-content-center align-items-center close-line-container d-block d-md-none">
           <button class="close-line" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -3143,7 +3143,7 @@
 
           <!-- mobile responsive for emergency contact -->
 
-          <div class="d-flex align-items-center  mb-10">
+          <div class="d-flex align-items-center  d-block d-md-none  mb-10">
             <label for="" class="label h2-tags">Contact Details</label>
             <img src="../echart//images/Delete_mobile.svg" class="delete-icon">
           </div>
@@ -3432,9 +3432,10 @@
                   <input class="form-check-input" type="checkbox" id="confirm" value="confirm">
                   <label class="form-check-label bolder" for="confirm">Contact</label>
                 </div>
-                <div class="add-contact mr-25" id="add-contact-container" data-bs-toggle="tooltip"
-                  data-bs-placement="bottom" data-bs-offset="-40, -15" title="Add New Contact">
-                  <p class="add-btn">Add</p>
+                <div class="add-contact mr-25 d-flex align-items-center " id="add-contact-container" data-bs-toggle="tooltip"
+                  data-bs-placement="bottom" data-bs-offset="-20, -10" title="Add New Contact">
+                  <img src="../echart//images/Delete_mobile.svg" class="delete-icon mx-3">
+                  <p class="add-btn p-0 m-0">Add</p>
                   <!-- <span class="tooltiptext">Add New Contact</span> -->
                 </div>
               </div>
@@ -3446,7 +3447,7 @@
                       <sup>*</sup>
                     </label>
                     <input id="nameInput" type="text" class="form-control" placeholder="Enter Name" />
-                    <p class="error text-red" id="errorTxt">*This is required field.</p>
+                    <p class="error text-red mt-2" id="errorTxt">*This is required field.</p>
                   </div>
                   <div class="col">
                     <label class="label">Relation</label>
@@ -3553,6 +3554,134 @@
 
               </div>
             </div>
+            <div class="contact-info-container mt-5">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="form-check form-check-inline ">
+                  <input class="form-check-input" type="checkbox" id="confirm" value="confirm">
+                  <label class="form-check-label bolder" for="confirm">Contact</label>
+                </div>
+                <div class="add-contact mr-25 d-flex align-items-center " id="add-contact-container" data-bs-toggle="tooltip"
+                  data-bs-placement="bottom" data-bs-offset="-40px,0px" title="Add New Contact">
+                  <img src="../echart//images/Delete_mobile.svg" class="delete-icon mx-3">
+                  <p class="add-btn p-0 m-0">Add</p>
+                  <!-- <span class="tooltiptext">Add New Contact</span> -->
+                </div>
+              </div>
+              <div class="info-box">
+                <div class="row ">
+                  <div class="col">
+                    <label class="label">
+                      Name
+                      <sup>*</sup>
+                    </label>
+                    <input id="nameInput" type="text" class="form-control" placeholder="Enter Name" />
+                    <p class="error text-red mt-2" id="errorTxt">*This is required field.</p>
+                  </div>
+                  <div class="col">
+                    <label class="label">Relation</label>
+                    <input type="text" class="form-control" placeholder="Cousin" />
+                  </div>
+                  <div class="col">
+                    <label class="label">Priority</label>
+                    <select class="single-select">
+                      <option disabled selected class="d-none">Select Priority</option>
+                      <option>Primary</option>
+                      <option>Secondary</option>
+                      <option>Tertiary</option>
+                    </select>
+                  </div>
+
+                  <div class="col">
+                    <label class="label">Gender</label>
+                    <select class="single-select">
+                      <option disabled selected class="d-none">Select Gender</option>
+                      <option>Male</option>
+                      <option>Female</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <label class="label">Age</label>
+                    <input type="text" class="form-control" placeholder="Enter Age" value="" />
+                  </div>
+
+                </div>
+                <hr class="custom-hr ">
+
+                <div class="row">
+                  <div class="col">
+                    <label class="label">
+                      Address 1
+                    </label>
+                    <input type="text" class="form-control" placeholder="Enter Address" value="" />
+
+                  </div>
+                  <div class="col">
+                    <label class="label">Address 2</label>
+                    <input type="text" class="form-control" placeholder="Enter Address" value="" />
+                  </div>
+                  <div class="col">
+                    <label class="label">Zip</label>
+                    <input type="number" class="form-control" placeholder="Enter Zip" value="" />
+                  </div>
+                  <div class="col">
+                    <label class="label">City</label>
+                    <input type="text" class="form-control" placeholder="Enter City" value="" />
+                  </div>
+
+                  <div class="col">
+                    <label class="label">State</label>
+                    <input type="text" class="form-control" placeholder="Enter State" value="" />
+                  </div>
+
+                </div>
+                <hr class="custom-hr">
+
+                <div class="row">
+                  <div class="col">
+                    <label class="label">
+                      Home Phone
+                    </label>
+                    <input type="text" class="form-control" placeholder="Enter Home Number" value="" />
+
+                  </div>
+                  <div class="col">
+                    <label class="label">Cell Phone</label>
+                    <input type="text" class="form-control" placeholder="Enter Cell Phone" value="" />
+                  </div>
+                  <div class="col">
+                    <label class="label">Work Phone</label>
+                    <input type="text" class="form-control" placeholder="Enter Work Phone" value="" />
+                  </div>
+                  <div class="col">
+                    <label class="label">Fax</label>
+                    <input type="text" class="form-control" placeholder="Enter Fax" value="" />
+                  </div>
+
+                  <div class="col">
+                    <label class="label">Email</label>
+                    <input type="text" class="form-control" placeholder="Enter Email" value="" />
+                  </div>
+                </div>
+                <hr class="custom-hr">
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="POA" value="POA">
+                  <label class="poa-label" for="POA">Copy of POA paper on file</label>
+
+                </div>
+                <hr class="custom-hr">
+                <!-- Commnent section comes here -->
+                <div class="comment-container col-md-8">
+                  <h2 class="fw-medium plus-icon hide-toggle">Comments</h2>
+                  <textarea class="contact-comment hidden col-8" placeholder="Type Here..." rows="2"></textarea>
+                </div>
+                <hr class="custom-hr">
+                <div class="">
+
+                </div>
+
+              </div>
+            </div>
           </div>
         </div>
         <div class="modal-footer">
@@ -3568,7 +3697,7 @@
   <!--Billing DX Codes Popup-->
 
   <div class="modal" tabindex="-1" id="billingDxCodes-Modal">
-    <div class="modal-dialog custom-modal-1 modal-dialog-scrollable">
+    <div class="modal-dialog custom-modal-1 modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content billingDxCodes">
         <div class="d-flex justify-content-center align-items-center close-line-container d-block d-md-none">
           <button class="close-line" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -3859,17 +3988,17 @@
           <!-- table turned into card for mobile end-->
 
           <div class="table-responsive d-none d-md-block">
-            <table class="table table-striped table-type-1">
+            <table class="table table-striped table-type-1 ">
               <thead>
                 <tr>
-                  <th>Payer</th>
-                  <th>Service</th>
-                  <th>HCPCS & Modifiers</th>
-                  <th>Minutes</th>
-                  <th>Dx Order 1</th>
-                  <th>Dx Order 2 </th>
-                  <th>Dx Order 3</th>
-                  <th>Dx Order 4 </th>
+                  <th style="width: 125px;" >Payer</th>
+                  <th style="width: 170px;" >Service</th>
+                  <th style="width: 125px;" >HCPCS & Modifiers</th>
+                  <th style="width: 60px;" >Minutes</th>
+                  <th style="width: 100px;" >Dx Order 1</th>
+                  <th style="width: 100px;" >Dx Order 2 </th>
+                  <th style="width: 100px;" >Dx Order 3</th>
+                  <th style="width: 100px;" >Dx Order 4 </th>
                 </tr>
               </thead>
               <tbody>
@@ -3963,7 +4092,7 @@
           <!-- split schedule starts -->
 
           <div class="schedule-container">
-            <h2 class="fw-medium plus-icon hide-toggle h2-tags">Split Schedule</h2>
+            <h2 class="fw-medium plus-icon hide-toggle h2-tags mb-3">Split Schedule</h2>
             <div class="custom-border hidden">
               <div class="row ">
                 <div class="col-md-12 checkbox-group">
@@ -4185,18 +4314,18 @@
               <!-- table for mobile responsive split schedule end -->
 
               <div class="table-responsive d-none d-md-block">
-                <table class="table table-striped table-type-1">
+                <table class="table table-striped table-type-1 schedule-table">
                   <thead>
                     <tr>
-                      <th>Payer</th>
-                      <th>HCPCS & Modifiers</th>
-                      <th>Minutes</th>
-                      <th class="col-1">Payer</th>
-                      <th class="col-1">Service</th>
-                      <th>Billable </th>
-                      <th>Payable</th>
-                      <th>Lost Revenue </th>
-                      <th>Non Billable Reason</th>
+                      <th style="width: 80px;">Payer</th>
+                      <th style="width: 130px;">HCPCS & Modifiers</th>
+                      <th style="width: 60px;">Minutes</th>
+                      <th style="width: 100px;" class="col-1">Payer</th>
+                      <th style="width: 100px;" class="col-1">Service</th>
+                      <th style="width: 80px;">Billable </th>
+                      <th style="width: 80px;">Payable</th>
+                      <th style="width: 80px;">Lost Revenue </th>
+                      <th style="width: 205px;">Non Billable Reason</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -4205,7 +4334,8 @@
                       <td>04:54-04:55 AM</td>
                       <td>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input largerCheckbox radio" type="checkbox" id="" value="" name="">
+                          <input class="form-check-input largerCheckbox radio" type="checkbox" id=""
+                            value="" name="">
                           <label class="form-check-label" for="">01</label>
                         </div>
                       </td>
@@ -4227,12 +4357,14 @@
                       </td>
                       <td>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input largerCheckbox radio" type="checkbox" id="" value="" name="">
+                          <input class="form-check-input largerCheckbox radio" type="checkbox" id=""
+                            value="" name="">
                         </div>
                       </td>
                       <td>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input largerCheckbox radio" type="checkbox" id="" value="" name="">
+                          <input class="form-check-input largerCheckbox radio" type="checkbox" id=""
+                            value="" name="">
                         </div>
                       </td>
                       <td>
@@ -4241,16 +4373,17 @@
                             value="client" name="client-other">
                         </div>
                       </td>
-                      <td class="custom-center">
-                        <select class="single-select">
+                      <td class="custom-center d-flex justify-content-between">
+   
+                        <select class="single-select w-100">
                           <option selected>Select</option>
                           <option>Select 1</option>
                           <option>Select 2</option>
                           <option>Select 3</option>
                         </select>
-
                         <span>Lorem ipsum</span>
-                      </td>
+               
+                    </td>
                     </tr>
                     <tr>
                       <td>01/01/2023</td>
@@ -4296,14 +4429,16 @@
                             value="client" name="client-other">
                         </div>
                       </td>
-                      <td class="custom-center">
-                        <select class="single-select">
-                          <option selected>Select</option>
-                          <option>Select 1</option>
-                          <option>Select 2</option>
-                          <option>Select 3</option>
-                        </select>
-                        <span>Lorem ipsum</span>
+                      <td class="custom-center d-flex justify-content-between">
+   
+                          <select class="single-select w-100">
+                            <option selected>Select</option>
+                            <option>Select 1</option>
+                            <option>Select 2</option>
+                            <option>Select 3</option>
+                          </select>
+                          <span>Lorem ipsum</span>
+                 
                       </td>
                     </tr>
                   </tbody>
@@ -4321,7 +4456,7 @@
           <!-- Edit diagnosis starts -->
 
           <div class="diagnosis-container">
-            <h2 class="fw-medium plus-icon hide-toggle h2-tags">Edit Diagnosis</h2>
+            <h2 class="fw-medium plus-icon hide-toggle h2-tags mb-3">Edit Diagnosis</h2>
             <div class="custom-border hidden">
               <div class="row ">
                 <div class="col-md-12">
@@ -4376,7 +4511,7 @@
                           <div class="col-12 d-flex gap-20 ">
                             <div class="col-6">
                               <label for="" class="label">Date</label>
-                              <div id="weeklyrange" class=" col-4 form-control singleDatePicker">
+                              <div id="weeklyrange-14" class=" col-4 form-control singleDatePicker">
                                 <span></span>
                                 <img src="../echart/images/calIcon.svg" alt="" />
                               </div>
@@ -4421,7 +4556,7 @@
                           <div class="col-12 d-flex gap-20 ">
                             <div class="col-6">
                               <label for="" class="label">Date</label>
-                              <div id="weeklyrange" class=" col-4 form-control singleDatePicker">
+                              <div id="weeklyrange-13" class=" col-4 form-control singleDatePicker">
                                 <span></span>
                                 <img src="../echart/images/calIcon.svg" alt="" />
                               </div>
@@ -4453,7 +4588,7 @@
                           <div class="col-12 d-flex gap-20 ">
                             <div class="col-6">
                               <label for="" class="label">Date</label>
-                              <div id="weeklyrange" class=" col-4 form-control singleDatePicker">
+                              <div id="weeklyrange-12" class=" col-4 form-control singleDatePicker">
                                 <span></span>
                                 <img src="../echart/images/calIcon.svg" alt="" />
                               </div>
@@ -4498,7 +4633,7 @@
                               value="Abrasion, left knee, initial encounter">
                           </div>
                         </td>
-                        <td class="d-flex gap-40">
+                        <td class="d-flex gap-40" style="border-bottom: none;">
                           <div class="form-check">
                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                             <label class="form-check-label" for="flexRadioDefault1">
@@ -4529,7 +4664,7 @@
                         </td>
                         <td class="w-30 billingDX">
                           <div class="d-flex gap-20">
-                            <div id="weeklyrange" class="form-control singleDatePicker input-cal">
+                            <div id="weeklyrange-11" class="form-control singleDatePicker input-cal">
                               <span></span>
                               <img src="../echart/images/calIcon.svg" alt="" />
                             </div>
@@ -4578,7 +4713,7 @@
                             </div>
                           </td>
                           <td>
-                            <div id="weeklyrange" class="form-control singleDatePicker input-cal">
+                            <div id="weeklyrange-10" class="form-control singleDatePicker input-cal">
                               <span></span>
                               <img src="../echart/images/calIcon.svg" alt="" />
                             </div>
@@ -4595,7 +4730,7 @@
                             </div>
                           </td>
                           <td>
-                            <div id="weeklyrange" class="form-control singleDatePicker input-cal">
+                            <div id="weeklyrange-9" class="form-control singleDatePicker input-cal">
                               <span></span>
                               <img src="../echart/images/calIcon.svg" alt="" />
                             </div>
@@ -4607,8 +4742,8 @@
 
                 </div>
               </div>
-              <div class="row d-none d-md-block">
-                <label for="" class="label h2-tags">Other Diagnosis <sup>*</sup></label>
+              <div class="row d-none d-md-block ">
+                <label for="" class="label h2-tags mb-md-0">Other Diagnosis <sup>*</sup></label>
 
               </div>
             </div>
@@ -4636,7 +4771,7 @@
 
   <!-- Split schedule Popup -->
   <div class="modal" tabindex="-1" id="splitSchedule-Modal">
-    <div class="modal-dialog custom-modal-1 modal-dialog-scrollable splitSchedule">
+    <div class="modal-dialog custom-modal-1 modal-dialog-centered modal-dialog-scrollable splitSchedule">
       <div class="modal-content overflow-auto">
         <div class="d-flex justify-content-center align-items-center close-line-container d-block d-md-none">
           <button class="close-line" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -4869,7 +5004,7 @@
           </div>
           <!-- Mobile version for individual split schedule popup end -->
 
-          <div class="schedule-container d-none d-md-block">
+          <div class="schedule-container d-none d-md-block mt-2">
 
 
             <div class="row ">
@@ -4980,18 +5115,18 @@
 
 
             <div class="table-responsive d-none d-md-block">
-              <table class="table table-striped table-type-1">
+              <table class="table table-striped table-type-1 schedule-table">
                 <thead>
                   <tr>
-                    <th>Payer</th>
-                    <th>HCPCS & Modifiers</th>
-                    <th>Minutes</th>
-                    <th>Payer</th>
-                    <th>Service</th>
-                    <th>Billable </th>
-                    <th>Payable</th>
-                    <th>Lost Revenue </th>
-                    <th>Non Billable Reason</th>
+                    <th style="width: 80px;">Payer</th>
+                    <th style="width: 130px;">HCPCS & Modifiers</th>
+                    <th style="width: 60px;">Minutes</th>
+                    <th style="width: 100px;" class="col-1">Payer</th>
+                    <th style="width: 100px;" class="col-1">Service</th>
+                    <th style="width: 80px;">Billable </th>
+                    <th style="width: 80px;">Payable</th>
+                    <th style="width: 80px;">Lost Revenue </th>
+                    <th style="width: 205px;">Non Billable Reason</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -5039,16 +5174,17 @@
                           name="client-other">
                       </div>
                     </td>
-                    <td class="custom-center">
-                      <select class="single-select">
+                    <td class="custom-center d-flex justify-content-between">
+   
+                      <select class="single-select w-100">
                         <option selected>Select</option>
                         <option>Select 1</option>
                         <option>Select 2</option>
                         <option>Select 3</option>
                       </select>
-
                       <span>Lorem ipsum</span>
-                    </td>
+             
+                  </td>
                   </tr>
                   <tr>
                     <td>01/01/2023</td>
@@ -5094,15 +5230,17 @@
                           name="client-other">
                       </div>
                     </td>
-                    <td class="custom-center">
-                      <select class="single-select">
+                    <td class="custom-center d-flex justify-content-between">
+   
+                      <select class="single-select w-100">
                         <option selected>Select</option>
                         <option>Select 1</option>
                         <option>Select 2</option>
                         <option>Select 3</option>
                       </select>
                       <span>Lorem ipsum</span>
-                    </td>
+             
+                  </td>
                   </tr>
                 </tbody>
               </table>
@@ -5132,7 +5270,7 @@
   <!--edit diagnosis popup start  -->
 
   <div class="modal" tabindex="-1" id="editDiagnosis-Modal">
-    <div class="modal-dialog custom-modal-1 modal-dialog-scrollable editDiagnosis">
+    <div class="modal-dialog custom-modal-1 modal-dialog-centered modal-dialog-scrollable editDiagnosis">
       <div class="modal-content overflow-auto">
         <div class="d-flex justify-content-center align-items-center close-line-container d-block d-md-none">
           <button class="close-line" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -5141,7 +5279,7 @@
           <h5 class="modal-title">Edit Diagnosis</h5>
           <button type="button" class="btn-close d-none d-md-block" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body p-3">
+        <div class="modal-body p-3 mt-2">
           <div class="row ">
             <div class="col-md-12 checkbox-group">
               <label for="" class="label h2-tags">Primary Diagnosis<sup>*</sup></label>
@@ -5194,7 +5332,7 @@
                   <div class="col-12 d-flex gap-20 ">
                     <div class="col-5">
                       <label for="" class="label">Date</label>
-                      <div id="weeklyrange" class=" col-4 form-control singleDatePicker">
+                      <div id="weeklyrange-8" class=" col-4 form-control singleDatePicker">
                         <span></span>
                         <img src="../echart/images/calIcon.svg" alt="" />
                       </div>
@@ -5239,7 +5377,7 @@
                   <div class="col-12 d-flex gap-20 ">
                     <div class="col-5">
                       <label for="" class="label">Date</label>
-                      <div id="weeklyrange" class=" col-4 form-control singleDatePicker">
+                      <div id="weeklyrange-6" class=" col-4 form-control singleDatePicker">
                         <span></span>
                         <img src="../echart/images/calIcon.svg" alt="" />
                       </div>
@@ -5271,7 +5409,7 @@
                   <div class="col-12 d-flex gap-20 ">
                     <div class="col-5">
                       <label for="" class="label">Date</label>
-                      <div id="weeklyrange" class=" col-4 form-control singleDatePicker">
+                      <div id="weeklyrange-5" class=" col-4 form-control singleDatePicker">
                         <span></span>
                         <img src="../echart/images/calIcon.svg" alt="" />
                       </div>
@@ -5313,7 +5451,7 @@
                         value="Abrasion, left knee, initial encounter">
                     </div>
                   </td>
-                  <td class="d-flex gap-40">
+                  <td class="d-flex gap-40" style="border-bottom: none;">
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                       <label class="form-check-label" for="flexRadioDefault1">
@@ -5344,7 +5482,7 @@
                   </td>
                   <td class="w-30 billingDX">
                     <div class="d-flex gap-20">
-                      <div id="weeklyrange" class="form-control singleDatePicker input-cal">
+                      <div id="weeklyrange-4" class="form-control singleDatePicker input-cal">
                         <span></span>
                         <img src="../echart/images/calIcon.svg" alt="" />
                       </div>
@@ -5398,7 +5536,7 @@
                         </div>
                       </td>
                       <td>
-                        <div id="weeklyrange" class="form-control singleDatePicker input-cal">
+                        <div id="weeklyrange-3" class="form-control singleDatePicker input-cal">
                           <span></span>
                           <img src="../echart/images/calIcon.svg" alt="" />
                         </div>
@@ -5454,7 +5592,7 @@
 
   <!-- Report incident popup -->
   <div class="modal" tabindex="-1" id="reportIncident-Modal">
-    <div class="modal-dialog custom-modal-3 modal-dialog-scrollable reportIncident">
+    <div class="modal-dialog custom-modal-3 modal-dialog-centered modal-dialog-scrollable reportIncident">
       <div class="modal-content overflow-auto">
         <div class="d-flex justify-content-center align-items-center close-line-container d-block d-md-none">
           <button class="close-line" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -5606,7 +5744,7 @@
 
   <!-- Complete documentation popup -->
   <div class="modal" tabindex="-1" id="completeDoc-Modal">
-    <div class="modal-dialog custom-modal-3 modal-dialog-scrollable">
+    <div class="modal-dialog custom-modal-3 modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content overflow-auto">
         <div class="d-flex justify-content-center align-items-center close-line-container d-block d-md-none">
           <button class="close-line" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -5617,7 +5755,7 @@
         </div>
         <div class="modal-body p-3">
 
-          <div class="info-bar mt-20">
+          <div class="info-bar">
             <img src="images/info-filled.svg" alt="" />
             <span>
               You are about to complete this note and submit it for further processing. Please ensure you have
@@ -5719,7 +5857,7 @@
               <label for="" class="label h2-tags">Record Voice Message</label>
             </div>
           </div>
-          <div class="custom-border mb-3">
+          <div class="custom-border">
             <div class="col-12">
               <div class="">
                 <img src="images/mic.svg" alt="" />
@@ -5733,7 +5871,7 @@
           <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">
             Close
           </button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-primary">Save</button>
         </div>
       </div>
     </div>
@@ -5836,7 +5974,7 @@
             <div class="row">
               <div class="col-6 col-md-3">
                 <label for="" class="label">Visit Date<sup>*</sup></label>
-                <div id="weeklyrange" class="form-control singleDatePicker">
+                <div id="weeklyrange-1" class="form-control singleDatePicker">
                   <span></span>
                   <img src="../echart/images/calIcon.svg" alt="" />
                 </div>
@@ -6209,10 +6347,10 @@
       var end = moment();
 
       function cb(start, end) {
-        $("#weeklyrange span").html(start.format("D/MM/YYYY"));
+        $(".singleDatePicker span").html(start.format("D/MM/YYYY"));
       }
 
-      $("#weeklyrange").daterangepicker(
+      $(".singleDatePicker").daterangepicker(
         {
           startDate: start,
           endDate: end,
