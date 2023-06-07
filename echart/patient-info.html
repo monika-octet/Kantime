@@ -3186,8 +3186,8 @@
 
 
             </div>
-            <div class="mt-4 d-block d-md-none">
-              <div class="collapse collapse-content" id="contactDetails-Collapes">
+            <div class="mt-1 d-block d-md-none">
+              <div class="collapse collapse-content p-3 p-md-0" id="contactDetails-Collapes">
                 <div class="card card-body">
                   <div class="row gy-4 gy-md-0">
                     <div class="col-6 col-md-2">
@@ -3323,8 +3323,8 @@
 
 
             </div>
-            <div class="mt-4 d-block d-md-none">
-              <div class="collapse collapse-content" id="contactDetails-Collapes-2">
+            <div class="mt-1 d-block d-md-none">
+              <div class="collapse collapse-content p-3 p-md-0" id="contactDetails-Collapes-2">
                 <div class="card card-body">
                   <div class="row gy-4 gy-md-0">
                     <div class="col-6 col-md-2">
@@ -3426,7 +3426,7 @@
 
 
           <div class="contact-container d-none d-md-block">
-            <div class="contact-info-container">
+            <div class="contact-info-container" id="contact-info-container-1">
               <div class="d-flex justify-content-between align-items-center mb-2">
                 <div class="form-check form-check-inline ">
                   <input class="form-check-input" type="checkbox" id="confirm" value="confirm">
@@ -3444,20 +3444,20 @@
                   <div class="col">
                     <label class="label">
                       Name
-                      <sup>*</sup>
+                      <sup></sup>
                     </label>
-                    <input id="nameInput" type="text" class="form-control" placeholder="Enter Name" />
-                    <p class="error text-red mt-2" id="errorTxt">*This is required field.</p>
+                    <input id="nameInput" type="text" class="form-control" value="John Doe" placeholder="Enter Name" />
+                    <p class="error text-red mt-2 hidden" id="errorTxt">*This is required field.</p>
                   </div>
                   <div class="col">
                     <label class="label">Relation</label>
-                    <input type="text" class="form-control" placeholder="Cousin" />
+                    <input type="text" class="form-control" placeholder="Relation" value="Cousin"  />
                   </div>
                   <div class="col">
                     <label class="label">Priority</label>
                     <select class="single-select">
-                      <option disabled selected class="d-none">Select Priority</option>
-                      <option>Primary</option>
+                      <option  class="d-none">Select Priority</option>
+                      <option selected >Primary</option>
                       <option>Secondary</option>
                       <option>Tertiary</option>
                     </select>
@@ -3466,8 +3466,8 @@
                   <div class="col">
                     <label class="label">Gender</label>
                     <select class="single-select">
-                      <option disabled selected class="d-none">Select Gender</option>
-                      <option>Male</option>
+                      <option  class="d-none">Select Gender</option>
+                      <option selected>Male</option>
                       <option>Female</option>
                     </select>
                   </div>
@@ -3477,7 +3477,7 @@
                   </div>
 
                 </div>
-                <hr class="custom-hr mt-10 ">
+                <hr class="custom-hr ">
 
                 <div class="row">
                   <div class="col">
@@ -3554,7 +3554,7 @@
 
               </div>
             </div>
-            <div class="contact-info-container mt-5">
+            <div class="contact-info-container mt-4">
               <div class="d-flex justify-content-between align-items-center mb-2">
                 <div class="form-check form-check-inline ">
                   <input class="form-check-input" type="checkbox" id="confirm" value="confirm">
@@ -3572,10 +3572,10 @@
                   <div class="col">
                     <label class="label">
                       Name
-                      <sup>*</sup>
+                      <sup></sup>
                     </label>
                     <input id="nameInput" type="text" class="form-control" placeholder="Enter Name" />
-                    <p class="error text-red mt-2" id="errorTxt">*This is required field.</p>
+                    <p class="error text-red mt-2 hidden" id="errorTxt">*This is required field.</p>
                   </div>
                   <div class="col">
                     <label class="label">Relation</label>
@@ -3605,7 +3605,7 @@
                   </div>
 
                 </div>
-                <hr class="custom-hr mt-10 ">
+                <hr class="custom-hr">
 
                 <div class="row">
                   <div class="col">
@@ -4318,14 +4318,14 @@
                   <thead>
                     <tr>
                       <th style="width: 80px;">Payer</th>
-                      <th style="width: 130px;">HCPCS & Modifiers</th>
+                      <th style="width: 145px;">HCPCS & Modifiers</th>
                       <th style="width: 60px;">Minutes</th>
-                      <th style="width: 100px;" class="col-1">Payer</th>
-                      <th style="width: 100px;" class="col-1">Service</th>
-                      <th style="width: 80px;">Billable </th>
-                      <th style="width: 80px;">Payable</th>
-                      <th style="width: 80px;">Lost Revenue </th>
-                      <th style="width: 205px;">Non Billable Reason</th>
+                      <th style="width: 100px;">Payer</th>
+                      <th style="width: 100px;">Service</th>
+                      <th style="width: 70px;">Billable </th>
+                      <th style="width: 70px;">Payable</th>
+                      <th style="width: 110px;">Lost Revenue </th>
+                      <th style="width: 220px;">Non Billable Reason</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -4629,7 +4629,7 @@
                       <tr>
                         <td class="w-35">
                           <div class="">
-                            <input type="text" class="form-control border-hide"
+                            <input type="text" class="form-control border-hide mov p-0 "
                               value="Abrasion, left knee, initial encounter">
                           </div>
                         </td>
@@ -4694,21 +4694,21 @@
                           <th scope="col">
                             <div class="form-check">
                               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                              <label class="form-check-label" for="flexCheckDefault">
+                              <label class="form-check-label mb-md-0" for="flexCheckDefault">
                                 Description
                               </label>
                             </div>
                           </th>
-                          <th scope="col">Date</th>
+                          <th scope="col" style="vertical-align: middle;">Date</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
 
                           <td class="w-70">
-                            <div class="form-check d-flex w-40">
+                            <div class="form-check d-flex w-40 align-items-center">
                               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                              <input type="text" class="form-control b-none" aria-describedby="description"
+                              <input type="text" class="form-control border-hide mov p-0 mt-5" aria-describedby="description"
                                 value="Abrasion, left knee, initial encounter">
                             </div>
                           </td>
@@ -4723,9 +4723,9 @@
                         <tr>
 
                           <td class="w-70">
-                            <div class="form-check d-flex w-40">
+                            <div class="form-check d-flex w-40 align-items-center">
                               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                              <input type="text" class="form-control b-none" aria-describedby="description"
+                              <input type="text" class="form-control border-hide mov p-0 mt-5" aria-describedby="description"
                                 value="Abrasion, left knee, initial encounter">
                             </div>
                           </td>
@@ -4746,7 +4746,7 @@
 
                 </div>
               </div>
-              <div class="row d-none d-md-block mt-15">
+              <div class="row d-none d-md-block mt-20 mb-5">
                 <label for="" class="label h2-tags mb-md-0">Other Diagnosis <sup>*</sup></label>
 
               </div>
@@ -5123,14 +5123,14 @@
                 <thead>
                   <tr>
                     <th style="width: 80px;">Payer</th>
-                    <th style="width: 130px;">HCPCS & Modifiers</th>
+                    <th style="width: 145px;">HCPCS & Modifiers</th>
                     <th style="width: 60px;">Minutes</th>
                     <th style="width: 100px;" class="col-1">Payer</th>
                     <th style="width: 100px;" class="col-1">Service</th>
-                    <th style="width: 80px;">Billable </th>
-                    <th style="width: 80px;">Payable</th>
-                    <th style="width: 80px;">Lost Revenue </th>
-                    <th style="width: 205px;">Non Billable Reason</th>
+                    <th style="width: 70px;">Billable </th>
+                    <th style="width: 70px;">Payable</th>
+                    <th style="width: 110px;">Lost Revenue </th>
+                    <th style="width: 220px;">Non Billable Reason</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -5299,7 +5299,7 @@
                 <div class="row gy-3">
                   <div class="col-12">
                     <label for="description" class="mobile-label">Description</label>
-                    <input type="text" id="description" class="form-control"
+                    <input type="text" id="description" class="form-control "
                       value="Abrasion, left knee, initial encounter">
                   </div>
                   <div class="col-12">
@@ -5451,7 +5451,7 @@
                 <tr>
                   <td class="w-35">
                     <div class="">
-                      <input type="text" class="form-control border-hide"
+                      <input type="text" class="form-control border-hide mov p-0"
                         value="Abrasion, left knee, initial encounter">
                     </div>
                   </td>
@@ -5521,21 +5521,21 @@
                       <th scope="col">
                         <div class="form-check">
                           <input class="form-check-input delete-check" type="checkbox" value="">
-                          <label class="form-check-label" for="flexCheckDefault">
+                          <label class="form-check-label mb-md-0" for="flexCheckDefault">
                             Description
                           </label>
                         </div>
                       </th>
-                      <th scope="col">Date</th>
+                      <th scope="col" style="vertical-align: middle;">Date</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
 
                       <td class="w-70">
-                        <div class="form-check d-flex w-40">
+                        <div class="form-check d-flex w-40 align-items-center">
                           <input class="form-check-input delete-check" type="checkbox" value="">
-                          <input type="text" class="form-control b-none" aria-describedby="description"
+                          <input type="text" class="form-control border-hide mov p-0 mt-5" aria-describedby="description"
                             value="Abrasion, left knee, initial encounter">
                         </div>
                       </td>
@@ -5549,9 +5549,9 @@
 
                     <tr>
                       <td class="w-70">
-                        <div class="form-check d-flex w-40">
+                        <div class="form-check d-flex w-40 align-items-center ">
                           <input class="form-check-input delete-check" type="checkbox" value="">
-                          <input type="text" class="form-control b-none" aria-describedby="description"
+                          <input type="text" class="form-control border-hide mov p-0 mt-5" aria-describedby="description"
                             value="Abrasion, left knee, initial encounter">
                         </div>
                       </td>
@@ -5576,7 +5576,7 @@
                   </tbody>
                 </table>
               </div>
-              <div class="row d-none d-md-block mt-15">
+              <div class="row d-none d-md-block mt-20 mb-5">
                 <label for="" class="label h2-tags mb-md-0">Other Diagnosis <sup>*</sup></label>
 
               </div>
@@ -6135,7 +6135,7 @@
                 </div>
               </div>
 
-              <div class="card mb-3">
+              <div class="card ">
 
                 <div class="card-body">
 

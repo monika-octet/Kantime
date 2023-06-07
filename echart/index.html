@@ -88,7 +88,7 @@
                 </div>
                 <div class="row mt-4">
                   <div class="col-md-12 checkbox-group">
-                    <label for="" class="label mb-5">Check In Treatment Location<sup>*</sup></label>
+                    <label for="" class="label  treatment-Location">Check In Treatment Location<sup>*</sup></label>
                     <p class="error text-red">*This is required field.</p>
                     <div class="form-check form-check-inline">
                       <input class="form-check-input largerCheckbox radio" type="checkbox" id="client" value="client"
@@ -224,6 +224,7 @@
 
     let checkboxes = document.querySelectorAll(".largerCheckbox");
     let errorDiv = document.querySelector(".error");
+    let treatmenet=document.querySelector(".treatment-Location");
 
     for (var i = 0; i < checkboxes.length; i++) {
       checkboxes[i].addEventListener("change", function () {
@@ -238,8 +239,11 @@
 
         if (!isChecked) {
           errorDiv.style.display = "block";
+          treatmenet.style.marginBottom="8px";
         } else {
           errorDiv.style.display = "none";
+          treatmenet.style.marginBottom="15px";
+          
         }
       });
     }

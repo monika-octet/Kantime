@@ -39,7 +39,7 @@ h2 {
 .container-1 {
     width: 854px;
     max-width: 1206px;
-    margin: auto;
+    margin:20px auto;
 }
 
 .mfs-height {
@@ -76,6 +76,9 @@ h2 {
     margin-top: 8px;
 }
 
+.mt-5{
+    margin-top: 5px !important;
+}
 .mt-10 {
     margin-top: 10px !important;
 }
@@ -419,7 +422,7 @@ input.form-control::placeholder {
     display: grid;
     grid-template-columns: 250px calc(100vw - 281px);
     background: #E7EBEF;
-    height: calc(100vh - 130px);
+    height: calc(100vh - 142px);
     overflow-y: auto;
     align-items: start;
     margin:10px 0;
@@ -535,15 +538,21 @@ hr {
 
 .multiselect-selected-text {
     color: #85909F;
-    font-weight: 400;
+    font-weight: 500;
     padding: 5px 10px;
+}
+
+#emergencyContacts-Modal #contact-info-container-1 .multiselect-selected-text{
+    color:#212529 ;
 }
 
 /* .multiselect-native-select:hover .multiselect-selected-text {
     color: #546071;
 } */
 
-
+.btn-group .multiselect-container button:first-child {
+    color: red; /* Change the color to your desired color */
+  }
 
 
 
@@ -665,7 +674,7 @@ li.has-subchild a,
     color: #0D87E2;
     background: #F0F7FC;
     border: 1px solid #EFEFEF;
-    padding: 10px 6px;
+    padding: 10px 12px;
     margin-bottom: 0;
 
 }
@@ -1005,6 +1014,11 @@ input.b-none:hover {
 .border-hide:hover {
     border: 1px solid #D9D9D9;
     transition:none;
+   
+}
+
+.border-hide.mov:hover{
+    padding: 0 15px !important;
 }
 
 .header-row {
@@ -1232,7 +1246,7 @@ select:valid~span {
 }
 
 .sidebar-menu .has-subchild.active  {
-    border-left: 3px solid #0D87E2; 
+    border-left: 2px solid #0D87E2; 
 }
 
 .schedule-table .btn-group{
@@ -1251,4 +1265,8 @@ select:valid~span {
 }
 .fit-content{
     width: fit-content !important;
+}
+
+.ostomy{
+    margin-top: 50px !important;
 }
