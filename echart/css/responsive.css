@@ -63,11 +63,15 @@
 
     .container-1 {
         width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+        margin-bottom: 10px;
 
     }
 
     .mfs-height {
-        padding: 16px;
+        padding: 0 16px;
     }
 
     .btn-primary,
@@ -179,6 +183,7 @@
 
     .timesheet-wrap {
         grid-template-columns: 100%;
+        margin: 0;
     }
 
 
@@ -199,6 +204,10 @@
         flex-wrap: nowrap;
     }
 
+    .modal-dialog-centered {
+        min-height: auto;
+    }
+
     .custom-grid-responsive {
         grid-template-columns: 1fr;
     }
@@ -206,8 +215,10 @@
 
     /* billing dx popup */
     .modal-dialog.modal-dialog-centered {
-        margin-top: 80px;
+        /* margin-top: 80px; */
     }
+
+
 
     .bg-lightblue {
         background: #fff;
@@ -297,7 +308,7 @@
 
     footer {
         flex-shrink: 0;
-        position: fixed;
+        position: relative;
         bottom: 0;
         left: 0;
         width: 100%;
@@ -412,7 +423,8 @@
     }
 
     .input-group {
-        margin-bottom: 15px;
+
+        width: 164px;
     }
 
     .table-card>label {
@@ -423,11 +435,57 @@
         padding: 0;
     }
 
-    .sub-section-header{
+    .sub-section-header {
         margin-bottom: 12px;
-    } 
+    }
 
-    #competency .poa-label{
+    #competency .poa-label {
         margin-left: 0;
     }
+
+    .modal#clientSignature-Modal {
+        /* margin-top: 84%; */
+    }
+
+    .nav-title {
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #181C32;
+        margin-right: 8px;
+    }
+
+    .modal-body {
+        height: auto;
+    }
+
+    .sidebar-menu .has-subchild.wrap-blue>ul li {
+        border-left: 3px solid #0D87E2;
+    }
+
+    .checkbox-group-w2 div {
+        width: 160px;
+    }
+
+    .ostomy {
+        margin-top: 60px !important;
+    }
+
+    .sidebar-menu li.has-subchild a {
+
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0em;
+
+        color: #546071;
+    }
+
+    #navigation-Modal-Mobile .modal-dialog-scrollable {
+        height: 100%;
+    }
+
+  
 }

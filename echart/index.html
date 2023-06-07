@@ -88,7 +88,7 @@
                 </div>
                 <div class="row mt-4">
                   <div class="col-md-12 checkbox-group">
-                    <label for="" class="label mb-5">Check In Treatment Location<sup>*</sup></label>
+                    <label for="" class="label  treatment-Location">Check In Treatment Location<sup>*</sup></label>
                     <p class="error text-red">*This is required field.</p>
                     <div class="form-check form-check-inline">
                       <input class="form-check-input largerCheckbox radio" type="checkbox" id="client" value="client"
@@ -115,7 +115,7 @@
                 <div class="row mt-2 d-none jq-other-info dropdown-sm">
                   <div class="col-md-8">
                     <label for="" class="label">Location</label>
-                    <select class="single-select">
+                    <select class="single-select" placeholder="Select Location">
                       <option class="d-none" disabled selected>Select Location</option>
                       <option>50 Oakland Avenue, Miami, 32104</option>
                       <option>147 Gasko Avenue, Miami, NY, 25485</option>
@@ -123,13 +123,13 @@
                       <option>BD - 02 Kennif City Place, US, 02157</option>
                     </select>
                   </div>
-                  <div class="col-md-12 mt-4 hidden ">
+                  <div class="col-md-12 mt-4 ">
                     <label for="" class="label">Address</label>
                     <p class="fw-medium">50 Oakland Avenue, Miami, 32104</p>
                   </div>
                 </div>
 
-                <hr class="custom-hr my-2" />
+                <hr class="custom-hr mb-1" />
               </div>
 
               <div class="card-2 px-20 pb-20 dropdown-sm">
@@ -224,6 +224,7 @@
 
     let checkboxes = document.querySelectorAll(".largerCheckbox");
     let errorDiv = document.querySelector(".error");
+    let treatmenet=document.querySelector(".treatment-Location");
 
     for (var i = 0; i < checkboxes.length; i++) {
       checkboxes[i].addEventListener("change", function () {
@@ -238,8 +239,11 @@
 
         if (!isChecked) {
           errorDiv.style.display = "block";
+          treatmenet.style.marginBottom="8px";
         } else {
           errorDiv.style.display = "none";
+          treatmenet.style.marginBottom="15px";
+          
         }
       });
     }
