@@ -1,0 +1,4451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#0D87E2" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/bootstrap/bootstrap.min.css"
+    />
+    <!-- select -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/bootstrap/bootstrap-multiselect.min.css"
+    />
+
+    <!-- Custom css -->
+
+    <link rel="stylesheet" type="text/css" href="css/common/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/referral/referral.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/responsive/responsive.css"
+    />
+
+    <!-- Bootstrap js -->
+
+    <!-- custom css -->
+
+    <title>Kantime | Referral</title>
+  </head>
+
+  <body style="width: 1366px; margin: auto">
+    <header>
+      <nav class="">
+        <div class="">
+          <img src="images/nav.svg" style="width: 100%" />
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="px-30 py-10">
+        <div>
+          <div class="breadcrumb-container">
+            <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="#">Client Intake List</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  John Doe
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+        <div class="mb-3">
+          <div class="d-flex justify-content-between">
+            <h1>New Intake Info</h1>
+            <div class="icon-container d-flex gap-3">
+              <img src="images/Help.svg" alt="help-icon" />
+              <img src="images/Mail.svg" alt="mail-icon" />
+              <img src="images/Duplicate.svg" alt="duplicate-icon" />
+              <img src="images/message.svg" alt="message-icon" />
+            </div>
+          </div>
+        </div>
+        <div
+          class="px-20 py-3 d-flex justify-content-between align-items-center notice-style"
+        >
+          <div class="d-flex align-items-center gap-3">
+            <img src="images/big_exclaimation.svg" alt="exclamation mark" />
+            <p class="notice">Patient is Covid Positive!</p>
+          </div>
+          <div>
+            <img
+              src="images/corss_big.svg"
+              alt="close notification "
+              class="pointer"
+            />
+          </div>
+        </div>
+        <div class="bg-white border-color mt-10 radius-4 mb-20">
+          <div class="p-20 position-relative">
+            <div
+              class="d-flex flex-wrap justify-content-between align-items-center"
+            >
+              <div class="d-flex gap-25 align-items-center">
+                <div
+                  class="profile-box d-flex justify-content-center align-items-center"
+                >
+                  <img src="images/avatar.svg" alt="user profile picture" />
+                  <img
+                    src="images/camera.svg"
+                    alt="upload icon"
+                    class="upload"
+                    type="button"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="bottom"
+                    title="Upload Picture"
+                  />
+                </div>
+                <div class="d-flex flex-column">
+                  <p class="patient-title mb-15">John Doe</p>
+                  <div class="d-flex gap-20 mb-20">
+                    <div>
+                      <img
+                        src="images/Phone.svg"
+                        alt="phone icon"
+                        class="info-icon"
+                      />
+                      <span class="info-icon-label">Call</span>
+                    </div>
+                    <div>
+                      <img
+                        src="images/Email.svg"
+                        alt="mail icon"
+                        class="info-icon"
+                      />
+                      <span class="info-icon-label">Email</span>
+                    </div>
+                    <div>
+                      <img
+                        src="images/mappin.svg"
+                        alt="map pin icon"
+                        class="info-icon"
+                      />
+                      <span class="info-icon-label">Address</span>
+                    </div>
+                  </div>
+                  <div class="status-tag">
+                    <p>Conditionally accepted</p>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex" style="gap: 108px">
+                <div class="d-flex flex-column">
+                  <div class="info-box">
+                    <p class="info-title">LOB :</p>
+                    <p class="info-description">Occupational Physiotherapy</p>
+                  </div>
+                  <div class="info-box">
+                    <p class="info-title">Primary Payer :</p>
+                    <p class="info-description">Richard Parker</p>
+                  </div>
+                  <div class="info-box">
+                    <p class="info-title">Location :</p>
+                    <p class="info-description">New York, USA</p>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="info-box">
+                    <p class="info-title">Intake Date :</p>
+                    <p class="info-description">01/03/1998</p>
+                  </div>
+                  <div class="info-box">
+                    <p class="info-title">Requested SOC Date :</p>
+                    <p class="info-description">10/29/1999</p>
+                  </div>
+                  <div class="info-box">
+                    <p class="info-title">DOB :</p>
+                    <p class="info-description">10/29/1999</p>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-column justify-content-between">
+                <div class="dropdown ms-3">
+                  <button
+                    class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  ></button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li>
+                      <a
+                        href="javascript:void(0)"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#"
+                        class="dropdown-item"
+                        >Logs</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0)"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#"
+                        class="dropdown-item"
+                        >Print</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0)"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#"
+                        class="dropdown-item"
+                        >Email</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0)"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#"
+                        class="dropdown-item"
+                        >Initial Order</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0)"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#"
+                        class="dropdown-item"
+                        >More Options</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0)"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#"
+                        class="dropdown-item red-text"
+                        >Delete</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="">
+                  <div
+                    class="d-flex justify-content-end align-items-center gap-10"
+                  >
+                    <a
+                      href="duplicate-record.html"
+                      id="check-duplicate"
+                      class="btn btn-primary ms-3"
+                      >Admit</a
+                    >
+                    <a href="#" class="btn btn-outline-primary">Non-Admit</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-section">
+            <!-- <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <button class="nav-link active" id="nav-general-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-general"
+                                aria-selected="true">General</button>
+                            <button class="nav-link" id="nav-source-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-source"
+                                aria-selected="false">Payer source & eligibility</button>
+                            <button class="nav-link" id="nav-clinical-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-clinical"
+                                aria-selected="false">Clinical</button>
+                            <button class="nav-link" id="nav-medications-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-medications"
+                                aria-selected="false">Medications</button>
+                            <button class="nav-link" id="nav-clinicains-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-clinicains"
+                                aria-selected="false">Clinicains </button>
+                            <button class="nav-link" id="nav-schedule-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-schedule"
+                                aria-selected="false">Initial Schedule</button>
+                            <button class="nav-link" id="nav-form-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-form"
+                                aria-selected="false">Form</button>
+                            <button class="nav-link" id="nav-journal-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-journal"
+                                aria-selected="false">Journal Note</button>
+                            <button class="nav-link" id="nav-COP-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                                type="button" role="tab" aria-controls="nav-COP" aria-selected="false">COP</button>
+                        </div>
+                    </nav> -->
+
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#"
+                  role="tab"
+                  aria-controls="general"
+                  aria-selected="true"
+                  >General</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="payer-source-eligibility.html"
+                  role="tab"
+                  aria-controls="eligibility"
+                  aria-selected="false"
+                  >Payer source & eligibility</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="clinical.html"
+                  role="tab"
+                  aria-controls="clinical"
+                  aria-selected="false"
+                  >Clinical</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="medications.html"
+                  role="tab"
+                  aria-controls="medications"
+                  aria-selected="false"
+                  >Medications</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="clinician.html"
+                  role="tab"
+                  aria-controls="clinicains"
+                  aria-selected="false"
+                  >Clinicains</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="initial-schedule.html"
+                  role="tab"
+                  aria-controls="schedule"
+                  aria-selected="false"
+                  >Initial Schedule</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="form.html"
+                  role="tab"
+                  aria-controls="form"
+                  aria-selected="false"
+                  >Form</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="journal-note.html"
+                  role="tab"
+                  aria-controls="journal"
+                  aria-selected="false"
+                  >Journal Note</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="cop.html"
+                  role="tab"
+                  aria-controls="COP"
+                  aria-selected="false"
+                  >COP</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="tab-content-grid">
+            <div class="bg-white fit-content">
+              <div class="border-color">
+                <div class="py-10 px-15 search-box">
+                  <div class="search">
+                    <input
+                      type="text"
+                      placeholder="Search"
+                      class="search-input w-100"
+                    />
+                    <img src="images/lens.svg" alt="search lens" class="lens" />
+                  </div>
+                </div>
+                <div class="sidebar-container">
+                  <div
+                    class="nav flex-column nav-tabs"
+                    id="myTab"
+                    role="tablist"
+                    aria-orientation="vertical"
+                  >
+                    <button
+                      class="nav-link active"
+                      id="patient-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#patient-information"
+                      type="button"
+                      role="tab"
+                      aria-controls="patient-information"
+                      aria-selected="true"
+                    >
+                      Patient Information
+                    </button>
+
+                    <button
+                      class="nav-link"
+                      id="referral-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#referral-information"
+                      type="button"
+                      role="tab"
+                      aria-controls="referral-information"
+                      aria-selected="false"
+                    >
+                      Referral Information
+                    </button>
+
+                    <button
+                      class="nav-link"
+                      id="treatment-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#treatment-address"
+                      type="button"
+                      role="tab"
+                      aria-controls="treatment-address"
+                      aria-selected="false"
+                    >
+                      Treatment Address
+                    </button>
+
+                    <button
+                      class="nav-link"
+                      id="emergency-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#emergency-contacts"
+                      type="button"
+                      role="tab"
+                      aria-controls="emergency-contacts"
+                      aria-selected="false"
+                    >
+                      Emergency Contacts
+                    </button>
+
+                    <button
+                      class="nav-link"
+                      id="representative-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#patient-representative"
+                      type="button"
+                      role="tab"
+                      aria-controls="patient-representative"
+                      aria-selected="false"
+                    >
+                      Patient Representatives / Responsible Party
+                    </button>
+
+                    <button
+                      class="nav-link"
+                      id="custom-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#custom-fields"
+                      type="button"
+                      role="tab"
+                      aria-controls="custom-fields"
+                      aria-selected="false"
+                    >
+                      Custom Fields
+                    </button>
+
+                    <button
+                      class="nav-link"
+                      id="driving-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#driving-direction"
+                      type="button"
+                      role="tab"
+                      aria-controls="driving-direction"
+                      aria-selected="false"
+                    >
+                      Driving Direction
+                    </button>
+
+                    <button
+                      class="nav-link"
+                      id="intake-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#intake-notes"
+                      type="button"
+                      role="tab"
+                      aria-controls="intake-notes"
+                      aria-selected="false"
+                    >
+                      Intake Notes
+                    </button>
+
+                    <button
+                      class="nav-link"
+                      id="client-doc-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#client-documents"
+                      type="button"
+                      role="tab"
+                      aria-controls="client-documents"
+                      aria-selected="false"
+                    >
+                      Client Documents
+                    </button>
+
+                    <button
+                      class="nav-link"
+                      id="pharmacies-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#additional-pharmacies"
+                      type="button"
+                      role="tab"
+                      aria-controls="additional-pharmacies"
+                      aria-selected="false"
+                    >
+                      Additional Pharmacies
+                    </button>
+
+                    <button
+                      class="nav-link"
+                      id="physicians-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#physicians"
+                      type="button"
+                      role="tab"
+                      aria-controls="physicians"
+                      aria-selected="false"
+                    >
+                      Physicians
+                    </button>
+
+                    <button
+                      class="nav-link"
+                      id="staff-skill-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#staff-skill"
+                      type="button"
+                      role="tab"
+                      aria-controls="staff-skill"
+                      aria-selected="false"
+                    >
+                      Preferred Staff Skills
+                    </button>
+
+                    <button
+                      class="nav-link"
+                      id="preference-list-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#staff-skill"
+                      type="button"
+                      role="tab"
+                      aria-controls="staff-skill"
+                      aria-selected="false"
+                    >
+                      Preference List / Matching Criteria
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-content" id="myTabContent">
+              <div
+                class="border-color tab-pane fade show active"
+                id="patient-information"
+                role="tabpanel"
+                aria-labelledby="patient-information-tab"
+              >
+                <div
+                  class="px-20 bg-white d-flex justify-content-between align-items-center"
+                  style="padding-top: 14px; padding-bottom: 14px"
+                >
+                  <div class="tab-content-heading">Patient Information</div>
+                  <div class="d-flex align-items-center gap-10">
+                    <p class="save-time">Last saved 2 mins ago</p>
+                    <button class="btn btn-tertiary">Save</button>
+                  </div>
+                </div>
+                <div class="p-20">
+                  <div class="details-container">
+                    <div class="border-color mb-20" id="basic-details">
+                      <div
+                        class="p-3 d-grid grid-line align-items-center bg-lightBlue"
+                      >
+                        <p class="tab-heading">Basic Details</p>
+                        <hr class="modal-line" />
+                      </div>
+                      <div class="p-3 bg-white container">
+                        <div class="row col-12">
+                          <div class="col-4 mb-20">
+                            <label class="label" for="f-name-Pinfo"
+                              >First name</label
+                            >
+                            <div class="input-group custom-dropdown">
+                              <button
+                                class="btn btn-outline-secondary dropdown-toggle"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                Mr
+                              </button>
+                              <ul class="dropdown-menu">
+                                <li>
+                                  <a class="dropdown-item" href="#">Mr</a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#">Mrs</a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#">Ms</a>
+                                </li>
+                              </ul>
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="f-name-Pinfo"
+                                placeholder="Enter first name"
+                                aria-label="Text input with dropdown button"
+                              />
+                            </div>
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="m-name-Pinfo"
+                              >Middle name</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="m-name-Pinfo"
+                              placeholder="Enter middle name"
+                              aria-label="middle-name"
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="l-name-Pinfo"
+                              >Last name</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="l-name-Pinfo"
+                              placeholder="Enter last name"
+                              aria-label="last-name"
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <p class="label">Gender</p>
+                            <div class="d-flex gap-3">
+                              <div class="radio-box">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="gender"
+                                    id="male-Pinfo"
+                                    value="male"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="male-Pinfo"
+                                  >
+                                    Male
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="radio-box">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="gender"
+                                    id="female-Pinfo"
+                                    value="female"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="female-Pinfo"
+                                  >
+                                    Female
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="P-ID">Patient ID</label>
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="P-ID"
+                              placeholder="Enter patient ID"
+                              aria-label="patient-id "
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="form-label" for="dob">DOB</label>
+                            <div class="input-group">
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="dob-Pinfo"
+                                placeholder="Select Date"
+                              />
+                              <span class="input-group-text"
+                                ><img src="images/Calendar.svg"
+                              /></span>
+                            </div>
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="medicaid">Medicaid</label>
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="medicaid-Pinfo"
+                              placeholder="Enter Medicaid"
+                              aria-label="Medicaid "
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="medicare-Pinfo"
+                              >Medicare</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="medicare-Pinfo"
+                              placeholder="Enter Medicare"
+                              aria-label="Medicare "
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="MBI-Pinfo">MBI</label>
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="MBI-Pinfo"
+                              placeholder="Enter MBI"
+                              aria-label="MBI"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="row col-12">
+                          <div class="col-4 mb-20">
+                            <label class="label" for="SSN-Pinfo">S.S.N</label>
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="SSN-Pinfo"
+                              placeholder="Select S.S.N."
+                              aria-label="SSN"
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <div class="d-flex justify-content-between">
+                              <label class="label" for="location-Pinfo"
+                                >Location</label
+                              >
+                              <a
+                                href="javascript:void(0)"
+                                data-bs-toggle="modal"
+                                data-bs-target="#change"
+                                class="link-blue"
+                                >Change</a
+                              >
+                            </div>
+                            <select
+                              disabled
+                              class="single-select input-item"
+                              aria-label="Default select example"
+                              id="location-Pinfo"
+                            >
+                              <option class="d-none" disabled selected>
+                                Select
+                              </option>
+                              <option value="1">
+                                Horizon Adult Healthcare
+                              </option>
+                              <option value="2">Agency 1</option>
+                              <option value="2">Agency 2</option>
+                              <option value="2">Agency 3</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="row col-12">
+                          <div class="col-4 mb-20">
+                            <label class="label" for="place-of-service "
+                              >Place of Service</label
+                            >
+                            <select
+                              class="single-select input-item"
+                              aria-label="Default select example"
+                              id="place-of-service"
+                            >
+                              <option class="d-none" disabled selected>
+                                Select
+                              </option>
+                              <option value="2">Agency 1</option>
+                              <option value="2">Agency 2</option>
+                              <option value="2">Agency 3</option>
+                            </select>
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <div class="d-flex justify-content-between">
+                              <label class="label" for="language-Pinfo"
+                                >Language</label
+                              >
+                              <a
+                                href="javascript:void(0)"
+                                data-bs-toggle="modal"
+                                data-bs-target="#add-lang"
+                                class="link-blue"
+                                >Add</a
+                              >
+                            </div>
+                            <select
+                              class="single-select input-item"
+                              aria-label="Default select example"
+                              id="language-Pinfo"
+                            >
+                              <option class="d-none" disabled selected>
+                                Select
+                              </option>
+                              <option value="2">Agency 1</option>
+                              <option value="2">Agency 2</option>
+                              <option value="2">Agency 3</option>
+                            </select>
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <p class="label">Living situation</p>
+                            <div class="d-flex gap-3">
+                              <div class="radio-box">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="living"
+                                    id="alone-Pinfo"
+                                    value="alone"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="alone-Pinfo"
+                                  >
+                                    Lives alone
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="radio-box">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="living"
+                                    id="family-Pinfo"
+                                    value="family"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="family-Pinfo"
+                                  >
+                                    Lives with family
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-4">
+                            <label class="label" for="ethnicity"
+                              >Ethnicity</label
+                            >
+                            <select
+                              class="single-select input-item"
+                              aria-label="Default select example"
+                              id="ethnicity"
+                            >
+                              <option class="d-none" disabled selected>
+                                Select
+                              </option>
+                              <option value="2">Agency 1</option>
+                              <option value="2">Agency 2</option>
+                              <option value="2">Agency 3</option>
+                            </select>
+                          </div>
+
+                          <div class="col-4">
+                            <div class="d-flex justify-content-between">
+                              <label class="label" for="religion-Pinfo"
+                                >Religion</label
+                              >
+                              <a
+                                href="javascript:void(0)"
+                                data-bs-toggle="modal"
+                                data-bs-target="#add-religion"
+                                class="link-blue"
+                                >Add</a
+                              >
+                            </div>
+                            <select
+                              class="single-select input-item"
+                              aria-label="Default select example"
+                              id="religion-Pinfo"
+                            >
+                              <option class="d-none" disabled selected>
+                                Select
+                              </option>
+                              <option value="2">Agency 1</option>
+                              <option value="2">Agency 2</option>
+                              <option value="2">Agency 3</option>
+                            </select>
+                          </div>
+
+                          <div class="col-4">
+                            <label class="label" for="marital-status"
+                              >Ethnicity</label
+                            >
+                            <select
+                              class="single-select input-item"
+                              aria-label="Default select example"
+                              id="marital-status"
+                            >
+                              <option class="d-none" disabled selected>
+                                Marital Status
+                              </option>
+                              <option value="2">Agency 1</option>
+                              <option value="2">Agency 2</option>
+                              <option value="2">Agency 3</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="border-color mb-20" id="healthcare details">
+                      <div
+                        class="p-3 d-grid grid-line align-items-center bg-lightBlue"
+                      >
+                        <p class="tab-heading">Healthcare Details</p>
+                        <hr class="modal-line" />
+                      </div>
+                      <div class="p-3 bg-white container">
+                        <div class="row col-12">
+                          <div class="col-4 mb-20">
+                            <p class="label">Care Type (Adult)</p>
+                            <div class="d-flex gap-3">
+                              <div class="radio-box">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="care type"
+                                    id="long-term-Pinfo-1"
+                                    value="long term care"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="long-term-Pinfo-1"
+                                  >
+                                    Long term care
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="radio-box">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="care type"
+                                    id="intermittent-Pinfo-1"
+                                    value="intermittent care"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="intermittent-Pinfo-1"
+                                  >
+                                    Intermittent care
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row col-12">
+                          <div class="col-6 mb-20">
+                            <div class="d-flex align-items-center">
+                              <p class="label">Acuity</p>
+                              <a
+                                href="javascript:void(0)"
+                                data-bs-toggle="modal"
+                                data-bs-target="#acuity-level"
+                                class="link-blue"
+                                ><img
+                                  src="images/Help.svg"
+                                  alt="help-icon"
+                                  class="sm-icon vertical-base"
+                              /></a>
+                            </div>
+                            <div class="d-flex gap-3">
+                              <div class="radio-box">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="acuity"
+                                    id="red"
+                                    value="red"
+                                  />
+                                  <label
+                                    class="form-check-label red-text f-500"
+                                    for="red"
+                                  >
+                                    Red
+                                  </label>
+                                </div>
+                              </div>
+
+                              <div class="radio-box">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="acuity"
+                                    id="orange"
+                                    value="orange"
+                                  />
+                                  <label
+                                    class="form-check-label orange-text f-500"
+                                    for="orange"
+                                  >
+                                    Orange
+                                  </label>
+                                </div>
+                              </div>
+
+                              <div class="radio-box">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="acuity"
+                                    id="yellow"
+                                    value="yellow"
+                                  />
+                                  <label
+                                    class="form-check-label yellow-text f-500"
+                                    for="yellow"
+                                  >
+                                    Yellow
+                                  </label>
+                                </div>
+                              </div>
+
+                              <div class="radio-box">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="acuity"
+                                    id="green"
+                                    value="green"
+                                  />
+                                  <label
+                                    class="form-check-label green-text f-500"
+                                    for="green"
+                                  >
+                                    Green
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row col-12">
+                          <div class="col-8 mb-20">
+                            <div class="d-flex align-items-center">
+                              <p class="label">
+                                Transportation Assistance Level
+                              </p>
+                              <a
+                                href="javascript:void(0)"
+                                data-bs-toggle="modal"
+                                data-bs-target="#transportation-assistance"
+                                class="link-blue"
+                                ><img
+                                  src="images/Help.svg"
+                                  alt="help-icon"
+                                  class="sm-icon vertical-base"
+                              /></a>
+                            </div>
+                            <div class="d-flex gap-3">
+                              <div class="radio-box">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="transportation-assistance"
+                                    id="non-ambulance"
+                                    value="Non-ambulatory [TAL-1]"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="non-ambulance"
+                                  >
+                                    Non-ambulatory [TAL-1]
+                                  </label>
+                                </div>
+                              </div>
+
+                              <div class="radio-box">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="transportation-assistance"
+                                    id="wheelchair"
+                                    value="Wheelchair [TAL-2]"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="wheelchair"
+                                  >
+                                    Wheelchair [TAL-2]
+                                  </label>
+                                </div>
+                              </div>
+
+                              <div class="radio-box">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="transportation-assistance"
+                                    id="ambulatory"
+                                    value="Ambulatory [TAL-3]"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="ambulatory"
+                                  >
+                                    Ambulatory [TAL-3]
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row col-12">
+                          <div class="col-4 mb-20">
+                            <div class="d-flex justify-content-between">
+                              <label class="label" for="CPR-Pinfo"
+                                >CPR Code</label
+                              >
+                              <a
+                                href="javascript:void(0)"
+                                data-bs-toggle="modal"
+                                data-bs-target="#add-cpr"
+                                class="link-blue"
+                                >Add</a
+                              >
+                            </div>
+                            <select
+                              class="single-select input-item"
+                              aria-label="cpr code"
+                              id="CPR-Pinfo"
+                            >
+                              <option selected>Select</option>
+                              <option value="2">Agency 1</option>
+                              <option value="2">Agency 2</option>
+                              <option value="2">Agency 3</option>
+                            </select>
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <div class="d-flex justify-content-between">
+                              <label class="label" for="intake-Pinfo"
+                                >Intake Status</label
+                              >
+                              <a
+                                href="javascript:void(0)"
+                                data-bs-toggle="modal"
+                                data-bs-target="#add-intake"
+                                class="link-blue"
+                                >Add</a
+                              >
+                            </div>
+                            <select
+                              class="single-select input-item"
+                              aria-label="intake status"
+                              id="intake-Pinfo"
+                            >
+                              <option selected>Select</option>
+                              <option value="2">Agency 1</option>
+                              <option value="2">Agency 2</option>
+                              <option value="2">Agency 3</option>
+                            </select>
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <div class="d-flex justify-content-between">
+                              <label class="label" for="impatient-Pinfo"
+                                >Impatient facilities</label
+                              >
+                              <a
+                                href="javascript:void(0)"
+                                data-bs-toggle="modal"
+                                data-bs-target="#add-impatient"
+                                class="link-blue"
+                                >Add</a
+                              >
+                            </div>
+                            <select
+                              class="single-select input-item"
+                              aria-label="intake status"
+                              id="impatient-Pinfo"
+                            >
+                              <option selected>Select</option>
+                              <option value="2">Agency 1</option>
+                              <option value="2">Agency 2</option>
+                              <option value="2">Agency 3</option>
+                            </select>
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="team">Team</label>
+                            <select
+                              class="single-select input-item"
+                              aria-label="Team"
+                              id="team"
+                            >
+                              <option selected>Select</option>
+                              <option value="2">Agency 1</option>
+                              <option value="2">Agency 2</option>
+                              <option value="2">Agency 3</option>
+                            </select>
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="coder">Coder</label>
+                            <select
+                              class="single-select input-item"
+                              aria-label="Coder"
+                              id="coder"
+                            >
+                              <option selected>Select</option>
+                              <option value="2">Agency 1</option>
+                              <option value="2">Agency 2</option>
+                              <option value="2">Agency 3</option>
+                            </select>
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="coder-group"
+                              >Coder Group</label
+                            >
+                            <select
+                              class="single-select input-item"
+                              aria-label="Coder Group"
+                              id="coder-group"
+                            >
+                              <option selected>Select</option>
+                              <option value="2">Agency 1</option>
+                              <option value="2">Agency 2</option>
+                              <option value="2">Agency 3</option>
+                            </select>
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <div class="d-flex justify-content-between">
+                              <label class="label" for="lob-healthcare-Pinfo"
+                                >LOB</label
+                              >
+                              <a
+                                href="javascript:void(0)"
+                                data-bs-toggle="modal"
+                                data-bs-target="#healthcare-lob-change"
+                                class="link-blue"
+                                >Change</a
+                              >
+                            </div>
+                            <select
+                              disabled
+                              class="single-select input-item"
+                              aria-label="lob"
+                              id="lob-healthcare-Pinfo"
+                            >
+                              <option selected>Select</option>
+                              <option value="1">
+                                Horizon Adult Healthcare
+                              </option>
+                              <option value="2">Agency 1</option>
+                              <option value="2">Agency 2</option>
+                              <option value="2">Agency 3</option>
+                            </select>
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="classification"
+                              >Classification</label
+                            >
+                            <select
+                              class="single-select input-item"
+                              aria-label="Classification"
+                              id="classification"
+                            >
+                              <option selected>Select</option>
+                              <option value="2">Agency 1</option>
+                              <option value="2">Agency 2</option>
+                              <option value="2">Agency 3</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="border-color mb-20" id="contact details">
+                      <div
+                        class="p-3 d-grid grid-line align-items-center bg-lightBlue"
+                      >
+                        <p class="tab-heading">Contact Details</p>
+                        <hr class="modal-line" />
+                      </div>
+                      <div class="p-3 bg-white container">
+                        <div class="row col-12">
+                          <div class="col-8 mb-20">
+                            <label class="label" for="address-contact"
+                              >Address</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="address-contact"
+                              placeholder="Line 1"
+                              aria-label="address"
+                            />
+                            <input
+                              type="text"
+                              class="form-control input-item mt-10"
+                              id="address-contact-1"
+                              placeholder="Line 2"
+                              aria-label="address 2"
+                            />
+                          </div>
+                        </div>
+                        <div class="row col-12">
+                          <div class="col-4 mb-20">
+                            <label class="label" for="zip-contact">Zip</label>
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="zip-contact"
+                              placeholder="Enter Zip"
+                              aria-label="zip"
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="city-contact">City</label>
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="city-contact"
+                              placeholder="Enter City"
+                              aria-label="City"
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="state-contact"
+                              >State</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="state-contact"
+                              placeholder="Enter State"
+                              aria-label="States"
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="cbsa-contact">CBSA</label>
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="cbsa-contact"
+                              placeholder="Enter CBSA"
+                              aria-label="CBSA"
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="country-contact"
+                              >Country</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="country-contact"
+                              placeholder="Enter Country"
+                              aria-label="Country"
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="email-contact"
+                              >Email</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="email-contact"
+                              placeholder="Enter Email"
+                              aria-label="Email"
+                            />
+                          </div>
+
+                          <div class="col-4">
+                            <label class="label" for="phone-contact"
+                              >Phone</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="phone-contact"
+                              placeholder="+1 (XXXX)  XXXX-XXXX"
+                              aria-label="Phone"
+                            />
+                          </div>
+
+                          <div class="col-4">
+                            <label class="label" for="cell-contact">Cell</label>
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="cell-contact"
+                              placeholder="+1 (XXXX)  XXXX-XXXX"
+                              aria-label="Cell"
+                            />
+                          </div>
+
+                          <div class="col-4">
+                            <label class="label" for="workphone-contact"
+                              >Work Phone</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="workphone-contact"
+                              placeholder="+1 (XXXX)  XXXX-XXXX"
+                              aria-label="Work Phone"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="border-color" id="billing details">
+                      <div
+                        class="p-3 d-grid grid-line align-items-center bg-lightBlue"
+                      >
+                        <p class="tab-heading">Billing Details</p>
+                        <hr class="modal-line" />
+                      </div>
+                      <div class="p-3 bg-white container">
+                        <div class="col-12">
+                          <div
+                            class="col-6 mb-20 border-color py-10 px-15 radius-4"
+                          >
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="invoice"
+                              />
+                              <label class="send invoice" for="invoice">
+                                Send Invoices to this Address (if different from
+                                Patient address)
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row col-12">
+                          <div class="col-4 mb-20">
+                            <label class="label" for="f-name-billing"
+                              >First name</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="f-name-billing"
+                              placeholder="Enter first name"
+                              aria-label="enter first name"
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="l-name-billing"
+                              >Last name</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="l-name-billing"
+                              placeholder="Enter last name"
+                              aria-label="Enter last name"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="row col-12">
+                          <div class="col-8 mb-20">
+                            <label class="label" for="address-billing"
+                              >Address</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="address-billing"
+                              placeholder="Line 1"
+                              aria-label="address"
+                            />
+                            <input
+                              type="text"
+                              class="form-control input-item mt-10"
+                              id="address-billing-1"
+                              placeholder="Line 2"
+                              aria-label="address 2"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="row col-12">
+                          <div class="col-4 mb-20">
+                            <label class="label" for="zip-billing">Zip</label>
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="zip-billing"
+                              placeholder="Enter Zip"
+                              aria-label="zip"
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="city-billing">City</label>
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="city-billing"
+                              placeholder="Enter City"
+                              aria-label="City"
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="state-billing"
+                              >State</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="state-billing"
+                              placeholder="Enter State"
+                              aria-label="States"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="row col-12">
+                          <div class="col-4 mb-20">
+                            <label class="label" for="guarantor-billing"
+                              >Guarantor ID</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="guarantor-billing"
+                              placeholder="Enter guarantor ID"
+                              aria-label="Guarantor"
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <div class="d-flex justify-content-between">
+                              <label class="label" for="religion-Pinfo"
+                                >Guarantor Relationship to Patient</label
+                              >
+                              <a
+                                href="javascript:void(0)"
+                                data-bs-toggle="modal"
+                                data-bs-target="#add-guarantor"
+                                class="link-blue"
+                                >Add</a
+                              >
+                            </div>
+                            <select
+                              class="single-select input-item"
+                              aria-label="Default select example"
+                              id="religion-Pinfo"
+                            >
+                              <option selected>Select</option>
+                              <option value="2">Agency 1</option>
+                              <option value="2">Agency 2</option>
+                              <option value="2">Agency 3</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="row col-12">
+                          <div class="col-4">
+                            <label class="label" for="guarantor-fname"
+                              >Guarantor First name</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="guarantor-fname"
+                              placeholder="Enter guarantor first name"
+                              aria-label="guarantor first name"
+                            />
+                          </div>
+
+                          <div class="col-4">
+                            <label class="label" for="guarantor-mname"
+                              >Guarantor Middle name</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="guarantor-mname"
+                              placeholder="Enter guarantor middle name"
+                              aria-label="guarantor middle name"
+                            />
+                          </div>
+
+                          <div class="col-4">
+                            <label class="label" for="guarantor-lname"
+                              >Guarantor Last name</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="guarantor-lname"
+                              placeholder="Enter guarantor last name"
+                              aria-label="guarantor middle name"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="border-color tab-pane fade"
+                id="referral-information"
+                role="tabpanel"
+                aria-labelledby="referral-information-tab"
+              >
+                <div
+                  class="px-20 bg-white d-flex justify-content-between align-items-center"
+                  style="padding-top: 14px; padding-bottom: 14px"
+                >
+                  <div class="tab-content-heading">Referral Information</div>
+                  <div class="d-flex align-items-center gap-10">
+                    <p class="save-time">Last saved 2 mins ago</p>
+                    <button class="btn btn-tertiary">Save</button>
+                  </div>
+                </div>
+                <div class="p-20">
+                  <div class="details-container">
+                    <div class="border-color mb-20" id="basic-referral-details">
+                      <div
+                        class="p-3 d-grid grid-line align-items-center bg-lightBlue"
+                      >
+                        <p class="tab-heading">Basic Referral Details</p>
+                        <hr class="modal-line" />
+                      </div>
+                      <div class="p-3 bg-white container">
+                        <div class="row col-12">
+                          <div class="col-4 mb-20">
+                            <label class="form-label" for="intake-ref-info"
+                              >Intake Date</label
+                            >
+                            <div class="input-group">
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="intake-ref-info"
+                                placeholder="Select"
+                              />
+                              <span class="input-group-text"
+                                ><img src="images/Calendar.svg"
+                              /></span>
+                            </div>
+                          </div>
+                          <div class="col-4 mb-20">
+                            <label class="form-label" for="physician-ref-info"
+                              >Physician Referral Date</label
+                            >
+                            <div class="input-group">
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="physician-ref-info"
+                                placeholder="Select"
+                              />
+                              <span class="input-group-text"
+                                ><img src="images/Calendar.svg"
+                              /></span>
+                            </div>
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="form-label" for="SOC-Ref-info"
+                              >Requested SOC Date</label
+                            >
+                            <div class="input-group">
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="SOC-Ref-info"
+                                placeholder="Select"
+                              />
+                              <span class="input-group-text"
+                                ><img src="images/Calendar.svg"
+                              /></span>
+                            </div>
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="intake-add-ref-info"
+                              >Intake Added on</label
+                            >
+                            <input
+                              type="text"
+                              disabled
+                              class="form-control input-item"
+                              id="intake-add-ref-info"
+                              placeholder="Enter intake added date"
+                              aria-label="Intake Added on"
+                              value="03/22/2023    11:57 PM"
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="intake-by-ref-info"
+                              >Intake Added by</label
+                            >
+                            <input
+                              type="text"
+                              disabled
+                              class="form-control input-item"
+                              id="intake-by-ref-info"
+                              placeholder="Enter intake added by"
+                              aria-label="Intake Added on"
+                              value="Staff, Avi B/O"
+                            />
+                          </div>
+                          <div class="row col-12">
+                            <div class="col-12 mb-10">
+                              <p class="f-500 f-14 lh-19">
+                                Did Patient receive any Medicare Home Health
+                                services in the past 60 days from the
+                                RequestedSOC Date?
+                              </p>
+                            </div>
+                            <div class="col-2">
+                              <div class="d-flex gap-3">
+                                <div class="radio-box">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="medicare"
+                                      id="yes-ref-info"
+                                      value="Yes"
+                                    />
+                                    <label
+                                      class="form-check-label"
+                                      for="yes-ref-info"
+                                    >
+                                      Yes
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="radio-box">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="medicare"
+                                      id="no-ref-info"
+                                      value="No"
+                                    />
+                                    <label
+                                      class="form-check-label"
+                                      for="no-ref-info"
+                                    >
+                                      No
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="border-color mb-20"
+                      id="referral-source-details"
+                    >
+                      <div
+                        class="p-3 d-grid grid-line align-items-center bg-lightBlue"
+                      >
+                        <p class="tab-heading">Referral Source Details</p>
+                        <hr class="modal-line" />
+                      </div>
+                      <div class="p-3 bg-white container">
+                        <div class="row col-12">
+                          <div class="col-12 mb-10">
+                            <p class="f-500 f-14 lh-19">Referral Source</p>
+                          </div>
+                          <div class="col-5 mb-20">
+                            <div class="d-flex gap-2">
+                              <div class="radio-box">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="referral source"
+                                    id="physician-ref-info"
+                                    value="Physician"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="physician-ref-info"
+                                  >
+                                    Physician
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="radio-box">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="referral source"
+                                    id="facility-ref-info"
+                                    value="Facility"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="facility-ref-info"
+                                  >
+                                    Facility
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="radio-box">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="referral source"
+                                    id="other-ref-info"
+                                    value="Other"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="other-ref-info"
+                                  >
+                                    Other
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row col-12">
+                          <div class="col-4 mb-20">
+                            <div class="d-flex justify-content-between">
+                              <label class="label" for="facility-ref-info"
+                                >Referral Facility</label
+                              >
+                              <a
+                                href="javascript:void(0)"
+                                data-bs-toggle="modal"
+                                data-bs-target="#add-ref-facility"
+                                class="link-blue"
+                                >Add</a
+                              >
+                            </div>
+                            <select
+                              class="single-select input-item"
+                              aria-label="Default select example"
+                              id="facility-ref-info"
+                            >
+                              <option selected>Select</option>
+                              <option value="2">Agency 1</option>
+                              <option value="2">Agency 2</option>
+                              <option value="2">Agency 3</option>
+                            </select>
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="facility-contact-ref-info"
+                              >Facility Contact</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="facility-contact-ref-info"
+                              placeholder="Enter"
+                              aria-label="Facility
+                                                            Contact"
+                              value=""
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="facility-phone-ref-info"
+                              >Facility Phone</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="facility-phone-ref-info"
+                              placeholder="Enter"
+                              aria-label="Facility Phone"
+                              value=""
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <div class="d-flex justify-content-between">
+                              <label class="label" for="physician-ref-info-2"
+                                >Referring Physician</label
+                              >
+                              <a
+                                href="javascript:void(0)"
+                                data-bs-toggle="modal"
+                                data-bs-target="#add-ref-physician"
+                                class="link-blue"
+                                >Add</a
+                              >
+                            </div>
+                            <select
+                              class="single-select input-item"
+                              aria-label="Default select example"
+                              id="physician-ref-info-2"
+                            >
+                              <option selected>Select</option>
+                              <option value="2">Agency 1</option>
+                              <option value="2">Agency 2</option>
+                              <option value="2">Agency 3</option>
+                            </select>
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="NPI-ref-info">NPI</label>
+                            <input
+                              type="text"
+                              disabled
+                              class="form-control input-item"
+                              id="NPI-ref-info"
+                              placeholder="Enter"
+                              aria-label="NPI"
+                              value=""
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="-1">PECOS Enrolled</label>
+                            <input
+                              type="text"
+                              disabled
+                              class="form-control input-item"
+                              id="-1"
+                              placeholder="Enter"
+                              aria-label="PECOS Enrolled"
+                              value=""
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="phone-ref-info"
+                              >Phone</label
+                            >
+                            <input
+                              type="text"
+                              disabled
+                              class="form-control input-item"
+                              id="phone-ref-info"
+                              placeholder="Enter"
+                              aria-label="Phone"
+                              value=""
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="fax-ref-info-1"
+                              >Fax</label
+                            >
+                            <input
+                              type="text"
+                              disabled
+                              class="form-control input-item"
+                              id="fax-ref-info-1"
+                              placeholder="Enter"
+                              aria-label="PECOS Enrolled"
+                              value=""
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="email-ref-info-1"
+                              >Email</label
+                            >
+                            <input
+                              type="text"
+                              disabled
+                              class="form-control input-item"
+                              id="email-ref-info-1"
+                              placeholder="Enter"
+                              aria-label="Email"
+                              value=""
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="physician-office-ref-info"
+                              >Physician Office</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="physician-office-ref-info"
+                              placeholder="Enter"
+                              aria-label="Physician Office"
+                              value=""
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label
+                              class="label"
+                              for="physician-address-ref-info"
+                              >Physician Office Address</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="physician-address-ref-info"
+                              placeholder="Enter"
+                              aria-label="Physician Office Address"
+                              value=""
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label class="label" for="physician-phone-ref-info"
+                              >Physician Office Phone</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="physician-phone-ref-info"
+                              placeholder="Enter"
+                              aria-label="Physician Office Phone"
+                              value=""
+                            />
+                          </div>
+                        </div>
+
+                        <div class="row col-12">
+                          <div class="col-4 mb-20">
+                            <label class="label" for="physician-fax-ref-info-1"
+                              >Physician Fax</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="physician-fax-ref-info-1"
+                              placeholder="Enter"
+                              aria-label="Physician Fax"
+                              value=""
+                            />
+                          </div>
+
+                          <div class="col-4 mb-20">
+                            <label
+                              class="label"
+                              for="physician-contact-ref-info"
+                              >Physician Contact</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="physician-contact-ref-info"
+                              placeholder="Enter"
+                              aria-label="Physician Office Phone"
+                              value=""
+                            />
+                          </div>
+                        </div>
+
+                        <div class="row col-12">
+                          <div class="col-4">
+                            <label class="label" for="sales-ref-info"
+                              >Sales Person/Marketer</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control input-item"
+                              id="sales-ref-info"
+                              placeholder="Enter"
+                              aria-label="Sales Person/Marketer"
+                              value=""
+                            />
+                          </div>
+
+                          <div class="col-4">
+                            <div class="d-flex justify-content-between">
+                              <label class="label" for="admission-ref-info"
+                                >Admission Source</label
+                              >
+                              <a
+                                href="javascript:void(0)"
+                                data-bs-toggle="modal"
+                                data-bs-target="#add-admission"
+                                class="link-blue"
+                                >Add</a
+                              >
+                            </div>
+                            <select
+                              class="single-select input-item"
+                              aria-label="Default select example"
+                              id="admission-ref-info"
+                            >
+                              <option selected>Select</option>
+                              <option value="2">Agency 1</option>
+                              <option value="2">Agency 2</option>
+                              <option value="2">Agency 3</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="border-color mb-20"
+                      id="attending-physicians-details"
+                    >
+                      <div
+                        class="p-3 d-grid grid-line align-items-center bg-lightBlue"
+                      >
+                        <p class="tab-heading">Attending Physician Details</p>
+                        <hr class="modal-line" />
+                      </div>
+                      <div class="p-3 bg-white container">
+                        <div class="col-12">
+                          <div
+                            class="col-3 mb-20 border-color py-10 px-15 radius-4"
+                          >
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="same-referring-physician"
+                              />
+                              <label
+                                class="send"
+                                for="same-referring-physician"
+                              >
+                                Same as Referring Physician
+                              </label>
+                            </div>
+                          </div>
+
+                          <div class="row col-12">
+                            <div class="col-4 mb-20">
+                              <div class="d-flex justify-content-between">
+                                <label class="label" for="attending-ref-info"
+                                  >Attending Referring Physician</label
+                                >
+                                <a
+                                  href="javascript:void(0)"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#add-attending"
+                                  class="link-blue"
+                                  >Add</a
+                                >
+                              </div>
+                              <select
+                                class="single-select input-item"
+                                aria-label="Default select example"
+                                id="attending-ref-info"
+                              >
+                                <option selected>Select</option>
+                                <option value="2">Agency 1</option>
+                                <option value="2">Agency 2</option>
+                                <option value="2">Agency 3</option>
+                              </select>
+                            </div>
+
+                            <div class="col-4 mb-20">
+                              <label class="label" for="NPI-ref-info-2s"
+                                >NPI</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="NPI-ref-info-2"
+                                placeholder="Enter"
+                                aria-label="NPI"
+                                value=""
+                              />
+                            </div>
+
+                            <div class="col-4 mb-20">
+                              <label class="label" for="PECOS-ref-info-1"
+                                >PECOS Enrolled</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="PECOS-ref-info-1"
+                                placeholder="Enter"
+                                aria-label="NPI"
+                                value=""
+                              />
+                            </div>
+
+                            <div class="col-4 mb-20">
+                              <label class="label" for="phone-ref-info-3"
+                                >Phone</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="phone-ref-info-3"
+                                placeholder="Enter"
+                                aria-label="Phone"
+                                value=""
+                              />
+                            </div>
+
+                            <div class="col-4 mb-20">
+                              <label class="label" for="fax-ref-info-3"
+                                >Fax</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="fax-ref-info-3"
+                                placeholder="Enter"
+                                aria-label="Fax"
+                                value=""
+                              />
+                            </div>
+
+                            <div class="col-4 mb-20">
+                              <label class="label" for="email-ref-info-3"
+                                >Email</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="email-ref-info-3"
+                                placeholder="Enter"
+                                aria-label="Email"
+                                value=""
+                              />
+                            </div>
+
+                            <div class="col-4 mb-20">
+                              <label
+                                class="label"
+                                for="physician-office-ref-info-2"
+                                >Physician Office</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="physician-office-ref-info-2"
+                                placeholder="Enter"
+                                aria-label="Physician Office"
+                                value=""
+                              />
+                            </div>
+
+                            <div class="col-4 mb-20">
+                              <label
+                                class="label"
+                                for="physician-address-ref-info-2"
+                                >Physician Office Address</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="physician-address-ref-info-2"
+                                placeholder="Enter"
+                                aria-label="Physician address"
+                                value=""
+                              />
+                            </div>
+
+                            <div class="col-4 mb-20">
+                              <label
+                                class="label"
+                                for="physician-Phone-ref-info-2"
+                                >Physician Office Phone</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="physician-Phone-ref-info-2"
+                                placeholder="Enter"
+                                aria-label="Physician Office Phone"
+                                value=""
+                              />
+                            </div>
+
+                            <div class="col-4">
+                              <label
+                                class="label"
+                                for="physician-fax-ref-info-3"
+                                >Physician Office Fax</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="physician-fax-ref-info-3"
+                                placeholder="Enter"
+                                aria-label="Physician Office Fax"
+                                value=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="border-color mb-20"
+                      id="primary-care-physicians-details"
+                    >
+                      <div
+                        class="p-3 d-grid grid-line align-items-center bg-lightBlue"
+                      >
+                        <p class="tab-heading">
+                          Primary Care Physician Details
+                        </p>
+                        <hr class="modal-line" />
+                      </div>
+                      <div class="p-3 bg-white container">
+                        <div class="col-12">
+                          <div
+                            class="col-3 mb-20 border-color py-10 px-15 radius-4"
+                          >
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="same-attending-physician"
+                              />
+                              <label
+                                class="send"
+                                for="same-attending-physician"
+                              >
+                                Same as Attending Physician
+                              </label>
+                            </div>
+                          </div>
+
+                          <div class="row col-12">
+                            <div class="col-4 mb-20">
+                              <div class="d-flex justify-content-between">
+                                <label class="label" for="primary-care-ref-info"
+                                  >Primary Care Physician</label
+                                >
+                                <a
+                                  href="javascript:void(0)"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#add-primary-care"
+                                  class="link-blue"
+                                  >Add</a
+                                >
+                              </div>
+                              <select
+                                class="single-select input-item"
+                                aria-label="Default select example"
+                                id="primary-care-ref-info"
+                              >
+                                <option selected>Select</option>
+                                <option value="2">Agency 1</option>
+                                <option value="2">Agency 2</option>
+                                <option value="2">Agency 3</option>
+                              </select>
+                            </div>
+
+                            <div class="col-4 mb-20">
+                              <label class="label" for="NPI-ref-info-3"
+                                >NPI</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="NPI-ref-info-3"
+                                placeholder="Enter"
+                                aria-label="NPI"
+                                value=""
+                              />
+                            </div>
+
+                            <div class="col-4 mb-20">
+                              <label class="label" for="PECOS-ref-info-2"
+                                >PECOS Enrolled</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="PECOS-ref-info-2"
+                                placeholder="Enter"
+                                aria-label="NPI"
+                                value=""
+                              />
+                            </div>
+
+                            <div class="col-4 mb-20">
+                              <label class="label" for="phone-ref-info-4"
+                                >Phone</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="phone-ref-info-4"
+                                placeholder="Enter"
+                                aria-label="Phone"
+                                value=""
+                              />
+                            </div>
+
+                            <div class="col-4 mb-20">
+                              <label class="label" for="fax-ref-info-4"
+                                >Fax</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="fax-ref-info-4"
+                                placeholder="Enter"
+                                aria-label="Fax"
+                                value=""
+                              />
+                            </div>
+
+                            <div class="col-4 mb-20">
+                              <label class="label" for="email-ref-info-4"
+                                >Email</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="email-ref-info-4"
+                                placeholder="Enter"
+                                aria-label="Email"
+                                value=""
+                              />
+                            </div>
+
+                            <div class="col-4 mb-20">
+                              <label
+                                class="label"
+                                for="physician-office-ref-info-3"
+                                >Physician Office</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="physician-office-ref-info-3"
+                                placeholder="Enter"
+                                aria-label="Physician Office"
+                                value=""
+                              />
+                            </div>
+
+                            <div class="col-4 mb-20">
+                              <label
+                                class="label"
+                                for="physician-address-ref-info-3"
+                                >Physician Office Address</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="physician-address-ref-info-3"
+                                placeholder="Enter"
+                                aria-label="Physician address"
+                                value=""
+                              />
+                            </div>
+
+                            <div class="col-4 mb-20">
+                              <label
+                                class="label"
+                                for="physician-Phone-ref-info-3"
+                                >Physician Office Phone</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="physician-Phone-ref-info-3"
+                                placeholder="Enter"
+                                aria-label="Physician Office Phone"
+                                value=""
+                              />
+                            </div>
+
+                            <div class="col-4">
+                              <label
+                                class="label"
+                                for="physician-fax-ref-info-3"
+                                >Physician Office Fax</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="physician-fax-ref-info-3"
+                                placeholder="Enter"
+                                aria-label="Physician Office Fax"
+                                value=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="border-color mb-20" id="md-visit-details">
+                      <div
+                        class="p-3 d-grid grid-line align-items-center bg-lightBlue"
+                      >
+                        <p class="tab-heading">
+                          Primary Care Physician Details
+                        </p>
+                        <hr class="modal-line" />
+                      </div>
+                      <div class="p-3 bg-white container">
+                        <div class="row col-12">
+                          <div class="col-4">
+                            <label class="form-label" for="last-md-visit"
+                              >Last MD Visit</label
+                            >
+                            <div class="input-group">
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="last-md-visit"
+                                placeholder="Select"
+                              />
+                              <span class="input-group-text"
+                                ><img src="images/Calendar.svg"
+                              /></span>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <label class="form-label" for="next-md-visit"
+                              >Next MD Visit</label
+                            >
+                            <div class="input-group">
+                              <input
+                                type="text"
+                                class="form-control input-item"
+                                id="next-md-visit"
+                                placeholder="Select"
+                              />
+                              <span class="input-group-text"
+                                ><img src="images/Calendar.svg"
+                              /></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="border-color tab-pane fade"
+                id="treatment-address"
+                role="tabpanel"
+                aria-labelledby="treatment-address-tab"
+              >
+                Treatment Address
+              </div>
+
+              <div
+                class="border-color tab-pane fade"
+                id="emergency-contacts"
+                role="tabpanel"
+                aria-labelledby="emergency-contacts-tab"
+              >
+                Emergency Contacts
+              </div>
+
+              <div
+                class="border-color tab-pane fade"
+                id="patient-representative"
+                role="tabpanel"
+                aria-labelledby="patient-representative-tab"
+              >
+                Patient Representatives / Responsible Party
+              </div>
+
+              <div
+                class="border-color tab-pane fade"
+                id="custom-fields"
+                role="tabpanel"
+                aria-labelledby="custom-fields-tab"
+              >
+                Custom Fields
+              </div>
+
+              <div
+                class="border-color tab-pane fade"
+                id="driving-direction"
+                role="tabpanel"
+                aria-labelledby="driving-direction-tab"
+              >
+                Driving Direction
+              </div>
+
+              <div
+                class="border-color tab-pane fade"
+                id="intake-notes"
+                role="tabpanel"
+                aria-labelledby="intake-notes-tab"
+              >
+                Intake Notes
+              </div>
+
+              <div
+                class="border-color tab-pane fade"
+                id="client-documents"
+                role="tabpanel"
+                aria-labelledby="client-documents-tab"
+              >
+                Client Documents
+              </div>
+
+              <div
+                class="border-color tab-pane fade"
+                id="additional-pharmacies"
+                role="tabpanel"
+                aria-labelledby="additional-pharmacies-tab"
+              >
+                Additional Pharmacies
+              </div>
+
+              <div
+                class="border-color tab-pane fade"
+                id="physicians"
+                role="tabpanel"
+                aria-labelledby="physicians-tab"
+              >
+                Physicians
+              </div>
+
+              <div
+                class="border-color tab-pane fade"
+                id="staff-skill"
+                role="tabpanel"
+                aria-labelledby="staff-skill-tab"
+              >
+                Preferred Staff Skills
+              </div>
+
+              <div
+                class="border-color tab-pane fade"
+                id="staff-skill"
+                role="tabpanel"
+                aria-labelledby="staff-skill-tab"
+              >
+                Preference List / Matching Criteria
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- POPUPS -->
+
+    <!-- CHANGE POPUP -->
+    <div class="modal" tabindex="-1" id="change">
+      <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-greyBlue">
+            <h5 class="modal-title Pinfo color-darkblue">Change Location</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="">
+              <div class="change-client border-color radius-4 mb-20">
+                <span class="text-title">Client: </span>
+                <span class="text-description">Demo Test Client</span>
+              </div>
+              <div class="d-flex gap-20 mb-20">
+                <div class="w-100">
+                  <label class="label" for="location-2-Pinfo">Location</label>
+                  <select
+                    class="single-select input-item"
+                    aria-label="location"
+                    id="location-2-Pinfo"
+                  >
+                    <option class="color-darkblue" disabled selected>
+                      Jinisha
+                    </option>
+                    <option value="1">List 1</option>
+                    <option value="2">List 2</option>
+                    <option value="3">List 3</option>
+                  </select>
+                </div>
+                <div class="w-100">
+                  <label class="label" for="LOB-Pinfo">LOB</label>
+                  <select
+                    class="single-select input-item"
+                    aria-label="LOB"
+                    id="LOB-Pinfo"
+                  >
+                    <option class="color-darkblue" disabled selected>
+                      Pediatric
+                    </option>
+                    <option value="1">List 1</option>
+                    <option value="2">List 2</option>
+                    <option value="3">List 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="d-flex gap-20">
+                <div class="w-100">
+                  <label class="label" for="payer-2-Pinfo">Payer</label>
+                  <select
+                    class="single-select input-item"
+                    aria-label="payer"
+                    id="payer-2-Pinfo"
+                  >
+                    <option class="color-darkblue" disabled selected>
+                      00 - Primary-1 FL
+                    </option>
+                    <option value="1">List 1</option>
+                    <option value="2">List 2</option>
+                    <option value="3">List 3</option>
+                  </select>
+                </div>
+                <div class="w-100">
+                  <p class="label">Care Type</p>
+                  <div class="d-flex gap-3 py-10">
+                    <div class="">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          checked
+                          type="radio"
+                          name="care type"
+                          id="longTerm-Pinfo"
+                          value="Long Term Care"
+                        />
+                        <label
+                          class="form-check-label color-darkblue"
+                          for="longTerm-Pinfo"
+                        >
+                          Long Term Care
+                        </label>
+                      </div>
+                    </div>
+                    <div class="">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input color-darkblue"
+                          type="radio"
+                          name="care type"
+                          id="intermittent-Pinfo"
+                          value="Intermittent Care"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="intermittent-Pinfo"
+                        >
+                          Intermittent Care
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CHANGE POPUP END-->
+
+    <!-- ADD LANGUAGE POPUP -->
+    <div class="modal" tabindex="-1" id="add-lang">
+      <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-greyBlue">
+            <h5 class="modal-title Pinfo color-darkblue">Add Religion</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="add-text">Language</span>
+              <div class="position-relative">
+                <input
+                  type="text"
+                  class="form-control input-item"
+                  id="new-language"
+                  placeholder="Enter new relation here"
+                  aria-label="Enter new Language here"
+                  style="width: 286px"
+                />
+                <button class="btn btn-inside">Add to List</button>
+              </div>
+            </div>
+            <div class="border-color radius-4">
+              <div
+                class="bg-greyHeader p-3 d-flex justify-content-between align-items-center"
+              >
+                <p class="f-500 f-13 lh-17 color-greyBlueheader">Relation</p>
+                <p class="f-500 f-13 lh-17 color-greyBlueheader">Actions</p>
+              </div>
+              <div
+                class="p-3 d-flex justify-content-between align-items-center border-color"
+              >
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="language"
+                    id="lang-eng"
+                    value="English"
+                    checked
+                  />
+                  <label class="form-check-label" for="lang-eng">
+                    English
+                  </label>
+                </div>
+                <img
+                  src="images/delete_red.svg"
+                  alt="delete button"
+                  class="pointer delete"
+                />
+              </div>
+              <div
+                class="p-3 d-flex justify-content-between align-items-center border-color"
+              >
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="language"
+                    id="lang-spa"
+                    value="Spanish"
+                  />
+                  <label class="form-check-label" for="lang-spa">
+                    Spanish
+                  </label>
+                </div>
+                <img
+                  src="images/delete_red.svg"
+                  alt="delete button"
+                  class="pointer delete"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ADD LANGUAGE POPUP END -->
+
+    <!-- ADD RELIGION POPUP -->
+    <div class="modal" tabindex="-1" id="add-religion">
+      <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-greyBlue">
+            <h5 class="modal-title Pinfo color-darkblue">Add Religion</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="add-text">Religion</span>
+              <div class="position-relative">
+                <input
+                  type="text"
+                  class="form-control input-item"
+                  id="new-religion"
+                  placeholder="Enter new relation here"
+                  aria-label="Enter new relation here"
+                  style="width: 286px"
+                />
+                <button class="btn btn-inside">Add to List</button>
+              </div>
+            </div>
+            <div class="border-color radius-4">
+              <div
+                class="bg-greyHeader p-3 d-flex justify-content-between align-items-center"
+              >
+                <p class="f-500 f-13 lh-17 color-greyBlueheader">Relation</p>
+                <p class="f-500 f-13 lh-17 color-greyBlueheader">Actions</p>
+              </div>
+              <div
+                class="p-3 d-flex justify-content-between align-items-center border-color"
+              >
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="religion"
+                    id="religion-hindu"
+                    value="hindu"
+                    checked
+                  />
+                  <label class="form-check-label" for="religion-hindu">
+                    Hindu
+                  </label>
+                </div>
+                <img
+                  src="images/delete_red.svg"
+                  alt="delete button"
+                  class="pointer delete"
+                />
+              </div>
+              <div
+                class="p-3 d-flex justify-content-between align-items-center border-color"
+              >
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="religion"
+                    id="religion-christian"
+                    value="christian"
+                  />
+                  <label class="form-check-label" for="religion-christian">
+                    Christian
+                  </label>
+                </div>
+                <img
+                  src="images/delete_red.svg"
+                  alt="delete button"
+                  class="pointer delete"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ADD RELIGION POPUP END -->
+
+    <!-- ACUITY LEVEL POPUP -->
+    <div class="modal" tabindex="-1" id="acuity-level">
+      <div class="modal-dialog custom-modal-2 modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-greyBlue">
+            <h5 class="modal-title Pinfo color-darkblue">Acuity Level</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex flex-column gap-20">
+              <div class="red-border w-100 p-10">
+                <div class="mb-20">
+                  <span class="red-text f-700 f-15 lh-19">Red: </span
+                  ><span class="f-600 f-14 lh-17"
+                    >Life-threatening (or potential)</span
+                  >
+                </div>
+                <div class="detail-text">
+                  <ul>
+                    <li>Requires ongoing medical treatment/care</li>
+                    <li>
+                      Any equipment dependent upon electricity should be listed
+                      with the power company.
+                    </li>
+                    <li>
+                      Oxygen-dependent patients should be supplied with a backup
+                      tank from the supplier.
+                    </li>
+                    <li>
+                      Does not have a caregiver capable of providing care.
+                    </li>
+                    <li>
+                      Requires assistance with transportation to hospitalor
+                      specialized shelter.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="orange-border w-100 p-10">
+                <div class="mb-20">
+                  <span class="orange-text f-700 f-15 lh-19">Orange: </span
+                  ><span class="f-600 f-14 lh-17"
+                    >Not life threatening but patient might suffer severe
+                    adverse effects from interruption of services
+                  </span>
+                </div>
+                <div class="detail-text">
+                  <ul>
+                    <li>
+                      Like daily insulin, IV Meds, sterile wound care with large
+                      amounts of drainage.
+                    </li>
+                    <li>Symptoms controlled with difficulty.</li>
+                    <li>Death appears imminent.</li>
+                    <li>Capable caregiver present.</li>
+                    <li>
+                      Will require transportation assistance to hospital or
+                      specialized shelter.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="yellow-border w-100 p-10">
+                <div class="mb-20">
+                  <span class="yellow-text f-700 f-15 lh-19">Yellow: </span
+                  ><span class="f-600 f-14 lh-17"
+                    >Visits could be postponed 24-48 hours without adverse
+                    effects
+                  </span>
+                </div>
+                <div class="detail-text">
+                  <ul>
+                    <li>
+                      Sterile wound care with a minimal amount to no drainage.
+                    </li>
+                    <li>
+                      Symptoms need intervention but are fairly well controlled
+                    </li>
+                    <li>
+                      Able to care for self or willing and able caregiver.
+                    </li>
+                    <li>
+                      Transportation available from family, friends, or others.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="green-border w-100 p-10">
+                <div class="mb-20">
+                  <span class="green-text f-700 f-15 lh-19">Green: </span
+                  ><span class="f-600 f-14 lh-17"
+                    >Visits could be postponed 72-96 hours without adverse
+                    effects
+                  </span>
+                </div>
+                <div class="detail-text">
+                  <ul>
+                    <li>Symptoms well controlled.</li>
+                    <li>
+                      Able to care for self or willing and able caregiver.
+                    </li>
+                    <li>
+                      Transportation available from family, of friends, or
+                      others.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary btn-modal-submit ms-3">Close</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ACUITY LEVEL POPUP END -->
+
+    <!-- TRANSPORTATION ASSISTANCE POPUP -->
+    <div class="modal" tabindex="-1" id="transportation-assistance">
+      <div class="modal-dialog custom-modal-2 modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-greyBlue">
+            <h5 class="modal-title Pinfo color-darkblue">
+              Transportation Assistance Level
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex flex-column gap-20">
+              <div class="mb-20">
+                <p class="f-600 f-15 lh-19 mb-10">Purpose:</p>
+                <p class="detail-text">
+                  To provide a universally recognized scale for the rapid
+                  assessment of the transportation assistance needs of
+                  patients/residents during a non-emergent, planned evacuations.
+                </p>
+              </div>
+
+              <div class="mb-20">
+                <p class="f-600 f-15 lh-19 mb-10">Principle:</p>
+                <p class="detail-text">
+                  For the purpose of an evacuation, patients or residents shall
+                  be assessed for their transportation assistance needs and
+                  assigned a level [TAL]. TALs are intended for use by any
+                  healthcare professional familiar with transportation
+                  modalities. TALs can be useful for logistical planning and
+                  movement of Transportation resources (e.g busses, vans,
+                  ambulances) during evacuation of a healthcare facility or
+                  home-bound patient. TALs are subject to change over time, but
+                  their use facilitates the staging of estimated transportation
+                  resources.
+                </p>
+              </div>
+
+              <div class="mb-20">
+                <p class="f-600 f-15 lh-19 mb-10">Objectives:</p>
+                <p class="detail-text">
+                  TALs provide a scale that is recognized and used statewide
+                  during a planned evacuation for the rapid assessment of
+                  Transportation Assistance needs of a patient or residents. the
+                  scale can be used for planning and just in time re-assessment
+                  of patient/ resident Transportation assistance needs. the
+                  scale is not a clinical triage scale, nor does it prescribe
+                  care mechanisms. The continuity of clinical care is an
+                  independent issue and should be addressed concurrently with
+                  transportation modality. The potential for regional/ local
+                  planning variations, while upholding the integrity of the core
+                  nomenclature, is recognized. This is particularly applicable
+                  to areas of the state that have diverse transportation
+                  complexity will be evaluated by individual healthcare
+                  facilities and / or regions.
+                </p>
+              </div>
+
+              <div class="mb-20">
+                <p class="f-600 f-15 lh-19 mb-10">Levels:</p>
+                <p class="detail-text">
+                  For the purposes of evacuation, patients / residents shall be
+                  categorized into one of three levels. The mobility level may
+                  influence number of staff needed two transport the patient /
+                  resident, The type of movement device required, the loading
+                  area They are relocated two hand the type of Transportation
+                  asset required for evacuation. The following mobility levels
+                  shall be used.
+                </p>
+              </div>
+
+              <div class="mb-20">
+                <p class="f-600 f-15 lh-19 mb-10">Non Ambulatory:</p>
+                <p class="detail-text">
+                  Non ambulatory patients / residents are those who require
+                  transport by stretcher. For emergency movement downstairs,
+                  they may be transferred to backboards, basket litters, or
+                  other appropriate devices, or rescue-dragged on their
+                  mattresses. note: rescue drag is to be used as a last resort
+                  only. these patients / residents will be identified with
+                  'gurney' symbol when assessed for evacuation. these patients /
+                  residents are clinically unable to be moved in a Seated
+                  position, and may require equipment ranging from oxygen to
+                  mechanical ventilators, cardiac monitors, or other biomedical
+                  devices to accompany them during movement. They may require
+                  clinical observation. These patients / residents may require
+                  two staff members (one clinical, one non clinical) for
+                  movement, with, with additional staff as needed to manage life
+                  support equipment. ambulance transport is required and in
+                  special circumstances (e.g. EMT, Paramedic, Clinical staff
+                  member).
+                </p>
+              </div>
+
+              <div class="mb-20">
+                <p class="f-600 f-15 lh-19 mb-10">Wheelchair [TAL-2]</p>
+                <p class="detail-text">
+                  Wheelchair patients / residents are those who are unable to
+                  walk due to physical or medical condition. they are stable
+                  without any likelihood of resulting harm or impairment from
+                  wheelchair Transport or prolonged periods of sitting. And do
+                  not require attached medical equipment or medical gas other
+                  than oxygen or a maintenance intravenous infusion during their
+                  relocation or evacuation. these patients/ residents will be
+                  identified with 'wheelchair' symbol when evacuated for
+                  evacuation. They can be safely managed by single non clinical
+                  staff member. They may be transported as a group in a
+                  wheelchair-appropriate vehicle(e.g. medical transport van or
+                  ambulette) with a single staff member or healthcare facility-
+                  designated person accompanying them.
+                </p>
+              </div>
+
+              <div class="">
+                <p class="f-600 f-15 lh-19 mb-10">Ambulatory [TAL-3]</p>
+                <p class="detail-text">
+                  Ambulatory patients / residents are those who are able to walk
+                  the distance from their in-patient location to the designated
+                  loading area without physical assistance, and without any
+                  likelihood of Resulting harm or impairment. these patients/
+                  residents will be identified with a 'walking' figure when
+                  assessed for evacuation. Ambulatory patients / residents shall
+                  be escorted by staff members, but may be moved in groups led
+                  by a healthcare facility-designated person. The optimum staff
+                  to patient ratio is 1:5. they can be transported as a larger
+                  group in passenger vehicle (e.g. bus, transport van, or
+                  private auto) with a healthcare facility-designated person
+                  accompanying them.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary btn-modal-submit ms-3">Close</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- TRANSPORTATION ASSISTANCE POPUP END -->
+
+    <!-- ADD CPR CODE POPUP -->
+    <div class="modal" tabindex="-1" id="add-cpr">
+      <div class="modal-dialog custom-modal-3 modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-greyBlue">
+            <h5 class="modal-title Pinfo color-darkblue">Add CPR Code</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex flex-column mb-1">
+              <label class="label add-text" for="CPR-code">CPR Code</label>
+              <input
+                type="text"
+                class="form-control input-item"
+                id="CPR-code"
+                placeholder="Enter CPR code"
+                aria-label="CPR Code"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADD CPR CODE POPUP END -->
+
+    <!-- ADD INTAKE STATUS POPUP -->
+    <div class="modal" tabindex="-1" id="add-intake">
+      <div class="modal-dialog custom-modal-3 modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-greyBlue">
+            <h5 class="modal-title Pinfo color-darkblue">Add Intake Status</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex flex-column mb-1">
+              <label class="label add-text" for="intake-status"
+                >Intake Status</label
+              >
+              <input
+                type="text"
+                class="form-control input-item"
+                id="intake-status"
+                placeholder="Enter CPR code"
+                aria-label="intake status"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADD INTAKE STATUS POPUP END -->
+
+    <!-- ADD IMPATIENT FACILITY POPUP -->
+    <div class="modal" tabindex="-1" id="add-impatient">
+      <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-greyBlue">
+            <h5 class="modal-title Pinfo color-darkblue">
+              Add Impatient Facility
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-6 mb-20">
+                <label class="label" for="facility-name-1">Facility Name</label>
+                <input
+                  type="text"
+                  class="form-control input-item"
+                  id="facility-name-1"
+                  placeholder="Enter"
+                  aria-label="facility name"
+                />
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="phone-extension"
+                  >Phone (With Extension Number)</label
+                >
+                <input
+                  type="text"
+                  class="form-control input-item"
+                  id="phone-extension"
+                  placeholder="Enter"
+                  aria-label="Phone (With Extension Number)"
+                />
+              </div>
+
+              <div class="col-6 mb-20">
+                <div class="d-flex justify-content-between">
+                  <label class="label" for="location-impatient">Location</label>
+                </div>
+                <select
+                  class="single-select input-item"
+                  aria-label="location"
+                  id="location-impatient"
+                >
+                  <option class="d-none" disabled selected>Select</option>
+                  <option value="1">Horizon Adult Healthcare</option>
+                  <option value="2">Agency 1</option>
+                  <option value="2">Agency 2</option>
+                  <option value="2">Agency 3</option>
+                </select>
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="cell">Cell</label>
+                <input
+                  type="text"
+                  class="form-control input-item"
+                  id="cell"
+                  placeholder="Enter"
+                  aria-label="patient-id "
+                />
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="address-1">Address 1</label>
+                <input
+                  type="text"
+                  class="form-control input-item"
+                  id="address-1"
+                  placeholder="Enter"
+                  aria-label="address 1"
+                />
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="address-2">address 2</label>
+                <input
+                  type="text"
+                  class="form-control input-item"
+                  id="address-2"
+                  placeholder="Enter"
+                  aria-label="address 2"
+                />
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="fax-impatient">Fax</label>
+                <input
+                  type="text"
+                  class="form-control input-item"
+                  id="fax-impatient"
+                  placeholder="Enter"
+                  aria-label="fax"
+                />
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="email-impatient">Email</label>
+                <input
+                  type="email"
+                  class="form-control input-item"
+                  id="email-impatient"
+                  placeholder="Enter"
+                  aria-label="email"
+                />
+              </div>
+
+              <div class="col-6 d-flex gap-10 mb-20">
+                <div class="mb-20">
+                  <label class="label" for="zip-impatient">Zip</label>
+                  <input
+                    type="text"
+                    class="form-control input-item"
+                    id="zip-impatient"
+                    placeholder="Enter"
+                    aria-label="zip"
+                  />
+                </div>
+                <div class="mb-20">
+                  <label class="label" for="city">City</label>
+                  <input
+                    type="text"
+                    class="form-control input-item"
+                    id="city"
+                    placeholder="Enter"
+                    aria-label="city"
+                  />
+                </div>
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="state-impatient">State</label>
+                <input
+                  type="text"
+                  class="form-control input-item"
+                  id="state-impatient"
+                  placeholder="Enter"
+                  aria-label="state"
+                />
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="contact-person">Contact Person</label>
+                <input
+                  type="text"
+                  class="form-control input-item"
+                  id="contact-person"
+                  placeholder="Enter"
+                  aria-label="contact person"
+                />
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="contact-person-1"
+                  >Contact Person</label
+                >
+                <input
+                  type="text"
+                  class="form-control input-item"
+                  id="contact-person-1"
+                  placeholder="Enter"
+                  aria-label="contact person"
+                />
+              </div>
+
+              <div class="col-12">
+                <div class="d-flex justify-content-between">
+                  <label class="label" for="notes">Notes</label>
+                  <a
+                    href="javascript:void(0)"
+                    data-bs-toggle="modal"
+                    data-bs-target="#"
+                    class="link-blue"
+                    >Add From List</a
+                  >
+                </div>
+                <textarea
+                  name=""
+                  id="notes"
+                  cols=""
+                  rows="2"
+                  class="input-textarea w-100"
+                  placeholder="Enter"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ADD IMPATIENT FACILITY POPUP END -->
+
+    <!-- CHANGE LOB POPUP -->
+
+    <div class="modal" tabindex="-1" id="healthcare-lob-change">
+      <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-greyBlue">
+            <h5 class="modal-title Pinfo color-darkblue">Change LOB</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="">
+              <div class="change-client border-color radius-4 mb-20">
+                <span class="text-title">Client: </span>
+                <span class="text-description">Demo Test Client</span>
+              </div>
+              <div class="d-flex gap-20 mb-20">
+                <div class="w-100">
+                  <label class="label" for="location-3-Pinfo">Location</label>
+                  <select
+                    class="single-select input-item"
+                    aria-label="location"
+                    id="location-3-Pinfo"
+                  >
+                    <option class="color-darkblue" disabled selected>
+                      Jinisha
+                    </option>
+                    <option value="1">List 1</option>
+                    <option value="2">List 2</option>
+                    <option value="3">List 3</option>
+                  </select>
+                </div>
+                <div class="w-100">
+                  <label class="label" for="LOB-1-Pinfo">LOB</label>
+                  <select
+                    class="single-select input-item"
+                    aria-label="LOB"
+                    id="LOB-1-Pinfo"
+                  >
+                    <option class="color-darkblue" disabled selected>
+                      Pediatric
+                    </option>
+                    <option value="1">List 1</option>
+                    <option value="2">List 2</option>
+                    <option value="3">List 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="d-flex gap-20">
+                <div class="w-100">
+                  <label class="label" for="payer-3-Pinfo">Payer</label>
+                  <select
+                    class="single-select input-item"
+                    aria-label="payer"
+                    id="payer-3-Pinfo"
+                  >
+                    <option class="color-darkblue" disabled selected>
+                      00 - Primary-1 FL
+                    </option>
+                    <option value="1">List 1</option>
+                    <option value="2">List 2</option>
+                    <option value="3">List 3</option>
+                  </select>
+                </div>
+                <div class="w-100">
+                  <p class="label">Care Type</p>
+                  <div class="d-flex gap-3 py-10">
+                    <div class="">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          checked
+                          type="radio"
+                          name="care type"
+                          id="longTerm-1-Pinfo"
+                          value="Long Term Care"
+                        />
+                        <label
+                          class="form-check-label color-darkblue"
+                          for="longTerm-1-Pinfo"
+                        >
+                          Long Term Care
+                        </label>
+                      </div>
+                    </div>
+                    <div class="">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input color-darkblue"
+                          type="radio"
+                          name="care type"
+                          id="intermittent-1-Pinfo"
+                          value="Intermittent Care"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="intermittent-1-Pinfo"
+                        >
+                          Intermittent Care
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CHANGE LOB POPUP END -->
+
+    <!-- ADD GUARANTOR RELATION POPUP -->
+    <div class="modal" tabindex="-1" id="add-guarantor">
+      <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-greyBlue">
+            <h5 class="modal-title Pinfo color-darkblue">
+              Add Guarantor Relation
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="add-text">Guarantor Relation</span>
+              <div class="position-relative">
+                <input
+                  type="text"
+                  class="form-control input-item"
+                  id="new-religion"
+                  placeholder="Enter new relation here"
+                  aria-label="Enter new relation here"
+                  style="width: 286px"
+                />
+                <button class="btn btn-inside">Add to List</button>
+              </div>
+            </div>
+            <div class="border-color radius-4">
+              <div
+                class="bg-greyHeader p-3 d-flex justify-content-between align-items-center"
+              >
+                <p class="f-500 f-13 lh-17 color-greyBlueheader">Relation</p>
+                <p class="f-500 f-13 lh-17 color-greyBlueheader">Actions</p>
+              </div>
+              <div
+                class="p-3 d-flex justify-content-between align-items-center border-color"
+              >
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="relation"
+                    id="relation-father"
+                    value="hindu"
+                    checked
+                  />
+                  <label class="form-check-label" for="relation-father">
+                    Father
+                  </label>
+                </div>
+                <img
+                  src="images/delete_red.svg"
+                  alt="delete button"
+                  class="pointer delete"
+                />
+              </div>
+              <div
+                class="p-3 d-flex justify-content-between align-items-center border-color"
+              >
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="relation"
+                    id="relation-mother"
+                    value="christian"
+                  />
+                  <label class="form-check-label" for="relation-mother">
+                    Mother
+                  </label>
+                </div>
+                <img
+                  src="images/delete_red.svg"
+                  alt="delete button"
+                  class="pointer delete"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADD GUARANTOR RELATION POPUP END -->
+
+    <!-- ADD REFERRAL FACILITY POPUP -->
+
+    <div class="modal" tabindex="-1" id="add-ref-facility">
+      <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-greyBlue">
+            <h5 class="modal-title Pinfo color-darkblue">
+              Add Referral Facility
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-6 mb-20">
+                <p class="label">Category</p>
+                <div class="d-flex gap-3">
+                  <div class="radio-box">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="category"
+                        id="hospital-cat-ref-info"
+                        value="Hospital"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="hospital-cat-ref-info"
+                      >
+                        Hospital
+                      </label>
+                    </div>
+                  </div>
+                  <div class="radio-box">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="category"
+                        id="facility-cat-ref-info"
+                        value="intermittent care"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="facility-cat-ref-info"
+                      >
+                        Facility
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="phone-extension-1"
+                  >Phone (With Extension Number)</label
+                >
+                <input
+                  type="text"
+                  class="form-control input-item"
+                  id="phone-extension-1"
+                  placeholder="Enter"
+                  aria-label="Phone (With Extension Number)"
+                />
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="facility-name-1">Facility Name</label>
+                <input
+                  type="text"
+                  class="form-control input-item"
+                  id="facility-name-1"
+                  placeholder="Enter"
+                  aria-label="Facility Name  "
+                />
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="cell-1">Cell</label>
+                <input
+                  type="text"
+                  class="form-control input-item"
+                  id="cell-1"
+                  placeholder="Enter"
+                  aria-label="cell "
+                />
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="address-3">Address 1</label>
+                <input
+                  type="text"
+                  class="form-control input-item"
+                  id="address-3"
+                  placeholder="Enter"
+                  aria-label="address"
+                />
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="address-4">address 2</label>
+                <input
+                  type="text"
+                  class="form-control input-item"
+                  id="address-4"
+                  placeholder="Enter"
+                  aria-label="address"
+                />
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="location-ref-info">Location</label>
+                <select
+                  class="single-select input-item"
+                  aria-label="location"
+                  id="location-ref-info"
+                >
+                  <option class="d-none" disabled selected>Select</option>
+                  <option value="1">List 1</option>
+                  <option value="2">List 2</option>
+                  <option value="3">List 3</option>
+                </select>
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="fax-ref-info-2">Fax</label>
+                <input
+                  type="text"
+                  class="form-control input-item"
+                  id="fax-ref-info-2"
+                  placeholder="Enter"
+                  aria-label="fax"
+                />
+              </div>
+
+              <div class="col-6 d-flex gap-10 mb-20">
+                <div class="">
+                  <label class="label" for="zip-ref-info">Zip</label>
+                  <input
+                    type="text"
+                    class="form-control input-item"
+                    id="zip-ref-info"
+                    placeholder="Enter"
+                    aria-label="zip"
+                  />
+                </div>
+                <div class="">
+                  <label class="label" for="city-ref-info">City</label>
+                  <input
+                    type="text"
+                    class="form-control input-item"
+                    id="city-ref-info"
+                    placeholder="Enter"
+                    aria-label="city"
+                  />
+                </div>
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="state-ref-info">State</label>
+                <input
+                  type="text"
+                  class="form-control input-item"
+                  id="state-ref-info"
+                  placeholder="Enter"
+                  aria-label="state"
+                />
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="email-ref-info-2">Email</label>
+                <input
+                  type="email"
+                  class="form-control input-item"
+                  id="email-ref-info-2"
+                  placeholder="Enter"
+                  aria-label="email"
+                />
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="contact-person-ref-info"
+                  >Contact Person</label
+                >
+                <input
+                  type="text"
+                  class="form-control input-item"
+                  id="contact-person-ref-info"
+                  placeholder="Enter"
+                  aria-label="contact person"
+                />
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="contact-person-ref-info-1"
+                  >Contact Person</label
+                >
+                <input
+                  type="text"
+                  class="form-control input-item"
+                  id="contact-person-ref-info-1"
+                  placeholder="Enter"
+                  aria-label="contact person"
+                />
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="sales-ref-info-1"
+                  >Sales Person/Marketer</label
+                >
+                <select
+                  class="single-select input-item"
+                  aria-label="location"
+                  id="sales-ref-info-1"
+                >
+                  <option class="d-none" disabled selected>Select</option>
+                  <option value="1">List 1</option>
+                  <option value="2">List 2</option>
+                  <option value="3">List 3</option>
+                </select>
+              </div>
+
+              <div class="col-12">
+                <div class="d-flex justify-content-between">
+                  <label class="label" for="notes">Notes</label>
+                  <a
+                    href="javascript:void(0)"
+                    data-bs-toggle="modal"
+                    data-bs-target="#"
+                    class="link-blue"
+                    >Add From List</a
+                  >
+                </div>
+                <textarea
+                  name=""
+                  id="notes-ref-info"
+                  cols=""
+                  rows="2"
+                  class="input-textarea w-100"
+                  placeholder="Enter"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ADD REFERRAL FACILITY POPUP END -->
+
+    <!-- PHYSICIAN LIST POPUP -->
+
+    <div class="modal" tabindex="-1" id="add-ref-physician">
+      <div class="modal-dialog custom-modal-4 modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-greyBlue">
+            <h5 class="modal-title Pinfo color-darkblue">Physician List</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row col-10 mb-20">
+              <div class="col-4">
+                <label class="label" for="location-ref-info-2">Location</label>
+                <select
+                  class="single-select input-item"
+                  aria-label="location"
+                  id="location-ref-info-2"
+                >
+                  <option class="d-none" disabled selected>Select</option>
+                  <option value="1">List 1</option>
+                  <option value="2">List 2</option>
+                  <option value="3">List 3</option>
+                </select>
+              </div>
+              <div class="col-2">
+                <label class="label" for="Name-NPI">Match With</label>
+                <select
+                  class="single-select input-item"
+                  aria-label="location"
+                  id="Name-NPI"
+                >
+                  <option class="d-none" disabled selected>Name,NPI</option>
+                  <option value="1">List 1</option>
+                  <option value="2">List 2</option>
+                  <option value="3">List 3</option>
+                </select>
+              </div>
+              <div class="col-4 search">
+                <label class="label v-none" for="Name-NPI">Match With</label>
+                <input
+                  type="text"
+                  placeholder="Search"
+                  class="search-input w-100"
+                />
+                <img
+                  src="images/lens.svg"
+                  alt="search lens"
+                  class="lens"
+                  style="top: 34px !important; left: 18px !important"
+                />
+              </div>
+            </div>
+            <div class="d-flex justify-content-between w-100">
+              <div
+                class="d-flex gap-10 justify-content-between align-items-center"
+              >
+                <p class="color-greyScale">Physicians</p>
+                <div class="d-flex">
+                  <img src="images/plus-icon.svg" alt="plus sign" />
+                  <a
+                    href="javascript:void(0)"
+                    data-bs-toggle="modal"
+                    data-bs-target="#add-physician"
+                    class="text-decoration-none f-600 f-13 lh-17"
+                    >Add new</a
+                  >
+                </div>
+              </div>
+              <div>
+                <button class="btn btn-tertiary">Display</button>
+              </div>
+            </div>
+            <div>
+              <table class="table table-type-1 mt-10" id="add-physician-table">
+                <thead>
+                  <tr>
+                    <th class="d-flex">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      /><span>Physician Name & NPI</span>
+                    </th>
+                    <th>License No.</th>
+                    <th>UPIN</th>
+                    <th>TPI#</th>
+                    <th>Phone</th>
+                    <th>Send Fax</th>
+                    <th>PECOS</th>
+                    <th>City & ZIP</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td class="d-flex">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <div>
+                        <p class="notice">Pharmacy Name</p>
+                        <p>1234567890</p>
+                      </div>
+                    </td>
+                    <td>12568556</td>
+                    <td>1264587955</td>
+                    <td>25498692691</td>
+                    <td>5124893268</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                    <td>
+                      <p class="mb-2">City Name</p>
+                      <p>210234</p>
+                    </td>
+                    <td>
+                      <button type="button" class="btn edit-btn d-flex justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#edit-physician-details">
+                        <img src="images/edit-icon.svg" alt="edit" />
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="d-flex">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <div>
+                        <p class="notice">Pharmacy Name</p>
+                        <p>1234567890</p>
+                      </div>
+                    </td>
+                    <td>12568556</td>
+                    <td>1264587955</td>
+                    <td>25498692691</td>
+                    <td>5124893268</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                    <td>
+                      <p class="mb-2">City Name</p>
+                      <p>210234</p>
+                    </td>
+                    <td>
+                      <button type="button" class="btn edit-btn d-flex justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#edit-physician-details">
+                        <img src="images/edit-icon.svg" alt="edit" />
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="d-flex">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <div>
+                        <p class="notice">Pharmacy Name</p>
+                        <p>1234567890</p>
+                      </div>
+                    </td>
+                    <td>12568556</td>
+                    <td>1264587955</td>
+                    <td>25498692691</td>
+                    <td>5124893268</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                    <td>
+                      <p class="mb-2">City Name</p>
+                      <p>210234</p>
+                    </td>
+                    <td>
+                      <button type="button" class="btn edit-btn d-flex justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#edit-physician-details">
+                        <img src="images/edit-icon.svg" alt="edit" />
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="d-flex">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <div>
+                        <p class="notice">Pharmacy Name</p>
+                        <p>1234567890</p>
+                      </div>
+                    </td>
+                    <td>12568556</td>
+                    <td>1264587955</td>
+                    <td>25498692691</td>
+                    <td>5124893268</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                    <td>
+                      <p class="mb-2">City Name</p>
+                      <p>210234</p>
+                    </td>
+                    <td>
+                      <button type="button" class="btn edit-btn d-flex justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#edit-physician-details">
+                        <img src="images/edit-icon.svg" alt="edit" />
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary btn-modal-submit ms-3">Assign</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHYSICIAN LIST POPUP END -->
+
+    <!-- EDIT PHYSICIAN POPUP  -->
+
+    <div class="modal" tabindex="-1" id="edit-physician-details">
+      <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+        <div class="modal-content">
+          <d iv class="modal-header bg-greyBlue">
+            <h5 class="modal-title Pinfo color-darkblue">Edit Physician</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </d>
+          <div class="modal-body">
+             <div class="d-flex gap-3 justify-content-end mb-20">
+              <div>
+                <button class="btn btn-tertiary">Run Exclusion Check</button>
+              </div>
+              <div>
+                <button class="btn btn-tertiary">Search NPI</button> 
+              </div>
+             </div>
+             <div class="border-color">
+              <div class="p-3 d-grid grid-line align-items-center bg-lightGrey mb-15">
+                 <p class="tab-heading">Physician Info</p>
+                 <hr class="modal-line">
+               </div>
+               <div class="container">
+                <div class="row col-12">
+                  <div class="col-4 mb-20">
+                    <p class="label">PECOS Enrolled</p>
+                    <div class="d-flex gap-3">
+                      <div class="radio-box">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="PECOS Enrolled" id="PECOS-yes" value="yes">
+                          <label class="form-check-label" for="PECOS-yes">
+                            Yes
+                          </label>
+                        </div>
+                      </div>
+                      <div class="radio-box">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="PECOS Enrolled" id="PECOS-no" value="no">
+                          <label class="form-check-label" for="PECOS-no">
+                            No
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row col-12">
+                  <div class="col-3">
+                    <label class="label" for="physician-info-status">Status</label>
+                    <select
+                      class="single-select input-item"
+                      aria-label="location"
+                      id="physician-info-status">
+                      <option selected>Active</option>
+                      <option value="1">List 1</option>
+                      <option value="2">List 2</option>
+                      <option value="3">List 3</option>
+                    </select>
+                  </div>
+                  <div class="col-3">
+                    <label class="label" for="physician-info-status">Title</label>
+                    <select
+                      class="single-select input-item"
+                      aria-label="location"
+                      id="physician-info-status">
+                      <option selected>Select</option>
+                      <option value="1">List 1</option>
+                      <option value="2">List 2</option>
+                      <option value="3">List 3</option>
+                    </select>
+               
+                  </div>
+                  <div class="col-4 mb-20">
+                    <div class="d-flex justify-content-between">
+                      <label class="label" for="attending-ref-info"
+                        >NPI</label
+                      >
+                      <a
+                        href="javascript:void(0)"
+                        data-bs-toggle="modal"
+                        data-bs-target="#add-attending"
+                        class="link-blue"
+                        >Verify</a
+                      >
+                    </div>
+                    <select
+                      class="single-select input-item"
+                      aria-label="Default select example"
+                      id="attending-ref-info"
+                    >
+                      <option selected>1236597584</option>
+                      <option value="2">Agency 1</option>
+                      <option value="2">Agency 2</option>
+                      <option value="2">Agency 3</option>
+                    </select>
+                  </div>
+
+                </div>
+
+
+                
+    
+
+                </div>
+               </div>
+
+
+              </div>
+
+           
+          
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- EDIT PHYSICIAN POPUP END -->
+
+
+
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="js/bootstrap-multiselect.min.js"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- bootstrap js-->
+    <!-- <script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+    datepicker js -->
+    <!-- <script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/daterangepicker.js"></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+  </body>
+</html>

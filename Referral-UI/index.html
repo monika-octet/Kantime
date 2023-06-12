@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#0D87E2" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@100&display=swap"
+        rel="stylesheet" />
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-multiselect.min.css" />
+    
+    <!-- sweetalert -->
+    <link rel="stylesheet" type="text/css" href="css/sweetAlert/sweetalert2.min.css" />
+
+
+
+    <!-- Custom css -->
+    <link rel="stylesheet" type="text/css" href="css/common/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/referral/referral.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive/responsive.css" />
+
+    <!-- Bootstrap js -->
+
+
+    <!-- custom css -->
+
+    <title>Kantime | Referral</title>
+</head>
+
+<body>
+    <header>
+        <nav class="">
+            <div class="">
+                <img src="images/nav.svg" style="width: 100%;" />
+            </div>
+        </nav>
+    </header>
+    <main class="mt-3 d-flex justify-content-center">
+        <div class="new-take-info d-flex flex-column justify-content-center">
+            <div class="d-flex justify-content-between">
+                <h1>New Intake Info</h1>
+                <div class="icon-container d-flex gap-3 ">
+                    <img src="images/Help.svg" alt="help-icon" />
+                    <img src="images/Mail.svg" alt="mail-icon" />
+                    <img src="images/Duplicate.svg" alt="duplicate-icon" />
+                    <img src="images/message.svg" alt="message-icon" />
+                </div>
+
+            </div>
+            <div class="bg-white p-30 mt-2 rounded-2 d-flex flex-column gap-30 border-color">
+                <div class="">
+                    <div class="">
+                        <h2>Basic Details</h2>
+                        <div class="d-grid grid-box gap-3 mt-3">
+                            <div class="">
+                                <label class="label" for="f-name">First name</label>
+                                <input type="text" class="form-control input-item" id="f-name"
+                                    placeholder="Enter first name" aria-label="first-name">
+                            </div>
+
+                            <div class="">
+                                <label class="label" for="m-name">Middle name</label>
+                                <input type="text" class="form-control input-item" id="m-name"
+                                    placeholder="Enter middle name" aria-label="middle-name">
+                            </div>
+
+                            <div class="">
+                                <label class="label" for="l-name">Last name</label>
+                                <input type="text" class="form-control input-item" id="l-name"
+                                    placeholder="Enter last name" aria-label="last-name">
+                            </div>
+
+                            <div>
+                                <label class="form-label" for="dob">DOB</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-item " id="dob"
+                                        placeholder="Select Date">
+                                    <span class="input-group-text"><img src="images/Calendar.svg" /></span>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="">
+                    <div class="">
+                        <h2>Insurance Details </h2>
+                        <div class="d-grid grid-box gap-3 mt-3">
+                            <div class="">
+                                <label class="label" for="medicaid">Medicaid</label>
+                                <input type="text" class="form-control input-item" id="medicaid"
+                                    placeholder="Enter medicaid" aria-label="first-name">
+                            </div>
+
+                            <div class="">
+                                <label class="label" for="medicare">Medicare</label>
+                                <input type="text" class="form-control input-item" id="medicare"
+                                    placeholder="Enter medicare " aria-label="middle-name">
+                            </div>
+
+                            <div class="">
+                                <label class="label" for="mbi">MBI</label>
+                                <input type="text" class="form-control input-item" id="mbi" placeholder="MBI"
+                                    aria-label="last-name">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="d-flex justify-content-end align-items-center">
+            <a href="#" class="btn btn-outline-primary">Reset</a>
+            <a href="duplicate-record.html" id="check-duplicate" class="btn btn-primary ms-3">Check duplicates</a>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- bootstrap js-->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-multiselect.min.js"></script>
+   
+    <!-- sweet alert -->
+    <script type="text/javascript" src="js/sweetalert2.all.min.js"></script>
+
+    <script type="text/javascript" src="js/custom.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var duplicateBtn = $("#check-duplicate");
+            var timer;
+
+            duplicateBtn.on("click", function (event) {
+               event.preventDefault();
+
+                window.location.href = "duplicate-record.html";
+            });
+
+            duplicateBtn.on("mousedown", function () {
+                timer = setTimeout(function () {
+                    window.location.href = "new-referral-form.html";
+                }, 1000); 
+            });
+
+            duplicateBtn.on("mouseup", function () {
+                clearTimeout(timer);
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
