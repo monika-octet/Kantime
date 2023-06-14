@@ -70,13 +70,13 @@
           </div>
         </div>
       </div>
-      <div class="px-20 py-3 d-flex justify-content-between align-items-center notice-style">
+      <div class="px-20 py-3 d-flex justify-content-between align-items-center notice-style covid-box">
         <div class="d-flex align-items-center gap-3">
           <img src="images/big_exclaimation.svg" alt="exclamation mark" />
           <p class="notice">Patient is Covid Positive!</p>
         </div>
         <div>
-          <img src="images/corss_big.svg" alt="close notification " class="pointer" />
+          <img src="images/corss_big.svg" alt="close notification " class="pointer close-covid-notice" />
         </div>
       </div>
       <div class="bg-white border-color mt-10 radius-4 mb-20">
@@ -5983,6 +5983,15 @@
       }
     }
   </script>
+
+<script>
+  $(document).ready(function() {
+    $(".close-covid-notice").click(function() {
+      $(".covid-box").addClass('hidden');
+    });
+  });
+</script>
+
 
 
 
