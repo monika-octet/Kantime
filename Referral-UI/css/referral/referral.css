@@ -334,7 +334,7 @@ h3 {
     opacity: 1;
 }
 
-#duplicate-list .dropdown-toggle::after, #treatment-address-table .dropdown-toggle::after {
+#duplicate-list .dropdown-toggle::after, #treatment-address-table .dropdown-toggle::after, #patient-representative-table .dropdown-toggle::after {
     /* display: none; */
     content: url(../../images/three-dots.svg);
     width: 100%;
@@ -353,7 +353,7 @@ h3 {
     background-color: #FAFAFA;
 }
 
-#treatment-address-table.table-type-1 tbody tr td{
+#treatment-address-table.table-type-1 tbody tr td, #patient-representative-table.table-type-1 tbody tr td {
     padding: 12px 20px;
 }
 
@@ -740,6 +740,7 @@ h3 {
     min-width: 1280px !important ;
 }
 
+
 .form-check-input:checked+.form-check-label {
     color: #181C32;
     font-weight: 500;
@@ -819,6 +820,18 @@ h3 {
     padding: 12px 20px;
 }
 
+#add-quick-note-table.table-type-1 thead tr th {
+    padding: 8px 12px;
+}
+
+#add-quick-note-table.table-type-1 tbody tr td{
+    padding: 8px 12px;
+}
+
+#add-quick-note-table.table-type-1 tbody tr:hover{
+    background-color: #fff !important;
+}
+
 .table-btn-icon{
     width: 32px;
     height: 32px;
@@ -863,4 +876,23 @@ h3 {
 
 .page-item:first-child .page-link{
     border-radius: 0;
+}
+
+.map-box{
+    border-top: 1px solid #D9D9D9;
+   
+}
+.map-pin{
+    position: absolute;
+    top: 32%;
+    left: 13%;
+}
+
+.client-clinician .info-title{
+    color: #787878;
+    width: 65px;
+}
+
+.client-clinician .info-description{
+    width: 200px;
 }
