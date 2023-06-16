@@ -22,6 +22,9 @@
   <!-- select -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-multiselect.min.css" />
 
+  <!-- datepicker -->
+  <link type="text/css" href="css/daterangepicker.css" />
+
   <!-- Custom css -->
 
   <link rel="stylesheet" type="text/css" href="css/common/main.css" />
@@ -104,7 +107,7 @@
                     <span class="info-icon-label">Address</span>
                   </div>
                 </div>
-                <div class="status-tag">
+                <div class="status-tag status-red">
                   <p>Conditionally accepted</p>
                 </div>
               </div>
@@ -289,6 +292,13 @@
                     Patient Representatives / Responsible Party
                   </button>
 
+
+
+                  <button class="nav-link" id="custom-tab" data-bs-toggle="tab" data-bs-target="#view-checklist"
+                    type="button" role="tab" aria-controls="view-checklist" aria-selected="false">
+                    View Checklist
+                  </button>
+
                   <button class="nav-link" id="custom-tab" data-bs-toggle="tab" data-bs-target="#custom-fields"
                     type="button" role="tab" aria-controls="custom-fields" aria-selected="false">
                     Custom Fields
@@ -325,8 +335,9 @@
                     Preferred Staff Skills
                   </button>
 
-                  <button class="nav-link" id="preference-list-tab" data-bs-toggle="tab" data-bs-target="#staff-skill"
-                    type="button" role="tab" aria-controls="staff-skill" aria-selected="false">
+                  <button class="nav-link" id="preference-list-tab" data-bs-toggle="tab"
+                    data-bs-target="#preference-list-matching" type="button" role="tab" aria-controls="staff-skill"
+                    aria-selected="false">
                     Preference List / Matching Criteria
                   </button>
                 </div>
@@ -1601,6 +1612,7 @@
                     <div class="p-3 d-grid grid-line align-items-center bg-lightBlue">
                       <p class="tab-heading">
                         Primary Care Physician Details
+
                       </p>
                       <hr class="modal-line" />
                     </div>
@@ -2421,6 +2433,237 @@
 
             </div>
 
+            <div class="border-color tab-pane fade" id="view-checklist" role="tabpanel"
+              aria-labelledby="view-checklist-tab">
+              <div class="px-20 bg-white d-flex justify-content-between align-items-center"
+                style="padding-top: 14px; padding-bottom: 14px">
+                <div class="d-flex gap-10 align-items-center">
+                  <div class="tab-content-heading">Checklist</div>
+                  <div class="d-flex">
+                    <img src="images/edit-icon.svg" alt="edit icon" style="width: 18px; height: 18px" />
+                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modify-checklist"
+                      class="text-decoration-none f-600 f-13 lh-17">Edit</a>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-10">
+                  <p class="save-time">Last saved 2 mins ago</p>
+                  <button class="btn btn-tertiary">Save</button>
+                </div>
+              </div>
+              <div class="p-20">
+
+                <div class="col-4 border-color bg-white py-10 px-15 radius-4 mb-20">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="checklist-not-required-items">
+                    <label class="send" for="checklist-not-required-items">
+                      Include Not Required Items
+                    </label>
+                  </div>
+                </div>
+                <div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <label class="f-600 f-14 lh-22 mb-10" for="checklist-items-table-label">
+                      Checklist Items
+                    </label>
+                    <span class="f-400 f-14 lh-17 color-greyScale">Total Records : 5</span>
+                  </div>
+                  <table class="table table-type-1" id="add-physician-table">
+                    <thead>
+                      <tr>
+                        <th>Checklist Item Name</th>
+                        <th>Status</th>
+                        <th style="width: 180px;">Completed on</th>
+                        <th>Notes</th>
+                        <th>Last Followed Up Date</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>
+                          Admission Form
+                        </td>
+                        <td>
+                          <div class="status-tag status-green">
+                            <p>Completed</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div id="weeklyrange" class="form-control singleDatePicker">
+                            <span>15/06/2023</span>
+                            <img src="images/calIcon.svg" alt="Calendar icon" />
+                          </div>
+                        </td>
+                        <td class="color-greyScale">
+                          Handed Over the patient report to physician
+                        </td>
+                        <td>
+                          <div id="weeklyrange-1" class="form-control singleDatePicker">
+                            <span>15/06/2023</span>
+                            <img src="images/calIcon.svg" alt="Calendar icon" />
+                          </div>
+                        </td>
+                        <td>
+                          <button type="button"
+                            class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                            data-bs-toggle="modal" data-bs-target="#modify-checklist">
+                            <img src="images/edit-icon.svg" alt="edit">
+                          </button>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          Admission Form
+                        </td>
+                        <td>
+                          <div class="status-tag status-green">
+                            <p>Completed</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div id="weeklyrange-2" class="form-control singleDatePicker">
+                            <span>15/06/2023</span>
+                            <img src="images/calIcon.svg" alt="Calendar icon" />
+                          </div>
+                        </td>
+                        <td class="color-greyScale">
+                          Handed Over the patient report to physician
+                        </td>
+                        <td>
+                          <div id="weeklyrange-3" class="form-control singleDatePicker">
+                            <span>15/06/2023</span>
+                            <img src="images/calIcon.svg" alt="Calendar icon" />
+                          </div>
+                        </td>
+                        <td>
+                          <button type="button"
+                            class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                            data-bs-toggle="modal" data-bs-target="#modify-checklist">
+                            <img src="images/edit-icon.svg" alt="edit">
+                          </button>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          Admission Form
+                        </td>
+                        <td>
+                          <div class="status-tag status-green">
+                            <p>Completed</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div id="weeklyrange-4" class="form-control singleDatePicker">
+                            <span>15/06/2023</span>
+                            <img src="images/calIcon.svg" alt="Calendar icon" />
+                          </div>
+                        </td>
+                        <td class="color-greyScale">
+                          Handed Over the patient report to physician
+                        </td>
+                        <td>
+                          <div id="weeklyrange-5" class="form-control singleDatePicker">
+                            <span>15/06/2023</span>
+                            <img src="images/calIcon.svg" alt="Calendar icon" />
+                          </div>
+                        </td>
+                        <td>
+                          <button type="button"
+                            class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                            data-bs-toggle="modal" data-bs-target="#modify-checklist">
+                            <img src="images/edit-icon.svg" alt="edit">
+                          </button>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          Admission Form
+                        </td>
+                        <td>
+                          <div class="status-tag status-green">
+                            <p>Completed</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div id="weeklyrange-6" class="form-control singleDatePicker">
+                            <span>15/06/2023</span>
+                            <img src="images/calIcon.svg" alt="Calendar icon" />
+                          </div>
+                        </td>
+                        <td class="color-greyScale">
+                          Handed Over the patient report to physician
+                        </td>
+                        <td>
+                          <div id="weeklyrange-7" class="form-control singleDatePicker">
+                            <span>15/06/2023</span>
+                            <img src="images/calIcon.svg" alt="Calendar icon" />
+                          </div>
+                        </td>
+                        <td>
+                          <button type="button"
+                            class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                            data-bs-toggle="modal" data-bs-target="#modify-checklist">
+                            <img src="images/edit-icon.svg" alt="edit">
+                          </button>
+                        </td>
+                      </tr>
+
+
+
+
+                    </tbody>
+                  </table>
+
+                  <nav aria-label="Page navigation example" class="">
+                    <ul class="pagination justify-content-end">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <img src="images/previous-icon.svg" alt="multiple previous button">
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <img src="images/back_arrow.svg" alt="Previous button">
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">4</a>
+                      </li>
+                      <span class="" style="margin-top: 5px">•••</span>
+                      <li class="page-item">
+                        <a class="page-link" href="#">8</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <img src="images/next_arrow.svg" alt="next button">
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <img src="images/next-icon.svg" alt="multiple next button">
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+
+                </div>
+
+              </div>
+            </div>
+
             <div class="border-color tab-pane fade" id="custom-fields" role="tabpanel"
               aria-labelledby="custom-fields-tab">
               <div class="px-20 bg-white d-flex justify-content-between align-items-center"
@@ -2561,37 +2804,905 @@
               </div>
               <div class="p-20">
                 <div class="col-12 mb-20 bg-white border-color radius-4">
-                  <textarea name="" id="add-new-patient-rep-notes" cols="" rows="8" class="input-textarea w-100 border-color border-bottom "
-                    placeholder="Type Here"></textarea>
-                  <div class="d-flex align-items-center gap-2 py-10 px-15" data-bs-toggle="modal" data-bs-target="#quick-notes" >
+                  <textarea name="" id="add-new-patient-rep-notes" cols="" rows="8"
+                    class="input-textarea w-100 border-color border-bottom " placeholder="Type Here"></textarea>
+                  <div class="d-flex align-items-center gap-2 py-10 px-15" data-bs-toggle="modal"
+                    data-bs-target="#quick-notes">
                     <img src="images/notes.svg" alt="notes icon">
                     <p class="f-500 f-13 lh-17">Open Quick Notes List</p>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
 
             <div class="border-color tab-pane fade" id="client-documents" role="tabpanel"
               aria-labelledby="client-documents-tab">
-           
+              <div class="px-20 bg-white d-flex justify-content-between align-items-center"
+                style="padding-top: 14px; padding-bottom: 14px">
+                <div class="d-flex gap-10 align-items-center">
+                  <div class="tab-content-heading"> Client Documents</div>
+                  <div class="d-flex">
+                    <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px" />
+                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#intake-profile-document-upload"
+                      class="text-decoration-none f-600 f-13 lh-17">Add new</a>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-10">
+                  <p class="save-time">Last saved 2 mins ago</p>
+                  <button class="btn btn-tertiary">Save</button>
+                </div>
+              </div>
+
+              <div class="p-20">
+                <table class="table table-hover table-type-1" id="client-document-table">
+                  <thead>
+                    <tr>
+                      <th class="d-flex">
+                        Document Name
+                      </th>
+                      <th>Folder</th>
+                      <th>Description</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div>
+                          <p class="notice">Document Name</p>
+                          <p>(PDF)</p>
+                        </div>
+                      </td>
+                      <td>Folder 1</td>
+                      <td>Notes for reference</td>
+                      <td>
+                        <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div>
+                          <p class="notice">Document Name</p>
+                          <p>(PDF)</p>
+                        </div>
+                      </td>
+                      <td>Folder 1</td>
+                      <td>Notes for reference</td>
+                      <td>
+                        <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div>
+                          <p class="notice">Document Name</p>
+                          <p>(PDF)</p>
+                        </div>
+                      </td>
+                      <td>Folder 1</td>
+                      <td>Notes for reference</td>
+                      <td>
+                        <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div>
+                          <p class="notice">Document Name</p>
+                          <p>(PDF)</p>
+                        </div>
+                      </td>
+                      <td>Folder 1</td>
+                      <td>Notes for reference</td>
+                      <td>
+                        <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div>
+                          <p class="notice">Document Name</p>
+                          <p>(PDF)</p>
+                        </div>
+                      </td>
+                      <td>Folder 1</td>
+                      <td>Notes for reference</td>
+                      <td>
+                        <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="d-flex">
+                  <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px">
+                  <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#intake-profile-document-upload"
+                    class="text-decoration-none f-600 f-13 lh-17">Add new</a>
+                </div>
+              </div>
+
+
             </div>
 
             <div class="border-color tab-pane fade" id="additional-pharmacies" role="tabpanel"
               aria-labelledby="additional-pharmacies-tab">
-              Additional Pharmacies
+              <div class="px-20 bg-white d-flex justify-content-between align-items-center"
+                style="padding-top: 14px; padding-bottom: 14px">
+                <div class="d-flex gap-10 align-items-center">
+                  <div class="tab-content-heading">Pharmacies</div>
+                  <div class="d-flex">
+                    <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px" />
+                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#list-of-pharmacy"
+                      class="text-decoration-none f-600 f-13 lh-17">Add new</a>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-10">
+                  <p class="save-time">Last saved 2 mins ago</p>
+                  <button class="btn btn-tertiary">Save</button>
+                </div>
+              </div>
+
+              <div class="p-20">
+                <div class="border-color mb-20">
+                  <div class="p-3 d-grid grid-line align-items-center bg-lightBlue">
+                    <p class="tab-heading">Pharmacies</p>
+                    <hr class="modal-line" />
+                  </div>
+
+                  <div class="p-3 bg-white">
+                    <div class="row col-12">
+                      <div class="col-4 mb-20">
+                        <div class="d-flex justify-content-between">
+                          <label class="label" for="pharmacy-primary">Primary Pharmacy</label>
+                          <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#pharmacy-list-add-new"
+                            class="link-blue">Add</a>
+                        </div>
+                        <select class="single-select input-item" aria-label="Default select example"
+                          id="pharmacy-primary">
+                          <option selected>Select</option>
+                          <option value="2">Agency 1</option>
+                          <option value="2">Agency 2</option>
+                          <option value="2">Agency 3</option>
+                        </select>
+                      </div>
+
+                      <div class="col-4 mb-20">
+                        <label class="label" for="pharmacy-phone">Pharmacy Phone</label>
+                        <input type="text" class="form-control input-item" id="pharmacy-phone" placeholder="Enter"
+                          aria-label="pharmacy phone">
+                      </div>
+
+                      <div class="col-4 mb-20">
+                        <label class="label" for="pharmacy-fax">Pharmacy Fax</label>
+                        <input type="text" class="form-control input-item" id="pharmacy-fax" placeholder="Enter"
+                          aria-label="pharmacy fax">
+                      </div>
+
+                      <div class="col-4 mb-20">
+                        <div class="d-flex justify-content-between">
+                          <label class="label" for="pharmacy-hopital">Hospital</label>
+                          <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-hospital"
+                            class="link-blue">Add</a>
+                        </div>
+                        <select class="single-select input-item" aria-label="Default select example"
+                          id="pharmacy-hopital">
+                          <option selected>Select</option>
+                          <option value="2">Agency 1</option>
+                          <option value="2">Agency 2</option>
+                          <option value="2">Agency 3</option>
+                        </select>
+                      </div>
+
+                      <div class="col-4 mb-20">
+                        <label class="label" for="hospital-phone">Hospital Phone</label>
+                        <input type="text" class="form-control input-item" id="hospital-phone" placeholder="Enter"
+                          aria-label="hospital phone">
+                      </div>
+
+                      <div class="col-4 mb-20">
+                        <label class="label" for="hospital-fax">Hospital Fax</label>
+                        <input type="text" class="form-control input-item" id="hospital-fax" placeholder="Enter"
+                          aria-label="hospital fax">
+                      </div>
+
+                      <div class="col-4">
+                        <label class="label" for="pharmacy-email">Email</label>
+                        <input type="text" class="form-control input-item" id="pharmacy-email" placeholder="Enter"
+                          aria-label="pharmacy email">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <table class="table table-type-1" id="pharmacy-name-table">
+                  <thead>
+                    <tr>
+                      <th class="d-flex">
+                        <input class="form-check-input" type="checkbox" value="" id=""><span>Pharmacy Name</span>
+                      </th>
+                      <th>Phone</th>
+                      <th style="width: 220px;">Email</th>
+                      <th style="width: 45px;">Actions</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                    <tr>
+                      <td>
+                        <input class="form-check-input" type="checkbox" value="" id=""><span>Pharmacy Name</span>
+                      </td>
+                      <td>(236) 548-8556</td>
+                      <td>debra.holt@example.com</td>
+                      <td><img src="images/delete_red.svg" alt="delete button" class="pointer delete"></td>
+
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <input class="form-check-input" type="checkbox" value="" id=""><span>Pharmacy Name</span>
+                      </td>
+                      <td>(236) 548-8556</td>
+                      <td>debra.holt@example.com</td>
+                      <td><img src="images/delete_red.svg" alt="delete button" class="pointer delete"></td>
+
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <input class="form-check-input" type="checkbox" value="" id=""><span>Pharmacy Name</span>
+                      </td>
+                      <td>(236) 548-8556</td>
+                      <td>debra.holt@example.com</td>
+                      <td><img src="images/delete_red.svg" alt="delete button" class="pointer delete"></td>
+
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <input class="form-check-input" type="checkbox" value="" id=""><span>Pharmacy Name</span>
+                      </td>
+                      <td>(236) 548-8556</td>
+                      <td>debra.holt@example.com</td>
+                      <td><img src="images/delete_red.svg" alt="delete button" class="pointer delete"></td>
+
+                    </tr>
+
+
+                  </tbody>
+                </table>
+                <div class="d-flex">
+                  <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px">
+                  <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#list-of-pharmacy"
+                    class="text-decoration-none f-600 f-13 lh-17">Add new</a>
+                </div>
+              </div>
+
+              <nav aria-label="Page navigation example" class="p-20">
+                <ul class="pagination justify-content-end">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <img src="images/previous-icon.svg" alt="multiple previous button">
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <img src="images/back_arrow.svg" alt="Previous button">
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">4</a>
+                  </li>
+                  <span class="" style="margin-top: 5px">•••</span>
+                  <li class="page-item">
+                    <a class="page-link" href="#">8</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <img src="images/next_arrow.svg" alt="next button">
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <img src="images/next-icon.svg" alt="multiple next button">
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+
+
+
             </div>
 
             <div class="border-color tab-pane fade" id="physicians" role="tabpanel" aria-labelledby="physicians-tab">
-              Physicians
+              <div class="px-20 bg-white d-flex justify-content-between align-items-center"
+                style="padding-top: 14px; padding-bottom: 14px">
+                <div class="d-flex gap-10 align-items-center">
+                  <div class="tab-content-heading">Physicians</div>
+                  <div class="d-flex">
+                    <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px" />
+                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-new-physician"
+                      class="text-decoration-none f-600 f-13 lh-17">Add new</a>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-10">
+                  <p class="save-time">Last saved 2 mins ago</p>
+                  <button class="btn btn-tertiary">Save</button>
+                </div>
+              </div>
+              <div class="p-20">
+                <div class="details-container">
+                  <div class="border-color mb-20" id="physicians-details">
+                    <div class="p-3 d-grid grid-line align-items-center bg-lightBlue">
+                      <p class="tab-heading">Attending Physician Details</p>
+                      <hr class="modal-line" />
+                    </div>
+                    <div class="p-3 bg-white container">
+                      <div class="col-12">
+                        <div class="col-3 border-color bg-white py-10 px-15 radius-4 mb-20">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="same-as-referring-physician">
+                            <label class="send" for="same-as-referring-physician">
+                              Same as Referring Physician
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row col-12">
+                        <div class="col-4 search">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <label class="label" for="Name-NPI">Attending Referring Physician</label>
+                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-ref-physician"
+                              class="link-blue">Add</a>
+                          </div>
+                          <input type="text" placeholder="Search" class="search-input w-100">
+                          <img src="images/lens.svg" alt="search lens" class="lens"
+                            style="top: 34px !important; left: 18px !important">
+                        </div>
+
+                        <div class="col-4 mb-20">
+                          <label class="label" for="attending-physician-NPI">NPI</label>
+                          <input disabled type="text" class="form-control input-item" id="attending-physician-NPI"
+                            placeholder="Enter" aria-label="NPI">
+                        </div>
+
+                        <div class="col-4 mb-20">
+                          <label class="label" for="attending-physician-PECOS">PECOS Enrolled</label>
+                          <input disabled type="text" class="form-control input-item" id="attending-physician-PECOS"
+                            placeholder="Enter" aria-label="PECOS">
+                        </div>
+
+                        <div class="col-4 mb-20">
+                          <label class="label" for="attending-physician-phone">Phone Enrolled</label>
+                          <input disabled type="text" class="form-control input-item" id="attending-physician-phone"
+                            placeholder="Enter" aria-label="phone">
+                        </div>
+
+                        <div class="col-4 mb-20">
+                          <label class="label" for="attending-physician-fax">Fax</label>
+                          <input disabled type="text" class="form-control input-item" id="attending-physician-fax"
+                            placeholder="Enter" aria-label="fax">
+                        </div>
+
+                        <div class="col-4 mb-20">
+                          <label class="label" for="attending-physician-email">Email</label>
+                          <input disabled type="text" class="form-control input-item" id="attending-physician-email"
+                            placeholder="Enter" aria-label="email">
+                        </div>
+
+                        <div class="col-4 mb-20">
+                          <label class="label" for="attending-physician-office">Physician Office</label>
+                          <select class="single-select input-item" aria-label="Office" id="attending-physician-office">
+                            <option class="d-none" disabled selected>Select</option>
+                            <option value="1">List 1</option>
+                            <option value="2">List 2</option>
+                            <option value="3">List 3</option>
+                          </select>
+
+                        </div>
+
+                        <div class="col-4 mb-20">
+                          <label class="label" for="attending-physician-address">Physician Office Address</label>
+                          <input disabled type="text" class="form-control input-item" id="attending-physician-address"
+                            placeholder="Enter" aria-label="address">
+                        </div>
+
+                        <div class="col-4 mb-20">
+                          <label class="label" for="attending-physician-phone">Physician Office Phone</label>
+                          <input disabled type="text" class="form-control input-item" id="attending-physician-phone"
+                            placeholder="Enter" aria-label="phone">
+                        </div>
+
+                        <div class="col-4 mb-20">
+                          <label class="label" for="attending-physician-fax">Physician Office Fax</label>
+                          <input disabled type="text" class="form-control input-item" id="attending-physician-fax"
+                            placeholder="Enter" aria-label="fax">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="border-color mb-20" id="primary-care-physician-details">
+                    <div class="p-3 d-grid grid-line align-items-center bg-lightBlue">
+                      <p class="tab-heading">Primary Care Physician Details</p>
+                      <hr class="modal-line" />
+                    </div>
+                    <div class="p-3 bg-white container">
+                      <div class="col-12">
+                        <div class="col-3 border-color bg-white py-10 px-15 radius-4 mb-20">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="same-as-attending-physician">
+                            <label class="send" for="same-as-attending-physician">
+                              Same as Attending Physician
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row col-12">
+                        <div class="col-4 search">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <label class="label" for="primary-car-physician">Primary Care Physician</label>
+                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-ref-physician"
+                              class="link-blue">Add</a>
+                          </div>
+                          <input type="text" placeholder="Search" class="search-input w-100" id="primary-car-physician">
+                          <img src="images/lens.svg" alt="search lens" class="lens"
+                            style="top: 34px !important; left: 18px !important">
+                        </div>
+
+                        <div class="col-4 mb-20">
+                          <label class="label" for="primary-physician-NPI">NPI</label>
+                          <input disabled type="text" class="form-control input-item" id="primary-physician-NPI"
+                            placeholder="Enter" aria-label="NPI">
+                        </div>
+
+                        <div class="col-4 mb-20">
+                          <label class="label" for="primary-physician-PECOS">PECOS Enrolled</label>
+                          <input disabled type="text" class="form-control input-item" id="primary-physician-PECOS"
+                            placeholder="Enter" aria-label="PECOS">
+                        </div>
+
+
+                        <div class="col-4 mb-20">
+                          <label class="label" for="primary-physician-phone">Phone Enrolled</label>
+                          <input disabled type="text" class="form-control input-item" id="primary-physician-phone"
+                            placeholder="Enter" aria-label="phone">
+                        </div>
+
+                        <div class="col-4 mb-20">
+                          <label class="label" for="primary-physician-fax">Fax</label>
+                          <input disabled type="text" class="form-control input-item" id="primary-physician-fax"
+                            placeholder="Enter" aria-label="fax">
+                        </div>
+
+                        <div class="col-4 mb-20">
+                          <label class="label" for="primary-physician-email">Email</label>
+                          <input disabled type="text" class="form-control input-item" id="primary-physician-email"
+                            placeholder="Enter" aria-label="email">
+                        </div>
+
+                        <div class="col-4 mb-20">
+                          <label class="label" for="primary-physician-office">Physician Office</label>
+                          <select class="single-select input-item" aria-label="Office" id="primary-physician-office">
+                            <option class="d-none" disabled selected>Select</option>
+                            <option value="1">List 1</option>
+                            <option value="2">List 2</option>
+                            <option value="3">List 3</option>
+                          </select>
+
+                        </div>
+
+                        <div class="col-8 mb-20">
+                          <label class="label" for="primary-physician-address">Physician Office Address</label>
+                          <input disabled type="text" class="form-control input-item" id="primary-physician-address"
+                            placeholder="Enter" aria-label="address">
+                        </div>
+
+                        <div class="col-4 mb-20">
+                          <label class="label" for="primary-physician-fax">Physician Office Fax</label>
+                          <input disabled type="text" class="form-control input-item" id="primary-physician-fax"
+                            placeholder="Enter" aria-label="fax">
+                        </div>
+
+                        <div class="col-4 mb-20">
+                          <label class="label" for="primary-physician-phone">Physician Office Phone</label>
+                          <input disabled type="text" class="form-control input-item" id="primary-physician-phone"
+                            placeholder="Enter" aria-label="phone">
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+
+                  <div class="border-color mb-20" id="primary-care-other-details">
+                    <div class="p-3 d-grid grid-line align-items-center bg-lightBlue">
+                      <p class="tab-heading">Other Physician</p>
+                      <hr class="modal-line" />
+                    </div>
+                    <div class="p-3 bg-white container">
+                      <table class="table table-hover table-type-1" id="treatment-address-table">
+                        <thead>
+                          <tr>
+                            <th>
+                              Physician Name
+                            </th>
+                            <th>Personal Info</th>
+                            <th>Office Info</th>
+                            <th>Email</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr>
+                            <td>
+                              <p class="notice">Name of Person</p>
+                              <p>(Specialization)</p>
+                            </td>
+                            <td>
+                              <p>Phone- (236) 548-8556</p>
+                              <p>Fax- (236) 548-8556</p>
+                            </td>
+                            <td>
+                              <p>Phone- (236) 548-8556</p>
+                              <p>Fax- (236) 548-8556</p>
+                            </td>
+                            <td>tim.jennings@example.com</td>
+                            <td>
+                              <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <p class="notice">Name of Person</p>
+                              <p>(Specialization)</p>
+                            </td>
+                            <td>
+                              <p>Phone- (236) 548-8556</p>
+                              <p>Fax- (236) 548-8556</p>
+                            </td>
+                            <td>
+                              <p>Phone- (236) 548-8556</p>
+                              <p>Fax- (236) 548-8556</p>
+                            </td>
+                            <td>tim.jennings@example.com</td>
+                            <td>
+                              <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <p class="notice">Name of Person</p>
+                              <p>(Specialization)</p>
+                            </td>
+                            <td>
+                              <p>Phone- (236) 548-8556</p>
+                              <p>Fax- (236) 548-8556</p>
+                            </td>
+                            <td>
+                              <p>Phone- (236) 548-8556</p>
+                              <p>Fax- (236) 548-8556</p>
+                            </td>
+                            <td>tim.jennings@example.com</td>
+                            <td>
+                              <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <p class="notice">Name of Person</p>
+                              <p>(Specialization)</p>
+                            </td>
+                            <td>
+                              <p>Phone- (236) 548-8556</p>
+                              <p>Fax- (236) 548-8556</p>
+                            </td>
+                            <td>
+                              <p>Phone- (236) 548-8556</p>
+                              <p>Fax- (236) 548-8556</p>
+                            </td>
+                            <td>tim.jennings@example.com</td>
+                            <td>
+                              <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <p class="notice">Name of Person</p>
+                              <p>(Specialization)</p>
+                            </td>
+                            <td>
+                              <p>Phone- (236) 548-8556</p>
+                              <p>Fax- (236) 548-8556</p>
+                            </td>
+                            <td>
+                              <p>Phone- (236) 548-8556</p>
+                              <p>Fax- (236) 548-8556</p>
+                            </td>
+                            <td>tim.jennings@example.com</td>
+                            <td>
+                              <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                            </td>
+                          </tr>
+
+
+                        </tbody>
+                      </table>
+                      <div class="d-flex">
+                        <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px">
+                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-new-physician"
+                          class="text-decoration-none f-600 f-13 lh-17">Add new</a>
+                      </div>
+                    </div>
+                    <nav aria-label="Page navigation example" class="p-20">
+                      <ul class="pagination justify-content-end">
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                            <img src="images/previous-icon.svg" alt="multiple previous button">
+                          </a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                            <img src="images/back_arrow.svg" alt="Previous button">
+                          </a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">4</a>
+                        </li>
+                        <span class="" style="margin-top: 5px">•••</span>
+                        <li class="page-item">
+                          <a class="page-link" href="#">8</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
+                            <img src="images/next_arrow.svg" alt="next button">
+                          </a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
+                            <img src="images/next-icon.svg" alt="multiple next button">
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+
+
+
+                </div>
+              </div>
+
+
             </div>
 
             <div class="border-color tab-pane fade" id="staff-skill" role="tabpanel" aria-labelledby="staff-skill-tab">
-              Preferred Staff Skills
+              <div class="px-20 bg-white d-flex justify-content-between align-items-center"
+                style="padding-top: 14px; padding-bottom: 14px">
+                <div class="d-flex gap-10 align-items-center">
+                  <div class="tab-content-heading">Preferred Staff Skills</div>
+                  <div class="d-flex">
+                    <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px" />
+                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#preferred-staff-skills"
+                      class="text-decoration-none f-600 f-13 lh-17">Add new</a>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-10">
+                  <p class="save-time">Last saved 2 mins ago</p>
+                  <button class="btn btn-tertiary">Save</button>
+                </div>
+              </div>
+
+              <div class="p-20">
+                <table class="table table-hover table-type-1" id="client-document-table">
+                  <thead>
+                    <tr>
+                      <th>
+                        Group
+                      </th>
+                      <th>Skills</th>
+                      <th style="text-align: center;">Actions</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td class="f-500">
+                        Group Name
+                      </td>
+                      <td>Driving</td>
+                      <td style="text-align: center;">
+                        <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="f-500">
+                        Group Name
+                      </td>
+                      <td>Driving</td>
+                      <td style="text-align: center;">
+                        <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="f-500">
+                        Group Name
+                      </td>
+                      <td>Driving</td>
+                      <td style="text-align: center;">
+                        <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="f-500">
+                        Group Name
+                      </td>
+                      <td>Driving</td>
+                      <td style="text-align: center;">
+                        <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="d-flex">
+                  <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px">
+                  <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#preferred-staff-skills"
+                    class="text-decoration-none f-600 f-13 lh-17">Add new</a>
+                </div>
+
+                <nav aria-label="Page navigation example" class="">
+                  <ul class="pagination justify-content-end">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <img src="images/previous-icon.svg" alt="multiple previous button">
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <img src="images/back_arrow.svg" alt="Previous button">
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">4</a>
+                    </li>
+                    <span class="" style="margin-top: 5px">•••</span>
+                    <li class="page-item">
+                      <a class="page-link" href="#">8</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <img src="images/next_arrow.svg" alt="next button">
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <img src="images/next-icon.svg" alt="multiple next button">
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+
+              </div>
+
+
             </div>
 
-            <div class="border-color tab-pane fade" id="staff-skill" role="tabpanel" aria-labelledby="staff-skill-tab">
-              Preference List / Matching Criteria
+            <div class="border-color tab-pane fade" id="preference-list-matching" role="tabpanel"
+              aria-labelledby="preference-list-tab">
+              <div class="px-20 bg-white d-flex justify-content-between align-items-center"
+                style="padding-top: 14px; padding-bottom: 14px">
+                <div class="tab-content-heading">Preference List/Matching Criteria</div>
+
+                <div class="d-flex align-items-center gap-10">
+                  <p class="save-time">Last saved 2 mins ago</p>
+                  <button class="btn btn-tertiary">Save</button>
+                </div>
+              </div>
+
+              <div class="p-20">
+
+                <table class="table table-type-1" id="criteria-table">
+                  <thead>
+                    <tr>
+                      <th style="width: 80%;">Criteria</th>
+                      <th>Preference</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td class="f-500">
+                        Preference Criteria
+                      </td>
+                      <td>
+                        <select class="form-select color-select" aria-label="Default select example">
+                          <option value="Preferred">Preferred</option>
+                          <option value="Not Preferred">Not Preferred</option>
+                        </select>
+
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="f-500">
+                        Preference Criteria
+                      </td>
+                      <td>
+                        <select class="form-select color-select" aria-label="Default select example">
+                          <option value="Preferred">Preferred</option>
+                          <option value="Not Preferred">Not Preferred</option>
+                        </select>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="f-500">
+                        Preference Criteria
+                      </td>
+                      <td>
+                        <select class="form-select color-select" aria-label="Default select example">
+                          <option value="Preferred">Preferred</option>
+                          <option value="Not Preferred">Not Preferred</option>
+                        </select>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="f-500">
+                        Preference Criteria
+                      </td>
+                      <td>
+                        <select class="form-select color-select" aria-label="Default select example">
+                          <option value="Preferred">Preferred</option>
+                          <option value="Not Preferred">Not Preferred</option>
+                        </select>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+
+              </div>
             </div>
           </div>
         </div>
@@ -2611,7 +3722,7 @@
         </div>
         <div class="modal-body">
           <div class="">
-            <div class="change-client border-color radius-4 mb-20">
+            <div class="bg-greybox border-color radius-4 mb-20">
               <span class="text-title">Client: </span>
               <span class="text-description">Demo Test Client</span>
             </div>
@@ -3216,7 +4327,7 @@
         </div>
         <div class="modal-body">
           <div class="">
-            <div class="change-client border-color radius-4 mb-20">
+            <div class="bg-greybox border-color radius-4 mb-20">
               <span class="text-title">Client: </span>
               <span class="text-description">Demo Test Client</span>
             </div>
@@ -5532,7 +6643,7 @@
               <div class="col-5 border-color bg-white py-10 px-15 radius-4 mb-20">
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="patient-choose-not-representative">
-                  <label class="send" for="patient-chose-not-representative">
+                  <label class="send" for="patient-choose-not-representative">
                     Patient Appointed Representative
                   </label>
                 </div>
@@ -5540,7 +6651,7 @@
               <div class="col-5 border-color bg-white py-10 px-15 radius-4 mb-20">
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="patient-choose-not-representative">
-                  <label class="send" for="patient-chose-not-representative">
+                  <label class="send" for="patient-choose-not-representative">
                     Court Appointed Representative
                   </label>
                 </div>
@@ -5725,23 +6836,23 @@
           <div class="d-flex justify-content-between client-clinician">
             <div class="">
               <div class="d-flex gap-5 mb-15">
-                <p class="info-title" >Client :</p>
+                <p class="info-title">Client :</p>
                 <p class="info-description">Client Name</p>
               </div>
               <div class="d-flex gap-5 mb-15">
-                <p class="info-title" >ZIP :</p>
+                <p class="info-title">ZIP :</p>
                 <p class="info-description">12345</p>
               </div>
               <div class="d-flex gap-5 mb-15">
-                <p class="info-title" >City :</p>
+                <p class="info-title">City :</p>
                 <p class="info-description">Schenectady</p>
               </div>
               <div class="d-flex gap-5 mb-15">
-                <p class="info-title"  >State :</p>
+                <p class="info-title">State :</p>
                 <p class="info-description">NY</p>
               </div>
               <div class="d-flex gap-5 mb-15">
-                <p class="info-title"  >Address :</p>
+                <p class="info-title">Address :</p>
                 <p class="info-description">4517 Washington Ave.<br> Manchester, Kentucky 39495</p>
               </div>
 
@@ -5749,28 +6860,28 @@
 
             <div class="">
               <div class="d-flex gap-5 mb-15">
-                <p class="info-title" >Client :</p>
+                <p class="info-title">Client :</p>
                 <p class="info-description">Client Name</p>
               </div>
               <div class="d-flex gap-5 mb-15">
-                <p class="info-title" >ZIP :</p>
+                <p class="info-title">ZIP :</p>
                 <p class="info-description">12345</p>
               </div>
               <div class="d-flex gap-5 mb-15">
-                <p class="info-title" >City :</p>
+                <p class="info-title">City :</p>
                 <p class="info-description">Schenectady</p>
               </div>
               <div class="d-flex gap-5 mb-15">
-                <p class="info-title"  >State :</p>
+                <p class="info-title">State :</p>
                 <p class="info-description">NY</p>
               </div>
               <div class="d-flex gap-5 mb-15">
-                <p class="info-title"  >Address :</p>
+                <p class="info-title">Address :</p>
                 <p class="info-description">4517 Washington Ave.<br> Manchester, Kentucky 39495</p>
               </div>
 
             </div>
-          
+
           </div>
 
 
@@ -5801,16 +6912,13 @@
         </div>
         <div class="modal-body">
           <div class="d-flex justify-content-end mb-15">
-            <button class="btn btn-tertiary" data-bs-toggle="modal" data-bs-target="#intake-notes-add-quick-notes">Add New</button>
+            <button class="btn btn-tertiary" data-bs-toggle="modal" data-bs-target="#intake-notes-add-quick-notes">Add
+              New</button>
           </div>
           <div class="row col-12">
             <div class="col-6 mb-20">
               <label class="f-500 f-14 lh-19 mb-2" for="intake-notes-location">Location</label>
-              <select
-                class="single-select input-item"
-                aria-label="location"
-                id="intake-notes-location"
-              >
+              <select class="single-select input-item" aria-label="location" id="intake-notes-location">
                 <option class="d-none" disabled selected>Select</option>
                 <option value="1">List 1</option>
                 <option value="2">List 2</option>
@@ -5821,7 +6929,8 @@
             <div class="col-6 search mb-20">
               <label class="f-500 f-14 lh-19 mb-2" for="">Search</label>
               <input type="text" placeholder="Search" class="search-input w-100">
-              <img src="images/lens-dark.svg" alt="search lens" class="lens" style="top: 34px !important; left: 18px !important">
+              <img src="images/lens-dark.svg" alt="search lens" class="lens"
+                style="top: 34px !important; left: 18px !important">
             </div>
           </div>
 
@@ -5878,13 +6987,13 @@
             </tbody>
           </table>
 
-      
+
 
 
 
         </div>
         <div class="modal-footer">
-          
+
           <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
         </div>
       </div>
@@ -5907,16 +7016,13 @@
         </div>
         <div class="modal-body">
           <div class="d-flex justify-content-end mb-15">
-            <button class="btn btn-tertiary" data-bs-toggle="modal" data-bs-target="#intake-notes-add-quick-notes">Add New</button>
+            <button class="btn btn-tertiary" data-bs-toggle="modal" data-bs-target="#intake-notes-add-quick-notes">Add
+              New</button>
           </div>
           <div class="row col-12">
             <div class="col-6 mb-20">
               <label class="f-500 f-14 lh-19 mb-2" for="intake-quick-notes-location">Location</label>
-              <select
-                class="single-select input-item"
-                aria-label="location" 
-                id="intake-quick-notes-location"
-              >
+              <select class="single-select input-item" aria-label="location" id="intake-quick-notes-location">
                 <option class="d-none" disabled selected>Select</option>
                 <option value="1">List 1</option>
                 <option value="2">List 2</option>
@@ -5926,23 +7032,25 @@
 
             <div class="col-4 mb-20">
               <label class="label" for="intake-quick-notes-title">Title</label>
-              <input type="text" class="form-control input-item" id="intake-quick-notes-title" placeholder="Enter" aria-label="quick notes">
+              <input type="text" class="form-control input-item" id="intake-quick-notes-title" placeholder="Enter"
+                aria-label="quick notes">
             </div>
 
             <div class="col-12">
               <label class="label" for="intake-quick-notes-description">Description</label>
-              <textarea name="" id="intake-quick-notes-description" cols="" rows="2" class="input-textarea w-100" placeholder="Type Here"></textarea>
+              <textarea name="" id="intake-quick-notes-description" cols="" rows="2" class="input-textarea w-100"
+                placeholder="Type Here"></textarea>
             </div>
 
           </div>
 
-      
+
 
 
 
         </div>
         <div class="modal-footer">
-          
+
           <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
         </div>
       </div>
@@ -5952,6 +7060,1068 @@
 
   <!-- QUICK NOTES SUB NOTES END -->
 
+
+  <!-- MODIFY CHECKLIST POPUP -->
+  <!-- modify-checklist -->
+  <div class="modal" tabindex="-1" id="modify-checklist">
+    <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">
+            Modify Checklist
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="bg-greybox border-color radius-4 mb-20 d-grid grid-2 gap-4">
+            <div>
+              <span class="text-title">Client: </span>
+              <span class="text-description">Client Name</span>
+            </div>
+            <div>
+              <span class="text-title">Medical Record# : </span>
+              <span class="text-description">1011</span>
+            </div>
+            <div>
+              <span class="text-title">Item Name : </span>
+              <span class="text-description">Admission Form</span>
+            </div>
+            <div>
+              <span class="text-title">Mandatory : </span>
+              <span class="text-description">No</span>
+            </div>
+          </div>
+          <div class="border-color mb-20">
+            <div class="p-3 d-grid grid-line align-items-center bg-lightGrey">
+              <p class="tab-heading">Checklist info</p>
+              <hr class="modal-line-1">
+            </div>
+            <div class="p-3">
+              <div class="d-flex gap-10 mb-20">
+                <div class="radio-box" style="width: 40%;">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="modify-checklist" id="not-required"
+                      value="Not Required for this patient">
+                    <label class="form-check-label" for="not-required">
+                      Not Required for this patient
+                    </label>
+                  </div>
+                </div>
+                <div class="radio-box" style="width: 20%;">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="modify-checklist" id="completed"
+                      value="Completed">
+                    <label class="form-check-label" for="completed">
+                      Completed
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="">
+                <div class="row col-12">
+                  <div class="col-6 mb-20">
+                    <label class="form-label" for="completed-on">Completed on</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control input-item" id="completed-on" placeholder="01/02/1998">
+                      <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                    </div>
+                  </div>
+
+                  <div class="col-6 mb-20">
+                    <label class="form-label" for="last-followed">Last Followed on</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control input-item" id="last-followed" placeholder="01/02/1998">
+                      <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="label" for="modify-checklist-notes">Notes</label>
+                    <textarea name="" id="modify-checklist-notes" cols="" rows="2" class="input-textarea w-100"
+                      placeholder="Type Here"></textarea>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-color">
+            <div class="p-3 d-grid grid-line align-items-center bg-lightGrey">
+              <p class="tab-heading">Attachments</p>
+              <hr class="modal-line-1">
+            </div>
+            <div class="p-3">
+              <div class="d-flex gap-10 justify-content-between align-items-center">
+                <div class="tab-content-heading">Document List</div>
+                <div class="d-flex">
+                  <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px">
+                  <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#intake-profile-document-upload"
+                    class="text-decoration-none f-600 f-13 lh-17">Add Document</a>
+                </div>
+              </div>
+              <table class="table table-type-1 mt-10" id="document-list-table">
+                <thead>
+                  <tr>
+                    <th class="d-flex">
+                      <input class="form-check-input" type="checkbox" value="" id=""><span>Document Name</span>
+                    </th>
+                    <th>Upload Date</th>
+                    <th>Upload by</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td class="d-flex">
+                      <input class="form-check-input" type="checkbox" value="" id="">
+                      <p>Document Name</p>
+                    </td>
+                    <td>04/01/2023</td>
+                    <td>Staff, Avi B/O</td>
+                  </tr>
+
+                  <tr>
+                    <td class="d-flex">
+                      <input class="form-check-input" type="checkbox" value="" id="">
+                      <p>Document Name</p>
+                    </td>
+                    <td>04/01/2023</td>
+                    <td>Staff, Avi B/O</td>
+                  </tr>
+
+                  <tr>
+                    <td class="d-flex">
+                      <input class="form-check-input" type="checkbox" value="" id="">
+                      <p>Document Name</p>
+                    </td>
+                    <td>04/01/2023</td>
+                    <td>Staff, Avi B/O</td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+            </div>
+
+          </div>
+
+
+
+        </div>
+        <div class="modal-footer">
+
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODIFY CHECKLIST POPUP END -->
+
+
+  <!-- INTAKE PROFILE DOCUMENT UPLOAD -->
+  <div class="modal" tabindex="-1" id="intake-profile-document-upload">
+    <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">
+            Intake Profile Document Upload
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-20">
+            <div class="row col-12">
+              <div class="col-6">
+                <label class="label" for="document-upload-intake">Intake</label>
+                <select class="single-select input-item" aria-label="location" id="document-upload-intake">
+                  <option class="d-none" disabled selected>Select</option>
+                  <option value="1">List 1</option>
+                  <option value="2">List 2</option>
+                  <option value="3">List 3</option>
+                </select>
+              </div>
+
+              <div class="col-6 border-color bg-white py-10 px-15 radius-4 mb-20" style="margin-top: 22px;">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="intake-family-access">
+                  <label class="send" for="intake-family-access">
+                    Allow access to Family through Family Portal
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-6 mb-20">
+                <div class="d-flex justify-content-between">
+                  <label class="label" for="document-category">Category</label>
+                  <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#document-upload-category"
+                    class="link-blue">Manage</a>
+                </div>
+                <select class="single-select input-item" aria-label="Default select example" id="document-category">
+                  <option selected>Select</option>
+                  <option value="2">Agency 1</option>
+                  <option value="2">Agency 2</option>
+                  <option value="2">Agency 3</option>
+                </select>
+              </div>
+
+              <div class="col-6 mb-20">
+                <div class="d-flex justify-content-between">
+                  <label class="label" for="document-folder">Folder</label>
+                  <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#document-upload-folder"
+                    class="link-blue">Manage</a>
+                </div>
+                <select class="single-select input-item" aria-label="Default select example" id="document-folder">
+                  <option selected>Select</option>
+                  <option value="2">Agency 1</option>
+                  <option value="2">Agency 2</option>
+                  <option value="2">Agency 3</option>
+                </select>
+              </div>
+
+              <div class="col-12 mb-15">
+                <label class="label f-600" for="document-upload-notes">Description</label>
+                <textarea name="" id="document-upload-notes" cols="" rows="2" class="input-textarea w-100"
+                  placeholder="Type Here"></textarea>
+              </div>
+            </div>
+
+            <div class="d-flex gap-20">
+              <div class="drag-drop-box d-flex flex-column justify-content-between align-items-center dotted-border">
+                <img src="images/upload-icon.svg" alt="drag-drop-icon" class="mb-15">
+                <p class="f-600 f-14 lh-17 blue-text mb-15">Drag & drop files here</p>
+                <p class="f-600 f-14 lh-17 blue-text mb-15">-OR-</p>
+                <button type="" class="btn btn-tertiary">Browse</button>
+              </div>
+
+              <div>
+                <p class="mb-15 f-600 f-14 lh-17">Uploading - 2/3 files</p>
+                <div class="d-flex flex-column gap-3">
+                  <div class="upload-item-box ">
+                    <div class="d-flex justify-content-between align-items-center" style="gap: 125px;">
+                      <p class="upload-file-name">Your-file-here.PDF</p>
+                      <div class="d-flex gap-3">
+                        <span class="upload-file-size">126 KB</span>
+                        <img src="images/ion-close-icon.svg" alt="cancle icon">
+                      </div>
+                    </div>
+                    <div class="bg-blue w-50"></div>
+                  </div>
+
+                  <div class="upload-item-box ">
+                    <div class="d-flex justify-content-between align-items-center" style="gap: 125px;">
+                      <p class="upload-file-name">Your-file-here.PDF</p>
+                      <div class="d-flex gap-3">
+                        <span class="upload-file-size">126 KB</span>
+                        <img src="images/ion-close-icon.svg" alt="cancle icon">
+                      </div>
+                    </div>
+                    <span class="bg-blue w-50"></span>
+                  </div>
+
+                  <div class="upload-item-box ">
+                    <div class="d-flex justify-content-between align-items-center" style="gap: 125px;">
+                      <p class="upload-file-name">Your-file-here.PDF</p>
+                      <div class="d-flex gap-3">
+                        <span class="upload-file-size">126 KB</span>
+                        <img src="images/ion-close-icon.svg" alt="cancle icon">
+                      </div>
+                    </div>
+                    <span class="bg-green w-100"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="disclaimer d-flex gap-2">
+            <img src="images/bi-circle-grey.svg" alt="" class="align-self-start">
+            <p class="f-400">To upload documents, click on browse and select the files by pressing and holding control
+              key or select multiple files and drag and drop here.</p>
+          </div>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="" class="btn btn-tertiary">Upload & close</button>
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Upload & Select Next Intake</a>
+        </div>
+      </div>
+    </div>
+  </div>S
+
+  <!-- INTAKE PROFILE DOCUMENT UPLOAD END -->
+
+  <!-- MANAGE CATEGORY POPUP -->
+  <!-- document-upload-category -->
+  <div class="modal" tabindex="-1" id="document-upload-category">
+    <div class="modal-dialog custom-modal-5  modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">Manage Category</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="add-text">Category</span>
+            <div class="position-relative">
+              <input type="text" class="form-control input-item" id="new-category" placeholder="Enter category name"
+                aria-label="Enter new relation here" style="width: 286px" />
+              <button class="btn btn-inside">Add to List</button>
+            </div>
+          </div>
+          <table class="table table-type-1 mt-10" id="manage-category-table">
+            <thead>
+              <tr>
+                <th style="width: 90%;">Category Name</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>General</td>
+                <td>
+                  <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                </td>
+              </tr>
+
+              <tr>
+
+                <td>RCD</td>
+                <td>
+                  <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                </td>
+              </tr>
+
+              <tr>
+                <td>Referral </td>
+                <td>
+                  <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+
+
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MANAGE CATEGORY POPUP END -->
+
+
+  <!--MANAGE FOLDER POPUP -->
+  <div class="modal" tabindex="-1" id="document-upload-folder">
+    <div class="modal-dialog custom-modal-5  modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">Manage Folder</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="add-text">Folder</span>
+            <div class="position-relative">
+              <input type="text" class="form-control input-item" id="new-category" placeholder="Enter category name"
+                aria-label="Enter new relation here" style="width: 286px" />
+              <button class="btn btn-inside">Add to List</button>
+            </div>
+          </div>
+          <table class="table table-type-1 mt-10" id="manage-category-table">
+            <thead>
+              <tr>
+                <th style="width: 90%;">Folder Name</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Folder 1</td>
+                <td>
+                  <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                </td>
+              </tr>
+
+              <tr>
+
+                <td>Folder 1</td>
+                <td>
+                  <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                </td>
+              </tr>
+
+              <tr>
+                <td>Folder 1 </td>
+                <td>
+                  <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+
+
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--MANAGE FOLDER POPUP END -->
+
+
+  <!--ADD PHARMACY  POP UP  -->
+  <!-- list-of-pharmacy -->
+  <div class="modal" tabindex="-1" id="list-of-pharmacy">
+    <div class="modal-dialog custom-modal-1  modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">Add Pharmacy</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span class="f-600 f-14 lh-22">Pharmacy list</span>
+          <table class="table table-type-1 mt-20" id="additional-pharmacy-add-pharmacy-table">
+            <thead>
+              <tr>
+                <th>
+                  <input class="form-check-input" type="checkbox" value="" id=""><span>Pharmacy Name</span>
+                </th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>
+                  <input class="form-check-input" type="checkbox" value="" id=""><span>Pharmacy 1</span>
+                </td>
+                <td>(236) 548-8556</td>
+                <td>Email@gmail.com</td>
+                <td>
+                  <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <input class="form-check-input" type="checkbox" value="" id=""><span>Pharmacy 1</span>
+                </td>
+                <td>(236) 548-8556</td>
+                <td>Email@gmail.com</td>
+                <td>
+                  <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input class="form-check-input" type="checkbox" value="" id=""><span>Pharmacy 1</span>
+                </td>
+                <td>(236) 548-8556</td>
+                <td>Email@gmail.com</td>
+                <td>
+                  <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--ADD PHARMACY  POP UP END  -->
+
+  <!--PHARMACY LIST POPUP  -->
+
+  <div class="modal" tabindex="-1" id="pharmacy-list-add-new">
+    <div class="modal-dialog custom-modal-2  modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">Pharmacy List</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex align-items-center mb-20 gap-20">
+
+
+            <div class="col-4">
+              <label class="label" for="pharmacy-list-location">Location</label>
+              <select class="single-select input-item" aria-label="location" id="pharmacy-list-location">
+                <option class="d-none" disabled selected>Select</option>
+                <option value="1">List 1</option>
+                <option value="2">List 2</option>
+                <option value="3">List 3</option>
+              </select>
+
+            </div>
+            <button class="btn btn-tertiary" style="margin-top:20px;">Apply</button>
+          </div>
+          <div>
+            <div class="d-flex gap-10 align-items-center mb-15">
+              <p class="color-greyScale f-500 f-13 lh-17">
+                Pharmacies
+              </p>
+              <div class="d-flex">
+                <img src="images/plus-icon.svg" alt="plus sign">
+                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-new-pharmacy-details"
+                  class="text-decoration-none f-600 f-13 lh-17">Add new</a>
+              </div>
+            </div>
+            <table class="table table-type-1 mt-20" id="additional-pharmacy-add-pharmacy-table">
+              <thead>
+                <tr>
+                  <th>
+                    Pharmacy Name
+                  </th>
+                  <th>Phone</th>
+                  <th>Fax</th>
+                  <th>Address</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>
+                    Apple Pharmacy
+                  </td>
+                  <td>(236) 548-8556</td>
+                  <td>(236) 548-8556</td>
+                  <td>Address Line goes here</td>
+                  <td>
+                    <div class="d-flex gap-10">
+                      <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                      <button type="button" class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                        data-bs-toggle="modal" data-bs-target="">
+                        <img src="images/edit-icon.svg" alt="edit">
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    Apple Pharmacy
+                  </td>
+                  <td>(236) 548-8556</td>
+                  <td>(236) 548-8556</td>
+                  <td>Address Line goes here</td>
+                  <td>
+                    <div class="d-flex gap-10">
+                      <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                      <button type="button" class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                        data-bs-toggle="modal" data-bs-target="">
+                        <img src="images/edit-icon.svg" alt="edit">
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    Apple Pharmacy
+                  </td>
+                  <td>(236) 548-8556</td>
+                  <td>(236) 548-8556</td>
+                  <td>Address Line goes here</td>
+                  <td>
+                    <div class="d-flex gap-10">
+                      <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                      <button type="button" class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                        data-bs-toggle="modal" data-bs-target="">
+                        <img src="images/edit-icon.svg" alt="edit">
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+
+
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--PHARMACY LIST POPUP END  -->
+
+  <!-- HOSPITAL LIST POPUP -->
+  <div class="modal" tabindex="-1" id="add-hospital">
+    <div class="modal-dialog custom-modal-2  modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">Hospital List</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+
+
+          <div class="col-4 mb-20">
+            <label class="label" for="hospital-list-location">Location</label>
+            <select class="single-select input-item" aria-label="location" id="hospital-list-location">
+              <option class="d-none" disabled selected>Select</option>
+              <option value="1">List 1</option>
+              <option value="2">List 2</option>
+              <option value="3">List 3</option>
+            </select>
+
+          </div>
+
+
+          <div>
+            <div class="d-flex gap-10 align-items-center mb-15">
+              <p class="color-greyScale f-500 f-13 lh-17">
+                Hospital
+              </p>
+              <div class="d-flex">
+                <img src="images/plus-icon.svg" alt="plus sign">
+                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-new-hospital-details"
+                  class="text-decoration-none f-600 f-13 lh-17">Add new</a>
+              </div>
+            </div>
+            <table class="table table-type-1 mt-20" id="additional-pharmacy-add-hospital-table">
+              <thead>
+                <tr>
+                  <th>
+                    Hospital Name
+                  </th>
+                  <th>Contact Name</th>
+                  <th>Phone</th>
+                  <th>Fax</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>
+                    Christian Medical College
+                  </td>
+                  <td>(236) 548-8556</td>
+                  <td>(236) 548-8556</td>
+                  <td>(236) 548-8556</td>
+                  <td>
+                    <div class="d-flex gap-10">
+                      <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                      <button type="button" class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                        data-bs-toggle="modal" data-bs-target="">
+                        <img src="images/edit-icon.svg" alt="edit">
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    Christian Medical College
+                  </td>
+                  <td>(236) 548-8556</td>
+                  <td>(236) 548-8556</td>
+                  <td>(236) 548-8556</td>
+                  <td>
+                    <div class="d-flex gap-10">
+                      <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                      <button type="button" class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                        data-bs-toggle="modal" data-bs-target="">
+                        <img src="images/edit-icon.svg" alt="edit">
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+
+                <tr>
+                  <td>
+                    Christian Medical College
+                  </td>
+                  <td>(236) 548-8556</td>
+                  <td>(236) 548-8556</td>
+                  <td>(236) 548-8556</td>
+                  <td>
+                    <div class="d-flex gap-10">
+                      <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                      <button type="button" class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                        data-bs-toggle="modal" data-bs-target="">
+                        <img src="images/edit-icon.svg" alt="edit">
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+
+
+
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOSPITAL LIST POPUP END -->
+
+  <!-- ADD NEW PHARMACY LIST DETAILS -->
+  <div class="modal" tabindex="-1" id="add-new-pharmacy-details">
+    <div class="modal-dialog custom-modal-5  modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">Add New pharmacy </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="row col-12">
+            <div class="col-6 mb-20">
+              <label class="label" for="add-new-pharmacy-name">Pharmacy-name</label>
+              <input type="text" class="form-control input-item" id="add-new-pharmacy-name" placeholder="Enter"
+                aria-label="Name">
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="add-new-pharmacy-phone">Phone (With Extension Number)</label>
+              <input type="text" class="form-control input-item" id="add-new-pharmacy-phone" placeholder="Enter"
+                aria-label="Phone">
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="add-new-pharmacy-address-1">Address 1</label>
+              <input type="text" class="form-control input-item" id="add-new-pharmacy-address-1" placeholder="Enter"
+                aria-label="address">
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="add-new-pharmacy-address-2">Address 2</label>
+              <input type="text" class="form-control input-item" id="add-new-pharmacy-address-2" placeholder="Enter"
+                aria-label="address">
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="add-new-pharmacy-email">Email</label>
+              <input type="text" class="form-control input-item" id="add-new-pharmacy-email" placeholder="Enter"
+                aria-label="Email">
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="add-new-pharmacy-fax">Address 2</label>
+              <input type="text" class="form-control input-item" id="add-new-pharmacy-fax" placeholder="Enter"
+                aria-label="fax">
+            </div>
+
+            <div class="col-6">
+              <label class="label" for="add-new-pharmacy-location">Location</label>
+              <select class="single-select input-item" aria-label="location" id="add-new-pharmacy-location">
+                <option class="d-none" disabled selected>Select</option>
+                <option value="1">List 1</option>
+                <option value="2">List 2</option>
+                <option value="3">List 3</option>
+              </select>
+
+            </div>
+
+            <div class="col-6 d-flex gap-10 mb-20">
+              <div class="">
+                <label class="label" for="add-new-pharmacy-zip">Zip</label>
+                <input type="text" class="form-control input-item" id="add-new-pharmacy-zip" placeholder="Enter"
+                  aria-label="zip">
+              </div>
+              <div class="">
+                <label class="label" for="add-new-pharmacy-city">City</label>
+                <input type="text" class="form-control input-item" id="add-new-pharmacy-city" placeholder="Enter"
+                  aria-label="city">
+              </div>
+            </div>
+
+            <div class="col-6">
+              <label class="label" for="add-new-pharmacy-state">State</label>
+              <input type="text" class="form-control input-item" id="add-new-pharmacy-state" placeholder="Enter"
+                aria-label="state">
+            </div>
+
+          </div>
+
+
+
+
+
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADD NEW PHARMACY LIST DETAILS END -->
+
+  <!-- ADD NEW HOSPITAL LIST DETAILS -->
+  <div class="modal" tabindex="-1" id="add-new-hospital-details">
+    <div class="modal-dialog custom-modal-5  modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">Add New Hospital </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="row col-12">
+            <div class="col-6 mb-20">
+              <label class="label" for="add-new-hospital-name">Hospital name</label>
+              <input type="text" class="form-control input-item" id="add-new-hospital-name" placeholder="Enter"
+                aria-label="Name">
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="add-new-hospital-contact">Contact Name</label>
+              <input type="text" class="form-control input-item" id="add-new-hospital-contact" placeholder="Enter"
+                aria-label="Phone">
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="add-new-hospital-address-1">Address 1</label>
+              <input type="text" class="form-control input-item" id="add-new-hospital-address-1" placeholder="Enter"
+                aria-label="address">
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="add-new-hospital-address-2">Address 2</label>
+              <input type="text" class="form-control input-item" id="add-new-hospital-address-2" placeholder="Enter"
+                aria-label="address">
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="add-new-hospital-email">Email</label>
+              <input type="text" class="form-control input-item" id="add-new-hospital-email" placeholder="Enter"
+                aria-label="Email">
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="add-new-hospital-phone">Phone(With Extension Number)</label>
+              <input type="text" class="form-control input-item" id="add-new-hospital-phone" placeholder="Enter"
+                aria-label="phone">
+            </div>
+
+            <div class="col-6">
+              <label class="label" for="add-new-hospital-location">Location</label>
+              <select class="single-select input-item" aria-label="location" id="add-new-hospital-location">
+                <option class="d-none" disabled selected>Select</option>
+                <option value="1">List 1</option>
+                <option value="2">List 2</option>
+                <option value="3">List 3</option>
+              </select>
+
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="add-new-hospital-fax">Fax</label>
+              <input type="text" class="form-control input-item" id="add-new-hospital-fax" placeholder="Enter"
+                aria-label="fax">
+            </div>
+
+            <div class="col-6 d-flex gap-10 ">
+              <div class="">
+                <label class="label" for="add-new-hospital-zip">Zip</label>
+                <input type="text" class="form-control input-item" id="add-new-hospital-zip" placeholder="Enter"
+                  aria-label="zip">
+              </div>
+              <div class="">
+                <label class="label" for="add-new-hospital-city">City</label>
+                <input type="text" class="form-control input-item" id="add-new-hospital-city" placeholder="Enter"
+                  aria-label="city">
+              </div>
+            </div>
+
+            <div class="col-6">
+              <label class="label" for="add-new-hospital-state">State</label>
+              <input type="text" class="form-control input-item" id="add-new-hospital-state" placeholder="Enter"
+                aria-label="state">
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADD NEW HOSPITAL LIST DETAILS END -->
+
+  <!-- ADD NEW PHYSICIANS -->
+
+  <div class="modal" tabindex="-1" id="add-new-physician">
+    <div class="modal-dialog custom-modal-1  modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">Add New Physician </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="col-12">
+            <div class="col-5 mb-20 border-color py-10 px-15 radius-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="accpet-physician-order">
+                <label class="send invoice" for="accpet-physician-order">
+                  Accept Orders from this Physician
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row col-12">
+            <div class="col-6 mb-20">
+              <label class="label f-500 f-14 lh-19" for="accept-physician-order">Physician</label>
+              <input type="text" class="form-control input-item" id="accept-physician-order" placeholder="Enter"
+                aria-label="physician order">
+            </div>
+
+
+            <div class="col-6">
+              <label class="label f-500 f-14 lh-19" for="accept-physician-location">Physician Office</label>
+              <select class="single-select input-item" aria-label="location" id="accept-physician-location">
+                <option class="d-none" disabled selected>Select</option>
+                <option value="1">List 1</option>
+                <option value="2">List 2</option>
+                <option value="3">List 3</option>
+              </select>
+            </div>
+
+            <div class="col-6">
+              <label class="form-label f-500 f-14 lh-19" for="dob">Last Seen Date</label>
+              <div class="input-group">
+                <input type="text" class="form-control input-item" id="accept-physician-last-seen-date"
+                  placeholder="01/02/1998">
+                <span class="input-group-text"><img src="images/Calendar.svg"></span>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADD NEW PHYSICIANS END -->
+
+  <!-- PREFERRED STAFF SKILLS -->
+  <div class="modal" tabindex="-1" id="preferred-staff-skills">
+    <div class="modal-dialog custom-modal-1  modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">Preferred Staff Skills</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <p class="f-600 f-14 lh-22 mb-20">
+              Preferred Staff Skills List
+            </p>
+            <table class="table table-type-1" id="preferred-skills-table">
+              <thead>
+                <tr>
+                  <th class="d-flex">
+                    <input class="form-check-input" type="checkbox" value="" id=""><span>Group</span>
+                  </th>
+                  <th>Skills</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr>
+                  <td>
+                    <input class="form-check-input" type="checkbox" value="" id=""><span>SN</span>
+                  </td>
+                  <td>Driving</td>
+                  <td><img src="images/delete_red.svg" alt="delete button" class="pointer delete"></td>
+
+                </tr>
+
+                <tr>
+                  <td>
+                    <input class="form-check-input" type="checkbox" value="" id=""><span>SN</span>
+                  </td>
+                  <td>Communication</td>
+                  <td><img src="images/delete_red.svg" alt="delete button" class="pointer delete"></td>
+
+                </tr>
+
+                <tr>
+                  <td>
+                    <input class="form-check-input" type="checkbox" value="" id=""><span>SN</span>
+                  </td>
+                  <td>Cooking</td>
+                  <td><img src="images/delete_red.svg" alt="delete button" class="pointer delete"></td>
+
+                </tr>
+
+                <tr>
+                  <td>
+                    <input class="form-check-input" type="checkbox" value="" id=""><span>SN</span>
+                  </td>
+                  <td>Skill</td>
+                  <td><img src="images/delete_red.svg" alt="delete button" class="pointer delete"></td>
+
+                </tr>
+
+
+
+              </tbody>
+            </table>
+
+
+
+
+          </div>
+
+
+
+
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- PREFERRED STAFF SKILLS END -->
+
   <!-- JavaScript -->
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap-multiselect.min.js"></script>
@@ -5959,14 +8129,41 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!-- bootstrap js-->
   <!-- <script type="text/javascript" src="js/popper.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-    datepicker js -->
-  <!-- <script type="text/javascript" src="js/moment.min.js"></script>
-<script type="text/javascript" src="js/daterangepicker.js"></script> -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+
+  <!-- datepicker js-->
+  <script type="text/javascript" src="js/moment.min.js"></script>
+  <script type="text/javascript" src="js/daterangepicker.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/custom.js"></script>
+
+
+  // datepicker
+  <script>
+    $(function () {
+      var start = moment();
+      var end = moment();
+
+      function cb(start, end) {
+        $(".singleDatePicker span").html(start.format("D/MM/YYYY"));
+      }
+
+      $(".singleDatePicker").daterangepicker(
+        {
+          startDate: start,
+          endDate: end,
+          opens: "center",
+          singleDatePicker: true,
+        },
+        cb
+      );
+
+      cb(start, end);
+    });
+  </script>
 
   <script>
     function showHideDiv(checkboxId, divId) {
@@ -5984,14 +8181,35 @@
     }
   </script>
 
-<script>
-  $(document).ready(function() {
-    $(".close-covid-notice").click(function() {
-      $(".covid-box").addClass('hidden');
+  <script>
+    $(document).ready(function () {
+      $(".close-covid-notice").click(function () {
+        $(".covid-box").addClass('hidden');
+      });
     });
-  });
-</script>
+  </script>
 
+
+<script>
+$(document).ready(function() {
+  $('.color-select').change(function() {
+    var selectedColor = $(this).val();
+    if(selectedColor=='Preferred'){
+        $(this).removeClass().addClass('form-select');
+        $('.btn-group button').css('background-color','#E2F9E3;')
+        $('.btn-group button').css('color','#0F700F')
+      
+  }else{
+    $(this).removeClass().addClass('form-select');
+        $('.btn-group button').css('background-color','#962C2C1A');
+        $('.btn-group button').css('color','#962C2C')
+        
+  }
+  });
+});
+
+
+</script>
 
 
 

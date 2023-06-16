@@ -22,8 +22,11 @@
 }
 
 .color-greyScale{
-    color: #545B64;
+    color: #545B64 !important;
 }
+
+/* line color */
+
 
 
 .p-10 {
@@ -263,6 +266,10 @@
     border: 1px solid #EFEFEF;
 }
 
+.dotted-border{
+    border: 2px dashed #B9D3F8
+}
+
 .btn-inside {
     padding: 8px 10px;
     background-color: #EEF4FB;
@@ -482,6 +489,8 @@
     cursor: pointer;
 }
 
+
+
 .red-text {
     color: red !important;
 }
@@ -497,6 +506,11 @@
 .green-text {
     color: #0A6D0A !important;
 }
+
+.blue-text{
+    color: #0747A6 !important;
+}
+
 
 .red-border, .orange-border, .yellow-border, .green-border{
     border: 1px solid;
@@ -518,6 +532,14 @@
     border-color: #0A6D0A;
 }
 
+
+.bg-blue{
+    background-color: #4772E0;
+}
+
+.bg-green{
+    background-color: #86CC4B;
+}
 
 
 .tooltip-inner {

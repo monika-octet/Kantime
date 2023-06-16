@@ -67,6 +67,20 @@ h3 {
     color: #181C32;
 }
 
+.status-red{
+    background: #962C2C1A;
+    color: #962C2C;
+}
+
+.status-green{
+    background-color: #E2F9E3;
+    color:#0F700F ;
+}
+
+.status-yellow{
+    background-color: #FFF2CC;
+    color: #9A5300;
+}
 
 
 
@@ -87,6 +101,10 @@ h3 {
 .grid-box {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2{
+    grid-template-columns: 1fr 1fr;
 }
 
 .icon-container {
@@ -335,11 +353,19 @@ h3 {
 
 }
 
-.modal-line {
-    background-color: #EAF1FD;
+
+
+.modal-line, .modal-line-1 {
     height: 1px;
     opacity: 1;
 }
+.modal-line{
+    background-color: #EAF1FD;
+}
+.modal-line-1 {
+    background-color: #dcdcdc;
+}
+
 
 #duplicate-list .dropdown-toggle::after, #treatment-address-table .dropdown-toggle::after, #patient-representative-table .dropdown-toggle::after {
     /* display: none; */
@@ -360,7 +386,27 @@ h3 {
     background-color: #FAFAFA;
 }
 
-#treatment-address-table.table-type-1 tbody tr td, #patient-representative-table.table-type-1 tbody tr td {
+#treatment-address-table.table-type-1 tbody tr td, 
+#patient-representative-table.table-type-1 tbody tr td,
+#document-list-table.table-type-1 tbody tr td
+{
+    padding: 12px 20px;
+}
+
+#manage-category-table.table-type-1 tbody tr td,
+#additional-pharmacy-add-pharmacy-table.table-type-1 tbody tr td,
+#additional-pharmacy-add-pharmacy-table.table-type-1 thead tr th,
+#additional-pharmacy-add-hospital-table.table-type-1 tbody tr td,
+#additional-pharmacy-add-hospital-table.table-type-1 thead tr th,
+#preferred-skills-table.table-type-1 thead tr th,
+#preferred-skills-table.table-type-1 tbody tr td,
+#criteria-table.table-type-1 thead tr th,
+#criteria-table.table-type-1 tbody tr td
+{
+    padding: 8px 15px;
+}
+
+#pharmacy-name-table.table tbody tr td{
     padding: 12px 20px;
 }
 
@@ -464,7 +510,6 @@ h3 {
 .status-tag {
     padding: 5px 8px;
     border-radius: 4px;
-    background: #962C2C1A;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -472,7 +517,7 @@ h3 {
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0em;
-    color: #962C2C;
+    
 }
 
 .info-title {
@@ -698,7 +743,7 @@ h3 {
 }
 
 
-.change-client {
+.bg-greybox {
     background-color: #FAFAFA;
     padding: 12px 16px;
 }
@@ -731,6 +776,8 @@ h3 {
     color: #181C32;
 }
 
+
+
 .custom-modal-1 {
     min-width: 676px !important;
 }
@@ -746,6 +793,11 @@ h3 {
 .custom-modal-4{
     min-width: 1280px !important ;
 }
+
+.custom-modal-5{
+    min-width: 560px !important;
+}
+
 
 
 .form-check-input:checked+.form-check-label {
@@ -804,9 +856,12 @@ h3 {
     text-indent: -1.5em;
 }
 
-.table-type-1#add-physician-table tbody tr:hover, .table-type-1#physician-contact-list-table tr:hover {
+.table-type-1#add-physician-table tbody tr:hover,
+.table-type-1#physician-contact-list-table tr:hover
+{
     background-color: inherit
 }
+
 
 .table-type-1 tbody tr td{
     align-items: center;
@@ -823,13 +878,18 @@ h3 {
     margin-bottom: 4px;
 }
 
-#add-physician-table.table-type-1 tbody tr td,#physician-contact-list-table tr td{
+#add-physician-table.table-type-1 tbody tr td,#physician-contact-list-table tr td ,#client-document-table tr td{
     padding: 12px 20px;
+}
+
+#client-document-table thead tr{
+    padding: 8px 20px;
 }
 
 #add-quick-note-table.table-type-1 thead tr th {
     padding: 8px 12px;
 }
+
 
 #add-quick-note-table.table-type-1 tbody tr td{
     padding: 8px 12px;
@@ -903,3 +963,67 @@ h3 {
 .client-clinician .info-description{
     width: 200px;
 }
+
+.singleDatePicker{
+    line-height: 27px;
+    margin-bottom: 0px;
+    position: relative;
+    padding: 0 12px 0 15px;
+}
+.singleDatePicker img{
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    right: 2px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.singleDatePicker img{
+    right: 10px;
+}
+
+#modify-checklist .text-title{
+    color: #243756;
+
+}
+
+#modify-checklist .tab-heading{
+    color: #989898;
+}
+
+.drag-drop-box{
+    padding: 64px 56px;
+}
+
+.upload-item-box{
+    border: 1px solid #EFEFEF;
+    border-radius: 4px;
+    padding: 6px 12px;
+
+}
+
+.upload-file-name, .upload-file-size{
+  
+font-size: 12px;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+
+.upload-file-name{
+    color: #181C32;
+    
+}
+
+.upload-file-size{
+    color: #A1A7AF;
+}
+.disclaimer{
+    font-size: 12px;
+    line-height: 15px;
+    color: #a1a7af;
+}
+
