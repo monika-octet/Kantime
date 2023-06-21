@@ -142,8 +142,8 @@
                 </div>
               </div>
             </div>
-            <div class="d-flex flex-column justify-content-between">
-              <div class="dropdown ms-3">
+            <div class="d-flex flex-column justify-content-between user-profile-dropdown">
+              <div class="dropdown ms-3" style="margin-left: 133px !important;">
                 <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom" type="button"
                   id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -160,7 +160,7 @@
                       class="dropdown-item">Email</a>
                   </li>
                   <li>
-                    <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#"
+                    <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#add-initial-order"
                       class="dropdown-item">Initial Order</a>
                   </li>
                   <li>
@@ -174,7 +174,7 @@
                 </ul>
               </div>
 
-              <div class="">
+              <div class="" style="margin-top: 54px;">
                 <div class="d-flex justify-content-end align-items-center gap-10">
                   <a href="duplicate-record.html" id="check-duplicate" class="btn btn-primary ms-3">Admit</a>
                   <a href="#" class="btn btn-outline-primary">Non-Admit</a>
@@ -184,36 +184,6 @@
           </div>
         </div>
         <div class="tab-section">
-          <!-- <nav>
-                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <button class="nav-link active" id="nav-general-tab" data-bs-toggle="tab"
-                                data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-general"
-                                aria-selected="true">General</button>
-                            <button class="nav-link" id="nav-source-tab" data-bs-toggle="tab"
-                                data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-source"
-                                aria-selected="false">Payer source & eligibility</button>
-                            <button class="nav-link" id="nav-clinical-tab" data-bs-toggle="tab"
-                                data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-clinical"
-                                aria-selected="false">Clinical</button>
-                            <button class="nav-link" id="nav-medications-tab" data-bs-toggle="tab"
-                                data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-medications"
-                                aria-selected="false">Medications</button>
-                            <button class="nav-link" id="nav-clinicains-tab" data-bs-toggle="tab"
-                                data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-clinicains"
-                                aria-selected="false">Clinicains </button>
-                            <button class="nav-link" id="nav-schedule-tab" data-bs-toggle="tab"
-                                data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-schedule"
-                                aria-selected="false">Initial Schedule</button>
-                            <button class="nav-link" id="nav-form-tab" data-bs-toggle="tab"
-                                data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-form"
-                                aria-selected="false">Form</button>
-                            <button class="nav-link" id="nav-journal-tab" data-bs-toggle="tab"
-                                data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-journal"
-                                aria-selected="false">Journal Note</button>
-                            <button class="nav-link" id="nav-COP-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
-                                type="button" role="tab" aria-controls="nav-COP" aria-selected="false">COP</button>
-                        </div>
-                    </nav> -->
 
           <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item">
@@ -3655,8 +3625,8 @@
                         Preference Criteria
                       </td>
                       <td>
-                        <select class="form-select color-select" aria-label="Default select example">
-                          <option value="Preferred">Preferred</option>
+                        <select class="form-select color-select"  aria-label="Default select example">
+                          <option checked value="Preferred">Preferred</option>
                           <option value="Not Preferred">Not Preferred</option>
                         </select>
 
@@ -3795,6 +3765,127 @@
     </div>
   </div>
   <!-- CHANGE POPUP END-->
+
+<!-- ADD INITIAL ORDER POPUP -->
+<div class="modal" tabindex="-1" id="add-initial-order">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <d iv class="modal-content">
+      <div class="modal-header bg-greyBlue">
+        <h5 class="modal-title Pinfo color-darkblue">Add Initial Order </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex justify-content-end mb-20">
+          <img src="images/help-large.svg" alt="help icon">
+        </div>
+
+        <div class="border-color mb-20">
+          <div class="p-3 d-grid grid-line align-items-center bg-lightGrey">
+            <p class="tab-heading">Checklist info</p>
+            <hr class="modal-line-1">
+          </div>
+          <div class="p-20">
+            <div class="bg-greybox border-color radius-4 d-grid grid-box gap-10">
+              <div>
+                <span class="text-title">Client: </span>
+                <span class="text-description">Client Name</span>
+              </div>
+              <div>
+                <span class="text-title">Patient ID :</span>
+                <span class="text-description">2045</span>
+              </div>
+              <div>
+                <span class="text-title">Episode Periode :</span>
+                <span class="text-description">1 - 01/03/2023 - 03/03/2023</span>
+              </div>
+              <div>
+                <span class="text-title">Payer :</span>
+                <span class="text-description">Avi_PediatricPayer</span>
+              </div>
+              <div>
+                <span class="text-title">SOC :</span>
+                <span class="text-description">03/05/1963</span>
+              </div>
+              <div>
+                <span class="text-title">Signed By :</span>
+                <span class="text-description">Admin,Test-RN on 01/05/2023</span>
+              </div>
+              <div>
+                <span class="text-title">Primary Diagnosis :</span>
+                <span class="text-description">--</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-color mb-20">
+          <div class="p-3 d-grid grid-line align-items-center bg-lightGrey">
+            <p class="tab-heading">Physician Info</p>
+            <hr class="modal-line-1">
+          </div>
+          <div class="p-20">
+            <div class="row col-12">
+              <div class="col-4">
+                <label class="label" for="client-info-physician">Physician</label>
+                <select
+                  class="single-select input-item"
+                  aria-label="location"
+                  id="client-info-physician"
+                >
+                  <option class="d-none" disabled selected>Select</option>
+                  <option value="1">List 1</option>
+                  <option value="2">List 2</option>
+                  <option value="3">List 3</option>
+                </select>
+           
+              </div>
+
+              <div class="col-4 mb-20">
+                <label class="label" for="client-info-PECOS">PECOS </label>
+                <input type="text" class="form-control input-item" id="client-info-PECOS" placeholder="Enrolled" aria-label="PECOS">
+              </div>
+              
+              
+              <div class="col-4 mb-20">
+                <label class="label" for="client-info-Phone">Phone</label>
+                <input type="text" class="form-control input-item" id="client-info-Phone" placeholder="(202) 258-2356" aria-label="Phone">
+              </div>
+
+               
+              <div class="col-4 mb-20">
+                <label class="label" for="client-info-Phone">Phone</label>
+                <input type="text" class="form-control input-item" id="client-info-Phone" placeholder="(202) 258-2356 " aria-label="Phone">
+              </div>
+
+              <div class="col-4 mb-20">
+                <label class="label" for="client-info-fax">Fax</label>
+                <input type="text" class="form-control input-item" id="client-info-fax" placeholder="(202) 258-2356 " aria-label="fax">
+              </div>
+
+              <div class="col-4 mb-20">
+                <label class="label" for="client-info-NPI">NPI</label>
+                <input type="text" class="form-control input-item" id="client-info-NPI" placeholder="(202) 258-2356 " aria-label="NPI">
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="" class="btn btn-tertiary">View Audit Logs</button>
+        <a href="#" class=""></a>
+        <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+      </div>
+    </d>
+  </div>
+</div>
+
+<!-- ADD INITIAL ORDER POPUP END -->
+
+
+
 
   <!-- ADD LANGUAGE POPUP -->
   <div class="modal" tabindex="-1" id="add-lang">
@@ -7010,7 +7101,7 @@
       <div class="modal-content">
         <div class="modal-header bg-greyBlue">
           <h5 class="modal-title Pinfo color-darkblue">
-            Quick Notes
+            Add new quick notes
           </h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
@@ -8141,8 +8232,8 @@
   <script type="text/javascript" src="js/custom.js"></script>
 
 
-  // datepicker
-  <script>
+
+  <!-- <script>
     $(function () {
       var start = moment();
       var end = moment();
@@ -8163,7 +8254,7 @@
 
       cb(start, end);
     });
-  </script>
+  </script> -->
 
   <script>
     function showHideDiv(checkboxId, divId) {
@@ -8190,18 +8281,17 @@
   </script>
 
 
-<script>
+<!-- <script>
 $(document).ready(function() {
   $('.color-select').change(function() {
     var selectedColor = $(this).val();
-    if(selectedColor=='Preferred'){
-        $(this).removeClass().addClass('form-select');
-        $('.btn-group button').css('background-color','#E2F9E3;')
-        $('.btn-group button').css('color','#0F700F')
+    if(selectedColor=="Preferred"){
+        $('.btn-group button').css('background-color','blue;');
+        $('.btn-group button').css('color','#0F700F');
       
   }else{
-    $(this).removeClass().addClass('form-select');
-        $('.btn-group button').css('background-color','#962C2C1A');
+    
+        $('.btn-group button').css('background-color','yellow');
         $('.btn-group button').css('color','#962C2C')
         
   }
@@ -8209,7 +8299,7 @@ $(document).ready(function() {
 });
 
 
-</script>
+</script> -->
 
 
 

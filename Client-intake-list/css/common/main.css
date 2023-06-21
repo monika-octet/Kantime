@@ -25,30 +25,12 @@
     color: #545B64 !important;
 }
 
-.color-orange{
-    color: #FF7C04 !important;
-}
-
-.color-pink{
-    color: #E05CE2 !important;
-}
-
-.color-purple{
-    color: #9747FF !important;
-}
-
-.color-black{
-    color: #000;
-}
 /* line color */
 
 
 
 .p-10 {
     padding: 10px;
-}
-.p-15{
-    padding: 15px;
 }
 
 .p-20 {
@@ -65,13 +47,7 @@
 .p-30 {
     padding: 30px;
 }
-.pb-10{
-    padding-bottom: 10px;
-}
 
-.pb-20{
-    padding-bottom: 20px;
-}
 
 .px-15 {
     padding-left: 15px;
@@ -91,11 +67,6 @@
 .py-10 {
     padding-top: 10px;
     padding-bottom: 10px;
-}
-
-.py-20{
-    padding-top:20px;
-    padding-bottom: 20px;
 }
 
 
@@ -217,10 +188,6 @@
     vertical-align: baseline !important;
 }
 
-.disabled-text{
-    color: #3D414880 !important;
-}
-
 .btn-primary,
 .btn-outline-primary {
     font-size: 13px;
@@ -297,10 +264,6 @@
 
 .border-color {
     border: 1px solid #EFEFEF;
-}
-
-.border-hr{
-    border-top: 1px solid #efefef;
 }
 
 .dotted-border{
@@ -629,60 +592,3 @@
     height: fit-content;
 }
 
-/* Accordian Styling */
-
-.accordion-button{
-    background-color: #F6F9FE;
-    border: 1px solid #EFEFEF;
-}
-
-.accordion-button:focus{
-    border-color:#EFEFEF ;
-    box-shadow: none;
-}
-
-.accordion-button:not(.collapsed){
-    background-color:#F6F9FE;
-    color: #181C32;
-
-}
-#headingOne .accordion-button:not(.collapsed) .insurance-type,
-#headingTwo .accordion-button:not(.collapsed) .insurance-type,
-#headingThree .accordion-button:not(.collapsed) .insurance-type
-{
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 22px;
-}
-#headingOne .accordion-button:not(.collapsed) .insurance-type{
-  
-    color: #BD2424;
-}
-
-#headingTwo .accordion-button:not(.collapsed) .insurance-type{
-    color: #9A5300;
-}
-
-#headingThree .accordion-button:not(.collapsed) .insurance-type
-{
-    color:#4C6197;
-}
-
-
-.accordion-item .accordion-button{
-    padding-left: 50px;
-}
-
-.accordion-button::after{
-    background-image: url(../../images/accordion-arrow.svg);
-    position: absolute;
-    left:30px;
-}
-.accordion-button:not(.collapsed)::after{
-    background-image: url(../../images/accordion-arrow.svg);
-    transform: rotate(90deg);
-}
-
-/* .accordion-button::after{
-    background-image: url(../../images/accordion-arrow.svg);
-} */
