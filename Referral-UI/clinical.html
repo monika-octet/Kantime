@@ -38,103 +38,1192 @@
     <title>Kantime | Referral</title>
 </head>
 
-<body>
-    <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                    aria-expanded="true" aria-controls="collapseOne">
-                    Accordion Item #1
-                </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
+<body style="width: 1366px; margin: auto">
+    <header>
+        <nav class="">
+            <div class="">
+                <img src="images/nav.svg" style="width: 100%" />
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="px-30 py-10">
 
-                    <div class="accordion" id="sub-accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="sub-headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#sub-collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Accordion Item #1
-                                </button>
-                            </h2>
-                            <div id="sub-collapseOne" class="accordion-collapse collapse show"
-                                aria-labelledby="sub-headingOne" data-bs-parent="#sub-accordionExample">
-                                <div class="accordion-body">
-                                    <strong>This is the first item's accordion body.</strong> It is hidden by default,
-                                    until the collapse plugin adds the appropriate classes that we use to style each
-                                    element. These classes control the overall appearance, as well as the showing and
-                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-                                    our default variables. It's also worth noting that just about any HTML can go within
-                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+            <div>
+                <div class="breadcrumb-container">
+                    <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="#">Client Intake List</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                John Doe
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <div class="d-flex justify-content-between">
+                    <h1>New Intake Info</h1>
+                    <div class="icon-container d-flex gap-3">
+                        <img src="images/Help.svg" alt="help-icon" />
+                        <img src="images/Mail.svg" alt="mail-icon" />
+                        <img src="images/Duplicate.svg" alt="duplicate-icon" />
+                        <img src="images/message.svg" alt="message-icon" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white border-color mt-10 radius-4 mb-20">
+                <div class="p-20 position-relative">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="d-flex gap-25 align-items-center">
+                            <div class="profile-box d-flex justify-content-center align-items-center">
+                                <img src="images/avatar.svg" alt="user profile picture" />
+                                <img src="images/camera.svg" alt="upload icon" class="upload" type="button"
+                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Upload Picture" />
+                            </div>
+                            <div class="d-flex flex-column">
+                                <p class="patient-title mb-15">John Doe</p>
+                                <div class="d-flex gap-20 mb-20">
+                                    <div>
+                                        <img src="images/Phone.svg" alt="phone icon" class="info-icon" />
+                                        <span class="info-icon-label">Call</span>
+                                    </div>
+                                    <div>
+                                        <img src="images/Email.svg" alt="mail icon" class="info-icon" />
+                                        <span class="info-icon-label">Email</span>
+                                    </div>
+                                    <div>
+                                        <img src="images/mappin.svg" alt="map pin icon" class="info-icon" />
+                                        <span class="info-icon-label">Address</span>
+                                    </div>
+                                </div>
+                                <div class="status-tag status-red">
+                                    <p>Conditionally accepted</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="sub-headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#sub-collapseTwo" aria-expanded="false"
-                                    aria-controls="sub-collapseTwo">
-                                    Accordion Item #2
-                                </button>
-                            </h2>
-                            <div id="sub-collapseTwo" class="accordion-collapse collapse"
-                                aria-labelledby="sub-headingTwo" data-bs-parent="#sub-accordionExample">
-                                <div class="accordion-body">
-                                    <strong>This is the second item's accordion body.</strong> It is hidden by default,
-                                    until the collapse plugin adds the appropriate classes that we use to style each
-                                    element. These classes control the overall appearance, as well as the showing and
-                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-                                    our default variables. It's also worth noting that just about any HTML can go within
-                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                        <div class="d-flex" style="gap: 108px">
+                            <div class="d-flex flex-column">
+                                <div class="info-box">
+                                    <p class="info-title">LOB :</p>
+                                    <p class="info-description">Occupational Physiotherapy</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Primary Payer :</p>
+                                    <p class="info-description">Richard Parker</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Location :</p>
+                                    <p class="info-description">New York, USA</p>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="info-box">
+                                    <p class="info-title">Intake Date :</p>
+                                    <p class="info-description">01/03/1998</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Requested SOC Date :</p>
+                                    <p class="info-description">10/29/1999</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">DOB :</p>
+                                    <p class="info-description">10/29/1999</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column justify-content-between user-profile-dropdown">
+                            <div class="dropdown ms-3" style="margin-left: 133px !important;">
+                                <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">Logs</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">Print</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">Email</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#add-initial-order" class="dropdown-item">Initial Order</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">More Options</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item red-text">Delete</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="" style="margin-top: 54px;">
+                                <div class="d-flex justify-content-end align-items-center gap-10">
+                                    <a href="duplicate-record.html" id="check-duplicate"
+                                        class="btn btn-primary ms-3">Admit</a>
+                                    <a href="#" class="btn btn-outline-primary">Non-Admit</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="tab-section">
+
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="patient-information.html" role="tab" aria-controls="general"
+                                aria-selected="false">General</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="payer-source-eligibility.html" role="tab"
+                                aria-controls="eligibility" aria-selected="false">Payer source & eligibility</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link active" href="clinical.html" role="tab" aria-controls="clinical"
+                                aria-selected="true">Clinical</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="medications.html" role="tab" aria-controls="medications"
+                                aria-selected="false">Medications</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="clinician.html" role="tab" aria-controls="clinicains"
+                                aria-selected="false">Clinicains</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="initial-schedule.html" role="tab" aria-controls="schedule"
+                                aria-selected="false">Initial Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="form.html" role="tab" aria-controls="form"
+                                aria-selected="false">Form</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="journal-note.html" role="tab" aria-controls="journal"
+                                aria-selected="false">Journal Note</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cop.html" role="tab" aria-controls="COP"
+                                aria-selected="false">COP</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
+
+            <div>
+                <div class="tab-content-grid">
+                    <div class="bg-white fit-content">
+                        <div class="border-color">
+                            <div class="py-10 px-15 search-box">
+                                <div class="search">
+                                    <input type="text" placeholder="Search" class="search-input w-100" />
+                                    <img src="images/lens.svg" alt="search lens" class="lens" />
+                                </div>
+                            </div>
+                            <div class="sidebar-container">
+                                <div class="nav flex-column nav-tabs" id="myTab" role="tablist"
+                                    aria-orientation="vertical">
+                                    <button class="nav-link active" id="order-tab" data-bs-toggle="tab"
+                                        data-bs-target="#order-details" type="button" role="tab"
+                                        aria-controls="order-details" aria-selected="true">
+                                        Orders/Medical Data
+                                    </button>
+
+                                    <button class="nav-link" id="diagnosis-tab" data-bs-toggle="tab"
+                                        data-bs-target="#diagnosis-details" type="button" role="tab"
+                                        aria-controls="diagnosis-details" aria-selected="false">
+                                        Diagnosis
+                                    </button>
+
+                                    <button class="nav-link" id="face-to-face-tab" data-bs-toggle="tab"
+                                        data-bs-target="#face-to-face-details" type="button" role="tab"
+                                        aria-controls="face-to-face-details" aria-selected="false">
+                                        Face to Face Encounter
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="myTabContent">
+                        <div class="border-color tab-pane fade show active" id="order-details" role="tabpanel"
+                            aria-labelledby="order-details-tab">
+                            <div class="px-20 bg-white d-flex justify-content-between align-items-center"
+                                style="padding-top: 14px; padding-bottom: 14px">
+                                <div class="tab-content-heading">Orders/Medical Data</div>
+                                <div class="d-flex align-items-center gap-10">
+                                    <p class="save-time">Last saved 2 mins ago</p>
+                                    <button class="btn btn-tertiary">Save</button>
+                                </div>
+                            </div>
+                            <div class="p-20">
+                                <div class="p-3 d-grid grid-line align-items-center bg-lightBlue">
+                                    <p class="tab-heading">Orders/Medical Data Details</p>
+                                    <hr class="modal-line">
+                                </div>
+                                <div class="container p-3 bg-white">
+                                    <div class="col-2 mb-20">
+                                        <p class="label">Orders Recieved</p>
+                                        <div class="d-flex gap-3">
+                                            <div class="radio-box">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="order-recieved"
+                                                        id="order-yes" value="yes">
+                                                    <label class="form-check-label" for="order-yes">
+                                                        Yes
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="radio-box">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="order-recieved"
+                                                        id="order-no" value="no">
+                                                    <label class="form-check-label" for="order-no">
+                                                        No
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-10">
+                                        <p class="mb-10">Service</p>
+                                        <div class="d-flex flex-wrap gap-10 checkbox-group mb-20">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="LVN">
+                                                <label class="form-check-label" for="LVN">
+                                                    LVN
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="SN">
+                                                <label class="form-check-label" for="SN">
+                                                    SN
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="PT">
+                                                <label class="form-check-label" for="PT">
+                                                    PT
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="OT">
+                                                <label class="form-check-label" for="OT">
+                                                    OT
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="ST">
+                                                <label class="form-check-label" for="ST">
+                                                    ST
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="AIDE">
+                                                <label class="form-check-label" for="AIDE">
+                                                    AIDE
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="MSW">
+                                                <label class="form-check-label" for="MSW">
+                                                    MSW
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="RD">
+                                                <label class="form-check-label" for="RD">
+                                                    RD
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="BHN">
+                                                <label class="form-check-label" for="BHN">
+                                                    BHN
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="CSP">
+                                                <label class="form-check-label" for="CSP">
+                                                    CSP
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="IVRN">
+                                                <label class="form-check-label" for="IVRN">
+                                                    IVRN
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="Volunteer">
+                                                <label class="form-check-label" for="Volunteer">
+                                                    Volunteer
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-20">
+                                        <label class="form-check-label mb-2" for="Volunteer">
+                                            Initial Order
+                                        </label>
+                                        <div class="col-12 mb-20 bg-white border-color radius-4">
+                                            <textarea name="" id="add-new-initial-order" cols="" rows="8"
+                                                class="input-textarea w-100 border-color border-bottom "
+                                                placeholder="Type Here"></textarea>
+                                            <div class="d-flex align-items-center gap-2 py-10 px-15 pointer"
+                                                data-bs-toggle="modal" data-bs-target="#quick-notes">
+                                                <img src="images/notes.svg" alt="notes icon">
+                                                <p class="f-500 f-13 lh-17">Open Quick Notes List</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-20">
+                                        <label class="form-check-label mb-2" for="Volunteer">
+                                            Surgery/Procedure
+                                        </label>
+                                        <div class="col-12 mb-20 bg-white border-color radius-4">
+                                            <textarea name="" id="add-new-surgery-procedure" cols="" rows="8"
+                                                class="input-textarea w-100 border-color border-bottom "
+                                                placeholder="Type Here"></textarea>
+                                            <div class="d-flex align-items-center gap-2 py-10 px-15 pointer"
+                                                data-bs-toggle="modal" data-bs-target="#quick-notes">
+                                                <img src="images/notes.svg" alt="notes icon">
+                                                <p class="f-500 f-13 lh-17">Open Quick Notes List</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-20">
+                                        <label class="form-check-label mb-2" for="Volunteer">
+                                            DME/Infusion Pharmacy
+                                        </label>
+                                        <div class="col-12 mb-20 bg-white border-color radius-4">
+                                            <textarea name="" id="add-new-DME" cols="" rows="8"
+                                                class="input-textarea w-100 border-color border-bottom "
+                                                placeholder="Type Here"></textarea>
+                                            <div class="d-flex align-items-center gap-2 py-10 px-15 pointer"
+                                                data-bs-toggle="modal" data-bs-target="#quick-notes">
+                                                <img src="images/notes.svg" alt="notes icon">
+                                                <p class="f-500 f-13 lh-17">Open Quick Notes List</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-20">
+                                        <label class="form-check-label mb-2" for="Volunteer">
+                                            Medical History
+                                        </label>
+                                        <div class="col-12 mb-20 bg-white border-color radius-4">
+                                            <textarea name="" id="add-new-medical-history" cols="" rows="8"
+                                                class="input-textarea w-100 border-color border-bottom "
+                                                placeholder="Type Here"></textarea>
+                                            <div class="d-flex align-items-center gap-2 py-10 px-15 pointer"
+                                                data-bs-toggle="modal" data-bs-target="#quick-notes">
+                                                <img src="images/notes.svg" alt="notes icon">
+                                                <p class="f-500 f-13 lh-17">Open Quick Notes List</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-20">
+                                        <label class="form-check-label mb-2" for="Volunteer">
+                                            Allergies
+                                        </label>
+                                        <div class="col-12 mb-20 bg-white border-color radius-4">
+                                            <textarea name="" id="add-new-medical-history" cols="" rows="8"
+                                                class="input-textarea w-100 border-color border-bottom "
+                                                placeholder="Type Here"></textarea>
+                                            <div class="d-flex align-items-center gap-2 py-10 px-15 pointer"
+                                                data-bs-toggle="modal" data-bs-target="#allergies">
+                                                <img src="images/list-icon.svg" alt="list icon">
+                                                <p class="f-500 f-13 lh-17">View List</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-color tab-pane fade" id="diagnosis-details" role="tabpanel"
+                            aria-labelledby="diagnosis-details-tab">
+                            <div class="px-20 bg-white d-flex justify-content-between align-items-center"
+                                style="padding-top: 14px; padding-bottom: 14px">
+                                <div class="tab-content-heading">Diagnosis</div>
+                                <div class="d-flex align-items-center gap-10">
+                                    <p class="save-time">Last saved 2 mins ago</p>
+                                    <button class="btn btn-tertiary">Save</button>
+                                </div>
+                            </div>
+                            <div class="p-20">
+                                <div class="p-3 d-grid grid-line align-items-center bg-lightBlue">
+                                    <p class="tab-heading">Diagnosis Details</p>
+                                    <hr class="modal-line">
+                                </div>
+                                <div class="p-3 bg-white">
+                                    <div class="col-8 mb-20">
+                                        <label class="label" for="primary-diagnosis-details">Primary Diagnosis</label>
+                                        <input type="text" class="form-control input-item"
+                                            id="primary-diagnosis-details" placeholder="Type Here"
+                                            aria-label="Primary Diagnosis">
+                                    </div>
+
+                                    <div class="col-8 mb-20">
+                                        <label class="label" for="surgical-diagnosis-details">Surgical Diagnosis</label>
+                                        <input type="text" class="form-control input-item"
+                                            id="surgical-diagnosis-details" placeholder="Type Here"
+                                            aria-label="Surgical Diagnosis">
+                                    </div>
+
+
+
+
+                                    <div id="form-container" class="col-10 mb-10">
+                                        <label class="label" for="">Other Diagnosis</label>
+                                        <div id="fields-container">
+                                            <div class="form-field">
+                                                <span class="field-number" style="margin-right: 5px;">1.</span>
+                                                <input type="text" id="field-0" class=" input-item w-75 mb-10"
+                                                    placeholder="Type Here" aria-label="Surgical Diagnosis">
+                                            </div>
+                                        </div>
+                                        <button class="link-blue add-new-field mt-2 px-20" id="add-field-btn">Add New
+                                            Field</button>
+                                    </div>
+
+                                    <div class="mb-20">
+                                        <label class="form-check-label mb-2" for="description-diagnosis">
+                                            Description
+                                        </label>
+                                        <div class="col-12 bg-white border-color radius-4">
+                                            <textarea name="" id="description-diagnosis" cols="" rows="8"
+                                                class="input-textarea w-100 border-color border-bottom "
+                                                placeholder="Type Here"></textarea>
+                                            <div class="d-flex align-items-center gap-2 py-10 px-15 pointer"
+                                                data-bs-toggle="modal" data-bs-target="#quick-notes">
+                                                <img src="images/notes.svg" alt="notes icon">
+                                                <p class="f-500 f-13 lh-17">Open Quick Notes List</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-color tab-pane fade" id="face-to-face-details" role="tabpanel"
+                            aria-labelledby="face-to-face-details-tab">
+                            <div class="px-20 bg-white d-flex justify-content-between align-items-center"
+                                style="padding-top: 14px; padding-bottom: 14px">
+                                <div class="tab-content-heading">Face to Face Encounter</div>
+
+                                <div class="d-flex align-items-center gap-10">
+                                    <p class="save-time">Last saved 2 mins ago</p>
+                                    <button class="btn btn-tertiary">Save</button>
+                                </div>
+                            </div>
+                            <div class="p-20">
+                                <div class="p-3 d-grid grid-line align-items-center bg-lightBlue">
+                                    <p class="tab-heading">Diagnosis Details</p>
+                                    <hr class="modal-line">
+                                </div>
+                                <div class="p-3 bg-white">
+                                    <div class="">
+                                        <div class="radio-box f-to-f mb-20">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="available-f-2-f"
+                                                    id="available-f-2-f" value="male">
+                                                <label class="form-check-label" for="available-f-2-f">
+                                                    <span class="green-text">Available</span> - Face to face Encounter
+                                                    is currently Available
+                                                </label>
+                                            </div>
+
+                                            <div class="d-flex gap-10  hidden mt-20" id="inner-box">
+                                                <div class="radio-box">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="f-2-f-conducted-by" id="institution-conducted"
+                                                            value=" Conducted by Institution/Hospital">
+                                                        <label class="form-check-label" for="institution-conducted">
+                                                            Conducted by Institution/Hospital
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="radio-box">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="f-2-f-conducted-by" id="conducted-90-days"
+                                                            value="Conducted within 90 days prior to home care SOC">
+                                                        <label class="form-check-label" for="conducted-90-days">
+                                                            Conducted within 90 days prior to home care SOC
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 row mt-20 hidden" id="conducted-90-details">
+                                                <div class="col-4 mb-20 ">
+                                                    <label class="form-label" for="date-of-encounter">Date of
+                                                        Encounter</label>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control input-item"
+                                                            id="date-of-encounter" placeholder="Select Date">
+                                                        <span class="input-group-text"><img
+                                                                src="images/Calendar.svg"></span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-4 mb-20 ">
+                                                    <label class="label"
+                                                        for="provider-physician">Provider/Physician</label>
+                                                    <select class="single-select input-item" aria-label="provider"
+                                                        id="provider-physician">
+                                                        <option class="d-none" disabled selected>All</option>
+                                                        <option value="1">List 1</option>
+                                                        <option value="2">List 2</option>
+                                                        <option value="3">List 3</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-4 mb-20 ">
+                                                    <label class="label" for="diagnosis-other">Other</label>
+                                                    <select class="single-select input-item" aria-label="other"
+                                                        id="diagnosis-other">
+                                                        <option class="d-none" disabled selected>All</option>
+                                                        <option value="1">List 1</option>
+                                                        <option value="2">List 2</option>
+                                                        <option value="3">List 3</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-4">
+                                                    <label class="label" for="follow-up-physician">Follow Up
+                                                        Physician</label>
+                                                    <select class="single-select input-item" aria-label="follow-up"
+                                                        id="follow-up-physician">
+                                                        <option class="d-none" disabled selected>All</option>
+                                                        <option value="1">List 1</option>
+                                                        <option value="2">List 2</option>
+                                                        <option value="3">List 3</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-4">
+                                                    <label class="label" for="diagnosis-other-2">Other</label>
+                                                    <select class="single-select input-item" aria-label="other"
+                                                        id="diagnosis-other-2">
+                                                        <option class="d-none" disabled selected>All</option>
+                                                        <option value="1">List 1</option>
+                                                        <option value="2">List 2</option>
+                                                        <option value="3">List 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="radio-box f-to-f mb-20">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="no-f2f"
+                                                    id="no-f2f">
+                                                <label class="form-check-label" for="no-f2f">
+                                                    <span class="orange-text">Not Available</span>- Face to face to be
+                                                    conducted within 30 days of SOC
+                                                </label>
+                                            </div>
+                                            <div class="conducted-30-days w-100 hidden">
+                                                <div class="row col-12 mt-20 ">
+                                                    <div class="col-4 mb-20 ">
+                                                        <label class="form-label" for="date-of-encounter">Due Date of
+                                                            face to face
+                                                            Encounter</label>
+                                                        <div class="input-group">
+                                                            <input disabled type="text" class="form-control input-item"
+                                                                id="date-of-encounter" placeholder="Select Date">
+                                                            <span class="input-group-text"><img
+                                                                    src="images/Calendar.svg"></span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="soc-physician">Physician</label>
+                                                        <select class="single-select input-item" aria-label="physician"
+                                                            id="soc-physician">
+                                                            <option class="d-none" disabled selected>Select</option>
+                                                            <option value="1">List 1</option>
+                                                            <option value="2">List 2</option>
+                                                            <option value="3">List 3</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="soc-follow-up-physician">Follow Up
+                                                            Physician</label>
+                                                        <select class="single-select input-item" aria-label="follow up"
+                                                            id="soc-follow-up-physician">
+                                                            <option class="d-none" disabled selected>Select</option>
+                                                            <option value="1">List 1</option>
+                                                            <option value="2">List 2</option>
+                                                            <option value="3">List 3</option>
+                                                        </select>
+                                                    </div>
+
+
+                                                </div>
+                                                <div class=" col-12">
+                                                    <div class="col-2 mb-20">
+                                                        <p class="label">Encounter Requested</p>
+                                                        <div class="d-flex gap-3">
+                                                            <div class="radio-box">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio" name="encounter-requested" id="encounter-yes" value="yes">
+                                                                    <label class="form-check-label" for="encounter-yes">
+                                                                        Yes
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="radio-box">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio" name="encounter-requested" id="encounter-no" value="no">
+                                                                    <label class="form-check-label" for="encounter-no">
+                                                                        No
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="ecnounter-requested-details d-flex gap-20 col-12 hidden">
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="encounter-requested-by">Requested By</label>
+                                                        <select
+                                                          class="single-select input-item"
+                                                          aria-label="Requested"
+                                                          id="encounter-requested-by"
+                                                        >
+                                                          <option class="d-none" disabled selected>Select</option>
+                                                          <option value="1">List 1</option>
+                                                          <option value="2">List 2</option>
+                                                          <option value="3">List 3</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="col-4 mb-20">
+                                                        <label class="form-label" for="encounter-requested-on">Requested On </label>
+                                                        <div class="input-group">
+                                                          <input type="text" class="form-control input-item" id="encounter-requested-on" placeholder="Select Date">
+                                                          <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                                                        </div>
+                                                      </div>
+                                        
+                                                </div>
+                                                
+                                                <div class=" col-12">
+                                                    <div class="col-2 mb-20">
+                                                        <p class="label">Encounter Scheduled</p>
+                                                        <div class="d-flex gap-3">
+                                                            <div class="radio-box">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio" name="encounter-scheduled" id="encounter-scheduled-yes" value="yes">
+                                                                    <label class="form-check-label" for="encounter-scheduled-yes">
+                                                                        Yes
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="radio-box">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio" name="encounter-scheduled" id="encounter-scheduled-no" value="no">
+                                                                    <label class="form-check-label" for="encounter-scheduled-no">
+                                                                        No
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="encounter-scheduled-details col-12 hidden">
+                                                    <div class="col-4 mb-20">
+                                                        <label class="form-label" for="encounter-scheduled-on">Scheduled On </label>
+                                                        <div class="input-group">
+                                                          <input type="text" class="form-control input-item" id="encounter-scheduled-on" placeholder="Select Date">
+                                                          <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                                                        </div>
+                                                      </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                        <div id="form-container" class="col-10 mb-10">
+                                            <label class="label" for="">Other Diagnosis</label>
+                                            <div id="fields-container-1">
+                                                <div class="form-field">
+                                                    <span class="field-number" style="margin-right: 5px;">1.</span>
+                                                    <input type="text" id="diagnosis-field-0" class=" input-item w-75 mb-10"
+                                                        placeholder="Type Here" aria-label="Surgical Diagnosis">
+                                                </div>
+                                            </div>
+                                            <button class="link-blue add-new-field mt-2 px-20" id="add-field-btn-1">Add New
+                                                Field</button>
+                                        </div>
+
+                                        <div class="mb-20">
+                                            <label class="form-check-label mb-2" for="description-f2f">
+                                                Description
+                                            </label>
+                                            <div class="col-12 bg-white border-color radius-4">
+                                                <textarea name="" id="description-f2f" cols="" rows="8" class="input-textarea w-100 border-color border-bottom " placeholder="Type Here"></textarea>
+                                                <div class="d-flex align-items-center gap-2 py-10 px-15 pointer" data-bs-toggle="modal" data-bs-target="#quick-notes">
+                                                    <img src="images/notes.svg" alt="notes icon">
+                                                    <p class="f-500 f-13 lh-17">Open Quick Notes List</p>
+                                                </div>
+    
+                                            </div>
+                                        </div>
+
+                                        <div class="row col-12">
+                                            <p class="label">Documentation copy of Face to Face encounter in file</p>
+                                            <div class="col-3 mb-20">
+                                                 <div class="d-flex gap-3">
+                                                  <div class="radio-box">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input" type="radio" name="doc-f2f" id="doc-yes" value="yes">
+                                                      <label class="form-check-label" for="doc-yes">
+                                                        Yes
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="radio-box">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input" type="radio" name="doc-f2f" id="doc-no" value="no">
+                                                      <label class="form-check-label" for="doc-no">
+                                                        No
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                        </div>
+
+                                        <div class="mb-20">
+                                            <label class="form-check-label mb-2" for="f2f-notes">
+                                                Description
+                                            </label>
+                                            <div class="col-12 bg-white border-color radius-4">
+                                                <textarea name="" id="f2f-notes" cols="" rows="8" class="input-textarea w-100 border-color border-bottom " placeholder="Type Here"></textarea>
+                                                <div class="d-flex align-items-center gap-2 py-10 px-15 pointer" data-bs-toggle="modal" data-bs-target="#quick-notes">
+                                                    <img src="images/notes.svg" alt="notes icon">
+                                                    <p class="f-500 f-13 lh-17">Open Quick Notes List</p>
+                                                </div>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-    </div>
-    </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Accordion Item #2
-            </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
-                plugin adds the appropriate classes that we use to style each element. These classes control the overall
-                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
-                within the <code>.accordion-body</code>, though the transition does limit overflow.
+
+
+
+
+
+
+        <!-- QUICK NOTES -->
+        <div class="modal" tabindex="-1" id="quick-notes">
+            <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-greyBlue">
+                        <h5 class="modal-title Pinfo color-darkblue">
+                            Quick Notes
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex justify-content-end mb-15">
+                            <button class="btn btn-tertiary" data-bs-toggle="modal"
+                                data-bs-target="#intake-notes-add-quick-notes">Add
+                                New</button>
+                        </div>
+                        <div class="row col-12">
+                            <div class="col-6 mb-20">
+                                <label class="f-500 f-14 lh-19 mb-2" for="intake-notes-location">Location</label>
+                                <select class="single-select input-item" aria-label="location"
+                                    id="intake-notes-location">
+                                    <option class="d-none" disabled selected>Select</option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+
+                            <div class="col-6 search mb-20">
+                                <label class="f-500 f-14 lh-19 mb-2" for="">Search</label>
+                                <input type="text" placeholder="Search" class="search-input w-100">
+                                <img src="images/lens-dark.svg" alt="search lens" class="lens"
+                                    style="top: 34px !important; left: 18px !important">
+                            </div>
+                        </div>
+
+                        <table class="table table-type-1 mt-10" id="add-quick-note-table">
+                            <thead>
+                                <tr>
+                                    <th class="d-flex">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id=""><span>Title</span>
+                                    </th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td class="d-flex">
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                        <div>
+                                            <p>Title line goes here </p>
+                                        </div>
+                                    </td>
+                                    <td>Description goes here</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="d-flex">
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                        <div>
+                                            <p>Title line goes here </p>
+                                        </div>
+                                    </td>
+                                    <td>Description goes here</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="d-flex">
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                        <div>
+                                            <p>Title line goes here </p>
+                                        </div>
+                                    </td>
+                                    <td>Description goes here</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="d-flex">
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                        <div>
+                                            <p>Title line goes here </p>
+                                        </div>
+                                    </td>
+                                    <td>Description goes here</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+
+                        <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Accordion Item #3
-            </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
-                plugin adds the appropriate classes that we use to style each element. These classes control the overall
-                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
-                within the <code>.accordion-body</code>, though the transition does limit overflow.
+        <!-- QUICK NOTES END -->
+
+        <!-- ADD QUICK NOTE NEW -->
+        <div class="modal" tabindex="-1" id="intake-notes-add-quick-notes">
+            <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-greyBlue">
+                        <h5 class="modal-title Pinfo color-darkblue">
+                            Add New Quick Notes
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="row col-12">
+                            <div class="col-6 mb-20">
+                                <label class="f-500 f-14 lh-19 mb-2" for="intake-quick-notes-location">Location</label>
+                                <select class="single-select input-item" aria-label="location"
+                                    id="intake-quick-notes-location">
+                                    <option class="d-none" disabled selected>Select</option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+
+                            <div class="col-4 mb-20">
+                                <label class="label" for="intake-quick-notes-title">Title</label>
+                                <input type="text" class="form-control input-item" id="intake-quick-notes-title"
+                                    placeholder="Enter" aria-label="quick notes">
+                            </div>
+
+                            <div class="col-12">
+                                <label class="label" for="intake-quick-notes-description">Description</label>
+                                <textarea name="" id="intake-quick-notes-description" cols="" rows="2"
+                                    class="input-textarea w-100" placeholder="Type Here"></textarea>
+                            </div>
+
+                        </div>
+
+
+
+
+
+                    </div>
+                    <div class="modal-footer">
+
+                        <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    </div>
+
+        <!-- ADD QUICK NOTE NEW END -->
+
+        <!-- ALLERGIES LIST POPUP -->
+        <!-- allergies -->
+        <div class="modal" tabindex="-1" id="allergies">
+            <div class="modal-dialog custom-modal-2 modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-greyBlue">
+                        <h5 class="modal-title Pinfo color-darkblue">
+                            Allergies
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-20">
+                            <div class="col-5 search mb-10">
+                                <label class="label" for="Name-NPI">Search</label>
+                                <input type="text" placeholder="Search" class="search-input w-100">
+                                <img src="images/lens.svg" alt="search lens" class="lens"
+                                    style="top: 34px !important; left: 10px !important">
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="no-known-allergies">
+                                <label class="f-500 f-12" for="no-known-allergies">
+                                    No known allergies
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="border-color mb-20">
+                            <div class="p-15 d-grid grid-line align-items-center bg-lightGrey">
+                                <p class="tab-heading">Medication Allergies</p>
+                                <hr class="modal-line" style="background-color: #DCDCDC;">
+                            </div>
+
+                            <div class="d-flex gap-2 col-8 p-15">
+                                <div class="radio-box">
+                                    <div class="form-check">
+                                        <input checked="" class="form-check-input" type="radio" name="allergies"
+                                            id="abacavir-allergy" value="abacavir">
+                                        <label class="form-check-label" for="abacavir-allergy">
+                                            abacavir
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="radio-box">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="allergies"
+                                            id="dolutegravir-allergy" value="dolutegravir">
+                                        <label class="form-check-label" for="facility-type-ref-info">
+                                            dolutegravir
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="radio-box">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="allergies"
+                                            id="lamivudine-allergy" value="lamivudine">
+                                        <label class="form-check-label" for="other-type-ref-info">
+                                            lamivudine
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 p-15">
+                                <div class="d-flex justify-content-between">
+                                    <label class="label" for="other-medication">Other Medication Allergies</label>
+                                    <img src="images/icon-abc.svg" alt="">
+                                </div>
+                                <textarea name="" id="other-medication" cols="" rows="2" class="input-textarea w-100"
+                                    placeholder="Enter"></textarea>
+                            </div>
+
+                        </div>
+
+                        <div class="border-color mb-20">
+                            <div class="p-15 d-grid grid-line align-items-center bg-lightGrey">
+                                <p class="tab-heading">Food Allergies</p>
+                                <hr class="modal-line" style="background-color: #DCDCDC;">
+                            </div>
+
+                            <div class="p-15">
+                                <div class="col-12 d-flex flex-wrap gap-10">
+                                    <div class="col-auto  border-color py-10 px-15 radius-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="aminoquinoline">
+                                            <label class="" for="aminoquinoline">
+                                                4-aminoquinoline
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-auto  border-color py-10 px-15 radius-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="alpha-reductase">
+                                            <label class="" for="alpha-reductase">
+                                                5-alpha-reductase inhibitor
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-auto  border-color py-10 px-15 radius-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="hydroxytryptophan">
+                                            <label class="" for="hydroxytryptophan">
+                                                5-hydroxytryptophan
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-auto  border-color py-10 px-15 radius-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="abacavir">
+                                            <label class="" for="abacavir">
+                                                abacavir
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-auto  border-color py-10 px-15 radius-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="6-hydroxytryptophan">
+                                            <label class="" for="6-hydroxytryptophan">
+                                                5-hydroxytryptophan
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-auto  border-color py-10 px-15 radius-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="8-hydroxyquinoline">
+                                            <label class="" for="8-hydroxyquinoline">
+                                                hydroxyquinoline
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-auto  border-color py-10 px-15 radius-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="asperceme1">
+                                            <label class="" for="asperceme1">
+                                                asperceme1
+                                            </label>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div class="col-12 p-15">
+                                <div class="d-flex justify-content-between">
+                                    <label class="label" for="other-food-allergies">Other food Allergies</label>
+                                    <img src="images/icon-abc.svg" alt="">
+                                </div>
+                                <textarea name="" id="other-food-allergies" cols="" rows="2"
+                                    class="input-textarea w-100" placeholder="Type here..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="border-color mb-20">
+                            <div class="p-15 d-grid grid-line align-items-center bg-lightGrey">
+                                <p class="tab-heading">Environmental Allergies</p>
+                                <hr class="modal-line" style="background-color: #DCDCDC;">
+                            </div>
+
+                            <div class="col-12 p-15">
+                                <div class="d-flex justify-content-between">
+                                    <label class="label" for="environmental-allergy">Other Environmental
+                                        Allergies</label>
+                                    <img src="images/icon-abc.svg" alt="">
+                                </div>
+                                <textarea name="" id="environmental-allergy" cols="" rows="2"
+                                    class="input-textarea w-100" placeholder="Type here..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+
+                        <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ALLERGIES LIST POPUP END -->
+
+
+
+    </main>
 
 
 
@@ -205,26 +1294,132 @@
         });
     </script>
 
+    <script>
+        $(document).ready(function () {
+            var fieldCount = 1;
 
-    <!-- <script>
-   $(document).ready(function() {
-     $('.color-select').change(function() {
-       var selectedColor = $(this).val();
-       if(selectedColor=="Preferred"){
-           $('.btn-group button').css('background-color','blue;');
-           $('.btn-group button').css('color','#0F700F');
-         
-     }else{
-       
-           $('.btn-group button').css('background-color','yellow');
-           $('.btn-group button').css('color','#962C2C')
-           
-     }
-     });
-   });
-   
-   
-   </script> -->
+            function deleteField(event) {
+                $(this).parent().remove();
+                renumberFields();
+            }
+
+
+            function renumberFields() {
+                $('.field-number').each(function (index) {
+                    $(this).text(index + 1 + '.');
+                });
+            }
+
+            $("#add-field-btn").click(function () {
+                var newField = $('<div class="form-field">' +
+                    '<span class="field-number" style="margin-right: 5px;">' + (fieldCount + 1) + '.</span>' +
+                    '<input type="text" class="input-item w-75 mb-10" placeholder="Type Here" id="field-' + fieldCount + '">' +
+                    '<img src="images/remove.svg" alt="remove-icon" class="delete-icon ml-5 pointer" />' +
+                    '</div>');
+
+                newField.find('.delete-icon').click(deleteField);
+
+                $("#fields-container").append(newField);
+                fieldCount++;
+            });
+        });
+    </script>
+
+<script>
+    $(document).ready(function () {
+        var fieldCount = 1;
+
+        function deleteField(event) {
+            $(this).parent().remove();
+            renumberFields();
+        }
+
+
+        function renumberFields() {
+            $('.field-number').each(function (index) {
+                $(this).text(index + 1 + '.');
+            });
+        }
+
+        $("#add-field-btn-1").click(function () {
+            var newField = $('<div class="form-field">' +
+                '<span class="field-number" style="margin-right: 5px;">' + (fieldCount + 1) + '.</span>' +
+                '<input type="text" class="input-item w-75 mb-10" placeholder="Type Here" id="diagnosis-field-' + fieldCount + '">' +
+                '<img src="images/remove.svg" alt="remove-icon" class="delete-icon ml-5 pointer" />' +
+                '</div>');
+
+            newField.find('.delete-icon').click(deleteField);
+
+            $("#fields-container-1").append(newField);
+            fieldCount++;
+        });
+    });
+</script>
+
+    <script>
+        $(document).ready(function () {
+            $('#available-f-2-f').change(function () {
+                if ($(this).is(':checked')) {
+                    $('#inner-box').removeClass('hidden');
+                } else {
+                    $('#inner-box').addClass('hidden');
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('#conducted-90-days').change(function () {
+                if ($(this).is(':checked')) {
+                    $('#conducted-90-details').removeClass('hidden');
+                } else {
+                    $('#conducted-90-details').addClass('hidden');
+                }
+            });
+        });
+    </script>
+    
+    <script>
+        $(document).ready(function () {
+            $('#no-f2f').change(function () {
+                if ($(this).is(':checked')) {
+                    $('.conducted-30-days').removeClass('hidden');
+                } else {
+                    $('.conducted-30-days').addClass('hidden');
+                }
+            });
+        });
+    </script>
+
+<script>
+    $(document).ready(function() {
+      $('input[name="encounter-requested"]').change(function() {
+        if ($(this).val() === 'yes') {
+          $('.ecnounter-requested-details').removeClass('hidden');
+        } else {
+          $('.ecnounter-requested-details').addClass('hidden');
+        }
+      });
+    });
+  </script>
+
+<script>
+    $(document).ready(function() {
+      $('input[name="encounter-scheduled"]').change(function() {
+        if ($(this).val() === 'yes') {
+          $('.encounter-scheduled-details').removeClass('hidden');
+        } else {
+          $('.encounter-scheduled-details').addClass('hidden');
+        }
+      });
+    });
+  </script>
+
+    
+
+
+
 </body>
 
 </html>

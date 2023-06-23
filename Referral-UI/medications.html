@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#0D87E2" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@100&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css" />
+    <!-- select -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-multiselect.min.css" />
+
+    <!-- datepicker -->
+    <link type="text/css" href="css/daterangepicker.css" />
+
+    <!-- Custom css -->
+
+    <link rel="stylesheet" type="text/css" href="css/common/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/referral/referral.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive/responsive.css" />
+
+    <!-- Bootstrap js -->
+
+    <!-- custom css -->
+
+    <title>Kantime | Referral</title>
+</head>
+
+<body style="width: 1366px; margin: auto;">
+    <header>
+        <nav class="">
+            <div class="">
+                <img src="images/nav.svg" style="width: 100%" />
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="px-30 py-10">
+            <div>
+                <div class="breadcrumb-container">
+                    <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="#">Client Intake List</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                John Doe
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="d-flex justify-content-between">
+                    <h1>New Intake Info</h1>
+                    <div class="icon-container d-flex gap-3">
+                        <img src="images/Help.svg" alt="help-icon" />
+                        <img src="images/Mail.svg" alt="mail-icon" />
+                        <img src="images/Duplicate.svg" alt="duplicate-icon" />
+                        <img src="images/message.svg" alt="message-icon" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white border-color mt-10 radius-4 mb-20">
+                <div class="p-20 position-relative">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="d-flex gap-25 align-items-center">
+                            <div class="profile-box d-flex justify-content-center align-items-center">
+                                <img src="images/avatar.svg" alt="user profile picture" />
+                                <img src="images/camera.svg" alt="upload icon" class="upload" type="button"
+                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Upload Picture" />
+                            </div>
+                            <div class="d-flex flex-column">
+                                <p class="patient-title mb-15">John Doe</p>
+                                <div class="d-flex gap-20 mb-20">
+                                    <div>
+                                        <img src="images/Phone.svg" alt="phone icon" class="info-icon" />
+                                        <span class="info-icon-label">Call</span>
+                                    </div>
+                                    <div>
+                                        <img src="images/Email.svg" alt="mail icon" class="info-icon" />
+                                        <span class="info-icon-label">Email</span>
+                                    </div>
+                                    <div>
+                                        <img src="images/mappin.svg" alt="map pin icon" class="info-icon" />
+                                        <span class="info-icon-label">Address</span>
+                                    </div>
+                                </div>
+                                <div class="status-tag status-red align-self-lg-start">
+                                    <p>Conditionally accepted</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex" style="gap: 108px">
+                            <div class="d-flex flex-column">
+                                <div class="info-box">
+                                    <p class="info-title">LOB :</p>
+                                    <p class="info-description">Occupational Physiotherapy</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Primary Payer :</p>
+                                    <p class="info-description">Richard Parker</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Location :</p>
+                                    <p class="info-description">New York, USA</p>
+                                </div>
+
+                            </div>
+                            <div class="">
+                                <div class="info-box">
+                                    <p class="info-title">Intake Date :</p>
+                                    <p class="info-description">01/03/1998</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Requested SOC Date :</p>
+                                    <p class="info-description">10/29/1999</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">DOB :</p>
+                                    <p class="info-description">10/29/1999</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column justify-content-between user-profile-dropdown">
+                            <div class="dropdown ms-3" style="margin-left: 133px !important;">
+                                <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">Logs</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">Print</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">Email</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#add-initial-order" class="dropdown-item">Initial Order</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">More Options</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item red-text">Delete</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="" style="margin-top: 54px;">
+                                <div class="d-flex justify-content-end align-items-center gap-10">
+                                    <a href="duplicate-record.html" id="check-duplicate"
+                                        class="btn btn-primary ms-3">Admit</a>
+                                    <a href="#" class="btn btn-outline-primary">Non-Admit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-section">
+
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="patient-information.html" role="tab"
+                                aria-controls="general" aria-selected="false">General</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="payer-source-eligibility.html" role="tab"
+                                aria-controls="eligibility" aria-selected="false">Payer source & eligibility</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="clinical.html" role="tab" aria-controls="clinical"
+                                aria-selected="false">Clinical</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="medications.html" role="tab" aria-controls="medications"
+                                aria-selected="true">Medications</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="clinician.html" role="tab" aria-controls="clinicains"
+                                aria-selected="false">Clinicains</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="initial-schedule.html" role="tab" aria-controls="schedule"
+                                aria-selected="false">Initial Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="form.html" role="tab" aria-controls="form"
+                                aria-selected="false">Form</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="journal-note.html" role="tab" aria-controls="journal"
+                                aria-selected="false">Journal Note</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cop.html" role="tab" aria-controls="COP"
+                                aria-selected="false">COP</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white">
+                <div class="m-20">
+                    <div class="pt-20 pb-10 d-flex justify-content-between align-items-center border-bottom">
+                        <div class="d-flex gap-10 align-items-center">
+                            <div class="tab-content-heading">Payer source & eligibility</div>
+                            <div class="d-flex align-items-center">
+                                <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px">
+                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-new-medication"
+                                    class="text-decoration-none f-600 f-13 lh-17">Add new</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-10">
+                            <p class="save-time">Last saved 2 mins ago</p>
+                            <button class="btn btn-tertiary">Save</button>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end pt-20 pb-10">
+                        <div class="d-flex gap-10">
+                            <button class="btn btn-tertiary">
+                                <img src="images/sort-icon.svg" alt="sort icon">
+                                Sort Medication
+                            </button>
+                            <div class="dropdown medication ms-3">
+                                <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">Audit</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">Print</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">Export</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <table class="table table-hover table-type-1" id="medication-and-dosage-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 208px;">
+                                    <input class="form-check-input" type="checkbox" value="" id=""><span>Medication &
+                                        Dosage</span>
+                                </th>
+                                <th>Route</th>
+                                <th>Frequency/Administration</th>
+                                <th>Classification Purpose</th>
+                                <th>Code</th>
+                                <th>Start Date</th>
+                                <th>D/c Date</th>
+                                <th style="width: 100px;">D/c Time</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr style="width: 208px;">
+                                <td class="d-flex">
+                                    <input class="form-check-input treatment-address-checkbox" type="checkbox" value=""
+                                        id="">
+                                    <div class="d-flex flex-column gap-2">
+                                        <p class="notice">A.E.R Witch hazel towelette 50% topical pad</p>
+                                        <p class="disclaimer f-13">1000 units</p>
+                                        <div class="d-flex gap-20">
+                                            <img src="images/discontinued.svg" alt="discontinued">
+                                            <img src="images/risk.svg" alt="high risk">
+                                            <img src="images/antibiotic.svg" alt="pills">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>2 teaspoons every 4-6 hrs as needed for cough</td>
+                                <td>
+                                    <span><span class="notice">Frequency: </span>Twice</span><br>
+                                    <span><span class="notice">Administration: </span>PRN/as needed</span>
+                                </td>
+                                <td>Handed Over the patient report to physician</td>
+                                <td>12</td>
+                                <td>03/30/2023</td>
+                                <td>03/30/2023</td>
+                                <td>16:00 PM</td>
+                                <td>
+                                    <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="d-flex">
+                                    <input class="form-check-input treatment-address-checkbox" type="checkbox" value=""
+                                        id="">
+                                    <div class="d-flex flex-column gap-2">
+                                        <p class="notice">A.E.R Witch hazel towelette 50% topical pad</p>
+                                        <p class="disclaimer f-13">1000 units</p>
+                                        <div class="d-flex gap-20">
+                                            <img src="images/discontinued.svg" alt="discontinued">
+                                            <img src="images/risk.svg" alt="high risk">
+                                            <img src="images/antibiotic.svg" alt="pills">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>2 teaspoons every 4-6 hrs as needed for cough</td>
+                                <td>
+                                    <span><span class="notice">Frequency: </span>Twice</span><br>
+                                    <span><span class="notice">Administration: </span>PRN/as needed</span>
+                                </td>
+                                <td>Handed Over the patient report to physician</td>
+                                <td>12</td>
+                                <td>03/30/2023</td>
+                                <td>03/30/2023</td>
+                                <td>16:00 PM</td>
+                                <td>
+                                    <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="d-flex">
+                                    <input class="form-check-input treatment-address-checkbox" type="checkbox" value=""
+                                        id="">
+                                    <div class="d-flex flex-column gap-2">
+                                        <p class="notice">A.E.R Witch hazel towelette 50% topical pad</p>
+                                        <p class="disclaimer f-13">1000 units</p>
+                                        <div class="d-flex gap-20">
+                                            <img src="images/discontinued.svg" alt="discontinued">
+                                            <img src="images/risk.svg" alt="high risk">
+                                            <img src="images/antibiotic.svg" alt="pills">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>2 teaspoons every 4-6 hrs as needed for cough</td>
+                                <td>
+                                    <span><span class="notice">Frequency: </span>Twice</span><br>
+                                    <span><span class="notice">Administration: </span>PRN/as needed</span>
+                                </td>
+                                <td>Handed Over the patient report to physician</td>
+                                <td>12</td>
+                                <td>03/30/2023</td>
+                                <td>03/30/2023</td>
+                                <td>16:00 PM</td>
+                                <td>
+                                    <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="d-flex">
+                                    <input class="form-check-input treatment-address-checkbox" type="checkbox" value=""
+                                        id="">
+                                    <div class="d-flex flex-column gap-2">
+                                        <p class="notice">A.E.R Witch hazel towelette 50% topical pad</p>
+                                        <p class="disclaimer f-13">1000 units</p>
+                                        <div class="d-flex gap-20">
+                                            <img src="images/discontinued.svg" alt="discontinued">
+                                            <img src="images/risk.svg" alt="high risk">
+                                            <img src="images/antibiotic.svg" alt="pills">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>2 teaspoons every 4-6 hrs as needed for cough</td>
+                                <td>
+                                    <span><span class="notice">Frequency: </span>Twice</span><br>
+                                    <span><span class="notice">Administration: </span>PRN/as needed</span>
+                                </td>
+                                <td>Handed Over the patient report to physician</td>
+                                <td>12</td>
+                                <td>03/30/2023</td>
+                                <td>03/30/2023</td>
+                                <td>16:00 PM</td>
+                                <td>
+                                    <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+
+                    <div class="d-flex">
+                        <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px">
+                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-new-medication"
+                            class="text-decoration-none f-600 f-13 lh-17">Add new</a>
+                    </div>
+
+                    <nav aria-label="Page navigation example" class="py-20">
+                        <ul class="pagination justify-content-end">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <img src="images/previous-icon.svg" alt="multiple previous button">
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <img src="images/back_arrow.svg" alt="Previous button">
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">3</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">4</a>
+                            </li>
+                            <span class="" style="margin-top: 5px">•••</span>
+                            <li class="page-item">
+                                <a class="page-link" href="#">8</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <img src="images/next_arrow.svg" alt="next button">
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <img src="images/next-icon.svg" alt="multiple next button">
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+        <!-- POPUPS -->
+
+        <!-- ADD NEW MEDICATION -->
+        <!-- add-new-medication-popup -->
+        <div class="modal" tabindex="-1" id="add-new-medication">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-greyBlue">
+                        <h5 class="modal-title Pinfo color-darkblue">
+                            Add New Medication
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="bg-greybox border-color radius-4 col-12 mb-20">
+                            <div class="col-7 d-flex justify-content-between">
+                                <div>
+                                    <span class="text-title">Client: </span>
+                                    <span class="text-description">Client Name (2045)</span>
+                                </div>
+                                <div>
+                                    <span class="text-title">SOC :</span>
+                                    <span class="text-description">05/21/2022</span>
+                                </div>
+                                <div>
+                                    <span class="text-title">Physician :</span>
+                                    <span class="text-description">Physician Name</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-color mb-20">
+                            <div class="p-15 d-grid grid-line align-items-center bg-lightGrey">
+                                <p class="tab-heading">Medication Details</p>
+                                <hr class="modal-line" style="background-color: #DCDCDC;">
+                            </div>
+                            <div class="m-3">
+                                <div class="row col-6">
+                                    <div class="input-group position-relative mb-3">
+
+                                        <input type="text" class="form-control search-icon " placeholder="Search"
+                                            aria-label="Text input with dropdown button">
+                                        <img src="images/lens.svg" alt="search lens"
+                                            class="search-bar-icon position-absolute">
+                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">Medication</button>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="row col-10">
+                                    <div class="col-4 mb-20">
+                                        <label class="form-label" for="start-date">Start Date</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control input-item" id="start-date"
+                                                placeholder="01/02/1998">
+                                            <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4 mb-20">
+                                        <label class="form-label" for="dc-date">D/C date</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control input-item" id="dc-date"
+                                                placeholder="Select Date">
+                                            <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4 mb-20">
+                                        <label class="label" for="dc-time">D/C Time</label>
+                                        <input type="text" class="form-control input-item" id="dc-time"
+                                            placeholder="Enter" aria-label="dc time">
+                                    </div>
+                                </div>
+
+
+                                <div class="row col-12">
+                                    <div class="col-4">
+                                        <label class="label" for="medication-classification">Classification</label>
+                                        <select class="single-select input-item" aria-label="Classification"
+                                            id="medication-classification">
+                                            <option class="d-none" disabled selected>Select</option>
+                                            <option value="1">List 1</option>
+                                            <option value="2">List 2</option>
+                                            <option value="3">List 3</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-8 mb-20">
+                                        <p class="label v-none">hidden</p>
+                                        <div class="d-flex gap-3">
+                                            <div class="border-color px-15 py-9">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="antibiotic-medication">
+                                                    <label class="form-check-label" for="antibiotic-medication">
+                                                        Antibiotic
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="border-color px-15 py-9">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="high-risk-medication">
+                                                    <label class="form-check-label" for="high-risk-medication">
+                                                        High Risk
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="border-color px-15 py-9">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="high-risk-medication">
+                                                    <label class="form-check-label" for="high-risk-medication">
+                                                        PT/PCG Manages Medication
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row col-12">
+                                    <div class="col-4 mb-20">
+                                        <label class="label" for="medication-prescription">Prescription #</label>
+                                        <input type="text" class="form-control input-item" id="medication-prescription"
+                                            placeholder="Enter" aria-label="Prescription">
+                                    </div>
+
+                                    <div class="col-8 mb-20">
+                                        <p class="label">Code</p>
+                                        <div class="d-flex gap-3">
+                                            <div class="border-color px-15 py-9">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="code-new-n">
+                                                    <label class="form-check-label" for="code-new-n">
+                                                        New(N)
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="border-color px-15 py-9">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="changed-c">
+                                                    <label class="form-check-label" for="changed-c">
+                                                        Changed(C)
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="border-color px-15 py-9">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="long-standing-ls">
+                                                    <label class="form-check-label" for="long-standing-ls">
+                                                        Long Standing (LS)
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row col-12">
+                                    <div class="col-4 mb-20">
+                                        <div class="d-flex justify-content-between">
+                                            <label class="label" for="medication-frequency">Frequency</label>
+                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                data-bs-target="#add-new-frequency" class="link-blue">Add</a>
+                                        </div>
+                                        <select class="single-select input-item" aria-label="Default select example"
+                                            id="medication-frequency">
+                                            <option selected>Select</option>
+                                            <option value="2">Agency 1</option>
+                                            <option value="2">Agency 2</option>
+                                            <option value="2">Agency 3</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-4 mb-20">
+                                        <label class="label" for="medication-purpose">Purpose</label>
+                                        <input type="text" class="form-control input-item" id="medication-purpose"
+                                            placeholder="Enter" aria-label="States">
+                                    </div>
+
+                                </div>
+
+                                <div class="row col-10">
+                                    <div class="col-4 mb-20">
+                                        <label class="label" for="medication-dosage">Dosage</label>
+                                        <input type="text" class="form-control input-item" id="medication-dosage"
+                                            placeholder="Enter" aria-label="Dosage">
+                                    </div>
+
+                                    <div class="col-4 mb-20">
+                                        <div class="d-flex justify-content-between">
+                                            <label class="label" for="medication-route">Route</label>
+                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                data-bs-target="#add-new-route" class="link-blue">Add</a>
+                                        </div>
+                                        <select class="single-select input-item" aria-label="Default select example"
+                                            id="medication-route">
+                                            <option selected>Select</option>
+                                            <option value="2">Agency 1</option>
+                                            <option value="2">Agency 2</option>
+                                            <option value="2">Agency 3</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-4">
+                                        <label class="label" for="medication-effectiveness">Effectiveness</label>
+                                        <select class="single-select input-item" aria-label="location"
+                                            id="medication-effectiveness">
+                                            <option class="d-none" disabled selected>Select</option>
+                                            <option value="1">List 1</option>
+                                            <option value="2">List 2</option>
+                                            <option value="3">List 3</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-4 mb-20">
+                                        <div class="d-flex justify-content-between">
+                                            <label class="label" for="medication-teaching">Medication Teaching</label>
+                                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#"
+                                                class="link-blue">Add</a>
+                                        </div>
+                                        <select class="single-select input-item" aria-label="Default select example"
+                                            id="medication-teaching">
+                                            <option selected>Select</option>
+                                            <option value="2">Agency 1</option>
+                                            <option value="2">Agency 2</option>
+                                            <option value="2">Agency 3</option>
+                                        </select>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="col-5">
+                                    <div class=" border-color bg-white py-10 px-15 radius-4 mb-20">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="medication-teaching">
+                                            <label class="send" for="medication-teaching">
+                                                Require medication Teaching Documentation in Visits
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+
+                        </div>
+
+                        <div class="border-color mb-20">
+                            <div class="p-15 d-grid grid-line align-items-center bg-lightGrey">
+                                <p class="tab-heading">Administration Details</p>
+                                <hr class="modal-line" style="background-color: #DCDCDC;">
+                            </div>
+                            <div class="m-3 ">
+                                <div class="row col-10">
+                                    <div class="col-6 mb-20">
+                                        <p class="label">Administration</p>
+                                        <div class="d-flex gap-3">
+                                            <div class="radio-box">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="admin"
+                                                        id="pnr-as-needed" value="PNR/As Needed">
+                                                    <label class="form-check-label" for="pnr-as-needed">
+                                                        PNR/As Needed
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="radio-box">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="admin"
+                                                        id="planned-date-and-time" value="planned">
+                                                    <label class="form-check-label" for="planned-date-and-time">Planned
+                                                        Date and Time</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row col-12 admin-pattern hidden mb-20">
+                                    <div class="col-4">
+                                        <label class="label" for="planned-pattern">Pattern</label>
+                                        <select class="single-select input-item" aria-label="location"
+                                            id="planned-pattern">
+                                            <option class="d-none" disabled selected>Select</option>
+                                            <option value="1">Every Other Day</option>
+                                            <option value="2">Every Week</option>
+                                            <option value="3">Every Other Week</option>
+                                            <option value="3">Every Month</option>
+                                            <option value="3">Every Other Month</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="medicare-time">Time</label>
+                                    <input type="text" class="form-control input-item" id="medicare-time"
+                                        placeholder="Please enter comma seperated Planned Times" aria-label="time">
+                                </div>
+
+                                <div>
+
+                                    <p class="f-14 f-500 lh-19 mb-10">Drug Interactions</p>
+                                    <table class="table table-type-1" id="drug-interation-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Drug</th>
+                                                <th>Interactions</th>
+                                                <th>Type/Severity</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    Multivitamin With Minerals
+                                                </td>
+                                                <td>
+                                                    Iron absorption is inhibited by eggs and milk...
+                                                </td>
+                                                <td>
+                                                    Drug-Food/ N/A
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div>
+
+                                    <p class="f-14 f-500 lh-19 mb-10">Drug Side Effects</p>
+                                    <table class="table table-type-1" id="drug-side-effect-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Drug</th>
+                                                <th>Side Effects</th>
+
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    Multivitamin With Minerals
+                                                </td>
+                                                <td>
+                                                    Iron absorption is inhibited by eggs and milk lorem ipsum
+                                                </td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="p-20 bg-lightBlue">
+                            <div>
+                                <p class="f-600 f-15 lh-19 mb-10">Newly Added Medicine</p>
+                                <ul>
+                                    <li class="">APL 10,000 unites intramuscular injection</li>
+                                    <li class="">Alfa benzo oxilate tablets 10,000 unites intramuscular injection
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-tertiary" data-bs-toggle="modal"
+                            data-bs-target="#drug-interaction-side-effect">Drug injection </button>
+                        <a href="#" class="btn btn-primary btn-modal-submit ms-3">Assign</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ADD NEW MEDICATION END -->
+
+
+
+
+
+
+        <!-- ADD NEW FREQUENCY POPUP -->
+        <div class="modal" tabindex="-1" id="add-new-frequency">
+            <div class="modal-dialog custom-modal-3 modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-greyBlue">
+                        <h5 class="modal-title Pinfo color-darkblue">Add New Frequency</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex flex-column mb-1">
+                            <label class="label add-text" for="new-frequency">New Frequency</label>
+                            <input type="text" class="form-control input-item" id="new-frequency"
+                                placeholder="Enter new Frequency" aria-label="Frequency" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ADD NEW FREQUENCY POPUP END -->
+
+
+        <!-- ADD NEW ROUTE POPUP -->
+        <div class="modal" tabindex="-1" id="add-new-route">
+            <div class="modal-dialog custom-modal-3 modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-greyBlue">
+                        <h5 class="modal-title Pinfo color-darkblue">Add New Route</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex flex-column mb-1">
+                            <label class="label add-text" for="new-route">New Route</label>
+                            <input type="text" class="form-control input-item" id="new-route"
+                                placeholder="Enter new Route" aria-label="Route" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ADD NEW FREQUENCY POPUP END -->
+
+        <!-- DRUG INTERACTION AND SIDE EFFECTS -->
+        <!-- drug-interaction-side-effect -->
+        <div class="modal" tabindex="-1" id="drug-interaction-side-effect">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-greyBlue">
+                        <h5 class="modal-title Pinfo color-darkblue">Drug interactions and side effects</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="bg-greybox border-color radius-4 col-12 mb-20">
+                            <div class=" d-flex justify-content-between">
+                                <div>
+                                    <span class="text-title">Client: </span>
+                                    <span class="text-description">Client Name (2045)</span>
+                                </div>
+                                <div>
+                                    <span class="text-title">SOC :</span>
+                                    <span class="text-description">05/21/2022</span>
+                                </div>
+                                <div>
+                                    <span class="text-title">Physician :</span>
+                                    <span class="text-description">Physician Name</span>
+                                </div>
+                                <div>
+                                    <span class="text-title">Episode Periode :</span>
+                                    <span class="text-description">10</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="mb-20">
+                            <div class="col-12 mb-15">
+                                <div class="form-check col-12">
+                                    <input class="form-check-input" type="radio" name="days" id="side-effect-days">
+                                    <label class="form-check-label" for="side-effect-days">
+                                        Days
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="d-grid grid-box">
+                                <div class="form-check mb-10">
+                                    <input class="form-check-input" type="checkbox" value="" id="drug-interaction">
+                                    <label class="form-check-label" for="drug-interaction">
+                                        Drug Interaction
+                                    </label>
+                                </div>
+
+                                <div class="form-check mb-10">
+                                    <input class="form-check-input" type="checkbox" value="" id="duplicate-medications">
+                                    <label class="form-check-label" for="duplicate-medications">
+                                        Duplicate Medications
+                                    </label>
+                                </div>
+
+                                <div class="form-check mb-10">
+                                    <input class="form-check-input" type="checkbox" value="" id="hide-discontinued">
+                                    <label class="form-check-label" for="hide-discontinued">
+                                        Hide Discontinued Medication details
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="hide-interaction">
+                                    <label class="form-check-label" for="hide-interaction">
+                                        Hide Interaction Details
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="drug-side-effects">
+                                    <label class="form-check-label" for="drug-side-effects">
+                                        Drug Side Effects
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="drug-allergies">
+                                    <label class="form-check-label" for="drug-allergies">
+                                        Drug & Cross Reactive Allergies
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-4 mb-20">
+                                <label class="label" for="type-severity">Type/Severity</label>
+                                <select class="single-select input-item" aria-label="severity" id="type-severity">
+                                    <option class="d-none" disabled selected>Select</option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="f-14 f-500 lh-19 mb-10">Drug Medication</p>
+                                    <img src="images/up-arrow.svg" alt="up arrow">
+                                </div>
+                                <table class="table table-type-1" id="drug-medication-table">
+                                    <thead>
+                                        <tr style="background-color: #FCEDD0;">
+                                            <th>Drug</th>
+                                            <th>Description</th>
+
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Drug Name
+                                            </td>
+                                            <td>
+                                                Description goes here...
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="f-14 f-500 lh-19 mb-10">Drug Interaction</p>
+                                    <img src="images/up-arrow.svg" alt="up arrow">
+                                </div>
+                                <table class="table table-type-1" id="drug-interaction-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Drug</th>
+                                            <th>Interaction</th>
+                                            <th>Type/Severity</th>
+
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                               Multivitamin with Minerals
+                                            </td>
+                                            <td>
+                                                Iron absorption is inhibited by eggs and milk... 
+                                            </td>
+                                            <td>
+                                                Drug-Food/N/A
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="f-14 f-500 lh-19 mb-10">Drug Interaction</p>
+                                    <img src="images/up-arrow.svg" alt="up arrow">
+                                </div>
+                                <table class="table table-type-1" id=" ">
+                                    <thead>
+                                        <tr>
+                                            <th>Drug</th>
+                                            <th>Side Effects</th>
+                                           
+
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                               Multivitamin with Minerals
+                                            </td>
+                                            <td>
+                                                Adverse Reactions See Individual agent... 
+                                            </td>
+                            
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+
+
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-primary btn-modal-submit ms-3">Print</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- DRUG INTERACTION AND SIDE EFFECTS END -->
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-multiselect.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- bootstrap js-->
+    <!-- <script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+
+    <!-- datepicker js-->
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('input[name="admin"]').change(function () {
+                if ($(this).val() === 'planned') {
+                    $('.admin-pattern').removeClass('hidden');
+                } else {
+                    $('.admin-pattern').addClass('hidden');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

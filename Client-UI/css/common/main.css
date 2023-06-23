@@ -151,11 +151,6 @@
     margin-bottom: 30px;
 }
 
-.my-20{
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
 .gap-10 {
     gap: 10px;
 }
@@ -617,7 +612,7 @@ item:active {
     line-height: 20px;
     letter-spacing: 0em;
     color: #fff;
-    padding: 3px 7px;
+    padding: 5px;
 }
 
 .tooltip-arrow::before {
