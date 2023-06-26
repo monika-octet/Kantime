@@ -1200,3 +1200,62 @@ h3 {
     color: #0D87E2;
     background-color: #F0F7FC;
 }
+
+span.client-status {
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
+    display: block;
+    margin: auto 5px auto 0;
+}
+
+span.client-status.active {
+    background-color: #86CC4B;
+}
+
+span.client-status.transferred {
+    background-color: #0747A6;
+}
+
+span.client-status.on-hold {
+    background-color: #AFA3F6;
+}
+
+span.client-status.discharged {
+    background-color: #868C97;
+}
+
+span.client-status.EOE {
+    background-color: #FFBA3F;
+}
+
+.client-option {
+    margin-top: 12px;
+}
+
+.fix {
+    position: sticky;
+    left: 0;
+}
+
+.outer {
+    position: relative;
+}
+.outer table td{
+    background-color: #fff;
+} 
+.outer table th:first-child, .outer table td:first-child{
+     border-right: 1px solid #EFEFEF;
+}
+.outer table tr{
+    border: 0;
+    border-top: 1px solid #EFEFEF;
+    border-bottom: 1px solid #EFEFEF;
+}
+.inner {
+    overflow: scroll;
+    width: 1244px;
+    height:400px;
+    border-left: 1px solid #EFEFEF;
+    border-right: 1px solid #EFEFEF;
+}
