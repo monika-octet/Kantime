@@ -80,7 +80,9 @@
 
                         </div>
                         <div class="col-8 d-flex justify-content-end">
-                            <div><a href="javascript:void(0);" class="btn btn-outline-primary" id="openAdvanceFilterButton">Advance Filter</a></div>
+                            <div><a href="javascript:void(0);" data-bs-toggle="modal"
+                                    data-bs-target="#openAdvanceFilterButton" class="btn btn-outline-primary">Advance
+                                    Filter</a></div>
                             <div class="d-flex flex-column justify-content-between user-profile-dropdown">
                                 <div class="dropdown ms-3">
                                     <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom"
@@ -156,14 +158,30 @@
 
         <div class="px-30 py-10">
             <div class="bg-white p-30 mt-10 rounded-2 d-flex flex-column gap-20 border-color">
-                <div class="d-flex align-items-center gap-3 mb-10 delete-box">
-                    <p>Applied filters :</p>
-                    <div class="filter-values">
-                        <ul>
-                            <li>Attending physician: David Doe<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></li>
-                            <li>Primary care physician: Jacob Jones, Cameron Williamson<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></li>
-                        </ul>
+                <div class="d-flex align-items-center justify-content-space-between gap-3 mb-10 delete-box">
+                    <div class="d-flex">
+                        <p class="m-auto">Applied filters :</p>
+                        <div class="filter-values">
+                            <ul>
+                                <li class="d-flex">
+                                    <p>Attending physician: David Doe</p><button type="button" class="btn-close"
+                                        data-bs-dismiss="modal" aria-label="Close"></button>
+                                </li>
+                                <li class="d-flex">
+                                    <p>Primary care physician: Jacob Jones, Cameron Williamson</p><button type="button"
+                                        class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
+                    <div class="d-flex">
+                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#manageColumnsButton"
+                            class="d-flex btn btn-outline-primary"><img class="mr-5" src="images/Vector.svg" />
+                            <p>Manage columns</p>
+                        </a>
+                        <p class="mtb-auto">Total records : 52</p>
+                    </div>
+
                 </div>
                 <div class="outer">
                     <div class="inner">
@@ -174,7 +192,7 @@
                                         <input class="form-check-input" type="checkbox" value="" id="" /><span
                                             class="ml-20">Client</span>
                                     </th>
-                                    <th class="w-100px">Clients Status</th>
+                                    <th class="w-150px">Clients Status</th>
                                     <th class="w-120px">Payer Source</th>
                                     <th class="w-150px">LOB</th>
                                     <th class="w-150px">Phone</th>
@@ -521,8 +539,8 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <div class="d-flex"><span class="client-status transferred"></span>
-                                            <p class="notice">Transferred</p>
+                                        <div class="d-flex"><span class="client-status inactive"></span>
+                                            <p class="notice">Inactive</p>
                                         </div>
                                     </td>
                                     <td>Avi Insurance</td>
@@ -584,8 +602,8 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <div class="d-flex"><span class="client-status on-hold"></span>
-                                            <p class="notice">On Hold</p>
+                                        <div class="d-flex"><span class="client-status non-admit"></span>
+                                            <p class="notice">Non Admit</p>
                                         </div>
                                     </td>
                                     <td>Avi Insurance</td>
@@ -647,8 +665,8 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <div class="d-flex"><span class="client-status discharged"></span>
-                                            <p class="notice">Discharged</p>
+                                        <div class="d-flex"><span class="client-status pending-SOC"></span>
+                                            <p class="notice">Pending SOC</p>
                                         </div>
                                     </td>
                                     <td>Avi Insurance</td>
@@ -710,8 +728,8 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <div class="d-flex"><span class="client-status EOE"></span>
-                                            <p class="notice">EOE</p>
+                                        <div class="d-flex"><span class="client-status recent-due"></span>
+                                            <p class="notice">Recent Due</p>
                                         </div>
                                     </td>
                                     <td>Avi Insurance</td>
@@ -920,20 +938,200 @@
             </div>
         </div>
     </div>
-    <!-- <div class="modal show" tabindex="-1" id="advanceFilterPopup" aria-modal="true" role="dialog"
-       >
-        <div class="modal-dialog custom-modal-1 modal-dialog-centered" id="advanceFilterPopupContent">
+    <div class="modal show" tabindex="-1" id="manageColumnsButton" aria-modal="true" role="dialog"
+        style="display: none;">
+        <div class="modal-dialog custom-modal-1 modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-greyBlue">
-                    <h5 class="modal-title Pinfo color-darkblue">Clinician Status</h5>
+                    <h5 class="modal-title Pinfo color-darkblue">Manage Columns</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body checkbox-list-wrap">
+                <div class="modal-body d-flex">
+
+                    <div class="col-6">
+                        <div class="popup-content-wrap mr-5">
+                            <div class="tab-content-heading"> Available</div>
+                            <ul class="manage-columns">
+                                <li>Reasons</li>
+                                <li>Description</li>
+                                <li>SOC Clinician</li>
+                                <li>Eligible</li>
+                                <li>Authorization</li>
+                                <li>F2F</li>
+                                <li>DOC Recieved</li>
+                                <li>DOC Recieved</li>
+                                <li>DOC Recieved</li>
+                                <li>DOC Recieved</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="popup-content-wrap ml-5">
+                            <div class="tab-content-heading"> In Use</div>
+                            <ul class="manage-columns">
+                                <li class="default-column">Client</li>
+                                <li class="default-column">Intake Date</li>
+                                <li class="default-column">Physician Referral Date</li>
+                                <li class="default-column">Payer</li>
+                                <li class="default-column">Notes</li>
+                                <li class="default-column">Follow Up Date</li>
+                                <li class="remove-column">Checklist</li>
+                                <li class="remove-column">Initial Visit</li>
+                                <li class="remove-column">DOC Recieved</li>
+                                <li class="remove-column">DOC Recieved</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-end align-items-center">
+                        <a href="#" class="btn btn-outline-primary btn-modal-set-default">Cancel</a>
+                        <a href="#" class="btn btn-primary btn-modal-submit ms-3">Apply</a>
+                    </div>
 
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
+    <div class="modal show slide-popup-right" tabindex="-1" id="openAdvanceFilterButton" aria-modal="true" role="dialog">
+        <div class="modal-dialog custom-modal-1 modal-dialog-centered" id="advanceFilterPopupContent">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Advance Filter</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        <div class="search w-100 mb-20">
+                            <input type="text" placeholder="Search" class="search-input w-100">
+                            <img src="images/lens.svg" alt="search lens" class="lens">
+                        </div>
+                        <div class="gap-20 mb-20">
+                            <div class="w-100 mb-20">
+                                <label class="label" for="attending-physician">Attending Physician</label>
+                                <select class="single-select input-item" aria-label="location" id="attending-physician">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="primary-care-physician">Primary care physician</label>
+                                <select class="single-select input-item" aria-label="location" id="primary-care-physician">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Attending Physician</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Attending Physician</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Attending Physician</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Attending Physician</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Attending Physician</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Attending Physician</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Attending Physician</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Attending Physician</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-end align-items-center">
+                        <a href="#" class="btn btn-outline-primary btn-modal-set-default">Cancel</a>
+                        <a href="#" class="btn btn-primary btn-modal-submit ms-3">Apply</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- JavaScript -->
