@@ -151,6 +151,10 @@
     margin-bottom: 30px;
 }
 
+.mx-20{
+    margin-left: 20px;
+    margin-right: 20px;
+}
 .my-20{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -635,7 +639,7 @@ item:active {
 }
 
 .input-textarea{
-    padding: 15px 20px;
+    padding: 10px 15px;
     border: 1px solid #ECEDEF;
     border-radius: 4px;
 }

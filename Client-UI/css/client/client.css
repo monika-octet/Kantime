@@ -400,6 +400,20 @@ h3 {
     border-top: none;
 }
 
+.user-admit-number .dropdown-toggle::after{
+    content: url(../../images/dropdown-arrow-down.svg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-top: none;
+    left: -1px;
+    top: -1px;
+
+}
+
+
+
+
 #duplicate-list .dropdown-toggle::after:hover {
     background-color: #EFEFEF;
 }
@@ -1297,4 +1311,20 @@ span.client-status.EOE {
     width: 300px;
     transform: translate(-100%, -50%);
     transition: transform 0.3s ease-in-out;
+}
+
+#src-referral-source-type-facilit,
+#src-referral-source-type-other{
+    display: none;
+}
+
+.icon-box{
+    width:16px;
+    height: 16px;
+    background-color: #F4F5F6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0;
 }
