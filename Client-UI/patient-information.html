@@ -439,71 +439,187 @@
                                 <div class="details-container">
                                     <div class="border-color mb-20" id="basic-details">
                                         <div class="p-3 d-grid grid-line align-items-center bg-lightBlue">
-                                            <p class="tab-heading">Basic Details</p>
+                                            <div class="d-flex">
+                                                <p class="tab-heading">Patient Details</p>
+                                                <div class="d-flex">
+                                                    <img src="images/edit-icon.svg" alt="edit icon"
+                                                        style="width: 18px; height: 18px">
+                                                    <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                        data-bs-target="#patient-information-popup"
+                                                        class="text-decoration-none f-600 f-13 lh-17">Edit</a>
+                                                </div>
+                                            </div>
+
                                             <hr class="modal-line" />
                                         </div>
                                         <div class="p-3 bg-white container">
                                             <div class="row col-12">
                                                 <div class="col-4 mb-20">
-                                                    <label class="label" for="f-name-Pinfo">First name</label>
-                                                    <div class="input-group custom-dropdown">
-                                                        <button class="btn btn-outline-secondary dropdown-toggle"
-                                                            type="button" data-bs-toggle="dropdown"
-                                                            aria-expanded="false">
-                                                            Mr
-                                                        </button>
-                                                        <ul class="dropdown-menu">
-                                                            <li>
-                                                                <a class="dropdown-item" href="#">Mr</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="dropdown-item" href="#">Mrs</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="dropdown-item" href="#">Ms</a>
-                                                            </li>
-                                                        </ul>
-                                                        <input type="text" class="form-control input-item"
-                                                            id="f-name-Pinfo" placeholder="Enter first name"
-                                                            aria-label="Text input with dropdown button" />
+                                                    <label class="label" for="patient-info-name">Name</label>
+                                                    <input disabled type="text" class="form-control input-item"
+                                                        id="patient-info-name" placeholder="Enter name"
+                                                        aria-label="name" />
+                                                </div>
+
+                                                <div class="col-4 mb-20">
+                                                    <label class="label" for="patient-info-id">patient-id</label>
+                                                    <input disabled type="text" class="form-control input-item"
+                                                        id="patient-info-id" placeholder="Enter name"
+                                                        aria-label="name" />
+                                                </div>
+
+                                                <div class="col-4 mb-20">
+                                                    <div class="d-flex justify-content-between">
+                                                        <label class="label"
+                                                            for="patient-info-loaction">Location</label>
+                                                        <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                            data-bs-target="#" class="link-blue">Change</a>
+                                                    </div>
+                                                    <select disabled class="single-select input-item"
+                                                        aria-label="Default select example" id="patient-info-loaction">
+                                                        <option selected>Jinisha</option>
+                                                        <option value="2">Agency 1</option>
+                                                        <option value="2">Agency 2</option>
+                                                        <option value="2">Agency 3</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-4 mb-20">
+                                                    <label class="label" for="patient-info-status">Status</label>
+                                                    <select disabled class="single-select input-item"
+                                                        aria-label="location" id="patient-info-status">
+                                                        <option class="d-none" disabled selected>Active</option>
+                                                        <option value="1">List 1</option>
+                                                        <option value="2">List 2</option>
+                                                        <option value="3">List 3</option>
+                                                    </select>
+                                                </div>
+
+
+
+
+
+                                                <div class="col-4 mb-20">
+                                                    <label class="label" for="patient-info-nickname">Nickname</label>
+                                                    <input disabled type="text" class="form-control input-item" id="patient-info-nickname"
+                                                        placeholder="Enter Nickname" aria-label="last-name" />
+                                                </div>
+
+                                                <div class="col-8 mb-20">
+                                                    <div class="d-flex justify-content-between">
+                                                        <label class="label" for="address-patient-info">Address</label>
+                                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#" class="link-blue">Show in Map</a>
+                                                    </div>
+                                                    <input disabled type="text" class="form-control input-item" id="address-patient-info" placeholder="Line 1" aria-label="address">
+                                                    <input disabled type="text" class="form-control input-item mt-10" id="address-patient-info-1" placeholder="Line 2" aria-label="address 2">
+                                                </div>
+
+                                                <div class="row col-12">
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="patient-details-zip">Zip
+                                                        </label>
+                                                        <input disabled type="text" class="form-control input-item" id="patient-details-zip" placeholder="Enter" aria-label="name" value="12345">
+                                                    </div>
+                    
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="patient-details-city">City
+                                                        </label>
+                                                        <input disabled type="text" class="form-control input-item" id="patient-details-city" placeholder="Enter" aria-label="name" value="Lorem ipsum">
+                                                    </div>
+                    
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="patient-details-state">State
+                                                        </label>
+                                                        <input disabled type="text" class="form-control input-item" id="patient-details-state" placeholder="Enter" aria-label="name" value="New York">
+                                                    </div>
+                    
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="patient-details-CBSA">CBSA
+                                                        </label>
+                                                        <input disabled type="text" class="form-control input-item" id="patient-details-CBSA" placeholder="Enter" aria-label="name" value="10580">
+                                                    </div>
+                    
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="patient-details-country">Country
+                                                        </label>
+                                                        <input disabled type="text" class="form-control input-item" id="patient-details-country" placeholder="Enter country" aria-label="name" value="USA">
                                                     </div>
                                                 </div>
 
-                                                <div class="col-4 mb-20">
-                                                    <label class="label" for="m-name-Pinfo">Middle name</label>
-                                                    <input type="text" class="form-control input-item" id="m-name-Pinfo"
-                                                        placeholder="Enter middle name" aria-label="middle-name" />
-                                                </div>
-
-                                                <div class="col-4 mb-20">
-                                                    <label class="label" for="l-name-Pinfo">Last name</label>
-                                                    <input type="text" class="form-control input-item" id="l-name-Pinfo"
-                                                        placeholder="Enter last name" aria-label="last-name" />
-                                                </div>
-
-                                                <div class="col-4 mb-20">
-                                                    <p class="label">Gender</p>
-                                                    <div class="d-flex gap-3">
-                                                        <div class="radio-box">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio"
-                                                                    name="gender" id="male-Pinfo" value="male" />
-                                                                <label class="form-check-label" for="male-Pinfo">
-                                                                    Male
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="radio-box">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio"
-                                                                    name="gender" id="female-Pinfo" value="female" />
-                                                                <label class="form-check-label" for="female-Pinfo">
-                                                                    Female
-                                                                </label>
-                                                            </div>
-                                                        </div>
+                                                <div class="row col-12">
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="patient-details-latitude">Latitude
+                                                        </label>
+                                                        <input disabled type="text" class="form-control input-item" id="patient-details-latitude" placeholder="Enter latitude" aria-label="name" value="42.14551232">
+                                                    </div>
+                    
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="patient-details-longitude">Longitude
+                                                        </label>
+                                                        <input disabled type="text" class="form-control input-item" id="patient-details-longitude" placeholder="Enter longitude" aria-label="name" value="10480">
                                                     </div>
                                                 </div>
+
+                                                <div class="row col-12">
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="patient-details-phone">Phone
+                                                        </label>
+                                                        <input disabled type="text" class="form-control input-item" id="patient-details-phone" placeholder="Enter phone" aria-label="name" value="+1(XXXX) XXXX-XXXX">
+                                                    </div>
+
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="patient-details-cell">Cell
+                                                        </label>
+                                                        <input disabled type="text" class="form-control input-item" id="patient-details-cell" placeholder="Enter cell" aria-label="name" value="+1(XXXX) XXXX-XXXX">
+                                                    </div>
+
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="patient-details-work-phone">Work Phone
+                                                        </label>
+                                                        <input disabled type="text" class="form-control input-item" id="patient-details-work-phone" placeholder="Enter work phone" aria-label="name" value="+1(XXXX) XXXX-XXXX">
+                                                    </div>
+
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="patient-details-email">Email
+                                                        </label>
+                                                        <input disabled type="email" class="form-control input-item" id="patient-details-email" placeholder="Enter Email" aria-label="name" value="">
+                                                    </div>
+
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="patient-details-DLNO">DL NO.
+                                                        </label>
+                                                        <input disabled type="text" class="form-control input-item" id="patient-details-DLNO" placeholder="Enter DLNO" aria-label="name" value="">
+                                                    </div>
+
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="patient-details-SSN">S.S.N.
+                                                        </label>
+                                                        <input disabled type="text" class="form-control input-item" id="patient-details-SSN" placeholder="Enter SSN" aria-label="name" value="">
+                                                    </div>
+
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="patient-details-DOB">DOB
+                                                        </label>
+                                                        <input disabled type="text" class="form-control input-item" id="patient-details-DOB" placeholder="Enter DOB" aria-label="name" value="03/05/1993">
+                                                    </div>
+
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="patient-details-age">Age
+                                                        </label>
+                                                        <input disabled type="text" class="form-control input-item" id="patient-details-age" placeholder="Enter age" aria-label="name" value="60">
+                                                    </div>
+
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="patient-details-CSHCN">CSHCN
+                                                        </label>
+                                                        <input disabled type="text" class="form-control input-item" id="patient-details-CSHCN" placeholder="Enter CSHCN" aria-label="name" value="">
+                                                    </div>
+
+
+
+
+                                                </div>
+
 
                                                 <div class="col-4 mb-20">
                                                     <label class="label" for="P-ID">Patient ID</label>
@@ -4068,7 +4184,7 @@
 
 
                         </div>
-                    
+
                     </div>
                 </div>
             </div>
@@ -4168,6 +4284,903 @@
         </div>
     </div>
 
+    <!-- Patient Information Popup -->
+
+
+    <div class="modal" tabindex="-1" id="patient-information-popup">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Patient Information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="border-color mb-20">
+                        <div class="p-15 d-grid grid-line align-items-center bg-lightGrey">
+                            <p class="tab-heading">Patient Details</p>
+                            <hr class="modal-line">
+                        </div>
+                        <div class="p-15 container">
+                            <div class="row col-12">
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-name">First Name
+                                    </label>
+                                    <input type="text" class="form-control input-item" id="patient-details-name"
+                                        placeholder="Enter" aria-label="name" value="John Doe">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-ID">Patient ID
+                                    </label>
+                                    <input type="text" class="form-control input-item" id="patient-details-ID"
+                                        placeholder="Enter" aria-label="name" value="2045">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <div class="d-flex justify-content-between">
+                                        <label class="label" for="patient-information-location">Location</label>
+                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#"
+                                            class="link-blue">Change</a>
+                                    </div>
+                                    <select class="single-select input-item" aria-label="Default select example"
+                                        id="patient-information-location">
+                                        <option selected>Jinisha</option>
+                                        <option value="2">Agency 1</option>
+                                        <option value="2">Agency 2</option>
+                                        <option value="2">Agency 3</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-4">
+                                    <label class="label" for="patient-information-status">Status</label>
+                                    <select class="single-select input-item" aria-label="status"
+                                        id="patient-information-status">
+                                        <option selected>Active</option>
+                                        <option value="1">List 1</option>
+                                        <option value="2">List 2</option>
+                                        <option value="3">List 3</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-nickname">Nickname
+                                    </label>
+                                    <input type="text" class="form-control input-item" id="patient-details-nickname"
+                                        placeholder="Enter Nickname" aria-label="name" value="John Doe">
+                                </div>
+
+                                <div class="col-8 mb-20">
+                                    <div class="d-flex justify-content-between">
+                                        <label class="label" for="address-patient-details">Address</label>
+                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#"
+                                            class="link-blue">Show in Map</a>
+                                    </div>
+                                    <input type="text" class="form-control input-item" id="address-patient-details"
+                                        placeholder="Line 1" aria-label="address">
+                                    <input type="text" class="form-control input-item mt-10"
+                                        id="address-patient-details-1" placeholder="Line 2" aria-label="address 2">
+                                </div>
+                            </div>
+
+                            <div class="row col-12">
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-zip">Zip
+                                    </label>
+                                    <input type="text" class="form-control input-item" id="patient-details-zip"
+                                        placeholder="Enter" aria-label="name" value="12345">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-city">City
+                                    </label>
+                                    <input type="text" class="form-control input-item" id="patient-details-city"
+                                        placeholder="Enter" aria-label="name" value="Lorem ipsum">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-state">State
+                                    </label>
+                                    <input type="text" class="form-control input-item" id="patient-details-state"
+                                        placeholder="Enter" aria-label="name" value="New York">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-CBSA">CBSA
+                                    </label>
+                                    <input type="text" class="form-control input-item" id="patient-details-CBSA"
+                                        placeholder="Enter" aria-label="name" value="10580">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-country">Country
+                                    </label>
+                                    <input type="text" class="form-control input-item" id="patient-details-country"
+                                        placeholder="Enter country" aria-label="name" value="USA">
+                                </div>
+                            </div>
+
+                            <div class="row col-12">
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-latitude">Latitude
+                                    </label>
+                                    <input type="text" class="form-control input-item" id="patient-details-latitude"
+                                        placeholder="Enter latitude" aria-label="name" value="42.14551232">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-longitude">Longitude
+                                    </label>
+                                    <input type="text" class="form-control input-item" id="patient-details-longitude"
+                                        placeholder="Enter longitude" aria-label="name" value="10480">
+                                </div>
+                            </div>
+
+                            <div class="row col-12">
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-phone">Phone
+                                    </label>
+                                    <input type="text" class="form-control input-item" id="patient-details-phone"
+                                        placeholder="Enter phone" aria-label="name" value="+1(XXXX) XXXX-XXXX">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-cell">Cell
+                                    </label>
+                                    <input type="text" class="form-control input-item" id="patient-details-cell"
+                                        placeholder="Enter cell" aria-label="name" value="+1(XXXX) XXXX-XXXX">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-work-phone">Work Phone
+                                    </label>
+                                    <input type="text" class="form-control input-item" id="patient-details-work-phone"
+                                        placeholder="Enter work phone" aria-label="name" value="+1(XXXX) XXXX-XXXX">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-email">Email
+                                    </label>
+                                    <input type="email" class="form-control input-item" id="patient-details-email"
+                                        placeholder="Enter Email" aria-label="name" value="">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-DLNO">DL NO.
+                                    </label>
+                                    <input type="text" class="form-control input-item" id="patient-details-DLNO"
+                                        placeholder="Enter DLNO" aria-label="name" value="">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-SSN">S.S.N.
+                                    </label>
+                                    <input type="text" class="form-control input-item" id="patient-details-SSN"
+                                        placeholder="Enter SSN" aria-label="name" value="">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-DOB">DOB
+                                    </label>
+                                    <input type="text" class="form-control input-item" id="patient-details-DOB"
+                                        placeholder="Enter DOB" aria-label="name" value="03/05/1993">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-age">Age
+                                    </label>
+                                    <input type="text" class="form-control input-item" id="patient-details-age"
+                                        placeholder="Enter age" aria-label="name" value="60">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-CSHCN">CSHCN
+                                    </label>
+                                    <input type="text" class="form-control input-item" id="patient-details-CSHCN"
+                                        placeholder="Enter CSHCN" aria-label="name" value="">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <p class="label">Care Type- Pediatric</p>
+                                    <div class="d-flex gap-3">
+                                        <div class="radio-box">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="care-type"
+                                                    id="care-type-long-term" value="Long Term">
+                                                <label class="form-check-label" for="care-type-long-term">
+                                                    Long Term
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="radio-box">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="care-type"
+                                                    id="care-type-intermittent-care" value="Intermittent Care">
+                                                <label class="form-check-label" for="care-type-intermittent-care">
+                                                    Intermittent Care
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <p class="label">New Born</p>
+                                    <div class="d-flex gap-3">
+                                        <div class="radio-box">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="new-born"
+                                                    id="new-born-Yes" value="Yes">
+                                                <label class="form-check-label" for="new-born-Yes">
+                                                    Yes
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="radio-box">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="new-born"
+                                                    id="new-born-No" value="No">
+                                                <label class="form-check-label" for="new-born-No">
+                                                    No
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-episode">Episdoe Duration
+                                    </label>
+                                    <input type="text" class="form-control input-item" id="patient-details-episode"
+                                        placeholder="Enter" aria-label="name" value="60">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <div class="d-flex justify-content-between">
+                                        <label class="label" for="patient-details-lob">LOB</label>
+                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#"
+                                            class="link-blue">Change</a>
+                                    </div>
+                                    <select class="single-select input-item" aria-label="Default select example"
+                                        id="patient-details-lob">
+                                        <option selected>Demo Pediatric</option>
+                                        <option value="2">Agency 1</option>
+                                        <option value="2">Agency 2</option>
+                                        <option value="2">Agency 3</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-Ethinicity">Ethinicity
+                                    </label>
+                                    <input type="text" class="form-control input-item" id="patient-details-Ethinicity"
+                                        placeholder="Enter" aria-label="name" value="">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-classification">Classification
+                                    </label>
+                                    <input type="text" class="form-control input-item"
+                                        id="patient-details-classification" placeholder="Enter" aria-label="name"
+                                        value="">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-CPR">CPR Code
+                                    </label>
+                                    <input type="text" class="form-control input-item" id="patient-details-CPR"
+                                        placeholder="Enter" aria-label="name" value="">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-Marital">Marital Status
+                                    </label>
+                                    <input type="text" class="form-control input-item" id="patient-details-Marital"
+                                        placeholder="Enter" aria-label="name" value="">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <p class="label">Gender</p>
+                                    <div class="d-flex gap-3">
+                                        <div class="radio-box">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="gender"
+                                                    id="male-patient-details" value="male">
+                                                <label class="form-check-label" for="male-patient-details">
+                                                    Male
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="radio-box">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="gender"
+                                                    id="female-patient-details" value="female">
+                                                <label class="form-check-label" for="female-patient-details">
+                                                    Female
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <div class="d-flex justify-content-between">
+                                        <label class="label" for="language-patient-information">Language</label>
+                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#"
+                                            class="link-blue">Add</a>
+                                    </div>
+                                    <select class="single-select input-item" aria-label="Default select example"
+                                        id="language-patient-information">
+                                        <option selected>Select</option>
+                                        <option value="2">Agency 1</option>
+                                        <option value="2">Agency 2</option>
+                                        <option value="2">Agency 3</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <div class="d-flex justify-content-between">
+                                        <label class="label" for="impatient-patient-information">Impatient
+                                            Facility</label>
+                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#"
+                                            class="link-blue">Add</a>
+                                    </div>
+                                    <select class="single-select input-item" aria-label="Default select example"
+                                        id="impatient-patient-information">
+                                        <option selected>Select</option>
+                                        <option value="2">Agency 1</option>
+                                        <option value="2">Agency 2</option>
+                                        <option value="2">Agency 3</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <div class="d-flex justify-content-between">
+                                        <label class="label" for="religion-patient-information">Religion</label>
+                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#"
+                                            class="link-blue">Add</a>
+                                    </div>
+                                    <select class="single-select input-item" aria-label="Default select example"
+                                        id="religion-patient-information">
+                                        <option selected>Select</option>
+                                        <option value="2">Agency 1</option>
+                                        <option value="2">Agency 2</option>
+                                        <option value="2">Agency 3</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-6 mb-20">
+                                    <div class="d-flex align-items-center">
+                                        <p class="label">Acuity</p>
+                                        <a href="javascript:void(0)" data-bs-toggle="modal"
+                                            data-bs-target="#acuity-level" class="link-blue"><img src="images/Help.svg"
+                                                alt="help-icon" class="sm-icon vertical-base"></a>
+                                    </div>
+                                    <div class="d-flex gap-3">
+                                        <div class="radio-box">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="acuity" id="red"
+                                                    value="red">
+                                                <label class="form-check-label red-text f-500" for="red">
+                                                    Red
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="radio-box">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="acuity" id="orange"
+                                                    value="orange">
+                                                <label class="form-check-label orange-text f-500" for="orange">
+                                                    Orange
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="radio-box">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="acuity" id="yellow"
+                                                    value="yellow">
+                                                <label class="form-check-label yellow-text f-500" for="yellow">
+                                                    Yellow
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="radio-box">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="acuity" id="green"
+                                                    value="green">
+                                                <label class="form-check-label green-text f-500" for="green">
+                                                    Green
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-8 mb-20">
+                                    <div class="d-flex align-items-center">
+                                        <p class="label">
+                                            Transportation Assistance Level
+                                        </p>
+                                        <a href="javascript:void(0)" data-bs-toggle="modal"
+                                            data-bs-target="#transportation-assistance" class="link-blue"><img
+                                                src="images/Help.svg" alt="help-icon" class="sm-icon vertical-base"></a>
+                                    </div>
+                                    <div class="d-flex gap-3">
+                                        <div class="radio-box">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio"
+                                                    name="transportation-assistance" id="non-ambulance"
+                                                    value="Non-ambulatory [TAL-1]">
+                                                <label class="form-check-label" for="non-ambulance">
+                                                    Non-ambulatory [TAL-1]
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="radio-box">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio"
+                                                    name="transportation-assistance" id="wheelchair"
+                                                    value="Wheelchair [TAL-2]">
+                                                <label class="form-check-label" for="wheelchair">
+                                                    Wheelchair [TAL-2]
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="radio-box">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio"
+                                                    name="transportation-assistance" id="ambulatory"
+                                                    value="Ambulatory [TAL-3]">
+                                                <label class="form-check-label" for="ambulatory">
+                                                    Ambulatory [TAL-3]
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row col-12">
+                                <div class="col-4 mb-20">
+                                    <p class="label">Billing Acuity</p>
+                                    <div class="d-flex gap-3">
+                                        <div class="radio-box">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="Billing-acuity"
+                                                    id="billing-low" value="low">
+                                                <label class="form-check-label" for="billing-low">
+                                                    Low
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="radio-box">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="Billing-acuity"
+                                                    id="billing-high" value="high">
+                                                <label class="form-check-label" for="billing-high">
+                                                    High
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:void(0)" data-bs-toggle="modal"
+                                        data-bs-target="#setup-goal-for-care-master-list" class="link-blue mb-5">Set
+                                        Effective Period </a>
+
+                                </div>
+                            </div>
+
+                            <div class="row col-12">
+                                <div class="col-4">
+                                    <label class="label" for="team-patient-info">Team</label>
+                                    <select class="single-select input-item" aria-label="Team" id="team-patient-info">
+                                        <option class="d-none" disabled selected>Select</option>
+                                        <option value="1">List 1</option>
+                                        <option value="2">List 2</option>
+                                        <option value="3">List 3</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-4">
+                                    <label class="label" for="e-chart-co-sign">E-chart Co Sign Staff</label>
+                                    <select class="single-select input-item" aria-label="e-chart" id="e-chart-co-sign">
+                                        <option class="d-none" disabled selected>Select</option>
+                                        <option value="1">List 1</option>
+                                        <option value="2">List 2</option>
+                                        <option value="3">List 3</option>
+                                    </select>
+                                </div>
+
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="patient-details-tel-id">Telephone ID
+                                    </label>
+                                    <input type="text" class="form-control input-item" id="patient-details-tel-id"
+                                        placeholder="Enter" aria-label="name" value="">
+                                </div>
+
+                                <div class="col-4">
+                                    <label class="label" for="place-of-service">Place of Service</label>
+                                    <select class="single-select input-item" aria-label="" id="place-of-service">
+                                        <option selected>Patient's Home / Residence</option>
+                                        <option value="1">List 1</option>
+                                        <option value="2">List 2</option>
+                                        <option value="3">List 3</option>
+                                    </select>
+                                </div>
+
+
+                                <div class="col-4">
+                                    <label class="label" for="patient-details-coder">Coder</label>
+                                    <select class="single-select input-item" aria-label="coder"
+                                        id="patient-details-coder">
+                                        <option selected>Select</option>
+                                        <option value="1">List 1</option>
+                                        <option value="2">List 2</option>
+                                        <option value="3">List 3</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-4">
+                                    <label class="label" for="patient-details-coder-group">Coder Group</label>
+                                    <select class="single-select input-item" aria-label="coder"
+                                        id="patient-details-coder-group">
+                                        <option selected>Select</option>
+                                        <option value="1">List 1</option>
+                                        <option value="2">List 2</option>
+                                        <option value="3">List 3</option>
+                                    </select>
+                                </div>
+
+
+
+
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Acuity popup -->
+
+    <div class="modal" tabindex="-1" id="acuity-level">
+        <div class="modal-dialog custom-modal-2 modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Acuity Level</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex flex-column gap-20">
+                        <div class="red-border w-100 p-10">
+                            <div class="mb-20">
+                                <span class="red-text f-700 f-15 lh-19">Red: </span><span
+                                    class="f-600 f-14 lh-17">Life-threatening (or
+                                    potential)</span>
+                            </div>
+                            <div class="detail-text">
+                                <ul>
+                                    <li>Requires ongoing medical treatment/care</li>
+                                    <li>
+                                        Any equipment dependent upon electricity should be listed
+                                        with the power company.
+                                    </li>
+                                    <li>
+                                        Oxygen-dependent patients should be supplied with a backup
+                                        tank from the supplier.
+                                    </li>
+                                    <li>
+                                        Does not have a caregiver capable of providing care.
+                                    </li>
+                                    <li>
+                                        Requires assistance with transportation to hospitalor
+                                        specialized shelter.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="orange-border w-100 p-10">
+                            <div class="mb-20">
+                                <span class="orange-text f-700 f-15 lh-19">Orange: </span><span
+                                    class="f-600 f-14 lh-17">Not life
+                                    threatening but patient might suffer severe
+                                    adverse effects from interruption of services
+                                </span>
+                            </div>
+                            <div class="detail-text">
+                                <ul>
+                                    <li>
+                                        Like daily insulin, IV Meds, sterile wound care with large
+                                        amounts of drainage.
+                                    </li>
+                                    <li>Symptoms controlled with difficulty.</li>
+                                    <li>Death appears imminent.</li>
+                                    <li>Capable caregiver present.</li>
+                                    <li>
+                                        Will require transportation assistance to hospital or
+                                        specialized shelter.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="yellow-border w-100 p-10">
+                            <div class="mb-20">
+                                <span class="yellow-text f-700 f-15 lh-19">Yellow: </span><span
+                                    class="f-600 f-14 lh-17">Visits could be
+                                    postponed 24-48 hours without adverse
+                                    effects
+                                </span>
+                            </div>
+                            <div class="detail-text">
+                                <ul>
+                                    <li>
+                                        Sterile wound care with a minimal amount to no drainage.
+                                    </li>
+                                    <li>
+                                        Symptoms need intervention but are fairly well controlled
+                                    </li>
+                                    <li>
+                                        Able to care for self or willing and able caregiver.
+                                    </li>
+                                    <li>
+                                        Transportation available from family, friends, or others.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="green-border w-100 p-10">
+                            <div class="mb-20">
+                                <span class="green-text f-700 f-15 lh-19">Green: </span><span
+                                    class="f-600 f-14 lh-17">Visits could be
+                                    postponed 72-96 hours without adverse
+                                    effects
+                                </span>
+                            </div>
+                            <div class="detail-text">
+                                <ul>
+                                    <li>Symptoms well controlled.</li>
+                                    <li>
+                                        Able to care for self or willing and able caregiver.
+                                    </li>
+                                    <li>
+                                        Transportation available from family, of friends, or
+                                        others.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Transportation Popup -->
+    <div class="modal" tabindex="-1" id="transportation-assistance">
+        <div class="modal-dialog custom-modal-2 modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">
+                        Transportation Assistance Level
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex flex-column gap-20">
+                        <div class="mb-20">
+                            <p class="f-600 f-15 lh-19 mb-10">Purpose:</p>
+                            <p class="detail-text">
+                                To provide a universally recognized scale for the rapid
+                                assessment of the transportation assistance needs of
+                                patients/residents during a non-emergent, planned evacuations.
+                            </p>
+                        </div>
+
+                        <div class="mb-20">
+                            <p class="f-600 f-15 lh-19 mb-10">Principle:</p>
+                            <p class="detail-text">
+                                For the purpose of an evacuation, patients or residents shall
+                                be assessed for their transportation assistance needs and
+                                assigned a level [TAL]. TALs are intended for use by any
+                                healthcare professional familiar with transportation
+                                modalities. TALs can be useful for logistical planning and
+                                movement of Transportation resources (e.g busses, vans,
+                                ambulances) during evacuation of a healthcare facility or
+                                home-bound patient. TALs are subject to change over time, but
+                                their use facilitates the staging of estimated transportation
+                                resources.
+                            </p>
+                        </div>
+
+                        <div class="mb-20">
+                            <p class="f-600 f-15 lh-19 mb-10">Objectives:</p>
+                            <p class="detail-text">
+                                TALs provide a scale that is recognized and used statewide
+                                during a planned evacuation for the rapid assessment of
+                                Transportation Assistance needs of a patient or residents. the
+                                scale can be used for planning and just in time re-assessment
+                                of patient/ resident Transportation assistance needs. the
+                                scale is not a clinical triage scale, nor does it prescribe
+                                care mechanisms. The continuity of clinical care is an
+                                independent issue and should be addressed concurrently with
+                                transportation modality. The potential for regional/ local
+                                planning variations, while upholding the integrity of the core
+                                nomenclature, is recognized. This is particularly applicable
+                                to areas of the state that have diverse transportation
+                                complexity will be evaluated by individual healthcare
+                                facilities and / or regions.
+                            </p>
+                        </div>
+
+                        <div class="mb-20">
+                            <p class="f-600 f-15 lh-19 mb-10">Levels:</p>
+                            <p class="detail-text">
+                                For the purposes of evacuation, patients / residents shall be
+                                categorized into one of three levels. The mobility level may
+                                influence number of staff needed two transport the patient /
+                                resident, The type of movement device required, the loading
+                                area They are relocated two hand the type of Transportation
+                                asset required for evacuation. The following mobility levels
+                                shall be used.
+                            </p>
+                        </div>
+
+                        <div class="mb-20">
+                            <p class="f-600 f-15 lh-19 mb-10">Non Ambulatory:</p>
+                            <p class="detail-text">
+                                Non ambulatory patients / residents are those who require
+                                transport by stretcher. For emergency movement downstairs,
+                                they may be transferred to backboards, basket litters, or
+                                other appropriate devices, or rescue-dragged on their
+                                mattresses. note: rescue drag is to be used as a last resort
+                                only. these patients / residents will be identified with
+                                'gurney' symbol when assessed for evacuation. these patients /
+                                residents are clinically unable to be moved in a Seated
+                                position, and may require equipment ranging from oxygen to
+                                mechanical ventilators, cardiac monitors, or other biomedical
+                                devices to accompany them during movement. They may require
+                                clinical observation. These patients / residents may require
+                                two staff members (one clinical, one non clinical) for
+                                movement, with, with additional staff as needed to manage life
+                                support equipment. ambulance transport is required and in
+                                special circumstances (e.g. EMT, Paramedic, Clinical staff
+                                member).
+                            </p>
+                        </div>
+
+                        <div class="mb-20">
+                            <p class="f-600 f-15 lh-19 mb-10">Wheelchair [TAL-2]</p>
+                            <p class="detail-text">
+                                Wheelchair patients / residents are those who are unable to
+                                walk due to physical or medical condition. they are stable
+                                without any likelihood of resulting harm or impairment from
+                                wheelchair Transport or prolonged periods of sitting. And do
+                                not require attached medical equipment or medical gas other
+                                than oxygen or a maintenance intravenous infusion during their
+                                relocation or evacuation. these patients/ residents will be
+                                identified with 'wheelchair' symbol when evacuated for
+                                evacuation. They can be safely managed by single non clinical
+                                staff member. They may be transported as a group in a
+                                wheelchair-appropriate vehicle(e.g. medical transport van or
+                                ambulette) with a single staff member or healthcare facility-
+                                designated person accompanying them.
+                            </p>
+                        </div>
+
+                        <div class="">
+                            <p class="f-600 f-15 lh-19 mb-10">Ambulatory [TAL-3]</p>
+                            <p class="detail-text">
+                                Ambulatory patients / residents are those who are able to walk
+                                the distance from their in-patient location to the designated
+                                loading area without physical assistance, and without any
+                                likelihood of Resulting harm or impairment. these patients/
+                                residents will be identified with a 'walking' figure when
+                                assessed for evacuation. Ambulatory patients / residents shall
+                                be escorted by staff members, but may be moved in groups led
+                                by a healthcare facility-designated person. The optimum staff
+                                to patient ratio is 1:5. they can be transported as a larger
+                                group in passenger vehicle (e.g. bus, transport van, or
+                                private auto) with a healthcare facility-designated person
+                                accompanying them.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3" data-bs-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SET Effective Period -->
+
+    <div class="modal" tabindex="-1" id="setup-goal-for-care-master-list">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">
+                        Transportation Assistance Level
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="bg-greybox border-color radius-4 col-12 mb-20">
+                        <div class="col-7 d-flex justify-content-between">
+                            <div>
+                                <span class="text-title">Client: </span>
+                                <span class="text-description">Demo 2 </span>
+                            </div>
+                            <div>
+                                <span class="text-title">Admit :</span>
+                                <span class="text-description">176</span>
+                            </div>
+                            <div>
+                                <span class="text-title">Patient ID :</span>
+                                <span class="text-description">2045</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-color p-15">
+                        <div class="field-container row col-12">
+                            <div class="col-4 mb-20">
+                                <label class="form-label" for="effective-Start">Effective Start</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-item" id="effective-Start"
+                                        placeholder="Select Date">
+                                    <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-4 mb-20">
+                                <label class="form-label" for="effective-End">Effective End</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-item" id="effective-End"
+                                        placeholder="Select Date">
+                                    <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-4">
+                                <label class="label" for="billing-acuity">Billing Acuity</label>
+                                <select class="single-select input-item" aria-label="Billing" id="billing-acuity">
+                                    <option class="d-none" disabled selected>Select</option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <a href="#" id="add-field-link" class="link-blue">Add New Field</a>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3" data-bs-dismiss="modal">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- JavaScript -->
@@ -4190,33 +5203,65 @@
 
 
 
+    <script>
+        // Function to add new input fields
+        function addInputFields() {
+            console.log("funcion listener")
+            var container = $(".field-container");
+
+            // Create new input fields using template literals
+            var newFields = `
+            <div class="col-4 mb-20">
+                                <label class="form-label" for="effective-Start">Effective Start</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-item" id="effective-Start"
+                                        placeholder="Select Date">
+                                    <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-4 mb-20">
+                                <label class="form-label" for="effective-End">Effective End</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-item" id="effective-End"
+                                        placeholder="Select Date">
+                                    <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-4">
+                                <label class="label" for="billing-acuity">Billing Acuity</label>
+                                <select class="single-select input-item" aria-label="Billing" id="billing-acuity">
+                                    <option class="d-none" disabled selected>Select</option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+
+                            <img src="images/remove.svg" alt="remove-icon" id="delete-button" class="delete-icon ml-5 pointer">
+                    `;
 
 
+            var newContainer = $(`<div class="d-flex">`).html(newFields);
 
+            container.append(newContainer);
 
+            var deleteButton = newContainer.find("#delete-button");
+            deleteButton.on("click", function () {
+                newContainer.remove();
+            });
+        }
 
+        $(document).ready(function () {
+            $("#add-field-link").on("click", function (event) {
+                event.preventDefault();
+                console.log("inside vent listener")
+                addInputFields();
+            });
+        });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </script>
 </body>
 
 </html>

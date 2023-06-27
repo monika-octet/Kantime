@@ -353,7 +353,7 @@ h3 {
     letter-spacing: 0.01em;
     color: #546071;
     width: fit-content;
-    margin-right: 20px;
+    margin-right: 12px;
 
 }
 
@@ -836,6 +836,7 @@ h3 {
 .custom-modal-5{
     min-width: 560px !important;
 }
+
 
 
 
