@@ -80,7 +80,7 @@
 
                         </div>
                         <div class="col-8 d-flex justify-content-end">
-                            <div><a href="#" class="btn btn-outline-primary">Advance Filter</a></div>
+                            <div><a href="javascript:void(0);" class="btn btn-outline-primary" id="openAdvanceFilterButton">Advance Filter</a></div>
                             <div class="d-flex flex-column justify-content-between user-profile-dropdown">
                                 <div class="dropdown ms-3">
                                     <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom"
@@ -158,7 +158,12 @@
             <div class="bg-white p-30 mt-10 rounded-2 d-flex flex-column gap-20 border-color">
                 <div class="d-flex align-items-center gap-3 mb-10 delete-box">
                     <p>Applied filters :</p>
-
+                    <div class="filter-values">
+                        <ul>
+                            <li>Attending physician: David Doe<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></li>
+                            <li>Primary care physician: Jacob Jones, Cameron Williamson<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="outer">
                     <div class="inner">
@@ -247,7 +252,7 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <tr> 
+                                <tr>
                                     <td class="d-flex fix">
                                         <input class="form-check-input client-detail-checkbox" type="checkbox" value=""
                                             id="" />
@@ -499,7 +504,7 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <tr> 
+                                <tr>
                                     <td class="d-flex fix">
                                         <input class="form-check-input client-detail-checkbox" type="checkbox" value=""
                                             id="" />
@@ -915,6 +920,21 @@
             </div>
         </div>
     </div>
+    <!-- <div class="modal show" tabindex="-1" id="advanceFilterPopup" aria-modal="true" role="dialog"
+       >
+        <div class="modal-dialog custom-modal-1 modal-dialog-centered" id="advanceFilterPopupContent">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Clinician Status</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body checkbox-list-wrap">
+
+                </div>
+            </div>
+        </div>
+    </div> -->
+
 
     <!-- JavaScript -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
