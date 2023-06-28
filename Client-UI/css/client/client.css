@@ -795,6 +795,10 @@ h3 {
     padding: 12px 16px;
 }
 
+.bg-disabled{
+    background: #ECEDEF;
+}
+
 .text-title {
     font-size: 13px;
     font-weight: 400;
