@@ -388,7 +388,7 @@ h3 {
 #treatment-address-table .dropdown-toggle::after,
 #patient-representative-table .dropdown-toggle::after,
 .user-profile-dropdown .dropdown-toggle::after,
-#accordion-primary .dropdown-toggle::after,
+.accordion .dropdown-toggle::after,
 .medication .dropdown-toggle::after {
     /* display: none; */
     content: url(../../images/three-dots.svg);
@@ -445,7 +445,9 @@ h3 {
     padding: 12px 15px;
 }
 
-#pharmacy-name-table.table tbody tr td {
+#pharmacy-name-table.table tbody tr td,
+#billing-deficiency-notes.table-type-1 tbody tr td
+{
     padding: 12px 20px;
 }
 
@@ -1441,3 +1443,39 @@ top: 0;
     max-height: 100%;
 }
 /*********client list page css - end*************/
+
+
+
+
+/*********document tab css - Start*************/
+.category-container{
+    border: 1px solid #EFEFEF;
+    background: #FAFAFA;
+} 
+
+.category-container .accordion-button::after{
+    background-image: url(../../images/accordion-plus.svg);
+    left: 15px;
+}
+
+.category-container .accordion-button:not(.collapsed)::after{
+    background-image: url(../../images/accordion-minus.svg);
+    transform: rotate(0);
+}
+
+
+.category-container .accordion-item .accordion-button{
+    padding:8px 15px 8px 40px;
+}
+
+.category-container .accordion-button{
+    background-color: #f4f5f6;
+}
+
+.category-container .action-btn{
+    width: 25px;
+    height: 25px;
+}
+
+/*********document tab css - *************/
+

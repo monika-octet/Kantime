@@ -661,6 +661,9 @@ item:active {
 .fit-content{
     height: fit-content;
 }
+.fit-content-w{
+    width: fit-content !important;
+}
 
 /* Accordian Styling */
 

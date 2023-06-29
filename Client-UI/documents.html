@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#0D87E2" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@100&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css" />
+    <!-- select -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-multiselect.min.css" />
+
+    <!-- datepicker -->
+    <link type="text/css" href="css/daterangepicker.css" />
+
+    <!-- Custom css -->
+
+    <link rel="stylesheet" type="text/css" href="css/common/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/client/client.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive/responsive.css" />
+
+    <!-- Bootstrap js -->
+
+    <!-- custom css -->
+
+    <title>Kantime | Referral</title>
+</head>
+
+<body style="width: 1366px; margin: auto">
+    <header>
+        <nav class="">
+            <div class="">
+                <img src="images/nav.svg" style="width: 100%" />
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="px-30 py-10">
+
+            <div class="d-flex justify-content-between align-items-center mb-10">
+                <div class="breadcrumb-container">
+                    <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="#">Client Intake List</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                John Doe
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="icon-container d-flex gap-3">
+                    <img src="images/Help.svg" alt="help-icon" />
+                    <img src="images/Mail.svg" alt="mail-icon" />
+                    <img src="images/Duplicate.svg" alt="duplicate-icon" />
+                    <img src="images/message.svg" alt="message-icon" />
+                </div>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-20">
+                <h1>Client Profile</h1>
+                <div class="d-flex">
+                    <div class="search-bar position-relative mr-5">
+                        <input type="text" placeholder="Search Client" class="search-input w-100"
+                            style="background: #f4f5f6;">
+                        <img src="images/lens.svg" alt="search lens" class="lens">
+                    </div>
+                    <button class="btn btn-outline-primary">
+                        <img src="images/filter.svg" alt="">
+                        Filter
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white border-color mt-10 radius-4 mb-20">
+                <div class="p-20 position-relative">
+                    <div class="d-flex flex-wrap justify-content-between">
+                        <div class="d-flex gap-25 align-items-center">
+                            <div class="profile-box d-flex justify-content-center align-items-center">
+                                <img src="images/avatar-pic.svg" alt="user profile picture" />
+                                <img src="images/camera.svg" alt="upload icon" class="upload" type="button"
+                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Upload Picture" />
+                            </div>
+                            <div class="d-flex flex-column">
+                                <p class="patient-title mb-15">John Doe</p>
+                                <div class="d-flex gap-20 mb-20">
+                                    <div>
+                                        <img src="images/Phone.svg" alt="phone icon" class="info-icon" />
+                                        <span class="info-icon-label">Call</span>
+                                    </div>
+                                    <div>
+                                        <img src="images/Email.svg" alt="mail icon" class="info-icon" />
+                                        <span class="info-icon-label">Email</span>
+                                    </div>
+                                    <div>
+                                        <img src="images/mappin.svg" alt="map pin icon" class="info-icon" />
+                                        <span class="info-icon-label">Address</span>
+                                    </div>
+                                </div>
+                                <div class="status-tag status-red">
+                                    <p>Conditionally accepted</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex" style="gap: 108px">
+                            <div class="d-flex flex-column">
+                                <div class="info-box">
+                                    <p class="info-title">LOB :</p>
+                                    <p class="info-description">Occupational Physiotherapy</p>
+                                    <button class="icon-box btn table-btn-icon" data-bs-toggle="modal"
+                                        data-bs-target="#change">
+                                        <img src="images/edit-pen.svg" alt="" class="icon-bg" data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom" title="Edit">
+                                    </button>
+
+
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Admit Number:</p>
+                                    <p class="info-description">1-176</p>
+                                    <div class="dropdown  mx-3">
+                                        <button class="icon-box btn btn-dot dropdown-toggle btn-dropdown-custom"
+                                            type="button" id="" data-bs-toggle="dropdown"
+                                            aria-expanded="false"></button>
+                                        <ul class="dropdown-menu" aria-labelledby="">
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">1-175</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">1-174</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">1-173</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Case Manager</p>
+                                    <p class="info-description">Daniel Cliff</p>
+                                    <div class="dropdown  mx-3">
+                                        <button class="icon-box btn btn-dot dropdown-toggle btn-dropdown-custom"
+                                            type="button" id="" data-bs-toggle="dropdown"
+                                            aria-expanded="false"></button>
+                                        <ul class="dropdown-menu" aria-labelledby="">
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">Daniel Cliff</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">AVI Test RN</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">Staff Avi B/O</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Intake Date :</p>
+                                    <p class="info-description">01/03/1998</p>
+                                </div>
+
+                                <div class="info-box">
+                                    <p class="info-title">Location :</p>
+                                    <p class="info-description">Jinisha</p>
+                                    <button class="icon-box btn table-btn-icon mx-3" data-bs-toggle="modal"
+                                        data-bs-target="#change">
+                                        <img src="images/edit-pen.svg" alt="" class="icon-bg" data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom" title="Edit">
+                                    </button>
+                                </div>
+
+
+
+
+                            </div>
+                            <div class="">
+                                <div class="info-box">
+                                    <p class="info-title">Client Staus :</p>
+                                    <p class="info-description">Pending SOC</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">POC Status :</p>
+                                    <p class="info-description">Open</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">DOB :</p>
+                                    <p class="info-description">10/29/1999</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Intake Taken By :</p>
+                                    <p class="info-description">KanTime, Support</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Eligibility:</p>
+                                    <p class="info-description red-text f-500">Not Verified</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column justify-content-start user-profile-dropdown">
+                            <div class="dropdown ms-3" style="margin-left: 133px !important;">
+                                <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                <ul class="dropdown-menu" style="right: auto; left: 0;"
+                                    aria-labelledby="dropdownMenuButton1">
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">Oasis Configuration</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">UB04 Setting</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">CMS 1500 Settings</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">Initial Order</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">Checklist</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item ">Print</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item ">Print Address Label</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item ">Compose</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item ">Audit Logs</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item ">Back To referral</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item ">Non Admit</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item red-text f-400">Delete Client</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-section">
+
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="patient-information.html" role="tab"
+                                aria-controls="general" aria-selected="false">General</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="payer-source-eligibility.html" role="tab"
+                                aria-controls="eligibility" aria-selected="false">Payer source & eligibility</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="documents.html" role="tab" aria-controls="Document"
+                                aria-selected="true">Document</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="records.html" role="tab" aria-controls="records"
+                                aria-selected="false">Records</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="service-rates.html" role="tab" aria-controls="service-rates"
+                                aria-selected="false">Service & Rates</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="evv-setting.html" role="tab" aria-controls="evv"
+                                aria-selected="false">EVV Setting </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="intake-info.html" role="tab" aria-controls="intake-info"
+                                aria-selected="false">Intake Info</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cop.html" role="tab" aria-controls="Commnunity contact"
+                                aria-selected="false">Commnunity Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cop.html" role="tab" aria-controls="Commnunity contact"
+                                aria-selected="false">Commnunity Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cop.html" role="tab" aria-controls="Commnunity contact"
+                                aria-selected="false">More </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white">
+                <div class="m-20">
+                    <div class="pt-20 pb-10 d-flex justify-content-between align-items-center border-bottom">
+                        <div class="d-flex gap-10 align-items-center">
+                            <div class="tab-content-heading">Documents</div>
+                            <div class="d-flex align-items-center">
+                                <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px">
+                                <a href="javascript:void(0)" data-bs-toggle="modal"
+                                    data-bs-target="#intake-profile-doc-upload"
+                                    class="text-decoration-none f-600 f-13 lh-17">Add new</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="d-flex align-items-center gap-20 pt-20 pb-10 mb-20">
+
+                        <div class="row col-9">
+
+                            <div class="col-4">
+                                <label class="label" for="document-category">Category</label>
+                                <select class="single-select input-item" aria-label="location" id="document-category">
+                                    <option class="d-none" disabled selected>Select</option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+
+                            <div class="col-4">
+                                <label class="label" for="document-folder">Folder</label>
+                                <select class="single-select input-item" aria-label="location" id="document-folder">
+                                    <option class="d-none" disabled selected>Select</option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+
+                            <div class="col-4">
+                                <label class="label" for="document-uploaded">Uploaded By</label>
+                                <select class="single-select input-item" aria-label="location" id="document-uploaded">
+                                    <option class="d-none" disabled selected>Select</option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="mt-20">
+                            <button class="btn btn-tertiary">Display</button>
+                        </div>
+
+                    </div>
+
+                    <div class="p-10 category-container">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <div class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <div class="d-flex gap-10 align-items-center justify-content-between w-100">
+                                            <div class="d-flex gap-10 ml-5">
+                                                <span class="text-title">Category</span>
+                                                <span class="text-description">General</span>
+                                            </div>
+                                            <div class="dropdown ">
+                                                <button
+                                                    class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom"
+                                                    style="background-color: #d9d9d9;" type="button"
+                                                    id="dropdownMenuButton-address-4" data-bs-toggle="dropdown"
+                                                    aria-expanded="false"></button>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#edit-payser-source"
+                                                            class="dropdown-item">Merge Document</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item red-text">Delete</a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </h2>
+                            </div>
+                        </div>
+
+                        <div class="px-30">
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body d-flex flex-column gap-3">
+                                    <!-- inner accordion 1-->
+                                    <div>
+                                        <div class="accordion" id="accordionExample">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headinginner">
+                                                    <button class="accordion-button" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseinner"
+                                                        aria-expanded="true" aria-controls="collapseinner">
+                                                        <div class="d-flex gap-10 align-items-center">
+                                                            <div class="d-flex gap-10 ml-5">
+                                                                <span class="text-title">Folder</span>
+                                                                <span class="text-description">Billing Deficiency
+                                                                    Notes</span>
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                        </div>
+                                        <div id="collapseinner" class="accordion-collapse collapse show"
+                                            aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body px-0 py-2">
+                                                <table class="table  table-type-1" id="billing-deficiency-notes">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="d-flex">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id=""><span>Name</span>
+                                                            </th>
+                                                            <th>Size</th>
+                                                            <th>Uploaded By</th>
+                                                            <th>Uploaded On</th>
+                                                            <th>Description</th>
+                                                            <th>Actions</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="d-flex">
+                                                                <input
+                                                                    class="form-check-input treatment-address-checkbox"
+                                                                    type="checkbox" value="" id="">
+                                                                <div>
+                                                                    <p class="notice">Test_cds employee,avi.doc</p>
+                                                                </div>
+                                                            </td>
+                                                            <td>225 KB</td>
+                                                            <td>Staff, Avi B/O</td>
+                                                            <td>01/04/2023</td>
+                                                            <td>Description goes here</td>
+                                                            <td>
+                                                                <div class="d-flex gap-10">
+
+                                                                    <button type="button"
+                                                                        class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#edit-physician-details">
+                                                                        <img src="images/edit-icon.svg" alt="edit">
+                                                                    </button>
+                                                                    <img src="images/delete_red.svg" alt="delete button"
+                                                                        class="pointer delete">
+                                                                </div>
+
+
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td class="d-flex">
+                                                                <input
+                                                                    class="form-check-input treatment-address-checkbox"
+                                                                    type="checkbox" value="" id="">
+                                                                <div>
+                                                                    <p class="notice">Test_cds employee,avi.doc</p>
+                                                                </div>
+                                                            </td>
+                                                            <td>225 KB</td>
+                                                            <td>Staff, Avi B/O</td>
+                                                            <td>01/04/2023</td>
+                                                            <td>Description goes here</td>
+                                                            <td>
+                                                                <div class="d-flex gap-10">
+
+                                                                    <button type="button"
+                                                                        class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#edit-physician-details">
+                                                                        <img src="images/edit-icon.svg" alt="edit">
+                                                                    </button>
+                                                                    <img src="images/delete_red.svg" alt="delete button"
+                                                                        class="pointer delete">
+                                                                </div>
+
+
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td class="d-flex">
+                                                                <input
+                                                                    class="form-check-input treatment-address-checkbox"
+                                                                    type="checkbox" value="" id="">
+                                                                <div>
+                                                                    <p class="notice">Test_cds employee,avi.doc</p>
+                                                                </div>
+                                                            </td>
+                                                            <td>225 KB</td>
+                                                            <td>Staff, Avi B/O</td>
+                                                            <td>01/04/2023</td>
+                                                            <td>Description goes here</td>
+                                                            <td>
+                                                                <div class="d-flex gap-10">
+
+                                                                    <button type="button"
+                                                                        class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#edit-physician-details">
+                                                                        <img src="images/edit-icon.svg" alt="edit">
+                                                                    </button>
+                                                                    <img src="images/delete_red.svg" alt="delete button"
+                                                                        class="pointer delete">
+                                                                </div>
+
+
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td class="d-flex">
+                                                                <input
+                                                                    class="form-check-input treatment-address-checkbox"
+                                                                    type="checkbox" value="" id="">
+
+                                                                <p class="notice">Test_cds employee,avi.doc</p>
+
+                                                            </td>
+                                                            <td>225 KB</td>
+                                                            <td>Staff, Avi B/O</td>
+                                                            <td>01/04/2023</td>
+                                                            <td>Description goes here</td>
+                                                            <td>
+                                                                <div class="d-flex gap-10">
+
+                                                                    <button type="button"
+                                                                        class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#edit-physician-details">
+                                                                        <img src="images/edit-icon.svg" alt="edit">
+                                                                    </button>
+                                                                    <img src="images/delete_red.svg" alt="delete button"
+                                                                        class="pointer delete">
+                                                                </div>
+
+
+                                                            </td>
+                                                        </tr>
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- inner accordion ends -->
+
+                                    <!-- inner accordion 2 -->
+                                    <div>
+
+
+                                        <div class="accordion" id="accordionExample">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headinginner">
+                                                    <button class="accordion-button" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseinner-1"
+                                                        aria-expanded="true" aria-controls="collapseinner-1">
+                                                        <div class="d-flex gap-10 align-items-center">
+                                                            <div class="d-flex gap-10 ml-5">
+                                                                <span class="text-title">Folder</span>
+                                                                <span class="text-description">Cop</span>
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                        </div>
+                                        <div id="collapseinner-1" class="accordion-collapse collapse show"
+                                            aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body px-0 py-2">
+                                                <table class="table  table-type-1" id="billing-deficiency-notes">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="d-flex">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id=""><span>Name</span>
+                                                            </th>
+                                                            <th>Size</th>
+                                                            <th>Uploaded By</th>
+                                                            <th>Uploaded On</th>
+                                                            <th>Description</th>
+                                                            <th>Actions</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="d-flex">
+                                                                <input
+                                                                    class="form-check-input treatment-address-checkbox"
+                                                                    type="checkbox" value="" id="">
+                                                                <div>
+                                                                    <p class="notice">Test_cds employee,avi.doc</p>
+                                                                </div>
+                                                            </td>
+                                                            <td>225 KB</td>
+                                                            <td>Staff, Avi B/O</td>
+                                                            <td>01/04/2023</td>
+                                                            <td>Description goes here</td>
+                                                            <td>
+                                                                <div class="d-flex gap-10">
+
+                                                                    <button type="button"
+                                                                        class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#edit-physician-details">
+                                                                        <img src="images/edit-icon.svg" alt="edit">
+                                                                    </button>
+                                                                    <img src="images/delete_red.svg" alt="delete button"
+                                                                        class="pointer delete">
+                                                                </div>
+
+
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- inner accordion 2 end -->
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+    </main>
+
+
+    <!-- POPUP  -->
+
+
+
+
+
+    <!-- intake-profile-doc-upload -->
+    <div class="modal" tabindex="-1" id="intake-profile-doc-upload">
+        <div class="modal-dialog custom-modal-1  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Intake Profile Document Upload</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-6 search mb-20">
+
+                        <input type="text" placeholder="Search" class="search-input w-100">
+                        <img src="images/lens-dark.svg" alt="search lens" class="lens"
+                            style="top: 10px !important; left: 10px !important">
+                    </div>
+
+                    <div class="bg-greybox border-color radius-4 d-grid grid-box gap-10 mb-20">
+                        <div>
+                            <span class="text-title">Client:</span>
+                            <span class="text-description">Demo 2, Test</span>
+                        </div>
+                        <div>
+                            <span class="text-title">SOC:</span>
+                            <span class="text-description">01/02/2023</span>
+                        </div>
+                        <div>
+                            <span class="text-title">Location:</span>
+                            <span class="text-description">Jinisha</span>
+                        </div>
+                        <div>
+                            <span class="text-title">LOB:</span>
+                            <span class="text-description">Demo Pediatric LOB</span>
+                        </div>
+                        <div>
+                            <span class="text-title">Status</span>
+                            <span class="text-description">Active</span>
+                        </div>
+                        <div>
+                            <span class="text-title">Client Team:</span>
+                            <span class="text-description">--</span>
+                        </div>
+                    </div>
+
+                    <div class="row col-12">
+                        <div class="col-6 mb-20">
+                            <div class="d-flex justify-content-between">
+                                <label class="label" for="document-category">Category</label>
+                                <a href="javascript:void(0)" data-bs-toggle="modal"
+                                    data-bs-target="#document-upload-category" class="link-blue">Manage</a>
+                            </div>
+                            <select class="single-select input-item" aria-label="Default select example"
+                                id="document-category">
+                                <option selected>Select</option>
+                                <option value="2">Agency 1</option>
+                                <option value="2">Agency 2</option>
+                                <option value="2">Agency 3</option>
+                            </select>
+                        </div>
+
+                        <div class="col-6 mb-20">
+                            <div class="d-flex justify-content-between">
+                                <label class="label" for="document-folder">Folder</label>
+                                <a href="javascript:void(0)" data-bs-toggle="modal"
+                                    data-bs-target="#document-upload-folder" class="link-blue">Manage</a>
+                            </div>
+                            <select class="single-select input-item" aria-label="Default select example"
+                                id="document-folder">
+                                <option selected>Select</option>
+                                <option value="2">Agency 1</option>
+                                <option value="2">Agency 2</option>
+                                <option value="2">Agency 3</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mb-15">
+                        <label class="label" for="notes">Description</label>
+                        <textarea name="" id="notes" cols="" rows="2" class="input-textarea w-100"
+                            placeholder="Enter"></textarea>
+                    </div>
+
+                    <div class="d-flex col-12 gap-3 mb-20">
+                        <div class="col-6 border-color bg-white py-10 px-15 radius-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="homebound-status">
+                                <label class="send" for="homebound-status">
+                                    Allow access to Family through Family Portal
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-5 border-color bg-white py-10 px-15 radius-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="homebound-status">
+                                <label class="send" for="homebound-status">
+                                    Add document to Other clients
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-20">
+                        <div class="drag-drop-box d-flex flex-column justify-content-between align-items-center dotted-border">
+                          <img src="images/upload-icon.svg" alt="drag-drop-icon" class="mb-15">
+                          <p class="f-600 f-14 lh-17 blue-text mb-15">Drag &amp; drop files here</p>
+                          <p class="f-600 f-14 lh-17 blue-text mb-15">-OR-</p>
+                          <button type="" class="btn btn-tertiary">Browse</button>
+                        </div>
+          
+                        <div>
+                          <p class="mb-15 f-600 f-14 lh-17">Uploading - 2/3 files</p>
+                          <div class="d-flex flex-column gap-3">
+                            <div class="upload-item-box ">
+                              <div class="d-flex justify-content-between align-items-center" style="gap: 125px;">
+                                <p class="upload-file-name">Your-file-here.PDF</p>
+                                <div class="d-flex gap-3">
+                                  <span class="upload-file-size">126 KB</span>
+                                  <img src="images/ion-close-icon.svg" alt="cancle icon">
+                                </div>
+                              </div>
+                              <div class="bg-blue w-50"></div>
+                            </div>
+          
+                            <div class="upload-item-box ">
+                              <div class="d-flex justify-content-between align-items-center" style="gap: 125px;">
+                                <p class="upload-file-name">Your-file-here.PDF</p>
+                                <div class="d-flex gap-3">
+                                  <span class="upload-file-size">126 KB</span>
+                                  <img src="images/ion-close-icon.svg" alt="cancle icon">
+                                </div>
+                              </div>
+                              <span class="bg-blue w-50"></span>
+                            </div>
+          
+                            <div class="upload-item-box ">
+                              <div class="d-flex justify-content-between align-items-center" style="gap: 125px;">
+                                <p class="upload-file-name">Your-file-here.PDF</p>
+                                <div class="d-flex gap-3">
+                                  <span class="upload-file-size">126 KB</span>
+                                  <img src="images/ion-close-icon.svg" alt="cancle icon">
+                                </div>
+                              </div>
+                              <span class="bg-green w-100"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>  
+
+
+
+
+
+
+                </div>
+                <div class="modal-footer d-flex">
+                    <button class="btn btn-tertiary">Cancel</button>
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Update</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MANAGE FOLDER POPUP -->
+    <div class="modal" tabindex="-1" id="document-upload-folder">
+        <div class="modal-dialog custom-modal-5  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Manage Folder</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="add-text">Folder</span>
+                        <div class="position-relative">
+                            <input type="text" class="form-control input-item" id="new-category"
+                                placeholder="Enter category name" aria-label="Enter new relation here"
+                                style="width: 286px" />
+                            <button class="btn btn-inside">Add to List</button>
+                        </div>
+                    </div>
+                    <table class="table table-type-1 mt-10" id="manage-category-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 90%;">Folder Name</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Folder 1</td>
+                                <td>
+                                    <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>Folder 1</td>
+                                <td>
+                                    <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Folder 1 </td>
+                                <td>
+                                    <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MANAGE CATEGORY POPUP -->
+
+    <div class="modal" tabindex="-1" id="document-upload-category">
+        <div class="modal-dialog custom-modal-5  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Manage Category</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="add-text">Category</span>
+                        <div class="position-relative">
+                            <input type="text" class="form-control input-item" id="new-category"
+                                placeholder="Enter category name" aria-label="Enter new relation here"
+                                style="width: 286px" />
+                            <button class="btn btn-inside">Add to List</button>
+                        </div>
+                    </div>
+                    <table class="table table-type-1 mt-10" id="manage-category-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 90%;">Category Name</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>General</td>
+                                <td>
+                                    <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>RCD</td>
+                                <td>
+                                    <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Referral </td>
+                                <td>
+                                    <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-multiselect.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- bootstrap js-->
+    <!-- <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+
+    <!-- datepicker js-->
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+
+
+</body>
+
+
+<!-- POPUP -->
+<!-- intake-profile-doc-upload -->
+
+</html>
