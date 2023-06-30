@@ -147,7 +147,9 @@
 .mt-30 {
     margin-top: 30px;
 }
-
+.m-b-5{
+    margin-bottom: 5px;
+}
 .mb-10{
     margin-bottom: 10px;
 }
@@ -756,4 +758,10 @@ item:active {
 }
 .w-300px{
     min-width: 226px;
+}
+.no-border{
+    border: none;
+}
+.no-border-radius{
+    border-radius: 0;
 }
