@@ -1457,3 +1457,235 @@ li.remove-column:after {
 }
 
 /*********client list page css - end*************/
+/**********client list page css -start - 28-6-23**************/
+.pop-up-image {
+    width: 20px;
+    height: 20px;
+}
+
+.popUp-title {
+    font-weight: 700 !important;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+}
+
+.pop-up-image-box {
+    display: flex;
+    gap: 10px;
+}
+
+.pop-up-content {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    margin-left: 18px;
+}
+
+.pop-up-content p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #545B64;
+}
+
+.pop-up-borderStyle {
+    border-top: 6px solid #FE9680 !important;
+    border-radius: 4px;
+    padding-top: 20px;
+}
+
+.pop-up-borderStyle .btn-outline {
+    border: 1px solid #EFEFEF;
+    min-width: 80px;
+    height: 36px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.pop-up-cancel {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16.8px;
+    color: #3D4148;
+}
+
+.pop-up-borderStyle .modal-footer {
+    box-shadow: 0 -2px 8px rgba(207, 207, 207, 0.25);
+    border-top: 0;
+}
+
+.text-red-light {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16.8px;
+    color: #FC2D2D;
+}
+
+/**********client list page css -end - 28-6-23**************/
+
+.accordion-item.custom-layout-1 {
+    border-radius: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #EFEFEF !important;
+}
+
+.accordion-item.custom-layout-1 .accordion-button {
+    background-color: #FAFAFA;
+    border-radius: 4px;
+    padding: 10px 25px;
+    border: 0;
+    box-shadow: none;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 19px;
+    color: #181C32;
+}
+
+.accordion-item.custom-layout-1 .accordion-button.collapsed {
+    background-color: #FFFFFF;
+    font-weight: 400;
+}
+
+.accordion-item.custom-layout-1 .accordion-button::after {
+    background-image: url(../../images/accordion-arrow1.svg);
+    background-size: 12px;
+    left: 5px;
+    top: 12px;
+}
+
+.accordion-item.custom-layout-1 .accordion-button:not(.collapsed)::after {
+    background-image: url(../../images/accordion-arrow1.svg);
+    transform: rotate(90deg);
+}
+
+.accordion-item.custom-layout-1 .accordion-body {
+    border-radius: 4px;
+    padding: 5px 10px 10px 10px;
+}
+
+.popup-table-overflow {
+    width: 1236px;
+    overflow: hidden;
+}
+
+.popup-inner-table {
+    overflow: scroll;
+}
+
+.popup-inner-table .table-type-1 tbody tr td {
+    padding: 15px 20px;
+}
+
+.color-green {
+    border-radius: 4px;
+    border: 1px solid #D5EFD6!important;
+    background: #E2F9E3;
+}
+
+.color-green .multiselect-selected-text {
+    color: #0F700F;
+}
+
+.color-red {
+    border-radius: 4px;
+    border: 1px solid #F9D0C7!important;
+    background: #FEE3D4!important;   
+}
+
+.color-red .multiselect-selected-text {
+    color: #063206;
+}
+
+#preference-criteria-table .multiselect-native-select .btn-group .dropdown-menu {
+    text-align: center;
+}
+#preference-criteria-table.table-type-1 tbody tr td {
+    padding: 8px 12px;
+}
+
+
+
+
+
+/*********document tab css - Start*************/
+.category-container{
+    border: 1px solid #EFEFEF;
+    background: #FAFAFA;
+} 
+
+.category-container .accordion-button::after{
+    background-image: url(../../images/accordion-plus.svg);
+    left: 15px;
+}
+
+.category-container .accordion-button:not(.collapsed)::after{
+    background-image: url(../../images/accordion-minus.svg);
+    transform: rotate(0);
+}
+
+
+.category-container .accordion-item .accordion-button{
+    padding:8px 15px 8px 40px;
+}
+
+.category-container .accordion-button{
+    background-color: #f4f5f6;
+}
+
+.category-container .action-btn{
+    width: 25px;
+    height: 25px;
+}
+
+/*********document tab css - *************/
+
+
+
+
+/*********Service and Rate tab css - *************/
+
+.rate-box{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 15px;
+    width: 80px;
+    height: 36px;
+    border-radius: 4px;
+    border: 1px solid #ECEDEF;
+}
+
+
+/*********Service and Rate tab css End- *************/
+
+
+/* EVV SETTING TAB CSS START */
+
+.evv-container .accordion-button::after{
+    background-image: url(../../images/evv-arrow.svg);
+    transform: rotate(-90deg);
+    left: 15px;
+    top: 13px;
+}
+
+.evv-container .accordion-button:not(.collapsed)::after{
+    background-image: url(../../images/evv-arrow.svg);
+    transform: rotate(0deg);
+}
+
+
+.evv-container .accordion-item .accordion-button{
+    padding:15px 15px 15px 40px;
+}
+
+.evv-container .accordion-button{
+    background-color: #f4f5f6;
+}
+
+.evv-container .action-btn{
+    width: 25px;
+    height: 25px;
+}
+
+/* EVV SETTING TAB CSS START END */
