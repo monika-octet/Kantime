@@ -1,24 +1,24 @@
 // tooltip initialize
 var tooltipTriggerList = [].slice.call(
-    document.querySelectorAll('[data-bs-toggle="tooltip"]')
-  );
-  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl);
+  document.querySelectorAll('[data-bs-toggle="tooltip"]')
+);
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl);
+});
+
+//success
+$("#success").click(function () {
+  Swal.fire({
+    icon: "success",
+    title: "Assignment Group 1 added to Learning Path.",
+    showConfirmButton: false,
+    timer: 1500,
   });
-  
-  //success
-  $("#success").click(function () {
-    Swal.fire({
-      icon: "success",
-      title: "Assignment Group 1 added to Learning Path.",
-      showConfirmButton: false,
-      timer: 1500,
-    });
-  });
-  
-  // toast initialize
-  $("select").multiselect();
-  
+});
+
+// toast initialize
+$("select").multiselect();
+
 
 
 //   popover initializer 
@@ -28,4 +28,25 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 });
 
 
+$(document).ready(function () {
+
+  $('#preference-criteria-table .multiselect-container .multiselect-option').click(function () {
+    var buttonTitle = $(this).attr('title');
+    var parentSibling = $(this).parent('.multiselect-container').siblings('.multiselect');
+console.log($(this).parent().siblings('.multiselect').attr('title'));
+    if (buttonTitle === 'Preffered') {
+      $(this).parent().siblings('.multiselect').removeClass('color-red');
+      $(this).parent().siblings('.multiselect').addClass('color-green');
+    }
+    else if (buttonTitle === 'Non Preffered') {
+      $(this).parent().siblings('.multiselect').removeClass('color-green');
+      $(this).parent().siblings('.multiselect').addClass('color-red');
+    } else {
+      $(this).parent().siblings('.multiselect').removeClass('color-green');
+      $(this).parent().siblings('.multiselect').removeClass('color-red');
+    }
+  });
+
+
+});
 

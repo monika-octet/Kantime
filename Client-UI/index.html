@@ -95,17 +95,19 @@
                                         </li>
                                         <li>
                                             <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                                data-bs-target="#" class="dropdown-item">Bulk Edit Client Profile
+                                                data-bs-target="#editClientProperties" class="dropdown-item">Bulk Edit
+                                                Client Profile
                                                 Fields</a>
                                         </li>
                                         <li>
                                             <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                                data-bs-target="#" class="dropdown-item">Bulk Edit Client
+                                                data-bs-target="#editClientCoordinators" class="dropdown-item">Bulk Edit
+                                                Client
                                                 Coordinators</a>
                                         </li>
                                         <li>
                                             <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                                data-bs-target="#" class="dropdown-item">Bulk HL7 Sync</a>
+                                                data-bs-target="#bulk-hl7-sync" class="dropdown-item">Bulk HL7 Sync</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -993,7 +995,8 @@
             </div>
         </div>
     </div>
-    <div class="modal show slide-popup-right" tabindex="-1" id="openAdvanceFilterButton" aria-modal="true" role="dialog">
+    <div class="modal show slide-popup-right" tabindex="-1" id="openAdvanceFilterButton" aria-modal="true"
+        role="dialog">
         <div class="modal-dialog custom-modal-1 modal-dialog-centered" id="advanceFilterPopupContent">
             <div class="modal-content">
                 <div class="modal-header bg-greyBlue">
@@ -1020,7 +1023,8 @@
                             </div>
                             <div class="w-100 mb-20">
                                 <label class="label" for="primary-care-physician">Primary care physician</label>
-                                <select class="single-select input-item" aria-label="location" id="primary-care-physician">
+                                <select class="single-select input-item" aria-label="location"
+                                    id="primary-care-physician">
                                     <option class="color-darkblue" disabled selected>
                                         Select
                                     </option>
@@ -1030,7 +1034,7 @@
                                 </select>
                             </div>
                             <div class="w-100 mb-20">
-                                <label class="label" for="location-2-Pinfo">Attending Physician</label>
+                                <label class="label" for="location-2-Pinfo">Start of care clinician</label>
                                 <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
                                     <option class="color-darkblue" disabled selected>
                                         Select
@@ -1041,7 +1045,7 @@
                                 </select>
                             </div>
                             <div class="w-100 mb-20">
-                                <label class="label" for="location-2-Pinfo">Attending Physician</label>
+                                <label class="label" for="location-2-Pinfo">Referring physician</label>
                                 <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
                                     <option class="color-darkblue" disabled selected>
                                         Select
@@ -1052,7 +1056,7 @@
                                 </select>
                             </div>
                             <div class="w-100 mb-20">
-                                <label class="label" for="location-2-Pinfo">Attending Physician</label>
+                                <label class="label" for="location-2-Pinfo">Sales person</label>
                                 <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
                                     <option class="color-darkblue" disabled selected>
                                         Select
@@ -1063,7 +1067,7 @@
                                 </select>
                             </div>
                             <div class="w-100 mb-20">
-                                <label class="label" for="location-2-Pinfo">Attending Physician</label>
+                                <label class="label" for="location-2-Pinfo">Referral facility</label>
                                 <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
                                     <option class="color-darkblue" disabled selected>
                                         Select
@@ -1074,7 +1078,7 @@
                                 </select>
                             </div>
                             <div class="w-100 mb-20">
-                                <label class="label" for="location-2-Pinfo">Attending Physician</label>
+                                <label class="label" for="location-2-Pinfo">Admission source</label>
                                 <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
                                     <option class="color-darkblue" disabled selected>
                                         Select
@@ -1085,7 +1089,7 @@
                                 </select>
                             </div>
                             <div class="w-100 mb-20">
-                                <label class="label" for="location-2-Pinfo">Attending Physician</label>
+                                <label class="label" for="location-2-Pinfo">CPR Code</label>
                                 <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
                                     <option class="color-darkblue" disabled selected>
                                         Select
@@ -1096,7 +1100,7 @@
                                 </select>
                             </div>
                             <div class="w-100 mb-20">
-                                <label class="label" for="location-2-Pinfo">Attending Physician</label>
+                                <label class="label" for="location-2-Pinfo">Language</label>
                                 <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
                                     <option class="color-darkblue" disabled selected>
                                         Select
@@ -1107,7 +1111,40 @@
                                 </select>
                             </div>
                             <div class="w-100 mb-20">
-                                <label class="label" for="location-2-Pinfo">Attending Physician</label>
+                                <label class="label" for="location-2-Pinfo">Intake Status</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Primary RN</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Primary PT</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Primary ST</label>
                                 <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
                                     <option class="color-darkblue" disabled selected>
                                         Select
@@ -1118,8 +1155,250 @@
                                 </select>
                             </div>
 
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Primary OT</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Primary MSW</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Primary AIDE</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Primary LVN/LPN</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">eChart Cosign Staff</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Coder</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Coder Group</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Transport Assistance Level</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Acuity Level</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Billing Acuity</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Referral Source</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Location</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">City</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">CBSA</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">County</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Care Type</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Payer Source</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">Case Manager</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100 mb-20">
+                                <label class="label" for="location-2-Pinfo">LOB</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Select
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
                         </div>
-
+                        <div class="w-100 mb-20">
+                            <label class="label" for="location-2-Pinfo">Classification</label>
+                            <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                <option class="color-darkblue" disabled selected>
+                                    Select
+                                </option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="w-100 mb-20">
+                            <label class="label" for="location-2-Pinfo">Team</label>
+                            <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                <option class="color-darkblue" disabled selected>
+                                    Select
+                                </option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="w-100 mb-20">
+                            <label class="label" for="location-2-Pinfo">Status</label>
+                            <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                <option class="color-darkblue" disabled selected>
+                                    Select
+                                </option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -1132,8 +1411,383 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="bulk-hl7-sync" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content pop-up-borderStyle">
+                <div class=""></div>
+                <div class="modal-body pop-up-content">
+                    <div class="pop-up-image-box mb-10">
+                        <image src="./images/alert.svg" class="pop-up-image"></image>
+                        <h2 class="popUp-title">Are you sure ?</h2>
+                    </div>
+                    <p>You are about to push the client information to third party venders!</p>
+                </div>
+                <div class="modal-footer no-border">
+                    <button type="button" class="btn btn-outline pop-up-cancel" data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+                    <button type="button" class="btn btn-outline text-red-light pop-up-btn">
+                        Yes
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal show" tabindex="-1" id="editClientProperties" aria-modal="true" role="dialog"
+        style="display: none;">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Edit Client Properties</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="border-color mb-20">
+                        <div class="p-3 d-grid grid-line align-items-center bg-lightGrey">
+                            <p class="tab-heading">Client Fields To Edit</p>
+                            <hr class="modal-line-1">
+                        </div>
+                        <div class="p-20">
+                            <div class="accordion accordion-flush" id="accordionCustom">
+                                <div class="accordion-item custom-layout-1">
+                                    <h2 class="accordion-header" id="flush-heading1">
+                                        <button class="accordion-button border-color radius-4 collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapse1"
+                                            aria-expanded="false" aria-controls="flush-collapseOne">
+                                            SMS
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapse1" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-heading1" data-bs-parent="#accordionCustom">
+                                        <div class="accordion-body bg-greybox d-grid grid-box gap-10">
 
+                                            <div class="d-flex gap-3">
+                                                <div class="radio-box bg-white">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="sms-status"
+                                                            id="enable-sms" value="yes">
+                                                        <label class="form-check-label" for="enable-sms">
+                                                            Enable SMS
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="radio-box bg-white">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="sms-status"
+                                                            id="disable-sms" value="no">
+                                                        <label class="form-check-label" for="disable-sms">
+                                                            Disable SMS
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item custom-layout-1">
+                                    <h2 class="accordion-header" id="flush-heading2">
+                                        <button class="accordion-button border-color radius-4 collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapse2"
+                                            aria-expanded="false" aria-controls="flush-collapse2">
+                                            Remove Special Characters From First Name
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapse2" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-heading2" data-bs-parent="#accordionCustom">
+                                        <div class="accordion-body bg-greybox">
+                                            <div class="d-flex gap-10">
+                                                <div class="border-color bg-white py-10 px-15 radius-4">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="patient-choose-not-representative">
+                                                        <label class="send" for="patient-chose-not-representative">
+                                                            Remove Single Quotes
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="border-color bg-white py-10 px-15 radius-4">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="patient-does-not-representative">
+                                                        <label class="send" for="patient-does-not-representative">
+                                                            Remove Single Quotes
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="border-color bg-white py-10 px-15 radius-4">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="patient-choose-not-representative">
+                                                        <label class="send" for="patient-chose-not-representative">
+                                                            Remove Single Quotes
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="border-color bg-white py-10 px-15 radius-4">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="patient-choose-not-representative">
+                                                        <label class="send" for="patient-chose-not-representative">
+                                                            Remove Single Quotes
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item custom-layout-1">
+                                    <h2 class="accordion-header" id="flush-heading3">
+                                        <button class="accordion-button border-color radius-4 collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapse3"
+                                            aria-expanded="false" aria-controls="flush-collapse3">
+                                            Remove Special Characters From Last Name
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapse3" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-heading3" data-bs-parent="#accordionCustom">
+                                        <div class="accordion-body bg-greybox">
+                                            <div class="d-flex gap-10">
+                                                <div class="border-color bg-white py-10 px-15 radius-4">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="patient-choose-not-representative">
+                                                        <label class="send" for="patient-chose-not-representative">
+                                                            Remove Single Quotes
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="border-color bg-white py-10 px-15 radius-4">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="patient-does-not-representative">
+                                                        <label class="send" for="patient-does-not-representative">
+                                                            Remove Single Quotes
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="border-color bg-white py-10 px-15 radius-4">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="patient-choose-not-representative">
+                                                        <label class="send" for="patient-chose-not-representative">
+                                                            Remove Single Quotes
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="border-color bg-white py-10 px-15 radius-4">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="patient-choose-not-representative">
+                                                        <label class="send" for="patient-chose-not-representative">
+                                                            Remove Single Quotes
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-type-1 mt-10" id="add-physician-table">
+                        <thead>
+                            <tr>
+                                <th>Client </th>
+                                <th>Episode</th>
+                                <th>Payer</th>
+                                <th>LOB</th>
+                                <th>Cell</th>
+                                <th>SOC</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Test Demo Client</td>
+                                <td>3 -- 03/04/2023 - 05/02/2023 </td>
+                                <td>Avi_PediatricPayer</td>
+                                <td>DemoPediatricLOB</td>
+                                <td>235 569 1269</td>
+                                <td>05/02/2023</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-end align-items-center">
+                        <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="editClientCoordinators" aria-modal="true" role="dialog" style="display: none;">
+        <div class="modal-dialog custom-modal-4 modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Bulk Edit Client Coordinators</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="border-color mb-20 radius-4">
+                        <div class="p-3 d-grid grid-line align-items-center bg-lightGrey">
+                            <p class="tab-heading">Edit Client Coordinators</p>
+                            <hr class="modal-line-1">
+                        </div>
+                        <div class="p-5">
+                            <div class="row col-12 m-0 pt-10 pb-10">
+                                <div class="col-4">
+                                    <label class="label" for="cc1">CC1</label>
+                                    <select class="single-select input-item" aria-label="cc1"
+                                        id="cc1">
+                                        <option class="d-none" disabled selected>Select</option>
+                                        <option value="1">Horizon Adult Healthcare</option>
+                                        <option value="2">List 2</option>
+                                        <option value="3">List 3</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label class="label" for="cc2">CC2</label>
+                                    <select class="single-select input-item" aria-label="cc2"
+                                        id="cc2">
+                                        <option class="d-none" disabled selected>Select</option>
+                                        <option value="1">Horizon Adult Healthcare</option>
+                                        <option value="2">List 2</option>
+                                        <option value="3">List 3</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label class="label" for="cc3">CC3</label>
+                                    <select class="single-select input-item" aria-label="cc3"
+                                        id="cc3">
+                                        <option class="d-none" disabled selected>Select</option>
+                                        <option value="1">Horizon Adult Healthcare</option>
+                                        <option value="2">List 2</option>
+                                        <option value="3">List 3</option>
+                                    </select>
+                                </div>
+                                
+                            </div>
+                            <div class="row col-12 m-0 pt-10 pb-10">
+                                <div class="col-4">
+                                    <label class="label" for="qa-list">QA</label>
+                                    <select class="single-select input-item" aria-label="qa-list"
+                                        id="qa-list">
+                                        <option class="d-none" disabled selected>Select</option>
+                                        <option value="1">Horizon Adult Healthcare</option>
+                                        <option value="2">List 2</option>
+                                        <option value="3">List 3</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label class="label" for="scheduler">Scheduler</label>
+                                    <select class="single-select input-item" aria-label="scheduler"
+                                        id="scheduler">
+                                        <option class="d-none" disabled selected>Select</option>
+                                        <option value="1">Horizon Adult Healthcare</option>
+                                        <option value="2">List 2</option>
+                                        <option value="3">List 3</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label class="label" for="case-manager">Case Manager</label>
+                                    <select class="single-select input-item" aria-label="case-manager"
+                                        id="case-manager">
+                                        <option class="d-none" disabled selected>Select</option>
+                                        <option value="1">Horizon Adult Healthcare</option>
+                                        <option value="2">List 2</option>
+                                        <option value="3">List 3</option>
+                                    </select>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                  <div class="popup-table-overflow">
+                    <div class="popup-inner-table">
+                    <table class="table table-type-1 mt-10 radius-4" id="editClientCoordinators-table">
+                        <thead>
+                            <tr>
+                                
+                                <th class="w-220px">Client </th>
+                                <th class="w-220px">Admit</th>
+                                <th class="w-300px">Episode</th>
+                                <th class="w-220px">SOC</th>
+                                <th class="w-220px">LOB</th>
+                                <th class="w-220px">Payer</th>
+                                <th class="w-220px">CC1</th>
+                                <th class="w-220px">CC2</th>
+                                <th class="w-220px">CC3</th>
+                                <th class="w-220px" >Case Manager</th>
+                                <th class="w-220px">QA</th>
+                                <th class="w-220px">Scheduler</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Test Demo Client</td>
+                                <td>1 - 176</td>
+                                <td>3  --  03/04/2023  -  05/02/2023  </td>
+                                <td>05/02/2023 </td>
+                                <td>DemoPediatricLOB</td>
+                                <td>Avi_PediatricPayer</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>                                
+                            </tr>
+
+                            <tr>
+                                <td>Test Demo Client</td>
+                                <td>1 - 176</td>
+                                <td>3  --  03/04/2023  -  05/02/2023  </td>
+                                <td>05/02/2023 </td>
+                                <td>DemoPediatricLOB</td>
+                                <td>Avi_PediatricPayer</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                
+                            </tr>
+
+                            <tr>
+                                <td>Test Demo Client</td>
+                                <td>1 - 176</td>
+                                <td>3  --  03/04/2023  -  05/02/2023  </td>
+                                <td>05/02/2023 </td>
+                                <td>DemoPediatricLOB</td>
+                                <td>Avi_PediatricPayer</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                
+                            </tr>                           
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- JavaScript -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-multiselect.min.js"></script>
