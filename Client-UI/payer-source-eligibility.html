@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -28,7 +27,7 @@
     <!-- Custom css -->
 
     <link rel="stylesheet" type="text/css" href="css/common/main.css" />
-    <link rel="stylesheet" type="text/css" href="css/referral/referral.css" />
+    <link rel="stylesheet" type="text/css" href="css/client/client.css" />
     <link rel="stylesheet" type="text/css" href="css/responsive/responsive.css" />
 
     <!-- Bootstrap js -->
@@ -46,9 +45,11 @@
             </div>
         </nav>
     </header>
+
     <main>
         <div class="px-30 py-10">
-            <div>
+
+            <div class="d-flex justify-content-between align-items-center mb-10">
                 <div class="breadcrumb-container">
                     <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -61,25 +62,37 @@
                         </ol>
                     </nav>
                 </div>
-            </div>
-            <div class="mb-3">
-                <div class="d-flex justify-content-between">
-                    <h1>New Intake Info</h1>
-                    <div class="icon-container d-flex gap-3">
-                        <img src="images/Help.svg" alt="help-icon" />
-                        <img src="images/Mail.svg" alt="mail-icon" />
-                        <img src="images/Duplicate.svg" alt="duplicate-icon" />
-                        <img src="images/message.svg" alt="message-icon" />
-                    </div>
+
+                <div class="icon-container d-flex gap-3">
+                    <img src="images/Help.svg" alt="help-icon" />
+                    <img src="images/Mail.svg" alt="mail-icon" />
+                    <img src="images/Duplicate.svg" alt="duplicate-icon" />
+                    <img src="images/message.svg" alt="message-icon" />
                 </div>
             </div>
 
+            <div class="d-flex justify-content-between align-items-center mb-20">
+                <h1>Client Profile</h1>
+                <div class="d-flex">
+                    <div class="search-bar position-relative mr-5">
+                        <input type="text" placeholder="Search Client" class="search-input w-100"
+                            style="background: #f4f5f6;">
+                        <img src="images/lens.svg" alt="search lens" class="lens">
+                    </div>
+                    <button class="btn btn-outline-primary">
+                        <img src="images/filter.svg" alt="">
+                        Filter
+                    </button>
+                </div>
+            </div>
+
+            
             <div class="bg-white border-color mt-10 radius-4 mb-20">
                 <div class="p-20 position-relative">
-                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                    <div class="d-flex flex-wrap justify-content-between">
                         <div class="d-flex gap-25 align-items-center">
                             <div class="profile-box d-flex justify-content-center align-items-center">
-                                <img src="images/avatar.svg" alt="user profile picture" />
+                                <img src="images/avatar-pic.svg" alt="user profile picture" />
                                 <img src="images/camera.svg" alt="upload icon" class="upload" type="button"
                                     data-bs-toggle="tooltip" data-bs-placement="bottom" title="Upload Picture" />
                             </div>
@@ -99,8 +112,8 @@
                                         <span class="info-icon-label">Address</span>
                                     </div>
                                 </div>
-                                <div class="status-tag status-yellow align-self-lg-start">
-                                    <p>Inactive</p>
+                                <div class="status-tag status-red">
+                                    <p>Conditionally accepted</p>
                                 </div>
                             </div>
                         </div>
@@ -109,77 +122,158 @@
                                 <div class="info-box">
                                     <p class="info-title">LOB :</p>
                                     <p class="info-description">Occupational Physiotherapy</p>
+                                    <button class="icon-box btn table-btn-icon" data-bs-toggle="modal"
+                                        data-bs-target="#change">
+                                        <img src="images/edit-pen.svg" alt="" class="icon-bg" data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom" title="Edit">
+                                    </button>
+
+
                                 </div>
                                 <div class="info-box">
-                                    <p class="info-title">Primary Payer :</p>
-                                    <p class="info-description">Richard Parker</p>
+                                    <p class="info-title">Admit Number:</p>
+                                    <p class="info-description">1-176</p>
+                                    <div class="dropdown  mx-3">
+                                        <button class="icon-box btn btn-dot dropdown-toggle btn-dropdown-custom"
+                                            type="button" id="" data-bs-toggle="dropdown"
+                                            aria-expanded="false"></button>
+                                        <ul class="dropdown-menu" aria-labelledby="">
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">1-175</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">1-174</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">1-173</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
                                 </div>
                                 <div class="info-box">
-                                    <p class="info-title">Location :</p>
-                                    <p class="info-description">New York, USA</p>
+                                    <p class="info-title">Case Manager</p>
+                                    <p class="info-description">Daniel Cliff</p>
+                                    <div class="dropdown  mx-3">
+                                        <button class="icon-box btn btn-dot dropdown-toggle btn-dropdown-custom"
+                                            type="button" id="" data-bs-toggle="dropdown"
+                                            aria-expanded="false"></button>
+                                        <ul class="dropdown-menu" aria-labelledby="">
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">Daniel Cliff</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">AVI Test RN</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">Staff Avi B/O</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="info-box">
-                                    <p class="info-title">Reasons :</p>
-                                    <p class="info-description">Chest pain and shortness of breath</p>
-                                </div>
-                            </div>
-                            <div class="">
                                 <div class="info-box">
                                     <p class="info-title">Intake Date :</p>
                                     <p class="info-description">01/03/1998</p>
                                 </div>
+
                                 <div class="info-box">
-                                    <p class="info-title">Requested SOC Date :</p>
-                                    <p class="info-description">10/29/1999</p>
+                                    <p class="info-title">Location :</p>
+                                    <p class="info-description">Jinisha</p>
+                                    <button class="icon-box btn table-btn-icon mx-3" data-bs-toggle="modal"
+                                        data-bs-target="#change">
+                                        <img src="images/edit-pen.svg" alt="" class="icon-bg" data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom" title="Edit">
+                                    </button>
+                                </div>
+
+
+
+
+                            </div>
+                            <div class="">
+                                <div class="info-box">
+                                    <p class="info-title">Client Staus :</p>
+                                    <p class="info-description">Pending SOC</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">POC Status :</p>
+                                    <p class="info-description">Open</p>
                                 </div>
                                 <div class="info-box">
                                     <p class="info-title">DOB :</p>
                                     <p class="info-description">10/29/1999</p>
                                 </div>
                                 <div class="info-box">
-                                    <p class="info-title">Description :</p>
-                                    <p class="info-description">The patient is experiencing chest...</p>
+                                    <p class="info-title">Intake Taken By :</p>
+                                    <p class="info-description">KanTime, Support</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Eligibility:</p>
+                                    <p class="info-description red-text f-500">Not Verified</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex flex-column justify-content-between user-profile-dropdown">
+                        <div class="d-flex flex-column justify-content-start user-profile-dropdown">
                             <div class="dropdown ms-3" style="margin-left: 133px !important;">
                                 <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom" type="button"
                                     id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <ul class="dropdown-menu" style="right: auto; left: 0;"
+                                    aria-labelledby="dropdownMenuButton1">
                                     <li>
                                         <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                            data-bs-target="#" class="dropdown-item">Logs</a>
+                                            data-bs-target="#" class="dropdown-item">Oasis Configuration</a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                            data-bs-target="#" class="dropdown-item">Print</a>
+                                            data-bs-target="#" class="dropdown-item">UB04 Setting</a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                            data-bs-target="#" class="dropdown-item">Email</a>
+                                            data-bs-target="#" class="dropdown-item">CMS 1500 Settings</a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                            data-bs-target="#add-initial-order" class="dropdown-item">Initial Order</a>
+                                            data-bs-target="#" class="dropdown-item">Initial Order</a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                            data-bs-target="#" class="dropdown-item">More Options</a>
+                                            data-bs-target="#" class="dropdown-item">Checklist</a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                            data-bs-target="#" class="dropdown-item red-text">Delete</a>
+                                            data-bs-target="#" class="dropdown-item ">Print</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item ">Print Address Label</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item ">Compose</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item ">Audit Logs</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item ">Back To referral</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item ">Non Admit</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item red-text f-400">Delete Client</a>
                                     </li>
                                 </ul>
-                            </div>
-
-                            <div class="" style="margin-top: 54px;">
-                                <div class="d-flex justify-content-end align-items-center gap-10">
-                                    <a href="duplicate-record.html" id="check-duplicate"
-                                        class="btn btn-primary ms-3">Admit</a>
-                                    <a href="#" class="btn btn-outline-primary">Non-Admit</a>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -188,901 +282,906 @@
 
                     <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="patient-information.html" role="tab"
-                                aria-controls="general" aria-selected="false">General</a>
+                            <a class="nav-link " aria-current="page" href="patient-information.html" role="tab" aria-controls="general"
+                                aria-selected="false">General</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="payer-source-eligibility.html" role="tab"
                                 aria-controls="eligibility" aria-selected="true">Payer source & eligibility</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="clinical.html" role="tab" aria-controls="clinical"
-                                aria-selected="false">Clinical</a>
+                            <a class="nav-link" href="documents.html" role="tab" aria-controls="Document"
+                                aria-selected="false">Document</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="medications.html" role="tab" aria-controls="medications"
-                                aria-selected="false">Medications</a>
+                            <a class="nav-link" href="records.html" role="tab" aria-controls="records"
+                                aria-selected="false">Records</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="clinician.html" role="tab" aria-controls="clinicains"
-                                aria-selected="false">Clinicains</a>
+                            <a class="nav-link" href="service-rates.html" role="tab" aria-controls="service-rates"
+                                aria-selected="false">Service & Rates</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="initial-schedule.html" role="tab" aria-controls="schedule"
-                                aria-selected="false">Initial Schedule</a>
+                            <a class="nav-link" href="evv-setting.html" role="tab" aria-controls="evv"
+                                aria-selected="false">EVV Setting </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="form.html" role="tab" aria-controls="form"
-                                aria-selected="false">Form</a>
+                            <a class="nav-link" href="intake-info.html" role="tab" aria-controls="intake-info"
+                                aria-selected="false">Intake Info</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="journal-note.html" role="tab" aria-controls="journal"
-                                aria-selected="false">Journal Note</a>
+                            <a class="nav-link" href="cop.html" role="tab" aria-controls="Commnunity contact"
+                                aria-selected="false">Commnunity Contacts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="cop.html" role="tab" aria-controls="COP"
-                                aria-selected="false">COP</a>
+                            <a class="nav-link" href="cop.html" role="tab" aria-controls="Commnunity contact"
+                                aria-selected="false">Commnunity Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cop.html" role="tab" aria-controls="Commnunity contact"
+                                aria-selected="false">More </a>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="bg-white">
-                <div class="m-20">
-                    <div class="pt-20 pb-10 d-flex justify-content-between align-items-center border-bottom">
-                        <div class="d-flex gap-10 align-items-center">
-                            <div class="tab-content-heading">Payer source & eligibility</div>
-                            <div class="d-flex align-items-center">
-                                <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px">
-                               
-
-                                <div class="dropdown payer-source">
-                                    <button
-                                        class="blue-text btn btn-dot dropdown-toggle btn-dropdown-custom text-decoration-none f-600 f-13 lh-17"
-                                        type="button" id="dropdownMenuButton-address-4" data-bs-toggle="dropdown"
-                                        aria-expanded="false">Add New</button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li>
-                                            <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                                data-bs-target="#add-new-primary-payer-source"
-                                                class="dropdown-item">Primary Payer</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                                data-bs-target="#add-new-secondary-payer-source"
-                                                class="dropdown-item">Secondary Payer</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                                data-bs-target="#add-new-tertiary-payer-source"
-                                                class="dropdown-item">Tertiary Payer</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                                data-bs-target="#add-new-dual-eligible-payer" class="dropdown-item">Dual
-                                                Eligible Payer</a>
-                                        </li>
-                                    </ul>
+                <div class="bg-white">
+                    <div class="m-20">
+                        <div class="pt-20 pb-10 d-flex justify-content-between align-items-center border-bottom">
+                            <div class="d-flex gap-10 align-items-center">
+                                <div class="tab-content-heading">Payer source & eligibility</div>
+                                <div class="d-flex align-items-center">
+                                    <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px">
+                                   
+    
+                                    <div class="dropdown payer-source">
+                                        <button
+                                            class="blue-text btn btn-dot dropdown-toggle btn-dropdown-custom text-decoration-none f-600 f-13 lh-17"
+                                            type="button" id="dropdownMenuButton-address-4" data-bs-toggle="dropdown"
+                                            aria-expanded="false">Add New</button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#add-new-primary-payer-source"
+                                                    class="dropdown-item">Primary Payer</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#add-new-secondary-payer-source"
+                                                    class="dropdown-item">Secondary Payer</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#add-new-tertiary-payer-source"
+                                                    class="dropdown-item">Tertiary Payer</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#add-new-dual-eligible-payer" class="dropdown-item">Dual
+                                                    Eligible Payer</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="d-flex align-items-center gap-10">
+                                <p class="save-time">Last saved 2 mins ago</p>
+                                <button class="btn btn-tertiary">Save</button>
+                            </div>
                         </div>
-                        <div class="d-flex align-items-center gap-10">
-                            <p class="save-time">Last saved 2 mins ago</p>
-                            <button class="btn btn-tertiary">Save</button>
+    
+                        <div class="d-flex justify-content-end pt-20 pb-10">
+                            <div class="d-flex gap-10">
+                                <button class="btn btn-tertiary">
+                                    <img src="images/schedule-icon.svg" alt="schedule icon">
+                                    Schedule Rule
+                                </button>
+                                <button class="btn btn-tertiary">
+                                    <img src="images/modify.svg" alt="modify icon">
+                                    Modify Primary Insurance
+                                </button>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="d-flex justify-content-end pt-20 pb-10">
-                        <div class="d-flex gap-10">
-                            <button class="btn btn-tertiary">
-                                <img src="images/schedule-icon.svg" alt="schedule icon">
-                                Schedule Rule
-                            </button>
-                            <button class="btn btn-tertiary">
-                                <img src="images/modify.svg" alt="modify icon">
-                                Modify Primary Insurance
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="accordion pb-20" id="accordion-primary">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <div class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <div class="d-flex justify-content-between align-items-center w-100">
-                                        <div class="d-flex align-items-center">
-                                            <p class="f-600 f-15 lh-19">1. &nbsp;</p>
-                                            <p class="f-400 f-15 lh-19">Avi_Pediatric Payer <span
-                                                    class="insurance-type mx-1">(Primary Insurance)</span></p>
-                                            <div class="status-tag status-green mx-3">
-                                                <p>Eligible</p>
-                                            </div>
-                                            <p class="f-13 f-400" style="color: #546071;">(Secondary:2 Tertiary:1)</p>
-                                        </div>
-                                        <div class="dropdown ">
-                                            <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom"
-                                                style="background-color: #d9d9d9;" type="button"
-                                                id="dropdownMenuButton-address-4" data-bs-toggle="dropdown"
-                                                aria-expanded="false"></button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                <li>
-                                                    <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                                        data-bs-target="#edit-payser-source"
-                                                        class="dropdown-item">Edit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                                        data-bs-target="#" class="dropdown-item">Check Eligibility
-                                                        Online</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                                        data-bs-target="#modify-eligibility-info"
-                                                        class="dropdown-item">Edit Eligibility</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                                        data-bs-target="#benefit-details" class="dropdown-item">Benefit
-                                                        Details</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                data-bs-parent="#accordion-primary">
-                                <div class="accordion-body">
-
-                                    <div class="py-20 mb-20">
-                                        <div class="bg-greybox border-color radius-4 d-grid grid-4 gap-10">
-                                            <div>
-                                                <span class="text-title">Insurance ID:</span>
-                                                <span class="text-description">123456789</span>
-                                            </div>
-                                            <div>
-                                                <span class="text-title">Insurance Group#:</span>
-                                                <span class="text-description">ABC Insurance</span>
-                                            </div>
-                                            <div>
-                                                <span class="text-title">Referral #:</span>
-                                                <span class="text-description">XYZ</span>
-                                            </div>
-                                            <div>
-                                                <span class="text-title">OASIS State ID#:</span>
-                                                <span class="text-description">10/29/1999 </span>
-                                            </div>
-                                            <div>
-                                                <span class="text-title">Payer Code:</span>
-                                                <span class="text-description">34243</span>
-                                            </div>
-                                            <div>
-                                                <span class="text-title">Eligibility verified by :</span>
-                                                <span class="text-description">Staff Name</span>
-                                            </div>
-                                            <div>
-                                                <span class="text-title">Verified on</span>
-                                                <span class="text-description">10/29/1999 </span>
-                                            </div>
-                                            <div>
-                                                <span class="text-title">Episode</span>
-                                                <span class="text-description">--</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="px-20">
-                                        <div class="form-check mb-20">
-                                            <input checked class="form-check-input" type="checkbox" value=""
-                                                id="authentication-required">
-                                            <label class="form-check-label" for="authentication-required">
-                                                Authorization Required (Disc):
-                                            </label>
-                                        </div>
-                                        <div class="d-flex flex-wrap gap-20 checkbox-group mb-20">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="SN">
-                                                <label class="form-check-label" for="SN">
-                                                    SN
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="PT">
-                                                <label class="form-check-label" for="PT">
-                                                    PT
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="ST">
-                                                <label class="form-check-label" for="ST">
-                                                    ST
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="OT">
-                                                <label class="form-check-label" for="OT">
-                                                    OT
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="AIDE">
-                                                <label class="form-check-label" for="AIDE">
-                                                    AIDE
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="MSW">
-                                                <label class="form-check-label" for="MSW">
-                                                    MSW
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="PCA">
-                                                <label class="form-check-label" for="PCA">
-                                                    PCA
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="iaswdef1">
-                                                <label class="form-check-label" for="iaswdef1">
-                                                    1aswdef1
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="attendant">
-                                                <label class="form-check-label" for="attendant">
-                                                    Attendant
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="homemaker">
-                                                <label class="form-check-label" for="homemaker">
-                                                    Homemaker
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="PP">
-                                                <label class="form-check-label" for="PP">
-                                                    PP
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="Respite">
-                                                <label class="form-check-label" for="Respite">
-                                                    Respite
-                                                </label>
-                                            </div>
-
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="THPPPP">
-                                                <label class="form-check-label" for="THPPPP">
-                                                    THPPPP
-                                                </label>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div>
-                                        <div class="form-check mb-20">
-                                            <input checked class="form-check-input" type="checkbox" value=""
-                                                id="effective-period">
-                                            <label class="form-check-label" for="effective-period">
-                                                Effective Period: No Effective Date. To set effective date click on edit
-                                                button.
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-20">
-                                            <input checked class="form-check-input" type="checkbox" value=""
-                                                id="care-requires">
-                                            <label class="form-check-label" for="care-requires">
-                                                Care requires less than 90 days
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    <div class="mb-20">
-                                        <span class="form-check-label">Patient Relation to the subscriber : </span>
-                                        <span class="f-600 f-13 lh-17">self</span>
-                                    </div>
-
-                                    <div class="col-8 mb-15">
-                                        <label class="f-400 f-14 lh-17" for="primary-insurance-notes">Notes</label>
-                                        <textarea name="" id="primary-insurance-notes" cols="" rows="2"
-                                            class="input-textarea w-100" placeholder="Type Here"></textarea>
-                                    </div>
-
-                                    <div class="accordion" id="accordion-secondary">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingTwo">
-                                                <div class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseTwo" aria-expanded="true"
-                                                    aria-controls="collapseTwo">
-                                                    <div
-                                                        class="d-flex justify-content-between align-items-center w-100">
-                                                        <div class="d-flex align-items-center">
-                                                            <p class="f-600 f-15 lh-19">1.1 &nbsp;</p>
-                                                            <p class="f-400 f-15 lh-19">Avi_Pediatric Payer <span
-                                                                    class="insurance-type mx-1">(Secondary
-                                                                    Insurance)</span></p>
-                                                            <div class="status-tag status-red mx-3">
-                                                                <p>Not Eligible</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="dropdown ">
-                                                            <button
-                                                                class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom"
-                                                                style="background-color: #d9d9d9;" type="button"
-                                                                id="dropdownMenuButton-address-4"
-                                                                data-bs-toggle="dropdown"
-                                                                aria-expanded="false"></button>
-                                                            <ul class="dropdown-menu"
-                                                                aria-labelledby="dropdownMenuButton1">
-                                                                <li>
-                                                                    <a href="javascript:void(0)" type="button"
-                                                                        data-bs-toggle="modal"
-                                                                        data-bs-target="#edit-payser-source"
-                                                                        class="dropdown-item">Edit</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:void(0)" type="button"
-                                                                        data-bs-toggle="modal" data-bs-target="#"
-                                                                        class="dropdown-item">Check Eligibility
-                                                                        Online</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:void(0)" type="button"
-                                                                        data-bs-toggle="modal"
-                                                                        data-bs-target="#modify-eligibility-info"
-                                                                        class="dropdown-item">Edit Eligibility</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:void(0)" type="button"
-                                                                        data-bs-toggle="modal"
-                                                                        data-bs-target="#benefit-details"
-                                                                        class="dropdown-item">Benefit Details</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
+    
+                        <div class="accordion pb-20" id="accordion-primary">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <div class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <div class="d-flex justify-content-between align-items-center w-100">
+                                            <div class="d-flex align-items-center">
+                                                <p class="f-600 f-15 lh-19">1. &nbsp;</p>
+                                                <p class="f-400 f-15 lh-19">Avi_Pediatric Payer <span
+                                                        class="insurance-type mx-1">(Primary Insurance)</span></p>
+                                                <div class="status-tag status-green mx-3">
+                                                    <p>Eligible</p>
                                                 </div>
-                                            </h2>
-                                            <div class="accordion-collapse collapse" id="collapseTwo"
-                                                aria-labelledby="headingTwo" data-bs-parent="#accordion-secondary">
-                                                <div class="accordion-body">
-
-                                                    <div class="py-20 mb-20">
+                                                <p class="f-13 f-400" style="color: #546071;">(Secondary:2 Tertiary:1)</p>
+                                            </div>
+                                            <div class="dropdown ">
+                                                <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom"
+                                                    style="background-color: #d9d9d9;" type="button"
+                                                    id="dropdownMenuButton-address-4" data-bs-toggle="dropdown"
+                                                    aria-expanded="false"></button>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                            data-bs-target="#edit-payser-source"
+                                                            class="dropdown-item">Edit</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                            data-bs-target="#" class="dropdown-item">Check Eligibility
+                                                            Online</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                            data-bs-target="#modify-eligibility-info"
+                                                            class="dropdown-item">Edit Eligibility</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                            data-bs-target="#benefit-details" class="dropdown-item">Benefit
+                                                            Details</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                    data-bs-parent="#accordion-primary">
+                                    <div class="accordion-body">
+    
+                                        <div class="py-20 mb-20">
+                                            <div class="bg-greybox border-color radius-4 d-grid grid-4 gap-10">
+                                                <div>
+                                                    <span class="text-title">Insurance ID:</span>
+                                                    <span class="text-description">123456789</span>
+                                                </div>
+                                                <div>
+                                                    <span class="text-title">Insurance Group#:</span>
+                                                    <span class="text-description">ABC Insurance</span>
+                                                </div>
+                                                <div>
+                                                    <span class="text-title">Referral #:</span>
+                                                    <span class="text-description">XYZ</span>
+                                                </div>
+                                                <div>
+                                                    <span class="text-title">OASIS State ID#:</span>
+                                                    <span class="text-description">10/29/1999 </span>
+                                                </div>
+                                                <div>
+                                                    <span class="text-title">Payer Code:</span>
+                                                    <span class="text-description">34243</span>
+                                                </div>
+                                                <div>
+                                                    <span class="text-title">Eligibility verified by :</span>
+                                                    <span class="text-description">Staff Name</span>
+                                                </div>
+                                                <div>
+                                                    <span class="text-title">Verified on</span>
+                                                    <span class="text-description">10/29/1999 </span>
+                                                </div>
+                                                <div>
+                                                    <span class="text-title">Episode</span>
+                                                    <span class="text-description">--</span>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="px-20">
+                                            <div class="form-check mb-20">
+                                                <input checked class="form-check-input" type="checkbox" value=""
+                                                    id="authentication-required">
+                                                <label class="form-check-label" for="authentication-required">
+                                                    Authorization Required (Disc):
+                                                </label>
+                                            </div>
+                                            <div class="d-flex flex-wrap gap-20 checkbox-group mb-20">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="SN">
+                                                    <label class="form-check-label" for="SN">
+                                                        SN
+                                                    </label>
+                                                </div>
+    
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="PT">
+                                                    <label class="form-check-label" for="PT">
+                                                        PT
+                                                    </label>
+                                                </div>
+    
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="ST">
+                                                    <label class="form-check-label" for="ST">
+                                                        ST
+                                                    </label>
+                                                </div>
+    
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="OT">
+                                                    <label class="form-check-label" for="OT">
+                                                        OT
+                                                    </label>
+                                                </div>
+    
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="AIDE">
+                                                    <label class="form-check-label" for="AIDE">
+                                                        AIDE
+                                                    </label>
+                                                </div>
+    
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="MSW">
+                                                    <label class="form-check-label" for="MSW">
+                                                        MSW
+                                                    </label>
+                                                </div>
+    
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="PCA">
+                                                    <label class="form-check-label" for="PCA">
+                                                        PCA
+                                                    </label>
+                                                </div>
+    
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="iaswdef1">
+                                                    <label class="form-check-label" for="iaswdef1">
+                                                        1aswdef1
+                                                    </label>
+                                                </div>
+    
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="attendant">
+                                                    <label class="form-check-label" for="attendant">
+                                                        Attendant
+                                                    </label>
+                                                </div>
+    
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="homemaker">
+                                                    <label class="form-check-label" for="homemaker">
+                                                        Homemaker
+                                                    </label>
+                                                </div>
+    
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="PP">
+                                                    <label class="form-check-label" for="PP">
+                                                        PP
+                                                    </label>
+                                                </div>
+    
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="Respite">
+                                                    <label class="form-check-label" for="Respite">
+                                                        Respite
+                                                    </label>
+                                                </div>
+    
+    
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="THPPPP">
+                                                    <label class="form-check-label" for="THPPPP">
+                                                        THPPPP
+                                                    </label>
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                        <div>
+                                            <div class="form-check mb-20">
+                                                <input checked class="form-check-input" type="checkbox" value=""
+                                                    id="effective-period">
+                                                <label class="form-check-label" for="effective-period">
+                                                    Effective Period: No Effective Date. To set effective date click on edit
+                                                    button.
+                                                </label>
+                                            </div>
+                                            <div class="form-check mb-20">
+                                                <input checked class="form-check-input" type="checkbox" value=""
+                                                    id="care-requires">
+                                                <label class="form-check-label" for="care-requires">
+                                                    Care requires less than 90 days
+                                                </label>
+                                            </div>
+                                        </div>
+    
+                                        <div class="mb-20">
+                                            <span class="form-check-label">Patient Relation to the subscriber : </span>
+                                            <span class="f-600 f-13 lh-17">self</span>
+                                        </div>
+    
+                                        <div class="col-8 mb-15">
+                                            <label class="f-400 f-14 lh-17" for="primary-insurance-notes">Notes</label>
+                                            <textarea name="" id="primary-insurance-notes" cols="" rows="2"
+                                                class="input-textarea w-100" placeholder="Type Here"></textarea>
+                                        </div>
+    
+                                        <div class="accordion" id="accordion-secondary">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingTwo">
+                                                    <div class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapseTwo" aria-expanded="true"
+                                                        aria-controls="collapseTwo">
                                                         <div
-                                                            class="bg-greybox border-color radius-4 d-grid grid-4 gap-10">
-                                                            <div>
-                                                                <span class="text-title">Insurance ID:</span>
-                                                                <span class="text-description">123456789</span>
-                                                            </div>
-                                                            <div>
-                                                                <span class="text-title">Insurance Group#:</span>
-                                                                <span class="text-description">ABC Insurance</span>
-                                                            </div>
-                                                            <div>
-                                                                <span class="text-title">Referral #:</span>
-                                                                <span class="text-description">XYZ</span>
-                                                            </div>
-                                                            <div>
-                                                                <span class="text-title">OASIS State ID#:</span>
-                                                                <span class="text-description">10/29/1999 </span>
-                                                            </div>
-                                                            <div>
-                                                                <span class="text-title">Payer Code:</span>
-                                                                <span class="text-description">34243</span>
-                                                            </div>
-                                                            <div>
-                                                                <span class="text-title">Eligibility verified by
-                                                                    :</span>
-                                                                <span class="text-description">Staff Name</span>
-                                                            </div>
-                                                            <div>
-                                                                <span class="text-title">Verified on</span>
-                                                                <span class="text-description">10/29/1999 </span>
-                                                            </div>
-                                                            <div>
-                                                                <span class="text-title">Episode</span>
-                                                                <span class="text-description">--</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="px-20">
-                                                        <div class="form-check mb-20">
-                                                            <input checked class="form-check-input" type="checkbox"
-                                                                value="" id="authentication-required">
-                                                            <label class="form-check-label"
-                                                                for="authentication-required">
-                                                                Authorization Required (Disc):
-                                                            </label>
-                                                        </div>
-                                                        <div class="d-flex flex-wrap gap-20 checkbox-group mb-20">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value=""
-                                                                    id="SN-1">
-                                                                <label class="form-check-label" for="SN-1">
-                                                                    SN
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value=""
-                                                                    id="PT-1">
-                                                                <label class="form-check-label" for="PT-1">
-                                                                    PT
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value=""
-                                                                    id="ST-1">
-                                                                <label class="form-check-label" for="ST-1">
-                                                                    ST
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value=""
-                                                                    id="OT-1">
-                                                                <label class="form-check-label" for="OT-1">
-                                                                    OT
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value=""
-                                                                    id="AIDE-1">
-                                                                <label class="form-check-label" for="AIDE-1">
-                                                                    AIDE
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value=""
-                                                                    id="MSW-1">
-                                                                <label class="form-check-label" for="MSW-1">
-                                                                    MSW
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value=""
-                                                                    id="PCA-1">
-                                                                <label class="form-check-label" for="PCA-1">
-                                                                    PCA
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value=""
-                                                                    id="iaswdef1-1">
-                                                                <label class="form-check-label" for="iaswdef1-1">
-                                                                    1aswdef1
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value=""
-                                                                    id="attendant-1">
-                                                                <label class="form-check-label" for="attendant-1">
-                                                                    Attendant
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value=""
-                                                                    id="homemaker-1">
-                                                                <label class="form-check-label" for="homemaker-1">
-                                                                    Homemaker
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value=""
-                                                                    id="PP-1">
-                                                                <label class="form-check-label" for="PP-1">
-                                                                    PP
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value=""
-                                                                    id="Respite-1">
-                                                                <label class="form-check-label" for="Respite-1">
-                                                                    Respite
-                                                                </label>
-                                                            </div>
-
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value=""
-                                                                    id="THPPPP-1">
-                                                                <label class="form-check-label" for="THPPPP-1">
-                                                                    THPPPP
-                                                                </label>
-                                                            </div>
-
-                                                        </div>
-
-                                                    </div>
-
-                                                    <div>
-                                                        <div class="form-check mb-20">
-                                                            <input checked class="form-check-input" type="checkbox"
-                                                                value="" id="effective-period">
-                                                            <label class="form-check-label" for="effective-period">
-                                                                Effective Period: No Effective Date. To set effective
-                                                                date click on edit
-                                                                button.
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-check mb-20">
-                                                            <input checked class="form-check-input" type="checkbox"
-                                                                value="" id="care-requires">
-                                                            <label class="form-check-label" for="care-requires">
-                                                                Care requires less than 90 days
-                                                            </label>
-                                                        </div>
-
-                                                        <div class="form-check mb-20">
-                                                            <input checked class="form-check-input" type="checkbox"
-                                                                value="" id="block-invoice">
-                                                            <label class="form-check-label" for="block-invoice">
-                                                                Block Invoice creation without Authorization
-                                                            </label>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="mb-20 d-flex gap-30">
-                                                        <span class="form-check-label">Patient Relation to the
-                                                            subscriber : <span
-                                                                class="f-600 f-13 lh-17">self</span></span>
-                                                        <span class="form-check-label">Adjustment Group Code : <span
-                                                                class="f-600 f-13 lh-17">OA</span></span>
-                                                        <span class="form-check-label">Adjustment Reason Code : <span
-                                                                class="f-600 f-13 lh-17">22</span></span>
-                                                    </div>
-
-                                                    <div class="col-8 mb-15">
-                                                        <label class="label f-600"
-                                                            for="primary-insurance-notes">Notes</label>
-                                                        <textarea name="" id="primary-insurance-notes" cols="" rows="2"
-                                                            class="input-textarea w-100"
-                                                            placeholder="Type Here"></textarea>
-                                                    </div>
-
-                                                    <div class="accordion" id="accordion-tertiary">
-                                                        <div class="accordion-item">
-                                                            <h2 class="accordion-header" id="headingThree">
-                                                                <div class="accordion-button" type="button"
-                                                                    data-bs-toggle="collapse"
-                                                                    data-bs-target="#collapseThree" aria-expanded="true"
-                                                                    aria-controls="collapseThree">
-                                                                    <div
-                                                                        class="d-flex justify-content-between align-items-center w-100">
-                                                                        <div class="d-flex align-items-center">
-                                                                            <p class="f-600 f-15 lh-19">1.1.1 &nbsp;</p>
-                                                                            <p class="f-400 f-15 lh-19">Avi_Pediatric
-                                                                                Payer <span
-                                                                                    class="insurance-type mx-1">(Tertiary
-                                                                                    Insurance)</span></p>
-                                                                            <div class="status-tag status-red mx-3">
-                                                                                <p>Not Eligible</p>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="dropdown payer-dropdown">
-                                                                            <button
-                                                                                class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom"
-                                                                                style="background-color: #d9d9d9;"
-                                                                                type="button"
-                                                                                id="dropdownMenuButton-address-4"
-                                                                                data-bs-toggle="dropdown"
-                                                                                aria-expanded="false"></button>
-                                                                            <ul class="dropdown-menu"
-                                                                                aria-labelledby="dropdownMenuButton1">
-                                                                                <li>
-                                                                                    <a href="javascript:void(0)"
-                                                                                        type="button"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#edit-payser-source"
-                                                                                        class="dropdown-item">Edit</a>
-                                                                                </li>
-                                                                                <li>
-                                                                                    <a href="javascript:void(0)"
-                                                                                        type="button"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#"
-                                                                                        class="dropdown-item">Check
-                                                                                        Eligibility
-                                                                                        Online</a>
-                                                                                </li>
-                                                                                <li>
-                                                                                    <a href="javascript:void(0)"
-                                                                                        type="button"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modify-eligibility-info"
-                                                                                        class="dropdown-item">Edit
-                                                                                        Eligibility</a>
-                                                                                </li>
-                                                                                <li>
-                                                                                    <a href="javascript:void(0)"
-                                                                                        type="button"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#benefit-details"
-                                                                                        class="dropdown-item">Benefit
-                                                                                        Details</a>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-
-
-                                                                    </div>
+                                                            class="d-flex justify-content-between align-items-center w-100">
+                                                            <div class="d-flex align-items-center">
+                                                                <p class="f-600 f-15 lh-19">1.1 &nbsp;</p>
+                                                                <p class="f-400 f-15 lh-19">Avi_Pediatric Payer <span
+                                                                        class="insurance-type mx-1">(Secondary
+                                                                        Insurance)</span></p>
+                                                                <div class="status-tag status-red mx-3">
+                                                                    <p>Not Eligible</p>
                                                                 </div>
-                                                            </h2>
-                                                            <div class="accordion-collapse collapse " id="collapseThree"
-                                                                aria-labelledby="headingThree"
-                                                                data-bs-parent="#accordion-tertiary">
-                                                                <div class="accordian-body">
-                                                                    <div class="p-20 mb-20">
+                                                            </div>
+                                                            <div class="dropdown ">
+                                                                <button
+                                                                    class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom"
+                                                                    style="background-color: #d9d9d9;" type="button"
+                                                                    id="dropdownMenuButton-address-4"
+                                                                    data-bs-toggle="dropdown"
+                                                                    aria-expanded="false"></button>
+                                                                <ul class="dropdown-menu"
+                                                                    aria-labelledby="dropdownMenuButton1">
+                                                                    <li>
+                                                                        <a href="javascript:void(0)" type="button"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#edit-payser-source"
+                                                                            class="dropdown-item">Edit</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript:void(0)" type="button"
+                                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                                            class="dropdown-item">Check Eligibility
+                                                                            Online</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript:void(0)" type="button"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#modify-eligibility-info"
+                                                                            class="dropdown-item">Edit Eligibility</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript:void(0)" type="button"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#benefit-details"
+                                                                            class="dropdown-item">Benefit Details</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </h2>
+                                                <div class="accordion-collapse collapse" id="collapseTwo"
+                                                    aria-labelledby="headingTwo" data-bs-parent="#accordion-secondary">
+                                                    <div class="accordion-body">
+    
+                                                        <div class="py-20 mb-20">
+                                                            <div
+                                                                class="bg-greybox border-color radius-4 d-grid grid-4 gap-10">
+                                                                <div>
+                                                                    <span class="text-title">Insurance ID:</span>
+                                                                    <span class="text-description">123456789</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span class="text-title">Insurance Group#:</span>
+                                                                    <span class="text-description">ABC Insurance</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span class="text-title">Referral #:</span>
+                                                                    <span class="text-description">XYZ</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span class="text-title">OASIS State ID#:</span>
+                                                                    <span class="text-description">10/29/1999 </span>
+                                                                </div>
+                                                                <div>
+                                                                    <span class="text-title">Payer Code:</span>
+                                                                    <span class="text-description">34243</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span class="text-title">Eligibility verified by
+                                                                        :</span>
+                                                                    <span class="text-description">Staff Name</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span class="text-title">Verified on</span>
+                                                                    <span class="text-description">10/29/1999 </span>
+                                                                </div>
+                                                                <div>
+                                                                    <span class="text-title">Episode</span>
+                                                                    <span class="text-description">--</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+    
+                                                        <div class="px-20">
+                                                            <div class="form-check mb-20">
+                                                                <input checked class="form-check-input" type="checkbox"
+                                                                    value="" id="authentication-required">
+                                                                <label class="form-check-label"
+                                                                    for="authentication-required">
+                                                                    Authorization Required (Disc):
+                                                                </label>
+                                                            </div>
+                                                            <div class="d-flex flex-wrap gap-20 checkbox-group mb-20">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value=""
+                                                                        id="SN-1">
+                                                                    <label class="form-check-label" for="SN-1">
+                                                                        SN
+                                                                    </label>
+                                                                </div>
+    
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value=""
+                                                                        id="PT-1">
+                                                                    <label class="form-check-label" for="PT-1">
+                                                                        PT
+                                                                    </label>
+                                                                </div>
+    
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value=""
+                                                                        id="ST-1">
+                                                                    <label class="form-check-label" for="ST-1">
+                                                                        ST
+                                                                    </label>
+                                                                </div>
+    
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value=""
+                                                                        id="OT-1">
+                                                                    <label class="form-check-label" for="OT-1">
+                                                                        OT
+                                                                    </label>
+                                                                </div>
+    
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value=""
+                                                                        id="AIDE-1">
+                                                                    <label class="form-check-label" for="AIDE-1">
+                                                                        AIDE
+                                                                    </label>
+                                                                </div>
+    
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value=""
+                                                                        id="MSW-1">
+                                                                    <label class="form-check-label" for="MSW-1">
+                                                                        MSW
+                                                                    </label>
+                                                                </div>
+    
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value=""
+                                                                        id="PCA-1">
+                                                                    <label class="form-check-label" for="PCA-1">
+                                                                        PCA
+                                                                    </label>
+                                                                </div>
+    
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value=""
+                                                                        id="iaswdef1-1">
+                                                                    <label class="form-check-label" for="iaswdef1-1">
+                                                                        1aswdef1
+                                                                    </label>
+                                                                </div>
+    
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value=""
+                                                                        id="attendant-1">
+                                                                    <label class="form-check-label" for="attendant-1">
+                                                                        Attendant
+                                                                    </label>
+                                                                </div>
+    
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value=""
+                                                                        id="homemaker-1">
+                                                                    <label class="form-check-label" for="homemaker-1">
+                                                                        Homemaker
+                                                                    </label>
+                                                                </div>
+    
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value=""
+                                                                        id="PP-1">
+                                                                    <label class="form-check-label" for="PP-1">
+                                                                        PP
+                                                                    </label>
+                                                                </div>
+    
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value=""
+                                                                        id="Respite-1">
+                                                                    <label class="form-check-label" for="Respite-1">
+                                                                        Respite
+                                                                    </label>
+                                                                </div>
+    
+    
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value=""
+                                                                        id="THPPPP-1">
+                                                                    <label class="form-check-label" for="THPPPP-1">
+                                                                        THPPPP
+                                                                    </label>
+                                                                </div>
+    
+                                                            </div>
+    
+                                                        </div>
+    
+                                                        <div>
+                                                            <div class="form-check mb-20">
+                                                                <input checked class="form-check-input" type="checkbox"
+                                                                    value="" id="effective-period">
+                                                                <label class="form-check-label" for="effective-period">
+                                                                    Effective Period: No Effective Date. To set effective
+                                                                    date click on edit
+                                                                    button.
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check mb-20">
+                                                                <input checked class="form-check-input" type="checkbox"
+                                                                    value="" id="care-requires">
+                                                                <label class="form-check-label" for="care-requires">
+                                                                    Care requires less than 90 days
+                                                                </label>
+                                                            </div>
+    
+                                                            <div class="form-check mb-20">
+                                                                <input checked class="form-check-input" type="checkbox"
+                                                                    value="" id="block-invoice">
+                                                                <label class="form-check-label" for="block-invoice">
+                                                                    Block Invoice creation without Authorization
+                                                                </label>
+                                                            </div>
+                                                        </div>
+    
+                                                        <div class="mb-20 d-flex gap-30">
+                                                            <span class="form-check-label">Patient Relation to the
+                                                                subscriber : <span
+                                                                    class="f-600 f-13 lh-17">self</span></span>
+                                                            <span class="form-check-label">Adjustment Group Code : <span
+                                                                    class="f-600 f-13 lh-17">OA</span></span>
+                                                            <span class="form-check-label">Adjustment Reason Code : <span
+                                                                    class="f-600 f-13 lh-17">22</span></span>
+                                                        </div>
+    
+                                                        <div class="col-8 mb-15">
+                                                            <label class="label f-600"
+                                                                for="primary-insurance-notes">Notes</label>
+                                                            <textarea name="" id="primary-insurance-notes" cols="" rows="2"
+                                                                class="input-textarea w-100"
+                                                                placeholder="Type Here"></textarea>
+                                                        </div>
+    
+                                                        <div class="accordion" id="accordion-tertiary">
+                                                            <div class="accordion-item">
+                                                                <h2 class="accordion-header" id="headingThree">
+                                                                    <div class="accordion-button" type="button"
+                                                                        data-bs-toggle="collapse"
+                                                                        data-bs-target="#collapseThree" aria-expanded="true"
+                                                                        aria-controls="collapseThree">
                                                                         <div
-                                                                            class="bg-greybox border-color radius-4 d-grid grid-4 gap-10">
-                                                                            <div>
-                                                                                <span class="text-title">Insurance
-                                                                                    ID:</span>
-                                                                                <span
-                                                                                    class="text-description">123456789</span>
+                                                                            class="d-flex justify-content-between align-items-center w-100">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <p class="f-600 f-15 lh-19">1.1.1 &nbsp;</p>
+                                                                                <p class="f-400 f-15 lh-19">Avi_Pediatric
+                                                                                    Payer <span
+                                                                                        class="insurance-type mx-1">(Tertiary
+                                                                                        Insurance)</span></p>
+                                                                                <div class="status-tag status-red mx-3">
+                                                                                    <p>Not Eligible</p>
+                                                                                </div>
                                                                             </div>
-                                                                            <div>
-                                                                                <span class="text-title">Insurance
-                                                                                    Group#:</span>
-                                                                                <span class="text-description">ABC
-                                                                                    Insurance</span>
+                                                                            <div class="dropdown payer-dropdown">
+                                                                                <button
+                                                                                    class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom"
+                                                                                    style="background-color: #d9d9d9;"
+                                                                                    type="button"
+                                                                                    id="dropdownMenuButton-address-4"
+                                                                                    data-bs-toggle="dropdown"
+                                                                                    aria-expanded="false"></button>
+                                                                                <ul class="dropdown-menu"
+                                                                                    aria-labelledby="dropdownMenuButton1">
+                                                                                    <li>
+                                                                                        <a href="javascript:void(0)"
+                                                                                            type="button"
+                                                                                            data-bs-toggle="modal"
+                                                                                            data-bs-target="#edit-payser-source"
+                                                                                            class="dropdown-item">Edit</a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="javascript:void(0)"
+                                                                                            type="button"
+                                                                                            data-bs-toggle="modal"
+                                                                                            data-bs-target="#"
+                                                                                            class="dropdown-item">Check
+                                                                                            Eligibility
+                                                                                            Online</a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="javascript:void(0)"
+                                                                                            type="button"
+                                                                                            data-bs-toggle="modal"
+                                                                                            data-bs-target="#modify-eligibility-info"
+                                                                                            class="dropdown-item">Edit
+                                                                                            Eligibility</a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="javascript:void(0)"
+                                                                                            type="button"
+                                                                                            data-bs-toggle="modal"
+                                                                                            data-bs-target="#benefit-details"
+                                                                                            class="dropdown-item">Benefit
+                                                                                            Details</a>
+                                                                                    </li>
+                                                                                </ul>
                                                                             </div>
-                                                                            <div>
-                                                                                <span class="text-title">Referral
-                                                                                    #:</span>
-                                                                                <span
-                                                                                    class="text-description">XYZ</span>
-                                                                            </div>
-                                                                            <div>
-                                                                                <span class="text-title">OASIS State
-                                                                                    ID#:</span>
-                                                                                <span
-                                                                                    class="text-description">10/29/1999
-                                                                                </span>
-                                                                            </div>
-                                                                            <div>
-                                                                                <span class="text-title">Payer
-                                                                                    Code:</span>
-                                                                                <span
-                                                                                    class="text-description">34243</span>
-                                                                            </div>
-                                                                            <div>
-                                                                                <span class="text-title">Eligibility
-                                                                                    verified by
-                                                                                    :</span>
-                                                                                <span class="text-description">Staff
-                                                                                    Name</span>
-                                                                            </div>
-                                                                            <div>
-                                                                                <span class="text-title">Verified
-                                                                                    on</span>
-                                                                                <span
-                                                                                    class="text-description">10/29/1999
-                                                                                </span>
-                                                                            </div>
-                                                                            <div>
-                                                                                <span class="text-title">Episode</span>
-                                                                                <span class="text-description">--</span>
-                                                                            </div>
+    
+    
                                                                         </div>
                                                                     </div>
-
-                                                                    <div class="px-20">
-                                                                        <div class="form-check mb-20">
-                                                                            <input checked class="form-check-input"
-                                                                                type="checkbox" value=""
-                                                                                id="authentication-required">
-                                                                            <label class="form-check-label"
-                                                                                for="authentication-required">
-                                                                                Authorization Required (Disc):
-                                                                            </label>
+                                                                </h2>
+                                                                <div class="accordion-collapse collapse " id="collapseThree"
+                                                                    aria-labelledby="headingThree"
+                                                                    data-bs-parent="#accordion-tertiary">
+                                                                    <div class="accordian-body">
+                                                                        <div class="p-20 mb-20">
+                                                                            <div
+                                                                                class="bg-greybox border-color radius-4 d-grid grid-4 gap-10">
+                                                                                <div>
+                                                                                    <span class="text-title">Insurance
+                                                                                        ID:</span>
+                                                                                    <span
+                                                                                        class="text-description">123456789</span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span class="text-title">Insurance
+                                                                                        Group#:</span>
+                                                                                    <span class="text-description">ABC
+                                                                                        Insurance</span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span class="text-title">Referral
+                                                                                        #:</span>
+                                                                                    <span
+                                                                                        class="text-description">XYZ</span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span class="text-title">OASIS State
+                                                                                        ID#:</span>
+                                                                                    <span
+                                                                                        class="text-description">10/29/1999
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span class="text-title">Payer
+                                                                                        Code:</span>
+                                                                                    <span
+                                                                                        class="text-description">34243</span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span class="text-title">Eligibility
+                                                                                        verified by
+                                                                                        :</span>
+                                                                                    <span class="text-description">Staff
+                                                                                        Name</span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span class="text-title">Verified
+                                                                                        on</span>
+                                                                                    <span
+                                                                                        class="text-description">10/29/1999
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span class="text-title">Episode</span>
+                                                                                    <span class="text-description">--</span>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                        <div
-                                                                            class="d-flex flex-wrap gap-20 checkbox-group mb-20">
-                                                                            <div class="form-check">
-                                                                                <input class="form-check-input"
-                                                                                    type="checkbox" value="" id="SN-3">
-                                                                                <label class="form-check-label"
-                                                                                    for="SN-3">
-                                                                                    SN
-                                                                                </label>
-                                                                            </div>
-
-                                                                            <div class="form-check">
-                                                                                <input class="form-check-input"
-                                                                                    type="checkbox" value="" id="PT-3">
-                                                                                <label class="form-check-label"
-                                                                                    for="PT-3">
-                                                                                    PT
-                                                                                </label>
-                                                                            </div>
-
-                                                                            <div class="form-check">
-                                                                                <input class="form-check-input"
-                                                                                    type="checkbox" value="" id="ST-3">
-                                                                                <label class="form-check-label"
-                                                                                    for="ST-3">
-                                                                                    ST
-                                                                                </label>
-                                                                            </div>
-
-                                                                            <div class="form-check">
-                                                                                <input class="form-check-input"
-                                                                                    type="checkbox" value="" id="OT-3">
-                                                                                <label class="form-check-label"
-                                                                                    for="OT-3">
-                                                                                    OT
-                                                                                </label>
-                                                                            </div>
-
-                                                                            <div class="form-check">
-                                                                                <input class="form-check-input"
-                                                                                    type="checkbox" value=""
-                                                                                    id="AIDE-3">
-                                                                                <label class="form-check-label"
-                                                                                    for="AIDE-3">
-                                                                                    AIDE
-                                                                                </label>
-                                                                            </div>
-
-                                                                            <div class="form-check">
-                                                                                <input class="form-check-input"
-                                                                                    type="checkbox" value="" id="MSW-3">
-                                                                                <label class="form-check-label"
-                                                                                    for="MSW-3">
-                                                                                    MSW
-                                                                                </label>
-                                                                            </div>
-
-                                                                            <div class="form-check">
-                                                                                <input class="form-check-input"
-                                                                                    type="checkbox" value="" id="PCA-3">
-                                                                                <label class="form-check-label"
-                                                                                    for="PCA-3">
-                                                                                    PCA
-                                                                                </label>
-                                                                            </div>
-
-                                                                            <div class="form-check">
-                                                                                <input class="form-check-input"
-                                                                                    type="checkbox" value=""
-                                                                                    id="iaswdef1-3">
-                                                                                <label class="form-check-label"
-                                                                                    for="iaswdef1-3">
-                                                                                    1aswdef1
-                                                                                </label>
-                                                                            </div>
-
-                                                                            <div class="form-check">
-                                                                                <input class="form-check-input"
-                                                                                    type="checkbox" value=""
-                                                                                    id="attendant-3">
-                                                                                <label class="form-check-label"
-                                                                                    for="attendant-3">
-                                                                                    Attendant
-                                                                                </label>
-                                                                            </div>
-
-                                                                            <div class="form-check">
-                                                                                <input class="form-check-input"
-                                                                                    type="checkbox" value=""
-                                                                                    id="homemaker">
-                                                                                <label class="form-check-label"
-                                                                                    for="homemaker">
-                                                                                    Homemaker
-                                                                                </label>
-                                                                            </div>
-
-                                                                            <div class="form-check">
-                                                                                <input class="form-check-input"
-                                                                                    type="checkbox" value="" id="PP-3">
-                                                                                <label class="form-check-label"
-                                                                                    for="PP-3">
-                                                                                    PP
-                                                                                </label>
-                                                                            </div>
-
-                                                                            <div class="form-check">
-                                                                                <input class="form-check-input"
-                                                                                    type="checkbox" value=""
-                                                                                    id="Respite-3">
-                                                                                <label class="form-check-label"
-                                                                                    for="Respite-3">
-                                                                                    Respite
-                                                                                </label>
-                                                                            </div>
-
-
-                                                                            <div class="form-check">
-                                                                                <input class="form-check-input"
-                                                                                    type="checkbox" value=""
-                                                                                    id="THPPPP">
-                                                                                <label class="form-check-label"
-                                                                                    for="THPPPP">
-                                                                                    THPPPP
-                                                                                </label>
-                                                                            </div>
-
-                                                                        </div>
-
-
-                                                                        <div>
+    
+                                                                        <div class="px-20">
                                                                             <div class="form-check mb-20">
                                                                                 <input checked class="form-check-input"
                                                                                     type="checkbox" value=""
-                                                                                    id="effective-period">
+                                                                                    id="authentication-required">
                                                                                 <label class="form-check-label"
-                                                                                    for="effective-period">
-                                                                                    Effective Period: No Effective Date.
-                                                                                    To
-                                                                                    set effective
-                                                                                    date click on edit
-                                                                                    button.
+                                                                                    for="authentication-required">
+                                                                                    Authorization Required (Disc):
                                                                                 </label>
                                                                             </div>
-                                                                            <div class="form-check mb-20">
-                                                                                <input checked class="form-check-input"
-                                                                                    type="checkbox" value=""
-                                                                                    id="care-requires">
-                                                                                <label class="form-check-label"
-                                                                                    for="care-requires">
-                                                                                    Care requires less than 90 days
-                                                                                </label>
+                                                                            <div
+                                                                                class="d-flex flex-wrap gap-20 checkbox-group mb-20">
+                                                                                <div class="form-check">
+                                                                                    <input class="form-check-input"
+                                                                                        type="checkbox" value="" id="SN-3">
+                                                                                    <label class="form-check-label"
+                                                                                        for="SN-3">
+                                                                                        SN
+                                                                                    </label>
+                                                                                </div>
+    
+                                                                                <div class="form-check">
+                                                                                    <input class="form-check-input"
+                                                                                        type="checkbox" value="" id="PT-3">
+                                                                                    <label class="form-check-label"
+                                                                                        for="PT-3">
+                                                                                        PT
+                                                                                    </label>
+                                                                                </div>
+    
+                                                                                <div class="form-check">
+                                                                                    <input class="form-check-input"
+                                                                                        type="checkbox" value="" id="ST-3">
+                                                                                    <label class="form-check-label"
+                                                                                        for="ST-3">
+                                                                                        ST
+                                                                                    </label>
+                                                                                </div>
+    
+                                                                                <div class="form-check">
+                                                                                    <input class="form-check-input"
+                                                                                        type="checkbox" value="" id="OT-3">
+                                                                                    <label class="form-check-label"
+                                                                                        for="OT-3">
+                                                                                        OT
+                                                                                    </label>
+                                                                                </div>
+    
+                                                                                <div class="form-check">
+                                                                                    <input class="form-check-input"
+                                                                                        type="checkbox" value=""
+                                                                                        id="AIDE-3">
+                                                                                    <label class="form-check-label"
+                                                                                        for="AIDE-3">
+                                                                                        AIDE
+                                                                                    </label>
+                                                                                </div>
+    
+                                                                                <div class="form-check">
+                                                                                    <input class="form-check-input"
+                                                                                        type="checkbox" value="" id="MSW-3">
+                                                                                    <label class="form-check-label"
+                                                                                        for="MSW-3">
+                                                                                        MSW
+                                                                                    </label>
+                                                                                </div>
+    
+                                                                                <div class="form-check">
+                                                                                    <input class="form-check-input"
+                                                                                        type="checkbox" value="" id="PCA-3">
+                                                                                    <label class="form-check-label"
+                                                                                        for="PCA-3">
+                                                                                        PCA
+                                                                                    </label>
+                                                                                </div>
+    
+                                                                                <div class="form-check">
+                                                                                    <input class="form-check-input"
+                                                                                        type="checkbox" value=""
+                                                                                        id="iaswdef1-3">
+                                                                                    <label class="form-check-label"
+                                                                                        for="iaswdef1-3">
+                                                                                        1aswdef1
+                                                                                    </label>
+                                                                                </div>
+    
+                                                                                <div class="form-check">
+                                                                                    <input class="form-check-input"
+                                                                                        type="checkbox" value=""
+                                                                                        id="attendant-3">
+                                                                                    <label class="form-check-label"
+                                                                                        for="attendant-3">
+                                                                                        Attendant
+                                                                                    </label>
+                                                                                </div>
+    
+                                                                                <div class="form-check">
+                                                                                    <input class="form-check-input"
+                                                                                        type="checkbox" value=""
+                                                                                        id="homemaker">
+                                                                                    <label class="form-check-label"
+                                                                                        for="homemaker">
+                                                                                        Homemaker
+                                                                                    </label>
+                                                                                </div>
+    
+                                                                                <div class="form-check">
+                                                                                    <input class="form-check-input"
+                                                                                        type="checkbox" value="" id="PP-3">
+                                                                                    <label class="form-check-label"
+                                                                                        for="PP-3">
+                                                                                        PP
+                                                                                    </label>
+                                                                                </div>
+    
+                                                                                <div class="form-check">
+                                                                                    <input class="form-check-input"
+                                                                                        type="checkbox" value=""
+                                                                                        id="Respite-3">
+                                                                                    <label class="form-check-label"
+                                                                                        for="Respite-3">
+                                                                                        Respite
+                                                                                    </label>
+                                                                                </div>
+    
+    
+                                                                                <div class="form-check">
+                                                                                    <input class="form-check-input"
+                                                                                        type="checkbox" value=""
+                                                                                        id="THPPPP">
+                                                                                    <label class="form-check-label"
+                                                                                        for="THPPPP">
+                                                                                        THPPPP
+                                                                                    </label>
+                                                                                </div>
+    
                                                                             </div>
+    
+    
+                                                                            <div>
+                                                                                <div class="form-check mb-20">
+                                                                                    <input checked class="form-check-input"
+                                                                                        type="checkbox" value=""
+                                                                                        id="effective-period">
+                                                                                    <label class="form-check-label"
+                                                                                        for="effective-period">
+                                                                                        Effective Period: No Effective Date.
+                                                                                        To
+                                                                                        set effective
+                                                                                        date click on edit
+                                                                                        button.
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div class="form-check mb-20">
+                                                                                    <input checked class="form-check-input"
+                                                                                        type="checkbox" value=""
+                                                                                        id="care-requires">
+                                                                                    <label class="form-check-label"
+                                                                                        for="care-requires">
+                                                                                        Care requires less than 90 days
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+    
+                                                                            <div class="mb-20 d-flex gap-30">
+                                                                                <span class="form-check-label">Patient
+                                                                                    Relation
+                                                                                    to the
+                                                                                    subscriber : <span
+                                                                                        class="f-600 f-13 lh-17">self</span></span>
+    
+                                                                            </div>
+    
+                                                                            <div class="col-8 mb-15">
+                                                                                <label class="f-400 f-14 lh-17"
+                                                                                    for="primary-insurance-notes">Notes</label>
+                                                                                <textarea name=""
+                                                                                    id="primary-insurance-notes" cols=""
+                                                                                    rows="2" class="input-textarea w-100"
+                                                                                    placeholder="Type Here"></textarea>
+                                                                            </div>
+    
                                                                         </div>
-
-                                                                        <div class="mb-20 d-flex gap-30">
-                                                                            <span class="form-check-label">Patient
-                                                                                Relation
-                                                                                to the
-                                                                                subscriber : <span
-                                                                                    class="f-600 f-13 lh-17">self</span></span>
-
-                                                                        </div>
-
-                                                                        <div class="col-8 mb-15">
-                                                                            <label class="f-400 f-14 lh-17"
-                                                                                for="primary-insurance-notes">Notes</label>
-                                                                            <textarea name=""
-                                                                                id="primary-insurance-notes" cols=""
-                                                                                rows="2" class="input-textarea w-100"
-                                                                                placeholder="Type Here"></textarea>
-                                                                        </div>
-
+    
+    
+    
+    
                                                                     </div>
-
-
-
-
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1090,14 +1189,19 @@
                                                 </div>
                                             </div>
                                         </div>
+    
                                     </div>
-
                                 </div>
                             </div>
                         </div>
+    
                     </div>
-
+    
+    
                 </div>
+
+
+
 
 
             </div>
@@ -1106,7 +1210,7 @@
         </div>
     </main>
 
-
+    
     <!-- POPUPS -->
     <!-- ADD PRIMARY PAYER SOURCE -->
     <div class="modal" tabindex="-1" id="add-new-primary-payer-source">
@@ -4441,99 +4545,26 @@
 
 
 
-    <!-- JavaScript -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap-multiselect.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- bootstrap js-->
-    <!-- <script type="text/javascript" src="js/popper.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
-
-    <!-- datepicker js-->
-    <script type="text/javascript" src="js/moment.min.js"></script>
-    <script type="text/javascript" src="js/daterangepicker.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
 
 
 
-    <!-- <script>
-    $(function () {
-      var start = moment();
-      var end = moment();
-
-      function cb(start, end) {
-        $(".singleDatePicker span").html(start.format("D/MM/YYYY"));
-      }
-
-      $(".singleDatePicker").daterangepicker(
-        {
-          startDate: start,
-          endDate: end,
-          opens: "center",
-          singleDatePicker: true,
-        },
-        cb
-      );
-
-      cb(start, end);
-    });
-  </script> -->
-
-    <script>
-        function showHideDiv(checkboxId, divId) {
-            var checkbox = document.getElementById(checkboxId);
-            var div = document.getElementById(divId);
-
-            var divs = document.querySelectorAll('div[id^="src"]');
-            for (var i = 0; i < divs.length; i++) {
-                if (divs[i].id === divId) {
-                    divs[i].style.display = checkbox.checked ? "block" : "none";
-                } else {
-                    divs[i].style.display = "none";
-                }
-            }
-        }
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            $(".close-covid-notice").click(function () {
-                $(".covid-box").addClass('hidden');
-            });
-        });
-    </script>
-
-
-
-
-    <!-- <script>
-$(document).ready(function() {
-  $('.color-select').change(function() {
-    var selectedColor = $(this).val();
-    if(selectedColor=="Preferred"){
-        $('.btn-group button').css('background-color','blue;');
-        $('.btn-group button').css('color','#0F700F');
-      
-  }else{
-    
-        $('.btn-group button').css('background-color','yellow');
-        $('.btn-group button').css('color','#962C2C')
-        
-  }
-  });
-});
-
-
-</script> -->
-
-
-
- 
+      <!-- JavaScript -->
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap-multiselect.min.js"></script>
+  
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <!-- bootstrap js-->
+      <!-- <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+  
+      <!-- datepicker js-->
+      <script type="text/javascript" src="js/moment.min.js"></script>
+      <script type="text/javascript" src="js/daterangepicker.js"></script>
+  
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"></script>
+      <script type="text/javascript" src="js/custom.js"></script>
+  
 </body>
-
 </html>

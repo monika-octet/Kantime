@@ -72,6 +72,9 @@
 .pb-10{
     padding-bottom: 10px;
 }
+.pb-15{
+    padding-bottom: 15px;
+}
 
 .pb-20{
     padding-bottom: 20px;
@@ -121,10 +124,10 @@
 
 
 .ml-5{
-    margin-left: 5px;
+    margin-left: 5px !important;
 }
 .mr-5{
-    margin-right: 5px;
+    margin-right: 5px !important;
 }
 .ml-20{
     margin-left: 20px;
@@ -667,6 +670,9 @@ item:active {
 
 .fit-content{
     height: fit-content;
+}
+.fit-content-w{
+    width: fit-content !important;
 }
 
 /* Accordian Styling */

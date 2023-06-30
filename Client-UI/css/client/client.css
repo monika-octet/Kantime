@@ -263,12 +263,6 @@ h3 {
     border: 1px solid #EFEFEF
 }
 
-.table-type-1 tbody tr:hover {
-    border-color: #eceded;
-    background-color: #F8FAFE;
-
-}
-
 
 .table-type-1 tbody tr:hover .info-bold {
     color: #0747A6;
@@ -388,8 +382,9 @@ h3 {
 #treatment-address-table .dropdown-toggle::after,
 #patient-representative-table .dropdown-toggle::after,
 .user-profile-dropdown .dropdown-toggle::after,
-#accordion-primary .dropdown-toggle::after,
-.medication .dropdown-toggle::after {
+.accordion .dropdown-toggle::after,
+.medication .dropdown-toggle::after,
+.align-dots .dropdown-toggle::after{
     /* display: none; */
     content: url(../../images/three-dots.svg);
     width: 100%;
@@ -418,8 +413,8 @@ h3 {
     background-color: #EFEFEF;
 }
 
-#treatment-address-table tbody tr:hover {
-    background-color: #FAFAFA;
+#treatment-address-table tbody tr:hover{
+    background-color: #fff !important;
 }
 
 #treatment-address-table.table-type-1 tbody tr td,
@@ -445,14 +440,18 @@ h3 {
     padding: 12px 15px;
 }
 
-#pharmacy-name-table.table tbody tr td {
+#pharmacy-name-table.table tbody tr td,
+#billing-deficiency-notes.table-type-1 tbody tr td,
+#add-new-service-table.table-type-1 tbody tr td,
+#schedule-table.table-type-1 tbody tr td
+{
     padding: 12px 20px;
 }
 
 .dropdown .dropdown-menu {
     padding: 0;
     box-shadow: 0px 4px 10px 0px #83828240;
-
+    
 }
 
 .dropdown .dropdown-item {
@@ -466,7 +465,7 @@ h3 {
 
 .grid-line {
     grid-template-columns: auto 4fr;
-
+    
 }
 
 .check-box {
@@ -484,9 +483,9 @@ h3 {
     height: 36px;
     padding: 10px;
     border-radius: 4px;
-
-
-
+    
+    
+    
 }
 
 .notice-style {
@@ -502,7 +501,7 @@ h3 {
 }
 
 .notice {
-
+    
     font-size: 13px;
     font-weight: 500;
     line-height: 17px;
@@ -529,7 +528,7 @@ h3 {
 }
 
 .patient-title {
-
+    
     font-size: 22px;
     font-weight: 700;
     line-height: 26px;
@@ -544,7 +543,7 @@ h3 {
 }
 
 .info-icon-label {
-
+    
     font-family: Lato;
     font-size: 12px;
     font-weight: 600;
@@ -564,7 +563,7 @@ h3 {
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0em;
-
+    
 }
 
 .info-title {
@@ -578,7 +577,7 @@ h3 {
 }
 
 .info-description {
-
+    
     font-size: 13px;
     font-weight: 600;
     line-height: 17px;
@@ -598,7 +597,7 @@ h3 {
     position: absolute;
     top: 15px;
     right: 20px;
-
+    
 }
 
 .info-btn-group {
@@ -617,14 +616,14 @@ h3 {
 }
 
 .tab-section .nav-link {
-
+    
     color: #545B64;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0em;
     padding: 17px 15px;
-
+    
 }
 
 .tab-section .nav-link:hover {
@@ -648,6 +647,7 @@ h3 {
     display: grid;
     grid-template-columns: 19% 81%;
 }
+
 
 .search-box {
     border-bottom: 1px solid #EFEFEF;
@@ -1457,149 +1457,3 @@ li.remove-column:after {
 }
 
 /*********client list page css - end*************/
-/**********client list page css -start - 28-6-23**************/
-.pop-up-image {
-    width: 20px;
-    height: 20px;
-}
-
-.popUp-title {
-    font-weight: 700 !important;
-    font-size: 18px;
-    line-height: 20px;
-    letter-spacing: 0.01em;
-}
-
-.pop-up-image-box {
-    display: flex;
-    gap: 10px;
-}
-
-.pop-up-content {
-    display: flex;
-    flex-direction: column;
-    align-items: self-start;
-    margin-left: 18px;
-}
-
-.pop-up-content p {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    color: #545B64;
-}
-
-.pop-up-borderStyle {
-    border-top: 6px solid #FE9680 !important;
-    border-radius: 4px;
-    padding-top: 20px;
-}
-
-.pop-up-borderStyle .btn-outline {
-    border: 1px solid #EFEFEF;
-    min-width: 80px;
-    height: 36px;
-    padding: 10px;
-    border-radius: 4px;
-}
-
-.pop-up-cancel {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 16.8px;
-    color: #3D4148;
-}
-
-.pop-up-borderStyle .modal-footer {
-    box-shadow: 0 -2px 8px rgba(207, 207, 207, 0.25);
-    border-top: 0;
-}
-
-.text-red-light {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 16.8px;
-    color: #FC2D2D;
-}
-
-/**********client list page css -end - 28-6-23**************/
-
-.accordion-item.custom-layout-1 {
-    border-radius: 4px;
-    margin-bottom: 10px;
-    border: 1px solid #EFEFEF !important;
-}
-
-.accordion-item.custom-layout-1 .accordion-button {
-    background-color: #FAFAFA;
-    border-radius: 4px;
-    padding: 10px 25px;
-    border: 0;
-    box-shadow: none;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 19px;
-    color: #181C32;
-}
-
-.accordion-item.custom-layout-1 .accordion-button.collapsed {
-    background-color: #FFFFFF;
-    font-weight: 400;
-}
-
-.accordion-item.custom-layout-1 .accordion-button::after {
-    background-image: url(../../images/accordion-arrow1.svg);
-    background-size: 12px;
-    left: 5px;
-    top: 12px;
-}
-
-.accordion-item.custom-layout-1 .accordion-button:not(.collapsed)::after {
-    background-image: url(../../images/accordion-arrow1.svg);
-    transform: rotate(90deg);
-}
-
-.accordion-item.custom-layout-1 .accordion-body {
-    border-radius: 4px;
-    padding: 5px 10px 10px 10px;
-}
-
-.popup-table-overflow {
-    width: 1236px;
-    overflow: hidden;
-}
-
-.popup-inner-table {
-    overflow: scroll;
-}
-
-.popup-inner-table .table-type-1 tbody tr td {
-    padding: 15px 20px;
-}
-
-.color-green {
-    border-radius: 4px;
-    border: 1px solid #D5EFD6!important;
-    background: #E2F9E3;
-}
-
-.color-green .multiselect-selected-text {
-    color: #0F700F;
-}
-
-.color-red {
-    border-radius: 4px;
-    border: 1px solid #F9D0C7!important;
-    background: #FEE3D4!important;   
-}
-
-.color-red .multiselect-selected-text {
-    color: #063206;
-}
-
-#preference-criteria-table .multiselect-native-select .btn-group .dropdown-menu {
-    text-align: center;
-}
-#preference-criteria-table.table-type-1 tbody tr td {
-    padding: 8px 12px;
-}
