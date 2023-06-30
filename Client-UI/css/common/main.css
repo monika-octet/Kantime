@@ -42,7 +42,9 @@
 }
 /* line color */
 
-
+.p-5 {
+    padding: 5px!important;
+}
 
 .p-10 {
     padding: 10px;
@@ -55,7 +57,9 @@
     padding: 20px;
 }
 
-
+.pt-10 {
+    padding-top: 10px;
+}
 
 .pt-20 {
     padding-top: 20px;
@@ -103,6 +107,9 @@
     padding-bottom: 20px;
 }
 
+.m-0{
+    margin:0;
+}
 
 .m-20 {
     margin: 20px;
@@ -739,5 +746,8 @@ item:active {
     min-width: 226px;
 }
 .w-226px{
+    min-width: 226px;
+}
+.w-300px{
     min-width: 226px;
 }
