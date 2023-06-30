@@ -263,12 +263,6 @@ h3 {
     border: 1px solid #EFEFEF
 }
 
-.table-type-1 tbody tr:hover {
-    border-color: #eceded;
-    background-color: #F8FAFE;
-
-}
-
 
 .table-type-1 tbody tr:hover .info-bold {
     color: #0747A6;
@@ -389,7 +383,8 @@ h3 {
 #patient-representative-table .dropdown-toggle::after,
 .user-profile-dropdown .dropdown-toggle::after,
 .accordion .dropdown-toggle::after,
-.medication .dropdown-toggle::after {
+.medication .dropdown-toggle::after,
+.align-dots .dropdown-toggle::after{
     /* display: none; */
     content: url(../../images/three-dots.svg);
     width: 100%;
@@ -418,8 +413,8 @@ h3 {
     background-color: #EFEFEF;
 }
 
-#treatment-address-table tbody tr:hover {
-    background-color: #FAFAFA;
+#treatment-address-table tbody tr:hover{
+    background-color: #fff !important;
 }
 
 #treatment-address-table.table-type-1 tbody tr td,
@@ -446,7 +441,9 @@ h3 {
 }
 
 #pharmacy-name-table.table tbody tr td,
-#billing-deficiency-notes.table-type-1 tbody tr td
+#billing-deficiency-notes.table-type-1 tbody tr td,
+#add-new-service-table.table-type-1 tbody tr td,
+#schedule-table.table-type-1 tbody tr td
 {
     padding: 12px 20px;
 }
@@ -454,7 +451,7 @@ h3 {
 .dropdown .dropdown-menu {
     padding: 0;
     box-shadow: 0px 4px 10px 0px #83828240;
-
+    
 }
 
 .dropdown .dropdown-item {
@@ -468,7 +465,7 @@ h3 {
 
 .grid-line {
     grid-template-columns: auto 4fr;
-
+    
 }
 
 .check-box {
@@ -486,9 +483,9 @@ h3 {
     height: 36px;
     padding: 10px;
     border-radius: 4px;
-
-
-
+    
+    
+    
 }
 
 .notice-style {
@@ -504,7 +501,7 @@ h3 {
 }
 
 .notice {
-
+    
     font-size: 13px;
     font-weight: 500;
     line-height: 17px;
@@ -531,7 +528,7 @@ h3 {
 }
 
 .patient-title {
-
+    
     font-size: 22px;
     font-weight: 700;
     line-height: 26px;
@@ -546,7 +543,7 @@ h3 {
 }
 
 .info-icon-label {
-
+    
     font-family: Lato;
     font-size: 12px;
     font-weight: 600;
@@ -566,7 +563,7 @@ h3 {
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0em;
-
+    
 }
 
 .info-title {
@@ -580,7 +577,7 @@ h3 {
 }
 
 .info-description {
-
+    
     font-size: 13px;
     font-weight: 600;
     line-height: 17px;
@@ -602,7 +599,7 @@ h3 {
     position: absolute;
     top: 15px;
     right: 20px;
-
+    
 }
 
 .info-btn-group {
@@ -621,14 +618,14 @@ h3 {
 }
 
 .tab-section .nav-link {
-
+    
     color: #545B64;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0em;
     padding: 17px 15px;
-
+    
 }
 
 .tab-section .nav-link:hover {
@@ -652,6 +649,7 @@ h3 {
     display: grid;
     grid-template-columns: 19% 81%;
 }
+
 
 .search-box {
     border-bottom: 1px solid #EFEFEF;
@@ -1479,3 +1477,52 @@ top: 0;
 
 /*********document tab css - *************/
 
+
+
+
+/*********Service and Rate tab css - *************/
+
+.rate-box{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 15px;
+    width: 80px;
+    height: 36px;
+    border-radius: 4px;
+    border: 1px solid #ECEDEF;
+}
+
+
+/*********Service and Rate tab css End- *************/
+
+
+/* EVV SETTING TAB CSS START */
+
+.evv-container .accordion-button::after{
+    background-image: url(../../images/evv-arrow.svg);
+    transform: rotate(-90deg);
+    left: 15px;
+    top: 13px;
+}
+
+.evv-container .accordion-button:not(.collapsed)::after{
+    background-image: url(../../images/evv-arrow.svg);
+    transform: rotate(0deg);
+}
+
+
+.evv-container .accordion-item .accordion-button{
+    padding:15px 15px 15px 40px;
+}
+
+.evv-container .accordion-button{
+    background-color: #f4f5f6;
+}
+
+.evv-container .action-btn{
+    width: 25px;
+    height: 25px;
+}
+
+/* EVV SETTING TAB CSS START END */

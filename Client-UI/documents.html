@@ -477,7 +477,7 @@
                                                                     <button type="button"
                                                                         class="btn table-btn-icon d-flex justify-content-center align-items-center"
                                                                         data-bs-toggle="modal"
-                                                                        data-bs-target="#edit-physician-details">
+                                                                        data-bs-target="#edit-document-info-popup">
                                                                         <img src="images/edit-icon.svg" alt="edit">
                                                                     </button>
                                                                     <img src="images/delete_red.svg" alt="delete button"
@@ -507,7 +507,7 @@
                                                                     <button type="button"
                                                                         class="btn table-btn-icon d-flex justify-content-center align-items-center"
                                                                         data-bs-toggle="modal"
-                                                                        data-bs-target="#edit-physician-details">
+                                                                        data-bs-target="#edit-document-info-popup">
                                                                         <img src="images/edit-icon.svg" alt="edit">
                                                                     </button>
                                                                     <img src="images/delete_red.svg" alt="delete button"
@@ -537,7 +537,7 @@
                                                                     <button type="button"
                                                                         class="btn table-btn-icon d-flex justify-content-center align-items-center"
                                                                         data-bs-toggle="modal"
-                                                                        data-bs-target="#edit-physician-details">
+                                                                        data-bs-target="#edit-document-info-popup">
                                                                         <img src="images/edit-icon.svg" alt="edit">
                                                                     </button>
                                                                     <img src="images/delete_red.svg" alt="delete button"
@@ -567,7 +567,7 @@
                                                                     <button type="button"
                                                                         class="btn table-btn-icon d-flex justify-content-center align-items-center"
                                                                         data-bs-toggle="modal"
-                                                                        data-bs-target="#edit-physician-details">
+                                                                        data-bs-target="#edit-document-info-popup">
                                                                         <img src="images/edit-icon.svg" alt="edit">
                                                                     </button>
                                                                     <img src="images/delete_red.svg" alt="delete button"
@@ -644,7 +644,7 @@
                                                                     <button type="button"
                                                                         class="btn table-btn-icon d-flex justify-content-center align-items-center"
                                                                         data-bs-toggle="modal"
-                                                                        data-bs-target="#edit-physician-details">
+                                                                        data-bs-target="#edit-document-info-popup">
                                                                         <img src="images/edit-icon.svg" alt="edit">
                                                                     </button>
                                                                     <img src="images/delete_red.svg" alt="delete button"
@@ -684,7 +684,7 @@
 
     <!-- intake-profile-doc-upload -->
     <div class="modal" tabindex="-1" id="intake-profile-doc-upload">
-        <div class="modal-dialog custom-modal-1  modal-dialog-centered">
+        <div class="modal-dialog custom-modal-2  modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-greyBlue">
                     <h5 class="modal-title Pinfo color-darkblue">Intake Profile Document Upload</h5>
@@ -782,52 +782,60 @@
                         </div>
                     </div>
 
-                    <div class="d-flex gap-20">
-                        <div class="drag-drop-box d-flex flex-column justify-content-between align-items-center dotted-border">
-                          <img src="images/upload-icon.svg" alt="drag-drop-icon" class="mb-15">
-                          <p class="f-600 f-14 lh-17 blue-text mb-15">Drag &amp; drop files here</p>
-                          <p class="f-600 f-14 lh-17 blue-text mb-15">-OR-</p>
-                          <button type="" class="btn btn-tertiary">Browse</button>
+                    <div class="d-flex gap-20 mb-20">
+                        <div
+                            class="drag-drop-box d-flex flex-column justify-content-between align-items-center dotted-border">
+                            <img src="images/upload-icon.svg" alt="drag-drop-icon" class="mb-15">
+                            <p class="f-600 f-14 lh-17 blue-text mb-15">Drag &amp; drop files here</p>
+                            <p class="f-600 f-14 lh-17 blue-text mb-15">-OR-</p>
+                            <button type="" class="btn btn-tertiary">Browse</button>
                         </div>
-          
+
                         <div>
-                          <p class="mb-15 f-600 f-14 lh-17">Uploading - 2/3 files</p>
-                          <div class="d-flex flex-column gap-3">
-                            <div class="upload-item-box ">
-                              <div class="d-flex justify-content-between align-items-center" style="gap: 125px;">
-                                <p class="upload-file-name">Your-file-here.PDF</p>
-                                <div class="d-flex gap-3">
-                                  <span class="upload-file-size">126 KB</span>
-                                  <img src="images/ion-close-icon.svg" alt="cancle icon">
+                            <p class="mb-15 f-600 f-14 lh-17">Uploading - 2/3 files</p>
+                            <div class="d-flex flex-column gap-3">
+                                <div class="upload-item-box">
+                                    <div class="d-flex justify-content-between align-items-center" style="gap: 125px;">
+                                        <p class="upload-file-name">Your-file-here.PDF</p>
+                                        <div class="d-flex gap-3">
+                                            <span class="upload-file-size">126 KB</span>
+                                            <img src="images/ion-close-icon.svg" alt="cancle icon">
+                                        </div>
+                                    </div>
+                                    <div class="bg-blue w-50"></div>
                                 </div>
-                              </div>
-                              <div class="bg-blue w-50"></div>
-                            </div>
-          
-                            <div class="upload-item-box ">
-                              <div class="d-flex justify-content-between align-items-center" style="gap: 125px;">
-                                <p class="upload-file-name">Your-file-here.PDF</p>
-                                <div class="d-flex gap-3">
-                                  <span class="upload-file-size">126 KB</span>
-                                  <img src="images/ion-close-icon.svg" alt="cancle icon">
+
+                                <div class="upload-item-box ">
+                                    <div class="d-flex justify-content-between align-items-center" style="gap: 125px;">
+                                        <p class="upload-file-name">Your-file-here.PDF</p>
+                                        <div class="d-flex gap-3">
+                                            <span class="upload-file-size">126 KB</span>
+                                            <img src="images/ion-close-icon.svg" alt="cancle icon">
+                                        </div>
+                                    </div>
+                                    <span class="bg-blue w-50"></span>
                                 </div>
-                              </div>
-                              <span class="bg-blue w-50"></span>
-                            </div>
-          
-                            <div class="upload-item-box ">
-                              <div class="d-flex justify-content-between align-items-center" style="gap: 125px;">
-                                <p class="upload-file-name">Your-file-here.PDF</p>
-                                <div class="d-flex gap-3">
-                                  <span class="upload-file-size">126 KB</span>
-                                  <img src="images/ion-close-icon.svg" alt="cancle icon">
+
+                                <div class="upload-item-box ">
+                                    <div class="d-flex justify-content-between align-items-center" style="gap: 125px;">
+                                        <p class="upload-file-name">Your-file-here.PDF</p>
+                                        <div class="d-flex gap-3">
+                                            <span class="upload-file-size">126 KB</span>
+                                            <img src="images/ion-close-icon.svg" alt="cancle icon">
+                                        </div>
+                                    </div>
+                                    <span class="bg-green w-100"></span>
                                 </div>
-                              </div>
-                              <span class="bg-green w-100"></span>
                             </div>
-                          </div>
                         </div>
-                      </div>  
+                    </div>
+
+                    <div class="disclaimer d-flex gap-2">
+                        <img src="images/bi-circle-grey.svg" alt="" class="align-self-start">
+                        <p class="f-400">To upload documents, click on browse and select the files by pressing and
+                            holding control
+                            key or select multiple files and drag and drop here.</p>
+                    </div>
 
 
 
@@ -836,8 +844,8 @@
 
                 </div>
                 <div class="modal-footer d-flex">
-                    <button class="btn btn-tertiary">Cancel</button>
-                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Update</a>
+                    <button class="btn btn-tertiary">Upload & close</button>
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Upload & Select Next Client</a>
                 </div>
             </div>
         </div>
@@ -968,6 +976,83 @@
         </div>
     </div>
 
+
+    <!-- EDIT Document Info -->
+    <!-- edit-document-info-popup -->
+    <div class="modal" tabindex="-1" id="edit-document-info-popup">
+        <div class="modal-dialog custom-modal-1  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Edit Document Info</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="bg-greybox border-color radius-4 d-grid grid-box gap-10 mb-20">
+                        <div>
+                            <span class="text-title">Client:</span>
+                            <span class="text-description">Demo 2, Test</span>
+                        </div>
+
+                    </div>
+
+                    <div class="row col-12">
+                        <div class="col-6 mb-20">
+                            <label class="label" for="edit-doc-info-category">Category</label>
+                            <select class="single-select input-item" aria-label="Category" id="edit-doc-info-category">
+                                <option selected>General</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+
+                        <div class="col-6 mb-20">
+                            <label class="label" for="edit-doc-info-folder">Folder</label>
+                            <select class="single-select input-item" aria-label="" id="edit-doc-info-folder">
+                                <option class="d-none" disabled selected>Billing Deficiency Notes</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-20">
+                            <label class="label" for="edit-doc-info-rename">Rename Document </label>
+                            <input type="text" class="form-control input-item" id="edit-doc-info-rename" placeholder=""
+                                value="John Doe" aria-label="">
+                        </div>
+
+                        <div class="">
+                            <label class="label" for="edit-doc-info-notes">Description</label>
+                            <textarea name="" id="edit-doc-info-notes" cols="" rows="2" class="input-textarea w-100"
+                                placeholder="Enter"></textarea>
+                        </div>
+
+                        <div class="col-6 border-color bg-white py-10 px-15 radius-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="edit-doc-info-allow-family">
+                                <label class="send" for="edit-doc-info-allow-family">
+                                    Allow access to Family through Family Portal
+                                </label>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-tertiary">Upload & close</button>
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Upload & Select Next Client</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
