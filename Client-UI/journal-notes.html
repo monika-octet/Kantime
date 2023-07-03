@@ -46,6 +46,7 @@
             </div>
         </nav>
     </header>
+
     <main>
         <div class="px-30 py-10">
             <div class="d-flex justify-content-between align-items-center mb-10">
@@ -61,13 +62,13 @@
                         </ol>
                     </nav>
                 </div>
+
                 <div class="icon-container d-flex gap-3">
                     <img src="images/Help.svg" alt="help-icon" />
                     <img src="images/Mail.svg" alt="mail-icon" />
                     <img src="images/Duplicate.svg" alt="duplicate-icon" />
                     <img src="images/message.svg" alt="message-icon" />
                 </div>
-
             </div>
 
             <div class="d-flex justify-content-between align-items-center mb-20">
@@ -276,7 +277,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="tab-section">
 
                     <ul class="nav nav-tabs" role="tablist">
@@ -309,12 +309,12 @@
                                 aria-selected="false">Intake Info</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="community-contact.html" role="tab" aria-controls="Commnunity contact"
-                                aria-selected="true">Commnunity Contacts</a>
+                            <a class="nav-link" href="community-contact.html" role="tab" aria-controls="Commnunity contact"
+                                aria-selected="false">Commnunity Contacts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="journal-notes.html" role="tab" aria-controls="journal notes"
-                                aria-selected="false">Journal notes</a>
+                            <a class="nav-link active" href="journal-notes.html" role="tab" aria-controls="journal notes"
+                                aria-selected="true">Journal notes</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="cop.html" role="tab" aria-controls="Commnunity contact"
@@ -327,379 +327,227 @@
             <div class="bg-white pb-1">
                 <div class="m-20">
                     <div class="pt-20 pb-10 d-flex justify-content-between align-items-center border-bottom">
-                        <div class="d-flex gap-10 align-items-center justify-content-between w-100">
-                            <div class="d-flex gap-20">
-                                <div class="tab-content-heading">Community Contacts</div>
-                                <div class="d-flex align-items-center">
-
-                                    <img src="images/edit-icon.svg" alt="plus sign" style="width: 18px; height: 18px">
-                                    <a href="javascript:void(0)" data-bs-toggle="modal"
-                                        data-bs-target="#community-contact-edit"
-                                        class="text-decoration-none f-600 f-13 lh-17">Edit</a>
-                                </div>
+                        <div class="d-flex gap-10 align-items-center">
+                            <div class="tab-content-heading">Journal Note</div>
+                            <div class="d-flex align-items-center">
+                                <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px">
+                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-new-note"
+                                    class="text-decoration-none f-600 f-13 lh-17">Add Notes</a>
                             </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-10">
                             <button class="btn btn-outline-primary" data-bs-toggle="modal"
-                                data-bs-target="#community-contact-setup-edit">
-                                <img src="images/modify.svg" alt="">
-                                Setup Community List
+                                data-bs-target="#client-notes-popup">
+                                <img src="images/note-icon.svg" alt="">
+                                Client Notes
                             </button>
                         </div>
                     </div>
 
-                    <table class="table table-type-1 mt-10" id="community-contact-table">
+
+                    <div class="d-flex align-items-center justify-content-between gap-20 pt-20  align-dots">
+
+                        <div class="d-flex justify-content-between w-75 gap-10">
+                            <div class="col-4 mb-20">
+                                <label class="form-label" for="date-range-journal">Date Range</label>
+                                <div class="input-group">
+                                  <input type="text" class="form-control input-item" id="date-range-journal" placeholder="Select Date" value="01/02/1998 - 01/03/1998">
+                                  <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                                </div>
+                              </div>
+    
+                            <div class="col-4">
+                                <label class="label" for="categpry-journal">Folder</label>
+                                <select class="single-select input-item" aria-label="" id="categpry-journal">
+                                    <option class="d-none" disabled selected>Select</option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+    
+                            <div class="col-4">
+                                <label class="label" for="lob-journal">LOB</label>
+                                <select class="single-select input-item" aria-label="" id="lob-journal">
+                                    <option class="d-none" disabled selected>Select</option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+
+                            <div class="col-2" style="margin-top: 25px;">
+                                <button class="btn btn-tertiary">Display</button>
+                            </div>
+    
+                        </div>
+
+                        
+                        <div class="dropdown justify-content-end">
+                            <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom"
+                                type="button" id="" data-bs-toggle="dropdown"
+                                aria-expanded="false"></button>
+                            <ul class="dropdown-menu" aria-labelledby="">
+                                <li>
+                                    <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                        data-bs-target="#" class="dropdown-item">E-Fax</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                        data-bs-target="#" class="dropdown-item">Print</a>
+                                </li>
+                        
+                            </ul>
+                        </div>
+                        
+    
+                    </div>
+
+                    <table class="table table-type-1" id="journal-note-client-table">
                         <thead>
                             <tr>
-                                <th class="">
-                                    Community
+                                <th class="d-flex">
+                                    <input class="form-check-input" type="checkbox" va="" lue="" id=""><span>Date
+                                        Time</span>
                                 </th>
-                                <th>Contact Name</th>
-                                <th>Telephone</th>
-                                <th>Cell</th>
-                                <th>Email</th>
-                                <th style="width: 420px;">Notes</th>
+                                <th>Entered By</th>
+                                <th style="width: 180px;">Category</th>
+                                <th style="width: 459px;">Note</th>
+                              
                             </tr>
                         </thead>
 
                         <tbody>
+
                             <tr>
                                 <td>
-                                    Demo
+                                    <input class="form-check-input" type="checkbox" value="" id=""><span>April 7
+                                        2023 - 1:06 PM</span>
                                 </td>
                                 <td>Test Client</td>
-                                <td>(244) 445-4586</td>
-                                <td>(244) 445-4586</td>
-                                <td>email@gmail.com</td>
-                                <td>
-                                    <input disabled type="text" class="form-control input-item table-notes-input" id=""
-                                        placeholder="Type" aria-label="name">
-                                </td>
+                                <td>Intake Note for Client</td>
+                                <td>Notes Go Here</td>
+                               
 
                             </tr>
 
                             <tr>
                                 <td>
-                                    Demo
+                                    <input class="form-check-input" type="checkbox" value="" id=""><span>April 7
+                                        2023 - 1:06 PM</span>
                                 </td>
                                 <td>Test Client</td>
-                                <td>(244) 445-4586</td>
-                                <td>(244) 445-4586</td>
-                                <td>email@gmail.com</td>
-                                <td>
-                                    <input disabled type="text" class="form-control input-item table-notes-input" id=""
-                                        placeholder="Type" aria-label="name">
-                                </td>
+                                <td>Intake Note for Client</td>
+                                <td>Notes Go Here</td>
+                               
 
                             </tr>
 
                             <tr>
                                 <td>
-                                    Demo
+                                    <input class="form-check-input" type="checkbox" value="" id=""><span>April 7
+                                        2023 - 1:06 PM</span>
                                 </td>
                                 <td>Test Client</td>
-                                <td>(244) 445-4586</td>
-                                <td>(244) 445-4586</td>
-                                <td>email@gmail.com</td>
+                                <td>Intake Note for Client</td>
+                                <td>Notes Go Here</td>
+                               
+
+                            </tr>
+
+                            <tr>
                                 <td>
-                                    <input disabled  type="text" class="form-control input-item table-notes-input" id=""
-                                        placeholder="Type" aria-label="name">
+                                    <input class="form-check-input" type="checkbox" value="" id=""><span>April 7
+                                        2023 - 1:06 PM</span>
                                 </td>
+                                <td>Test Client</td>
+                                <td>Intake Note for Client</td>
+                                <td>Notes Go Here</td>
+                               
 
                             </tr>
 
                         </tbody>
                     </table>
-
-
-
                 </div>
+
+             
+
             </div>
-        </div>
+
+
+
+
+
+
 
         </div>
     </main>
 
 
 
-    <div class="modal" tabindex="-1" id="community-contact-edit">
-        <div class="modal-dialog custom-modal-4  modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-greyBlue">
-                    <h5 class="modal-title Pinfo color-darkblue">Community Contacts</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="mb-15">
-                        <p class="f600 lh-17 f-13">Commmunity Contacts List</p>
-                    </div>
 
-                    <table class="table table-type-1 mt-10" id="community-contact-edit-table">
-                        <thead>
-                            <tr>
-                                <th class="d-flex" style="width: 194px;">
-                                    <input class="form-check-input" type="checkbox" value=""
-                                        id=""><span>Community</span>
-                                </th>
-                                <th style="width: 170px;">Contact Name</th>
-                                <th style="width: 120px;">Telephone</th>
-                                <th style="width: 120px;">Cell</th>
-                                <th style="width: 200px;">Email</th>
-                                <th style="width: 420px;">Notes</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td class="d-flex">
-                                    <input class="form-check-input" type="checkbox" value="" id=""><span>Demo</span>
-                                </td>
-                                <td>
-                                    <div class="rate-box">Test Client</div>
-                                </td>
-                                <td>
-                                    <div class="rate-box">(244) 445-4586</div>
-                                </td>
-                                <td>
-                                    <div class="rate-box">(244) 445-4586</div>
-                                </td>
-                                <td>
-                                    <div class="rate-box">email@gmail.com</div>
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control input-item table-notes-input" id=""
-                                        placeholder="Type" aria-label="name">
-                                </td>
-
-                            </tr>
-
-                            <tr>
-                                <td class="d-flex">
-                                    <input class="form-check-input" type="checkbox" value="" id=""><span>Demo</span>
-                                </td>
-                                <td>
-                                    <div class="rate-box">Test Client</div>
-                                </td>
-                                <td>
-                                    <div class="rate-box">(244) 445-4586</div>
-                                </td>
-                                <td>
-                                    <div class="rate-box">(244) 445-4586</div>
-                                </td>
-                                <td>
-                                    <div class="rate-box">email@gmail.com</div>
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control input-item table-notes-input" id=""
-                                        placeholder="Type" aria-label="name">
-                                </td>
-
-                            </tr>
-
-                            <tr>
-                                <td class="d-flex">
-                                    <input class="form-check-input" type="checkbox" value="" id=""><span>Demo</span>
-                                </td>
-                                <td>
-                                    <div class="rate-box">Test Client</div>
-                                </td>
-                                <td>
-                                    <div class="rate-box">(244) 445-4586</div>
-                                </td>
-                                <td>
-                                    <div class="rate-box">(244) 445-4586</div>
-                                </td>
-                                <td>
-                                    <div class="rate-box">email@gmail.com</div>
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control input-item table-notes-input" id=""
-                                        placeholder="Type" aria-label="name">
-                                </td>
-
-                            </tr>
-
-                        </tbody>
-                    </table>
-
-
-
-
-
-                </div>
-                <div class="modal-footer d-flex">
-
-                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- community-contact-setup-edit -->
-
-    <div class="modal" tabindex="-1" id="community-contact-setup-edit">
-        <div class="modal-dialog custom-modal-4  modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-greyBlue">
-                    <h5 class="modal-title Pinfo color-darkblue">Setup Community List</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="mb-15 d-flex gap-10">
-                        <p class="f600 lh-17 f-13">Commmunity List</p>
-                        <div class="d-flex">
-                            <img src="images/plus-icon.svg" alt="add icon" style="width: 18px; height: 18px">
-                            <a href="javascript:void(0)" data-bs-toggle="modal"
-                                data-bs-target="#add-new-community-contact"
-                                class="text-decoration-none f-600 f-13 lh-17">Add New</a>
-                        </div>
-
-                    </div>
-
-                    <table class="table table-type-1 mt-10" id="community-contact-edit-table">
-                        <thead>
-                            <tr>
-                                <th class="d-flex" style="width: 194px;">
-                                    <input class="form-check-input" type="checkbox" value=""
-                                        id=""><span>Community</span>
-                                </th>
-                                <th style="width: 170px;">Contact Name</th>
-                                <th style="width: 120px;">Telephone</th>
-                                <th style="width: 120px;">Cell</th>
-                                <th style="width: 200px;">Email</th>
-                                <th style="width: 420px;">Notes</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td class="d-flex">
-                                    <input class="form-check-input" type="checkbox" value="" id=""><span>Demo</span>
-                                </td>
-                                <td>
-                                    <div class="rate-box">Test Client</div>
-                                </td>
-                                <td>
-                                    <div class="rate-box">(244) 445-4586</div>
-                                </td>
-                                <td>
-                                    <div class="rate-box">(244) 445-4586</div>
-                                </td>
-                                <td>
-                                    <div class="rate-box">email@gmail.com</div>
-                                </td>
-                                <td>
-                                    Notes will go here
-                                </td>
-
-                            </tr>
-
-                            <tr>
-                                <td class="d-flex">
-                                    <input class="form-check-input" type="checkbox" value="" id=""><span>Demo</span>
-                                </td>
-                                <td>
-                                    <div class="rate-box">Test Client</div>
-                                </td>
-                                <td>
-                                    <div class="rate-box">(244) 445-4586</div>
-                                </td>
-                                <td>
-                                    <div class="rate-box">(244) 445-4586</div>
-                                </td>
-                                <td>
-                                    <div class="rate-box">email@gmail.com</div>
-                                </td>
-                                <td>
-                                    Notes will go here
-                                </td>
-
-                            </tr>
-
-                            <tr>
-                                <td class="d-flex">
-                                    <input class="form-check-input" type="checkbox" value="" id=""><span>Demo</span>
-                                </td>
-                                <td>
-                                    <div class="rate-box">Test Client</div>
-                                </td>
-                                <td>
-                                    <div class="rate-box">(244) 445-4586</div>
-                                </td>
-                                <td>
-                                    <div class="rate-box">(244) 445-4586</div>
-                                </td>
-                                <td>
-                                    <div class="rate-box">email@gmail.com</div>
-                                </td>
-                                <td>
-                                    Notes will go here
-                                </td>
-
-                            </tr>
-                        </tbody>
-                    </table>
-
-
-
-
-
-                </div>
-                <div class="modal-footer d-flex">
-
-                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- add-new-community-contact -->
-    <div class="modal" tabindex="-1" id="add-new-community-contact">
+    <!-- ADD NEW NOTES -->
+    <div class="modal" tabindex="-1" id="add-new-note">
         <div class="modal-dialog custom-modal-1 modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-greyBlue">
-                    <h5 class="modal-title Pinfo color-darkblue">Add New Community Contact</h5>
+                    <h5 class="modal-title Pinfo color-darkblue">Add New Note</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="row col-15">
+
+                    <div class="row col-12">
                         <div class="col-6 mb-20">
-                            <label class="label" for="community-name-community">Community Name</label>
-                            <input type="text" class="form-control input-item" id="community-name-community"
-                                placeholder="Enter" aria-label="">
-                        </div>
-                        
-                        <div class="col-6 mb-20">
-                            <label class="label" for="contact-name-community">Contact Name</label>
-                            <input type="text" class="form-control input-item" id="contact-name-community"
-                                placeholder="Enter" aria-label="">
+                            <div class="d-flex justify-content-between">
+                                <label class="label" for="add-new-notes-category">Category</label>
+                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-new-category"
+                                    class="link-blue">Add</a>
+                            </div>
+                            <select class="single-select input-item" aria-label="Default select example"
+                                id="add-new-notes-category">
+                                <option selected>Select</option>
+                                <option value="2">Agency 1</option>
+                                <option value="2">Agency 2</option>
+                                <option value="2">Agency 3</option>
+                            </select>
                         </div>
 
                         <div class="col-6 mb-20">
-                            <label class="label" for="phonecommunity">Phone</label>
-                            <input type="text" class="form-control input-item" id="phonecommunity"
-                                placeholder="Enter" aria-label="">
+                            <label class="label" for="note-LOB">LOB</label>
+                            <select class="single-select input-item" aria-label="LOB" id="note-LOB">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
                         </div>
 
                         <div class="col-6 mb-20">
-                            <label class="label" for="cell-community">Cell</label>
-                            <input type="text" class="form-control input-item" id="cell-community"
-                                placeholder="Enter" aria-label="">
+                            <label class="form-label" for="note-date">Date</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control input-item" id="note-date"
+                                    placeholder="01/02/1998">
+                                <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                            </div>
                         </div>
 
-                        
-                        <div class="col-6 mb-20">
-                            <label class="label" for="email-community">Email</label>
-                            <input type="text" class="form-control input-item" id="email-community"
-                                placeholder="Enter" aria-label="">
+                        <div class="col-4 mb-20">
+                            <label class="label" for="note-timer">Timer</label>
+                            <input type="text" class="form-control input-item" id="note-timer" placeholder="Enter Zip"
+                                aria-label="zip">
                         </div>
 
-                        <div class="">
+                        <div class="mb-20">
                             <label class="form-check-label mb-2" for="Volunteer">
-                                Initial Order
+                                Notes
                             </label>
                             <div class="col-12 mb-20 bg-white border-color radius-4">
-                                <textarea name="" id="notes-community" cols="" rows="8" class="input-textarea w-100 border-color border-bottom " placeholder="Type Here">Notes</textarea>
-                                <div class="d-flex align-items-center gap-2 py-10 px-15 pointer" data-bs-toggle="modal" data-bs-target="#quick-notes">
+                                <textarea name="" id="add-new-initial-order" cols="" rows="8"
+                                    class="input-textarea w-100 border-color border-bottom "
+                                    placeholder="Type Here"></textarea>
+                                <div class="d-flex align-items-center gap-2 py-10 px-15 pointer" data-bs-toggle="modal"
+                                    data-bs-target="#quick-notes">
                                     <img src="images/notes.svg" alt="notes icon">
                                     <p class="f-500 f-13 lh-17">Open Quick Notes List</p>
                                 </div>
@@ -707,10 +555,79 @@
                             </div>
                         </div>
 
-                    </div>
-                </div>
-                <div class="modal-footer d-flex">
+                        <div class="col-12 mb-20">
+                            <div class="form-check col-auto mb-10">
+                                <input class="form-check-input" type="checkbox" value="" id="add-copy-of-journal">
+                                <label class="form-check-label" for="add-copy-of-journal">
+                                    Add Copy of Journal to Clinician Journal Notes
+                                </label>
+                            </div>
 
+                            <div class="col-6">
+
+                                <select class="single-select input-item" aria-label="location" id="">
+                                    <option class="d-none" disabled selected>All</option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-12 mb-20">
+                            <div class="form-check col-auto mb-10">
+                                <input class="form-check-input" type="checkbox" value="" id="add-to-task-reminder">
+                                <label class="form-check-label" for="add-to-task-reminder">
+                                    Add to Task/Reminder
+                                </label>
+                            </div>
+
+                            <div class="input-group ">
+                                <input type="text" class="form-control" placeholder="Select Recipient"
+                                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <span class="input-group-text" id="basic-addon2">
+                                    <img src="images/note-icon.svg" alt="book icon">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-color p-15">
+                        <div class="col-4 border-color px-15 py-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="reminder-on">
+                                <label class="form-check-label" for="reminder-on">
+                                    Reminder On
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="date-time-box d-none mt-20">
+                            <div class="row col-12">
+                                <div class="col-6 mb-20">
+                                    <label class="form-label" for="reminder-on-date">Date</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control input-item" id="reminder-on-date"
+                                            placeholder="Select Date">
+                                        <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 mb-20">
+                                    <label class="label" for="reminder-on-time">Time</label>
+                                    <input type="text" class="form-control input-item" id="reminder-on-time"
+                                        placeholder="Enter" aria-label="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <div class="modal-footer">
                     <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
                 </div>
             </div>
@@ -718,8 +635,46 @@
     </div>
 
 
+    <!-- ADD NEW CATEGORY -->
+    <div class="modal" tabindex="-1" id="add-new-category">
+        <div class="modal-dialog custom-modal-3 modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Add New Category</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex flex-column mb-1">
+                        <label class="label add-text" for="add-new-note-category-input">Category</label>
+                        <input type="text" class="form-control input-item" id="add-new-note-category-input"
+                            placeholder="Enter" aria-label="Category" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
+    <!-- client-notes-popup -->
+    <div class="modal" tabindex="-1" id="client-notes-popup">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Client Notes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- JavaScript -->
@@ -729,7 +684,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- bootstrap js-->
     <!-- <script type="text/javascript" src="js/popper.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+          <script type="text/javascript" src="js/bootstrap.min.js"></script>-->
 
     <!-- datepicker js-->
     <script type="text/javascript" src="js/moment.min.js"></script>
@@ -739,6 +694,21 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/custom.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#reminder-on').change(function () {
+                if ($(this).is(':checked')) {
+                    $('.date-time-box').removeClass('d-none');
+                } else {
+                    $('.date-time-box').addClass('d-none'); 
+                }
+            });
+        });
+    </script>
+
+
 
 </body>
 
