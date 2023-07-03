@@ -313,8 +313,8 @@
                                 aria-selected="false">Commnunity Contacts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#" role="tab"
-                                aria-controls="Office Communication" aria-selected="true">Office Communication </a>
+                            <a class="nav-link" href="office-communication.html" role="tab"
+                                aria-controls="Office Communication" aria-selected="false">Office Communication </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="cop.html" role="tab" aria-controls="Commnunity contact"
@@ -326,71 +326,31 @@
 
             <div class="bg-white border-color mt-10 radius-4 mb-20">
                 <div class="p-20 justify-content-between align-items-center">
-                    <div class="d-flex gap-10 align-items-center">
-                        <div class="tab-content-heading">Office Communication</div>
-
-                    </div>
-                    <hr class="modal-line-1">
-                    <div class="mt-10 mb-15">
-                        <div class="d-grid grid-4 gap-30 mt-3">
-                            <div>
-                                <label class="form-label label" for="date-range">Date Range</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control input-item " id="date-range"
-                                        placeholder="Select Date">
-                                    <span class="input-group-text"><img src="images/Calendar.svg" /></span>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="d-flex justify-content-between">
-                                    <label class="label" for="category">Category</label>
-                                </div>
-                                <div class="input-group">
-                                    <select class="single-select input-item" aria-label="category" id="category"
-                                        tabindex="-1">
-                                        <option value="all" selected="">All</option>
-                                        <option value="1">Category 1</option>
-                                        <option value="2">Category 2</option>
-                                        <option value="3">Category 3</option>
-                                        <option value="4">Category 4</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="btn-vertical-bottom">
-                                <a href="#" class="btn btn-outline-primary">Display</a>
-                            </div>
-                            <div class="d-flex btn-vertical-bottom justify-content-end user-profile-dropdown">
-                                <div class="dropdown ms-3" style="margin-left: 133px !important;">
-                                    <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom"
-                                        type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
-                                        aria-expanded="false"></button>
-                                    <ul class="dropdown-menu" style="right: auto; left: 0;"
-                                        aria-labelledby="dropdownMenuButton2">
-                                        <li>
-                                            <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                                data-bs-target="#" class="dropdown-item ">Print</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                                data-bs-target="#" class="dropdown-item red-text f-400">Delete</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                    <div class="d-flex gap-10 align-items-center mb-20">
+                        <div class="tab-content-heading">Vacations</div>
+                        <div class="d-flex">
+                            <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px">
+                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-new-vacation"
+                                class="text-decoration-none f-600 f-13 lh-17">Add vacation</a>
                         </div>
-                    </div>
 
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-10">
+                        <label class="f-600 f-14 lh-22 mb-10" for="">
+                        </label>
+                        <span class="f-400 f-14 lh-17 color-greyScale">Total Records : 5</span>
+                    </div>
                     <table class="table table-hover table-type-1" id="office-communication-table">
                         <thead>
                             <tr>
                                 <th class="d-flex">
-                                    <input class="form-check-input" type="checkbox" value="" id="date-time"><span>Date
-                                        Time</span>
+                                    <input class="form-check-input" type="checkbox" value=""
+                                        id="vacation-start"><span>Start</span>
                                 </th>
-                                <th>From</th>
-                                <th>Subject</th>
-                                <th>Category</th>
-                                <th>Off Comm</th>
+                                <th>End</th>
+                                <th>Number of days</th>
+                                <th>Reason</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
 
@@ -398,178 +358,180 @@
                             <tr class="bg-white no-border">
                                 <td>
                                     <input class="form-check-input" type="checkbox" value="" id=""><span
-                                        class="notice">April 7 2023 - 1:06 PM</span>
+                                        class="notice">04/07/2023</span>
                                 </td>
-                                <td>Test Client</td>
-                                <td>Intake Note for Client</td>
-                                <td>Intake</td>
+                                <td>04/11/2023</td>
+                                <td>5 Day</td>
+                                <td>The description of the reason for taking the vacation will go here</td>
                                 <td>
-                                    <a href="javascript:void(0)" data-bs-toggle="modal"
-                                        data-bs-target="#off-comm-popup">
-                                        <img src="images/Journal notes.svg" alt="off comm button"
-                                            class="pointer off-comm"></a>
+                                    <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
                                 </td>
                             </tr>
                             <tr class="bg-white no-border">
                                 <td>
                                     <input class="form-check-input" type="checkbox" value="" id=""><span
-                                        class="notice">April 7 2023 - 1:06 PM</span>
+                                        class="notice">04/07/2023</span>
                                 </td>
-                                <td>Test Client</td>
-                                <td>VISIT CHART -Client:demo2, test (2045) - VISIT DATE: 01/03/2023</td>
-                                <td>Intake</td>
+                                <td>04/11/2023</td>
+                                <td>5 Day</td>
+                                <td>The description of the reason for taking the vacation will go here</td>
                                 <td>
-                                    <a href="javascript:void(0)" data-bs-toggle="modal"
-                                        data-bs-target="#off-comm-popup">
-                                        <img src="images/Journal notes.svg" alt="off comm button"
-                                            class="pointer off-comm"></a>
+                                    <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                                </td>
+                            </tr>
+                            <tr class="bg-white no-border">
+                                <td>
+                                    <input class="form-check-input" type="checkbox" value="" id=""><span
+                                        class="notice">04/07/2023</span>
+                                </td>
+                                <td>04/11/2023</td>
+                                <td>5 Day</td>
+                                <td>The description of the reason for taking the vacation will go here</td>
+                                <td>
+                                    <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                                </td>
+                            </tr>
+                            <tr class="bg-white no-border">
+                                <td>
+                                    <input class="form-check-input" type="checkbox" value="" id=""><span
+                                        class="notice">04/07/2023</span>
+                                </td>
+                                <td>04/11/2023</td>
+                                <td>5 Day</td>
+                                <td>The description of the reason for taking the vacation will go here</td>
+                                <td>
+                                    <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
                                 </td>
                             </tr>
 
                         </tbody>
                     </table>
+                    <div class="d-flex">
+                        <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px">
+                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-new-vacation"
+                            class="text-decoration-none f-600 f-13 lh-17">Add vacation</a>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
-    <div class="modal" tabindex="-1" id="off-comm-popup">
-        <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+    <!-- Add new vacation popup -->
+    <div class="modal show" tabindex="-1" id="add-new-vacation" aria-modal="true" role="dialog">
+        <div class="modal-dialog custom-modal-1  modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-greyBlue">
-                    <h5 class="modal-title Pinfo color-darkblue">
-                        Message Details
-                    </h5>
+                    <h5 class="modal-title Pinfo color-darkblue">Add New Vacation </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="d-flex bg-greybox border-color radius-4 mb-20">
-                        <div class="col-5">
-                            <div class="mb-10">
-                                <span class="text-title">From :</span>
-                                <span class="text-description">KanTime, Support</span>
+
+                    <div class="row d-flex">
+                        <div class="col-6">
+                            <div class="d-flex justify-content-between">
+                                <label class="label f-500 f-14 lh-19" for="vacation-reason">Vacation Reason</label>
+                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-new-reason"
+                                    class="link-blue">Add</a>
                             </div>
-                            <div>
-                                <span class="text-title">To :</span>
-                                <span class="text-description"> Staff, Avi B/O; Avi, TEST RN:</span>
+                            <span class="multiselect-native-select"><select class="single-select input-item"
+                                    aria-label="vacation-reason" id="vacation-reason" tabindex="-1">
+                                    <option class="d-none" disabled="" selected="">Select</option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                        </div>
+                        <div class="col-6"></div>
+
+                    </div>
+
+                    <div class="row d-flex mt-20">
+                        <div class="col-6">
+                            <label class="form-label f-500 f-14 lh-19" for="add-vacation-start">Vacation Start</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control input-item" id="add-vacation-start"
+                                    placeholder="01/02/1998">
+                                <span class="input-group-text"><img src="images/Calendar.svg"></span>
                             </div>
                         </div>
-                        <div class="col-5">
-                            <div class="mb-10">
-                                <span class="text-title">Type :</span>
-                                <span class="text-description">Task</span>
-                            </div>
-                            <div>
-                                <span class="text-title">04/10/2023 08:44 PM</span>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="d-flex btn-vertical-bottom justify-content-end user-profile-dropdown">
-                                <div class="dropdown ms-3" style="margin-left: 133px !important;">
-                                    <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom"
-                                        type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown"
-                                        aria-expanded="false"></button>
-                                    <ul class="dropdown-menu" style="right: auto; left: 0;"
-                                        aria-labelledby="dropdownMenuButton3">
-                                        <li>
-                                            <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                                data-bs-target="#" class="dropdown-item ">Reply</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                                data-bs-target="#" class="dropdown-item ">Reply all</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                                data-bs-target="#" class="dropdown-item ">Forward</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                                data-bs-target="#" class="dropdown-item ">Print</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
-                                                data-bs-target="#" class="dropdown-item red-text f-400">Delete</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <div class="col-6">
+                            <label class="form-label f-500 f-14 lh-19" for="add-vacation-end">Vacation End</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control input-item" id="add-vacation-end"
+                                    placeholder="01/02/1998">
+                                <span class="input-group-text"><img src="images/Calendar.svg"></span>
                             </div>
                         </div>
 
                     </div>
-                    <div class="bg-white">
-                        <div class="mt-20 mb-20 radius-4 border-color">
-                            <div class="p-20">
-                                <div class="row">
-                                    <div class="col-3">
-                                        <div class="mb-10 border-color py-10 px-15 radius-4">
-                                            <div class="form-check">
-                                                <input class="form-check-input" checked="checked" type="checkbox"
-                                                    value="" id="remind-on">
-                                                <label class="send completed" for="remind-on">Remind On
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="row d-flex mt-20">
+                        <div class="col-6">
+                            <label class="form-label f-500 f-14 lh-19" for="vacation-start-time">Vacation Start
+                                Time</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control input-item" id="vacation-start-time"
+                                    placeholder="Enter Time">
 
-                                <div class="row">
-                                    <div class="col-6">
-                                        <label class="form-label m-b-5" for="msg-date">Date</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control input-item" id="msg-date"
-                                                placeholder="Enter Date">
-                                            <span class="input-group-text"><img src="images/Calendar.svg"></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6">
-                                        <label class="label" for="msg-time">Time</label>
-                                        <input type="text" class="form-control input-item" id="msg-time"
-                                            placeholder="Enter Time" aria-label="">
-                                    </div>
-                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="mb-20">
-                        <p>Subject :<span class="f-600 f-13"> Client : Demo 2 , Test (2045)</span></p>
-                    </div>
-                    <div>
-                        <label class="label f-500" for="message">Messages</label>
-                        <div class="col-12 mb-20 bg-white border-color radius-4">
-                            <textarea name="" id="message" cols="" rows="8"
-                                class="input-textarea w-100 no-border border-color border-bottom "
-                                placeholder="Type Here"></textarea>
-                            <div class="d-flex align-items-center gap-2 py-10 px-15" data-bs-toggle="modal"
-                                data-bs-target="#quick-notes">
-                                <img src="images/notes.svg" alt="notes icon">
-                                <p class="f-500 f-13 lh-17">Open Quick Notes List</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row col-12">
-                        <div class="col-3">
-                            <div class="border-color py-10 px-15 radius-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="completed">
-                                    <label class="send completed" for="completed">Completed
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        <div class="col-6">
+                            <label class="form-label f-500 f-14 lh-19" for="vacation-end-time">Vacation End Time</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control input-item" id="vacation-end-time"
+                                    placeholder="Enter Time">
 
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <div class="d-flex justify-content-end align-items-center">
-                        <a href="#" class="btn btn-outline-primary btn-discard">Discard</a>
-                        <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
-                    </div>
-
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Add new vacation popup end -->
+    <!-- Add new reason popup -->
+    <div class="modal show" tabindex="-1" id="add-new-reason" aria-modal="true" role="dialog">
+        <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Add New Reason</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="add-text">Add New Reason</span>
+                        <div class="position-relative">
+                            <input type="text" class="form-control input-item" id="new-reason"
+                                placeholder="Enter new reason" aria-label="Enter new reason" style="width: 286px">
+                            <button class="btn btn-inside">Add to List</button>
+                        </div>
+                    </div>
+                    <div class="border-color radius-4">
+                        <div class="bg-greyHeader p-3 d-flex justify-content-between align-items-center">
+                            <p class="f-500 f-13 lh-17 color-greyBlueheader">Reason</p>
+                            <p class="f-500 f-13 lh-17 color-greyBlueheader">Actions</p>
+                        </div>
+                        <div class="p-3 d-flex justify-content-between align-items-center border-color">
+                            <p>Family Emergency</p>                                
+                           
+                            <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                        </div>
+                        <div class="p-3 d-flex justify-content-between align-items-center border-color">
+                            <p>Family Emergency</p> 
+                            <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add new reason popup end -->
+
     <!-- JavaScript -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-multiselect.min.js"></script>
