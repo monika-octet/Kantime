@@ -31,14 +31,12 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 $(document).ready(function () {
 
   $('#preference-criteria-table .multiselect-container .multiselect-option').click(function () {
-    var buttonTitle = $(this).attr('title');
-    var parentSibling = $(this).parent('.multiselect-container').siblings('.multiselect');
-console.log($(this).parent().siblings('.multiselect').attr('title'));
-    if (buttonTitle === 'Preffered') {
+    var buttonTitle = $(this).attr('title');   
+    if ($.trim(buttonTitle) === 'Preffered') {
       $(this).parent().siblings('.multiselect').removeClass('color-red');
       $(this).parent().siblings('.multiselect').addClass('color-green');
     }
-    else if (buttonTitle === 'Non Preffered') {
+    else if ($.trim(buttonTitle) === 'Non Preffered') {
       $(this).parent().siblings('.multiselect').removeClass('color-green');
       $(this).parent().siblings('.multiselect').addClass('color-red');
     } else {
