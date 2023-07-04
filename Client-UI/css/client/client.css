@@ -1779,3 +1779,12 @@ li.remove-column:after {
 .btn-menu-dropdown:focus{
     border-bottom: 2px solid #545B64;
 }
+
+.referral-search .ref-lens{
+    top: 20px;
+    left: 20px;
+
+}
+.referral-search input{
+    padding: 10px 15px 10px 35px;
+}

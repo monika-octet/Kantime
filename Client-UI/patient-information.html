@@ -317,29 +317,25 @@
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">
-                                <button class="btn-menu-dropdown dropdown-toggle btn-dropdown-custom"
-                                    type="button" id="" data-bs-toggle="dropdown"
-                                    aria-expanded="false">More</button>
+                                <button class="btn-menu-dropdown dropdown-toggle btn-dropdown-custom" type="button"
+                                    id="" data-bs-toggle="dropdown" aria-expanded="false">More</button>
                                 <ul class="dropdown-menu" aria-labelledby="">
                                     <li>
-                                        <a href="journal-notes.html" type="button" 
-                                             class="dropdown-item">Journal Note</a>
+                                        <a href="journal-notes.html" type="button" class="dropdown-item">Journal
+                                            Note</a>
                                     </li>
                                     <li>
-                                        <a href="office-communication.html" type="button" 
-                                             class="dropdown-item">Office Communication</a>
+                                        <a href="office-communication.html" type="button" class="dropdown-item">Office
+                                            Communication</a>
                                     </li>
                                     <li>
-                                        <a href="vacations.html" type="button" 
-                                             class="dropdown-item">Vacation</a>
+                                        <a href="vacations.html" type="button" class="dropdown-item">Vacation</a>
                                     </li>
                                     <li>
-                                        <a href="forms.html" type="button" 
-                                             class="dropdown-item">Forms</a>
+                                        <a href="forms.html" type="button" class="dropdown-item">Forms</a>
                                     </li>
                                     <li>
-                                        <a href="cop.html" type="button" 
-                                             class="dropdown-item">COP</a>
+                                        <a href="cop.html" type="button" class="dropdown-item">COP</a>
                                     </li>
                                 </ul>
                             </div>
@@ -1431,7 +1427,7 @@
                         </div>
 
                         <div class="border-color tab-pane fade" id="patient-representative" role="tabpanel"
-                            aria-labelledby="referral-information-tab">
+                            aria-labelledby="">
                             <div class="px-20 bg-white d-flex justify-content-between align-items-center"
                                 style="padding-top: 14px; padding-bottom: 14px">
                                 <div class="d-flex gap-10 align-items-center">
@@ -2628,7 +2624,8 @@
 
                                 <div class="p-15 bg-white container">
                                     <div class="row col-12">
-                                        <div class="border-color bg-disabled py-10 px-15 radius-4 ml-10" style="width: 35%;">
+                                        <div class="border-color bg-disabled py-10 px-15 radius-4 ml-10"
+                                            style="width: 35%;">
                                             <div class="form-check">
                                                 <input disabled class="form-check-input" type="checkbox" value=""
                                                     id="enable-notified-service">
@@ -2637,7 +2634,8 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class=" d-flex justify-content-between align-items-center" style="width: 25%;">
+                                        <div class=" d-flex justify-content-between align-items-center"
+                                            style="width: 25%;">
                                             <label class="send w-100" for="hours-week">
                                                 Hours / week:
                                             </label>
@@ -2697,7 +2695,8 @@
                                         </div>
 
 
-                                        <div class="col-5 d-flex align-items-center border-color bg-disabled py-10 px-15 radius-4" style="height: 39px; margin-top:23px">
+                                        <div class="col-5 d-flex align-items-center border-color bg-disabled py-10 px-15 radius-4"
+                                            style="height: 39px; margin-top:23px">
                                             <div class="form-check">
                                                 <input disabled="" class="form-check-input" type="checkbox" value=""
                                                     id="override-contract-reference">
@@ -3065,12 +3064,236 @@
                                     <div class="d-flex">
                                         <p class="tab-heading">Referral Information </p>
                                         <div class="d-flex">
-                                            <img src="images/edit-icon.svg" alt="edit icon" style="width: 18px; height: 18px">
-                                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#patient-information-popup" class="text-decoration-none f-600 f-13 lh-17">Edit</a>
+                                            <img src="images/edit-icon.svg" alt="edit icon"
+                                                style="width: 18px; height: 18px">
+                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                data-bs-target="#referral-information-edit-popup"
+                                                class="text-decoration-none f-600 f-13 lh-17">Edit</a>
                                         </div>
                                     </div>
 
                                     <hr class="modal-line">
+                                </div>
+
+                                <div class="p-3 bg-white container">
+                                    <div class="row col-12">
+                                        <div class="col-4">
+                                            <label class="label" for="admission-source-details">Admission
+                                                Source</label>
+                                            <select disabled class="single-select input-item" aria-label=""
+                                                id="admission-source-details">
+                                                <option class="d-none" disabled selected>Select</option>
+                                                <option value="1">List 1</option>
+                                                <option value="2">List 2</option>
+                                                <option value="3">List 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="p-10 mb-10">
+                                        <div class="col-5 ">
+                                            <label class="label" for="">Referral Source</label>
+                                            <div class="d-flex gap-2">
+                                                <div class="radio-box bg-white">
+                                                    <div class="form-check">
+                                                        <input checked class="form-check-input" type="radio"
+                                                            name="referral source" id="physician-type-ref-info"
+                                                            value="Physician"
+                                                            onclick="showHideDiv('physician-type-ref-info', 'src-referral-source-type-physician')" />
+                                                        <label class="form-check-label" for="physician-type-ref-info">
+                                                            Physician
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="radio-box bg-white ">
+                                                    <div class="form-check ">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="referral source" id="facility-type-ref-info"
+                                                            value="Facility"
+                                                            onclick="showHideDiv('facility-type-ref-info', 'src-referral-source-type-facility')" />
+                                                        <label class="form-check-label" for="facility-type-ref-info">
+                                                            Facility
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="radio-box bg-white">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="referral source" id="other-type-ref-info"
+                                                            value="Other"
+                                                            onclick="showHideDiv('other-type-ref-info', 'src-referral-source-type-other')" />
+                                                        <label class="form-check-label" for="other-type-ref-info">
+                                                            Other
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="src-referral-source-type-facility" class="referral-source-type mt-20">
+                                            <div class="row col-12">
+                                                <div class="col-4">
+                                                    <label class="label"
+                                                        for="referral-facility-details">Referral Facility</label>
+                                                    <select disabled class="single-select input-item" aria-label=""
+                                                        id="referral-facility-details">
+                                                        <option class="d-none" disabled selected>Select</option>
+                                                        <option value="1">List 1</option>
+                                                        <option value="2">List 2</option>
+                                                        <option value="3">List 3</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-4">
+                                                    <label class="label"
+                                                        for="facility-contact-details">Facility Contact</label>
+                                                    <select disabled class="single-select input-item" aria-label=""
+                                                        id="facility-contact-details">
+                                                        <option class="d-none" disabled selected>Select</option>
+                                                        <option value="1">List 1</option>
+                                                        <option value="2">List 2</option>
+                                                        <option value="3">List 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="src-referral-source-type-other" class="referral-source-type mt-20">
+                                            <div class="row col-12">
+                                                <div class="col-4">
+                                                    <label class="label"
+                                                        for="organiziation-details-other">Organization</label>
+                                                    <select disabled class="single-select input-item" aria-label="location"
+                                                        id="organiziation-details-other">
+                                                        <option class="d-none" disabled selected>Select</option>
+                                                        <option value="1">List 1</option>
+                                                        <option value="2">List 2</option>
+                                                        <option value="3">List 3</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-4 ">
+                                                    <label class="label" for="contatct-name-details">Contact
+                                                        Name</label>
+                                                    <input disabled type="text" class="form-control input-item"
+                                                        id="contatct-name-details" placeholder="Enter" aria-label="">
+                                                </div>
+
+                                                <div class="col-4">
+                                                    <label class="label" for="contatct-phone-details">Contact
+                                                        Phone</label>
+                                                    <input disabled type="text" class="form-control input-item"
+                                                        id="contatct-phone-details" placeholder="Enter" aria-label="">
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </div>
+
+                                    <div class="p-15 border-color referral-search" style="background-color:#FAFAFA ;">
+                                        <div class="row col-12">
+                                            <div class="col-4 position-relative p-10">
+                                                <input type="text" class="form-control input-item" id="search-form"
+                                                    placeholder="Search Form" aria-label="Search Form"
+                                                    style="background-color: #efefef;">
+                                                <img src="images/lens.svg" alt="search icon"
+                                                    class="position-absolute ref-lens">
+                                            </div>
+                                        </div>
+
+                                        <div class="row col-12">
+                                            <div class="col-4 mb-20">
+                                                <label class="label" for="address-ref">Address</label>
+                                                <input disabled type="text" class="form-control input-item" id="address-ref"
+                                                    placeholder="Enter" aria-label="">
+                                            </div>
+
+                                            <div class="col-4 mb-20">
+                                                <label class="label" for="phone-ref">Phone</label>
+                                                <input disabled type="text" class="form-control input-item" id="phone-ref"
+                                                    placeholder="Enter" aria-label="">
+                                            </div>
+
+                                            <div class="col-4 mb-20">
+                                                <label class="label" for="NPI-ref">NPI</label>
+                                                <input disabled type="text" class="form-control input-item" id="NPI-ref"
+                                                    placeholder="Enter" aria-label="">
+                                            </div>
+
+                                            <div class="col-4 mb-20">
+                                                <label class="label" for="email-ref">Email</label>
+                                                <input disabled type="text" class="form-control input-item" id="email-ref"
+                                                    placeholder="Enter" aria-label="">
+                                            </div>
+
+                                            <div class="col-4 mb-20">
+                                                <label class="label" for="fax-ref">Fax</label>
+                                                <input disabled type="text" class="form-control input-item" id="fax-ref"
+                                                    placeholder="Enter" aria-label="">
+                                            </div>
+
+                                            <div class="col-4 mb-20">
+                                                <label class="label" for="PECOS-ref">PECOS</label>
+                                                <input disabled type="text" class="form-control input-item" id="PECOS-ref"
+                                                    placeholder="Enter" aria-label="">
+                                            </div>
+
+                                            <div class="col-4 ">
+                                                <div class="d-flex">
+                                                    <label class="label" for="physician-office-ref">Physician Office</label>
+                                                   
+                                                </div>
+                                                <select disabled class="single-select input-item"
+                                                    aria-label="Default select example" id="physician-office-ref">
+                                                    <option selected>Select</option>
+                                                    <option value="2">Agency 1</option>
+                                                    <option value="2">Agency 2</option>
+                                                    <option value="2">Agency 3</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-4 ">
+                                                <label class="label" for="physician-office-ref">Physician Office Phone</label>
+                                                <input disabled type="text" class="form-control input-item" id="physician-office-ref"
+                                                    placeholder="Enter" aria-label="">
+                                            </div>
+
+
+                                        </div>
+
+                                        
+
+
+                                    </div>
+                                    <div class="col-4 mt-20">
+                                        <div class="d-flex justify-content-between">
+                                          <label class="label" for="attending-ref-info"
+                                            >Sales Person/Markerter </label
+                                          >
+                                          <a
+                                            href="javascript:void(0)"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#"
+                                            class="link-blue"
+                                            >Add</a
+                                          >
+                                        </div>
+                                        <select disabled
+                                          class="single-select input-item"
+                                          aria-label="Default select example"
+                                          id="attending-ref-info"
+                                        >
+                                          <option selected>Select</option>
+                                          <option value="2">Agency 1</option>
+                                          <option value="2">Agency 2</option>
+                                          <option value="2">Agency 3</option>
+                                        </select>
+                                      </div>
+          
+
                                 </div>
 
                             </div>
@@ -3393,8 +3616,8 @@
         </div>
     </div>
 
-      <!-- POPUP -->
-      <div class="modal" tabindex="-1" id="change-location">
+    <!-- POPUP -->
+    <div class="modal" tabindex="-1" id="change-location">
         <div class="modal-dialog custom-modal-1 modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-greyBlue">
@@ -6208,7 +6431,7 @@
                         <h5 class="modal-title Pinfo color-darkblue">
                             Physician Profile
                         </h5>
-                    
+
                     </div>
 
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -8069,6 +8292,245 @@
     </div>
 
 
+    <!-- referral-information-edit-popup -->
+    <div class="modal" tabindex="-1" id="referral-information-edit-popup">
+        <div class="modal-dialog modal-xl  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Referral Source Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class=" bg-white container">
+                        <div class="row col-12">
+                            <div class="col-4">
+                                <label class="label" for="admission-source-details-edit">Admission
+                                    Source</label>
+                                <select  class="single-select input-item" aria-label=""
+                                    id="admission-source-details-edit">
+                                    <option class="d-none" disabled selected>Select</option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="p-10 mb-10">
+                            <div class="col-5 ">
+                                <label class="label" for="">Referral Source</label>
+                                <div class="d-flex gap-2">
+                                    <div class="radio-box bg-white">
+                                        <div class="form-check">
+                                            <input checked class="form-check-input" type="radio"
+                                                name="referral source" id="physician-type-ref-info-edit"
+                                                value="Physician"
+                                                onclick="showHideDiv('physician-type-ref-info-edit', 'edit-referral-source-type-physician')" />
+                                            <label class="form-check-label" for="physician-type-ref-info-edit">
+                                                Physician
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="radio-box bg-white ">
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio"
+                                                name="referral source" id="facility-type-ref-info-edit"
+                                                value="Facility"
+                                                onclick="showHideDiv('facility-type-ref-info-edit', 'edit-referral-source-type-facility')" />
+                                            <label class="form-check-label" for="facility-type-ref-info-edit">
+                                                Facility
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="radio-box bg-white">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio"
+                                                name="referral source" id="other-type-ref-info-edit"
+                                                value="Other"
+                                                onclick="showHideDiv('other-type-ref-info-edit', 'edit-referral-source-type-other')" />
+                                            <label class="form-check-label" for="other-type-ref-info-edit">
+                                                Other
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="edit-referral-source-type-facility" class="referral-source-type mt-20">
+                                <div class="row col-12">
+                                    <div class="col-4">
+                                        <label class="label"
+                                            for="referral-facility-details-edit">Referral Facility</label>
+                                        <select  class="single-select input-item" aria-label=""
+                                            id="referral-facility-details-edit">
+                                            <option class="d-none" disabled selected>Select</option>
+                                            <option value="1">List 1</option>
+                                            <option value="2">List 2</option>
+                                            <option value="3">List 3</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-4">
+                                        <label class="label"
+                                            for="facility-contact-details-edit">Facility Contact</label>
+                                        <select  class="single-select input-item" aria-label=""
+                                            id="facility-contact-details-edit">
+                                            <option class="d-none" disabled selected>Select</option>
+                                            <option value="1">List 1</option>
+                                            <option value="2">List 2</option>
+                                            <option value="3">List 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div id="edit-referral-source-type-other" class="referral-source-type mt-20">
+                                <div class="row col-12">
+                                    <div class="col-4">
+                                        <label class="label"
+                                            for="organiziation-details-other-edit">Organization</label>
+                                        <select  class="single-select input-item" aria-label=""
+                                            id="organiziation-details-other-edit">
+                                            <option class="d-none" disabled selected>Select</option>
+                                            <option value="1">List 1</option>
+                                            <option value="2">List 2</option>
+                                            <option value="3">List 3</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-4 ">
+                                        <label class="label" for="contatct-name-details-edit">Contact
+                                            Name</label>
+                                        <input  type="text" class="form-control input-item"
+                                            id="contatct-name-details-edit" placeholder="Enter" aria-label="">
+                                    </div>
+
+                                    <div class="col-4">
+                                        <label class="label" for="contatct-phone-details-edit">Contact
+                                            Phone</label>
+                                        <input  type="text" class="form-control input-item"
+                                            id="contatct-phone-details-edit" placeholder="Enter" aria-label="">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+
+                        <div class="p-15 border-color referral-search" style="background-color:#FAFAFA ;">
+                            <div class="row col-12">
+                                <div class="col-4 position-relative p-10">
+                                    <input type="text" class="form-control input-item" id="search-form"
+                                        placeholder="Search Form" aria-label="Search Form"
+                                       >
+                                    <img src="images/lens.svg" alt="search icon"
+                                        class="position-absolute ref-lens">
+                                </div>
+                            </div>
+
+                            <div class="row col-12">
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="address-ref-edit">Address</label>
+                                    <input  type="text" class="form-control input-item" id="address-ref-edit"
+                                        placeholder="Enter" aria-label="">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="phone-ref-edit">Phone</label>
+                                    <input  type="text" class="form-control input-item" id="phone-ref-edit"
+                                        placeholder="Enter" aria-label="">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="NPI-ref-edit">NPI</label>
+                                    <input  type="text" class="form-control input-item" id="NPI-ref-edit"
+                                        placeholder="Enter" aria-label="">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="email-ref-edit">Email</label>
+                                    <input  type="text" class="form-control input-item" id="email-ref-edit"
+                                        placeholder="Enter" aria-label="">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="fax-ref-edit">Fax</label>
+                                    <input  type="text" class="form-control input-item" id="fax-ref-edit"
+                                        placeholder="Enter" aria-label="">
+                                </div>
+
+                                <div class="col-4 mb-20">
+                                    <label class="label" for="PECOS-ref-edit">PECOS</label>
+                                    <input  type="text" class="form-control input-item" id="PECOS-ref-edit"
+                                        placeholder="Enter" aria-label="">
+                                </div>
+
+                                <div class="col-4 ">
+                                    <div class="d-flex">
+                                        <label class="label" for="physician-office-ref-edit">Physician Office</label>
+                                       
+                                    </div>
+                                    <select  class="single-select input-item"
+                                        aria-label="Default select example" id="physician-office-ref-edit">
+                                        <option selected>Select</option>
+                                        <option value="2">Agency 1</option>
+                                        <option value="2">Agency 2</option>
+                                        <option value="2">Agency 3</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-4 ">
+                                    <label class="label" for="physician-office-ref-edit">Physician Office Phone</label>
+                                    <input  type="text" class="form-control input-item" id="physician-office-ref-edit"
+                                        placeholder="Enter" aria-label="">
+                                </div>
+
+
+                            </div>
+
+                            
+
+
+                        </div>
+                        <div class="col-4 mt-20">
+                            <div class="d-flex justify-content-between">
+                              <label class="label" for="attending-ref-info"
+                                >Sales Person/Markerter </label
+                              >
+                              <a
+                                href="javascript:void(0)"
+                                data-bs-toggle="modal"
+                                data-bs-target="#"
+                                class="link-blue"
+                                >Add</a
+                              >
+                            </div>
+                            <select 
+                              class="single-select input-item"
+                              aria-label="Default select example"
+                              id="attending-ref-info"
+                            >
+                              <option selected>Select</option>
+                              <option value="2">Agency 1</option>
+                              <option value="2">Agency 2</option>
+                              <option value="2">Agency 3</option>
+                            </select>
+                          </div>
+
+
+                    </div>
+                </div>
+                <div class="modal-footer d-flex">
+                    <button class="btn btn-tertiary">Cancel</button>
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Update</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- JavaScript -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-multiselect.min.js"></script>
@@ -8087,6 +8549,38 @@
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/custom.js"></script>
 
+
+    <script>
+        function showHideDiv(checkboxId, divId) {
+            var checkbox = document.getElementById(checkboxId);
+            var div = document.getElementById(divId);
+
+            var divs = document.querySelectorAll('div[id^="src"]');
+            for (var i = 0; i < divs.length; i++) {
+                if (divs[i].id === divId) {
+                    divs[i].style.display = checkbox.checked ? "block" : "none";
+                } else {
+                    divs[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+<script>
+    function showHideDiv(checkboxId, divId) {
+        var checkbox = document.getElementById(checkboxId);
+        var div = document.getElementById(divId);
+
+        var divs = document.querySelectorAll('div[id^="edit"]');
+        for (var i = 0; i < divs.length; i++) {
+            if (divs[i].id === divId) {
+                divs[i].style.display = checkbox.checked ? "block" : "none";
+            } else {
+                divs[i].style.display = "none";
+            }
+        }
+    }
+</script>
 
 
     <script>

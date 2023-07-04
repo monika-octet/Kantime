@@ -684,6 +684,10 @@ item:active {
     width: fit-content !important;
 }
 
+.max-fit{
+    width: max-content !important;
+}
+
 /* Accordian Styling */
 
 .accordion-button{
