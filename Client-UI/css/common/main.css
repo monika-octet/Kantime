@@ -40,6 +40,10 @@
 .color-black{
     color: #000;
 }
+
+.color-GrayscaleBlue{
+    color: #546071 !important;
+}
 /* line color */
 
 .p-5 {
@@ -129,6 +133,10 @@
 .mr-5{
     margin-right: 5px !important;
 }
+
+.mr-10{
+    margin-right: 10px !important;
+}
 .ml-10{
     margin-left: 10px !important;
 }
@@ -176,7 +184,9 @@
     margin-left: 20px;
     margin-right: 20px;
 }
-
+.gap-5 {
+    gap: 5px;
+}
 .gap-10 {
     gap: 10px;
 }
@@ -431,10 +441,6 @@ item:active {
 .multiselect-container .multiselect-option .form-check {
     padding: 0;
 }
-
-
-
-.multiselect-container .multiselect-option {}
 
 .multiselect-native-select .multiselect {
     text-align: left !important;
@@ -768,7 +774,10 @@ item:active {
     min-width: 226px;
 }
 .w-300px{
-    min-width: 226px;
+    min-width: 300px;
+}
+.w-350px{
+    min-width: 350px;
 }
 .no-border{
     border: none;
