@@ -396,7 +396,7 @@ h3 {
     content: url(../../images/three-dots.svg);
     width: 100%;
     height: 100%;
-    top: 7px;
+    top: 6px;
     left: 0px;
     position: absolute;
     border-top: none;
@@ -439,7 +439,9 @@ h3 {
 #preferred-skills-table.table-type-1 tbody tr td,
 #criteria-table.table-type-1 thead tr th,
 #criteria-table.table-type-1 tbody tr td,
-#medication-and-dosage-table.table-type-1 thead tr th {
+#medication-and-dosage-table.table-type-1 thead tr th, 
+#community-contact-table.table-type-1 tbody tr td
+{
     padding: 8px 15px;
 }
 
@@ -453,8 +455,15 @@ h3 {
 
 #schedule-table.table-type-1 tbody tr td,
 #evv-client-designees-table.table-type-1 tbody tr td,
-#journal-note-client-table.table-type-1 tbody tr td {
+#journal-note-client-table.table-type-1 tbody tr td,
+#additional-pharmacy-table.table-type-1 tbody tr td
+{
+
     padding: 12px 20px;
+}
+#additional-pharmacy-table.table-type-1 tbody tr td
+{
+    height: 63px;
 }
 
 .dropdown .dropdown-menu {
@@ -509,15 +518,6 @@ h3 {
     border-radius: 4px;
 }
 
-.notice {
-
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 17px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #181C32;
-}
 
 
 /* patient information css */
@@ -1764,6 +1764,7 @@ li.remove-column:after {
 }
 
 /* JOURNAL CONTACT CSS END */
+
 /* Forms page CSS start */
 .blue-tab-box {
     padding: 5px 8px;
@@ -1798,3 +1799,40 @@ li.remove-column:after {
 }
 
 /* forms page CSS end */
+
+.w-88{
+    width: 88px;
+}
+
+.logo-box div{
+    width: 104px;
+}
+
+.d-flex img + a{
+    color: #0747A6;
+}
+
+.btn-menu-dropdown{
+    height: 57px;
+    background: none;
+    border: none;
+    padding: 17px 15px;
+}
+
+.btn-menu-dropdown:hover{
+    background-color: #F4F5F6;
+   
+    color: #3D4148;
+}
+.btn-menu-dropdown:focus{
+    border-bottom: 2px solid #545B64;
+}
+
+.referral-search .ref-lens{
+    top: 20px;
+    left: 20px;
+
+}
+.referral-search input{
+    padding: 10px 15px 10px 35px;
+}

@@ -133,8 +133,12 @@
 .mr-5{
     margin-right: 5px !important;
 }
+
 .mr-10{
     margin-right: 10px !important;
+}
+.ml-10{
+    margin-left: 10px !important;
 }
 .ml-20{
     margin-left: 20px;
@@ -149,6 +153,10 @@
 
 .mt-20 {
     margin-top: 20px !important;
+}
+
+.mt-25 {
+    margin-top: 25px !important;
 }
 
 .mt-30 {
@@ -434,10 +442,6 @@ item:active {
     padding: 0;
 }
 
-
-
-.multiselect-container .multiselect-option {}
-
 .multiselect-native-select .multiselect {
     text-align: left !important;
 }
@@ -654,7 +658,7 @@ item:active {
     line-height: 17px;
     letter-spacing: 0em;
     text-decoration: none;
-    color: #4772E0;
+    color: #0747A6;
 }
 
 .input-textarea{
@@ -684,6 +688,10 @@ item:active {
 }
 .fit-content-w{
     width: fit-content !important;
+}
+
+.max-fit{
+    width: max-content !important;
 }
 
 /* Accordian Styling */
