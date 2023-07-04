@@ -64,10 +64,10 @@
                 </div>
 
                 <div class="icon-container d-flex gap-3">
-                    <img src="images/Help.svg" alt="help-icon" />
-                    <img src="images/Mail.svg" alt="mail-icon" />
-                    <img src="images/Duplicate.svg" alt="duplicate-icon" />
-                    <img src="images/message.svg" alt="message-icon" />
+                    <img src="images/Help.svg" alt="help-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Help List" />
+                    <img src="images/Mail.svg" alt="mail-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Mail" />
+                    <img src="images/Duplicate.svg" alt="duplicate-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Duplicate Tabs" />
+                    <img src="images/message.svg" alt="message-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Kantime Text"/>
                 </div>
             </div>
 
@@ -79,7 +79,7 @@
                             style="background: #f4f5f6;">
                         <img src="images/lens.svg" alt="search lens" class="lens">
                     </div>
-                    <button class="btn btn-outline-primary">
+                    <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#filter">
                         <img src="images/filter.svg" alt="">
                         Filter
                     </button>
@@ -310,12 +310,33 @@
                                 aria-selected="false">Commnunity Contacts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="journal-notes.html" role="tab" aria-controls="journal notes"
-                                aria-selected="false">Journal notes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="cop.html" role="tab" aria-controls="Commnunity contact"
-                                aria-selected="false">Cop </a>
+                            <div class="dropdown">
+                                <button class="btn-menu-dropdown dropdown-toggle btn-dropdown-custom"
+                                    type="button" id="" data-bs-toggle="dropdown"
+                                    aria-expanded="false">More</button>
+                                <ul class="dropdown-menu" aria-labelledby="">
+                                    <li>
+                                        <a href="journal-notes.html" type="button" 
+                                             class="dropdown-item">Journal Note</a>
+                                    </li>
+                                    <li>
+                                        <a href="office-communication.html" type="button" 
+                                             class="dropdown-item">Office Communication</a>
+                                    </li>
+                                    <li>
+                                        <a href="vacations.html" type="button" 
+                                             class="dropdown-item">Vacation</a>
+                                    </li>
+                                    <li>
+                                        <a href="forms.html" type="button" 
+                                             class="dropdown-item">Forms</a>
+                                    </li>
+                                    <li>
+                                        <a href="cop.html" type="button" 
+                                             class="dropdown-item">COP</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -1137,6 +1158,81 @@
 
 
     <!-- CLIENT AND CLINICIAN DIRECTION POPUP END -->
+    
+    <div class="modal" tabindex="-1" id="filter">
+        <div class="modal-dialog custom-modal-1  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Filter</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row col-12">
+                        <div class="col-6 mb-20">
+                            <label class="label" for="location-filter">Location</label>
+                            <select class="single-select input-item" aria-label="" id="location-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mb-20">
+                            <label class="label" for="status-filter">Status</label>
+                            <select class="single-select input-item" aria-label="" id="status-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mb-20">
+                            <label class="label" for="payer-filter">Payer</label>
+                            <select class="single-select input-item" aria-label="" id="payer-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mb-20">
+                            <label class="label" for="care-type-filter">Care Type</label>
+                            <select class="single-select input-item" aria-label="" id="care-type-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label class="label" for="LOB-filter">LOB</label>
+                            <select class="single-select input-item" aria-label="" id="LOB-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label class="label" for="poc-filter">POC Status</label>
+                            <select class="single-select input-item" aria-label="" id="poc-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer d-flex">
+                    <button class="btn btn-tertiary">Cancel</button>
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Update</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- JavaScript -->

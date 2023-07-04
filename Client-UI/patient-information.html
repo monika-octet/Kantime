@@ -64,10 +64,14 @@
                 </div>
 
                 <div class="icon-container d-flex gap-3">
-                    <img src="images/Help.svg" alt="help-icon" />
-                    <img src="images/Mail.svg" alt="mail-icon" />
-                    <img src="images/Duplicate.svg" alt="duplicate-icon" />
-                    <img src="images/message.svg" alt="message-icon" />
+                    <img src="images/Help.svg" alt="help-icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        title="Open Help List" />
+                    <img src="images/Mail.svg" alt="mail-icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        title="Open Mail" />
+                    <img src="images/Duplicate.svg" alt="duplicate-icon" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" title="Open Duplicate Tabs" />
+                    <img src="images/message.svg" alt="message-icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        title="Open Kantime Text" />
                 </div>
             </div>
 
@@ -79,7 +83,8 @@
                             style="background: #f4f5f6;">
                         <img src="images/lens.svg" alt="search lens" class="lens">
                     </div>
-                    <button class="btn btn-outline-primary">
+                    <!-- filter -->
+                    <button class="btn btn-outline-primary " data-bs-toggle="modal" data-bs-target="#filter">
                         <img src="images/filter.svg" alt="">
                         Filter
                     </button>
@@ -190,9 +195,9 @@
                                             data-bs-placement="bottom" title="Edit">
                                     </button>
                                 </div>
-                        </div>
+                            </div>
 
-                        
+
                             <div class="">
                                 <div class="info-box">
                                     <p class="info-title">Client Staus :</p>
@@ -307,16 +312,37 @@
                                 aria-selected="false">Intake Info</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="community-contact.html" role="tab" aria-controls="Commnunity contact"
-                                aria-selected="false">Commnunity Contacts</a>
+                            <a class="nav-link" href="community-contact.html" role="tab"
+                                aria-controls="Commnunity contact" aria-selected="false">Commnunity Contacts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="journal-notes.html" role="tab" aria-controls="journal notes"
-                                aria-selected="false">Journal notes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="cop.html" role="tab" aria-controls="Commnunity contact"
-                                aria-selected="false">Cop </a>
+                            <div class="dropdown">
+                                <button class="btn-menu-dropdown dropdown-toggle btn-dropdown-custom"
+                                    type="button" id="" data-bs-toggle="dropdown"
+                                    aria-expanded="false">More</button>
+                                <ul class="dropdown-menu" aria-labelledby="">
+                                    <li>
+                                        <a href="journal-notes.html" type="button" 
+                                             class="dropdown-item">Journal Note</a>
+                                    </li>
+                                    <li>
+                                        <a href="office-communication.html" type="button" 
+                                             class="dropdown-item">Office Communication</a>
+                                    </li>
+                                    <li>
+                                        <a href="vacations.html" type="button" 
+                                             class="dropdown-item">Vacation</a>
+                                    </li>
+                                    <li>
+                                        <a href="forms.html" type="button" 
+                                             class="dropdown-item">Forms</a>
+                                    </li>
+                                    <li>
+                                        <a href="cop.html" type="button" 
+                                             class="dropdown-item">COP</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -1075,161 +1101,156 @@
                                             </div>
                                             <hr class="modal-line" />
                                         </div>
-                                        <div class="p-3 bg-white container">
-                                            <div class="border-color mb-20">
-                                                <div class="p-15 d-grid grid-line align-items-center bg-lightGrey">
-                                                    <p class="tab-heading">Client Pay Billing Address</p>
-                                                    <hr class="modal-line" style="background-color: #DCDCDC;">
+                                        <div class=" bg-white ">
+
+
+                                            <div class="p-3 container">
+                                                <div class="col-6 border-color py-10 px-15 radius-4 mb-20 bg-disabled">
+                                                    <div class="form-check">
+                                                        <input disabled class="form-check-input" type="che2ckbox"
+                                                            value="" id="invoice-address">
+                                                        <label class="send" for="invoice-address">
+                                                            Send Invoices to this Address (if different from Patient
+                                                            address)
+                                                        </label>
+                                                    </div>
                                                 </div>
-                                                <div class="p-15 container">
-                                                    <div
-                                                        class="col-6 border-color py-10 px-15 radius-4 mb-20 bg-disabled">
-                                                        <div class="form-check">
-                                                            <input disabled class="form-check-input" type="che2ckbox"
-                                                                value="" id="invoice-address">
-                                                            <label class="send" for="invoice-address">
-                                                                Send Invoices to this Address (if different from Patient
-                                                                address)
-                                                            </label>
-                                                        </div>
+
+                                                <div class="row col-12">
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="f-name-billing">First name</label>
+                                                        <input disabled type="text" class="form-control input-item"
+                                                            id="f-name-billing" placeholder="Enter first name"
+                                                            aria-label="enter first name">
                                                     </div>
 
-                                                    <div class="row col-12">
-                                                        <div class="col-4 mb-20">
-                                                            <label class="label" for="f-name-billing">First name</label>
-                                                            <input disabled type="text" class="form-control input-item"
-                                                                id="f-name-billing" placeholder="Enter first name"
-                                                                aria-label="enter first name">
-                                                        </div>
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="l-name-billing">Last name</label>
+                                                        <input disabled type="text" class="form-control input-item"
+                                                            id="l-name-billing" placeholder="Enter last name"
+                                                            aria-label="Enter last name">
+                                                    </div>
+                                                </div>
 
-                                                        <div class="col-4 mb-20">
-                                                            <label class="label" for="l-name-billing">Last name</label>
-                                                            <input disabled type="text" class="form-control input-item"
-                                                                id="l-name-billing" placeholder="Enter last name"
-                                                                aria-label="Enter last name">
-                                                        </div>
+                                                <div class="row col-12">
+                                                    <div class="col-8 mb-20">
+                                                        <label class="label" for="address-patient-info">Address</label>
+                                                        <input disabled type="text" class="form-control input-item"
+                                                            id="address-patient-info" placeholder="Line 1"
+                                                            aria-label="address">
+                                                        <input disabled type="text"
+                                                            class="form-control input-item mt-10"
+                                                            id="address-patient-info-1" placeholder="Line 2"
+                                                            aria-label="address 2">
+                                                    </div>
+                                                </div>
+
+                                                <div class="row col-12">
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="patient-details-zip">Zip
+                                                        </label>
+                                                        <input disabled type="text" class="form-control input-item"
+                                                            id="patient-details-zip" placeholder="Enter"
+                                                            aria-label="name" value="">
+                                                    </div>
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="patient-details-city">City
+                                                        </label>
+                                                        <input disabled type="text" class="form-control input-item"
+                                                            id="patient-details-city" placeholder="Enter"
+                                                            aria-label="name" value="">
+                                                    </div>
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="patient-details-state">State
+                                                        </label>
+                                                        <input disabled type="text" class="form-control input-item"
+                                                            id="patient-details-state" placeholder="Enter"
+                                                            aria-label="name" value="">
                                                     </div>
 
-                                                    <div class="row col-12">
-                                                        <div class="col-8 mb-20">
-                                                            <label class="label"
-                                                                for="address-patient-info">Address</label>
-                                                            <input disabled type="text" class="form-control input-item"
-                                                                id="address-patient-info" placeholder="Line 1"
-                                                                aria-label="address">
-                                                            <input disabled type="text"
-                                                                class="form-control input-item mt-10"
-                                                                id="address-patient-info-1" placeholder="Line 2"
-                                                                aria-label="address 2">
-                                                        </div>
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="patient-details-phone">Phone
+                                                        </label>
+                                                        <input disabled type="text" class="form-control input-item"
+                                                            id="patient-details-phone" placeholder="Enter"
+                                                            aria-label="name" value="">
                                                     </div>
-
-                                                    <div class="row col-12">
-                                                        <div class="col-4 mb-20">
-                                                            <label class="label" for="patient-details-zip">Zip
-                                                            </label>
-                                                            <input disabled type="text" class="form-control input-item"
-                                                                id="patient-details-zip" placeholder="Enter"
-                                                                aria-label="name" value="">
-                                                        </div>
-                                                        <div class="col-4 mb-20">
-                                                            <label class="label" for="patient-details-city">City
-                                                            </label>
-                                                            <input disabled type="text" class="form-control input-item"
-                                                                id="patient-details-city" placeholder="Enter"
-                                                                aria-label="name" value="">
-                                                        </div>
-                                                        <div class="col-4 mb-20">
-                                                            <label class="label" for="patient-details-state">State
-                                                            </label>
-                                                            <input disabled type="text" class="form-control input-item"
-                                                                id="patient-details-state" placeholder="Enter"
-                                                                aria-label="name" value="">
-                                                        </div>
-
-                                                        <div class="col-4 mb-20">
-                                                            <label class="label" for="patient-details-phone">Phone
-                                                            </label>
-                                                            <input disabled type="text" class="form-control input-item"
-                                                                id="patient-details-phone" placeholder="Enter"
-                                                                aria-label="name" value="">
-                                                        </div>
-                                                        <div class="col-4 mb-20">
-                                                            <label class="label" for="patient-details-cell">Cell
-                                                            </label>
-                                                            <input disabled type="text" class="form-control input-item"
-                                                                id="patient-details-cell" placeholder="Enter"
-                                                                aria-label="name" value="">
-                                                        </div>
-
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="patient-details-cell">Cell
+                                                        </label>
+                                                        <input disabled type="text" class="form-control input-item"
+                                                            id="patient-details-cell" placeholder="Enter"
+                                                            aria-label="name" value="">
                                                     </div>
-
-                                                    <div class="row col-12">
-                                                        <div class="col-4 mb-20">
-                                                            <label class="label" for="guarantor-id">Guarantor ID
-                                                            </label>
-                                                            <input disabled type="text" class="form-control input-item"
-                                                                id="guarantor-id" placeholder="Enter" aria-label="name"
-                                                                value="">
-                                                        </div>
-
-
-                                                        <div class="col-4 mb-20">
-                                                            <div class="d-flex justify-content-between">
-                                                                <label class="label"
-                                                                    for="guarantor-relationship">Guarantor Relationship
-                                                                    to
-                                                                    Patient</label>
-                                                                <a href="javascript:void(0)" data-bs-toggle="modal"
-                                                                    data-bs-target="#" class="link-blue">Add</a>
-                                                            </div>
-                                                            <select disabled class="single-select input-item"
-                                                                aria-label="Default select example"
-                                                                id="guarantor-relationship">
-                                                                <option selected>Select</option>
-                                                                <option value="2">Agency 1</option>
-                                                                <option value="2">Agency 2</option>
-                                                                <option value="2">Agency 3</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row col-12">
-                                                        <div class="col-4">
-                                                            <label class="label" for="guarantor-fname-popup">Guarantor
-                                                                First
-                                                                name</label>
-                                                            <input disabled type="text" class="form-control input-item"
-                                                                id="guarantor-fname-popup"
-                                                                placeholder="Enter guarantor first name"
-                                                                aria-label="guarantor first name">
-                                                        </div>
-
-                                                        <div class="col-4">
-                                                            <label class="label" for="guarantor-mname-popup">Guarantor
-                                                                Middle
-                                                                name</label>
-                                                            <input disabled type="text" class="form-control input-item"
-                                                                id="guarantor-mname-popup"
-                                                                placeholder="Enter guarantor middle name"
-                                                                aria-label="guarantor middle name">
-                                                        </div>
-
-                                                        <div class="col-4">
-                                                            <label class="label" for="guarantor-lname-popup">Guarantor
-                                                                Last
-                                                                name</label>
-                                                            <input disabled type="text" class="form-control input-item"
-                                                                id="guarantor-lname-popup"
-                                                                placeholder="Enter guarantor last name"
-                                                                aria-label="guarantor middle name">
-                                                        </div>
-                                                    </div>
-
-
 
                                                 </div>
+
+                                                <div class="row col-12">
+                                                    <div class="col-4 mb-20">
+                                                        <label class="label" for="guarantor-id">Guarantor ID
+                                                        </label>
+                                                        <input disabled type="text" class="form-control input-item"
+                                                            id="guarantor-id" placeholder="Enter" aria-label="name"
+                                                            value="">
+                                                    </div>
+
+
+                                                    <div class="col-4 mb-20">
+                                                        <div class="d-flex justify-content-between">
+                                                            <label class="label" for="guarantor-relationship">Guarantor
+                                                                Relationship
+                                                                to
+                                                                Patient</label>
+                                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                                data-bs-target="#" class="link-blue">Add</a>
+                                                        </div>
+                                                        <select disabled class="single-select input-item"
+                                                            aria-label="Default select example"
+                                                            id="guarantor-relationship">
+                                                            <option selected>Select</option>
+                                                            <option value="2">Agency 1</option>
+                                                            <option value="2">Agency 2</option>
+                                                            <option value="2">Agency 3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row col-12">
+                                                    <div class="col-4">
+                                                        <label class="label" for="guarantor-fname-popup">Guarantor
+                                                            First
+                                                            name</label>
+                                                        <input disabled type="text" class="form-control input-item"
+                                                            id="guarantor-fname-popup"
+                                                            placeholder="Enter guarantor first name"
+                                                            aria-label="guarantor first name">
+                                                    </div>
+
+                                                    <div class="col-4">
+                                                        <label class="label" for="guarantor-mname-popup">Guarantor
+                                                            Middle
+                                                            name</label>
+                                                        <input disabled type="text" class="form-control input-item"
+                                                            id="guarantor-mname-popup"
+                                                            placeholder="Enter guarantor middle name"
+                                                            aria-label="guarantor middle name">
+                                                    </div>
+
+                                                    <div class="col-4">
+                                                        <label class="label" for="guarantor-lname-popup">Guarantor
+                                                            Last
+                                                            name</label>
+                                                        <input disabled type="text" class="form-control input-item"
+                                                            id="guarantor-lname-popup"
+                                                            placeholder="Enter guarantor last name"
+                                                            aria-label="guarantor middle name">
+                                                    </div>
+                                                </div>
+
+
+
                                             </div>
+
 
                                         </div>
                                     </div>
@@ -2205,7 +2226,7 @@
                                         </div>
 
                                         <div class="col-4 mb-20">
-                                            <label class="form-label" for="order-date-start-date">physician Order
+                                            <label class="form-label" for="order-date-start-date">Physician Order
                                                 Date</label>
                                             <div class="input-group">
                                                 <input disabled type="text" class="form-control input-item"
@@ -2607,7 +2628,7 @@
 
                                 <div class="p-15 bg-white container">
                                     <div class="row col-12">
-                                        <div class="col-auto border-color bg-disabled py-10 px-15 radius-4">
+                                        <div class="border-color bg-disabled py-10 px-15 radius-4 ml-10" style="width: 35%;">
                                             <div class="form-check">
                                                 <input disabled class="form-check-input" type="checkbox" value=""
                                                     id="enable-notified-service">
@@ -2616,15 +2637,15 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class=" d-flex justify-content-between align-items-center gap-10 col-auto">
-                                            <label class="send" for="hours-week">
+                                        <div class=" d-flex justify-content-between align-items-center" style="width: 25%;">
+                                            <label class="send w-100" for="hours-week">
                                                 Hours / week:
                                             </label>
                                             <input disabled="" type="text" class="form-control input-item"
                                                 id="hours-week" placeholder="Enter" aria-label="name" value="">
                                         </div>
 
-                                        <div class="col-4 d-flex align-items-center gap-10">
+                                        <div class="d-flex align-items-center gap-10" style="width: max-content;">
                                             <label class="send" for="hours-week">
                                                 Hours
                                             </label>
@@ -2668,15 +2689,15 @@
                                 </div>
 
                                 <div class="p-15 bg-white container">
-                                    <div class="d-flex col-12 ">
-                                        <div class="col-4 mb-20">
+                                    <div class="d-flex col-12  gap-20">
+                                        <div class="col-4 ">
                                             <label class="label" for="contract-ref">Contract Reference</label>
                                             <input disabled="" type="text" class="form-control input-item"
                                                 id="contract-ref" placeholder="Enter" aria-label="">
                                         </div>
 
 
-                                        <div class="col-6 border-color bg-disabled py-10 px-15 radius-4">
+                                        <div class="col-5 d-flex align-items-center border-color bg-disabled py-10 px-15 radius-4" style="height: 39px; margin-top:23px">
                                             <div class="form-check">
                                                 <input disabled="" class="form-check-input" type="checkbox" value=""
                                                     id="override-contract-reference">
@@ -3153,7 +3174,7 @@
                             <div class="px-20 bg-white d-flex justify-content-between align-items-center"
                                 style="padding-top: 14px; padding-bottom: 14px">
                                 <div class="d-flex gap-10 align-items-center">
-                                    <div class="tab-content-heading">Client Alert</div>
+                                    <div class="tab-content-heading">Readmission / LOB Admission</div>
 
                                 </div>
                                 <div class="d-flex align-items-center gap-10">
@@ -3385,7 +3406,7 @@
         <div class="modal-dialog custom-modal-1 modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-greyBlue">
-                    <h5 class="modal-title Pinfo color-darkblue">Change Location</h5>
+                    <h5 class="modal-title Pinfo color-darkblue">Change LOB</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -6195,12 +6216,7 @@
                         <h5 class="modal-title Pinfo color-darkblue">
                             Physician Profile
                         </h5>
-                        <div class="d-flex">
-                            <img src="images/edit-icon.svg" alt="edit icon" style="width: 18px; height: 18px">
-                            <a href="javascript:void(0)" data-bs-toggle="modal"
-                                data-bs-target="#physician-profile-popup-edit"
-                                class="text-decoration-none f-600 f-13 lh-17">Edit</a>
-                        </div>
+                    
                     </div>
 
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -6276,13 +6292,8 @@
                                         <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#verify"
                                             class="link-blue">Verify</a>
                                     </div>
-                                    <select class="single-select input-item" aria-label="Default select example"
-                                        id="physician-info-NPI-edit">
-                                        <option selected>Select</option>
-                                        <option value="2">Agency 1</option>
-                                        <option value="2">Agency 2</option>
-                                        <option value="2">Agency 3</option>
-                                    </select>
+                                    <input type="text" class="form-control input-item" id="physician-info-NPI-edit"
+                                        placeholder="Enter" aria-label="" value="1234567890" />
                                 </div>
                             </div>
 
@@ -6964,7 +6975,7 @@
                             </div>
 
                             <div class="col-6 mb-20">
-                                <label class="label" for="add-new-emergency-lname">First Name</label>
+                                <label class="label" for="add-new-emergency-lname">Last Name</label>
                                 <input type="text" class="form-control input-item" id="add-new-emergency-lname"
                                     placeholder="Enter" aria-label="">
                             </div>
@@ -7927,7 +7938,8 @@
                     </div>
 
 
-                    <div class="p-15 client-notes-details-fill" style="background: #FAFAFA; display: none;" id="client-notes-details-fill-2">
+                    <div class="p-15 client-notes-details-fill" style="background: #FAFAFA; display: none;"
+                        id="client-notes-details-fill-2">
                         <div class="row col-12">
                             <div class="col-6 mb-20">
                                 <p class="label">Types of Message</p>
@@ -7975,6 +7987,82 @@
                                     placeholder="Type Here"></textarea>
                             </div>
 
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer d-flex">
+                    <button class="btn btn-tertiary">Cancel</button>
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Update</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FILTER POPUP -->
+    <div class="modal" tabindex="-1" id="filter">
+        <div class="modal-dialog custom-modal-1  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Filter</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row col-12">
+                        <div class="col-6 mb-20">
+                            <label class="label" for="location-filter">Location</label>
+                            <select class="single-select input-item" aria-label="" id="location-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mb-20">
+                            <label class="label" for="status-filter">Status</label>
+                            <select class="single-select input-item" aria-label="" id="status-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mb-20">
+                            <label class="label" for="payer-filter">Payer</label>
+                            <select class="single-select input-item" aria-label="" id="payer-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mb-20">
+                            <label class="label" for="care-type-filter">Care Type</label>
+                            <select class="single-select input-item" aria-label="" id="care-type-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label class="label" for="LOB-filter">LOB</label>
+                            <select class="single-select input-item" aria-label="" id="LOB-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label class="label" for="poc-filter">POC Status</label>
+                            <select class="single-select input-item" aria-label="" id="poc-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
                         </div>
 
                     </div>
@@ -8076,9 +8164,9 @@
 
             $checkbox.on('change', function () {
                 if ($checkbox.is(':checked')) {
-                    $div.show();     
+                    $div.show();
                 } else {
-                    $div.hide();  
+                    $div.hide();
                 }
             });
         });
