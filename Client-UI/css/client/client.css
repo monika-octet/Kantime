@@ -69,6 +69,11 @@ h3 {
     color: #181C32;
 }
 
+.status-blue {
+    background-color: #F3F8FF;
+    color: #181C32;
+}
+
 .status-red {
     background: #962C2C1A;
     color: #962C2C;
@@ -453,6 +458,7 @@ h3 {
 #journal-note-client-table.table-type-1 tbody tr td,
 #additional-pharmacy-table.table-type-1 tbody tr td
 {
+
     padding: 12px 20px;
 }
 #additional-pharmacy-table.table-type-1 tbody tr td
@@ -850,6 +856,9 @@ h3 {
     min-width: 560px !important;
 }
 
+.custom-modal-6 {
+    min-width: 900px !important;
+}
 
 
 
@@ -1716,22 +1725,25 @@ li.remove-column:after {
     border: none;
 }
 
-#office-communication-table.table-type-1 tbody tr td {
+#office-communication-table.table-type-1 tbody tr td,
+#forms-client-table.table-type-1 tbody tr td,
+#subform-client-table.table-type-1 tbody tr td {
     padding: 12px 20px;
 }
 
 /*********Off Communication end***********/
 
 /* COMMUNITY CONTACT CSS */
-.table-notes-input{
+.table-notes-input {
     padding: 10px;
     border-radius: 4px;
     border: 1px solid #EFEFEF;
     background: #FAFAFA;
     height: 50px;
 }
+
 #community-contact-edit .rate-box,
-#community-contact-edit-table .rate-box{
+#community-contact-edit-table .rate-box {
     display: flex;
     justify-content: left;
     align-items: center;
@@ -1742,15 +1754,51 @@ li.remove-column:after {
     border-radius: 4px;
     border: 1px solid #ECEDEF;
 }
+
 /* COMMUNITY CONTACT CSS END */
 
 /* JOURNAL CONTACT CSS */
-.checkbox-box{
+.checkbox-box {
     width: 116px;
     padding: 10px 15px;
 }
+
 /* JOURNAL CONTACT CSS END */
 
+/* Forms page CSS start */
+.blue-tab-box {
+    padding: 5px 8px;
+    width: 117px;
+    background: #DAE8FD;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px 10px 0 0;
+}
+
+.table-type-1 tr {
+    border: 1px solid #EFEFEF;
+}
+
+.d-inline-table {
+    display: inline-table;
+}
+
+.action.fix {
+    right: 0;
+}
+
+.view-link {
+    margin: auto 10px auto 0;
+}
+
+#subform-client-table.table-type-1 {
+    border: 1px solid #EFEFEF;
+}
+
+#subform-client-table.table-type-1 tr {
+    border: none;
+}
+
+/* forms page CSS end */
 
 .w-88{
     width: 88px;
