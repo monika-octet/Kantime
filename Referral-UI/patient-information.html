@@ -66,10 +66,14 @@
         <div class="d-flex justify-content-between">
           <h1>New Intake Info</h1>
           <div class="icon-container d-flex gap-3">
-            <img src="images/Help.svg" alt="help-icon" />
-            <img src="images/Mail.svg" alt="mail-icon" />
-            <img src="images/Duplicate.svg" alt="duplicate-icon" />
-            <img src="images/message.svg" alt="message-icon" />
+            <img src="images/Help.svg" alt="help-icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
+              title="Open Help List" />
+            <img src="images/Mail.svg" alt="mail-icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
+              title="Open Mail" />
+            <img src="images/Duplicate.svg" alt="duplicate-icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
+              title="Open Duplicate Tabs" />
+            <img src="images/message.svg" alt="message-icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
+              title="Open Kantime Text" />
           </div>
         </div>
       </div>
@@ -177,7 +181,8 @@
               <div class="" style="margin-top: 54px;">
                 <div class="d-flex justify-content-end align-items-center gap-10">
                   <a href="duplicate-record.html" id="check-duplicate" class="btn btn-primary ms-3">Admit</a>
-                  <a href="#" class="btn btn-outline-primary">Non-Admit</a>
+                  <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#non-admit-popup">Non-Admit</a>
+                  <!-- non-admit-popup -->
                 </div>
               </div>
             </div>
@@ -711,11 +716,11 @@
 
                         <div class="col-4 mb-20">
                           <div class="d-flex justify-content-between">
-                            <label class="label" for="impatient-Pinfo">Impatient facilities</label>
+                            <label class="label" for="inpatient-Pinfo">Inpatient facilities</label>
                             <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-impatient"
                               class="link-blue">Add</a>
                           </div>
-                          <select class="single-select input-item" aria-label="intake status" id="impatient-Pinfo">
+                          <select class="single-select input-item" aria-label="intake status" id="inpatient-Pinfo">
                             <option selected>Select</option>
                             <option value="2">Agency 1</option>
                             <option value="2">Agency 2</option>
@@ -1107,7 +1112,7 @@
                           <div class="col-4 mb-20">
                             <div class="d-flex justify-content-between">
                               <label class="label" for="physician-type-referring">Referral Physician</label>
-                              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-ref-facility"
+                              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-physician-unedit"
                                 class="link-blue">Add</a>
                             </div>
                             <select class="single-select input-item" aria-label="Default select example"
@@ -1223,7 +1228,7 @@
                           <div class="col-4 mb-20">
                             <div class="d-flex justify-content-between">
                               <label class="label" for="facility-ref-info">Referral Facility</label>
-                              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-ref-facility"
+                              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-physician-unedit"
                                 class="link-blue">Add</a>
                             </div>
                             <select class="single-select input-item" aria-label="Default select example"
@@ -1251,7 +1256,7 @@
                           <div class="col-4 mb-20">
                             <div class="d-flex justify-content-between">
                               <label class="label" for="physician-ref-info-2">Referring Physician</label>
-                              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-ref-physician"
+                              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#admission-source"
                                 class="link-blue">Add</a>
                             </div>
                             <select class="single-select input-item" aria-label="Default select example"
@@ -2800,7 +2805,7 @@
                       </th>
                       <th>Folder</th>
                       <th>Description</th>
-                      <th>Actions</th>
+                      <th style="width: 80px;">Actions</th>
                     </tr>
                   </thead>
 
@@ -3275,17 +3280,13 @@
                             placeholder="Enter" aria-label="address">
                         </div>
 
-                        <div class="col-4 mb-20">
+                        <div class="col-4 ">
                           <label class="label" for="primary-physician-fax">Physician Office Fax</label>
                           <input disabled type="text" class="form-control input-item" id="primary-physician-fax"
                             placeholder="Enter" aria-label="fax">
                         </div>
 
-                        <div class="col-4 mb-20">
-                          <label class="label" for="primary-physician-phone">Physician Office Phone</label>
-                          <input disabled type="text" class="form-control input-item" id="primary-physician-phone"
-                            placeholder="Enter" aria-label="phone">
-                        </div>
+                       
                       </div>
 
 
@@ -3760,7 +3761,7 @@
 
   <!-- ADD INITIAL ORDER POPUP -->
   <div class="modal" tabindex="-1" id="add-initial-order">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-dialog custom-modal-4 modal-dialog-centered">
       <d iv class="modal-content">
         <div class="modal-header bg-greyBlue">
           <h5 class="modal-title Pinfo color-darkblue">Add Initial Order </h5>
@@ -3863,13 +3864,241 @@
             </div>
           </div>
 
+          <div class="border-color mb-20">
+            <div class="p-3 d-grid grid-line align-items-center bg-lightGrey">
+              <p class="tab-heading">Order Info</p>
+              <hr class="modal-line-1">
+            </div>
+            <div class="p-20">
+              <div class="row col-12">
+                <div class="col-4 mb-20">
+                  <label class="form-label" for="order-date-order-info">Order Date</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control input-item" id="order-date-order-info"
+                      placeholder="Select Date">
+                    <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                  </div>
+                </div>
+
+                <div class="col-4 mb-20">
+                  <label class="label" for="time-order-info">Time</label>
+                  <input type="text" class="form-control input-item" id="time-order-info" placeholder="" aria-label=""
+                    value="09:25 AM">
+                </div>
+
+                <div class="col-4">
+                  <label class="label" for="requested-staff-order-info">Requested Staff</label>
+                  <select class="single-select input-item" aria-label="location" id="requested-staff-order-info">
+                    <option selected>Admin, test</option>
+                    <option value="1">List 1</option>
+                    <option value="2">List 2</option>
+                    <option value="3">List 3</option>
+                  </select>
+                </div>
+
+                <!-- 
+                  <div class="d-flex justify-content-between">
+                                                <label class="label" for="client-schedule-filter">Clients</label>
+                                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#" class="link-blue">Match Clinicians Status</a>
+                                            </div>
+                 -->
+                <div class="col-12">
+                  <div class="d-flex justify-content-between">
+                    <label class="label" for="new-emergency-notes">Other Description</label>
+                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#" class="link-blue">Quick
+                      Notes</a>
+                  </div>
+                  <textarea name="" id="new-emergency-notes" cols="" rows="2" class="input-textarea w-100"
+                    placeholder="Type Here"></textarea>
+                </div>
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+
+          <div class="border-color mb-20">
+            <div class="p-3 d-grid grid-line align-items-center bg-lightGrey">
+              <p class="tab-heading">Physician Sing Info</p>
+              <hr class="modal-line-1">
+            </div>
+            <div class="p-20">
+              <div class="row col-12">
+                <div class="col-3 border-color bg-white py-10 px-15 radius-4 mb-20">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="physician-sign-not-required">
+                    <label class="send" for="physician-sign-not-required">
+                      Physician Sign Not Required
+                    </label>
+                  </div>
+                </div>
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+                <div class="col-3 border-color bg-white py-10 px-15 radius-4 mb-10">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="signed-to-through-mail">
+                    <label class="send" for="signed-to-through-mail">
+                      Signed to through mail on
+                    </label>
+                  </div>
+                </div>
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+                <div class="col-4 mb-20">
+                  <div class="input-group">
+                    <input type="text" class="form-control input-item" id="" placeholder="" value="01/02/1992">
+                    <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="border-color mb-20">
+            <div class="p-3 d-grid grid-line align-items-center bg-lightGrey">
+              <p class="tab-heading">Other Info</p>
+              <hr class="modal-line-1">
+            </div>
+
+            <div class="p-20">
+              <div class="row col-12">
+                <div class="">
+                  <div class="d-flex justify-content-between">
+                    <label class="label" for="other-description">Other Description</label>
+                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#" class="link-blue">Quick
+                      Notes</a>
+                  </div>
+                  <div class="col-12 bg-white border-color radius-4">
+                    <textarea name="" id="other-description" cols="" rows="3"
+                      class="input-textarea w-100 border-color border-bottom " placeholder="Type Here"></textarea>
+                    <div class="d-flex align-items-center gap-2 py-10 px-15 pointer" data-bs-toggle="modal"
+                      data-bs-target="#quick-notes">
+                      <img src="images/notes.svg" alt="notes icon">
+                      <p class="f-500 f-13 lh-17">Open Quick Notes List</p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-color mb-20">
+            <div class="p-3 d-grid grid-line align-items-center justify-content-between bg-lightGrey">
+              <div class="d-flex w-75">
+                <p class="tab-heading">Attachments</p>
+                <hr class="modal-line-1">
+              </div>
+
+              <div class="d-flex justify-content-end align-items-center gap-20">
+                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#"
+                  class="text-decoration-none f-600 f-13 lh-17">Save</a>
+                <button class="btn btn-outline-primary " data-bs-toggle="modal" data-bs-target="#sort">
+                  <img src="images/sort-icon.svg" alt="">
+                  Sort
+                </button>
+                <div class="d-flex">
+                  <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px">
+                  <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#"
+                    class="text-decoration-none f-600 f-13 lh-17">Add new</a>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="p-20">
+              <table class="table table-type-1" id="pharmacy-name-table">
+                <thead>
+                  <tr>
+                    <th style="width: 208px;">
+                      File
+                    </th>
+                    <th style="width: 200px;">Uploaded Date</th>
+                    <th style="width: 200px;">Uploaded By</th>
+                    <th style="width: 140px;">Included In Print/eFax</th>
+                    <th style="width: 80px;">Action</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+
+                  <tr>
+                    <td>
+                      <a href="javascript:void(0)"
+                        class="text-decoration-none f-600 f-13 lh-17">Client_Medications_360.pdf</a>
+                    </td>
+                    <td>12/04/2023</td>
+                    <td>SN</td>
+                    <td>
+                      <input class="form-check-input" type="checkbox" value="" id="">
+                    </td>
+                    <td><img src="images/delete_red.svg" alt="delete button" class="pointer delete"></td>
+
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="javascript:void(0)"
+                        class="text-decoration-none f-600 f-13 lh-17">Client_Medications_360.pdf</a>
+                    </td>
+                    <td>12/04/2023</td>
+                    <td>SN</td>
+                    <td>
+                      <input class="form-check-input" type="checkbox" value="" id="">
+                    </td>
+                    <td><img src="images/delete_red.svg" alt="delete button" class="pointer delete"></td>
+
+                  </tr>
+
+
+
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+
+          <div class="mb-20">
+            <div class="form-check mb-10">
+              <input class="form-check-input" type="checkbox" value="" id="self-sign">
+              <label class="send red-text" for="self-sign">
+                Self Sign - By Checking this box, you will be applying your digital signature indicating you have
+                verified and read back the Initial Order as per your agency policies.
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="clinician-sign">
+              <label class="send red-text" for="clinician-sign">
+                Clinician Sign - By Checking this box, you will be applying signature of below Clinician indicating you
+                have verified and read back the Initial Order as per your agency policies.
+              </label>
+            </div>
+
+            <div class="col-3 mt-20">
+              <label class="label" for="singed-staff-clinician">Signed Staff Clinicians</label>
+              <select class="single-select input-item" aria-label="location" id="singed-staff-clinician">
+                <option selected>Admin, Test</option>
+                <option value="1">List 1</option>
+                <option value="2">List 2</option>
+                <option value="3">List 3</option>
+              </select>
+            </div>
+
+          </div>
+
+
+
+
 
 
         </div>
         <div class="modal-footer">
           <button type="" class="btn btn-tertiary">View Audit Logs</button>
-          <a href="#" class=""></a>
-          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+          <button type="" class="btn btn-tertiary bg-white border-4772E0" style="color:#4772E0;">Save & Submit</button>
+          <a href="#" class="btn btn-primary btn-modal-submit">Save & Approve</a>
         </div>
       </d>
     </div>
@@ -4291,7 +4520,7 @@
       <div class="modal-content">
         <div class="modal-header bg-greyBlue">
           <h5 class="modal-title Pinfo color-darkblue">
-            Add Impatient Facility
+            Add Inpatient Facility
           </h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
@@ -4382,13 +4611,20 @@
                 aria-label="contact person" />
             </div>
 
-            <div class="col-12">
-              <div class="d-flex justify-content-between">
-                <label class="label" for="notes">Notes</label>
-                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#" class="link-blue">Add From
-                  List</a>
+            <div class="">
+              <label class="form-check-label mb-2" for="Volunteer">
+                Initial Order
+              </label>
+              <div class="col-12  bg-white border-color radius-4">
+                <textarea name="" id="add-new-initial-order" cols="" rows="8"
+                  class="input-textarea w-100 border-color border-bottom " placeholder="Type Here"></textarea>
+                <div class="d-flex align-items-center gap-2 py-10 px-15 pointer" data-bs-toggle="modal"
+                  data-bs-target="#quick-notes">
+                  <img src="images/notes.svg" alt="notes icon">
+                  <p class="f-500 f-13 lh-17">Open Quick Notes List</p>
+                </div>
+
               </div>
-              <textarea name="" id="notes" cols="" rows="2" class="input-textarea w-100" placeholder="Enter"></textarea>
             </div>
           </div>
         </div>
@@ -4538,6 +4774,58 @@
   </div>
 
   <!-- ADD GUARANTOR RELATION POPUP END -->
+
+  <div class="modal" tabindex="-1" id="non-admit-popup">
+    <div class="modal-dialog custom-modal-1  modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">Non Admit</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row col-12">
+            <div class="col-4 mb-20">
+              <div class="d-flex justify-content-between">
+                <label class="label" for="non-admit-reason">Reason</label>
+
+                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-ref-facility"
+                  class="link-blue">Add</a>
+              </div>
+              <select class="single-select input-item" aria-label="Default select example" id="non-admit-reason">
+                <option selected>Select</option>
+                <option value="2">Agency 1</option>
+                <option value="2">Agency 2</option>
+                <option value="2">Agency 3</option>
+              </select>
+            </div>
+
+            <div class="col-4 mb-20">
+              <label class="form-label" for="non-admit-date">Date</label>
+              <div class="input-group">
+                <input type="text" class="form-control input-item" id="non-admit-date" placeholder="Select Date" value="01/20/1992">
+                <span class="input-group-text"><img src="images/Calendar.svg"></span>
+              </div>
+            </div>
+
+            <div class="col-12 ">
+              <label class="f-500 f-14 lh-19" for="non-admit-comments">Comments</label>
+              <textarea name="" id="non-admit-comments" cols="" rows="8" class="input-textarea w-100" placeholder="Type Here"></textarea>
+            </div>
+            
+
+            <!-- anshuman -->
+
+
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!-- ADD REFERRAL FACILITY POPUP -->
 
@@ -4717,9 +5005,11 @@
               <label class="label" for="Name-NPI">Match With</label>
               <select class="single-select input-item" aria-label="location" id="Name-NPI">
                 <option class="d-none" disabled selected>Name,NPI</option>
-                <option value="1">List 1</option>
-                <option value="2">List 2</option>
-                <option value="3">List 3</option>
+                <option value="1">Name</option>
+                <option value="2">NPI</option>
+                <option value="3">Liscense No.</option>
+                <option value="3">UPIN</option>
+                <option value="3">TPI</option>
               </select>
             </div>
             <div class="col-4 search">
@@ -5258,8 +5548,8 @@
                   <tr>
                     <th class="" style="width: 190px;">Contact Name & Designation</th>
                     <th style="width: 130px;">Phone & Cell</th>
-                    <th style="width: 116px;">Sales Person</th>
-                    <th style="width: 86px;">Actions</th>
+                    <th style="width: 130px;">Sales Person</th>
+                    <th style="width: 80px;">Actions</th>
                   </tr>
                 </thead>
 
@@ -5395,7 +5685,7 @@
   <!-- add-physician -->
 
   <div class="modal" tabindex="-1" id="add-physician">
-    <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+    <div class="modal-dialog custom-modal-2 modal-dialog-centered">
       <div class="modal-content">
         <div iv class="modal-header bg-greyBlue">
           <h5 class="modal-title Pinfo color-darkblue">Edit Physician</h5>
@@ -5744,6 +6034,499 @@
                   <tr>
                     <th class="" style="width: 190px;">Contact Name & Designation</th>
                     <th style="width: 130px;">Phone & Cell</th>
+                    <th style="width: 130px;">Sales Person</th>
+                    <th style="width: 80px;">Actions</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td class="d-flex">
+                      <div>
+                        <p class="notice">Mark Henry</p>
+                        <p>(Designation)</p>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="mb-2">(236) 548-8556</p>
+                      <p>(236) 548-8556</p>
+                    </td>
+                    <td>Sales Person Name</td>
+                    <td>
+                      <button type="button" class="btn table-btn-icon d-flex justify-content-center align-items-center">
+                        <img src="images/delete_red.svg" alt="delete button" />
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="d-flex">
+                      <div>
+                        <p class="notice">Mark Henry</p>
+                        <p>(Designation)</p>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="mb-2">(236) 548-8556</p>
+                      <p>(236) 548-8556</p>
+                    </td>
+                    <td>Sales Person Name</td>
+                    <td>
+                      <button type="button" class="btn table-btn-icon d-flex justify-content-center align-items-center">
+                        <img src="images/delete_red.svg" alt="delete button" />
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="border-color">
+            <div class="p-3 d-grid grid-line align-items-center bg-lightGrey mb-15">
+              <p class="tab-heading">Physician Offices</p>
+              <hr class="modal-line" />
+            </div>
+
+            <div class="px-3 d-flex justify-content-between align-items-center">
+              <div class="d-flex gap-10 align-items-center">
+                <p class="color-greyScale f-600 f-13 lh-17">
+                  Physician Office list
+                </p>
+                <div class="d-flex">
+                  <img src="images/plus-icon.svg" alt="plus sign" />
+                  <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-physician-office"
+                    class="text-decoration-none f-600 f-13 lh-17">Add new</a>
+                </div>
+              </div>
+              <div>
+                <button class="btn btn-tertiary" data-bs-toggle="modal" data-bs-target="#attach-to-office">
+                  Attach to Office
+                </button>
+              </div>
+            </div>
+
+            <div class="px-15 mt-10">
+              <table class="table table-type-1" id="physician-contact-list-table">
+                <thead>
+                  <tr>
+                    <th style="width: 112px">Office Name</th>
+                    <th style="width: 112px">Phone</th>
+                    <th style="width: 112px">Fax</th>
+                    <th style="width: 112px">Address</th>
+                    <th style="width: 71px">Actions</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>
+                      <p class="notice">Jones</p>
+                    </td>
+                    <td>
+                      <p>(236) 548-8556</p>
+                    </td>
+                    <td>
+                      <p>(236) 548-8556</p>
+                    </td>
+                    <td>Address line here</td>
+                    <td>
+                      <button type="button" class="btn table-btn-icon d-flex justify-content-center align-items-center">
+                        <img src="images/delete_red.svg" alt="delete button" />
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="notice">Jones</p>
+                    </td>
+                    <td>
+                      <p>(236) 548-8556</p>
+                    </td>
+                    <td>
+                      <p>(236) 548-8556</p>
+                    </td>
+                    <td>Address line here</td>
+                    <td>
+                      <button type="button" class="btn table-btn-icon d-flex justify-content-center align-items-center">
+                        <img src="images/delete_red.svg" alt="delete button" />
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADD PHYSICIAN POPUP END -->
+
+
+  <!-- add-physician -->
+
+  <div class="modal" tabindex="-1" id="add-physician-unedit">
+    <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+      <div class="modal-content">
+        <div iv class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">Add Physician</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex gap-3 justify-content-end mb-20">
+            <div>
+              <button class="btn btn-tertiary">Run Exclusion Check</button>
+            </div>
+            <div>
+              <button class="btn btn-tertiary">Search NPI</button>
+            </div>
+          </div>
+          <div class="border-color mb-20">
+            <div class="p-3 d-grid grid-line align-items-center bg-lightGrey">
+              <p class="tab-heading">Physician Info</p>
+              <hr class="modal-line" />
+            </div>
+            <div class="p-3 container">
+              <div class="row col-12">
+                <div class="col-4 mb-20">
+                  <p class="label">PECOS Enrolled</p>
+                  <div class="d-flex gap-3">
+                    <div class="radio-box">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="PECOS Enrolled" id="PECOS-yes-1-unedit"
+                          value="yes" />
+                        <label class="form-check-label" for="PECOS-yes-1-unedit">
+                          Yes
+                        </label>
+                      </div>
+                    </div>
+                    <div class="radio-box">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="PECOS Enrolled" id="PECOS-no-1-unedit"
+                          value="no" />
+                        <label class="form-check-label" for="PECOS-no-1-unedit">
+                          No
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row col-12 mb-20">
+                <div class="col-3">
+                  <label class="label" for="physician-info-status-1-unedit">Status</label>
+                  <select class="single-select input-item" aria-label="location" id="physician-info-status-1-unedit">
+                    <option selected>Active</option>
+                    <option value="1">List 1</option>
+                    <option value="2">List 2</option>
+                    <option value="3">List 3</option>
+                  </select>
+                </div>
+
+                <div class="col-3">
+                  <label class="label" for="physician-info-status-1-unedit">Title</label>
+                  <select class="single-select input-item" aria-label="location" id="physician-info-status-1-unedit">
+                    <option selected>Select</option>
+                    <option value="1">List 1</option>
+                    <option value="2">List 2</option>
+                    <option value="3">List 3</option>
+                  </select>
+                </div>
+
+                <div class="col-4">
+                  <div class="d-flex justify-content-between">
+                    <label class="label" for="physician-info-NPI-1-unedit">NPI</label>
+                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#verify"
+                      class="link-blue">Verify</a>
+                  </div>
+                  <select class="single-select input-item" aria-label="Default select example"
+                    id="physician-info-NPI-1-unedit">
+                    <option selected>12341231</option>
+                    <option value="2">Agency 1</option>
+                    <option value="2">Agency 2</option>
+                    <option value="2">Agency 3</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row col-12 mb-20">
+                <div class="col-3">
+                  <label class="label" for="physician-info-UPIN-1-unedit">UPIN</label>
+                  <input type="text" class="form-control input-item" id="physician-info-UPIN-1-unedit"
+                    placeholder="Enter UPIN" aria-label="UPIN" value="1234567890" />
+                </div>
+                <div class="col-3">
+                  <label class="label" for="physician-info-TPI-1-unedit">TPI#</label>
+                  <input type="text" class="form-control input-item" id="physician-info-TPI-1-unedit"
+                    placeholder="Enter TPI" aria-label="TPI#" value="1234567890" />
+                </div>
+                <div class="col-3">
+                  <label class="label" for="physician-info-license-1-unedit">License No.</label>
+                  <input type="text" class="form-control input-item" id="physician-info-license-1-unedit"
+                    placeholder="Enter License" aria-label="UPIN" value="" />
+                </div>
+                <div class="col-3">
+                  <label class="form-label" for="intake-ref-info-1-unedit">Intake Date</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control input-item" id="intake-ref-info-1-unedit"
+                      placeholder="Select" />
+                    <span class="input-group-text"><img src="images/Calendar.svg" /></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row col-12">
+                <div class="col-6 mb-20">
+                  <label class="label" for="physician-info-initial-name-1-unedit">Initial name</label>
+                  <input type="text" class="form-control input-item" id="physician-info-initial-name-1-unedit"
+                    placeholder="Enter" aria-label="Initial name" value="" />
+                </div>
+                <div class="col-6 mb-20">
+                  <label class="label" for="physician-info-fName-1-unedit">First Name
+                  </label>
+                  <input type="text" class="form-control input-item" id="physician-info-fName-1-unedit"
+                    placeholder="Enter" aria-label="First name" value="" />
+                </div>
+
+                <div class="col-6 mb-20">
+                  <label class="label" for="physician-info-lname-1-unedit">Last Name
+                  </label>
+                  <input type="text" class="form-control input-item" id="physician-info-lname-1-unedit"
+                    placeholder="Enter" aria-label="last name" value="" />
+                </div>
+
+                <div class="col-6 mb-20">
+                  <div class="d-flex justify-content-between">
+                    <label class="label" for="physician-info-category-1-unedit">Category</label>
+                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#physician-category"
+                      class="link-blue">Add New</a>
+                  </div>
+                  <select class="single-select input-item" aria-label="Default select example"
+                    id="physician-info-category-1-unedit">
+                    <option selected>Select</option>
+                    <option value="2">Agency 1</option>
+                    <option value="2">Agency 2</option>
+                    <option value="2">Agency 3</option>
+                  </select>
+                </div>
+
+                <div class="col-6 mb-20">
+                  <div class="d-flex justify-content-between">
+                    <label class="label" for="physician-info-taxonomy-1-unedit">Taxonomy Code</label>
+                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#physician-taxonomy"
+                      class="link-blue">Auto fill</a>
+                  </div>
+                  <select class="single-select input-item" aria-label="Default select example"
+                    id="physician-info-taxonomy-1-unedit">
+                    <option selected>Select</option>
+                    <option value="2">Agency 1</option>
+                    <option value="2">Agency 2</option>
+                    <option value="2">Agency 3</option>
+                  </select>
+                </div>
+
+                <div class="col-6 mb-20">
+                  <div class="d-flex justify-content-between">
+                    <label class="label" for="physician-info-specialization-1-unedit">Specialization</label>
+                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#physician-specialization"
+                      class="link-blue">Add new</a>
+                  </div>
+                  <select class="single-select input-item" aria-label="Default select example"
+                    id="physician-info-specialization-1-unedit">
+                    <option selected>Select</option>
+                    <option value="2">Agency 1</option>
+                    <option value="2">Agency 2</option>
+                    <option value="2">Agency 3</option>
+                  </select>
+                </div>
+
+                <div class="col-6 mb-20">
+                  <label class="label" for="physician-info-location-1-unedit">Location</label>
+                  <select class="single-select input-item" aria-label="location" id="physician-info-location-1-unedit">
+                    <option class="d-none" disabled selected>Select</option>
+                    <option value="1">List 1</option>
+                    <option value="2">List 2</option>
+                    <option value="3">List 3</option>
+                  </select>
+                </div>
+
+                <div class="col-6 mb-20">
+                  <label class="label" for="physician-info-contact-1-unedit">Contact Phone
+                  </label>
+                  <input type="text" class="form-control input-item" id="physician-info-contact-1-unedit"
+                    placeholder="Enter" aria-label="First name" value="" />
+                </div>
+
+                <div class="col-6 mb-20">
+                  <label class="label" for="physician-info-ID-1-unedit">Physician ID</label>
+                  <input type="text" class="form-control input-item" id="physician-info-ID-1-unedit" placeholder="Enter"
+                    aria-label="First name" value="" />
+                </div>
+
+                <div class="col-6 mb-20">
+                  <label class="label" for="physician-info-physician-1-unedit">Physician</label>
+                  <input type="text" class="form-control input-item" id="physician-info-physician-1-unedit"
+                    placeholder="Enter" aria-label="First name" value="" />
+                </div>
+
+                <div class="col-6">
+                  <label class="label" for="physician-info-sales-1-unedit">Sales Person /Marketer</label>
+                  <select class="single-select input-item" aria-label="sales" id="physician-info-location-1-unedit">
+                    <option class="d-none" disabled selected>Select</option>
+                    <option value="1">List 1</option>
+                    <option value="2">List 2</option>
+                    <option value="3">List 3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-color mb-20">
+            <div class="p-3 d-grid grid-line align-items-center bg-lightGrey">
+              <p class="tab-heading">Contact Info</p>
+              <hr class="modal-line" />
+            </div>
+            <div class="p-3 container">
+              <div class="row col-12">
+                <div class="col-6 mb-20">
+                  <label class="label" for="contact-info-address-3-unedit">Address 1</label>
+                  <input type="text" class="form-control input-item" id="contact-info-address-3-unedit"
+                    placeholder="Enter" aria-label="Initial name" value="" />
+                </div>
+
+                <div class="col-6 mb-20">
+                  <label class="label" for="contact-info-address-4-unedit">Address 2</label>
+                  <input type="text" class="form-control input-item" id="contact-info-address-4-unedit"
+                    placeholder="Enter" aria-label="Initial name" value="" />
+                </div>
+
+                <div class="col-6 mb-20">
+                  <label class="label" for="contact-info-phone-ext-1-unedit">Phone (With Extension Number)</label>
+                  <input type="text" class="form-control input-item" id="contact-info-phone-ext-1-unedit"
+                    placeholder="Enter" aria-label="Initial name" value="" />
+                </div>
+
+                <div class="col-6 mb-20">
+                  <label class="label" for="contact-info-cell-1-unedit">Cell</label>
+                  <input type="text" class="form-control input-item" id="contact-info-cell-1-unedit" placeholder="Enter"
+                    aria-label="Initial name" value="" />
+                </div>
+
+                <div class="col-6 d-flex gap-10 mb-20">
+                  <div class="">
+                    <label class="label" for="contact-info-zip-1-unedit">Zip</label>
+                    <input type="text" class="form-control input-item" id="contact-info-zip-1-unedit"
+                      placeholder="Enter" aria-label="zip" />
+                  </div>
+                  <div class="">
+                    <label class="label" for="contact-info-city-1-unedit">City</label>
+                    <input type="text" class="form-control input-item" id="contact-info-city-1-unedit"
+                      placeholder="Enter" aria-label="city" />
+                  </div>
+                </div>
+
+                <div class="col-6 mb-20">
+                  <label class="label" for="contact-info-state-1-unedit">State</label>
+                  <input type="text" class="form-control input-item" id="contact-info-state-1-unedit"
+                    placeholder="Enter" aria-label="Initial name" value="" />
+                </div>
+
+                <div class="col-6">
+                  <label class="label" for="contact-info-email-1-unedit">Email</label>
+                  <input type="email" class="form-control input-item" id="contact-info-email-1-unedit"
+                    placeholder="Enter" aria-label="Initial name" value="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-color mb-20">
+            <div class="p-3 d-grid grid-line align-items-center bg-lightGrey">
+              <p class="tab-heading">Order/eFax</p>
+              <hr class="modal-line" />
+            </div>
+            <div class="p-3 container">
+              <div class="row col-12">
+                <div class="col-6 mb-20">
+                  <label class="label f-14 lh-19" for="order-fax-1-unedit">Fax</label>
+                  <input type="text" class="form-control input-item" id="order-fax-1-unedit" placeholder="Enter"
+                    aria-label="Fax" />
+                </div>
+
+                <div class="col-4 mb-20">
+                  <p class="label f-500 f-14 lh-19">Send Fax</p>
+                  <div class="d-flex gap-3">
+                    <div class="radio-box">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="send fax" id="order-fax-yes-1-unedit"
+                          value="Yes" />
+                        <label class="form-check-label" for="order-fax-yes-1-unedit">
+                          Yes
+                        </label>
+                      </div>
+                    </div>
+                    <div class="radio-box">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="send fax" id="order-fax-no-1-unedit"
+                          value="No" />
+                        <label class="form-check-label" for="order-fax-no-1-unedit">
+                          No
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div class="d-flex justify-content-between">
+                    <label class="label f-500 f-14 lh-19" for="order-delivery-1-unedit">Order Delivery
+                      Method(Kantime)</label>
+                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-order-delivery"
+                      class="link-blue">Add from list</a>
+                  </div>
+                  <select class="single-select input-item" aria-label="Default select example"
+                    id="order-delivery-1-unedit">
+                    <option selected>Select</option>
+                    <option value="2">Agency 1</option>
+                    <option value="2">Agency 2</option>
+                    <option value="2">Agency 3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-color mb-20">
+            <div class="p-3 d-grid grid-line align-items-center bg-lightGrey">
+              <p class="tab-heading">Physician Contacts</p>
+              <hr class="modal-line" />
+            </div>
+
+            <div class="p-3 d-flex gap-10 align-items-center">
+              <p class="color-greyScale f-600 f-13 lh-17">
+                Physician Contact list
+              </p>
+              <div class="d-flex">
+                <img src="images/plus-icon.svg" alt="plus sign" />
+                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-physician-contact"
+                  class="text-decoration-none f-600 f-13 lh-17">Add new</a>
+              </div>
+            </div>
+
+            <div class="px-15">
+              <table class="table table-type-1" id="physician-contact-list-table">
+                <thead>
+                  <tr>
+                    <th class="" style="width: 190px;">Contact Name & Designation</th>
+                    <th style="width: 130px;">Phone & Cell</th>
                     <th style="width: 116px;">Sales Person</th>
                     <th style="width: 86px;">Actions</th>
                   </tr>
@@ -5875,8 +6658,6 @@
       </div>
     </div>
   </div>
-
-  <!-- ADD PHYSICIAN POPUP END -->
 
   <!-- ADD NEW CATEGORY -->
   <div class="modal" tabindex="-1" id="physician-category">
@@ -6599,7 +7380,7 @@
 
   <!-- ADD NEW EMERGENCY CONTACT  -->
   <div class="modal" tabindex="-1" id="add-new-emergency-contact">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-dialog custom-modal-1 modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header bg-greyBlue">
           <h5 class="modal-title Pinfo color-darkblue">
@@ -6702,7 +7483,7 @@
             </div>
           </div>
           <div class="container">
-            <div class="row col-3 border-color py-10 px-15 radius-4">
+            <div class="row col-5 border-color py-10 px-15 radius-4">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="new-emergency-POA">
                 <label class="send" for="new-emergency-POA">
@@ -6742,16 +7523,16 @@
             <div class="d-flex col-12 gap-10">
               <div class="col-auto border-color bg-white py-10 px-15 radius-4 mb-20">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="patient-choose-not-representative">
-                  <label class="send" for="patient-choose-not-representative">
+                  <input class="form-check-input" type="checkbox" value="" id="patient-choose-representative">
+                  <label class="send" for="patient-choose-representative">
                     Patient Appointed Representative
                   </label>
                 </div>
               </div>
               <div class="col-auto border-color bg-white py-10 px-15 radius-4 mb-20">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="patient-choose-not-representative">
-                  <label class="send" for="patient-choose-not-representative">
+                  <input class="form-check-input" type="checkbox" value="" id="court-representative">
+                  <label class="send" for="court-representative">
                     Court Appointed Representative
                   </label>
                 </div>
@@ -8218,6 +8999,9 @@
     </div>
   </div>
   <!-- PREFERRED STAFF SKILLS END -->
+
+  <!-- NON ADMIT POPUP -->
+ 
 
   <!-- JavaScript -->
   <script type="text/javascript" src="js/jquery.min.js"></script>

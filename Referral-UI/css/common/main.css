@@ -322,6 +322,13 @@
 .border-color {
     border: 1px solid #EFEFEF;
 }
+.border-c1c1c1{
+    border: 1px solid #c1c1c1;
+}
+
+.border-4772E0{
+    border: 1px solid #4772E0;
+}
 
 .border-hr{
     border-top: 1px solid #efefef;
@@ -621,7 +628,7 @@ item:active {
     line-height: 20px;
     letter-spacing: 0em;
     color: #fff;
-    padding: 3px 7px;
+    padding: 5px;
 }
 
 .tooltip-arrow::before {
