@@ -22,6 +22,7 @@ html {
 }
 
 body {
+    width: 100% !important;
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 13px;
     font-weight: 400;

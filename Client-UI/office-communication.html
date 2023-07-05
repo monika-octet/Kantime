@@ -64,10 +64,14 @@
                 </div>
 
                 <div class="icon-container d-flex gap-3">
-                    <img src="images/Help.svg" alt="help-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Help List" />
-                    <img src="images/Mail.svg" alt="mail-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Mail" />
-                    <img src="images/Duplicate.svg" alt="duplicate-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Duplicate Tabs" />
-                    <img src="images/message.svg" alt="message-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Kantime Text"/>
+                    <img src="images/Help.svg" alt="help-icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        title="Open Help List" />
+                    <img src="images/Mail.svg" alt="mail-icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        title="Open Mail" />
+                    <img src="images/Duplicate.svg" alt="duplicate-icon" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" title="Open Duplicate Tabs" />
+                    <img src="images/message.svg" alt="message-icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        title="Open Kantime Text" />
                 </div>
             </div>
 
@@ -314,29 +318,25 @@
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">
-                                <button class="btn-menu-dropdown dropdown-toggle btn-dropdown-custom"
-                                    type="button" id="" data-bs-toggle="dropdown"
-                                    aria-expanded="false">Office Communication</button>
+                                <button class="btn-menu-dropdown dropdown-toggle btn-dropdown-custom" type="button"
+                                    id="" data-bs-toggle="dropdown" aria-expanded="false">Office Communication</button>
                                 <ul class="dropdown-menu" aria-labelledby="">
                                     <li>
-                                        <a href="journal-notes.html" type="button" 
-                                             class="dropdown-item">Journal Note</a>
+                                        <a href="journal-notes.html" type="button" class="dropdown-item">Journal
+                                            Note</a>
                                     </li>
                                     <li>
-                                        <a href="office-communication.html" type="button" 
-                                             class="dropdown-item">Office Communication</a>
+                                        <a href="office-communication.html" type="button" class="dropdown-item">Office
+                                            Communication</a>
                                     </li>
                                     <li>
-                                        <a href="vacations.html" type="button" 
-                                             class="dropdown-item">Vacation</a>
+                                        <a href="vacations.html" type="button" class="dropdown-item">Vacation</a>
                                     </li>
                                     <li>
-                                        <a href="forms.html" type="button" 
-                                             class="dropdown-item">Forms</a>
+                                        <a href="forms.html" type="button" class="dropdown-item">Forms</a>
                                     </li>
                                     <li>
-                                        <a href="cop.html" type="button" 
-                                             class="dropdown-item">COP</a>
+                                        <a href="cop.html" type="button" class="dropdown-item">COP</a>
                                     </li>
                                 </ul>
                             </div>
@@ -454,7 +454,7 @@
         </div>
     </main>
     <div class="modal" tabindex="-1" id="off-comm-popup">
-        <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+        <div class="modal-dialog custom-modal-2 modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-greyBlue">
                     <h5 class="modal-title Pinfo color-darkblue">
@@ -517,14 +517,14 @@
                         </div>
 
                     </div>
-                    <div class="bg-white">
+                <div class="bg-white">
                         <div class="mt-20 mb-20 radius-4 border-color">
                             <div class="p-20">
                                 <div class="row">
                                     <div class="col-3">
                                         <div class="mb-10 border-color py-10 px-15 radius-4">
                                             <div class="form-check">
-                                                <input class="form-check-input" checked="checked" type="checkbox"
+                                                <input class="form-check-input  reminder-check-btn"  type="checkbox"
                                                     value="" id="remind-on">
                                                 <label class="send completed" for="remind-on">Remind On
                                                 </label>
@@ -533,7 +533,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row">
+                                <div class="row reminder-date-time-box" style="display: none;">
                                     <div class="col-6">
                                         <label class="form-label m-b-5" for="msg-date">Date</label>
                                         <div class="input-group">
@@ -749,8 +749,8 @@
         </div>
     </div>
 
-      <!-- POPUP -->
-      <div class="modal" tabindex="-1" id="change-location">
+    <!-- POPUP -->
+    <div class="modal" tabindex="-1" id="change-location">
         <div class="modal-dialog custom-modal-1 modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-greyBlue">
@@ -911,6 +911,18 @@
         });
 
     </script>
+
+<script>
+    $(document).ready(function () {
+        $('.reminder-check-btn').change(function () {
+            if ($(this).is(':checked')) {
+                $('.reminder-date-time-box').show();
+            } else {
+                $('.reminder-date-time-box').hide();
+            }
+        });
+    });
+</script>
 </body>
 
 </html>

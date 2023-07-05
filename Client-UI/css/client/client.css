@@ -22,7 +22,8 @@ html {
 }
 
 body {
-    width: 1366px;
+    width: 100% !important;
+    
     margin: auto;
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 13px;
@@ -127,6 +128,7 @@ h3 {
 .icon-container img {
     width: 15px;
     height: 15px;
+    color: #475768;
 }
 
 .new-take-info {
@@ -498,7 +500,7 @@ h3 {
     align-items: center;
     border: 1px solid #EFEFEF;
     width: 100%;
-    height: 36px;
+    height: 41px;
     padding: 8px;
     border-radius: 4px;
 
@@ -1729,6 +1731,7 @@ li.remove-column:after {
 #forms-client-table.table-type-1 tbody tr td,
 #subform-client-table.table-type-1 tbody tr td {
     padding: 12px 20px;
+vertical-align: top;
 }
 
 /*********Off Communication end***********/
@@ -1835,4 +1838,20 @@ li.remove-column:after {
 }
 .referral-search input{
     padding: 10px 15px 10px 35px;
+}
+
+
+.new-form-list li{
+    padding: 10px 15px;
+    border-bottom: 1px solid #F1F1F1;
+}
+
+.new-form-list li:hover{
+    background-color: #F0F7FC;
+    color: #0D87E2;
+}
+
+#treatment-address-table .tooltip{
+    transform: translate(10px, 20px) !important;
+
 }

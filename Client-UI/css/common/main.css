@@ -44,6 +44,11 @@
 .color-GrayscaleBlue{
     color: #546071 !important;
 }
+
+.color-25282C{
+    color: #25282C;
+}
+
 /* line color */
 
 .p-5 {
@@ -350,6 +355,10 @@
     border: 1px solid #EFEFEF;
 }
 
+.border-c1c1c1{
+    border: 1px solid #c1c1c1;
+}
+
 .border-hr{
     border-top: 1px solid #efefef;
 }
@@ -635,6 +644,7 @@ item:active {
 .bg-green{
     background-color: #86CC4B;
 }
+
 
 
 .tooltip-inner {
