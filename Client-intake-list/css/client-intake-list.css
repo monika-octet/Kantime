@@ -1,0 +1,13 @@
+.intake-container{
+    padding: 15px 30px;
+}
+
+.intake-container .menu-items .dropdown-toggle::after{
+    content: url(../images/three-dots.svg);
+    width: 100%;
+    height: 100%;
+    top: 7px;
+    left: 0px;
+    position: absolute;
+    border-top: none;
+}

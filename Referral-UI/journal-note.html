@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#0D87E2" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@100&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css" />
+    <!-- select -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-multiselect.min.css" />
+
+    <!-- datepicker -->
+    <link type="text/css" href="css/daterangepicker.css" />
+
+    <!-- Custom css -->
+
+    <link rel="stylesheet" type="text/css" href="css/common/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/referral/referral.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive/responsive.css" />
+
+    <!-- Bootstrap js -->
+
+    <!-- custom css -->
+
+    <title>Kantime | Referral</title>
+</head>
+
+
+<body style="width: 1366px; margin: auto;">
+    <header>
+        <nav class="">
+            <div class="">
+                <img src="images/nav.svg" style="width: 100%" />
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="px-30 py-10">
+            <div>
+                <div class="breadcrumb-container">
+                    <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="#">Client Intake List</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                John Doe
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="d-flex justify-content-between">
+                    <h1>New Intake Info</h1>
+                    <div class="icon-container d-flex gap-3">
+                        <img src="images/Help.svg" alt="help-icon" />
+                        <img src="images/Mail.svg" alt="mail-icon" />
+                        <img src="images/Duplicate.svg" alt="duplicate-icon" />
+                        <img src="images/message.svg" alt="message-icon" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white border-color mt-10 radius-4 mb-20">
+                <div class="p-20 position-relative">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="d-flex gap-25 align-items-center">
+                            <div class="profile-box d-flex justify-content-center align-items-center">
+                                <img src="images/avatar.svg" alt="user profile picture" />
+                                <img src="images/camera.svg" alt="upload icon" class="upload" type="button"
+                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Upload Picture" />
+                            </div>
+                            <div class="d-flex flex-column">
+                                <p class="patient-title mb-15">John Doe</p>
+                                <div class="d-flex gap-20 mb-20">
+                                    <div>
+                                        <img src="images/Phone.svg" alt="phone icon" class="info-icon" />
+                                        <span class="info-icon-label">Call</span>
+                                    </div>
+                                    <div>
+                                        <img src="images/Email.svg" alt="mail icon" class="info-icon" />
+                                        <span class="info-icon-label">Email</span>
+                                    </div>
+                                    <div>
+                                        <img src="images/mappin.svg" alt="map pin icon" class="info-icon" />
+                                        <span class="info-icon-label">Address</span>
+                                    </div>
+                                </div>
+                                <div class="status-tag status-red align-self-lg-start">
+                                    <p>Conditionally accepted</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex" style="gap: 108px">
+                            <div class="d-flex flex-column">
+                                <div class="info-box">
+                                    <p class="info-title">LOB :</p>
+                                    <p class="info-description">Occupational Physiotherapy</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Primary Payer :</p>
+                                    <p class="info-description">Richard Parker</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Location :</p>
+                                    <p class="info-description">New York, USA</p>
+                                </div>
+
+                            </div>
+                            <div class="">
+                                <div class="info-box">
+                                    <p class="info-title">Intake Date :</p>
+                                    <p class="info-description">01/03/1998</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Requested SOC Date :</p>
+                                    <p class="info-description">10/29/1999</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">DOB :</p>
+                                    <p class="info-description">10/29/1999</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column justify-content-between user-profile-dropdown">
+                            <div class="dropdown ms-3" style="margin-left: 133px !important;">
+                                <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">Logs</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">Print</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">Email</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#add-initial-order" class="dropdown-item">Initial Order</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">More Options</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item red-text">Delete</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="" style="margin-top: 54px;">
+                                <div class="d-flex justify-content-end align-items-center gap-10">
+                                    <a href="duplicate-record.html" id="check-duplicate"
+                                        class="btn btn-primary ms-3">Admit</a>
+                                    <a href="#" class="btn btn-outline-primary">Non-Admit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-section">
+
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="patient-information.html" role="tab"
+                                aria-controls="general" aria-selected="false">General</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="payer-source-eligibility.html" role="tab"
+                                aria-controls="eligibility" aria-selected="false">Payer source & eligibility</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="clinical.html" role="tab" aria-controls="clinical"
+                                aria-selected="false">Clinical</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="medications.html" role="tab" aria-controls="medications"
+                                aria-selected="false">Medications</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="clinician.html" role="tab" aria-controls="clinicains"
+                                aria-selected="false">Clinicains</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="initial-schedule.html" role="tab" aria-controls="schedule"
+                                aria-selected="false">Initial Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="form.html" role="tab" aria-controls="form"
+                                aria-selected="false">Form</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="journal-note.html" role="tab" aria-controls="journal"
+                                aria-selected="true">Journal Note</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cop.html" role="tab" aria-controls="COP"
+                                aria-selected="false">COP</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white">
+                <div class="m-20">
+                    <div class="pt-20 pb-10 d-flex justify-content-between align-items-center border-bottom">
+                        <div class="d-flex gap-10 align-items-center">
+                            <div class="tab-content-heading">Journal Note</div>
+                            <div class="d-flex align-items-center">
+                                <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px">
+                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-new-note"
+                                    class="text-decoration-none f-600 f-13 lh-17">Add new</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-10">
+                            <p class="save-time">Last saved 2 mins ago</p>
+                            <button class="btn btn-tertiary">Save</button>
+                        </div>
+                    </div>
+
+                    <div class="row col-9 d-flex align-items-center py-20">
+
+                        <div class="col-4">
+                            <label class="form-label" for="dob">DOB</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control input-item" id="dob-Pinfo"
+                                    placeholder="Select Date">
+                                <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <label class="label" for="category-journal-note">Category</label>
+                            <select class="single-select input-item" aria-label="category" id="category-journal-note">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="col-2">
+                            <!-- <label for="" class="v-none"></label> -->
+                            <button class="btn btn-tertiary mt-20">Apply</button>
+                        </div>
+
+
+                    </div>
+                    <table class="table table-type-1" id="journal-note-table">
+                        <thead>
+                            <tr>
+                                <th class="d-flex">
+                                    <input class="form-check-input" type="checkbox" va lue="" id=""><span>Date
+                                        Time</span>
+                                </th>
+                                <th>Form</th>
+                                <th style="width: 491px;">Subject</th>
+                                <th style="width: 200px;">Category</th>
+                                <th>Off Comm</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    <input class="form-check-input" type="checkbox" value="" id=""><span>April 7
+                                        2023 - 1:06 PM</span>
+                                </td>
+                                <td>Test Client</td>
+                                <td>Intake Note for Client</td>
+                                <td>Intake</td>
+                                <td>
+                                    <button type="button"
+                                        class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Kantime Text">
+                                        <img src="images/mail-icon.svg" alt="mail">
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input class="form-check-input" type="checkbox" value="" id=""><span>April 7
+                                        2023 - 1:06 PM</span>
+                                </td>
+                                <td>Test Client</td>
+                                <td>Intake Note for Client</td>
+                                <td>Intake</td>
+                                <td>
+                                    <button type="button"
+                                        class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Kantime Text">
+                                        <img src="images/mail-icon.svg" alt="mail">
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input class="form-check-input" type="checkbox" value="" id=""><span>April 7
+                                        2023 - 1:06 PM</span>
+                                </td>
+                                <td>Test Client</td>
+                                <td>Intake Note for Client</td>
+                                <td>Intake</td>
+                                <td>
+                                    <button type="button"
+                                        class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Kantime Text">
+                                        <img src="images/mail-icon.svg" alt="mail">
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input class="form-check-input" type="checkbox" value="" id=""><span>April 7
+                                        2023 - 1:06 PM</span>
+                                </td>
+                                <td>Test Client</td>
+                                <td>Intake Note for Client</td>
+                                <td>Intake</td>
+                                <td>
+                                    <button type="button"
+                                        class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Kantime Text">
+                                        <img src="images/mail-icon.svg" alt="mail">
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+                    <div class="d-flex">
+                        <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px">
+                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-new-note"
+                            class="text-decoration-none f-600 f-13 lh-17">Add new</a>
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!-- POPUP -->
+
+        <!-- ADD NEW NOTES -->
+        <div class="modal" tabindex="-1" id="add-new-note">
+            <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-greyBlue">
+                        <h5 class="modal-title Pinfo color-darkblue">Add New Note</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="row col-12">
+                            <div class="col-6 mb-20">
+                                <div class="d-flex justify-content-between">
+                                    <label class="label" for="add-new-notes-category">Category</label>
+                                    <a href="javascript:void(0)" data-bs-toggle="modal"
+                                        data-bs-target="#add-new-category" class="link-blue">Add</a>
+                                </div>
+                                <select class="single-select input-item" aria-label="Default select example"
+                                    id="add-new-notes-category">
+                                    <option selected>Select</option>
+                                    <option value="2">Agency 1</option>
+                                    <option value="2">Agency 2</option>
+                                    <option value="2">Agency 3</option>
+                                </select>
+                            </div>
+
+                            <div class="col-6 mb-20">
+                                <label class="label" for="note-LOB">LOB</label>
+                                <select class="single-select input-item" aria-label="LOB" id="note-LOB">
+                                    <option class="d-none" disabled selected>Select</option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+
+                            <div class="col-6 mb-20">
+                                <label class="form-label" for="note-date">Date</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-item" id="note-date"
+                                        placeholder="01/02/1998">
+                                    <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-4 mb-20">
+                                <label class="label" for="note-timer">Timer</label>
+                                <input type="text" class="form-control input-item" id="note-timer"
+                                    placeholder="Enter Zip" aria-label="zip">
+                            </div>
+
+                            <div class="mb-20">
+                                <label class="form-check-label mb-2" for="Volunteer">
+                                    Initial Order
+                                </label>
+                                <div class="col-12 mb-20 bg-white border-color radius-4">
+                                    <textarea name="" id="add-new-initial-order" cols="" rows="8"
+                                        class="input-textarea w-100 border-color border-bottom "
+                                        placeholder="Type Here"></textarea>
+                                    <div class="d-flex align-items-center gap-2 py-10 px-15 pointer"
+                                        data-bs-toggle="modal" data-bs-target="#quick-notes">
+                                        <img src="images/notes.svg" alt="notes icon">
+                                        <p class="f-500 f-13 lh-17">Open Quick Notes List</p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-6 mb-20">
+                                <label class="label" for="payer-primary-invoice">Payer For Primary Invoice</label>
+                                <select class="single-select input-item" aria-label="invoice"
+                                    id="payer-primary-invoice">
+                                    <option class="d-none" disabled selected>Select</option>
+                                    <option value="1">Create Invoices and Demand Claims to</option>
+                                    <option value="2">Create Invoices and Demand Claims to</option>
+                                </select>
+
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input margin-rt-0" type="checkbox" value=""
+                                        id="use-rate-payer">
+                                    <label class="send  lh-17" for="use-rate-payer">
+                                        Use Rates & Properties of Payer & Services
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-20">
+
+                                <div class="input-group ">
+
+                                    <input type="text" class="form-control" placeholder="Select Recipient"
+                                        aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <span class="input-group-text" id="basic-addon2">
+                                        <img src="images/user-book.svg" alt="book icon">
+                                    </span>
+                                </div>
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input margin-rt-0" type="checkbox" value=""
+                                        id="use-rate-payer">
+                                    <label class="send  lh-17" for="use-rate-payer">
+                                        Use Rates & Properties of Payer & Services
+                                    </label>
+                                </div>
+
+                            </div>
+
+                            <div class="row col-12">
+                                <div class="col-6">
+                                    <div class="form-check mb-2">
+                                        <input checked="" class="form-check-input" type="checkbox" value="" id="effective-start-date-tertiary">
+                                        <label class="form-check-label" for="effective-start-date-tertiary">
+                                            Remind On
+                                        </label>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control input-item" id="date-start-tertiary" placeholder="01/02/1998">
+                                        <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 ">
+                                    <label class="label" for="add-new-notes-primary-diagnosis">Primary Diagnosis</label>
+                                    <input type="text" class="form-control input-item" id="add-new-notes-primary-diagnosis" placeholder="Enter time" aria-label="diagnosis time">
+                                  </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ADD NEW NOTES END -->
+
+
+        <!-- ADD NEW CATEGORY -->
+        <div class="modal" tabindex="-1" id="add-new-category">
+            <div class="modal-dialog custom-modal-3 modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-greyBlue">
+                        <h5 class="modal-title Pinfo color-darkblue">Add New Category</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex flex-column mb-1">
+                            <label class="label add-text" for="add-new-note-category-input">Category</label>
+                            <input type="text" class="form-control input-item" id="add-new-note-category-input"
+                                placeholder="Enter" aria-label="Category" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ADD NEW CATEGORY END -->
+
+           <!-- QUICK NOTES -->
+           <div class="modal" tabindex="-1" id="quick-notes">
+            <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-greyBlue">
+                        <h5 class="modal-title Pinfo color-darkblue">
+                            Quick Notes
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex justify-content-end mb-15">
+                            <button class="btn btn-tertiary" data-bs-toggle="modal"
+                                data-bs-target="#intake-notes-add-quick-notes">Add
+                                New</button>
+                        </div>
+                        <div class="row col-12">
+                            <div class="col-6 mb-20">
+                                <label class="f-500 f-14 lh-19 mb-2" for="intake-notes-location">Location</label>
+                                <select class="single-select input-item" aria-label="location"
+                                    id="intake-notes-location">
+                                    <option class="d-none" disabled selected>Select</option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+
+                            <div class="col-6 search mb-20">
+                                <label class="f-500 f-14 lh-19 mb-2" for="">Search</label>
+                                <input type="text" placeholder="Search" class="search-input w-100">
+                                <img src="images/lens-dark.svg" alt="search lens" class="lens"
+                                    style="top: 34px !important; left: 18px !important">
+                            </div>
+                        </div>
+
+                        <table class="table table-type-1 mt-10" id="add-quick-note-table">
+                            <thead>
+                                <tr>
+                                    <th class="d-flex">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id=""><span>Title</span>
+                                    </th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td class="d-flex">
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                        <div>
+                                            <p>Title line goes here </p>
+                                        </div>
+                                    </td>
+                                    <td>Description goes here</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="d-flex">
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                        <div>
+                                            <p>Title line goes here </p>
+                                        </div>
+                                    </td>
+                                    <td>Description goes here</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="d-flex">
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                        <div>
+                                            <p>Title line goes here </p>
+                                        </div>
+                                    </td>
+                                    <td>Description goes here</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="d-flex">
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                        <div>
+                                            <p>Title line goes here </p>
+                                        </div>
+                                    </td>
+                                    <td>Description goes here</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+
+                        <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- QUICK NOTES END -->
+
+        <!-- ADD QUICK NOTE NEW -->
+        <div class="modal" tabindex="-1" id="intake-notes-add-quick-notes">
+            <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-greyBlue">
+                        <h5 class="modal-title Pinfo color-darkblue">
+                            Add New Quick Notes
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="row col-12">
+                            <div class="col-6 mb-20">
+                                <label class="f-500 f-14 lh-19 mb-2" for="intake-quick-notes-location">Location</label>
+                                <select class="single-select input-item" aria-label="location"
+                                    id="intake-quick-notes-location">
+                                    <option class="d-none" disabled selected>Select</option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+
+                            <div class="col-4 mb-20">
+                                <label class="label" for="intake-quick-notes-title">Title</label>
+                                <input type="text" class="form-control input-item" id="intake-quick-notes-title"
+                                    placeholder="Enter" aria-label="quick notes">
+                            </div>
+
+                            <div class="col-12">
+                                <label class="label" for="intake-quick-notes-description">Description</label>
+                                <textarea name="" id="intake-quick-notes-description" cols="" rows="2"
+                                    class="input-textarea w-100" placeholder="Type Here"></textarea>
+                            </div>
+
+                        </div>
+
+
+
+
+
+                    </div>
+                    <div class="modal-footer">
+
+                        <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ADD QUICK NOTE NEW END -->
+
+    </main>
+
+
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-multiselect.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- bootstrap js-->
+    <!-- <script type="text/javascript" src="js/popper.min.js"></script>
+ <script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+
+    <!-- datepicker js-->
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+</body>
+
+</html>

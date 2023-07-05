@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#0D87E2" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@100&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css" />
+    <!-- select -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-multiselect.min.css" />
+
+    <!-- datepicker -->
+    <link type="text/css" href="css/daterangepicker.css" />
+
+    <!-- Custom css -->
+
+    <link rel="stylesheet" type="text/css" href="css/common/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/client/client.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive/responsive.css" />
+
+    <!-- Bootstrap js -->
+
+    <!-- custom css -->
+
+    <title>Kantime | Referral</title>
+</head>
+
+<body>
+    <header>
+        <nav class="">
+            <div class="">
+                <img src="images/nav.svg" style="width: 100%" />
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="px-30 py-10">
+            <div class="d-flex justify-content-between align-items-center mb-10">
+                <div class="breadcrumb-container">
+                    <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="#">Client Intake List</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                John Doe
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="icon-container d-flex gap-3">
+                    <img src="images/Help.svg" alt="help-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Help List" />
+                    <img src="images/Mail.svg" alt="mail-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Mail" />
+                    <img src="images/Duplicate.svg" alt="duplicate-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Duplicate Tabs" />
+                    <img src="images/message.svg" alt="message-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Kantime Text"/>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-20">
+                <h1>Client Profile</h1>
+                <div class="d-flex">
+                    <div class="search-bar position-relative mr-5">
+                        <input type="text" placeholder="Search Client" class="search-input w-100"
+                            style="background: #f4f5f6;">
+                        <img src="images/lens.svg" alt="search lens" class="lens">
+                    </div>
+                    <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#filter">
+                        <img src="images/filter.svg" alt="">
+                        Filter
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white border-color mt-10 radius-4 mb-20">
+                <div class="p-20 position-relative">
+                    <div class="d-flex flex-wrap justify-content-between">
+                        <div class="d-flex gap-25 align-items-center">
+                            <div class="profile-box d-flex justify-content-center align-items-center">
+                                <img src="images/avatar-pic.svg" alt="user profile picture" />
+                                <img src="images/camera.svg" alt="upload icon" class="upload" type="button"
+                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Upload Picture" />
+                            </div>
+                            <div class="d-flex flex-column">
+                                <p class="patient-title mb-15">John Doe</p>
+                                <div class="d-flex gap-20 mb-20">
+                                    <div>
+                                        <img src="images/Phone.svg" alt="phone icon" class="info-icon" />
+                                        <span class="info-icon-label">Call</span>
+                                    </div>
+                                    <div>
+                                        <img src="images/Email.svg" alt="mail icon" class="info-icon" />
+                                        <span class="info-icon-label">Email</span>
+                                    </div>
+                                    <div>
+                                        <img src="images/mappin.svg" alt="map pin icon" class="info-icon" />
+                                        <span class="info-icon-label">Address</span>
+                                    </div>
+                                </div>
+                                <div class="status-tag status-red">
+                                    <p>Conditionally accepted</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex" style="gap: 108px">
+                            <div class="d-flex flex-column">
+                                <div class="info-box">
+                                    <p class="info-title">LOB :</p>
+                                    <p class="info-description">Occupational Physiotherapy</p>
+                                    <button class="icon-box btn table-btn-icon" data-bs-toggle="modal"
+                                        data-bs-target="#change">
+                                        <img src="images/edit-pen.svg" alt="" class="icon-bg" data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom" title="Edit">
+                                    </button>
+
+
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Admit Number:</p>
+                                    <p class="info-description">1-176</p>
+                                    <div class="dropdown  mx-3">
+                                        <button class="icon-box btn btn-dot dropdown-toggle btn-dropdown-custom"
+                                            type="button" id="" data-bs-toggle="dropdown"
+                                            aria-expanded="false"></button>
+                                        <ul class="dropdown-menu" aria-labelledby="">
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">1-175</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">1-174</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">1-173</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Case Manager</p>
+                                    <p class="info-description">Daniel Cliff</p>
+                                    <div class="dropdown  mx-3">
+                                        <button class="icon-box btn btn-dot dropdown-toggle btn-dropdown-custom"
+                                            type="button" id="" data-bs-toggle="dropdown"
+                                            aria-expanded="false"></button>
+                                        <ul class="dropdown-menu" aria-labelledby="">
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">Daniel Cliff</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">AVI Test RN</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">Staff Avi B/O</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Intake Date :</p>
+                                    <p class="info-description">01/03/1998</p>
+                                </div>
+
+                                <div class="info-box">
+                                    <p class="info-title">Location :</p>
+                                    <p class="info-description">Jinisha</p>
+                                    <button class="icon-box btn table-btn-icon mx-3" data-bs-toggle="modal"
+                                        data-bs-target="#change">
+                                        <img src="images/edit-pen.svg" alt="" class="icon-bg" data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom" title="Edit">
+                                    </button>
+                                </div>
+
+
+
+
+                            </div>
+                            <div class="">
+                                <div class="info-box">
+                                    <p class="info-title">Client Staus :</p>
+                                    <p class="info-description">Pending SOC</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">POC Status :</p>
+                                    <p class="info-description">Open</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">DOB :</p>
+                                    <p class="info-description">10/29/1999</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Intake Taken By :</p>
+                                    <p class="info-description">KanTime, Support</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Eligibility:</p>
+                                    <p class="info-description red-text f-500">Not Verified</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column justify-content-start user-profile-dropdown">
+                            <div class="dropdown ms-3" style="margin-left: 133px !important;">
+                                <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                <ul class="dropdown-menu" style="right: auto; left: 0;"
+                                    aria-labelledby="dropdownMenuButton1">
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">Oasis Configuration</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">UB04 Setting</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">CMS 1500 Settings</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">Initial Order</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">Checklist</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item ">Print</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item ">Print Address Label</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item ">Compose</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item ">Audit Logs</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item ">Back To referral</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item ">Non Admit</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item red-text f-400">Delete Client</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-section">
+
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="patient-information.html" role="tab"
+                                aria-controls="general" aria-selected="false">General</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="payer-source-eligibility.html" role="tab"
+                                aria-controls="eligibility" aria-selected="false">Payer source & eligibility</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="documents.html" role="tab" aria-controls="Document"
+                                aria-selected="false">Document</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="records.html" role="tab" aria-controls="records"
+                                aria-selected="false">Records</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="service-rates.html" role="tab" aria-controls="service-rates"
+                                aria-selected="false">Service & Rates</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="evv-setting.html" role="tab" aria-controls="evv"
+                                aria-selected="true">EVV Setting </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="intake-info.html" role="tab" aria-controls="intake-info"
+                                aria-selected="false">Intake Info</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="community-contact.html" role="tab"
+                                aria-controls="Commnunity contact" aria-selected="false">Commnunity Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="btn-menu-dropdown dropdown-toggle btn-dropdown-custom"
+                                    type="button" id="" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Journal Note</button>
+                                <ul class="dropdown-menu" aria-labelledby="">
+                                    <li>
+                                        <a href="journal-notes.html" type="button" 
+                                             class="dropdown-item">Journal Note</a>
+                                    </li>
+                                    <li>
+                                        <a href="office-communication.html" type="button" 
+                                             class="dropdown-item">Office Communication</a>
+                                    </li>
+                                    <li>
+                                        <a href="vacations.html" type="button" 
+                                             class="dropdown-item">Vacation</a>
+                                    </li>
+                                    <li>
+                                        <a href="forms.html" type="button" 
+                                             class="dropdown-item">Forms</a>
+                                    </li>
+                                    <li>
+                                        <a href="cop.html" type="button" 
+                                             class="dropdown-item">COP</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white pb-1">
+                <div class="m-20">
+                    <div class="pt-20 pb-10 d-flex justify-content-between align-items-center border-bottom">
+                        <div class="d-flex gap-10 align-items-center">
+                            <div class="tab-content-heading">Journal Note</div>
+                            <div class="d-flex align-items-center">
+                                <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px">
+                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-new-note"
+                                    class="text-decoration-none f-600 f-13 lh-17">Add Notes</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-10">
+                            <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                                data-bs-target="#client-notes-popup">
+                                <img src="images/note-icon.svg" alt="">
+                                Client Notes
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex align-items-center justify-content-between gap-20 pt-20  align-dots">
+
+                        <div class="d-flex justify-content-between w-75 gap-10">
+                            <div class="col-4 mb-20">
+                                <label class="form-label" for="date-range-journal">Date Range</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-item" id="date-range-journal"
+                                        placeholder="Select Date" value="01/02/1998 - 01/03/1998">
+                                    <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-4">
+                                <label class="label" for="categpry-journal">Folder</label>
+                                <select class="single-select input-item" aria-label="" id="categpry-journal">
+                                    <option class="d-none" disabled selected>Select</option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+
+                            <div class="col-4">
+                                <label class="label" for="lob-journal">LOB</label>
+                                <select class="single-select input-item" aria-label="" id="lob-journal">
+                                    <option class="d-none" disabled selected>Select</option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+
+                            <div class="col-2" style="margin-top: 25px;">
+                                <button class="btn btn-tertiary">Display</button>
+                            </div>
+
+                        </div>
+
+
+                        <div class="dropdown justify-content-end">
+                            <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom" type="button"
+                                id="" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                            <ul class="dropdown-menu" aria-labelledby="">
+                                <li>
+                                    <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#"
+                                        class="dropdown-item">E-Fax</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#"
+                                        class="dropdown-item">Print</a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+                    <table class="table table-type-1" id="journal-note-client-table">
+                        <thead>
+                            <tr>
+                                <th class="d-flex">
+                                    <input class="form-check-input" type="checkbox" va="" lue="" id=""><span>Date
+                                        Time</span>
+                                </th>
+                                <th>Entered By</th>
+                                <th style="width: 180px;">Category</th>
+                                <th style="width: 459px;">Note</th>
+
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    <input class="form-check-input" type="checkbox" value="" id=""><span>April 7
+                                        2023 - 1:06 PM</span>
+                                </td>
+                                <td>Test Client</td>
+                                <td>Intake Note for Client</td>
+                                <td>Notes Go Here</td>
+
+
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input class="form-check-input" type="checkbox" value="" id=""><span>April 7
+                                        2023 - 1:06 PM</span>
+                                </td>
+                                <td>Test Client</td>
+                                <td>Intake Note for Client</td>
+                                <td>Notes Go Here</td>
+
+
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input class="form-check-input" type="checkbox" value="" id=""><span>April 7
+                                        2023 - 1:06 PM</span>
+                                </td>
+                                <td>Test Client</td>
+                                <td>Intake Note for Client</td>
+                                <td>Notes Go Here</td>
+
+
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input class="form-check-input" type="checkbox" value="" id=""><span>April 7
+                                        2023 - 1:06 PM</span>
+                                </td>
+                                <td>Test Client</td>
+                                <td>Intake Note for Client</td>
+                                <td>Notes Go Here</td>
+
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </main>
+
+
+
+
+    <!-- ADD NEW NOTES -->
+    <div class="modal" tabindex="-1" id="add-new-note">
+        <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Add New Note</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row col-12">
+                        <div class="col-6 mb-20">
+                            <div class="d-flex justify-content-between">
+                                <label class="label" for="add-new-notes-category">Category</label>
+                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-new-category"
+                                    class="link-blue">Add</a>
+                            </div>
+                            <select class="single-select input-item" aria-label="Default select example"
+                                id="add-new-notes-category">
+                                <option selected>Select</option>
+                                <option value="2">Agency 1</option>
+                                <option value="2">Agency 2</option>
+                                <option value="2">Agency 3</option>
+                            </select>
+                        </div>
+
+                        <div class="col-6 mb-20">
+                            <label class="label" for="note-LOB">LOB</label>
+                            <select class="single-select input-item" aria-label="LOB" id="note-LOB">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+
+                        <div class="col-6 mb-20">
+                            <label class="form-label" for="note-date">Date</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control input-item" id="note-date"
+                                    placeholder="01/02/1998">
+                                <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <label class="label" for="timer-add-new-notes">Timer</label>
+                            <select
+                              class="single-select input-item"
+                              aria-label=""
+                              id="timer-add-new-notes"
+                            >
+                              <option class="d-none" disabled selected>Select</option>
+                              <option value="1">List 1</option>
+                              <option value="2">List 2</option>
+                              <option value="3">List 3</option>
+                            </select>
+               </div>
+            
+
+                        <div class="mb-20">
+                            <label class="form-check-label mb-2" for="Volunteer">
+                                Notes
+                            </label>
+                            <div class="col-12 mb-20 bg-white border-color radius-4">
+                                <textarea name="" id="add-new-initial-order" cols="" rows="8"
+                                    class="input-textarea w-100 border-color border-bottom "
+                                    placeholder="Type Here"></textarea>
+                                <div class="d-flex align-items-center gap-2 py-10 px-15 pointer" data-bs-toggle="modal"
+                                    data-bs-target="#quick-notes">
+                                    <img src="images/notes.svg" alt="notes icon">
+                                    <p class="f-500 f-13 lh-17">Open Quick Notes List</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-20">
+                            <div class="form-check col-auto mb-10">
+                                <input class="form-check-input" type="checkbox" value="" id="add-copy-of-journal">
+                                <label class="form-check-label" for="add-copy-of-journal">
+                                    Add Copy of Journal to Clinician Journal Notes
+                                </label>
+                            </div>
+
+                            <div class="col-6">
+
+                                <select class="single-select input-item" aria-label="location" id="">
+                                    <option class="d-none" disabled selected>All</option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-12 mb-20">
+                            <div class="form-check col-auto mb-10">
+                                <input class="form-check-input" type="checkbox" value="" id="add-to-task-reminder">
+                                <label class="form-check-label" for="add-to-task-reminder">
+                                    Add to Task/Reminder
+                                </label>
+                            </div>
+
+                            <div class="input-group ">
+                                <input type="text" class="form-control" placeholder="Select Recipient"
+                                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <span class="input-group-text" id="basic-addon2">
+                                    <img src="images/note-icon.svg" alt="book icon">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-color p-15">
+                        <div class="col-4 border-color px-15 py-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="reminder-on">
+                                <label class="form-check-label" for="reminder-on">
+                                    Reminder On
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="date-time-box d-none mt-20">
+                            <div class="row col-12">
+                                <div class="col-6 mb-20">
+                                    <label class="form-label" for="reminder-on-date">Date</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control input-item" id="reminder-on-date"
+                                            placeholder="Select Date">
+                                        <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 mb-20">
+                                    <label class="label" for="reminder-on-time">Time</label>
+                                    <input type="text" class="form-control input-item" id="reminder-on-time"
+                                        placeholder="Enter" aria-label="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ADD NEW CATEGORY -->
+    <div class="modal" tabindex="-1" id="add-new-category">
+        <div class="modal-dialog custom-modal-3 modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Add New Category</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex flex-column mb-1">
+                        <label class="label add-text" for="add-new-note-category-input">Category</label>
+                        <input type="text" class="form-control input-item" id="add-new-note-category-input"
+                            placeholder="Enter" aria-label="Category" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- client-notes-popup -->
+    <div class="modal" tabindex="-1" id="client-notes-popup">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Client Notes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="bg-greybox border-color radius-4 col-12 mb-20">
+                        <div class=" d-flex justify-content-between">
+                            <div>
+                                <span class="text-title">Client: </span>
+                                <span class="text-description">Demo 2 </span>
+                            </div>
+                            <div>
+                                <span class="text-title">SOC :</span>
+                                <span class="text-description">01/03/2023</span>
+                            </div>
+                            <div>
+                                <span class="text-title">MR# :</span>
+                                <span class="text-description">2045</span>
+                            </div>
+                            <div>
+                                <span class="text-title">DOB :</span>
+                                <span class="text-description">03/05/1963</span>
+                            </div>
+                            <div>
+                                <span class="text-title">Gender :</span>
+                                <span class="text-description">Male</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between mb-20">
+                        <div class="d-flex gap-10 align-items-center w-75">
+                            <div class="w-100">
+                                <label class="label" for="note-type-client-notes">Note Type</label>
+                                <select class="single-select input-item" aria-label="" id="note-type-client-notes">
+                                    <option class="d-none" disabled selected>Select</option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100">
+                                <label class="label" for="note-range-client-notes">Note Date Range</label>
+                                <select class="single-select input-item" aria-label="" id="note-range-client-notes">
+                                    <option class="d-none" disabled selected>Select</option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-outline-primary mt-25">
+                                Apply
+                            </button>
+                        </div>
+                        <div class="d-flex gap-10 justify-content-between align-items-center mt-3">
+                            <div class="d-flex align-items-center">
+                                <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px">
+                                <a href="javascript:void(0)" data-bs-toggle="modal"
+                                    data-bs-target="#add-new-client-note-popup"
+                                    class="text-decoration-none f-600 f-13 lh-17">Add New</a>
+                            </div>
+                            <button class="btn btn-outline-primary">
+                                <img src="images/mail-icon.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <table class="table table-hover table-type-1" id="treatment-address-table">
+                        <thead>
+                          <tr>
+                            <th >
+                              Date
+                            </th>
+                            <th>Entered By</th>
+                            <th>Note Type</th>
+                            <th style="width: 372px;">Note</th>
+                            <th style="width: 80px;">
+                                Off Comm.
+                            </th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+      
+                        <tbody>
+                          <tr>
+                            <td >
+                            04/01/2023 
+                            </td>
+                            <td>Test Client</td>
+                            <td>Care Coordination</td>
+                            <td>Demo Note Sentence</td>
+                            <td>
+                                <button class="btn btn-outline-primary">
+                                    <img src="images/mail-icon.svg" alt="">
+                                </button>
+                            </td>
+                            <td class="align-dots">
+                              <div class="dropdown ms-3">
+                                <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom" type="button" id="dropdownMenuButton-address-1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                  <li>
+                                    <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#add-new-client-note-popup" class="dropdown-item">Edit</a>
+                                  </li>
+                                  <li>
+                                    <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#" class=" dropdown-item">Print</a>
+                                  </li>
+                                  <li>
+                                    <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#" class="red-text dropdown-item">Delete</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td >
+                            04/01/2023 
+                            </td>
+                            <td>Test Client</td>
+                            <td>Care Coordination</td>
+                            <td>Demo Note Sentence</td>
+                            <td>
+                                <button class="btn btn-outline-primary">
+                                    <img src="images/mail-icon.svg" alt="">
+                                </button>
+                            </td>
+                            <td class="align-dots">
+                              <div class="dropdown ms-3">
+                                <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom" type="button" id="dropdownMenuButton-address-1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                  <li>
+                                    <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#add-new-client-note-popup" class="dropdown-item">Edit</a>
+                                  </li>
+                                  <li>
+                                    <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#" class=" dropdown-item">Print</a>
+                                  </li>
+                                  <li>
+                                    <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#" class="red-text dropdown-item">Delete</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Add new Client Note -->
+    <div class="modal" tabindex="-1" id="add-new-client-note-popup">
+        <div class="modal-dialog custom-modal-5 modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Add New Client Note</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-6 mb-20">
+                        <div class="d-flex justify-content-between">
+                            <label class="label" for="note-type-new-client">Note Type</label>
+                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-new-note-type-popup"
+                                class="link-blue">Add</a>
+                        </div>
+                        <select class="single-select input-item" aria-label="Default select example"
+                            id="note-type-new-client">
+                            <option selected>Select</option>
+                            <option value="2">Agency 1</option>
+                            <option value="2">Agency 2</option>
+                            <option value="2">Agency 3</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <label class="label" for="notes">Notes</label>
+                        <textarea name="" id="notes" cols="" rows="2" class="input-textarea w-100" placeholder="Enter"></textarea>
+                      </div>
+
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ADD NEW NOTE TYPE -->
+    <div class="modal" tabindex="-1" id="add-new-note-type-popup">
+        <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header bg-greyBlue">
+              <h5 class="modal-title Pinfo color-darkblue">Add New Note Type</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="add-text">New Client Note</span>
+                <div class="position-relative">
+                  <input type="text" class="form-control input-item" id="new-religion" placeholder="Enter new relation here"
+                    aria-label="Enter new relation here" style="width: 286px" />
+                  <button class="btn btn-inside">Add to List</button>
+                </div>
+              </div>
+              <div class="border-color radius-4">
+                <div class="bg-greyHeader p-3 d-flex justify-content-between align-items-center">
+                  <p class="f-500 f-13 lh-17 color-greyBlueheader">Note Type</p>
+                  <p class="f-500 f-13 lh-17 color-greyBlueheader">Actions</p>
+                </div>
+                <div class="p-3 d-flex justify-content-between align-items-center border-color">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="" id="" value=""
+                      checked />
+                    <label class="form-check-label" for="">
+                      Lorem
+                    </label>
+                  </div>
+                  <img src="images/delete_red.svg" alt="delete button" class="pointer delete" />
+                </div>
+                <div class="p-3 d-flex justify-content-between align-items-center border-color">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="" id=""
+                      value="" />
+                    <label class="form-check-label" for="">
+                      Lorem
+                    </label>
+                  </div>
+                  <img src="images/delete_red.svg" alt="delete button" class="pointer delete" />
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- fILTER -->
+<div class="modal" tabindex="-1" id="filter">
+    <div class="modal-dialog custom-modal-1  modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-greyBlue">
+                <h5 class="modal-title Pinfo color-darkblue">Filter</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row col-12">
+                    <div class="col-6 mb-20">
+                        <label class="label" for="location-filter">Location</label>
+                        <select class="single-select input-item" aria-label="" id="location-filter">
+                            <option class="d-none" disabled selected>Select</option>
+                            <option value="1">List 1</option>
+                            <option value="2">List 2</option>
+                            <option value="3">List 3</option>
+                        </select>
+                    </div>
+                    <div class="col-6 mb-20">
+                        <label class="label" for="status-filter">Status</label>
+                        <select class="single-select input-item" aria-label="" id="status-filter">
+                            <option class="d-none" disabled selected>Select</option>
+                            <option value="1">List 1</option>
+                            <option value="2">List 2</option>
+                            <option value="3">List 3</option>
+                        </select>
+                    </div>
+                    <div class="col-6 mb-20">
+                        <label class="label" for="payer-filter">Payer</label>
+                        <select class="single-select input-item" aria-label="" id="payer-filter">
+                            <option class="d-none" disabled selected>Select</option>
+                            <option value="1">List 1</option>
+                            <option value="2">List 2</option>
+                            <option value="3">List 3</option>
+                        </select>
+                    </div>
+                    <div class="col-6 mb-20">
+                        <label class="label" for="care-type-filter">Care Type</label>
+                        <select class="single-select input-item" aria-label="" id="care-type-filter">
+                            <option class="d-none" disabled selected>Select</option>
+                            <option value="1">List 1</option>
+                            <option value="2">List 2</option>
+                            <option value="3">List 3</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <label class="label" for="LOB-filter">LOB</label>
+                        <select class="single-select input-item" aria-label="" id="LOB-filter">
+                            <option class="d-none" disabled selected>Select</option>
+                            <option value="1">List 1</option>
+                            <option value="2">List 2</option>
+                            <option value="3">List 3</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <label class="label" for="poc-filter">POC Status</label>
+                        <select class="single-select input-item" aria-label="" id="poc-filter">
+                            <option class="d-none" disabled selected>Select</option>
+                            <option value="1">List 1</option>
+                            <option value="2">List 2</option>
+                            <option value="3">List 3</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer d-flex">
+                <button class="btn btn-tertiary">Cancel</button>
+                <a href="#" class="btn btn-primary btn-modal-submit ms-3">Update</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" tabindex="-1" id="change">
+    <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-greyBlue">
+                <h5 class="modal-title Pinfo color-darkblue">Change LOB</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="">
+                    <div class="bg-greybox border-color radius-4 mb-20">
+                        <span class="text-title">Client: </span>
+                        <span class="text-description">Demo Test Client</span>
+                    </div>
+                    <div class="d-flex gap-20 mb-20">
+                        <div class="w-100">
+                            <label class="label" for="location-2-Pinfo">Location</label>
+                            <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                <option class="color-darkblue" disabled selected>
+                                    Jinisha
+                                </option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="w-100">
+                            <label class="label" for="LOB-Pinfo">LOB</label>
+                            <select class="single-select input-item" aria-label="LOB" id="LOB-Pinfo">
+                                <option class="color-darkblue" disabled selected>
+                                    Pediatric
+                                </option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-20">
+                        <div class="w-100">
+                            <label class="label" for="payer-2-Pinfo">Payer</label>
+                            <select class="single-select input-item" aria-label="payer" id="payer-2-Pinfo">
+                                <option class="color-darkblue" disabled selected>
+                                    00 - Primary-1 FL
+                                </option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="w-100">
+                            <p class="label">Care Type</p>
+                            <div class="d-flex gap-3 py-10">
+                                <div class="">
+                                    <div class="form-check">
+                                        <input class="form-check-input" checked type="radio" name="care type"
+                                            id="longTerm-Pinfo" value="Long Term Care" />
+                                        <label class="form-check-label color-darkblue" for="longTerm-Pinfo">
+                                            Long Term Care
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="form-check">
+                                        <input class="form-check-input color-darkblue" type="radio" name="care type"
+                                            id="intermittent-Pinfo" value="Intermittent Care" />
+                                        <label class="form-check-label" for="intermittent-Pinfo">
+                                            Intermittent Care
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!-- POPUP -->
+  <div class="modal" tabindex="-1" id="change-location">
+    <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-greyBlue">
+                <h5 class="modal-title Pinfo color-darkblue">Change Location</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="">
+                    <div class="bg-greybox border-color radius-4 mb-20">
+                        <span class="text-title">Client: </span>
+                        <span class="text-description">Demo Test Client</span>
+                    </div>
+                    <div class="d-flex gap-20 mb-20">
+                        <div class="w-100">
+                            <label class="label" for="location-2-Pinfo">Location</label>
+                            <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                <option class="color-darkblue" disabled selected>
+                                    Jinisha
+                                </option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="w-100">
+                            <label class="label" for="LOB-Pinfo">LOB</label>
+                            <select class="single-select input-item" aria-label="LOB" id="LOB-Pinfo">
+                                <option class="color-darkblue" disabled selected>
+                                    Pediatric
+                                </option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-20">
+                        <div class="w-100">
+                            <label class="label" for="payer-2-Pinfo">Payer</label>
+                            <select class="single-select input-item" aria-label="payer" id="payer-2-Pinfo">
+                                <option class="color-darkblue" disabled selected>
+                                    00 - Primary-1 FL
+                                </option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="w-100">
+                            <p class="label">Care Type</p>
+                            <div class="d-flex gap-3 py-10">
+                                <div class="">
+                                    <div class="form-check">
+                                        <input class="form-check-input" checked type="radio" name="care type"
+                                            id="longTerm-Pinfo" value="Long Term Care" />
+                                        <label class="form-check-label color-darkblue" for="longTerm-Pinfo">
+                                            Long Term Care
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="form-check">
+                                        <input class="form-check-input color-darkblue" type="radio" name="care type"
+                                            id="intermittent-Pinfo" value="Intermittent Care" />
+                                        <label class="form-check-label" for="intermittent-Pinfo">
+                                            Intermittent Care
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-multiselect.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- bootstrap js-->
+    <!-- <script type="text/javascript" src="js/popper.min.js"></script>
+          <script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+
+    <!-- datepicker js-->
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#reminder-on').change(function () {
+                if ($(this).is(':checked')) {
+                    $('.date-time-box').removeClass('d-none');
+                } else {
+                    $('.date-time-box').addClass('d-none');
+                }
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>

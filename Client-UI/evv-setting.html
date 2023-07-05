@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#0D87E2" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@100&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css" />
+    <!-- select -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-multiselect.min.css" />
+
+    <!-- datepicker -->
+    <link type="text/css" href="css/daterangepicker.css" />
+
+    <!-- Custom css -->
+
+    <link rel="stylesheet" type="text/css" href="css/common/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/client/client.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive/responsive.css" />
+
+    <!-- Bootstrap js -->
+
+    <!-- custom css -->
+
+    <title>Kantime | Referral</title>
+</head>
+
+<body style="width: 1366px; margin: auto">
+
+    <header>
+        <nav class="">
+            <div class="">
+                <img src="images/nav.svg" style="width: 100%" />
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="px-30 py-10">
+            <div class="d-flex justify-content-between align-items-center mb-10">
+                <div class="breadcrumb-container">
+                    <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="#">Client Intake List</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                John Doe
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="icon-container d-flex gap-3">
+                    <img src="images/Help.svg" alt="help-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Help List" />
+                    <img src="images/Mail.svg" alt="mail-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Mail" />
+                    <img src="images/Duplicate.svg" alt="duplicate-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Duplicate Tabs" />
+                    <img src="images/message.svg" alt="message-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Kantime Text"/>
+                </div>
+
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-20">
+                <h1>Client Profile</h1>
+                <div class="d-flex">
+                    <div class="search-bar position-relative mr-5">
+                        <input type="text" placeholder="Search Client" class="search-input w-100"
+                            style="background: #f4f5f6;">
+                        <img src="images/lens.svg" alt="search lens" class="lens">
+                    </div>
+                    <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#filter">
+                        <img src="images/filter.svg" alt="">
+                        Filter
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white border-color mt-10 radius-4 mb-20">
+                <div class="p-20 position-relative">
+                    <div class="d-flex flex-wrap justify-content-between">
+                        <div class="d-flex gap-25 align-items-center">
+                            <div class="profile-box d-flex justify-content-center align-items-center">
+                                <img src="images/avatar-pic.svg" alt="user profile picture" />
+                                <img src="images/camera.svg" alt="upload icon" class="upload" type="button"
+                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Upload Picture" />
+                            </div>
+                            <div class="d-flex flex-column">
+                                <p class="patient-title mb-15">John Doe</p>
+                                <div class="d-flex gap-20 mb-20">
+                                    <div>
+                                        <img src="images/Phone.svg" alt="phone icon" class="info-icon" />
+                                        <span class="info-icon-label">Call</span>
+                                    </div>
+                                    <div>
+                                        <img src="images/Email.svg" alt="mail icon" class="info-icon" />
+                                        <span class="info-icon-label">Email</span>
+                                    </div>
+                                    <div>
+                                        <img src="images/mappin.svg" alt="map pin icon" class="info-icon" />
+                                        <span class="info-icon-label">Address</span>
+                                    </div>
+                                </div>
+                                <div class="status-tag status-red">
+                                    <p>Conditionally accepted</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex" style="gap: 108px">
+                            <div class="d-flex flex-column">
+                                <div class="info-box">
+                                    <p class="info-title">LOB :</p>
+                                    <p class="info-description">Occupational Physiotherapy</p>
+                                    <button class="icon-box btn table-btn-icon" data-bs-toggle="modal"
+                                        data-bs-target="#change">
+                                        <img src="images/edit-pen.svg" alt="" class="icon-bg" data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom" title="Edit">
+                                    </button>
+
+
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Admit Number:</p>
+                                    <p class="info-description">1-176</p>
+                                    <div class="dropdown  mx-3">
+                                        <button class="icon-box btn btn-dot dropdown-toggle btn-dropdown-custom"
+                                            type="button" id="" data-bs-toggle="dropdown"
+                                            aria-expanded="false"></button>
+                                        <ul class="dropdown-menu" aria-labelledby="">
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">1-175</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">1-174</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">1-173</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Case Manager</p>
+                                    <p class="info-description">Daniel Cliff</p>
+                                    <div class="dropdown  mx-3">
+                                        <button class="icon-box btn btn-dot dropdown-toggle btn-dropdown-custom"
+                                            type="button" id="" data-bs-toggle="dropdown"
+                                            aria-expanded="false"></button>
+                                        <ul class="dropdown-menu" aria-labelledby="">
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">Daniel Cliff</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">AVI Test RN</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="dropdown-item">Staff Avi B/O</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Intake Date :</p>
+                                    <p class="info-description">01/03/1998</p>
+                                </div>
+
+                                <div class="info-box">
+                                    <p class="info-title">Location :</p>
+                                    <p class="info-description">Jinisha</p>
+                                    <button class="icon-box btn table-btn-icon mx-3" data-bs-toggle="modal"
+                                        data-bs-target="#change">
+                                        <img src="images/edit-pen.svg" alt="" class="icon-bg" data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom" title="Edit">
+                                    </button>
+                                </div>
+
+
+
+
+                            </div>
+                            <div class="">
+                                <div class="info-box">
+                                    <p class="info-title">Client Staus :</p>
+                                    <p class="info-description">Pending SOC</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">POC Status :</p>
+                                    <p class="info-description">Open</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">DOB :</p>
+                                    <p class="info-description">10/29/1999</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Intake Taken By :</p>
+                                    <p class="info-description">KanTime, Support</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="info-title">Eligibility:</p>
+                                    <p class="info-description red-text f-500">Not Verified</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column justify-content-start user-profile-dropdown">
+                            <div class="dropdown ms-3" style="margin-left: 133px !important;">
+                                <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                <ul class="dropdown-menu" style="right: auto; left: 0;"
+                                    aria-labelledby="dropdownMenuButton1">
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">Oasis Configuration</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">UB04 Setting</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">CMS 1500 Settings</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">Initial Order</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item">Checklist</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item ">Print</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item ">Print Address Label</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item ">Compose</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item ">Audit Logs</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item ">Back To referral</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item ">Non Admit</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#" class="dropdown-item red-text f-400">Delete Client</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-section">
+
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="patient-information.html" role="tab"
+                                aria-controls="general" aria-selected="false">General</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="payer-source-eligibility.html" role="tab"
+                                aria-controls="eligibility" aria-selected="false">Payer source & eligibility</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="documents.html" role="tab" aria-controls="Document"
+                                aria-selected="false">Document</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="records.html" role="tab" aria-controls="records"
+                                aria-selected="false">Records</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="service-rates.html" role="tab" aria-controls="service-rates"
+                                aria-selected="false">Service & Rates</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active " href="evv-setting.html" role="tab" aria-controls="evv"
+                                aria-selected="true">EVV Setting </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="intake-info.html" role="tab" aria-controls="intake-info"
+                                aria-selected="false">Intake Info</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="community-contact.html" role="tab" aria-controls="Commnunity contact"
+                                aria-selected="false">Commnunity Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="btn-menu-dropdown dropdown-toggle btn-dropdown-custom"
+                                    type="button" id="" data-bs-toggle="dropdown"
+                                    aria-expanded="false">More</button>
+                                <ul class="dropdown-menu" aria-labelledby="">
+                                    <li>
+                                        <a href="journal-notes.html" type="button" 
+                                             class="dropdown-item">Journal Note</a>
+                                    </li>
+                                    <li>
+                                        <a href="office-communication.html" type="button" 
+                                             class="dropdown-item">Office Communication</a>
+                                    </li>
+                                    <li>
+                                        <a href="vacations.html" type="button" 
+                                             class="dropdown-item">Vacation</a>
+                                    </li>
+                                    <li>
+                                        <a href="forms.html" type="button" 
+                                             class="dropdown-item">Forms</a>
+                                    </li>
+                                    <li>
+                                        <a href="cop.html" type="button" 
+                                             class="dropdown-item">COP</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white pb-1 ">
+                <div class="m-20">
+                    <div class="py-20  d-flex justify-content-between align-items-center border-bottom">
+                        <div class="d-flex gap-10 align-items-center">
+                            <div class="tab-content-heading">EVV Setting &nbsp;&nbsp; <span class="f-13 f-400"
+                                    style="color: #545B64;">(EVV Enabled : Yes)</span></div>
+                        </div>
+                        <div class="d-flex align-items-center gap-10">
+                            <p class="save-time">Last saved 2 mins ago</p>
+                            <button class="btn btn-tertiary">Save</button>
+                        </div>
+                    </div>
+                    <div class="evv-container">
+
+                        <div class="accordion accordion-flush border-color mb-20 mt-20" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                        aria-controls="flush-collapseOne">
+                                        EVV Vandor:&nbsp;&nbsp; <span class="f-700 f-14 lh-17">KanTime EVV V1.0</span>
+                                        <div class="d-flex mx-3">
+                                            <img src="images/edit-icon.svg" alt="edit icon"
+                                                style="width: 18px; height: 18px">
+                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                data-bs-target="#EVV-vendor-edit-popup"
+                                                class="text-decoration-none f-600 f-13 lh-17 ml-5">Edit</a>
+                                        </div>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="row col-12">
+
+                                            <div class="col-3 mb-20">
+                                                <label class="label" for="evv-setting-id">EVV Client ID</label>
+                                                <input disabled="" type="text" class="form-control input-item"
+                                                    id="evv-setting-id" placeholder="Enter" aria-label="name">
+                                            </div>
+
+                                            <div class="col-3 mb-20">
+                                                <label class="label" for="evv-setting-region">Region</label>
+                                                <input disabled="" type="text" class="form-control input-item"
+                                                    id="evv-setting-region" placeholder="Enter" aria-label="name">
+                                            </div>
+
+                                            <div class="col-3 mb-20">
+                                                <label class="label" for="evv-setting-SDA">EVV Patient SDA</label>
+                                                <input disabled="" type="text" class="form-control input-item"
+                                                    id="evv-setting-SDA" placeholder="Enter" aria-label="name">
+                                            </div>
+
+                                            <div class="col-3 mb-20">
+                                                <label class="label" for="evv-setting-contract">Contract
+                                                    Reference</label>
+                                                <input disabled="" type="text" class="form-control input-item"
+                                                    id="evv-setting-contract" placeholder="Enter" aria-label="name">
+                                            </div>
+
+                                            <div class="col-3 mb-20">
+                                                <label class="label" for="evv-setting-CCU">EVV CCU Contract
+                                                    Number</label>
+                                                <input disabled="" type="text" class="form-control input-item"
+                                                    id="evv-setting-CCU" placeholder="Enter" aria-label="name">
+                                            </div>
+
+                                            <div class="col-3 mb-20">
+                                                <label class="label" for="evv-setting-phone1">EVV Phone 1</label>
+                                                <input disabled="" type="text" class="form-control input-item"
+                                                    id="evv-setting-phone1" placeholder="Enter" aria-label="name">
+                                            </div>
+
+                                            <div class="col-3 mb-20">
+                                                <label class="label" for="evv-setting-phone2">EVV Phone 2</label>
+                                                <input disabled="" type="text" class="form-control input-item"
+                                                    id="evv-setting-phone2" placeholder="Enter" aria-label="name">
+                                            </div>
+
+                                            <div class="col-3 mb-20">
+                                                <label class="label" for="evv-setting-phone3">EVV Phone 3</label>
+                                                <input disabled="" type="text" class="form-control input-item"
+                                                    id="evv-setting-phone3" placeholder="Enter" aria-label="name">
+                                            </div>
+
+
+                                            <div class="col-3 ">
+                                                <label class="label" for="evv-setting-priority">Priority</label>
+                                                <input disabled="" type="text" class="form-control input-item"
+                                                    id="evv-setting-priority" placeholder="Enter" aria-label="name">
+                                            </div>
+
+
+                                            <div class="col-3 ">
+                                                <label class="label" for="evv-setting-coordinator">Coordinator
+                                                    ID</label>
+                                                <input disabled="" type="text" class="form-control input-item"
+                                                    id="evv-setting-coordinator" placeholder="Enter" aria-label="name">
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion accordion-flush border-color mb-20" id="accordionFlushExample-1">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                        aria-controls="flush-collapseTwo">
+                                        Aggregator:&nbsp;&nbsp; <span class="f-700 f-14 lh-17">HHAeXchange FL
+                                            -V4.0</span>
+                                        <div class="d-flex mx-3">
+                                            <img src="images/edit-icon.svg" alt="edit icon"
+                                                style="width: 18px; height: 18px">
+                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                data-bs-target="#EVV-aggregator-edit-popup"
+                                                class="text-decoration-none f-600 f-13 lh-17 ml-5">Edit</a>
+                                        </div>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="row col-12">
+
+                                            <div class="col-3 mb-20">
+                                                <label class="label" for="evv-setting-aggregator-id">EVV Client
+                                                    ID</label>
+                                                <input disabled="" type="text" class="form-control input-item"
+                                                    id="evv-setting-aggregator-id" placeholder="Enter"
+                                                    aria-label="name">
+                                            </div>
+
+                                            <div class="col-3 mb-20">
+                                                <label class="label" for="evv-setting-aggregator-region">Region</label>
+                                                <input disabled="" type="text" class="form-control input-item"
+                                                    id="evv-setting-aggregator-region" placeholder="Enter"
+                                                    aria-label="name">
+                                            </div>
+
+                                            <div class="col-3 mb-20">
+                                                <label class="label" for="evv-setting-aggregator-SDA">EVV Patient
+                                                    SDA</label>
+                                                <input disabled="" type="text" class="form-control input-item"
+                                                    id="evv-setting-aggregator-SDA" placeholder="Enter"
+                                                    aria-label="name">
+                                            </div>
+
+                                            <div class="col-3 mb-20">
+                                                <label class="label" for="evv-setting-aggregator-contract">Contract
+                                                    Reference</label>
+                                                <input disabled="" type="text" class="form-control input-item"
+                                                    id="evv-setting-aggregator-contract" placeholder="Enter"
+                                                    aria-label="name">
+                                            </div>
+
+                                            <div class="col-3 mb-20">
+                                                <label class="label" for="evv-setting-aggregator-CCU">EVV CCU Contract
+                                                    Number</label>
+                                                <input disabled="" type="text" class="form-control input-item"
+                                                    id="evv-setting-aggregator-CCU" placeholder="Enter"
+                                                    aria-label="name">
+                                            </div>
+
+                                            <div class="col-3 mb-20">
+                                                <label class="label" for="evv-setting-aggregator-phone1">EVV Phone
+                                                    1</label>
+                                                <input disabled="" type="text" class="form-control input-item"
+                                                    id="evv-setting-aggregator-phone1" placeholder="Enter"
+                                                    aria-label="name">
+                                            </div>
+
+                                            <div class="col-3 mb-20">
+                                                <label class="label" for="evv-setting-aggregator-phone2">EVV Phone
+                                                    2</label>
+                                                <input disabled="" type="text" class="form-control input-item"
+                                                    id="evv-setting-aggregator-phone2" placeholder="Enter"
+                                                    aria-label="name">
+                                            </div>
+
+                                            <div class="col-3 mb-20">
+                                                <label class="label" for="evv-setting-aggregator-phone3">EVV Phone
+                                                    3</label>
+                                                <input disabled="" type="text" class="form-control input-item"
+                                                    id="evv-setting-aggregator-phone3" placeholder="Enter"
+                                                    aria-label="name">
+                                            </div>
+
+
+                                            <div class="col-3 ">
+                                                <label class="label"
+                                                    for="evv-setting-aggregator-priority">Priority</label>
+                                                <input disabled="" type="text" class="form-control input-item"
+                                                    id="evv-setting-aggregator-priority" placeholder="Enter"
+                                                    aria-label="name">
+                                            </div>
+
+
+                                            <div class="col-3 ">
+                                                <label class="label"
+                                                    for="evv-setting-aggregator-coordinator">Coordinator ID</label>
+                                                <input disabled="" type="text" class="form-control input-item"
+                                                    id="evv-setting-aggregator-coordinator" placeholder="Enter"
+                                                    aria-label="name">
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-color">
+                            <div class="p-15 d-grid grid-line align-items-center bg-lightGrey">
+                                <div class="d-flex">
+                                    <p class="tab-heading">EVV Client Designees</p>
+                                    <div class="d-flex">
+                                        <img src="images/plus-icon.svg" alt="plus icon"
+                                            style="width: 18px; height: 18px">
+                                        <a href="javascript:void(0)" data-bs-toggle="modal"
+                                            data-bs-target="#EVV-client-designees"
+                                            class="text-decoration-none f-600 f-13 lh-17">Add Client Designee</a>
+                                    </div>
+                                </div>
+                                <hr class="modal-line">
+                            </div>
+
+                            <div class="p-15">
+                                <table class="table  table-type-1" id="evv-client-designees-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Status</th>
+                                            <th>Start Date</th>
+                                            <th>End Date</th>
+                                            <th>Relations</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                1. Test
+                                            </td>
+                                            <td class="">
+                                                <div class="status-tag status-green mx-3 fit-content-w">
+                                                    <p>Active</p>
+                                                </div>
+                                            </td>
+                                            <td>(244) 445-4586</td>
+                                            <td>(244) 445-4586</td>
+                                            <td>Courst Appointed Rep</td>
+                                            <td>
+                                                <div class="d-flex gap-10">
+
+                                                    <button type="button"
+                                                        class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#edit-document-info-popup">
+                                                        <img src="images/edit-icon.svg" alt="edit">
+                                                    </button>
+                                                    <img src="images/delete_red.svg" alt="delete button"
+                                                        class="pointer delete">
+                                                </div>
+
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                1. Test
+                                            </td>
+                                            <td>
+                                                <div class="status-tag status-green mx-3 fit-content-w">
+                                                    <p>Active</p>
+                                                </div>
+                                            </td>
+                                            <td>(244) 445-4586</td>
+                                            <td>(244) 445-4586</td>
+                                            <td>Courst Appointed Rep</td>
+                                            <td>
+                                                <div class="d-flex gap-10">
+
+                                                    <button type="button"
+                                                        class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#edit-document-info-popup">
+                                                        <img src="images/edit-icon.svg" alt="edit">
+                                                    </button>
+                                                    <img src="images/delete_red.svg" alt="delete button"
+                                                        class="pointer delete">
+                                                </div>
+
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                1. Test
+                                            </td>
+                                            <td>
+                                                <div class="status-tag status-green mx-3 fit-content-w">
+                                                    <p>Active</p>
+                                                </div>
+                                            </td>
+                                            <td>(244) 445-4586</td>
+                                            <td>(244) 445-4586</td>
+                                            <td>Courst Appointed Rep</td>
+                                            <td>
+                                                <div class="d-flex gap-10">
+
+                                                    <button type="button"
+                                                        class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#edit-document-info-popup">
+                                                        <img src="images/edit-icon.svg" alt="edit">
+                                                    </button>
+                                                    <img src="images/delete_red.svg" alt="delete button"
+                                                        class="pointer delete">
+                                                </div>
+
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                1. Test
+                                            </td>
+                                            <td>
+                                                <div class="status-tag status-green mx-3 fit-content-w">
+                                                    <p>Active</p>
+                                                </div>
+                                            </td>
+                                            <td>(244) 445-4586</td>
+                                            <td>(244) 445-4586</td>
+                                            <td>Courst Appointed Rep</td>
+                                            <td>
+                                                <div class="d-flex gap-10">
+
+                                                    <button type="button"
+                                                        class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#edit-document-info-popup">
+                                                        <img src="images/edit-icon.svg" alt="edit">
+                                                    </button>
+                                                    <img src="images/delete_red.svg" alt="delete button"
+                                                        class="pointer delete">
+                                                </div>
+
+
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- POPUP -->
+
+    <!-- EVV VENDOR EDIT -->
+    <div class="modal" tabindex="-1" id="EVV-vendor-edit-popup">
+        <div class="modal-dialog custom-modal-4 modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">
+                        Edit
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row col-12">
+
+                        <div class="col-3 mb-20">
+                            <label class="label" for="evv-setting-id-edit">EVV Client ID</label>
+                            <input type="text" class="form-control input-item" id="evv-setting-id-edit"
+                                placeholder="Enter" aria-label="name">
+                        </div>
+
+                        <div class="col-3 mb-20">
+                            <label class="label" for="evv-setting-region-edit">Region</label>
+                            <input type="text" class="form-control input-item" id="evv-setting-region-edit"
+                                placeholder="Enter" aria-label="name">
+                        </div>
+
+                        <div class="col-3 mb-20">
+                            <label class="label" for="evv-setting-SDA-edit">EVV Patient SDA</label>
+                            <input type="text" class="form-control input-item" id="evv-setting-SDA-edit"
+                                placeholder="Enter" aria-label="name">
+                        </div>
+
+                        <div class="col-3 mb-20">
+                            <label class="label" for="evv-setting-contract-edit">Contract Reference</label>
+                            <input type="text" class="form-control input-item" id="evv-setting-contract-edit"
+                                placeholder="Enter" aria-label="name">
+                        </div>
+
+                        <div class="col-3 mb-20">
+                            <label class="label" for="evv-setting-CCU-edit">EVV CCU Contract Number</label>
+                            <input type="text" class="form-control input-item" id="evv-setting-CCU-edit"
+                                placeholder="Enter" aria-label="name">
+                        </div>
+
+                        <div class="col-3 mb-20">
+                            <label class="label" for="evv-setting-phone1-edit">EVV Phone 1</label>
+                            <input type="text" class="form-control input-item" id="evv-setting-phone1-edit"
+                                placeholder="Enter" aria-label="name">
+                        </div>
+
+                        <div class="col-3 mb-20">
+                            <label class="label" for="evv-setting-phone2-edit">EVV Phone 2</label>
+                            <input type="text" class="form-control input-item" id="evv-setting-phone2-edit"
+                                placeholder="Enter" aria-label="name">
+                        </div>
+
+                        <div class="col-3 mb-20">
+                            <label class="label" for="evv-setting-phone3-edit">EVV Phone 3</label>
+                            <input type="text" class="form-control input-item" id="evv-setting-phone3-edit"
+                                placeholder="Enter" aria-label="name">
+                        </div>
+
+
+                        <div class="col-3 ">
+                            <label class="label" for="evv-setting-priority-edit">Priority</label>
+                            <input type="text" class="form-control input-item" id="evv-setting-priority-edit"
+                                placeholder="Enter" aria-label="name">
+                        </div>
+
+
+                        <div class="col-3 ">
+                            <label class="label" for="evv-setting-coordinator-edit">Coordinator ID</label>
+                            <input type="text" class="form-control input-item" id="evv-setting-coordinator-edit"
+                                placeholder="Enter" aria-label="name">
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+
+                    <a href="javascript:void(0)" type="button" class="btn btn-primary btn-modal-submit ms-3"
+                        data-bs-toggle="modal" data-bs-target="#change-payer-source-date-edit-summary">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EVV AGGREGATOR EDIT -->
+    <!-- EVV-aggregator-edit-popup -->
+    <div class="modal" tabindex="-1" id="EVV-aggregator-edit-popup">
+        <div class="modal-dialog custom-modal-4 modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">
+                        Edit
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row col-12">
+
+                        <div class="col-3 mb-20">
+                            <label class="label" for="evv-setting-aggregator-id-edit">EVV Client ID</label>
+                            <input type="text" class="form-control input-item" id="evv-setting-aggregator-id-edit"
+                                placeholder="Enter" aria-label="name">
+                        </div>
+
+                        <div class="col-3 mb-20">
+                            <label class="label" for="evv-setting-aggregator-region-edit">Region</label>
+                            <input type="text" class="form-control input-item" id="evv-setting-aggregator-region-edit"
+                                placeholder="Enter" aria-label="name">
+                        </div>
+
+                        <div class="col-3 mb-20">
+                            <label class="label" for="evv-setting-aggregator-SDA-edit">EVV Patient SDA</label>
+                            <input type="text" class="form-control input-item" id="evv-setting-aggregator-SDA-edit"
+                                placeholder="Enter" aria-label="name">
+                        </div>
+
+                        <div class="col-3 mb-20">
+                            <label class="label" for="evv-setting-aggregator-contract-edit">Contract Reference</label>
+                            <input type="text" class="form-control input-item" id="evv-setting-aggregator-contract-edit"
+                                placeholder="Enter" aria-label="name">
+                        </div>
+
+                        <div class="col-3 mb-20">
+                            <label class="label" for="evv-setting-aggregator-CCU-edit">EVV CCU Contract Number</label>
+                            <input type="text" class="form-control input-item" id="evv-setting-aggregator-CCU-edit"
+                                placeholder="Enter" aria-label="name">
+                        </div>
+
+                        <div class="col-3 mb-20">
+                            <label class="label" for="evv-setting-aggregator-phone1-edit">EVV Phone 1</label>
+                            <input type="text" class="form-control input-item" id="evv-setting-aggregator-phone1-edit"
+                                placeholder="Enter" aria-label="name">
+                        </div>
+
+                        <div class="col-3 mb-20">
+                            <label class="label" for="evv-setting-aggregator-phone2-edit">EVV Phone 2</label>
+                            <input type="text" class="form-control input-item" id="evv-setting-aggregator-phone2-edit"
+                                placeholder="Enter" aria-label="name">
+                        </div>
+
+                        <div class="col-3 mb-20">
+                            <label class="label" for="evv-setting-aggregator-phone3-edit">EVV Phone 3</label>
+                            <input type="text" class="form-control input-item" id="evv-setting-aggregator-phone3-edit"
+                                placeholder="Enter" aria-label="name">
+                        </div>
+
+
+                        <div class="col-3 ">
+                            <label class="label" for="evv-setting-aggregator-priority-edit">Priority</label>
+                            <input type="text" class="form-control input-item" id="evv-setting-aggregator-priority-edit"
+                                placeholder="Enter" aria-label="name">
+                        </div>
+
+
+                        <div class="col-3 ">
+                            <label class="label" for="evv-setting-aggregator-coordinator-edit">Coordinator ID</label>
+                            <input type="text" class="form-control input-item"
+                                id="evv-setting-aggregator-coordinator-edit" placeholder="Enter" aria-label="name">
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+
+                    <a href="javascript:void(0)" type="button" class="btn btn-primary btn-modal-submit ms-3"
+                        data-bs-toggle="modal" data-bs-target="#change-payer-source-date-edit-summary">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EVV-client-designees -->
+    <div class="modal" tabindex="-1" id="EVV-client-designees">
+        <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">
+                        Add New EVV Client Designee
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row col-12">
+                        <div class="col-6 mb-20">
+                            <label class="label" for="evv-client-first-name">First Name</label>
+                            <input type="text" class="form-control input-item" id="evv-client-first-name"
+                                placeholder="Enter" aria-label="">
+                        </div>
+                        <div class="col-6 mb-20">
+                            <label class="label" for="evv-client-last-name">Last Name</label>
+                            <input type="text" class="form-control input-item" id="evv-client-last-name"
+                                placeholder="Enter" aria-label="">
+                        </div>
+
+                        <div class="col-6 mb-20">
+                            <div class="d-flex justify-content-between">
+                                <label class="label" for="evv-client-relation">Relation</label>
+                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-new-relation"
+                                    class="link-blue">Add</a>
+                            </div>
+                            <select class="single-select input-item" aria-label="Default select example"
+                                id="evv-client-relation">
+                                <option selected>Select</option>
+                                <option value="2">Agency 1</option>
+                                <option value="2">Agency 2</option>
+                                <option value="2">Agency 3</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mb-20">
+                            <label class="label" for="evv-client-email">Email</label>
+                            <input type="text" class="form-control input-item" id="evv-client-email" placeholder="Enter"
+                                aria-label="">
+                        </div>
+
+                        <div class="col-6 mb-20">
+                            <label class="form-label" for="EVV-client-start-date">Designee Start Date</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control input-item" id="EVV-client-start-date"
+                                    placeholder="01/02/1998">
+                                <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                            </div>
+                        </div>
+                        <div class="col-6 mb-20">
+                            <label class="form-label" for="EVV-client-end-date">Designee End Date</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control input-item" id="EVV-client-end-date"
+                                    placeholder="01/02/1998">
+                                <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <label class="label" for="EVV-client-status">Status</label>
+                            <select class="single-select input-item" aria-label="location" id="EVV-client-status">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+
+                    <a href="javascript:void(0)" type="button" class="btn btn-primary btn-modal-submit ms-3"
+                        data-bs-toggle="modal" data-bs-target="#change-payer-source-date-edit-summary">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ADD NEW RELATION -->
+    <div class="modal" tabindex="-1" id="add-new-relation">
+        <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">
+                        Add New Relation
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                 
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <span class="add-text">New Relation</span>
+    <div class="position-relative">
+        <input type="text" class="form-control input-item" id="new-language"
+            placeholder="Enter new relation here" aria-label="Enter new Relation"
+            style="width: 286px">
+        <button class="btn btn-inside">Add to List</button>
+    </div>
+</div>
+<div class="border-color radius-4">
+    <div class="bg-greyHeader p-3 d-flex justify-content-between align-items-center">
+        <p class="f-500 f-13 lh-17 color-greyBlueheader">Note Type</p>
+        <p class="f-500 f-13 lh-17 color-greyBlueheader">Actions</p>
+    </div>
+    <div class="p-3 d-flex justify-content-between align-items-center border-color">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="language" id="loream-1"
+                value="English" checked="">
+            <label class="form-check-label" for="loream-1">
+                Lorem Ipsum
+            </label>
+        </div>
+        <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+    </div>
+    <div class="p-3 d-flex justify-content-between align-items-center border-color">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="language" id="loream-2"
+                value="Spanish">
+            <label class="form-check-label" for="loream-2">
+                Lorem Ipsum
+            </label>
+        </div>
+        <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+    </div>
+    <div class="p-3 d-flex justify-content-between align-items-center border-color">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="language" id="loream-3"
+                value="Spanish">
+            <label class="form-check-label" for="loream-3">
+                Lorem Ipsum
+            </label>
+        </div>
+        <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+    </div>
+</div>
+</div>
+
+                </div>
+                <div class="modal-footer">
+
+                    <a href="javascript:void(0)" type="button" class="btn btn-primary btn-modal-submit ms-3"
+                        data-bs-toggle="modal" data-bs-target="#change-payer-source-date-edit-summary">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="filter">
+        <div class="modal-dialog custom-modal-1  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Filter</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row col-12">
+                        <div class="col-6 mb-20">
+                            <label class="label" for="location-filter">Location</label>
+                            <select class="single-select input-item" aria-label="" id="location-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mb-20">
+                            <label class="label" for="status-filter">Status</label>
+                            <select class="single-select input-item" aria-label="" id="status-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mb-20">
+                            <label class="label" for="payer-filter">Payer</label>
+                            <select class="single-select input-item" aria-label="" id="payer-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mb-20">
+                            <label class="label" for="care-type-filter">Care Type</label>
+                            <select class="single-select input-item" aria-label="" id="care-type-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label class="label" for="LOB-filter">LOB</label>
+                            <select class="single-select input-item" aria-label="" id="LOB-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label class="label" for="poc-filter">POC Status</label>
+                            <select class="single-select input-item" aria-label="" id="poc-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer d-flex">
+                    <button class="btn btn-tertiary">Cancel</button>
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Update</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="change">
+        <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Change LOB</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        <div class="bg-greybox border-color radius-4 mb-20">
+                            <span class="text-title">Client: </span>
+                            <span class="text-description">Demo Test Client</span>
+                        </div>
+                        <div class="d-flex gap-20 mb-20">
+                            <div class="w-100">
+                                <label class="label" for="location-2-Pinfo">Location</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Jinisha
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100">
+                                <label class="label" for="LOB-Pinfo">LOB</label>
+                                <select class="single-select input-item" aria-label="LOB" id="LOB-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Pediatric
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-20">
+                            <div class="w-100">
+                                <label class="label" for="payer-2-Pinfo">Payer</label>
+                                <select class="single-select input-item" aria-label="payer" id="payer-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        00 - Primary-1 FL
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100">
+                                <p class="label">Care Type</p>
+                                <div class="d-flex gap-3 py-10">
+                                    <div class="">
+                                        <div class="form-check">
+                                            <input class="form-check-input" checked type="radio" name="care type"
+                                                id="longTerm-Pinfo" value="Long Term Care" />
+                                            <label class="form-check-label color-darkblue" for="longTerm-Pinfo">
+                                                Long Term Care
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="form-check">
+                                            <input class="form-check-input color-darkblue" type="radio" name="care type"
+                                                id="intermittent-Pinfo" value="Intermittent Care" />
+                                            <label class="form-check-label" for="intermittent-Pinfo">
+                                                Intermittent Care
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <!-- POPUP -->
+      <div class="modal" tabindex="-1" id="change-location">
+        <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Change Location</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        <div class="bg-greybox border-color radius-4 mb-20">
+                            <span class="text-title">Client: </span>
+                            <span class="text-description">Demo Test Client</span>
+                        </div>
+                        <div class="d-flex gap-20 mb-20">
+                            <div class="w-100">
+                                <label class="label" for="location-2-Pinfo">Location</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Jinisha
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100">
+                                <label class="label" for="LOB-Pinfo">LOB</label>
+                                <select class="single-select input-item" aria-label="LOB" id="LOB-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Pediatric
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-20">
+                            <div class="w-100">
+                                <label class="label" for="payer-2-Pinfo">Payer</label>
+                                <select class="single-select input-item" aria-label="payer" id="payer-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        00 - Primary-1 FL
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100">
+                                <p class="label">Care Type</p>
+                                <div class="d-flex gap-3 py-10">
+                                    <div class="">
+                                        <div class="form-check">
+                                            <input class="form-check-input" checked type="radio" name="care type"
+                                                id="longTerm-Pinfo" value="Long Term Care" />
+                                            <label class="form-check-label color-darkblue" for="longTerm-Pinfo">
+                                                Long Term Care
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="form-check">
+                                            <input class="form-check-input color-darkblue" type="radio" name="care type"
+                                                id="intermittent-Pinfo" value="Intermittent Care" />
+                                            <label class="form-check-label" for="intermittent-Pinfo">
+                                                Intermittent Care
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-multiselect.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- bootstrap js-->
+    <!-- <script type="text/javascript" src="js/popper.min.js"></script>
+         <script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+
+    <!-- datepicker js-->
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+
+
+</body>
+
+</html>
+
+
+
+
