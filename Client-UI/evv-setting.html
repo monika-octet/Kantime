@@ -64,10 +64,14 @@
                     </nav>
                 </div>
                 <div class="icon-container d-flex gap-3">
-                    <img src="images/Help.svg" alt="help-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Help List" />
-                    <img src="images/Mail.svg" alt="mail-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Mail" />
-                    <img src="images/Duplicate.svg" alt="duplicate-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Duplicate Tabs" />
-                    <img src="images/message.svg" alt="message-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Kantime Text"/>
+                    <img src="images/Help.svg" alt="help-icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        title="Open Help List" />
+                    <img src="images/Mail.svg" alt="mail-icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        title="Open Mail" />
+                    <img src="images/Duplicate.svg" alt="duplicate-icon" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" title="Open Duplicate Tabs" />
+                    <img src="images/message.svg" alt="message-icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        title="Open Kantime Text" />
                 </div>
 
             </div>
@@ -310,34 +314,30 @@
                                 aria-selected="false">Intake Info</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="community-contact.html" role="tab" aria-controls="Commnunity contact"
-                                aria-selected="false">Commnunity Contacts</a>
+                            <a class="nav-link" href="community-contact.html" role="tab"
+                                aria-controls="Commnunity contact" aria-selected="false">Commnunity Contacts</a>
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">
-                                <button class="btn-menu-dropdown dropdown-toggle btn-dropdown-custom"
-                                    type="button" id="" data-bs-toggle="dropdown"
-                                    aria-expanded="false">More</button>
+                                <button class="btn-menu-dropdown dropdown-toggle btn-dropdown-custom" type="button"
+                                    id="" data-bs-toggle="dropdown" aria-expanded="false">More</button>
                                 <ul class="dropdown-menu" aria-labelledby="">
                                     <li>
-                                        <a href="journal-notes.html" type="button" 
-                                             class="dropdown-item">Journal Note</a>
+                                        <a href="journal-notes.html" type="button" class="dropdown-item">Journal
+                                            Note</a>
                                     </li>
                                     <li>
-                                        <a href="office-communication.html" type="button" 
-                                             class="dropdown-item">Office Communication</a>
+                                        <a href="office-communication.html" type="button" class="dropdown-item">Office
+                                            Communication</a>
                                     </li>
                                     <li>
-                                        <a href="vacations.html" type="button" 
-                                             class="dropdown-item">Vacation</a>
+                                        <a href="vacations.html" type="button" class="dropdown-item">Vacation</a>
                                     </li>
                                     <li>
-                                        <a href="forms.html" type="button" 
-                                             class="dropdown-item">Forms</a>
+                                        <a href="forms.html" type="button" class="dropdown-item">Forms</a>
                                     </li>
                                     <li>
-                                        <a href="cop.html" type="button" 
-                                             class="dropdown-item">COP</a>
+                                        <a href="cop.html" type="button" class="dropdown-item">COP</a>
                                     </li>
                                 </ul>
                             </div>
@@ -372,7 +372,7 @@
                                                 style="width: 18px; height: 18px">
                                             <a href="javascript:void(0)" data-bs-toggle="modal"
                                                 data-bs-target="#EVV-vendor-edit-popup"
-                                                class="text-decoration-none f-600 f-13 lh-17 ml-5">Edit</a>
+                                                class="text-decoration-none f-600 f-13 lh-17 ml-5 stop-prop">Edit</a>
                                         </div>
                                     </button>
                                 </h2>
@@ -467,7 +467,7 @@
                                                 style="width: 18px; height: 18px">
                                             <a href="javascript:void(0)" data-bs-toggle="modal"
                                                 data-bs-target="#EVV-aggregator-edit-popup"
-                                                class="text-decoration-none f-600 f-13 lh-17 ml-5">Edit</a>
+                                                class="text-decoration-none f-600 f-13 lh-17 ml-5 stop-prop">Edit</a>
                                         </div>
                                     </button>
                                 </h2>
@@ -565,7 +565,7 @@
                             </div>
                         </div>
 
-                        <div class="border-color">
+                        <div class="border-color mb-20">
                             <div class="p-15 d-grid grid-line align-items-center bg-lightGrey">
                                 <div class="d-flex">
                                     <p class="tab-heading">EVV Client Designees</p>
@@ -584,12 +584,12 @@
                                 <table class="table  table-type-1" id="evv-client-designees-table">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Status</th>
-                                            <th>Start Date</th>
-                                            <th>End Date</th>
-                                            <th>Relations</th>
-                                            <th>Actions</th>
+                                            <th style="width: 300px;">Name</th>
+                                            <th style="width: 180px;">Status</th>
+                                            <th style="width: 200px;">Start Date</th>
+                                            <th style="width: 200px;">End Date</th>
+                                            <th style="width: 180px;">Relations</th>
+                                            <th style="width: 100px;">Actions</th>
                                         </tr>
                                     </thead>
 
@@ -612,7 +612,7 @@
                                                     <button type="button"
                                                         class="btn table-btn-icon d-flex justify-content-center align-items-center"
                                                         data-bs-toggle="modal"
-                                                        data-bs-target="#edit-document-info-popup">
+                                                        data-bs-target="#EVV-client-designees-edit">
                                                         <img src="images/edit-icon.svg" alt="edit">
                                                     </button>
                                                     <img src="images/delete_red.svg" alt="delete button"
@@ -640,7 +640,7 @@
                                                     <button type="button"
                                                         class="btn table-btn-icon d-flex justify-content-center align-items-center"
                                                         data-bs-toggle="modal"
-                                                        data-bs-target="#edit-document-info-popup">
+                                                        data-bs-target="#EVV-client-designees-edit">
                                                         <img src="images/edit-icon.svg" alt="edit">
                                                     </button>
                                                     <img src="images/delete_red.svg" alt="delete button"
@@ -668,7 +668,7 @@
                                                     <button type="button"
                                                         class="btn table-btn-icon d-flex justify-content-center align-items-center"
                                                         data-bs-toggle="modal"
-                                                        data-bs-target="#edit-document-info-popup">
+                                                        data-bs-target="#EVV-client-designees-edit">
                                                         <img src="images/edit-icon.svg" alt="edit">
                                                     </button>
                                                     <img src="images/delete_red.svg" alt="delete button"
@@ -696,7 +696,7 @@
                                                     <button type="button"
                                                         class="btn table-btn-icon d-flex justify-content-center align-items-center"
                                                         data-bs-toggle="modal"
-                                                        data-bs-target="#edit-document-info-popup">
+                                                        data-bs-target="#EVV-client-designees-edit">
                                                         <img src="images/edit-icon.svg" alt="edit">
                                                     </button>
                                                     <img src="images/delete_red.svg" alt="delete button"
@@ -713,6 +713,217 @@
                             </div>
 
 
+                        </div>
+
+                        <div class="border-color mb-20">
+                            <div class="p-15 d-grid grid-line align-items-center bg-lightGrey">
+                                <div class="d-flex">
+                                    <p class="tab-heading">EVV Service Codes</p>
+                                    <div class="d-flex gap-2">
+                                        <img src="images/exclaim-small.svg" alt="" data-bs-toggle="tooltip"
+                                            data-bs-placement="right"
+                                            title="Note: EVV Service Codes set in service profile can be overridden for the client.">
+                                        <img src="images/plus-icon.svg" alt="plus icon"
+                                            style="width: 18px; height: 18px">
+                                        <a href="javascript:void(0)" data-bs-toggle="modal"
+                                            data-bs-target="#add-new-service-popup"
+                                            class="text-decoration-none f-600 f-13 lh-17 w-100">Add Services</a>
+                                    </div>
+                                </div>
+                                <hr class="modal-line">
+                            </div>
+                            <div class="p-15">
+                                <table class="table  table-type-1" id="patient-representative-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 244px;">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id=""><span>Payer</span>
+                                            </th>
+                                            <th style="width: 300px;">Service</th>
+                                            <th style="width: 125px;">Override Codes</th>
+                                            <th style="width: 80px;">HCPCS</th>
+                                            <th style="width: 80px;">Modifier 1</th>
+                                            <th style="width: 80px;">Modifier 2</th>
+                                            <th style="width: 80px;">Modifier 3</th>
+                                            <th style="width: 80px;">Modifier 4</th>
+                                            <th style="width: 72px;">Actions</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input class="form-check-input treatment-address-checkbox"
+                                                    type="checkbox" value="" id="">
+                                                <span>Avi_PediatricPayer</span>
+                                            </td>
+                                            <td>Pediatric Resumption of Care VN - 141</td>
+                                            <td>
+                                                <img src="images/red-cross.svg" alt="">
+                                            </td>
+                                            <td>
+                                                123
+                                            </td>
+                                            <td>
+                                                24
+                                            </td>
+                                            <td>
+                                                22
+                                            </td>
+                                            <td>
+                                                21
+                                            </td>
+                                            <td>
+                                                11
+                                            </td>
+
+                                            <td>
+                                                <div class="d-flex gap-10">
+
+                                                    <button type="button"
+                                                        class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#edit-client-evv-settings">
+                                                        <img src="images/edit-icon.svg" alt="edit">
+                                                    </button>
+                                                    <img src="images/delete_red.svg" alt="delete button"
+                                                        class="pointer delete">
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <input class="form-check-input treatment-address-checkbox"
+                                                    type="checkbox" value="" id="">
+                                                <span>Avi_PediatricPayer</span>
+                                            </td>
+                                            <td>Pediatric Resumption of Care VN - 141</td>
+                                            <td>
+                                                <img src="images/green-tick.svg" alt="">
+                                            </td>
+                                            <td>
+                                                123
+                                            </td>
+                                            <td>
+                                                24
+                                            </td>
+                                            <td>
+                                                22
+                                            </td>
+                                            <td>
+                                                21
+                                            </td>
+                                            <td>
+                                                11
+                                            </td>
+
+                                            <td>
+                                                <div class="d-flex gap-10">
+
+                                                    <button type="button"
+                                                        class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#edit-client-evv-settings">
+                                                        <img src="images/edit-icon.svg" alt="edit">
+                                                    </button>
+                                                    <img src="images/delete_red.svg" alt="delete button"
+                                                        class="pointer delete">
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <input class="form-check-input treatment-address-checkbox"
+                                                    type="checkbox" value="" id="">
+                                                <span>Avi_PediatricPayer</span>
+                                            </td>
+                                            <td>Pediatric Resumption of Care VN - 141</td>
+                                            <td>
+                                                <img src="images/red-cross.svg" alt="">
+                                            </td>
+                                            <td>
+                                                123
+                                            </td>
+                                            <td>
+                                                24
+                                            </td>
+                                            <td>
+                                                22
+                                            </td>
+                                            <td>
+                                                21
+                                            </td>
+                                            <td>
+                                                11
+                                            </td>
+
+                                            <td>
+                                                <div class="d-flex gap-10">
+
+                                                    <button type="button"
+                                                        class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#edit-client-evv-settings">
+                                                        <img src="images/edit-icon.svg" alt="edit">
+                                                    </button>
+                                                    <img src="images/delete_red.svg" alt="delete button"
+                                                        class="pointer delete">
+                                                </div>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>
+                                                <input class="form-check-input treatment-address-checkbox"
+                                                    type="checkbox" value="" id="">
+                                                <span>Avi_PediatricPayer</span>
+                                            </td>
+                                            <td>Pediatric Resumption of Care VN - 141</td>
+                                            <td>
+                                                <img src="images/green-tick.svg" alt="">
+                                            </td>
+                                            <td>
+                                                123
+                                            </td>
+                                            <td>
+                                                24
+                                            </td>
+                                            <td>
+                                                22
+                                            </td>
+                                            <td>
+                                                21
+                                            </td>
+                                            <td>
+                                                11
+                                            </td>
+
+                                            <td>
+                                                <div class="d-flex gap-10">
+
+                                                    <button type="button"
+                                                        class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#edit-client-evv-settings">
+                                                        <img src="images/edit-icon.svg" alt="edit">
+                                                    </button>
+                                                    <img src="images/delete_red.svg" alt="delete button"
+                                                        class="pointer delete">
+                                                </div>
+                                            </td>
+                                        </tr>
+
+
+
+                                    </tbody>
+                                </table>
+
+
+                            </div>
                         </div>
 
 
@@ -987,6 +1198,86 @@
         </div>
     </div>
 
+    <div class="modal" tabindex="-1" id="EVV-client-designees-edit">
+        <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">
+                        Edit New EVV Client Designee
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row col-12">
+                        <div class="col-6 mb-20">
+                            <label class="label" for="evv-client-first-name-edit">First Name</label>
+                            <input type="text" class="form-control input-item" id="evv-client-first-name-edit"
+                                placeholder="Enter" aria-label="">
+                        </div>
+                        <div class="col-6 mb-20">
+                            <label class="label" for="evv-client-last-name-edit">Last Name</label>
+                            <input type="text" class="form-control input-item" id="evv-client-last-name-edit"
+                                placeholder="Enter" aria-label="">
+                        </div>
+
+                        <div class="col-6 mb-20">
+                            <div class="d-flex justify-content-between">
+                                <label class="label" for="evv-client-relation-edit">Relation</label>
+                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-new-relation"
+                                    class="link-blue">Add</a>
+                            </div>
+                            <select class="single-select input-item" aria-label="Default select example"
+                                id="evv-client-relation-edit">
+                                <option selected>Select</option>
+                                <option value="2">Agency 1</option>
+                                <option value="2">Agency 2</option>
+                                <option value="2">Agency 3</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mb-20">
+                            <label class="label" for="evv-client-email-edit">Email</label>
+                            <input type="text" class="form-control input-item" id="evv-client-email-edit"
+                                placeholder="Enter" aria-label="">
+                        </div>
+
+                        <div class="col-6 mb-20">
+                            <label class="form-label" for="EVV-client-start-date-edit">Designee Start Date</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control input-item" id="EVV-client-start-date-edit"
+                                    placeholder="01/02/1998">
+                                <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                            </div>
+                        </div>
+                        <div class="col-6 mb-20">
+                            <label class="form-label" for="EVV-client-end-date-edit">Designee End Date</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control input-item" id="EVV-client-end-date-edit"
+                                    placeholder="01/02/1998">
+                                <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <label class="label" for="EVV-client-status-edit">Status</label>
+                            <select class="single-select input-item" aria-label="location" id="EVV-client-status-edit">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+
+                    <a href="javascript:void(0)" type="button" class="btn btn-primary btn-modal-submit ms-3"
+                        data-bs-toggle="modal" data-bs-target="#change-payer-source-date-edit-summary">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- ADD NEW RELATION -->
     <div class="modal" tabindex="-1" id="add-new-relation">
@@ -999,62 +1290,62 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                 
-<div class="d-flex justify-content-between align-items-center mb-3">
-    <span class="add-text">New Relation</span>
-    <div class="position-relative">
-        <input type="text" class="form-control input-item" id="new-language"
-            placeholder="Enter new relation here" aria-label="Enter new Relation"
-            style="width: 286px">
-        <button class="btn btn-inside">Add to List</button>
-    </div>
-</div>
-<div class="border-color radius-4">
-    <div class="bg-greyHeader p-3 d-flex justify-content-between align-items-center">
-        <p class="f-500 f-13 lh-17 color-greyBlueheader">Note Type</p>
-        <p class="f-500 f-13 lh-17 color-greyBlueheader">Actions</p>
-    </div>
-    <div class="p-3 d-flex justify-content-between align-items-center border-color">
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="language" id="loream-1"
-                value="English" checked="">
-            <label class="form-check-label" for="loream-1">
-                Lorem Ipsum
-            </label>
-        </div>
-        <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
-    </div>
-    <div class="p-3 d-flex justify-content-between align-items-center border-color">
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="language" id="loream-2"
-                value="Spanish">
-            <label class="form-check-label" for="loream-2">
-                Lorem Ipsum
-            </label>
-        </div>
-        <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
-    </div>
-    <div class="p-3 d-flex justify-content-between align-items-center border-color">
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="language" id="loream-3"
-                value="Spanish">
-            <label class="form-check-label" for="loream-3">
-                Lorem Ipsum
-            </label>
-        </div>
-        <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
-    </div>
-</div>
-</div>
 
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="add-text">New Relation</span>
+                        <div class="position-relative">
+                            <input type="text" class="form-control input-item" id="new-language"
+                                placeholder="Enter new relation here" aria-label="Enter new Relation"
+                                style="width: 286px">
+                            <button class="btn btn-inside">Add to List</button>
+                        </div>
+                    </div>
+                    <div class="border-color radius-4">
+                        <div class="bg-greyHeader p-3 d-flex justify-content-between align-items-center">
+                            <p class="f-500 f-13 lh-17 color-greyBlueheader">Note Type</p>
+                            <p class="f-500 f-13 lh-17 color-greyBlueheader">Actions</p>
+                        </div>
+                        <div class="p-3 d-flex justify-content-between align-items-center border-color">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="language" id="loream-1"
+                                    value="English" checked="">
+                                <label class="form-check-label" for="loream-1">
+                                    Lorem Ipsum
+                                </label>
+                            </div>
+                            <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                        </div>
+                        <div class="p-3 d-flex justify-content-between align-items-center border-color">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="language" id="loream-2"
+                                    value="Spanish">
+                                <label class="form-check-label" for="loream-2">
+                                    Lorem Ipsum
+                                </label>
+                            </div>
+                            <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                        </div>
+                        <div class="p-3 d-flex justify-content-between align-items-center border-color">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="language" id="loream-3"
+                                    value="Spanish">
+                                <label class="form-check-label" for="loream-3">
+                                    Lorem Ipsum
+                                </label>
+                            </div>
+                            <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-footer">
 
-                    <a href="javascript:void(0)" type="button" class="btn btn-primary btn-modal-submit ms-3"
-                        data-bs-toggle="modal" data-bs-target="#change-payer-source-date-edit-summary">Save</a>
-                </div>
+            </div>
+            <div class="modal-footer">
+
+                <a href="javascript:void(0)" type="button" class="btn btn-primary btn-modal-submit ms-3"
+                    data-bs-toggle="modal" data-bs-target="#change-payer-source-date-edit-summary">Save</a>
             </div>
         </div>
+    </div>
     </div>
 
     <div class="modal" tabindex="-1" id="filter">
@@ -1214,8 +1505,8 @@
         </div>
     </div>
 
-      <!-- POPUP -->
-      <div class="modal" tabindex="-1" id="change-location">
+    <!-- POPUP -->
+    <div class="modal" tabindex="-1" id="change-location">
         <div class="modal-dialog custom-modal-1 modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-greyBlue">
@@ -1297,6 +1588,290 @@
         </div>
     </div>
 
+    <!-- add new service -->
+    <div class="modal" tabindex="-1" id="add-new-service-popup">
+        <div class="modal-dialog custom-modal-4 modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Add New Services </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-grid grid-4 gap-30 mt-3">
+                        <div class="">
+                            <label class="label" for="add-new-service-payer-source">Payer Source</label>
+                            <select class="single-select input-item" aria-label="location"
+                                id="add-new-service-payer-source">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+
+                        <div class="">
+                            <label class="label" for="add-new-service-discipline">Discipline</label>
+                            <select class="single-select input-item" aria-label="" id="add-new-service-discipline">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+
+
+                        <div class="btn-vertical-bottom">
+                            <a href="#" class="btn btn-outline-primary">Display</a>
+                        </div>
+
+                    </div>
+                    <div class="mt-20 mb-10 d-flex justify-content-between align-items-center ">
+                        <p class="f-600 f-13 lh-17 color-greyScale ">Services</p>
+                        <p class="f-400 f-12 lh-19 color-greyScale">Total Records: <span>5</span></p>
+                    </div>
+
+                    <div class="">
+                        <table class="table  table-type-1" id="patient-representative-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 244px;">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id=""><span>Payer</span>
+                                    </th>
+                                    <th style="width: 300px;">Service</th>
+                                    <th style="width: 125px;">Override Codes</th>
+                                    <th style="width: 100px;">HCPCS</th>
+                                    <th style="width: 95px;">Modifier 1</th>
+                                    <th style="width: 95px;">Modifier 2</th>
+                                    <th style="width: 95px;">Modifier 3</th>
+                                    <th style="width: 95px;">Modifier 4</th>
+
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input treatment-address-checkbox" type="checkbox"
+                                            value="" id="">
+                                        <span class="notice">Avi_PediatricPayer</span>
+                                    </td>
+                                    <td>Pediatric Resumption of Care VN - 141</td>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-item" id="" placeholder="Enter"
+                                            aria-label="name" value="123">
+
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-item" id="" placeholder="Enter"
+                                            aria-label="name" value="24">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-item" id="" placeholder="Enter"
+                                            aria-label="name" value="22">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-item" id="" placeholder="Enter"
+                                            aria-label="name" value="21">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-item" id="" placeholder="Enter"
+                                            aria-label="name" value="11">
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input treatment-address-checkbox" type="checkbox"
+                                            value="" id="">
+                                        <span class="notice">Avi_PediatricPayer</span>
+                                    </td>
+                                    <td>Pediatric Resumption of Care VN - 141</td>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-item" id="" placeholder="Enter"
+                                            aria-label="name" value="123">
+
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-item" id="" placeholder="Enter"
+                                            aria-label="name" value="24">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-item" id="" placeholder="Enter"
+                                            aria-label="name" value="22">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-item" id="" placeholder="Enter"
+                                            aria-label="name" value="21">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-item" id="" placeholder="Enter"
+                                            aria-label="name" value="11">
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input treatment-address-checkbox" type="checkbox"
+                                            value="" id="">
+                                        <span class="notice">Avi_PediatricPayer</span>
+                                    </td>
+                                    <td>Pediatric Resumption of Care VN - 141</td>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-item" id="" placeholder="Enter"
+                                            aria-label="name" value="123">
+
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-item" id="" placeholder="Enter"
+                                            aria-label="name" value="24">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-item" id="" placeholder="Enter"
+                                            aria-label="name" value="22">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-item" id="" placeholder="Enter"
+                                            aria-label="name" value="21">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-item" id="" placeholder="Enter"
+                                            aria-label="name" value="11">
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input treatment-address-checkbox" type="checkbox"
+                                            value="" id="">
+                                        <span class="notice">Avi_PediatricPayer</span>
+                                    </td>
+                                    <td>Pediatric Resumption of Care VN - 141</td>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-item" id="" placeholder="Enter"
+                                            aria-label="name" value="123">
+
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-item" id="" placeholder="Enter"
+                                            aria-label="name" value="24">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-item" id="" placeholder="Enter"
+                                            aria-label="name" value="22">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-item" id="" placeholder="Enter"
+                                            aria-label="name" value="21">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-item" id="" placeholder="Enter"
+                                            aria-label="name" value="11">
+                                    </td>
+
+                                </tr>
+
+
+
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit client EVV Settings -->
+    <div class="modal" tabindex="-1" id="edit-client-evv-settings">
+        <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Edit Client EVV Settings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="bg-greybox border-color radius-4 col-12 mb-20">
+                        <div class="col-12 d-flex justify-content-between">
+                            <div>
+                                <span class="text-title">Payer: </span>
+                                <span class="text-description">00- Primary </span>
+                            </div>
+                            <div>
+                                <span class="text-title">Service :</span>
+                                <span class="text-description">Mapped And Registered Available</span>
+                            </div>
+                            <div>
+                                <span class="text-title">Disc :</span>
+                                <span class="text-description">AIDE</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 border-color bg-white py-10 px-15 radius-4 mb-20">
+                        <div class="form-check fit-content-w">
+                            <input class="form-check-input" type="checkbox" value="" id="override-evv-codes">
+                            <label class="send" for="override-evv-codes">
+                                Override Evv Codes
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row col-12">
+                        <div class="col-6">
+                            <label class="label" for="HCPCS-evv-setting">Location</label>
+                            <select class="single-select input-item" aria-label="" id="HCPCS-evv-setting">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+
+                        <div class="col-6">
+                            <p class="label">Modifier</p>
+                            <div class="d-flex gap-1">
+                                <input type="text" class="form-control input-item" id="" placeholder="Enter" aria-label="name" value="24">
+                                <input type="text" class="form-control input-item" id="" placeholder="Enter" aria-label="name" value="22">
+                                <input type="text" class="form-control input-item" id="" placeholder="Enter" aria-label="name" value="12">
+                                <input type="text" class="form-control input-item" id="" placeholder="Enter" aria-label="name" value="11">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- JavaScript -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -1317,10 +1892,13 @@
     <script type="text/javascript" src="js/custom.js"></script>
 
 
+    <script>
+        $(".stop-prop").click(function (e) {
+            e.stopPropagation();
+        });
+    </script>
+
+
 </body>
 
 </html>
-
-
-
-

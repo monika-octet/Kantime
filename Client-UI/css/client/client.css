@@ -255,7 +255,7 @@ h3 {
 
 }
 
-.table thead tr {
+.table-type-1 thead tr th {
     padding: 8px 20px;
 }
 
@@ -432,7 +432,8 @@ h3 {
 
 #treatment-address-table.table-type-1 tbody tr td,
 #patient-representative-table.table-type-1 tbody tr td,
-#document-list-table.table-type-1 tbody tr td {
+#document-list-table.table-type-1 tbody tr td,
+#patient-representative-table-edit.table-type-1 tbody tr td  {
     padding: 12px 20px;
 }
 
@@ -447,7 +448,8 @@ h3 {
 #criteria-table.table-type-1 tbody tr td,
 #medication-and-dosage-table.table-type-1 thead tr th, 
 #community-contact-table.table-type-1 tbody tr td,
-#community-contact-edit-table.table-type-1 tbody tr td
+#community-contact-edit-table.table-type-1 tbody tr td,
+#community-contact-edit-table.table-type-1 thead tr th
 {
     padding: 8px 15px;
 }
@@ -511,6 +513,15 @@ h3 {
 
 
 
+}
+.notice {
+
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #181C32;
 }
 
 .notice-style {
@@ -1841,7 +1852,7 @@ vertical-align: top;
     left: 20px;
 
 }
-.referral-search input{
+.referral-search input#search-form{
     padding: 10px 15px 10px 35px;
 }
 

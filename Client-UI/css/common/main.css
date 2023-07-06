@@ -751,6 +751,9 @@ item:active {
 .accordion-item .accordion-button{
     padding-left: 50px;
 }
+.accordion-button:not(.collapsed){
+    box-shadow: none;
+}
 
 .accordion-button::after{
     background-image: url(../../images/accordion-arrow.svg);
@@ -798,4 +801,8 @@ item:active {
 }
 .no-border-radius{
     border-radius: 0;
+}
+
+.w-80{
+    width: 80px;
 }

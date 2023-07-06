@@ -1695,7 +1695,7 @@
                         aria-labelledby="view-checklist-tab">
                         <div class="px-20 bg-white d-flex justify-content-between align-items-center"
                             style="padding-top: 14px; padding-bottom: 14px">
-                            <div class="tab-content-heading">Initial Authorizatio </div>
+                            <div class="tab-content-heading">Initial Authorization </div>
 
                             <div class="d-flex align-items-center gap-10">
                                 <p class="save-time">Last saved 2 mins ago</p>
@@ -1706,13 +1706,13 @@
                             <table class="table table-type-1" id="initial-auth-table">
                                 <thead>
                                     <tr>
-                                        <th class="">
+                                        <th style="width: 150px;">
                                             Discipline
                                         </th>
-                                        <th>Auth Period</th>
-                                        <th>Auth#</th>
-                                        <th>Total Visits/Units</th>
-                                        <th>Service</th>
+                                        <th style="width: 180px;">Auth Period</th>
+                                        <th style="width: 120px;">Auth#</th>
+                                        <th style="width: 130px;">Total Visits/Units</th>
+                                        <th style="width: 250px;">Service</th>
                                     </tr>
                                 </thead>
 
@@ -2168,7 +2168,7 @@
                                         <th>Status</th>
                                         <th style="width: 180px;">Completed on</th>
                                         <th>Attachment</th>
-                                        <th>Action</th>
+                                        <th class="w-80">Action</th>
                                     </tr>
                                 </thead>
 
@@ -2305,7 +2305,7 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <p class="notice">Document Name</p>
+                                            <p class="notice">Pharmacy Name</p>
                                         </td>
                                         <td>+(234)545-2342</td>
                                         <td>debra.holt@example.com</td>
@@ -2313,28 +2313,28 @@
 
                                     <tr>
                                         <td>
-                                            <p class="notice">Document Name</p>
+                                            <p class="notice">Pharmacy Name</p>
                                         </td>
                                         <td>+(234)545-2342</td>
                                         <td>debra.holt@example.com</td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p class="notice">Document Name</p>
+                                            <p class="notice">Pharmacy Name</p>
                                         </td>
                                         <td>+(234)545-2342</td>
                                         <td>debra.holt@example.com</td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p class="notice">Document Name</p>
+                                            <p class="notice">Pharmacy Name</p>
                                         </td>
                                         <td>+(234)545-2342</td>
                                         <td>debra.holt@example.com</td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p class="notice">Document Name</p>
+                                            <p class="notice">Pharmacy Name</p>
                                         </td>
                                         <td>+(234)545-2342</td>
                                         <td>debra.holt@example.com</td>
@@ -2419,7 +2419,7 @@
                             </div>
                         </div>
                         <div class="p-20">
-                            <table class="table table-hover table-type-1" id="preference-criteria-table">
+                            <table class="table  table-type-1" id="preference-criteria-table">
                                 <thead>
                                     <tr>
                                         <th class="col-10">Criteria</th>
@@ -2430,47 +2430,34 @@
                                 <tbody>
                                     <tr class="bg-white">
                                         <td class="f-500">Preference Criteria</td>
-                                        <td class="f-500">
-                                            <select disabled class="single-select input-item"
-                                                aria-label="preference" id="Preference">
-                                                <option class="color-darkblue" >Select</option>
-                                                <option class="preffered" selected value="preffered">Preffered</option>
-                                                <option class="non-preffered" value="non-preffered">Non Preffered
-                                                </option>
-                                            </select>
+                                        <td>
+                                            <div class="status-tag status-red fit-content-w">
+                                                <p>Non Preffered</p>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr class="bg-white">
                                         <td class="f-500">Preference Criteria</td>
-                                        <td class="f-500"><select class="single-select input-item"
-                                                aria-label="preference" id="Preference">
-                                                <option class="color-darkblue" selected>Select</option>
-                                                <option class="preffered" value="preffered">Preffered</option>
-                                                <option class="non-preffered" value="non-preffered">Non Preffered
-                                                </option>
-                                            </select>
+                                        <td>
+                                            <div class="status-tag status-red fit-content-w">
+                                                <p>Non Preffered</p>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr class="bg-white">
                                         <td class="f-500">Preference Criteria</td>
-                                        <td class="f-500"><select class="single-select input-item"
-                                                aria-label="preference" id="Preference">
-                                                <option class="color-darkblue" selected>Select</option>
-                                                <option class="preffered" value="preffered">Preffered</option>
-                                                <option class="non-preffered" value="non-preffered">Non Preffered
-                                                </option>
-                                            </select>
+                                        <td >
+                                            <div class="status-tag status-green fit-content-w">
+                                                <p>Completed</p>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr class="bg-white">
                                         <td class="f-500">Preference Criteria</td>
-                                        <td class="f-500"><select class="single-select input-item"
-                                                aria-label="preference" id="Preference">
-                                                <option class="color-darkblue" selected>Select</option>
-                                                <option class="preffered" value="preffered">Preffered</option>
-                                                <option class="non-preffered" value="non-preffered">Non Preffered
-                                                </option>
-                                            </select>
+                                        <td >
+                                            <div class="status-tag status-green fit-content-w">
+                                                <p>Completed</p>
+                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>
