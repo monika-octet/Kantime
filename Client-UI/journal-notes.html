@@ -64,10 +64,14 @@
                 </div>
 
                 <div class="icon-container d-flex gap-3">
-                    <img src="images/Help.svg" alt="help-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Help List" />
-                    <img src="images/Mail.svg" alt="mail-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Mail" />
-                    <img src="images/Duplicate.svg" alt="duplicate-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Duplicate Tabs" />
-                    <img src="images/message.svg" alt="message-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open Kantime Text"/>
+                    <img src="images/Help.svg" alt="help-icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        title="Open Help List" />
+                    <img src="images/Mail.svg" alt="mail-icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        title="Open Mail" />
+                    <img src="images/Duplicate.svg" alt="duplicate-icon" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" title="Open Duplicate Tabs" />
+                    <img src="images/message.svg" alt="message-icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        title="Open Kantime Text" />
                 </div>
             </div>
 
@@ -314,29 +318,25 @@
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">
-                                <button class="btn-menu-dropdown dropdown-toggle btn-dropdown-custom"
-                                    type="button" id="" data-bs-toggle="dropdown"
-                                    aria-expanded="false">Journal Note</button>
+                                <button class="btn-menu-dropdown dropdown-toggle btn-dropdown-custom" type="button"
+                                    id="" data-bs-toggle="dropdown" aria-expanded="false">Journal Note</button>
                                 <ul class="dropdown-menu" aria-labelledby="">
                                     <li>
-                                        <a href="journal-notes.html" type="button" 
-                                             class="dropdown-item">Journal Note</a>
+                                        <a href="journal-notes.html" type="button" class="dropdown-item">Journal
+                                            Note</a>
                                     </li>
                                     <li>
-                                        <a href="office-communication.html" type="button" 
-                                             class="dropdown-item">Office Communication</a>
+                                        <a href="office-communication.html" type="button" class="dropdown-item">Office
+                                            Communication</a>
                                     </li>
                                     <li>
-                                        <a href="vacations.html" type="button" 
-                                             class="dropdown-item">Vacation</a>
+                                        <a href="vacations.html" type="button" class="dropdown-item">Vacation</a>
                                     </li>
                                     <li>
-                                        <a href="forms.html" type="button" 
-                                             class="dropdown-item">Forms</a>
+                                        <a href="forms.html" type="button" class="dropdown-item">Forms</a>
                                     </li>
                                     <li>
-                                        <a href="cop.html" type="button" 
-                                             class="dropdown-item">COP</a>
+                                        <a href="cop.html" type="button" class="dropdown-item">COP</a>
                                     </li>
                                 </ul>
                             </div>
@@ -554,19 +554,15 @@
                         </div>
 
                         <div class="col-6">
-                            <label class="label" for="timer-add-new-notes">Timer</label>
-                            <select
-                              class="single-select input-item"
-                              aria-label=""
-                              id="timer-add-new-notes"
-                            >
-                              <option class="d-none" disabled selected>Select</option>
-                              <option value="1">List 1</option>
-                              <option value="2">List 2</option>
-                              <option value="3">List 3</option>
+                            <label class="label" for="timer-add-new-notes">Time</label>
+                            <select class="single-select input-item" aria-label="" id="timer-add-new-notes">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
                             </select>
-               </div>
-            
+                        </div>
+
 
                         <div class="mb-20">
                             <label class="form-check-label mb-2" for="Volunteer">
@@ -617,7 +613,8 @@
                             <div class="input-group ">
                                 <input type="text" class="form-control" placeholder="Select Recipient"
                                     aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                <span class="input-group-text" id="basic-addon2">
+                                <span class="input-group-text" id="basic-addon2" data-bs-toggle="modal"
+                                    data-bs-target="#contact-list-popup">
                                     <img src="images/note-icon.svg" alt="book icon">
                                 </span>
                             </div>
@@ -747,7 +744,7 @@
                                 Apply
                             </button>
                         </div>
-                        <div class="d-flex gap-10 justify-content-between align-items-center mt-3">
+                        <div class="d-flex gap-10 justify-content-between align-items-center mt-3 align-self-end">
                             <div class="d-flex align-items-center">
                                 <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px">
                                 <a href="javascript:void(0)" data-bs-toggle="modal"
@@ -762,81 +759,93 @@
 
                     <table class="table table-hover table-type-1" id="treatment-address-table">
                         <thead>
-                          <tr>
-                            <th style="width: 100px;">
-                              Date
-                            </th>
-                            <th style="width: 130px;">Entered By</th>
-                            <th style="width: 150px;">Note Type</th>
-                            <th style="width: 372px;">Note</th>
-                            <th style="width: 108px;">
-                                Off Comm.
-                            </th>
-                            <th style="width: 80px;">Actions</th>
-                          </tr>
+                            <tr>
+                                <th style="width: 100px;">
+                                    Date
+                                </th>
+                                <th style="width: 130px;">Entered By</th>
+                                <th style="width: 150px;">Note Type</th>
+                                <th style="width: 372px;">Note</th>
+                                <th style="width: 108px;">
+                                    Off Comm.
+                                </th>
+                                <th style="width: 80px;">Actions</th>
+                            </tr>
                         </thead>
-      
+
                         <tbody>
-                          <tr>
-                            <td >
-                            04/01/2023 
-                            </td>
-                            <td>Test Client</td>
-                            <td>Care Coordination</td>
-                            <td>Demo Note Sentence</td>
-                            <td>
-                                <button class="btn btn-outline-primary">
-                                    <img src="images/mail-icon.svg" alt="">
-                                </button>
-                            </td>
-                            <td class="align-dots">
-                              <div class="dropdown ms-3">
-                                <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom" type="button" id="dropdownMenuButton-address-1" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                  <li>
-                                    <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#add-new-client-note-popup" class="dropdown-item">Edit</a>
-                                  </li>
-                                  <li>
-                                    <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#" class=" dropdown-item">Print</a>
-                                  </li>
-                                  <li>
-                                    <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#" class="red-text dropdown-item">Delete</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td >
-                            04/01/2023 
-                            </td>
-                            <td>Test Client</td>
-                            <td>Care Coordination</td>
-                            <td>Demo Note Sentence</td>
-                            <td>
-                                <button class="btn btn-outline-primary">
-                                    <img src="images/mail-icon.svg" alt="">
-                                </button>
-                            </td>
-                            <td class="align-dots">
-                              <div class="dropdown ms-3">
-                                <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom" type="button" id="dropdownMenuButton-address-1" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                  <li>
-                                    <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#add-new-client-note-popup" class="dropdown-item">Edit</a>
-                                  </li>
-                                  <li>
-                                    <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#" class=" dropdown-item">Print</a>
-                                  </li>
-                                  <li>
-                                    <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#" class="red-text dropdown-item">Delete</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </td>
-                          </tr>
+                            <tr>
+                                <td>
+                                    04/01/2023
+                                </td>
+                                <td>Test Client</td>
+                                <td>Care Coordination</td>
+                                <td>Demo Note Sentence</td>
+                                <td>
+                                    <button class="btn btn-outline-primary">
+                                        <img src="images/mail-icon.svg" alt="">
+                                    </button>
+                                </td>
+                                <td class="align-dots">
+                                    <div class="dropdown ms-3">
+                                        <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom"
+                                            type="button" id="dropdownMenuButton-address-1" data-bs-toggle="dropdown"
+                                            aria-expanded="false"></button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#add-new-client-note-popup"
+                                                    class="dropdown-item">Edit</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class=" dropdown-item">Print</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="red-text dropdown-item">Delete</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    04/01/2023
+                                </td>
+                                <td>Test Client</td>
+                                <td>Care Coordination</td>
+                                <td>Demo Note Sentence</td>
+                                <td>
+                                    <button class="btn btn-outline-primary">
+                                        <img src="images/mail-icon.svg" alt="">
+                                    </button>
+                                </td>
+                                <td class="align-dots">
+                                    <div class="dropdown ms-3">
+                                        <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom"
+                                            type="button" id="dropdownMenuButton-address-1" data-bs-toggle="dropdown"
+                                            aria-expanded="false"></button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#add-new-client-note-popup"
+                                                    class="dropdown-item">Edit</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class=" dropdown-item">Print</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#" class="red-text dropdown-item">Delete</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
                         </tbody>
-                      </table>
+                    </table>
 
                 </div>
                 <div class="modal-footer">
@@ -860,8 +869,8 @@
                     <div class="col-6 mb-20">
                         <div class="d-flex justify-content-between">
                             <label class="label" for="note-type-new-client">Note Type</label>
-                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-new-note-type-popup"
-                                class="link-blue">Add</a>
+                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                data-bs-target="#add-new-note-type-popup" class="link-blue">Add</a>
                         </div>
                         <select class="single-select input-item" aria-label="Default select example"
                             id="note-type-new-client">
@@ -873,8 +882,9 @@
                     </div>
                     <div class="col-12">
                         <label class="label" for="notes">Notes</label>
-                        <textarea name="" id="notes" cols="" rows="2" class="input-textarea w-100" placeholder="Enter"></textarea>
-                      </div>
+                        <textarea name="" id="notes" cols="" rows="2" class="input-textarea w-100"
+                            placeholder="Enter"></textarea>
+                    </div>
 
                 </div>
                 <div class="modal-footer">
@@ -888,296 +898,725 @@
     <!-- ADD NEW NOTE TYPE -->
     <div class="modal" tabindex="-1" id="add-new-note-type-popup">
         <div class="modal-dialog custom-modal-1 modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header bg-greyBlue">
-              <h5 class="modal-title Pinfo color-darkblue">Add New Note Type</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <span class="add-text">New Client Note</span>
-                <div class="position-relative">
-                  <input type="text" class="form-control input-item" id="new-religion" placeholder="Enter new relation here"
-                    aria-label="Enter new relation here" style="width: 286px" />
-                  <button class="btn btn-inside">Add to List</button>
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Add New Note Type</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-              </div>
-              <div class="border-color radius-4">
-                <div class="bg-greyHeader p-3 d-flex justify-content-between align-items-center">
-                  <p class="f-500 f-13 lh-17 color-greyBlueheader">Note Type</p>
-                  <p class="f-500 f-13 lh-17 color-greyBlueheader">Actions</p>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="add-text">New Client Note</span>
+                        <div class="position-relative">
+                            <input type="text" class="form-control input-item" id="new-religion"
+                                placeholder="Enter new relation here" aria-label="Enter new relation here"
+                                style="width: 286px" />
+                            <button class="btn btn-inside">Add to List</button>
+                        </div>
+                    </div>
+                    <div class="border-color radius-4">
+                        <div class="bg-greyHeader p-3 d-flex justify-content-between align-items-center">
+                            <p class="f-500 f-13 lh-17 color-greyBlueheader">Note Type</p>
+                            <p class="f-500 f-13 lh-17 color-greyBlueheader">Actions</p>
+                        </div>
+                        <div class="p-3 d-flex justify-content-between align-items-center border-color">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="" id="" value="" checked />
+                                <label class="form-check-label" for="">
+                                    Lorem
+                                </label>
+                            </div>
+                            <img src="images/delete_red.svg" alt="delete button" class="pointer delete" />
+                        </div>
+                        <div class="p-3 d-flex justify-content-between align-items-center border-color">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="" id="" value="" />
+                                <label class="form-check-label" for="">
+                                    Lorem
+                                </label>
+                            </div>
+                            <img src="images/delete_red.svg" alt="delete button" class="pointer delete" />
+                        </div>
+                    </div>
                 </div>
-                <div class="p-3 d-flex justify-content-between align-items-center border-color">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="" id="" value=""
-                      checked />
-                    <label class="form-check-label" for="">
-                      Lorem
-                    </label>
-                  </div>
-                  <img src="images/delete_red.svg" alt="delete button" class="pointer delete" />
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
                 </div>
-                <div class="p-3 d-flex justify-content-between align-items-center border-color">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="" id=""
-                      value="" />
-                    <label class="form-check-label" for="">
-                      Lorem
-                    </label>
-                  </div>
-                  <img src="images/delete_red.svg" alt="delete button" class="pointer delete" />
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-<!-- fILTER -->
-<div class="modal" tabindex="-1" id="filter">
-    <div class="modal-dialog custom-modal-1  modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header bg-greyBlue">
-                <h5 class="modal-title Pinfo color-darkblue">Filter</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row col-12">
-                    <div class="col-6 mb-20">
-                        <label class="label" for="location-filter">Location</label>
-                        <select class="single-select input-item" aria-label="" id="location-filter">
-                            <option class="d-none" disabled selected>Select</option>
-                            <option value="1">List 1</option>
-                            <option value="2">List 2</option>
-                            <option value="3">List 3</option>
-                        </select>
-                    </div>
-                    <div class="col-6 mb-20">
-                        <label class="label" for="status-filter">Status</label>
-                        <select class="single-select input-item" aria-label="" id="status-filter">
-                            <option class="d-none" disabled selected>Select</option>
-                            <option value="1">List 1</option>
-                            <option value="2">List 2</option>
-                            <option value="3">List 3</option>
-                        </select>
-                    </div>
-                    <div class="col-6 mb-20">
-                        <label class="label" for="payer-filter">Payer</label>
-                        <select class="single-select input-item" aria-label="" id="payer-filter">
-                            <option class="d-none" disabled selected>Select</option>
-                            <option value="1">List 1</option>
-                            <option value="2">List 2</option>
-                            <option value="3">List 3</option>
-                        </select>
-                    </div>
-                    <div class="col-6 mb-20">
-                        <label class="label" for="care-type-filter">Care Type</label>
-                        <select class="single-select input-item" aria-label="" id="care-type-filter">
-                            <option class="d-none" disabled selected>Select</option>
-                            <option value="1">List 1</option>
-                            <option value="2">List 2</option>
-                            <option value="3">List 3</option>
-                        </select>
-                    </div>
-                    <div class="col-6">
-                        <label class="label" for="LOB-filter">LOB</label>
-                        <select class="single-select input-item" aria-label="" id="LOB-filter">
-                            <option class="d-none" disabled selected>Select</option>
-                            <option value="1">List 1</option>
-                            <option value="2">List 2</option>
-                            <option value="3">List 3</option>
-                        </select>
-                    </div>
-                    <div class="col-6">
-                        <label class="label" for="poc-filter">POC Status</label>
-                        <select class="single-select input-item" aria-label="" id="poc-filter">
-                            <option class="d-none" disabled selected>Select</option>
-                            <option value="1">List 1</option>
-                            <option value="2">List 2</option>
-                            <option value="3">List 3</option>
-                        </select>
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="modal-footer d-flex">
-                <button class="btn btn-tertiary">Cancel</button>
-                <a href="#" class="btn btn-primary btn-modal-submit ms-3">Update</a>
             </div>
         </div>
     </div>
-</div>
 
+    <!-- fILTER -->
+    <div class="modal" tabindex="-1" id="filter">
+        <div class="modal-dialog custom-modal-1  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Filter</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row col-12">
+                        <div class="col-6 mb-20">
+                            <label class="label" for="location-filter">Location</label>
+                            <select class="single-select input-item" aria-label="" id="location-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mb-20">
+                            <label class="label" for="status-filter">Status</label>
+                            <select class="single-select input-item" aria-label="" id="status-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mb-20">
+                            <label class="label" for="payer-filter">Payer</label>
+                            <select class="single-select input-item" aria-label="" id="payer-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mb-20">
+                            <label class="label" for="care-type-filter">Care Type</label>
+                            <select class="single-select input-item" aria-label="" id="care-type-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label class="label" for="LOB-filter">LOB</label>
+                            <select class="single-select input-item" aria-label="" id="LOB-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label class="label" for="poc-filter">POC Status</label>
+                            <select class="single-select input-item" aria-label="" id="poc-filter">
+                                <option class="d-none" disabled selected>Select</option>
+                                <option value="1">List 1</option>
+                                <option value="2">List 2</option>
+                                <option value="3">List 3</option>
+                            </select>
+                        </div>
 
-<div class="modal" tabindex="-1" id="change">
-    <div class="modal-dialog custom-modal-1 modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header bg-greyBlue">
-                <h5 class="modal-title Pinfo color-darkblue">Change LOB</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                </div>
+                <div class="modal-footer d-flex">
+                    <button class="btn btn-tertiary">Cancel</button>
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Update</a>
+                </div>
             </div>
-            <div class="modal-body">
-                <div class="">
-                    <div class="bg-greybox border-color radius-4 mb-20">
-                        <span class="text-title">Client: </span>
-                        <span class="text-description">Demo Test Client</span>
-                    </div>
-                    <div class="d-flex gap-20 mb-20">
-                        <div class="w-100">
-                            <label class="label" for="location-2-Pinfo">Location</label>
-                            <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
-                                <option class="color-darkblue" disabled selected>
-                                    Jinisha
-                                </option>
-                                <option value="1">List 1</option>
-                                <option value="2">List 2</option>
-                                <option value="3">List 3</option>
-                            </select>
+        </div>
+    </div>
+
+
+    <div class="modal" tabindex="-1" id="change">
+        <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Change LOB</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        <div class="bg-greybox border-color radius-4 mb-20">
+                            <span class="text-title">Client: </span>
+                            <span class="text-description">Demo Test Client</span>
                         </div>
-                        <div class="w-100">
-                            <label class="label" for="LOB-Pinfo">LOB</label>
-                            <select class="single-select input-item" aria-label="LOB" id="LOB-Pinfo">
-                                <option class="color-darkblue" disabled selected>
-                                    Pediatric
-                                </option>
-                                <option value="1">List 1</option>
-                                <option value="2">List 2</option>
-                                <option value="3">List 3</option>
-                            </select>
+                        <div class="d-flex gap-20 mb-20">
+                            <div class="w-100">
+                                <label class="label" for="location-2-Pinfo">Location</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Jinisha
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100">
+                                <label class="label" for="LOB-Pinfo">LOB</label>
+                                <select class="single-select input-item" aria-label="LOB" id="LOB-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Pediatric
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="d-flex gap-20">
-                        <div class="w-100">
-                            <label class="label" for="payer-2-Pinfo">Payer</label>
-                            <select class="single-select input-item" aria-label="payer" id="payer-2-Pinfo">
-                                <option class="color-darkblue" disabled selected>
-                                    00 - Primary-1 FL
-                                </option>
-                                <option value="1">List 1</option>
-                                <option value="2">List 2</option>
-                                <option value="3">List 3</option>
-                            </select>
-                        </div>
-                        <div class="w-100">
-                            <p class="label">Care Type</p>
-                            <div class="d-flex gap-3 py-10">
-                                <div class="">
-                                    <div class="form-check">
-                                        <input class="form-check-input" checked type="radio" name="care type"
-                                            id="longTerm-Pinfo" value="Long Term Care" />
-                                        <label class="form-check-label color-darkblue" for="longTerm-Pinfo">
-                                            Long Term Care
-                                        </label>
+                        <div class="d-flex gap-20">
+                            <div class="w-100">
+                                <label class="label" for="payer-2-Pinfo">Payer</label>
+                                <select class="single-select input-item" aria-label="payer" id="payer-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        00 - Primary-1 FL
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100">
+                                <p class="label">Care Type</p>
+                                <div class="d-flex gap-3 py-10">
+                                    <div class="">
+                                        <div class="form-check">
+                                            <input class="form-check-input" checked type="radio" name="care type"
+                                                id="longTerm-Pinfo" value="Long Term Care" />
+                                            <label class="form-check-label color-darkblue" for="longTerm-Pinfo">
+                                                Long Term Care
+                                            </label>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="">
-                                    <div class="form-check">
-                                        <input class="form-check-input color-darkblue" type="radio" name="care type"
-                                            id="intermittent-Pinfo" value="Intermittent Care" />
-                                        <label class="form-check-label" for="intermittent-Pinfo">
-                                            Intermittent Care
-                                        </label>
+                                    <div class="">
+                                        <div class="form-check">
+                                            <input class="form-check-input color-darkblue" type="radio" name="care type"
+                                                id="intermittent-Pinfo" value="Intermittent Care" />
+                                            <label class="form-check-label" for="intermittent-Pinfo">
+                                                Intermittent Care
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-  <!-- POPUP -->
-  <div class="modal" tabindex="-1" id="change-location">
-    <div class="modal-dialog custom-modal-1 modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header bg-greyBlue">
-                <h5 class="modal-title Pinfo color-darkblue">Change Location</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="">
-                    <div class="bg-greybox border-color radius-4 mb-20">
-                        <span class="text-title">Client: </span>
-                        <span class="text-description">Demo Test Client</span>
-                    </div>
-                    <div class="d-flex gap-20 mb-20">
-                        <div class="w-100">
-                            <label class="label" for="location-2-Pinfo">Location</label>
-                            <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
-                                <option class="color-darkblue" disabled selected>
-                                    Jinisha
-                                </option>
-                                <option value="1">List 1</option>
-                                <option value="2">List 2</option>
-                                <option value="3">List 3</option>
-                            </select>
+    <!-- POPUP -->
+    <div class="modal" tabindex="-1" id="change-location">
+        <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Change Location</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        <div class="bg-greybox border-color radius-4 mb-20">
+                            <span class="text-title">Client: </span>
+                            <span class="text-description">Demo Test Client</span>
                         </div>
-                        <div class="w-100">
-                            <label class="label" for="LOB-Pinfo">LOB</label>
-                            <select class="single-select input-item" aria-label="LOB" id="LOB-Pinfo">
-                                <option class="color-darkblue" disabled selected>
-                                    Pediatric
-                                </option>
-                                <option value="1">List 1</option>
-                                <option value="2">List 2</option>
-                                <option value="3">List 3</option>
-                            </select>
+                        <div class="d-flex gap-20 mb-20">
+                            <div class="w-100">
+                                <label class="label" for="location-2-Pinfo">Location</label>
+                                <select class="single-select input-item" aria-label="location" id="location-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Jinisha
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100">
+                                <label class="label" for="LOB-Pinfo">LOB</label>
+                                <select class="single-select input-item" aria-label="LOB" id="LOB-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        Pediatric
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="d-flex gap-20">
-                        <div class="w-100">
-                            <label class="label" for="payer-2-Pinfo">Payer</label>
-                            <select class="single-select input-item" aria-label="payer" id="payer-2-Pinfo">
-                                <option class="color-darkblue" disabled selected>
-                                    00 - Primary-1 FL
-                                </option>
-                                <option value="1">List 1</option>
-                                <option value="2">List 2</option>
-                                <option value="3">List 3</option>
-                            </select>
-                        </div>
-                        <div class="w-100">
-                            <p class="label">Care Type</p>
-                            <div class="d-flex gap-3 py-10">
-                                <div class="">
-                                    <div class="form-check">
-                                        <input class="form-check-input" checked type="radio" name="care type"
-                                            id="longTerm-Pinfo" value="Long Term Care" />
-                                        <label class="form-check-label color-darkblue" for="longTerm-Pinfo">
-                                            Long Term Care
-                                        </label>
+                        <div class="d-flex gap-20">
+                            <div class="w-100">
+                                <label class="label" for="payer-2-Pinfo">Payer</label>
+                                <select class="single-select input-item" aria-label="payer" id="payer-2-Pinfo">
+                                    <option class="color-darkblue" disabled selected>
+                                        00 - Primary-1 FL
+                                    </option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="w-100">
+                                <p class="label">Care Type</p>
+                                <div class="d-flex gap-3 py-10">
+                                    <div class="">
+                                        <div class="form-check">
+                                            <input class="form-check-input" checked type="radio" name="care type"
+                                                id="longTerm-Pinfo" value="Long Term Care" />
+                                            <label class="form-check-label color-darkblue" for="longTerm-Pinfo">
+                                                Long Term Care
+                                            </label>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="">
-                                    <div class="form-check">
-                                        <input class="form-check-input color-darkblue" type="radio" name="care type"
-                                            id="intermittent-Pinfo" value="Intermittent Care" />
-                                        <label class="form-check-label" for="intermittent-Pinfo">
-                                            Intermittent Care
-                                        </label>
+                                    <div class="">
+                                        <div class="form-check">
+                                            <input class="form-check-input color-darkblue" type="radio" name="care type"
+                                                id="intermittent-Pinfo" value="Intermittent Care" />
+                                            <label class="form-check-label" for="intermittent-Pinfo">
+                                                Intermittent Care
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
+    <!-- Popup contact List -->
+    <div class="modal" tabindex="-1" id="contact-list-popup">
+        <div class="modal-dialog custom-modal-5 modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-greyBlue">
+                    <h5 class="modal-title Pinfo color-darkblue">Contact List</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        <div class="d-grid contact-grid border-color">
+                            <div class="">
+                                <div class="sidebar-container">
+                                    <div class="nav flex-column nav-tabs gap-2  mb-20 py-3 border-bottom-0" id="myTab"
+                                        role="tablist" aria-orientation="vertical">
+                                        <button class="nav-link active" id="office-staff-tab" data-bs-toggle="tab"
+                                            data-bs-target="#office-staff" type="button" role="tab"
+                                            aria-controls="office-staff" aria-selected="true">
+                                            Office Staff
+                                        </button>
+
+                                        <button class="nav-link " id="case-manager-tab" data-bs-toggle="tab"
+                                            data-bs-target="#case-manager" type="button" role="tab"
+                                            aria-controls="case-manager" aria-selected="false">
+                                            Case Manager
+                                        </button>
+                                        <button class="nav-link " id="QA-tab" data-bs-toggle="tab" data-bs-target="#QA"
+                                            type="button" role="tab" aria-controls="QA" aria-selected="false">
+                                            QA
+                                        </button>
+                                        <button class="nav-link " id="Groups-tab" data-bs-toggle="tab"
+                                            data-bs-target="#Groups" type="button" role="tab" aria-controls="Groups"
+                                            aria-selected="false">
+                                            Groups
+                                        </button>
+                                        <button class="nav-link " id="clinician-tab" data-bs-toggle="tab"
+                                            data-bs-target="#clinician" type="button" role="tab"
+                                            aria-controls="clinician" aria-selected="false">
+                                            Clinician
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="tab-content " id="myTabContent">
+                                <div class="border-color tab-pane fade show active p-15" id="office-staff"
+                                    role="tabpanel" aria-labelledby="office-staff-tab">
+                                    <div>
+                                        <div class="search">
+                                            <input type="text" placeholder="Search" class="search-input w-100">
+                                            <img src="images/lens.svg" alt="search lens" class="lens">
+                                        </div>
+                                        <div class="mt-10">
+                                            <ul class="new-form-list list-unstyled">
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input checked class="form-check-input" type="checkbox" value=""
+                                                            id="avi-test-rn">
+                                                        <label class="send" for="avi-test-rn">
+                                                            Avi Test RN
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input checked class="form-check-input" type="checkbox" value=""
+                                                            id="cc1-staff">
+                                                        <label class="send" for="cc1-staff">
+                                                            CC1_Office Staff, Client_Cordinator_1
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input checked class="form-check-input" type="checkbox" value=""
+                                                            id="cc2-staff">
+                                                        <label class="send" for="cc2-staff">
+                                                            CC2_Office Staff, Client_Cordinator_2
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="cc3-staff">
+                                                        <label class="send" for="cc3-staff">
+                                                            CC3_Office Staff, Client_Cordinator_3
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input checked class="form-check-input" type="checkbox" value=""
+                                                            id="demo-test">
+                                                        <label class="send" for="demo-test">
+                                                            Demo test RN Clinician
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="office-staff-manager">
+                                                        <label class="send" for="office-staff-manager">
+                                                            Office staff _ case manager
+                                                        </label>
+                                                    </div>
+                                                </li>
+
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-color tab-pane fade p-15 " id="case-manager" role="tabpanel"
+                                    aria-labelledby="office-staff-tab">
+                                    <div>
+                                        <div class="search">
+                                            <input type="text" placeholder="Search" class="search-input w-100">
+                                            <img src="images/lens.svg" alt="search lens" class="lens">
+                                        </div>
+                                        <div class="mt-10">
+                                            <ul class="new-form-list list-unstyled">
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input checked class="form-check-input" type="checkbox" value=""
+                                                            id="avi-test-rn-case">
+                                                        <label class="send" for="avi-test-rn-case">
+                                                            Avi Test RN
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input checked class="form-check-input" type="checkbox" value=""
+                                                            id="cc1-staff-case">
+                                                        <label class="send" for="cc1-staff-case">
+                                                            CC1_Office Staff, Client_Cordinator_1
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input checked class="form-check-input" type="checkbox" value=""
+                                                            id="cc2-staff">
+                                                        <label class="send" for="cc2-staff">
+                                                            CC2_Office Staff, Client_Cordinator_2
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="cc3-staff-case">
+                                                        <label class="send" for="cc3-staff-case">
+                                                            CC3_Office Staff, Client_Cordinator_3
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input checked class="form-check-input" type="checkbox" value=""
+                                                            id="demo-test-case">
+                                                        <label class="send" for="demo-test-case">
+                                                            Demo test RN Clinician
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="office-staff-manager-case">
+                                                        <label class="send" for="office-staff-manager-case">
+                                                            Office staff _ case manager
+                                                        </label>
+                                                    </div>
+                                                </li>
+
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-color tab-pane fade p-15" id="QA" role="tabpanel"
+                                    aria-labelledby="QA-tab">
+                                    <div>
+                                        <div class="search">
+                                            <input type="text" placeholder="Search" class="search-input w-100">
+                                            <img src="images/lens.svg" alt="search lens" class="lens">
+                                        </div>
+                                        <div class="mt-10">
+                                            <ul class="new-form-list list-unstyled">
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input checked class="form-check-input" type="checkbox" value=""
+                                                            id="avi-test-rn-qa">
+                                                        <label class="send" for="avi-test-rn-qa">
+                                                            Avi Test RN
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input checked class="form-check-input" type="checkbox" value=""
+                                                            id="cc1-staff-qa">
+                                                        <label class="send" for="cc1-staff-qa">
+                                                            CC1_Office Staff, Client_Cordinator_1
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                             
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="cc3-staff-qa">
+                                                        <label class="send" for="cc3-staff-qa">
+                                                            CC3_Office Staff, Client_Cordinator_3
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                               
+
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-color tab-pane fade p-15" id="groups" role="tabpanel"
+                                    aria-labelledby="groups-tab">
+                                    <div>
+                                        <div class="search">
+                                            <input type="text" placeholder="Search" class="search-input w-100">
+                                            <img src="images/lens.svg" alt="search lens" class="lens">
+                                        </div>
+                                        <div class="mt-10">
+                                            <ul class="new-form-list list-unstyled">
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input checked class="form-check-input" type="checkbox" value=""
+                                                            id="avi-test-rn-group">
+                                                        <label class="send" for="avi-test-rn-group">
+                                                            Avi Test RN
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input checked class="form-check-input" type="checkbox" value=""
+                                                            id="cc1-staff-group">
+                                                        <label class="send" for="cc1-staff-group">
+                                                            CC1_Office Staff, Client_Cordinator_1
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input checked class="form-check-input" type="checkbox" value=""
+                                                            id="cc2-staff-group">
+                                                        <label class="send" for="cc2-staff-group">
+                                                            CC2_Office Staff, Client_Cordinator_2
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="cc3-staff-group">
+                                                        <label class="send" for="cc3-staff-group">
+                                                            CC3_Office Staff, Client_Cordinator_3
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input checked class="form-check-input" type="checkbox" value=""
+                                                            id="demo-test-group">
+                                                        <label class="send" for="demo-test-group">
+                                                            Demo test RN Clinician
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                           
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-color tab-pane fade p-15" id="clinician" role="tabpanel"
+                                    aria-labelledby="clinician-tab">
+                                    <div>
+                                        <div class="search">
+                                            <input type="text" placeholder="Search" class="search-input w-100">
+                                            <img src="images/lens.svg" alt="search lens" class="lens">
+                                        </div>
+                                        <div class="mt-10">
+                                            <ul class="new-form-list list-unstyled">
+                                               
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input checked class="form-check-input" type="checkbox" value=""
+                                                            id="cc1-staff-clinician">
+                                                        <label class="send" for="cc1-staff-clinician">
+                                                            CC1_Office Staff, Client_Cordinator_1
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input checked class="form-check-input" type="checkbox" value=""
+                                                            id="cc2-staff-clinician">
+                                                        <label class="send" for="cc2-staff-clinician">
+                                                            CC2_Office Staff, Client_Cordinator_2
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input checked class="form-check-input" type="checkbox" value=""
+                                                            id="demo-test-clinician">
+                                                        <label class="send" for="demo-test-clinician">
+                                                            Demo test RN Clinician
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="office-staff-manager-clinician">
+                                                        <label class="send" for="office-staff-manager-clinician">
+                                                            Office staff _ case manager
+                                                        </label>
+                                                    </div>
+                                                </li>
+
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="border-color border-top-0 p-15">
+                            <div class="d-flex justify-content-between align-items-center  mb-20">
+                                <p class="f-500 f-14 lh-19 color-greyScale">Selected Recipient</p>
+
+                                <div class="col-4 border-color bg-white py-10 px-15 radius-4">
+                                    <div class="form-check">
+                                        <input checked class="form-check-input" type="checkbox" value=""
+                                            id="include-myself-contact">
+                                        <label class="send" for="include-myself-contact">
+                                            Include Myself
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="" style="height: 99px; overflow-y:scroll;">
+                                <div class="filter-values">
+                                    <ul class="d-flex selected-recp flex-wrap gap-10">
+                                        <li class="d-flex">
+                                            <p class="f-500 f-12 color-greyBlueheader">Myself
+                                            </p><button type="button" class="btn-close" aria-label="Close"></button>
+                                        </li>
+                                        <li class="d-flex">
+                                            <p class="f-500 f-12 color-greyBlueheader">Avi Test RN</p><button
+                                                type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </li>
+                                        <li class="d-flex">
+                                            <p class="f-500 f-12 color-greyBlueheader">Demo test RN clinician</p><button
+                                                type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </li>
+                                        <li class="d-flex">
+                                            <p class="f-500 f-12 color-greyBlueheader">Avi Test RN</p><button
+                                                type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </li>
+                                        <li class="d-flex">
+                                            <p class="f-500 f-12 color-greyBlueheader">Avi Test RN</p><button
+                                                type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </li>
+                                        <li class="d-flex">
+                                            <p class="f-500 f-12 color-greyBlueheader">CC2_Office Staff, Client_Cordinator_2</p><button
+                                                type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </li>
+                                    
+                                        <li class="d-flex">
+                                            <p class="f-500 f-12 color-greyBlueheader">CC1_Office Staff, Client_Cordinator_1</p><button
+                                                type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </li>
+                                        <li class="d-flex">
+                                            <p class="f-500 f-12 color-greyBlueheader">Demo test RN clinician</p><button
+                                                type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </li>
+                                        <li class="d-flex">
+                                            <p class="f-500 f-12 color-greyBlueheader">Office staff _ case manager </p><button
+                                                type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary btn-modal-submit ms-3">Done</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 

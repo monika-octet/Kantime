@@ -269,7 +269,11 @@ h3 {
 }
 
 .table-type-1 tbody tr {
-    border: 1px solid #EFEFEF
+    border: 1px solid #EFEFEF;
+}
+
+.table-type-1 tbody tr {
+    color:#ffffff;
 }
 
 
@@ -442,7 +446,8 @@ h3 {
 #criteria-table.table-type-1 thead tr th,
 #criteria-table.table-type-1 tbody tr td,
 #medication-and-dosage-table.table-type-1 thead tr th, 
-#community-contact-table.table-type-1 tbody tr td
+#community-contact-table.table-type-1 tbody tr td,
+#community-contact-edit-table.table-type-1 tbody tr td
 {
     padding: 8px 15px;
 }
@@ -1329,7 +1334,7 @@ span.client-status.recent-due {
     margin: 0 10px;
     background: #EEF1F7;
     border: 1px solid #B9D3F8;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .filter-values .btn-close {
@@ -1854,4 +1859,30 @@ vertical-align: top;
 #treatment-address-table .tooltip{
     transform: translate(10px, 20px) !important;
 
+}
+
+.contact-grid{
+    grid-template-columns:144px auto ;
+}
+
+
+
+#contact-list-popup .sidebar-container .nav-tabs .nav-link{
+    border: none;
+    padding: 8px 10px;
+    margin:0px 15px;
+    color: #545864;
+}
+
+#contact-list-popup .sidebar-container .nav-tabs .nav-link.active{
+    border: none;
+    background-color: #F0F7FC;
+    padding: 8px 10px;
+    margin:0px 15px;
+    color: #0D87E2;
+}
+
+
+.selected-recp li{
+    margin: 0px;
 }
