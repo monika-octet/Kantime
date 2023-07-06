@@ -204,7 +204,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="clinician.html" role="tab" aria-controls="clinicains"
-                                aria-selected="false">Clinicains</a>
+                                aria-selected="false">Clinician</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="initial-schedule.html" role="tab" aria-controls="schedule"
@@ -218,10 +218,10 @@
                             <a class="nav-link" href="journal-note.html" role="tab" aria-controls="journal"
                                 aria-selected="false">Journal Note</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="cop.html" role="tab" aria-controls="COP"
                                 aria-selected="false">COP</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -230,7 +230,7 @@
                 <div class="m-20">
                     <div class="pt-20 pb-10 d-flex justify-content-between align-items-center border-bottom">
                         <div class="d-flex gap-10 align-items-center">
-                            <div class="tab-content-heading">Payer source & eligibility</div>
+                            <div class="tab-content-heading">Medications</div>
                             <div class="d-flex align-items-center">
                                 <img src="images/plus-icon.svg" alt="plus sign" style="width: 18px; height: 18px">
                                 <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-new-medication"
@@ -245,7 +245,7 @@
 
                     <div class="d-flex justify-content-end pt-20 pb-10">
                         <div class="d-flex gap-10">
-                            <button class="btn btn-tertiary">
+                            <button class="btn btn-tertiary py-1">
                                 <img src="images/sort-icon.svg" alt="sort icon">
                                 Sort Medication
                             </button>
@@ -272,7 +272,7 @@
                         </div>
                     </div>
 
-                    <table class="table table-hover table-type-1" id="medication-and-dosage-table">
+                    <table class="table table-type-1" id="medication-and-dosage-table">
                         <thead>
                             <tr>
                                 <th style="width: 208px;">
@@ -508,13 +508,13 @@
                                 <hr class="modal-line" style="background-color: #DCDCDC;">
                             </div>
                             <div class="m-3">
-                                <div class="row col-6">
-                                    <div class="input-group position-relative mb-3">
+                                <div class="row ">
+                                    <!-- <div class="input-group position-relative mb-3">
 
-                                        <input type="text" class="form-control search-icon " placeholder="Search"
+                                        <input type="text" class="form-control search-icon" style="padding-left: 30px;" placeholder="Search"
                                             aria-label="Text input with dropdown button">
                                         <img src="images/lens.svg" alt="search lens"
-                                            class="search-bar-icon position-absolute">
+                                            class="search-bar-icon position-absolute" style="top:8px; left: 23px;">
                                         <button class="btn btn-outline-secondary dropdown-toggle" type="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">Medication</button>
                                         <ul class="dropdown-menu dropdown-menu-end">
@@ -526,8 +526,20 @@
                                             </li>
                                             <li><a class="dropdown-item" href="#">Separated link</a></li>
                                         </ul>
-                                    </div>
+                                    </div> -->
+                                    <div class="d-flex search search-client w-50 mb-20">
 
+                                        <input type="text" placeholder="Search" class="search-input w-75">
+                                        <select class="single-select input-item" aria-label="Default select example"
+                                            id="client-info" >
+                                            <option value="0" selected>Medication</option>
+                                            <option value="1">list</option>
+                                            <option value="2">list</option>
+                                            <option value="3">list</option>
+                                        </select>
+                                        <img src="images/lens.svg" alt="search lens" class="lens" style="top: 11px; left: 20px;" >
+    
+                                    </div>
 
 
                                 </div>
@@ -756,7 +768,7 @@
                                         <div class="d-flex gap-3">
                                             <div class="radio-box">
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="admin"
+                                                    <input class="form-check-input" checked type="radio" name="admin"
                                                         id="pnr-as-needed" value="PNR/As Needed">
                                                     <label class="form-check-label" for="pnr-as-needed">
                                                         PNR/As Needed
@@ -1023,7 +1035,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-4 mb-20">
+                            <div class="col-4 mb-20 mt-20">
                                 <label class="label" for="type-severity">Type/Severity</label>
                                 <select class="single-select input-item" aria-label="severity" id="type-severity">
                                     <option class="d-none" disabled selected>Select</option>

@@ -1159,3 +1159,42 @@ padding: .375rem 0;
     top: 20px;
     left: 20px;
 }
+
+
+.color-green {
+    border-radius: 4px;
+    border: 1px solid #D5EFD6 !important;
+    background: #E2F9E3;
+}
+
+.color-green .multiselect-selected-text {
+    color: #0F700F;
+}
+
+.color-red {
+    border-radius: 4px;
+    border: 1px solid #F9D0C7 !important;
+    background: #FEE3D4 !important;
+}
+
+.color-red .multiselect-selected-text {
+    color: #063206;
+}
+
+#preference-criteria-table .multiselect-native-select .btn-group .dropdown-menu {
+    text-align: center;
+}
+
+#preference-criteria-table.table-type-1 tbody tr td {
+    padding: 8px 12px;
+}
+
+.new-form-list li{
+    padding: 10px 15px;
+    border-bottom: 1px solid #F1F1F1;
+}
+
+.new-form-list li:hover{
+    background-color: #F0F7FC;
+    color: #0D87E2;
+}

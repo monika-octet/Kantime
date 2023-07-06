@@ -209,7 +209,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="clinician.html" role="tab" aria-controls="clinicains"
-                aria-selected="false">Clinicains</a>
+                aria-selected="false">Clinician</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="initial-schedule.html" role="tab" aria-controls="schedule"
@@ -222,9 +222,9 @@
               <a class="nav-link" href="journal-note.html" role="tab" aria-controls="journal"
                 aria-selected="false">Journal Note</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="cop.html" role="tab" aria-controls="COP" aria-selected="false">COP</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -3603,69 +3603,61 @@
               </div>
 
               <div class="p-20">
+                <table class="table table-hover table-type-1" id="preference-criteria-table">
+                    <thead>
+                        <tr>
+                            <th class="col-10">Criteria</th>
+                            <th class="col-2">Preference</th>
+                        </tr>
+                    </thead>
 
-                <table class="table table-type-1" id="criteria-table">
-                  <thead>
-                    <tr>
-                      <th style="width: 80%;">Criteria</th>
-                      <th>Preference</th>
-                    </tr>
-                  </thead>
-
-                  <tbody>
-                    <tr>
-                      <td class="f-500">
-                        Preference Criteria
-                      </td>
-                      <td>
-                        <select class="form-select color-select" aria-label="Default select example">
-                          <option checked value="Preferred">Preferred</option>
-                          <option value="Not Preferred">Not Preferred</option>
-                        </select>
-
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="f-500">
-                        Preference Criteria
-                      </td>
-                      <td>
-                        <select class="form-select color-select" aria-label="Default select example">
-                          <option value="Preferred">Preferred</option>
-                          <option value="Not Preferred">Not Preferred</option>
-                        </select>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="f-500">
-                        Preference Criteria
-                      </td>
-                      <td>
-                        <select class="form-select color-select" aria-label="Default select example">
-                          <option value="Preferred">Preferred</option>
-                          <option value="Not Preferred">Not Preferred</option>
-                        </select>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="f-500">
-                        Preference Criteria
-                      </td>
-                      <td>
-                        <select class="form-select color-select" aria-label="Default select example">
-                          <option value="Preferred">Preferred</option>
-                          <option value="Not Preferred">Not Preferred</option>
-                        </select>
-                      </td>
-                    </tr>
-
-                  </tbody>
+                    <tbody>
+                        <tr class="bg-white">
+                            <td class="f-500">Preference Criteria</td>
+                            <td class="f-500"><select class="single-select input-item"
+                                    aria-label="preference" id="Preference">
+                                    <option class="color-darkblue" selected>Select</option>
+                                    <option class="preffered" value="preffered">Preffered</option>
+                                    <option class="non-preffered" value="non-preffered">Non Preffered
+                                    </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="bg-white">
+                            <td class="f-500">Preference Criteria</td>
+                            <td class="f-500"><select class="single-select input-item"
+                                    aria-label="preference" id="Preference">
+                                    <option class="color-darkblue" selected>Select</option>
+                                    <option class="preffered" value="preffered">Preffered</option>
+                                    <option class="non-preffered" value="non-preffered">Non Preffered</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="bg-white">
+                            <td class="f-500">Preference Criteria</td>
+                            <td class="f-500"><select class="single-select input-item"
+                                    aria-label="preference" id="Preference">
+                                    <option class="color-darkblue" selected>Select</option>
+                                    <option class="preffered" value="preffered">Preffered</option>
+                                    <option class="non-preffered" value="non-preffered">Non Preffered
+                                    </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="bg-white">
+                            <td class="f-500">Preference Criteria</td>
+                            <td class="f-500"><select class="single-select input-item"
+                                    aria-label="preference" id="Preference">
+                                    <option class="color-darkblue" selected>Select</option>
+                                    <option class="preffered" value="preffered">Preffered</option>
+                                    <option class="non-preffered" value="non-preffered">Non Preffered
+                                    </option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
-
-              </div>
+            </div>
             </div>
           </div>
         </div>

@@ -721,26 +721,30 @@ item:active {
     color: #181C32;
 
 }
-#headingOne .accordion-button:not(.collapsed) .insurance-type,
-#headingTwo .accordion-button:not(.collapsed) .insurance-type,
-#headingThree .accordion-button:not(.collapsed) .insurance-type
+#headingOne .accordion-button .insurance-type,
+#headingTwo .accordion-button .insurance-type,
+#headingThree .accordion-button .insurance-type,
+#headingDual .accordion-button .insurance-type
 {
     font-weight: 600;
     font-size: 14px;
     line-height: 22px;
 }
-#headingOne .accordion-button:not(.collapsed) .insurance-type{
+#headingOne .accordion-button .insurance-type{
   
     color: #BD2424;
 }
 
-#headingTwo .accordion-button:not(.collapsed) .insurance-type{
+#headingTwo .accordion-button .insurance-type{
     color: #9A5300;
 }
 
-#headingThree .accordion-button:not(.collapsed) .insurance-type
+#headingThree .accordion-button .insurance-type
 {
     color:#4C6197;
+}
+#headingDual .accordion-button .insurance-type {
+    color:#0A6D0A;
 }
 
 

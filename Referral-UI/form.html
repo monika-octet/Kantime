@@ -204,7 +204,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="clinician.html" role="tab" aria-controls="clinicains"
-                                aria-selected="false">Clinicains</a>
+                                aria-selected="false">Clinician</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="initial-schedule.html" role="tab" aria-controls="schedule"
@@ -218,10 +218,10 @@
                             <a class="nav-link" href="journal-note.html" role="tab" aria-controls="journal"
                                 aria-selected="false">Journal Note</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="cop.html" role="tab" aria-controls="COP"
                                 aria-selected="false">COP</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -246,11 +246,11 @@
                     <table class="table table-type-1" id="add-physician-table">
                         <thead>
                             <tr>
-                                <th>Form Names</th>
+                                <th style="width: 350px;">Form Names</th>
                                 <th>Date</th>
                                 <th>Completed By</th>
                                 <th>Status</th>
-                                <th>Action</th>
+                                <th style="width: 80px;">Action</th>
                             </tr>
                         </thead>
 
@@ -347,27 +347,38 @@
 
 
         <!-- POPUP -->
-        <div class="modal" tabindex="-1" id="add-new-forms">
+        <div class="modal " tabindex="-1" id="add-new-forms">
             <div class="modal-dialog custom-modal-1 modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header bg-greyBlue">
-                        <h5 class="modal-title Pinfo color-darkblue">Add New Forms</h5>
+                        <h5 class="modal-title Pinfo color-darkblue">Add New Form</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="col-12 position-relative p-10">
-                            <input type="text" class="form-control input-item" id="search-form"
-                                placeholder="Search Form" aria-label="Search Form">
-                            <img src="images/lens.svg" alt="search icon" class="position-absolute">
+                        <div class="search-bar position-relative mr-5">
+                            <input type="text" placeholder="Search Client" class="search-input w-100">
+                            <img src="images/lens.svg" alt="search lens" class="lens">
                         </div>
+                        <div>
+                            <ul class="new-form-list list-unstyled mt-10">
+                                <li>Admission consent</li>
+                                <li>245D Service Admission checklist for basic services SF-7708</li>
+                                <li>Admission consent</li>
+                                <li>Admission consent</li>
+                                <li>Admission consent</li>
+                                <li>Admission consent</li>
+                                <li>Admission consent</li>
+                                
+                            </ul>
+                        </div>
+    
                     </div>
                     <div class="modal-footer">
-                        <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+                        <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
                     </div>
                 </div>
             </div>
         </div>
-
     </main>
 
 
