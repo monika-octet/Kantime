@@ -165,7 +165,7 @@
 }
 
 .mt-30 {
-    margin-top: 30px;
+    margin-top: 30px !important;
 }
 .m-b-5{
     margin-bottom: 5px;
@@ -275,6 +275,10 @@
 
 .disabled-text{
     color: #3D414880 !important;
+}
+
+.align-center{
+    text-align: center;
 }
 
 .btn-primary,

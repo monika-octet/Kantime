@@ -555,12 +555,7 @@
 
                         <div class="col-6">
                             <label class="label" for="timer-add-new-notes">Time</label>
-                            <select class="single-select input-item" aria-label="" id="timer-add-new-notes">
-                                <option class="d-none" disabled selected>Select</option>
-                                <option value="1">List 1</option>
-                                <option value="2">List 2</option>
-                                <option value="3">List 3</option>
-                            </select>
+                            <input  type="text" class="form-control input-item" id="timer-add-new-notes" placeholder="Enter " aria-label="name">
                         </div>
 
 
@@ -731,14 +726,14 @@
                                     <option value="3">List 3</option>
                                 </select>
                             </div>
-                            <div class="w-100">
-                                <label class="label" for="note-range-client-notes">Note Date Range</label>
-                                <select class="single-select input-item" aria-label="" id="note-range-client-notes">
-                                    <option class="d-none" disabled selected>Select</option>
-                                    <option value="1">List 1</option>
-                                    <option value="2">List 2</option>
-                                    <option value="3">List 3</option>
-                                </select>
+                            <div class="w-100 ">
+                                <div class="">
+                                    <label class="form-label" for="intake-added-on-care">New Date Range</label>
+                                    <div class="input-group">
+                                        <input  type="text" class="form-control input-item" id="intake-added-on-care" placeholder="Select Date" value="01/05/1995   -    01/-3/1998">
+                                        <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                                    </div>
+                                </div>
                             </div>
                             <button class="btn btn-outline-primary align-self-end">
                                 Apply

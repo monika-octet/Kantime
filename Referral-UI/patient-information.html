@@ -23,7 +23,9 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-multiselect.min.css" />
 
   <!-- datepicker -->
-  <link type="text/css" href="css/daterangepicker.css" />
+  <!-- <link type="text/css" href="css/daterangepicker.css" /> -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
 
   <!-- Custom css -->
 
@@ -407,8 +409,8 @@
 
                         <div class="col-4 mb-20">
                           <label class="form-label" for="dob">DOB</label>
-                          <div class="input-group">
-                            <input type="text" class="form-control input-item" id="dob-Pinfo"
+                          <div class="input-group" >
+                            <input type="text" class="form-control input-item" name="dates" id="dob-Pinfo" 
                               placeholder="Select Date" />
                             <span class="input-group-text"><img src="images/Calendar.svg" /></span>
                           </div>
@@ -1378,7 +1380,7 @@
                           <div class="col-4 mb-20">
                             <div class="d-flex justify-content-between">
                               <label class="label" for="other-type-referreing-physician">Referring Physician</label>
-                              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-ref-facility"
+                              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-physician-unedit"
                                 class="link-blue">Add</a>
                             </div>
                             <select class="single-select input-item" aria-label="Default select example"
@@ -2797,7 +2799,7 @@
               </div>
 
               <div class="p-20">
-                <table class="table table-hover table-type-1" id="client-document-table">
+                <table class="table table-type-1" id="client-document-table">
                   <thead>
                     <tr>
                       <th class="d-flex">
@@ -3485,14 +3487,14 @@
               </div>
 
               <div class="p-20">
-                <table class="table table-hover table-type-1" id="client-document-table">
+                <table class="table table-type-1" id="client-document-table">
                   <thead>
                     <tr>
                       <th>
                         Group
                       </th>
                       <th>Skills</th>
-                      <th style="text-align: center;">Actions</th>
+                      <th style="width: 80px; text-align: center;">Actions</th>
                     </tr>
                   </thead>
 
@@ -6238,13 +6240,8 @@
                     <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#verify"
                       class="link-blue">Verify</a>
                   </div>
-                  <select class="single-select input-item" aria-label="Default select example"
-                    id="physician-info-NPI-1-unedit">
-                    <option selected>12341231</option>
-                    <option value="2">Agency 1</option>
-                    <option value="2">Agency 2</option>
-                    <option value="2">Agency 3</option>
-                  </select>
+                  <input type="text" class="form-control input-item" id="physician-info-NPI-1-unedit" placeholder="Enter" aria-label="
+                                                              Contact" value="12312312">
                 </div>
               </div>
 
@@ -7383,12 +7380,12 @@
         <div class="modal-body">
 
           <div class="row col-12">
-            <div class="col-4 mb-20">
+            <div class="col-6 mb-20">
               <label class="label" for="new-emergency-f-name">First name</label>
               <input type="text" class="form-control input-item" id="new-emergency-f-name"
                 placeholder="Enter first name" aria-label="first-name">
             </div>
-            <div class="col-4 mb-20">
+            <div class="col-6 mb-20">
               <label class="label" for="new-emergency-l-name">Last name</label>
               <input type="text" class="form-control input-item" id="new-emergency-l-name" placeholder="Enter Last name"
                 aria-label="Last-name">
@@ -7396,7 +7393,7 @@
           </div>
 
           <div class="row col-12">
-            <div class="col-8 mb-20">
+            <div class=" mb-20">
               <label class="label" for="new-emergency-address-1">Address</label>
               <input type="text" class="form-control input-item mb-10" id="new-emergency-address-1" placeholder="Line 1"
                 aria-label="address">
@@ -7406,7 +7403,7 @@
           </div>
 
           <div class="row col-12">
-            <div class="col-4 d-flex gap-10 mb-20">
+            <div class="col-6 d-flex gap-10 mb-20">
               <div class="">
                 <label class="label" for="new-emergency-zip">Zip</label>
                 <input type="text" class="form-control input-item" id="new-emergency-zip" placeholder="Enter"
@@ -7418,7 +7415,7 @@
                   aria-label="city">
               </div>
             </div>
-            <div class="col-4 mb-20">
+            <div class="col-6 mb-20">
               <label class="label" for="new-emergency-state">State</label>
               <input type="text" class="form-control input-item" id="new-emergency-state" placeholder="Enter"
                 aria-label="state">
@@ -7426,7 +7423,7 @@
           </div>
 
           <div class="row col-12">
-            <div class="col-4 mb-20">
+            <div class="col-6 mb-20">
               <label class="label" for="new-emergency-work-phone">Work Phone</label>
               <select class="single-select input-item" aria-label="Work Phone" id="new-emergency-work-phone">
                 <option class="d-none" disabled selected>Select</option>
@@ -7436,22 +7433,19 @@
               </select>
             </div>
 
-            <div class="col-4 mb-20">
+            <div class="col-6 mb-20">
               <label class="label" for="new-emergency-Cell">Cell Phone</label>
               <input type="text" class="form-control input-item" id="new-emergency-Cell" placeholder="Enter"
                 aria-label="Cell">
             </div>
 
-            <div class="col-4 mb-20">
+            <div class="col-6 mb-20">
               <label class="label" for="new-emergency-Home">Home Phone</label>
               <input type="text" class="form-control input-item" id="new-emergency-Home" placeholder="Enter"
                 aria-label="Home">
             </div>
 
-          </div>
-
-          <div class="row col-12">
-            <div class="col-4">
+            <div class="col-6">
               <label class="label" for="new-emergency-email">Email</label>
               <select class="single-select input-item" aria-label="email" id="new-emergency-email">
                 <option class="d-none" disabled selected>Select</option>
@@ -7462,14 +7456,18 @@
 
             </div>
 
-            <div class="col-4 mb-20">
+            
+            <div class="col-6 mb-20">
               <label class="label" for="new-emergency-Fax">Fax</label>
               <input type="text" class="form-control input-item" id="new-emergency-Fax" placeholder="Enter"
                 aria-label="Fax">
             </div>
 
-            <div class="col-8 mb-20">
-              <label class="f-500 f-14 lh-19" for="new-emergency-notes">Notes</label>
+          </div>
+
+          <div class="row col-12">
+            <div class="col-12 mb-20">
+              <label class=" f-14 lh-19" for="new-emergency-notes">Notes</label>
               <textarea name="" id="new-emergency-notes" cols="" rows="2" class="input-textarea w-100"
                 placeholder="Type Here"></textarea>
             </div>
@@ -8996,7 +8994,9 @@
  
 
   <!-- JavaScript -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="js/jquery.min.js"></script>
+   -->
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap-multiselect.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -9005,8 +9005,11 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>-->
 
   <!-- datepicker js-->
-  <script type="text/javascript" src="js/moment.min.js"></script>
-  <script type="text/javascript" src="js/daterangepicker.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -9061,28 +9064,6 @@
       });
     });
   </script>
-
-
-  <!-- <script>
-$(document).ready(function() {
-  $('.color-select').change(function() {
-    var selectedColor = $(this).val();
-    if(selectedColor=="Preferred"){
-        $('.btn-group button').css('background-color','blue;');
-        $('.btn-group button').css('color','#0F700F');
-      
-  }else{
-    
-        $('.btn-group button').css('background-color','yellow');
-        $('.btn-group button').css('color','#962C2C')
-        
-  }
-  });
-});
-
-
-</script> -->
-
 
 
 </body>

@@ -251,6 +251,10 @@ h3 {
 
 }
 
+.table-type-1 tr td {
+    background-color: #fff;
+
+}
 .table thead tr {
     padding: 8px 20px;
 }
@@ -1198,3 +1202,110 @@ padding: .375rem 0;
     background-color: #F0F7FC;
     color: #0D87E2;
 }
+
+
+.w-88{
+    width: 88px;
+}
+
+.logo-box div{
+    width: 104px;
+}
+
+.d-flex img + a{
+    color: #0747A6;
+}
+
+.btn-menu-dropdown{
+    height: 57px;
+    background: none;
+    border: none;
+    padding: 17px 15px;
+}
+
+.btn-menu-dropdown:hover{
+    background-color: #F4F5F6;
+   
+    color: #3D4148;
+}
+.btn-menu-dropdown:focus{
+    border-bottom: 2px solid #545B64;
+}
+
+.referral-search .ref-lens{
+    top: 44px;
+    left: 20px;
+
+}
+.referral-search input#search-form{
+    padding: 10px 15px 10px 35px;
+}
+.referral-search input#search-form-1{
+    padding: 10px 15px 10px 35px;
+}
+
+
+.new-form-list li{
+    padding: 10px 15px;
+    border-bottom: 1px solid #F1F1F1;
+}
+
+.new-form-list li:hover{
+    background-color: #F0F7FC;
+    color: #0D87E2;
+}
+
+#treatment-address-table .tooltip{
+    transform: translate(10px, 20px) !important;
+
+}
+
+.contact-grid{
+    grid-template-columns:144px auto ;
+}
+
+
+
+#contact-list-popup .sidebar-container .nav-tabs .nav-link{
+    border: none;
+    padding: 8px 10px;
+    margin:0px 15px;
+    color: #545864;
+}
+
+#contact-list-popup .sidebar-container .nav-tabs .nav-link.active{
+    border: none;
+    background-color: #F0F7FC;
+    padding: 8px 10px;
+    margin:0px 15px;
+    color: #0D87E2;
+}
+
+
+.selected-recp li{
+    margin: 0px;
+}
+
+.filter-values ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: auto;
+}
+
+.filter-values li {
+    padding: 5px 10px 5px 10px;
+    margin: 0 10px;
+    background: #EEF1F7;
+    border: 1px solid #B9D3F8;
+    border-radius: 10px;
+}
+
+.filter-values .btn-close {
+    background: url(../../images/closeIcon.svg) center/0.8em auto no-repeat !important;
+    margin-left: 10px;
+    opacity: 1;
+}
+.selected-recp li {
+    margin: 0px;
+  }

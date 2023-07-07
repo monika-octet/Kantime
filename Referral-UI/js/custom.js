@@ -47,3 +47,6 @@ $(document).ready(function () {
 
 
 });
+
+
+$('input[name="dates"]').daterangepicker();

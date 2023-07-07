@@ -440,6 +440,7 @@ item:active {
     width: 100%;
     box-shadow: 0px 2px 10px 0px #DCDEE080;
     border-radius: 4px;
+    overflow: hidden;
 }
 
 .single-select~.btn-group .form-check-input {

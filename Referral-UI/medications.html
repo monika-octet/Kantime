@@ -73,8 +73,8 @@
                             title="Open Mail" />
                         <img src="images/Duplicate.svg" alt="duplicate-icon" data-bs-toggle="tooltip"
                             data-bs-placement="bottom" title="Open Duplicate Tabs" />
-                        <img src="images/message.svg" alt="message-icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                            title="Open Kantime Text" />
+                        <img src="images/message.svg" alt="message-icon" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" title="Open Kantime Text" />
                     </div>
                 </div>
             </div>
@@ -299,9 +299,17 @@
                                         <p class="notice">A.E.R Witch hazel towelette 50% topical pad</p>
                                         <p class="disclaimer f-13">1000 units</p>
                                         <div class="d-flex gap-20">
-                                            <img src="images/discontinued.svg" alt="discontinued">
-                                            <img src="images/risk.svg" alt="high risk">
-                                            <img src="images/antibiotic.svg" alt="pills">
+                                            <img src="images/discontinued.svg" alt="discontinued"
+                                                data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+
+                                                title="<img src='images/discontinued-icon.svg' > Discontinued">
+                                           
+                                                <img src="images/risk.svg" alt="high risk" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+
+                                                title="High Risk">
+                                            <img src="images/antibiotic.svg" alt="pills" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+
+                                            title="<img src='images/pills-white.svg' > Antibiotic">
                                         </div>
                                     </div>
                                 </td>
@@ -328,9 +336,17 @@
                                         <p class="notice">A.E.R Witch hazel towelette 50% topical pad</p>
                                         <p class="disclaimer f-13">1000 units</p>
                                         <div class="d-flex gap-20">
-                                            <img src="images/discontinued.svg" alt="discontinued">
-                                            <img src="images/risk.svg" alt="high risk">
-                                            <img src="images/antibiotic.svg" alt="pills">
+                                            <img src="images/discontinued.svg" alt="discontinued"
+                                                data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+
+                                                title="<img src='images/discontinued-icon.svg' > Discontinued">
+                                           
+                                                <img src="images/risk.svg" alt="high risk" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+
+                                                title="High Risk">
+                                            <img src="images/antibiotic.svg" alt="pills" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+
+                                            title="<img src='images/pills-white.svg' > Antibiotic">
                                         </div>
                                     </div>
                                 </td>
@@ -357,9 +373,17 @@
                                         <p class="notice">A.E.R Witch hazel towelette 50% topical pad</p>
                                         <p class="disclaimer f-13">1000 units</p>
                                         <div class="d-flex gap-20">
-                                            <img src="images/discontinued.svg" alt="discontinued">
-                                            <img src="images/risk.svg" alt="high risk">
-                                            <img src="images/antibiotic.svg" alt="pills">
+                                            <img src="images/discontinued.svg" alt="discontinued"
+                                                data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+
+                                                title="<img src='images/discontinued-icon.svg' > Discontinued">
+                                           
+                                                <img src="images/risk.svg" alt="high risk" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+
+                                                title="High Risk">
+                                            <img src="images/antibiotic.svg" alt="pills" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+
+                                            title="<img src='images/pills-white.svg' > Antibiotic">
                                         </div>
                                     </div>
                                 </td>
@@ -386,9 +410,17 @@
                                         <p class="notice">A.E.R Witch hazel towelette 50% topical pad</p>
                                         <p class="disclaimer f-13">1000 units</p>
                                         <div class="d-flex gap-20">
-                                            <img src="images/discontinued.svg" alt="discontinued">
-                                            <img src="images/risk.svg" alt="high risk">
-                                            <img src="images/antibiotic.svg" alt="pills">
+                                            <img src="images/discontinued.svg" alt="discontinued"
+                                                data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+
+                                                title="<img src='images/discontinued-icon.svg' > Discontinued">
+                                           
+                                                <img src="images/risk.svg" alt="high risk" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+
+                                                title="High Risk">
+                                            <img src="images/antibiotic.svg" alt="pills" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+
+                                            title="<img src='images/pills-white.svg' > Antibiotic">
                                         </div>
                                     </div>
                                 </td>
@@ -531,14 +563,15 @@
 
                                         <input type="text" placeholder="Search" class="search-input w-75">
                                         <select class="single-select input-item" aria-label="Default select example"
-                                            id="client-info" >
+                                            id="client-info">
                                             <option value="0" selected>Medication</option>
-                                            <option value="1">list</option>
-                                            <option value="2">list</option>
-                                            <option value="3">list</option>
+                                            <option value="1">RX Norms</option>
+                                            <option value="2">NDC Norms</option>
+
                                         </select>
-                                        <img src="images/lens.svg" alt="search lens" class="lens" style="top: 11px; left: 20px;" >
-    
+                                        <img src="images/lens.svg" alt="search lens" class="lens"
+                                            style="top: 11px; left: 20px;">
+
                                     </div>
 
 
@@ -721,8 +754,10 @@
                                     <div class="col-4 mb-20">
                                         <div class="d-flex justify-content-between">
                                             <label class="label" for="medication-teaching">Medication Teaching</label>
-                                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#"
-                                                class="link-blue">Add</a>
+                                            <!-- <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#"
+                                                class="link-blue">Add</a> -->
+                                            <img src="images/redicrect-icon.svg" alt="" data-bs-toggle="modal"
+                                                data-bs-target="#" class="cursor">
                                         </div>
                                         <select class="single-select input-item" aria-label="Default select example"
                                             id="medication-teaching">
@@ -887,7 +922,7 @@
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-tertiary" data-bs-toggle="modal"
-                            data-bs-target="#drug-interaction-side-effect">Drug injection </button>
+                            data-bs-target="#drug-interaction-side-effect">Drug Interaction </button>
                         <a href="#" class="btn btn-primary btn-modal-submit ms-3">Assign</a>
                     </div>
                 </div>
@@ -1091,10 +1126,10 @@
                                     <tbody>
                                         <tr>
                                             <td>
-                                               Multivitamin with Minerals
+                                                Multivitamin with Minerals
                                             </td>
                                             <td>
-                                                Iron absorption is inhibited by eggs and milk... 
+                                                Iron absorption is inhibited by eggs and milk...
                                             </td>
                                             <td>
                                                 Drug-Food/N/A
@@ -1115,7 +1150,7 @@
                                         <tr>
                                             <th>Drug</th>
                                             <th>Side Effects</th>
-                                           
+
 
                                         </tr>
                                     </thead>
@@ -1123,12 +1158,12 @@
                                     <tbody>
                                         <tr>
                                             <td>
-                                               Multivitamin with Minerals
+                                                Multivitamin with Minerals
                                             </td>
                                             <td>
-                                                Adverse Reactions See Individual agent... 
+                                                Adverse Reactions See Individual agent...
                                             </td>
-                            
+
 
                                         </tr>
                                     </tbody>

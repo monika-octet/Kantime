@@ -1848,11 +1848,14 @@ vertical-align: top;
 }
 
 .referral-search .ref-lens{
-    top: 20px;
+    top: 44px;
     left: 20px;
 
 }
 .referral-search input#search-form{
+    padding: 10px 15px 10px 35px;
+}
+.referral-search input#search-form-1{
     padding: 10px 15px 10px 35px;
 }
 

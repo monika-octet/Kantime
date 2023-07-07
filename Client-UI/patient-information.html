@@ -1301,7 +1301,7 @@
                             </div>
                             <div class="p-20">
 
-                                <table class="table table-hover table-type-1" id="treatment-address-table">
+                                <table class="table table-type-1" id="treatment-address-table">
                                     <thead>
                                         <tr>
                                             <th class="d-flex">
@@ -1912,7 +1912,7 @@
                                     </div>
                                 </div>
                                 <div class="p-3 bg-white container-fluid">
-                                    <table class="table table-hover table-type-1" id="treatment-address-table">
+                                    <table class="table  table-type-1" id="treatment-address-table">
                                         <thead>
                                             <tr>
                                                 <th>
@@ -3098,7 +3098,7 @@
                                                         <input checked class="form-check-input" type="radio"
                                                             name="referral source" id="physician-type-ref-info"
                                                             value="Physician"
-                                                            onclick="showHideDiv('physician-type-ref-info', 'src-referral-source-type-physician')" />
+                                                            onclick="showHideDiv_1('physician-type-ref-info', 'src-referral-source-type-physician')" />
                                                         <label class="form-check-label" for="physician-type-ref-info">
                                                             Physician
                                                         </label>
@@ -3109,7 +3109,7 @@
                                                         <input class="form-check-input" type="radio"
                                                             name="referral source" id="facility-type-ref-info"
                                                             value="Facility"
-                                                            onclick="showHideDiv('facility-type-ref-info', 'src-referral-source-type-facility')" />
+                                                            onclick="showHideDiv_1('facility-type-ref-info', 'src-referral-source-type-facility')" />
                                                         <label class="form-check-label" for="facility-type-ref-info">
                                                             Facility
                                                         </label>
@@ -3120,7 +3120,7 @@
                                                         <input class="form-check-input" type="radio"
                                                             name="referral source" id="other-type-ref-info"
                                                             value="Other"
-                                                            onclick="showHideDiv('other-type-ref-info', 'src-referral-source-type-other')" />
+                                                            onclick="showHideDiv_1('other-type-ref-info', 'src-referral-source-type-other')" />
                                                         <label class="form-check-label" for="other-type-ref-info">
                                                             Other
                                                         </label>
@@ -3129,7 +3129,7 @@
                                             </div>
                                         </div>
 
-                                        <div id="src-referral-source-type-facility" class="referral-source-type mt-20">
+                                        <div id="src-referral-source-type-facility" class="referral-source-type mt-20" style="display: none;">
                                             <div class="row col-12">
                                                 <div class="col-4">
                                                     <label class="label" for="referral-facility-details">Referral
@@ -3158,7 +3158,7 @@
 
                                         </div>
 
-                                        <div id="src-referral-source-type-other" class="referral-source-type mt-20">
+                                        <div id="src-referral-source-type-other" class="referral-source-type mt-20" style="display: none;">
                                             <div class="row col-12">
                                                 <div class="col-4">
                                                     <label class="label"
@@ -3195,8 +3195,18 @@
 
                                     <div class="p-15 border-color referral-search" style="background-color:#FAFAFA ;">
                                         <div class="row col-12">
+
                                             <div class="col-4 position-relative p-10">
-                                                <input type="text" class="form-control input-item" id="search-form"
+
+                                                <div class="d-flex justify-content-between">
+                                                    <label class="label" for="search-form-1">Referring
+                                                        Physician</label>
+                                                    <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                        data-bs-target="#" class="link-blue">Add</a>
+                                                </div>
+
+
+                                                <input disabled type="text" class="form-control input-item" id="search-form-1"
                                                     placeholder="Search Form" aria-label="Search Form"
                                                     style="background-color: #efefef;">
                                                 <img src="images/lens.svg" alt="search icon"
@@ -4550,6 +4560,7 @@
                     </div>
 
                     <div class="border-color p-15">
+                        
                         <div class="field-container row col-12">
                             <div class="col-3 mb-20">
                                 <label class="form-label" for="effective-Start">Effective Start</label>
@@ -4580,6 +4591,42 @@
                             </div>
                             <div class="col-3"></div>
                         </div>
+
+                        <div class="field-container-1 row col-12" style="display: none;">
+                            <div class="col-3 mb-20">
+                                <label class="form-label" for="effective-Start">Effective Start</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-item" id="effective-Start"
+                                        placeholder="Select Date">
+                                    <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-3 mb-20">
+                                <label class="form-label" for="effective-End">Effective End</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-item" id="effective-End"
+                                        placeholder="Select Date">
+                                    <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <label class="label" for="billing-acuity">Billing Acuity</label>
+                                <select class="single-select input-item" aria-label="Billing" id="billing-acuity">
+                                    <option class="d-none" disabled selected>Select</option>
+                                    <option value="1">List 1</option>
+                                    <option value="2">List 2</option>
+                                    <option value="3">List 3</option>
+                                </select>
+                            </div>
+                            <div class="col-3 mt-30">
+                                <img src="images/remove.svg" alt="remove-icon" id="delete-button" class="delete-icon ml-5 pointer">
+                            </div>
+                        </div>
+<!--delete-button
+    add-field-link
+  -->
                         <a href="#" id="add-field-link" class="link-blue">Add New Field</a>
 
                     </div>
@@ -5188,7 +5235,7 @@
                                 placeholder="Enter" aria-label="physician order">
                         </div>
                         <div class="col-6 mb-20">
-                            <label class="label" for="edit-physician-details-specialization">Specialization/label>
+                            <label class="label" for="edit-physician-details-specialization">Specialization</label>
                                 <input type="text" class="form-control input-item"
                                     id="edit-physician-details-specialization" placeholder="" aria-label="">
                         </div>
@@ -5454,13 +5501,7 @@
                                         <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#verify"
                                             class="link-blue">Verify</a>
                                     </div>
-                                    <select class="single-select input-item" aria-label="Default select example"
-                                        id="physician-info-NPI">
-                                        <option selected>Select</option>
-                                        <option value="2">Agency 1</option>
-                                        <option value="2">Agency 2</option>
-                                        <option value="2">Agency 3</option>
-                                    </select>
+                                    <input type="text" class="form-control input-item" id="physician-info-NPI" placeholder="Enter" aria-label="" value="1234567890">
                                 </div>
                             </div>
 
@@ -8342,7 +8383,7 @@
                                 </div>
                             </div>
 
-                            <div id="edit-referral-source-type-facility" class="referral-source-type mt-20">
+                            <div id="edit-referral-source-type-facility" class="referral-source-type mt-20" style="display: none;">
                                 <div class="row col-12">
                                     <div class="col-4">
                                         <label class="label" for="referral-facility-details-edit">Referral
@@ -8371,7 +8412,7 @@
 
                             </div>
 
-                            <div id="edit-referral-source-type-other" class="referral-source-type mt-20">
+                            <div id="edit-referral-source-type-other" class="referral-source-type mt-20" style="display: none;">
                                 <div class="row col-12">
                                     <div class="col-4">
                                         <label class="label" for="organiziation-details-other-edit">Organization</label>
@@ -8408,6 +8449,12 @@
                         <div class="p-15 border-color referral-search" style="background-color:#FAFAFA ;">
                             <div class="row col-12">
                                 <div class="col-4 position-relative p-10">
+                                    <div class="d-flex justify-content-between">
+                                        <label class="label" for="search-form">Referring
+                                            Physician</label>
+                                        <a href="javascript:void(0)" data-bs-toggle="modal"
+                                            data-bs-target="#" class="link-blue">Add</a>
+                                    </div>
                                     <input type="text" class="form-control input-item" id="search-form"
                                         placeholder="Search Form" aria-label="Search Form">
                                     <img src="images/lens.svg" alt="search icon" class="position-absolute ref-lens">
@@ -8525,7 +8572,7 @@
 
 
     <script>
-        function showHideDiv(checkboxId, divId) {
+        function showHideDiv_1(checkboxId, divId) {
             var checkbox = document.getElementById(checkboxId);
             var div = document.getElementById(divId);
 
@@ -8556,131 +8603,18 @@
         }
     </script>
 
-    <!-- 
-    <script>
-        
-        function addInputFields() {
-            
-            var container = $(".field-container");
-
-          
-            var newFields = `
-            <div class="col-4 mb-20 ">
-                                <label class="form-label" for="effective-Start">Effective Start</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control input-item" id="effective-Start"
-                                        placeholder="Select Date">
-                                    <span class="input-group-text"><img src="images/Calendar.svg"></span>
-                                </div>
-                            </div>
-
-                            <div class="col-4 mb-20">
-                                <label class="form-label" for="effective-End">Effective End</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control input-item" id="effective-End"
-                                        placeholder="Select Date">
-                                    <span class="input-group-text"><img src="images/Calendar.svg"></span>
-                                </div>
-                            </div>
-
-                            <div class="col-4">
-                                <label class="label" for="billing-acuity">Billing Acuity</label>
-                                <select class="single-select input-item" aria-label="Billing" id="billing-acuity">
-                                    <option class="d-none" disabled selected>Select</option>
-                                    <option value="1">List 1</option>
-                                    <option value="2">List 2</option>
-                                    <option value="3">List 3</option>
-                                </select>
-                            </div>
-
-                            <img src="images/remove.svg" alt="remove-icon" id="delete-button" class="delete-icon ml-5 pointer">
-                    `;
-
-
-            var newContainer = $(`<div class="row col-12">`).html(newFields);
-
-            container.append(newContainer);
-
-            var deleteButton = newContainer.find("#delete-button");
-            deleteButton.on("click", function () {
-                newContainer.remove();
-            });
-        }
-
-        $(document).ready(function () {
-            $("#add-field-link").on("click", function (event) {
-                event.preventDefault();
-                console.log("inside vent listener")
-                addInputFields();
-            });
-        });
-
-    </script> -->
 
     <script>
-        function addInputFields() {
-
-            var container = $(".field-container");
-
-            var newFields = `
-        <div class="col-3 mb-20 ">
-            <label class="form-label" for="effective-Start">Effective Start</label>
-            <div class="input-group">
-                <input type="text" class="form-control input-item" id="effective-Start" placeholder="Select Date">
-                <span class="input-group-text"><img src="images/Calendar.svg"></span>
-            </div>
-        </div>
-
-        <div class="col-3 mb-20">
-            <label class="form-label" for="effective-End">Effective End</label>
-            <div class="input-group">
-                <input type="text" class="form-control input-item" id="effective-End" placeholder="Select Date">
-                <span class="input-group-text"><img src="images/Calendar.svg"></span>
-            </div>
-        </div>
-
-      
-
-        <div class="col-3">
-            <label class="label" for="billing-acuity">Billing Acuity</label>
-                <select
-                  class="single-select input-item"
-                  aria-label=""
-                  id="billing-acuity"
-                >
-                  <option class="d-none" disabled selected>Select</option>
-                  <option value="1">List 1</option>
-                  <option value="2">List 2</option>
-                  <option value="3">List 3</option>
-                </select>
-         </div>
-         <div class="col-3">
-            <img src="images/remove.svg" alt="remove-icon" id="delete-button" class="delete-icon ml-5 pointer" >
-        
-        </div>
-
-
-    `;
-
-            var newContainer = $("<div class='row col-12'>").html(newFields);
-
-            container.append(newContainer);
-
-            var deleteButton = newContainer.find("#delete-button");
-            deleteButton.on("click", function () {
-                newContainer.remove();
-            });
-        }
-
-        $(document).ready(function () {
-            $("#add-field-link").on("click", function (event) {
-                event.preventDefault();
-
-                addInputFields();
-            });
+        $(document).ready(function() {
+          $("#add-field-link").click(function() {
+            $(".field-container-1").show();
+          });
+    
+          $("#delete-button").click(function() {
+            $(".field-container-1").hide();
+          });
         });
-
-    </script>
+      </script>
 
     <script>
         $('.enable-client-alert-checkbox').each(function (index) {
