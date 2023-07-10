@@ -598,11 +598,11 @@ item:active {
     border-radius: 4px;
 }
 .red-border{
-    border-color:red;
+    border-color:red !important;
 }
 
 .orange-border{
-    border-color: #F27303;
+    border-color: #F27303 !important;
 }
 
 .yellow-border{

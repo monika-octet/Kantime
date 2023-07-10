@@ -1391,3 +1391,41 @@ padding: .375rem 0;
     line-height: 16.8px;
     color: #FC2D2D;
 }
+.error-state-icon{
+    width: 18px;
+    height: 15px;
+}
+
+.red-error-box{
+    border: 1px solid #FC2D2D;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #FFF9F7;
+}
+
+.warning-box{
+    border: 1px solid #EE9937;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #FFF9F7;
+}
+
+.red-error-box .breadcrumb-item a,
+.breadcrumb-item{
+    font-size: 12px;
+font-weight: 500;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: left;
+color: #243756;
+text-decoration: none;
+}
+
+#accordionErrorState .accordion-button,
+#accordionErrorState-2 .accordion-button{
+    background-color: #fff !important;
+}
+
+#accordionErrorStat .accordion-button::after{
+ 
+}
