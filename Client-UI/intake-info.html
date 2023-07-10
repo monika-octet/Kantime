@@ -23,7 +23,9 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-multiselect.min.css" />
 
     <!-- datepicker -->
-    <link type="text/css" href="css/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
 
     <!-- Custom css -->
 
@@ -539,7 +541,7 @@
                                             <div class="col-4 mb-20">
                                                 <label class="form-label" for="dob">DOB</label>
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control input-item" id="dob-Pinfo"
+                                                    <input type="text" class="form-control input-item" name="dates" id="dob-Pinfo"
                                                         placeholder="Select Date" />
                                                     <span class="input-group-text"><img
                                                             src="images/Calendar.svg" /></span>
@@ -892,7 +894,7 @@
                                             <div class="col-4">
                                                 <label class="form-label" for="follow-up-date">Follow up date</label>
                                                 <div class="input-group">
-                                                    <input disabled type="text" class="form-control input-item"
+                                                    <input disabled type="text" name="dates" class="form-control input-item"
                                                         id="follow-up-date" placeholder="Select Date">
                                                     <span class="input-group-text"><img
                                                             src="images/Calendar.svg"></span>
@@ -997,7 +999,7 @@
                                                 <label class="form-label" for="physician-ref-info">Physician Referral
                                                     Date</label>
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control input-item"
+                                                    <input type="text" name="dates" class="form-control input-item"
                                                         id="physician-ref-info" placeholder="Select" />
                                                     <span class="input-group-text"><img
                                                             src="images/Calendar.svg" /></span>
@@ -1006,7 +1008,7 @@
                                             <div class="col-4 mb-20">
                                                 <label class="form-label" for="intake-ref-info">Intake Date</label>
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control input-item"
+                                                    <input type="text" name="dates" class="form-control input-item"
                                                         id="intake-ref-info" placeholder="Select" />
                                                     <span class="input-group-text"><img
                                                             src="images/Calendar.svg" /></span>
@@ -1015,7 +1017,7 @@
                                             <div class="col-4 mb-20">
                                                 <label class="form-label" for="SOC-Ref-info">Requested SOC Date</label>
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control input-item" id="SOC-Ref-info"
+                                                    <input type="text" name="dates" class="form-control input-item" id="SOC-Ref-info"
                                                         placeholder="Select" />
                                                     <span class="input-group-text"><img
                                                             src="images/Calendar.svg" /></span>
@@ -1026,7 +1028,7 @@
                                             <div class="col-4">
                                                 <label class="form-label" for="last-md-visit">Last MD Visit</label>
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control input-item"
+                                                    <input type="text" name="dates" class="form-control input-item"
                                                         id="last-md-visit" placeholder="Select">
                                                     <span class="input-group-text"><img
                                                             src="images/Calendar.svg"></span>
@@ -1035,7 +1037,7 @@
                                             <div class="col-4">
                                                 <label class="form-label" for="next-md-visit">Next MD Visit</label>
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control input-item"
+                                                    <input type="text" name="dates" class="form-control input-item"
                                                         id="next-md-visit" placeholder="Select">
                                                     <span class="input-group-text"><img
                                                             src="images/Calendar.svg"></span>
@@ -1865,7 +1867,7 @@
                                                     Encounter</label>
                                                 <div class="input-group">
                                                     <input type="text" class="form-control input-item"
-                                                        id="date-of-encounter" placeholder="Select Date">
+                                                        id="date-of-encounter" name="dates" placeholder="Select Date">
                                                     <span class="input-group-text"><img
                                                             src="images/Calendar.svg"></span>
                                                 </div>
@@ -1936,7 +1938,7 @@
                                                         Encounter</label>
                                                     <div class="input-group">
                                                         <input disabled type="text" class="form-control input-item"
-                                                            id="date-of-encounter" placeholder="Select Date">
+                                                            id="date-of-encounter" name="dates" placeholder="Select Date">
                                                         <span class="input-group-text"><img
                                                                 src="images/Calendar.svg"></span>
                                                     </div>
@@ -2013,7 +2015,7 @@
                                                     </label>
                                                     <div class="input-group">
                                                         <input type="text" class="form-control input-item"
-                                                            id="encounter-requested-on" placeholder="Select Date">
+                                                            id="encounter-requested-on" name="dates" placeholder="Select Date">
                                                         <span class="input-group-text"><img
                                                                 src="images/Calendar.svg"></span>
                                                     </div>
@@ -2056,7 +2058,7 @@
                                                     <label class="form-label" for="encounter-scheduled-on">Scheduled On
                                                     </label>
                                                     <div class="input-group">
-                                                        <input type="text" class="form-control input-item"
+                                                        <input type="text" name="dates" class="form-control input-item"
                                                             id="encounter-scheduled-on" placeholder="Select Date">
                                                         <span class="input-group-text"><img
                                                                 src="images/Calendar.svg"></span>
@@ -3251,7 +3253,7 @@
                                     <div class="col-6 mb-20">
                                         <label class="form-label" for="completed-on">Completed on</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control input-item" id="completed-on"
+                                            <input type="text" name="dates" class="form-control input-item" id="completed-on"
                                                 placeholder="01/02/1998">
                                             <span class="input-group-text"><img src="images/Calendar.svg"></span>
                                         </div>
@@ -3260,7 +3262,7 @@
                                     <div class="col-6 mb-20">
                                         <label class="form-label" for="last-followed">Last Followed on</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control input-item" id="last-followed"
+                                            <input type="text" name="dates" class="form-control input-item" id="last-followed"
                                                 placeholder="01/02/1998">
                                             <span class="input-group-text"><img src="images/Calendar.svg"></span>
                                         </div>
@@ -4406,7 +4408,7 @@
                     <div class="col-3">
                       <label class="form-label" for="physician-license-expiry-date">License Expiry Date</label>
                       <div class="input-group">
-                        <input type="text" class="form-control input-item" id="physician-license-expiry-date"
+                        <input type="text" class="form-control input-item" name="dates" id="physician-license-expiry-date"
                           placeholder="Select" />
                         <span class="input-group-text"><img src="images/Calendar.svg" /></span>
                       </div>
@@ -4887,7 +4889,7 @@
                     <div class="col-3">
                       <label class="form-label" for="physician-license-expiry-date-add-new">License Expiry Date</label>
                       <div class="input-group">
-                        <input type="text" class="form-control input-item" id="physician-license-expiry-date-add-new"
+                        <input type="text" name="dates" class="form-control input-item" id="physician-license-expiry-date-add-new"
                           placeholder="Select" />
                         <span class="input-group-text"><img src="images/Calendar.svg" /></span>
                       </div>
@@ -5294,8 +5296,9 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>-->
 
     <!-- datepicker js-->
-    <script type="text/javascript" src="js/moment.min.js"></script>
-    <script type="text/javascript" src="js/daterangepicker.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

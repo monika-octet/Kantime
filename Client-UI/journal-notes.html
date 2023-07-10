@@ -23,7 +23,9 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-multiselect.min.css" />
 
     <!-- datepicker -->
-    <link type="text/css" href="css/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
 
     <!-- Custom css -->
 
@@ -372,7 +374,7 @@
                             <div class="col-4 mb-20">
                                 <label class="form-label" for="date-range-journal">Date Range</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control input-item" id="date-range-journal"
+                                    <input type="text" name="dates" class="form-control input-item" id="date-range-journal"
                                         placeholder="Select Date" value="01/02/1998 - 01/03/1998">
                                     <span class="input-group-text"><img src="images/Calendar.svg"></span>
                                 </div>
@@ -547,7 +549,7 @@
                         <div class="col-6 mb-20">
                             <label class="form-label" for="note-date">Date</label>
                             <div class="input-group">
-                                <input type="text" class="form-control input-item" id="note-date"
+                                <input type="text" name="dates" class="form-control input-item" id="note-date"
                                     placeholder="01/02/1998">
                                 <span class="input-group-text"><img src="images/Calendar.svg"></span>
                             </div>
@@ -630,7 +632,7 @@
                                 <div class="col-6 mb-20">
                                     <label class="form-label" for="reminder-on-date">Date</label>
                                     <div class="input-group">
-                                        <input type="text" class="form-control input-item" id="reminder-on-date"
+                                        <input type="text" name="dates" class="form-control input-item" id="reminder-on-date"
                                             placeholder="Select Date">
                                         <span class="input-group-text"><img src="images/Calendar.svg"></span>
                                     </div>
@@ -730,7 +732,7 @@
                                 <div class="">
                                     <label class="form-label" for="intake-added-on-care">New Date Range</label>
                                     <div class="input-group">
-                                        <input  type="text" class="form-control input-item" id="intake-added-on-care" placeholder="Select Date" value="01/05/1995   -    01/-3/1998">
+                                        <input  type="text" name="dates" class="form-control input-item" id="intake-added-on-care" placeholder="Select Date" value="01/05/1995   -    01/-3/1998">
                                         <span class="input-group-text"><img src="images/Calendar.svg"></span>
                                     </div>
                                 </div>
@@ -1629,8 +1631,11 @@
           <script type="text/javascript" src="js/bootstrap.min.js"></script>-->
 
     <!-- datepicker js-->
-    <script type="text/javascript" src="js/moment.min.js"></script>
-    <script type="text/javascript" src="js/daterangepicker.js"></script>
+    
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
