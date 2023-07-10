@@ -182,8 +182,8 @@
               <!-- bulk-hl7-sync -->
               <div class="" style="margin-top: 54px;">
                 <div class="d-flex justify-content-end align-items-center gap-10">
-                  <a href="duplicate-record.html" id="admit-patient" class="btn btn-primary ms-3"
-                    data-bs-toggle="modal" data-bs-target="#bulk-hl7-sync">Admit</a>
+                  <a href="duplicate-record.html" id="admit-patient" class="btn btn-primary ms-3" data-bs-toggle="modal"
+                    data-bs-target="#bulk-hl7-sync">Admit</a>
                   <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal"
                     data-bs-target="#non-admit-popup">Non-Admit</a>
                   <!-- non-admit-popup -->
@@ -234,11 +234,11 @@
       </div>
 
       <div class="error-state-notif" style="display: none;">
-        <div class="accordion mb-10" id="accordionErrorState">
+        <div class="accordion mb-10 acoordion-arrow-pos" id="accordionErrorState">
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingErrorState">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseErrorState"
-                aria-expanded="true" aria-controls="collapseErrorState">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseErrorState" aria-expanded="true" aria-controls="collapseErrorState">
                 <div class="d-flex align-items-center gap-10">
                   <div class="d-flex align-items-center gap-2">
                     <img src="images/alert-icon.svg" alt="" class="error-state-icon">
@@ -249,58 +249,65 @@
                       <ol class="breadcrumb mb-0">
                         <li class="breadcrumb-item "><a class="f-500 f-12 lh-17" href="#">Patient Information</a></li>
                         <li class="breadcrumb-item f-500 f-12 lh-17" aria-current="page">Basic Details</li>
-                        <li class="breadcrumb-item f-500 f-12 lh-17  text-decoration-underline" aria-current="page"><a class="f-500 f-12 lh-17 locaton-tag" href="#location-Pinfo">Location</a></li>
+                        <li class="breadcrumb-item f-500 f-12 lh-17  text-decoration-underline" aria-current="page"><a
+                            class="f-500 f-12 lh-17 locaton-tag" href="#location-Pinfo" onclick="focusInput()">Location</a></li>
                       </ol>
                     </nav>
                   </div>
 <!-- location-Pinfo -->
-                  <div class="red-error-box">
-                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                      <ol class="breadcrumb mb-0">
-                        <li class="breadcrumb-item "><a class="f-500 f-12 lh-17" href="#">Referral Information> </a></li>
-                        <li class="breadcrumb-item f-500 f-12 lh-17" aria-current="page">Referral Source Details</li>
-                        <li class="breadcrumb-item f-500 f-12 lh-17  text-decoration-underline" aria-current="page">Facility Contact</li>
-                      </ol>
-                    </nav>
+                  <div class=" red-error-box">
+                            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                              <ol class="breadcrumb mb-0">
+                                <li class="breadcrumb-item "><a class="f-500 f-12 lh-17" href="#">Referral Information>
+                                  </a></li>
+                                <li class="breadcrumb-item f-500 f-12 lh-17" aria-current="page">Referral Source Details
+                                </li>
+                                <li class="breadcrumb-item f-500 f-12 lh-17  text-decoration-underline"
+                                  aria-current="page">Facility Contact</li>
+                              </ol>
+                            </nav>
                   </div>
 
                 </div>
               </button>
             </h2>
-            <div id="collapseErrorState" class="accordion-collapse collapse show" aria-labelledby="headingErrorState"
+            <div id="collapseErrorState" class="accordion-collapse collapse " aria-labelledby="headingErrorState"
               data-bs-parent="#accordionExample">
               <div class="accordion-body">
-               <div class="d-flex gap-10">
-                <div class="red-error-box">
-                  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                    <ol class="breadcrumb mb-0">
-                      <li class="breadcrumb-item "><a class="f-500 f-12 lh-17" href="#">Patient Information</a></li>
-                      <li class="breadcrumb-item f-500 f-12 lh-17" aria-current="page">Basic Details</li>
-                      <li class="breadcrumb-item f-500 f-12 lh-17  text-decoration-underline" aria-current="page">Location</li>
-                    </ol>
-                  </nav>
-                </div>
+                <div class="d-flex gap-10">
+                  <div class="red-error-box">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                      <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item "><a class="f-500 f-12 lh-17" href="#">Patient Information</a></li>
+                        <li class="breadcrumb-item f-500 f-12 lh-17" aria-current="page">Basic Details</li>
+                        <li class="breadcrumb-item f-500 f-12 lh-17  text-decoration-underline" aria-current="page">
+                          Location</li>
+                      </ol>
+                    </nav>
+                  </div>
 
-                <div class="red-error-box">
-                  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                    <ol class="breadcrumb mb-0">
-                      <li class="breadcrumb-item "><a class="f-500 f-12 lh-17" href="#">Referral Information> </a></li>
-                      <li class="breadcrumb-item f-500 f-12 lh-17" aria-current="page">Referral Source Details</li>
-                      <li class="breadcrumb-item f-500 f-12 lh-17  text-decoration-underline" aria-current="page">Facility Contact</li>
-                    </ol>
-                  </nav>
+                  <div class="red-error-box">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                      <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item "><a class="f-500 f-12 lh-17" href="#">Referral Information> </a>
+                        </li>
+                        <li class="breadcrumb-item f-500 f-12 lh-17" aria-current="page">Referral Source Details</li>
+                        <li class="breadcrumb-item f-500 f-12 lh-17  text-decoration-underline" aria-current="page">
+                          Facility Contact</li>
+                      </ol>
+                    </nav>
+                  </div>
                 </div>
-               </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="accordion mb-20" id="accordionErrorState-2">
+        <div class="accordion mb-20 acoordion-arrow-pos" id="accordionErrorState-2">
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingErrorState-2">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsErrorState-2"
-                aria-expanded="true" aria-controls="collapsErrorState-2">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsErrorState-2" aria-expanded="true" aria-controls="collapsErrorState-2">
                 <div class="d-flex align-items-center gap-10">
                   <div class="d-flex align-items-center gap-2">
                     <img src="images/warning-icon.svg" alt="" class="error-state-icon">
@@ -311,7 +318,8 @@
                       <ol class="breadcrumb mb-0">
                         <li class="breadcrumb-item"><a class="f-500 f-12 lh-17" href="#">Patient Information</a></li>
                         <li class="breadcrumb-item f-500 f-12 lh-17" aria-current="page">Basic Details</li>
-                        <li class="breadcrumb-item f-500 f-12 lh-17  text-decoration-underline" aria-current="page">Marital Status</li>
+                        <li class="breadcrumb-item f-500 f-12 lh-17  text-decoration-underline" aria-current="page">
+                          Marital Status</li>
                       </ol>
                     </nav>
                   </div>
@@ -321,18 +329,19 @@
                       <ol class="breadcrumb mb-0">
                         <li class="breadcrumb-item"><a class="f-500 f-12 lh-17" href="#">Referral Information</a></li>
                         <li class="breadcrumb-item f-500 f-12 lh-17" aria-current="page">Referral Source Details</li>
-                        <li class="breadcrumb-item f-500 f-12 lh-17  text-decoration-underline" aria-current="page">Facility Contact</li>
+                        <li class="breadcrumb-item f-500 f-12 lh-17  text-decoration-underline" aria-current="page">
+                          Facility Contact</li>
                       </ol>
                     </nav>
                   </div>
 
-                  
-                 
+
+
 
                 </div>
               </button>
             </h2>
-            <div id="collapsErrorState-2" class="accordion-collapse collapse show" aria-labelledby="headingErrorState-2"
+            <div id="collapsErrorState-2" class="accordion-collapse collapse " aria-labelledby="headingErrorState-2"
               data-bs-parent="#accordionExample">
               <div class="accordion-body">
                 <div class="d-flex gap-10">
@@ -341,7 +350,8 @@
                       <ol class="breadcrumb mb-0">
                         <li class="breadcrumb-item"><a class="f-500 f-12 lh-17" href="#">Patient Information</a></li>
                         <li class="breadcrumb-item f-500 f-12 lh-17" aria-current="page">Basic Details</li>
-                        <li class="breadcrumb-item f-500 f-12 lh-17  text-decoration-underline" aria-current="page">Marital Status</li>
+                        <li class="breadcrumb-item f-500 f-12 lh-17  text-decoration-underline" aria-current="page">
+                          Marital Status</li>
                       </ol>
                     </nav>
                   </div>
@@ -351,11 +361,12 @@
                       <ol class="breadcrumb mb-0">
                         <li class="breadcrumb-item"><a class="f-500 f-12 lh-17" href="#">Referral Information</a></li>
                         <li class="breadcrumb-item f-500 f-12 lh-17" aria-current="page">Referral Source Details</li>
-                        <li class="breadcrumb-item f-500 f-12 lh-17  text-decoration-underline" aria-current="page">Facility Contact</li>
+                        <li class="breadcrumb-item f-500 f-12 lh-17  text-decoration-underline" aria-current="page">
+                          Facility Contact</li>
                       </ol>
                     </nav>
                   </div>
-                 </div>
+                </div>
               </div>
             </div>
           </div>
@@ -475,7 +486,7 @@
                       <p class="tab-heading">Basic Details</p>
                       <hr class="modal-line" />
 
-                      <div class="d-flex gap-10 error-signs" style="visibility: hidden;"  >
+                      <div class="d-flex gap-10 error-signs" style="visibility: hidden;">
                         <div class="d-flex">
                           <img src="images/alert-icon.svg" alt="">
                           <span class="ml-5">1 Error</span>
@@ -9269,29 +9280,27 @@
     });
   </script>
 
-<script>
-  $(document).ready(function() {
-    $('.admit-yes').click(function() {
-      $('.error-state-notif').show();
-      $('.error-signs').css('visibility', 'visible');
-      $('.error-border-input .multiselect-native-select .btn-group .multiselect ').addClass('red-border')
-      $('.error-border-input .multiselect-native-select .btn-group .multiselect ').addClass('red-border')
-      $('.warning-border-input .multiselect-native-select .btn-group .multiselect ').addClass('orange-border')
+  <script>
+    $(document).ready(function () {
+      $('.admit-yes').click(function () {
+        $('.error-state-notif').show();
+        $('.error-signs').css('visibility', 'visible');
+        $('.error-border-input .multiselect-native-select .btn-group .multiselect ').addClass('red-border')
+        $('.error-border-input .multiselect-native-select .btn-group .multiselect ').addClass('red-border')
+        $('.warning-border-input .multiselect-native-select .btn-group .multiselect ').addClass('orange-border')
 
-    });
-  });
-</script>
-
-<script>
-   $(document).ready(function() {
-      $('.locaton-tag').click(function(event) {
-        // event.preventDefault(); 
-        $('#location-Pinfo').focus(); 
       });
     });
-  
-</script>
+  </script>
 
+
+
+  <script>
+    function focusInput() {
+      var input = document.getElementById("location-Pinfo");
+      input.focus();
+    }
+  </script>
 
 </body>
 

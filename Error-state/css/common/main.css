@@ -725,6 +725,8 @@ item:active {
     padding-left: 50px;
 }
 
+
+
 .accordion-button::after{
     background-image: url(../../images/accordion-arrow.svg);
     position: absolute;
@@ -738,3 +740,6 @@ item:active {
 /* .accordion-button::after{
     background-image: url(../../images/accordion-arrow.svg);
 } */
+.accordion-button::after {
+    background-image: none;
+  }
