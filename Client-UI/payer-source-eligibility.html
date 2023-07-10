@@ -2701,7 +2701,7 @@
                                 <div class="input-group">
                                     <input type="text" name="dates" class="form-control input-item" id="date-start-tertiary"
                                         placeholder="01/02/1998">
-                                    <span class="input-group-text"><img src="images/ name="dates""></span>
+                                    <span class="input-group-text"><img src="images/Calendar.svg "></span>
                                 </div>
                             </div>
 
@@ -3123,10 +3123,10 @@
                             </div>
                            
 
-                            <div class="col-4">
-                                <label class="label" for="payer-primary-invoice">Inovice</label>
+                            <div class="col-4 hidden-primary-invoice">
+                                <label class="label" for="payer-primary-invoice-disabled">Inovice</label>
                                 <select disabled class="single-select input-item" aria-label="invoice"
-                                    id="payer-primary-invoice">
+                                    id="payer-primary-invoice-disabled">
                                     <option class="d-none" disabled selected>Select</option>
                                     <option value="1">Print Details(as secondary payer) in Primary Payer EDI</option>
                                     <option value="2">Consider as Primary and as Secondary in the Primary Payer EDI
@@ -5420,6 +5420,23 @@
   
 
       <script>
+        $(document).ready(function() {
+          $('#payer-primary-invoice').change(function() {
+            var dropdown1Value = $(this).val();
+            var dropdown2 = $('#payer-primary-invoice-disabled');
+           
+            
+            if (dropdown1Value === "1") {
+                console.log(dropdown1Value)
+                dropdown2.prop('disabled', false);
+            } else {
+              dropdown2.prop('disabled', true);
+            }
+          });
+        });
+      </script>
+
+      <script>
         function showHideDiv(checkboxId, divId) {
             var checkbox = document.getElementById(checkboxId);
             var div = document.getElementById(divId);
@@ -5446,17 +5463,43 @@
 
 
 
+
+
+
+
+
+
 <script>
     $(document).ready(function() {
       $('#payer-primary-invoice').change(function() {
         if ($(this).val() === '2') {
           $('.use-ratebox').show();
+          
         } else {
           $('.use-ratebox').hide();
+        
         }
       });
     });
   </script>
+
+<script>
+    $(document).ready(function() {
+      $('#dropdown1').change(function() {
+        var dropdown1Value = $(this).val();
+        var dropdown2 = $('#dropdown2');
+        
+        if (dropdown1Value === "1") {
+          dropdown2.prop('disabled', false);
+        } else {
+          dropdown2.prop('disabled', true);
+        }
+      });
+    });
+  </script>
+
+
+
 
 <script>
     $(document).ready(function() {
