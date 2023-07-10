@@ -1304,6 +1304,7 @@ span.client-status.recent-due {
 .fix {
     position: sticky;
     left: 0;
+   
 }
 
 .outer {
@@ -1900,3 +1901,30 @@ vertical-align: top;
 .selected-recp li{
     margin: 0px;
 }
+
+
+.dropdown-menu li {
+    position: relative;
+    }
+.dropdown-menu .dropdown-submenu {
+    display: none;
+    position: absolute;
+    right:100%;
+    top: -7px;
+    }
+    .dropdown-menu .dropdown-submenu-left {
+    right: 100%;
+    left: auto;
+    }
+    .dropdown-menu > li:hover > .dropdown-submenu {
+    display: block;
+    }
+    
+    .dropdown-hover:hover>.dropdown-menu {
+    display: inline-block;
+    }
+    
+    .dropdown-hover>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+    }

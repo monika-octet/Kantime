@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#0D87E2" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@100&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css" />
+    <!-- select -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-multiselect.min.css" />
+
+    <!-- datepicker -->
+    <link type="text/css" href="css/daterangepicker.css" />
+
+    <!-- Custom css -->
+
+    <link rel="stylesheet" type="text/css" href="css/common/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/referral/referral.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive/responsive.css" />
+
+    <!-- Bootstrap js -->
+
+    <!-- custom css -->
+
+    <title>Kantime | Referral</title>
+</head>
+
+<body style="width: 1366px; margin: auto;">
+    <header>
+        <nav class="">
+            <div class="">
+                <img src="images/nav.svg" style="width: 100%" />
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="px-30 py-10">
+
+            <div>
+                <div class="breadcrumb-container">
+                    <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="#">Client Intake List</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                John Doe
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between">
+                        <h1>New Intake Info</h1>
+                        <div class="icon-container d-flex gap-3">
+                            <img src="images/Help.svg" alt="help-icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                title="Open Help List" />
+                            <img src="images/Mail.svg" alt="mail-icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                title="Open Mail" />
+                            <img src="images/Duplicate.svg" alt="duplicate-icon" data-bs-toggle="tooltip"
+                                data-bs-placement="bottom" title="Open Duplicate Tabs" />
+                            <img src="images/message.svg" alt="message-icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                title="Open Kantime Text" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border-color mt-10 radius-4 mb-20">
+                    <div class="p-20 position-relative">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center">
+                            <div class="d-flex gap-25 align-items-center">
+                                <div class="profile-box d-flex justify-content-center align-items-center">
+                                    <img src="images/avatar.svg" alt="user profile picture" />
+                                    <img src="images/camera.svg" alt="upload icon" class="upload" type="button"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Upload Picture" />
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <p class="patient-title mb-15">John Doe</p>
+                                    <div class="d-flex gap-20 mb-20">
+                                        <div>
+                                            <img src="images/Phone.svg" alt="phone icon" class="info-icon" />
+                                            <span class="info-icon-label">Call</span>
+                                        </div>
+                                        <div>
+                                            <img src="images/Email.svg" alt="mail icon" class="info-icon" />
+                                            <span class="info-icon-label">Email</span>
+                                        </div>
+                                        <div>
+                                            <img src="images/mappin.svg" alt="map pin icon" class="info-icon" />
+                                            <span class="info-icon-label">Address</span>
+                                        </div>
+                                    </div>
+                                    <div class="status-tag status-red align-self-lg-start">
+                                        <p>Conditionally accepted</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex" style="gap: 108px">
+                                <div class="d-flex flex-column">
+                                    <div class="info-box">
+                                        <p class="info-title">LOB :</p>
+                                        <p class="info-description">Occupational Physiotherapy</p>
+                                    </div>
+                                    <div class="info-box">
+                                        <p class="info-title">Primary Payer :</p>
+                                        <p class="info-description">Richard Parker</p>
+                                    </div>
+                                    <div class="info-box">
+                                        <p class="info-title">Location :</p>
+                                        <p class="info-description">New York, USA</p>
+                                    </div>
+
+                                </div>
+                                <div class="">
+                                    <div class="info-box">
+                                        <p class="info-title">Intake Date :</p>
+                                        <p class="info-description">01/03/1998</p>
+                                    </div>
+                                    <div class="info-box">
+                                        <p class="info-title">Requested SOC Date :</p>
+                                        <p class="info-description">10/29/1999</p>
+                                    </div>
+                                    <div class="info-box">
+                                        <p class="info-title">DOB :</p>
+                                        <p class="info-description">10/29/1999</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column justify-content-between user-profile-dropdown">
+                                <div class="dropdown ms-3" style="margin-left: 133px !important;">
+                                    <button class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom"
+                                        type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                        aria-expanded="false"></button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li>
+                                            <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#" class="dropdown-item">Logs</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#" class="dropdown-item">Print</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#" class="dropdown-item">Email</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#add-initial-order" class="dropdown-item">Initial
+                                                Order</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#" class="dropdown-item">More Options</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#" class="dropdown-item red-text">Delete</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="" style="margin-top: 54px;">
+                                    <div class="d-flex justify-content-end align-items-center gap-10">
+                                        <a href="duplicate-record.html" id="check-duplicate"
+                                            class="btn btn-primary ms-3">Admit</a>
+                                        <a href="#" class="btn btn-outline-primary">Non-Admit</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-section">
+
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="patient-information.html" role="tab"
+                                    aria-controls="general" aria-selected="false">General</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="payer-source-eligibility.html" role="tab"
+                                    aria-controls="eligibility" aria-selected="false">Payer source & eligibility</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="clinical.html" role="tab" aria-controls="clinical"
+                                    aria-selected="false">Clinical</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="medications.html" role="tab" aria-controls="medications"
+                                    aria-selected="false ">Medications</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="clinician.html" role="tab" aria-controls="clinicains"
+                                    aria-selected="true">Clinician</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="initial-schedule.html" role="tab" aria-controls="schedule"
+                                    aria-selected="false">Initial Schedule</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="form.html" role="tab" aria-controls="form"
+                                    aria-selected="false">Form</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="journal-note.html" role="tab" aria-controls="journal"
+                                    aria-selected="false">Journal Note</a>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" href="cop.html" role="tab" aria-controls="COP"
+                                    aria-selected="false">COP</a>
+                            </li> -->
+                        </ul>
+                    </div>
+
+
+                </div>
+
+                <div class="bg-white">
+                    <div class="m-20">
+                        <div class="pY-20 pb-10 d-flex justify-content-between align-items-center border-bottom">
+                            <div class="d-flex gap-10 align-items-center">
+                                <div class="tab-content-heading">Assign Staff Details</div>
+                            </div>
+                            <div class="d-flex align-items-center gap-10">
+                                <p class="save-time">Last saved 2 mins ago</p>
+                                <button class="btn btn-tertiary">Save</button>
+                            </div>
+                        </div>
+
+                        <div class="mt-20 border-color">
+                            <div class="p-3 d-grid grid-line align-items-center bg-lightBlue">
+                                <p class="tab-heading">Staff Details</p>
+                                <hr class="modal-line">
+                            </div>
+
+                            <div class="p-20">
+                                <div class="row col-10">
+
+                                    <div class="col-4 mb-20">
+                                        <label class="label" for="staff-case-manager">Case Manager</label>
+                                        <select class="single-select input-item" aria-label="case manager"
+                                            id="staff-case-manager">
+                                            <option class="d-none" disabled selected>Select</option>
+                                            <option value="1">List 1</option>
+                                            <option value="2">List 2</option>
+                                            <option value="3">List 3</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-4 mb-20">
+                                        <label class="label" for="staff-QA">QA</label>
+                                        <select class="single-select input-item" aria-label="QA" id="staff-QA">
+                                            <option class="d-none" disabled selected>Select</option>
+                                            <option value="1">List 1</option>
+                                            <option value="2">List 2</option>
+                                            <option value="3">List 3</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-4 mb-20">
+                                        <label class="label" for="staff-scheduler">Scheduler</label>
+                                        <select class="single-select input-item" aria-label="scheduler"
+                                            id="staff-scheduler">
+                                            <option class="d-none" disabled selected>Select</option>
+                                            <option value="1">List 1</option>
+                                            <option value="2">List 2</option>
+                                            <option value="3">List 3</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-4">
+                                        <label class="label" for="staff-CC1">CC1</label>
+                                        <select class="single-select input-item" aria-label="CC1" id="staff-CC1">
+                                            <option class="d-none" disabled selected>Select</option>
+                                            <option value="1">List 1</option>
+                                            <option value="2">List 2</option>
+                                            <option value="3">List 3</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-4">
+                                        <label class="label" for="staff-CC2">CC2</label>
+                                        <select class="single-select input-item" aria-label="CC2" id="staff-CC2">
+                                            <option class="d-none" disabled selected>Select</option>
+                                            <option value="1">List 1</option>
+                                            <option value="2">List 2</option>
+                                            <option value="3">List 3</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-4">
+                                        <label class="label" for="staff-CC3">CC3</label>
+                                        <select class="single-select input-item" aria-label="CC3" id="staff-CC3">
+                                            <option class="d-none" disabled selected>Select</option>
+                                            <option value="1">List 1</option>
+                                            <option value="2">List 2</option>
+                                            <option value="3">List 3</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="mt-20 border-color">
+                            <div class="p-3 d-grid grid-line align-items-center bg-lightBlue">
+                                <p class="tab-heading">Follow-up Clinicians</p>
+                                <hr class="modal-line">
+                            </div>
+
+                            <div class="p-3">
+                                <div class="row col-10">
+                                    <div class="col-4 mb-20">
+                                        <div class="d-flex justify-content-between">
+                                            <label class="label" for="start-care">Start of Care Clinician </label>
+                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                data-bs-target="#filter-popup" class="link-blue">Search</a>
+                                        </div>
+                                        <select class="single-select input-item" aria-label="Default select example"
+                                            id="start-care">
+                                            <option selected>Select</option>
+                                            <option value="2">Agency 1</option>
+                                            <option value="2">Agency 2</option>
+                                            <option value="2">Agency 3</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-4 mb-20">
+                                        <div class="d-flex justify-content-between">
+                                            <label class="label" for="start-primary-RN">Primary RN</label>
+                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                data-bs-target="#filter-popup" class="link-blue">Search</a>
+                                        </div>
+                                        <select class="single-select input-item" aria-label="Default select example"
+                                            id="start-primary-RN">
+                                            <option selected>Select</option>
+                                            <option value="2">Agency 1</option>
+                                            <option value="2">Agency 2</option>
+                                            <option value="2">Agency 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row col-10">
+                                    <div class="col-4 mb-20">
+                                        <div class="">
+                                            <div class="d-flex justify-content-between">
+                                                <label class="label" for="start-primary-PT">Primary PT</label>
+                                                <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                    data-bs-target="#filter-popup" class="link-blue">Search</a>
+                                            </div>
+                                            <select disabled class="single-select input-item"
+                                                aria-label="Default select example" id="start-primary-PT">
+                                                <option selected>Select</option>
+                                                <option value="2">Agency 1</option>
+                                                <option value="2">Agency 2</option>
+                                                <option value="2">Agency 3</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input margin-rt-0" type="checkbox" value=""
+                                                id="pending-pt">
+                                            <label class="send  lh-17" for="pending-pt">
+                                                Pending PT
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-4 mb-20">
+                                        <div class="">
+                                            <div class="d-flex justify-content-between">
+                                                <label class="label" for="start-primary-OT">Primary OT</label>
+                                                <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                    data-bs-target="#filter-popup" class="link-blue">Search</a>
+                                            </div>
+                                            <select disabled class="single-select input-item"
+                                                aria-label="Default select example" id="start-primary-OT">
+                                                <option selected>Select</option>
+                                                <option value="2">Agency 1</option>
+                                                <option value="2">Agency 2</option>
+                                                <option value="2">Agency 3</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input margin-rt-0" type="checkbox" value=""
+                                                id="pending-OT">
+                                            <label class="send  lh-17" for="pending-OT">
+                                                Pending PT
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-4 mb-20">
+                                        <div class="">
+                                            <div class="d-flex justify-content-between">
+                                                <label class="label" for="start-primary-ST">Primary ST</label>
+                                                <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                    data-bs-target="#filter-popup" class="link-blue">Search</a>
+                                            </div>
+                                            <select class="single-select input-item" aria-label="Default select example"
+                                                id="start-primary-ST">
+                                                <option selected>Select</option>
+                                                <option value="2">Agency 1</option>
+                                                <option value="2">Agency 2</option>
+                                                <option value="2">Agency 3</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input margin-rt-0" type="checkbox" value=""
+                                                id="pending-ST">
+                                            <label class="send  lh-17" for="pending-ST">
+                                                Pending ST
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-4">
+                                        <div class="d-flex justify-content-between">
+                                            <label class="label" for="primary-MSW">Primary MSW</label>
+                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                data-bs-target="#filter-popup" class="link-blue">Search</a>
+                                        </div>
+                                        <select class="single-select input-item" aria-label="Default select example"
+                                            id="primary-MSW">
+                                            <option selected>Select</option>
+                                            <option value="2">Agency 1</option>
+                                            <option value="2">Agency 2</option>
+                                            <option value="2">Agency 3</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-4">
+                                        <div class="d-flex justify-content-between">
+                                            <label class="label" for="primary-Aide">Primary Aide</label>
+                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                data-bs-target="#filter-popup" class="link-blue">Search</a>
+                                        </div>
+                                        <select class="single-select input-item" aria-label="Default select example"
+                                            id="primary-Aide">
+                                            <option selected>Select</option>
+                                            <option value="2">Agency 1</option>
+                                            <option value="2">Agency 2</option>
+                                            <option value="2">Agency 3</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-4">
+                                        <div class="d-flex justify-content-between">
+                                            <label class="label" for="primary-LVN-LPN">Primary LVN/LPN</label>
+                                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                data-bs-target="#filter-popup" class="link-blue">Search</a>
+                                        </div>
+                                        <select class="single-select input-item" aria-label="Default select example"
+                                            id="primary-LVN-LPN">
+                                            <option selected>Select</option>
+                                            <option value="2">Agency 1</option>
+                                            <option value="2">Agency 2</option>
+                                            <option value="2">Agency 3</option>
+                                        </select>
+                                    </div>
+
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <!-- POPUP -->
+        <div class="modal" tabindex="-1" id="filter-popup">
+            <div class="modal-dialog custom-modal-4  modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-greyBlue">
+                        <h5 class="modal-title Pinfo color-darkblue">Filters</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="background: #F4F5F6;">
+                        <div class="tab-content-grid">
+                            <div class="sidebar-container bg-white">
+                                <div class="nav flex-column nav-tabs" id="myTab" role="tablist"
+                                    aria-orientation="vertical">
+
+                                    <button class="nav-link active" id="schedule-tab" data-bs-toggle="tab"
+                                        data-bs-target="#schedule-content" type="button" role="tab"
+                                        aria-controls="schedule-content" aria-selected="true">
+                                        Schedule
+                                    </button>
+
+                                    <button class="nav-link" id="search-options-tab" data-bs-toggle="tab"
+                                        data-bs-target="#search-option-content" type="button" role="tab"
+                                        aria-controls="search-option-content" aria-selected="false">
+                                        Search Options
+                                    </button>
+
+                                    <button class="nav-link" id="clinician-tab" data-bs-toggle="tab"
+                                        data-bs-target="#clinician-content" type="button" role="tab"
+                                        aria-controls="clinician-content" aria-selected="false">
+                                        Clinician Preference
+                                    </button>
+
+                                    <button class="nav-link" id="skills-tab" data-bs-toggle="tab"
+                                        data-bs-target="#skills-content" type="button" role="tab"
+                                        aria-controls="skills-content" aria-selected="false">
+                                        Skills
+                                    </button>
+
+                                    <button class="nav-link" id="clinician-information-tab" data-bs-toggle="tab"
+                                        data-bs-target="#clinician-information-content" type="button" role="tab"
+                                        aria-controls="clinician-information-content" aria-selected="false">
+                                        Clinician Information
+                                    </button>
+
+                                    <button class="nav-link" id="clinician-preferred-regions-tab" data-bs-toggle="tab"
+                                        data-bs-target="#clinician-preferred-regions-content" type="button" role="tab"
+                                        aria-controls="clinician-preferred-regions-content" aria-selected="false">
+                                        Clinician Preferred Regions
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="tab-content mx-20 bg-white p-20" id="myTabContent">
+
+                                <div class="tab-pane fade show active" id="schedule-content" role="tabpanel"
+                                    aria-labelledby="schedule-tab">
+                                    <div class="row col-12">
+                                        <div class="col-4 mb-20">
+                                            <div class="d-flex justify-content-between">
+                                                <label class="label" for="client-schedule-filter">Clients</label>
+                                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#"
+                                                    class="link-blue">Match Clinicians Status</a>
+                                            </div>
+                                            <select class="single-select input-item" aria-label="Default select example"
+                                                id="client-schedule-filter">
+                                                <option selected>Select</option>
+                                                <option value="2">Agency 1</option>
+                                                <option value="2">Agency 2</option>
+                                                <option value="2">Agency 3</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <label class="label" for="discipline-filter">Discipline</label>
+                                            <select class="single-select input-item" aria-label="Discipline"
+                                                id="discipline-filter">
+                                                <option class="d-none" disabled selected>Select</option>
+                                                <option value="1">List 1</option>
+                                                <option value="2">List 2</option>
+                                                <option value="3">List 3</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-4 mb-20">
+                                            <label class="form-label" for="schedule-date-range-filter">Schedule Date
+                                                Range</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control input-item"
+                                                    id="schedule-date-range-filter" placeholder="Select Date">
+                                                <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 mb-20">
+                                            <label class="label" for="start-time-filter">Start Time</label>
+                                            <input type="text" class="form-control input-item" id="start-time-filter"
+                                                placeholder="Enter" aria-label="">
+                                        </div>
+
+                                        <div class="col-4 mb-20">
+                                            <label class="label" for="end-time-filter">End Time</label>
+                                            <input type="text" class="form-control input-item" id="end-time-filter"
+                                                placeholder="Enter" aria-label="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-check col-12 mb-2">
+                                            <input class="form-check-input" checked="" type="radio" name="all days"
+                                                id="all-days" value="Long Term Care">
+                                            <label class="form-check-label color-darkblue" for="all-days">
+                                                All Days
+                                            </label>
+                                        </div>
+                                        <div class="d-flex gap-10">
+                                            <div class="col-auto border-color bg-white py-10 px-15 radius-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="sun-filter">
+                                                    <label class="send" for="sun-filter">
+                                                        Sun
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-auto border-color bg-white py-10 px-15 radius-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="mon-filter">
+                                                    <label class="send" for="mon-filter">
+                                                        Mon
+                                                    </label>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-auto border-color bg-white py-10 px-15 radius-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="tue-filter">
+                                                    <label class="send" for="tue-filter">
+                                                        Tue
+                                                    </label>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-auto border-color bg-white py-10 px-15 radius-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="wed-filter">
+                                                    <label class="send" for="wed-filter">
+                                                        Wed
+                                                    </label>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-auto border-color bg-white py-10 px-15 radius-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="thu-filter">
+                                                    <label class="send" for="thu-filter">
+                                                        Thu
+                                                    </label>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-auto border-color bg-white py-10 px-15 radius-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="fri-filter">
+                                                    <label class="send" for="fri-filter">
+                                                        Fri
+                                                    </label>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-auto border-color bg-white py-10 px-15 radius-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="sat-filter">
+                                                    <label class="send" for="sat-filter">
+                                                        Sat
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="tab-pane fade" id="search-option-content" role="tabpanel"
+                                    aria-labelledby="search-options-tab">
+                                    <div class="d-flex flex-column">
+                                        <div class="form-check mb-20">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="search-no-double-booking">
+                                            <label class="form-check-label" for="search-double-booking">
+                                                Do not allow Clinician Double Booking
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check mb-20">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="search-no-schedule-deviation">
+                                            <label class="form-check-label" for="search-no-schedule-deviation">
+                                                Do not allow Schedule Deviation
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check mb-20">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="search-no-clinician-missing">
+                                            <label class="form-check-label" for="search-no-clinician-missing">
+                                                Do not allow Clinician Missing Mandatory Expiring Item
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check mb-20">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="search-productivity points">
+                                            <label class="form-check-label" for="search-productivity points">
+                                                Productivity Points / Week Not Exceeding:
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check d-flex align-items-center col-12 mb-10">
+                                            <div class="col-4">
+
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="search-no-schedule-deviation">
+                                                <label class="form-check-label" for="search-no-schedule-deviation">
+                                                    Do not allow Schedule Deviation
+                                                </label>
+                                            </div>
+                                            <div class="col-3">
+
+                                                <input type="text" class="form-control input-item d-inline"
+                                                    id="productivity-points" placeholder="Enter"
+                                                    aria-label="productivity">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-check d-flex align-items-center col-12">
+                                            <div class="col-4">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="search-no-schedule-more">
+                                                <label class="form-check-label" for="search-no-schedule-more">
+                                                    Do not allow Clinician to Schedule more than:
+                                                </label>
+                                            </div>
+                                            <div class="col-3">
+
+                                                <input type="text" class="form-control input-item d-inline" id=""
+                                                    placeholder="Enter" aria-label="productivity">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="clinician-content" role="tabpanel"
+                                    aria-labelledby="clinician-tab">
+                                    <div class="row col-12">
+                                        <div class="col-4 mb-20">
+                                            <label class="label" for="search-by-clinician-preference">Search by
+                                                Clinician Preferences</label>
+                                            <select class="single-select input-item" aria-label="clinician Preference"
+                                                id="search-by-clinician-preference">
+                                                <option class="d-none" disabled selected>Select</option>
+                                                <option value="1">List 1</option>
+                                                <option value="2">List 2</option>
+                                                <option value="3">List 3</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="d-flex flex-wrap col-10 gap-10">
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="skills-content" role="tabpanel"
+                                    aria-labelledby="skills-tab">
+                                    <div class="row col-12">
+                                        <div class="col-4 mb-20">
+                                            <label class="label" for="search-by-clinician-skills">Search by
+                                                Clinician Skills</label>
+                                            <select class="single-select input-item" aria-label="clinician skills"
+                                                id="search-by-clinician-skills">
+                                                <option class="d-none" disabled selected>Select</option>
+                                                <option value="1">List 1</option>
+                                                <option value="2">List 2</option>
+                                                <option value="3">List 3</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="d-flex flex-wrap col-12 gap-10">
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto  border-color py-10 px-15 radius-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                                <label class="" for="">
+                                                    Test
+                                                </label>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="clinician-information-content" role="tabpanel"
+                                    aria-labelledby="clinician-information-tab">
+                                    <div class="col-12">
+                                        <div class="col-4 mb-20">
+                                            <label class="label" for="list-the-match-clinician">List the clinician that
+                                                match</label>
+                                            <select class="single-select input-item" aria-label="location"
+                                                id="list-the-match-clinician">
+                                                <option class="d-none" disabled selected>Select</option>
+                                                <option value="1">List 1</option>
+                                                <option value="2">List 2</option>
+                                                <option value="3">List 3</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row col-12 mb-20">
+                                        <div class="col-3 ">
+                                            <p class="label">Gender</p>
+                                            <div class="d-flex gap-3">
+                                                <div class="radio-box">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="gender"
+                                                            id="gender-filter-male" value="male">
+                                                        <label class="form-check-label" for="gender-filter-male">
+                                                            Male
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="radio-box">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="gender"
+                                                            id="gender-filter-female" value="female">
+                                                        <label class="form-check-label" for="gender-filter-female">
+                                                            Female
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-3">
+                                            <p class="label">Can Drive</p>
+                                            <div class="d-flex gap-3">
+                                                <div class="radio-box">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="drive"
+                                                            id="drive-filter-yes" value="yes">
+                                                        <label class="form-check-label" for="drive-filter-yes">
+                                                            Yes
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="radio-box">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="drive"
+                                                            id="drive-filter-no" value="no">
+                                                        <label class="form-check-label" for="drive-filter-no">
+                                                            No
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row col-12">
+                                        <div class="col-3 mb-20">
+                                            <p class="label">Has Car</p>
+                                            <div class="d-flex gap-3">
+                                                <div class="radio-box">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="car"
+                                                            id="car-filter-yes" value="yes">
+                                                        <label class="form-check-label" for="car-filter-yes">
+                                                            Yes
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="radio-box">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="car"
+                                                            id="car-filter-no" value="No">
+                                                        <label class="form-check-label" for="car-filter-no">
+                                                            No
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-3 mb-20">
+                                            <p class="label">Case Manager</p>
+                                            <div class="d-flex gap-3">
+                                                <div class="radio-box">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="case manager"
+                                                            id="case-manager-yes" value="yes">
+                                                        <label class="form-check-label" for="case-manager-yes">
+                                                            Yes
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="radio-box">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="case manager"
+                                                            id="case-manager-no" value="no">
+                                                        <label class="form-check-label" for="case-manager-no">
+                                                            No
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row col-12">
+                                        <div class="col-4">
+                                            <label class="label" for="location-filter">Location</label>
+                                            <select class="single-select input-item" aria-label="location"
+                                                id="location-filter">
+                                                <option class="d-none" disabled selected>Select</option>
+                                                <option value="1">List 1</option>
+                                                <option value="2">List 2</option>
+                                                <option value="3">List 3</option>
+                                            </select>
+                                        </div>
+
+
+                                        <div class="col-4">
+                                            <label class="label" for="city-filter">City</label>
+                                            <select class="single-select input-item" aria-label="City" id="city-filter">
+                                                <option class="d-none" disabled selected>Select</option>
+                                                <option value="1">List 1</option>
+                                                <option value="2">List 2</option>
+                                                <option value="3">List 3</option>
+                                            </select>
+                                        </div>
+
+
+                                        <div class="col-4">
+                                            <label class="label" for="clinician-filter">Clinician region</label>
+                                            <select class="single-select input-item" aria-label="clinician region"
+                                                id="clinician-filter">
+                                                <option class="d-none" disabled selected>Select</option>
+                                                <option value="1">List 1</option>
+                                                <option value="2">List 2</option>
+                                                <option value="3">List 3</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-4 mb mb-20">
+                                            <label class="label" for="ethinicity-filter">Ethnicity</label>
+                                            <select class="single-select input-item" aria-label="ethinicity region"
+                                                id="ethinicity-filter">
+                                                <option class="d-none" disabled selected>Select</option>
+                                                <option value="1">List 1</option>
+                                                <option value="2">List 2</option>
+                                                <option value="3">List 3</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-4 mb-20">
+                                            <label class="label" for="clinician-discipline-filter">Clinician
+                                                Discipline</label>
+                                            <select class="single-select input-item" aria-label="clinician Discipline"
+                                                id="clinician-discipline-filter">
+                                                <option class="d-none" disabled selected>Select</option>
+                                                <option value="1">List 1</option>
+                                                <option value="2">List 2</option>
+                                                <option value="3">List 3</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-4 mb-20">
+                                            <label class="label" for="language-filter">Language</label>
+                                            <select class="single-select input-item" aria-label="language"
+                                                id="language-filter">
+                                                <option class="d-none" disabled selected>Select</option>
+                                                <option value="1">List 1</option>
+                                                <option value="2">List 2</option>
+                                                <option value="3">List 3</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-4 mb-20">
+                                            <label class="label" for="supervisor-filter">Supervisor</label>
+                                            <select class="single-select input-item" aria-label="supervisor"
+                                                id="supervisor-filter">
+                                                <option class="d-none" disabled selected>Select</option>
+                                                <option value="1">List 1</option>
+                                                <option value="2">List 2</option>
+                                                <option value="3">List 3</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-4 mb-20">
+                                            <label class="label" for="co-sign-staff-filter">Co-Sign Staff</label>
+                                            <select class="single-select input-item" aria-label="co-sign"
+                                                id="co-sign-staff-filter">
+                                                <option class="d-none" disabled selected>Select</option>
+                                                <option value="1">List 1</option>
+                                                <option value="2">List 2</option>
+                                                <option value="3">List 3</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-3">
+                                           
+                                                <label class="label" for="age-between-filter">Age Between</label>
+                                                <div class="d-flex gap-2 align-items-center"> 
+                                                    <input type="text" class="form-control input-item" id="age-between-filter"
+                                                    placeholder="Enter" aria-label="">
+                                                    <p>And</p>
+                                                    <input type="text" class="form-control input-item" id=""
+                                                    placeholder="Enter" aria-label="">
+                                                </div>
+                                           
+                                        </div>
+
+                                        <div class="col-4 mb-20">
+                                            <label class="label" for="marital-status-filter">Marital status</label>
+                                            <select class="single-select input-item" aria-label="marital status"
+                                                id="marital-status-filter">
+                                                <option class="d-none" disabled selected>Select</option>
+                                                <option value="1">List 1</option>
+                                                <option value="2">List 2</option>
+                                                <option value="3">List 3</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-4 mb-20">
+                                            <label class="label" for="job-taitle-filter">Job Title/Resignation</label>
+                                            <select class="single-select input-item" aria-label="job title"
+                                                id="job-taitle-filter">
+                                                <option class="d-none" disabled selected>Select</option>
+                                                <option value="1">List 1</option>
+                                                <option value="2">List 2</option>
+                                                <option value="3">List 3</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-4 mb-20">
+                                            <label class="label" for="milage-group-filter">Mileage Group</label>
+                                            <select class="single-select input-item" aria-label="mileage group"
+                                                id="milage-group-filter">
+                                                <option class="d-none" disabled selected>Select</option>
+                                                <option value="1">List 1</option>
+                                                <option value="2">List 2</option>
+                                                <option value="3">List 3</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-4 mb-20">
+                                            <label class="label" for="employer-filter">Employer</label>
+                                            <select class="single-select input-item" aria-label="Employer"
+                                                id="employer-filter">
+                                                <option class="d-none" disabled selected>Select</option>
+                                                <option value="1">List 1</option>
+                                                <option value="2">List 2</option>
+                                                <option value="3">List 3</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-4 mb-20">
+                                            <label class="label" for="chat-submission-filter">Chat Submission</label>
+                                            <select class="single-select input-item" aria-label="chat Submission"
+                                                id="chat-submission-filter">
+                                                <option class="d-none" disabled selected>Select</option>
+                                                <option value="1">List 1</option>
+                                                <option value="2">List 2</option>
+                                                <option value="3">List 3</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-4 mb-20">
+                                            <label class="label" for="employment-type-filter">Employment Type</label>
+                                            <select class="single-select input-item" aria-label="employment type"
+                                                id="employment-type-filter">
+                                                <option class="d-none" disabled selected>Select</option>
+                                                <option value="1">List 1</option>
+                                                <option value="2">List 2</option>
+                                                <option value="3">List 3</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-4 mb-20">
+                                            <label class="label" for="team-filter">Team</label>
+                                            <select class="single-select input-item" aria-label="team"
+                                                id="team-filter">
+                                                <option class="d-none" disabled selected>Select</option>
+                                                <option value="1">List 1</option>
+                                                <option value="2">List 2</option>
+                                                <option value="3">List 3</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-3">
+                                           
+                                            <label class="label" for="miles-within-filter">Miles Within</label>
+                                            <div class="d-flex gap-2 align-items-center"> 
+                                                <input type="text" class="form-control input-item" id="miles-within-filter"
+                                                placeholder="Enter" aria-label="">
+                                                <p>And</p>
+                                                <input type="text" class="form-control input-item" id=""
+                                                placeholder="Enter" aria-label="">
+                                            </div>
+                                       
+                                    </div>
+
+
+
+
+                                    </div>
+
+
+
+
+                                </div>
+
+                                <div class="tab-pane fade h-100" id="clinician-preferred-regions-content" role="tabpanel"
+                                    aria-labelledby="clinician-preferred-regions-tab">
+                                    <div class="h-100 d-flex justify-content-center align-items-center gap-2">
+                                        <img src="images/exclaimation.svg" alt="">
+                                        <p class="f-400 f-12 lh-22" style="color: #545864;">There are no Regions available</p>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-primary btn-modal-submit ms-3">Search Clinicians</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- JavaScript -->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap-multiselect.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!-- bootstrap js-->
+        <!-- <script type="text/javascript" src="js/popper.min.js"></script>
+ <script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+
+        <!-- datepicker js-->
+        <script type="text/javascript" src="js/moment.min.js"></script>
+        <script type="text/javascript" src="js/daterangepicker.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/custom.js"></script>
+    </main>
+</body>
+
+</html>

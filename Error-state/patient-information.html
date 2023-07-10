@@ -179,10 +179,11 @@
                   </li>
                 </ul>
               </div>
-
+              <!-- bulk-hl7-sync -->
               <div class="" style="margin-top: 54px;">
                 <div class="d-flex justify-content-end align-items-center gap-10">
-                  <a href="duplicate-record.html" id="check-duplicate" class="btn btn-primary ms-3">Admit</a>
+                  <a href="duplicate-record.html" id="check-duplicate" class="btn btn-primary ms-3"
+                    data-bs-toggle="modal" data-bs-target="#bulk-hl7-sync">Admit</a>
                   <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal"
                     data-bs-target="#non-admit-popup">Non-Admit</a>
                   <!-- non-admit-popup -->
@@ -231,6 +232,33 @@
           </ul>
         </div>
       </div>
+
+      <div class="">
+        <div class="accordion" id="accordionErrorState">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                Accordion Item #1
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse
+                plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+                within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
       <div>
         <div class="tab-content-grid">
           <div class="bg-white fit-content">
@@ -9012,8 +9040,7 @@
           <div class="row col-12">
             <div class="col-12 ">
               <label class="label" for="non-admit-reason">Non Admit Reason</label>
-              <input type="text" class="form-control input-item" id="non-admit-reason" placeholder=""
-                aria-label="">
+              <input type="text" class="form-control input-item" id="non-admit-reason" placeholder="" aria-label="">
             </div>
           </div>
 
@@ -9027,6 +9054,30 @@
     </div>
   </div>
 
+  <!-- confirmation popup -->
+
+  <div class="modal fade" id="bulk-hl7-sync" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content pop-up-borderStyle">
+        <div class=""></div>
+        <div class="modal-body pop-up-content">
+          <div class="pop-up-image-box mb-10">
+            <image src="images/alert-icon.svg" class="pop-up-image"></image>
+            <h2 class="popUp-title">Are you sure ?</h2>
+          </div>
+          <p>Please confirm your intention to admit this patient before proceeding!</p>
+        </div>
+        <div class="modal-footer no-border">
+          <button type="button" class="btn btn-outline pop-up-cancel" data-bs-dismiss="modal">
+            Cancel
+          </button>
+          <button type="button" class="btn btn-outline text-red-light pop-up-btn admit-yes">
+            Yes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- JavaScript -->
   <!-- <script type="text/javascript" src="js/jquery.min.js"></script>

@@ -69,8 +69,9 @@
                                     <select class="single-select input-item" aria-label="Default select example"
                                         id="client-info">
                                         <option value="0" selected>Client</option>
-                                        <option value="1">Pediatrics</option>
-                                        <option value="2">Medicaid</option>
+                                        <option value="1">Client ID</option>
+                                        <option value="2">Medicare</option>
+                                        <option value="3">Medicaid</option>
                                         <option value="3">DOB</option>
                                     </select>
                                     <img src="images/lens.svg" alt="search lens" class="lens">
@@ -166,20 +167,23 @@
                         <div class="filter-values">
                             <ul>
                                 <li class="d-flex">
-                                    <p class="f-500 f-12 color-greyBlueheader" >Attending physician: David Doe</p><button type="button" class="btn-close"
-                                        data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <p class="f-500 f-12 color-greyBlueheader">Attending physician: David Doe</p><button
+                                        type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </li>
                                 <li class="d-flex">
-                                    <p class="f-500 f-12 color-greyBlueheader">Primary care physician: Jacob Jones, Cameron Williamson</p><button type="button"
-                                        class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <p class="f-500 f-12 color-greyBlueheader">Primary care physician: Jacob Jones,
+                                        Cameron Williamson</p><button type="button" class="btn-close"
+                                        data-bs-dismiss="modal" aria-label="Close"></button>
                                 </li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="d-flex">
-                       
-                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#manageColumnsButton">
+
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                            data-bs-target="#manageColumnsButton">
                             <img src="images/Vector.svg" alt="" class="">
                             <span class="ml-5">Manage columns</span>
                         </button>
@@ -187,7 +191,9 @@
                     </div>
 
                 </div>
-                <div class="outer">
+                <!-- <div class="outer">
+
+                    
                     <div class="inner">
                         <table class="table table-hover table-type-1 rounded-2" id="treatment-address-table">
                             <thead>
@@ -750,6 +756,603 @@
                                                 <button
                                                     class="action-btn btn btn-dot dropdown-toggle btn-dropdown-custom"
                                                     type="button" id="" data-bs-toggle="dropdown"
+                                                    aria-expanded="false"></button>
+                                                <ul class="dropdown-menu" aria-labelledby="">
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To View Episode</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To Plan Of Care
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To Assessment List</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Open Client Notes</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div> -->
+
+                <div class="outer">
+                    <div class="inner">
+                        <table class="table table-hover table-type-1
+rounded-2" id="treatment-address-table">
+                            <thead>
+                                <tr>
+                                    <th class="d-flex w-220px action fix">
+                                        <input class="form-check-input" type="checkbox" value="" id="" /><span
+                                            class="ml-20">Client</span>
+                                    </th>
+                                    <th class="w-150px">Clients Status</th>
+                                    <th class="w-120px">Payer Source</th>
+                                    <th class="w-150px">LOB</th>
+                                    <th class="w-150px">Phone</th>
+                                    <th class="w-226px">SOC Clinician</th>
+                                    <th class="w-226px">Primary Clinician</th>
+                                    <th class="w-90px">SOC</th>
+                                    <th class="w-130px">Recert</th>
+                                    <th class="w-150px">Episode Period</th>
+                                    <th class="w-90px action fix">Actions</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td class="d-flex fix">
+                                        <input class="form-check-input
+client-detail-checkbox" type="checkbox" value="" id="" />
+                                        <div>
+                                            <div class="form-check">
+                                                <input class="form-check-input client-option" type="radio" name="client"
+                                                    id="client-demo" value="Demo 2">
+                                                <label class="form-check-label" for="client-demo">
+                                                    <p class="notice">Demo 2</p>
+                                                    <p>(test 2025)</p>
+                                                </label>
+
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex"><span class="client-status active"></span>
+                                            <p class="notice">Active</p>
+                                        </div>
+                                    </td>
+                                    <td>Avi Insurance</td>
+                                    <td>Pediatric</td>
+                                    <td>(236) 548-8556</td>
+                                    <td>Soc Clinician Name here</td>
+                                    <td> Primary Clinician Name here</td>
+                                    <td>03/3/2023</td>
+                                    <td>N/A</td>
+                                    <td>Not verified</td>
+                                    <td class="action fix">
+                                        <div class="d-flex flex-column
+justify-content-between user-profile-dropdown">
+                                            <div class="dropdown ms-3">
+                                                <button class="action-btn
+btn btn-dot dropdown-toggle btn-dropdown-custom" type="button" id="" data-bs-toggle="dropdown"
+                                                    aria-expanded="false"></button>
+                                                <ul class="dropdown-menu" aria-labelledby="">
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To View Episode</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To Plan Of Care
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To Assessment List</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Open Client Notes</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="d-flex fix">
+                                        <input class="form-check-input
+client-detail-checkbox" type="checkbox" value="" id="" />
+                                        <div>
+                                            <div class="form-check">
+                                                <input class="form-check-input client-option" type="radio" name="client"
+                                                    id="client-demo1" value="Demo 2">
+                                                <label class="form-check-label" for="client-demo">
+                                                    <p class="notice">Demo 2</p>
+                                                    <p>(test 2025)</p>
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex"><span class="client-status transferred"></span>
+                                            <p class="notice">Transferred</p>
+                                        </div>
+                                    </td>
+                                    <td>Avi Insurance</td>
+                                    <td>Pediatric</td>
+                                    <td>(236) 548-8556</td>
+                                    <td>Soc Clinician Name here</td>
+                                    <td> Primary Clinician Name here</td>
+                                    <td>03/3/2023</td>
+                                    <td>N/A</td>
+                                    <td>Not verified</td>
+                                    <td class="action fix">
+                                        <div class="d-flex flex-column
+justify-content-between user-profile-dropdown">
+                                            <div class="dropdown ms-3">
+                                                <button class="action-btn
+btn btn-dot dropdown-toggle btn-dropdown-custom" type="button" id="" data-bs-toggle="dropdown"
+                                                    aria-expanded="false"></button>
+                                                <ul class="dropdown-menu" aria-labelledby="">
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To View Episode</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To Plan Of Care
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To Assessment List</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Open Client Notes</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="d-flex fix">
+                                        <input class="form-check-input
+client-detail-checkbox" type="checkbox" value="" id="" />
+                                        <div>
+                                            <div class="form-check">
+                                                <input class="form-check-input client-option" type="radio" name="client"
+                                                    id="client-demo2" value="Demo 2">
+                                                <label class="form-check-label" for="client-demo">
+                                                    <p class="notice">Demo 2</p>
+                                                    <p>(test 2025)</p>
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex"><span class="client-status on-hold"></span>
+                                            <p class="notice">On Hold</p>
+                                        </div>
+                                    </td>
+                                    <td>Avi Insurance</td>
+                                    <td>Pediatric</td>
+                                    <td>(236) 548-8556</td>
+                                    <td>Soc Clinician Name here</td>
+                                    <td> Primary Clinician Name here</td>
+                                    <td>03/3/2023</td>
+                                    <td>N/A</td>
+                                    <td>Not verified</td>
+                                    <td class="action fix">
+                                        <div class="d-flex flex-column
+justify-content-between user-profile-dropdown">
+                                            <div class="dropdown ms-3">
+                                                <button class="action-btn
+btn btn-dot dropdown-toggle btn-dropdown-custom" type="button" id="" data-bs-toggle="dropdown"
+                                                    aria-expanded="false"></button>
+                                                <ul class="dropdown-menu" aria-labelledby="">
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To View Episode</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To Plan Of Care
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To Assessment List</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Open Client Notes</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="d-flex fix">
+                                        <input class="form-check-input
+client-detail-checkbox" type="checkbox" value="" id="" />
+                                        <div>
+                                            <div class="form-check">
+                                                <input class="form-check-input client-option" type="radio" name="client"
+                                                    id="client-demo3" value="Demo 2">
+                                                <label class="form-check-label" for="client-demo">
+                                                    <p class="notice">Demo 2</p>
+                                                    <p>(test 2025)</p>
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex"><span class="client-status discharged"></span>
+                                            <p class="notice">Discharged</p>
+                                        </div>
+                                    </td>
+                                    <td>Avi Insurance</td>
+                                    <td>Pediatric</td>
+                                    <td>(236) 548-8556</td>
+                                    <td>Soc Clinician Name here</td>
+                                    <td> Primary Clinician Name here</td>
+                                    <td>03/3/2023</td>
+                                    <td>N/A</td>
+                                    <td>Not verified</td>
+                                    <td class="action fix">
+                                        <div class="d-flex flex-column
+justify-content-between user-profile-dropdown">
+                                            <div class="dropdown ms-3">
+                                                <button class="action-btn
+btn btn-dot dropdown-toggle btn-dropdown-custom" type="button" id="" data-bs-toggle="dropdown"
+                                                    aria-expanded="false"></button>
+                                                <ul class="dropdown-menu" aria-labelledby="">
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To View Episode</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To Plan Of Care
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To Assessment List</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Open Client Notes</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="d-flex fix">
+                                        <input class="form-check-input
+client-detail-checkbox" type="checkbox" value="" id="" />
+                                        <div>
+                                            <div class="form-check">
+                                                <input class="form-check-input client-option" type="radio" name="client"
+                                                    id="client-demo4" value="Demo 2">
+                                                <label class="form-check-label" for="client-demo">
+                                                    <p class="notice">Demo 2</p>
+                                                    <p>(test 2025)</p>
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex"><span class="client-status EOE"></span>
+                                            <p class="notice">EOE</p>
+                                        </div>
+                                    </td>
+                                    <td>Avi Insurance</td>
+                                    <td>Pediatric</td>
+                                    <td>(236) 548-8556</td>
+                                    <td>Soc Clinician Name here</td>
+                                    <td> Primary Clinician Name here</td>
+                                    <td>03/3/2023</td>
+                                    <td>N/A</td>
+                                    <td>Not verified</td>
+                                    <td class="action fix">
+                                        <div class="d-flex flex-column
+justify-content-between user-profile-dropdown">
+                                            <div class="dropdown ms-3">
+                                                <button class="action-btn
+btn btn-dot dropdown-toggle btn-dropdown-custom" type="button" id="" data-bs-toggle="dropdown"
+                                                    aria-expanded="false"></button>
+                                                <ul class="dropdown-menu" aria-labelledby="">
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To View Episode</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To Plan Of Care
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To Assessment List</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Open Client Notes</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="d-flex fix">
+                                        <input class="form-check-input
+client-detail-checkbox" type="checkbox" value="" id="" />
+                                        <div>
+                                            <div class="form-check">
+                                                <input class="form-check-input client-option" type="radio" name="client"
+                                                    id="client-demo1" value="Demo 2">
+                                                <label class="form-check-label" for="client-demo">
+                                                    <p class="notice">Demo 2</p>
+                                                    <p>(test 2025)</p>
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex"><span class="client-status inactive"></span>
+                                            <p class="notice">Inactive</p>
+                                        </div>
+                                    </td>
+                                    <td>Avi Insurance</td>
+                                    <td>Pediatric</td>
+                                    <td>(236) 548-8556</td>
+                                    <td>Soc Clinician Name here</td>
+                                    <td> Primary Clinician Name here</td>
+                                    <td>03/3/2023</td>
+                                    <td>N/A</td>
+                                    <td>Not verified</td>
+                                    <td class="action fix">
+                                        <div class="d-flex flex-column
+justify-content-between user-profile-dropdown">
+                                            <div class="dropdown ms-3">
+                                                <button class="action-btn
+btn btn-dot dropdown-toggle btn-dropdown-custom" type="button" id="" data-bs-toggle="dropdown"
+                                                    aria-expanded="false"></button>
+                                                <ul class="dropdown-menu" aria-labelledby="">
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To View Episode</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To Plan Of Care
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To Assessment List</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Open Client Notes</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="d-flex fix">
+                                        <input class="form-check-input
+client-detail-checkbox" type="checkbox" value="" id="" />
+                                        <div>
+                                            <div class="form-check">
+                                                <input class="form-check-input client-option" type="radio" name="client"
+                                                    id="client-demo2" value="Demo 2">
+                                                <label class="form-check-label" for="client-demo">
+                                                    <p class="notice">Demo 2</p>
+                                                    <p>(test 2025)</p>
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex"><span class="client-status non-admit"></span>
+                                            <p class="notice">Non Admit</p>
+                                        </div>
+                                    </td>
+                                    <td>Avi Insurance</td>
+                                    <td>Pediatric</td>
+                                    <td>(236) 548-8556</td>
+                                    <td>Soc Clinician Name here</td>
+                                    <td> Primary Clinician Name here</td>
+                                    <td>03/3/2023</td>
+                                    <td>N/A</td>
+                                    <td>Not verified</td>
+                                    <td class="action fix">
+                                        <div class="d-flex flex-column
+justify-content-between user-profile-dropdown">
+                                            <div class="dropdown ms-3">
+                                                <button class="action-btn
+btn btn-dot dropdown-toggle btn-dropdown-custom" type="button" id="" data-bs-toggle="dropdown"
+                                                    aria-expanded="false"></button>
+                                                <ul class="dropdown-menu" aria-labelledby="">
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To View Episode</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To Plan Of Care
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To Assessment List</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Open Client Notes</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="d-flex fix">
+                                        <input class="form-check-input
+client-detail-checkbox" type="checkbox" value="" id="" />
+                                        <div>
+                                            <div class="form-check">
+                                                <input class="form-check-input client-option" type="radio" name="client"
+                                                    id="client-demo3" value="Demo 2">
+                                                <label class="form-check-label" for="client-demo">
+                                                    <p class="notice">Demo 2</p>
+                                                    <p>(test 2025)</p>
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex"><span class="client-status pending-SOC"></span>
+                                            <p class="notice">Pending SOC</p>
+                                        </div>
+                                    </td>
+                                    <td>Avi Insurance</td>
+                                    <td>Pediatric</td>
+                                    <td>(236) 548-8556</td>
+                                    <td>Soc Clinician Name here</td>
+                                    <td> Primary Clinician Name here</td>
+                                    <td>03/3/2023</td>
+                                    <td>N/A</td>
+                                    <td>Not verified</td>
+                                    <td class="action fix">
+                                        <div class="d-flex flex-column
+justify-content-between user-profile-dropdown">
+                                            <div class="dropdown ms-3">
+                                                <button class="action-btn
+btn btn-dot dropdown-toggle btn-dropdown-custom" type="button" id="" data-bs-toggle="dropdown"
+                                                    aria-expanded="false"></button>
+                                                <ul class="dropdown-menu" aria-labelledby="">
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To View Episode</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To Plan Of Care
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Go To Assessment List</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#"
+                                                            class="dropdown-item">Open Client Notes</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="d-flex fix">
+                                        <input class="form-check-input
+client-detail-checkbox" type="checkbox" value="" id="" />
+                                        <div>
+                                            <div class="form-check">
+                                                <input class="form-check-input client-option" type="radio" name="client"
+                                                    id="client-demo4" value="Demo 2">
+                                                <label class="form-check-label" for="client-demo">
+                                                    <p class="notice">Demo 2</p>
+                                                    <p>(test 2025)</p>
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex"><span class="client-status recent-due"></span>
+                                            <p class="notice">Recent Due</p>
+                                        </div>
+                                    </td>
+                                    <td>Avi Insurance</td>
+                                    <td>Pediatric</td>
+                                    <td>(236) 548-8556</td>
+                                    <td>Soc Clinician Name here</td>
+                                    <td> Primary Clinician Name here</td>
+                                    <td>03/3/2023</td>
+                                    <td>N/A</td>
+                                    <td>Not verified</td>
+                                    <td class="action fix">
+                                        <div class="d-flex flex-column
+justify-content-between user-profile-dropdown">
+                                            <div class="dropdown ms-3">
+                                                <button class="action-btn
+btn btn-dot dropdown-toggle btn-dropdown-custom" type="button" id="" data-bs-toggle="dropdown"
                                                     aria-expanded="false"></button>
                                                 <ul class="dropdown-menu" aria-labelledby="">
                                                     <li>
@@ -1400,7 +2003,7 @@
                                 <option value="3">List 3</option>
                             </select>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -1646,8 +2249,7 @@
                             <div class="row col-12 m-0 pt-10 pb-10">
                                 <div class="col-4">
                                     <label class="label" for="cc1">CC1</label>
-                                    <select class="single-select input-item" aria-label="cc1"
-                                        id="cc1">
+                                    <select class="single-select input-item" aria-label="cc1" id="cc1">
                                         <option class="d-none" disabled selected>Select</option>
                                         <option value="1">Horizon Adult Healthcare</option>
                                         <option value="2">List 2</option>
@@ -1656,8 +2258,7 @@
                                 </div>
                                 <div class="col-4">
                                     <label class="label" for="cc2">CC2</label>
-                                    <select class="single-select input-item" aria-label="cc2"
-                                        id="cc2">
+                                    <select class="single-select input-item" aria-label="cc2" id="cc2">
                                         <option class="d-none" disabled selected>Select</option>
                                         <option value="1">Horizon Adult Healthcare</option>
                                         <option value="2">List 2</option>
@@ -1666,21 +2267,19 @@
                                 </div>
                                 <div class="col-4">
                                     <label class="label" for="cc3">CC3</label>
-                                    <select class="single-select input-item" aria-label="cc3"
-                                        id="cc3">
+                                    <select class="single-select input-item" aria-label="cc3" id="cc3">
                                         <option class="d-none" disabled selected>Select</option>
                                         <option value="1">Horizon Adult Healthcare</option>
                                         <option value="2">List 2</option>
                                         <option value="3">List 3</option>
                                     </select>
                                 </div>
-                                
+
                             </div>
                             <div class="row col-12 m-0 pt-10 pb-10">
                                 <div class="col-4">
                                     <label class="label" for="qa-list">QA</label>
-                                    <select class="single-select input-item" aria-label="qa-list"
-                                        id="qa-list">
+                                    <select class="single-select input-item" aria-label="qa-list" id="qa-list">
                                         <option class="d-none" disabled selected>Select</option>
                                         <option value="1">Horizon Adult Healthcare</option>
                                         <option value="2">List 2</option>
@@ -1689,8 +2288,7 @@
                                 </div>
                                 <div class="col-4">
                                     <label class="label" for="scheduler">Scheduler</label>
-                                    <select class="single-select input-item" aria-label="scheduler"
-                                        id="scheduler">
+                                    <select class="single-select input-item" aria-label="scheduler" id="scheduler">
                                         <option class="d-none" disabled selected>Select</option>
                                         <option value="1">Horizon Adult Healthcare</option>
                                         <option value="2">List 2</option>
@@ -1707,82 +2305,82 @@
                                         <option value="3">List 3</option>
                                     </select>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
-                  <div class="popup-table-overflow">
-                    <div class="popup-inner-table">
-                    <table class="table table-type-1 mt-10 radius-4" id="editClientCoordinators-table">
-                        <thead>
-                            <tr>
-                                
-                                <th class="w-220px">Client </th>
-                                <th class="w-220px">Admit</th>
-                                <th class="w-300px">Episode</th>
-                                <th class="w-220px">SOC</th>
-                                <th class="w-220px">LOB</th>
-                                <th class="w-220px">Payer</th>
-                                <th class="w-220px">CC1</th>
-                                <th class="w-220px">CC2</th>
-                                <th class="w-220px">CC3</th>
-                                <th class="w-220px" >Case Manager</th>
-                                <th class="w-220px">QA</th>
-                                <th class="w-220px">Scheduler</th>
-                            </tr>
-                        </thead>
+                    <div class="popup-table-overflow">
+                        <div class="popup-inner-table">
+                            <table class="table table-type-1 mt-10 radius-4" id="editClientCoordinators-table">
+                                <thead>
+                                    <tr>
 
-                        <tbody>
-                            <tr>
-                                <td>Test Demo Client</td>
-                                <td>1 - 176</td>
-                                <td>3  --  03/04/2023  -  05/02/2023  </td>
-                                <td>05/02/2023 </td>
-                                <td>DemoPediatricLOB</td>
-                                <td>Avi_PediatricPayer</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>                                
-                            </tr>
+                                        <th class="w-220px">Client </th>
+                                        <th class="w-220px">Admit</th>
+                                        <th class="w-300px">Episode</th>
+                                        <th class="w-220px">SOC</th>
+                                        <th class="w-220px">LOB</th>
+                                        <th class="w-220px">Payer</th>
+                                        <th class="w-220px">CC1</th>
+                                        <th class="w-220px">CC2</th>
+                                        <th class="w-220px">CC3</th>
+                                        <th class="w-220px">Case Manager</th>
+                                        <th class="w-220px">QA</th>
+                                        <th class="w-220px">Scheduler</th>
+                                    </tr>
+                                </thead>
 
-                            <tr>
-                                <td>Test Demo Client</td>
-                                <td>1 - 176</td>
-                                <td>3  --  03/04/2023  -  05/02/2023  </td>
-                                <td>05/02/2023 </td>
-                                <td>DemoPediatricLOB</td>
-                                <td>Avi_PediatricPayer</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                
-                            </tr>
+                                <tbody>
+                                    <tr>
+                                        <td>Test Demo Client</td>
+                                        <td>1 - 176</td>
+                                        <td>3 -- 03/04/2023 - 05/02/2023 </td>
+                                        <td>05/02/2023 </td>
+                                        <td>DemoPediatricLOB</td>
+                                        <td>Avi_PediatricPayer</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                    </tr>
 
-                            <tr>
-                                <td>Test Demo Client</td>
-                                <td>1 - 176</td>
-                                <td>3  --  03/04/2023  -  05/02/2023  </td>
-                                <td>05/02/2023 </td>
-                                <td>DemoPediatricLOB</td>
-                                <td>Avi_PediatricPayer</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                
-                            </tr>                           
-                        </tbody>
-                    </table>
-                </div>
-                </div>
+                                    <tr>
+                                        <td>Test Demo Client</td>
+                                        <td>1 - 176</td>
+                                        <td>3 -- 03/04/2023 - 05/02/2023 </td>
+                                        <td>05/02/2023 </td>
+                                        <td>DemoPediatricLOB</td>
+                                        <td>Avi_PediatricPayer</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Test Demo Client</td>
+                                        <td>1 - 176</td>
+                                        <td>3 -- 03/04/2023 - 05/02/2023 </td>
+                                        <td>05/02/2023 </td>
+                                        <td>DemoPediatricLOB</td>
+                                        <td>Avi_PediatricPayer</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
@@ -1873,8 +2471,8 @@
         </div>
     </div>
 
-      <!-- POPUP -->
-      <div class="modal" tabindex="-1" id="change-location">
+    <!-- POPUP -->
+    <div class="modal" tabindex="-1" id="change-location">
         <div class="modal-dialog custom-modal-1 modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-greyBlue">

@@ -1008,7 +1008,7 @@ d-inline-table color-GrayscaleBlue w-90">
                                             <th style="width: 20%;">Clinician</th>
                                             <th style="width: 20%;">Time Point</th>
                                             <th style="width: 30%;">Advance Directive Status</th>
-                                            <th style="width: 10%;">Actions</th>
+                                            <th class="w-80">Actions</th>
 
                                         </tr>
                                     </thead>
@@ -1092,7 +1092,7 @@ d-inline-table color-GrayscaleBlue w-90">
                                             <th>Document Provided</th>
                                             <th>Discussed With Patient</th>
                                             <th>Physician Contacted</th>
-                                            <th>Actions</th>
+                                            <th class="w-80">Actions</th>
                                         </tr>
                                     </thead>
 
@@ -1225,7 +1225,7 @@ d-inline-table color-GrayscaleBlue w-90">
                                             <th>Shared to Family</th>
                                             <th>Email</th>
                                             <th>Document Provided</th>
-                                            <th>Actions</th>
+                                            <th class="w-80">Actions</th>
                                         </tr>
                                     </thead>
 
@@ -2351,9 +2351,9 @@ d-inline-table color-GrayscaleBlue w-90">
                                     <div class="d-flex gap-10">
                                         <div class="radio-box bg-white max-fit">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="patient-1"
-                                                    id="patient-1" value="Patient">
-                                                <label class="form-check-label" for="patient-1">
+                                                <input class="form-check-input" type="radio" name="Recipient"
+                                                    id="patient-1-caregiver" value="Patient">
+                                                <label class="form-check-label" for="patient-1-caregiver">
                                                     Patient
                                                 </label>
                                             </div>
@@ -2361,35 +2361,52 @@ d-inline-table color-GrayscaleBlue w-90">
                                         <div class="radio-box bg-white max-fit">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio"
-                                                    name="patient-representative" id="patient-representative"
+                                                    name="Recipient" id="patient-representative-caregiver"
                                                     value="Patient Representative">
-                                                <label class="form-check-label" for="patient-representative">
+                                                <label class="form-check-label" for="patient-representative-caregiver">
                                                     Patient Representative
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="radio-box bg-white max-fit">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="patient-other"
-                                                    id="patient-Other" value="Other">
-                                                <label class="form-check-label" for="patient-Other">
+                                                <input class="form-check-input" type="radio" name="Recipient"
+                                                    id="patient-Other-caregiver" value="Other">
+                                                <label class="form-check-label" for="patient-Other-caregiver">
                                                     Other
                                                 </label>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row col-12 mt-20">
-                                <div class="col-6">
-                                    <label class="form-label" for="representative">Representative</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control input-item" id="representative"
-                                            placeholder="Enter">
+                                    <!-- patient-representative-caregiver ,representative-dropdown-caregiver-->
+                                    <!-- patient-Other-caregiver ,representative-input-caregiver-->
 
+                                    <div class="mt-20 mb-20 representative-dropdown-caregiver" style="display: none;">
+                                        <div class="col-6">
+                                            <label class="label"
+                                                for="teaching-representative-patient-1-caregiver">Representative</label>
+                                            <select class="single-select input-item" aria-label=""
+                                                id="teaching-representative-patient-1-caregiver">
+                                                <option selected>Father</option>
+                                                <option value="1">List 1</option>
+                                                <option value="2">List 2</option>
+                                                <option value="3">List 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-20 mb-20 representative-input-caregiver" style="display: none;">
+                                        <div class="col-6 mb-20">
+                                            <label class="label"
+                                                for="teaching-representative-others-1-caregiver">Representative</label>
+                                            <input type="text" class="form-control input-item"
+                                                id="teaching-representative-others-1-caregiver" placeholder="Enter "
+                                                aria-label="">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            
 
                             <div class="row col-12 mt-20">
                                 <div class="col-6">
@@ -2457,6 +2474,8 @@ d-inline-table color-GrayscaleBlue w-90">
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- anshuman -->
+                                 
                                 </div>
                             </div>
                             <div class="row col-12 mt-20">
@@ -2774,6 +2793,35 @@ d-inline-table color-GrayscaleBlue w-90">
                     $('#teaching-patient-2').prop('checked', false);
                 } else {
                     $('.representative-input-2').hide();
+                }
+            });
+        });
+    </script>
+
+                                    <!-- patient-representative-caregiver ,representative-dropdown-caregiver-->
+                                    <!-- patient-Other-caregiver ,representative-input-caregiver-->
+
+    <script>
+        $(document).ready(function () {
+            $('#patient-representative-caregiver').change(function () {
+                if ($(this).is(':checked')) {
+                    $('.representative-dropdown-caregiver').show();
+                    $('.representative-input-caregiver').hide();
+                    $('#patient-Other-caregiver').prop('checked', false);
+                    $('#teaching-patient-2').prop('checked', false);
+                } else {
+                    $('.representative-dropdown-caregiver').hide();
+                }
+            });
+
+            $('#patient-Other-caregiver').change(function () {
+                if ($(this).is(':checked')) {
+                    $('.representative-input-caregiver').show();
+                    $('.representative-dropdown-caregiver').hide();
+                    $('#patient-representative-caregiver').prop('checked', false);
+                    $('#teaching-patient-2').prop('checked', false);
+                } else {
+                    $('.representative-input-caregiver').hide();
                 }
             });
         });

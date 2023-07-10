@@ -1328,3 +1328,66 @@ padding: .375rem 0;
     color: #181C32;
     border: none;
   }
+  .pop-up-image {
+    width: 20px;
+    height: 20px;
+}
+
+.popUp-title {
+    font-weight: 700 !important;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+}
+
+.pop-up-image-box {
+    display: flex;
+    gap: 10px;
+}
+
+.pop-up-content {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    margin-left: 18px;
+}
+
+.pop-up-content p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #545B64;
+}
+
+.pop-up-borderStyle {
+    border-top: 6px solid #FE9680 !important;
+    border-radius: 4px;
+    padding-top: 20px;
+}
+
+.pop-up-borderStyle .btn-outline {
+    border: 1px solid #EFEFEF;
+    min-width: 80px;
+    height: 36px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.pop-up-cancel {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16.8px;
+    color: #3D4148;
+}
+
+.pop-up-borderStyle .modal-footer {
+    box-shadow: 0 -2px 8px rgba(207, 207, 207, 0.25);
+    border-top: 0;
+}
+
+.text-red-light {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16.8px;
+    color: #FC2D2D;
+}
