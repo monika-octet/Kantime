@@ -423,7 +423,7 @@
 
 
                         <div class="outer">
-                            <div class="inner" style="width: 1366px;">
+                            <div class="inner" style="width: 100%;">
                                 <table class="table 
 table-type-1 rounded-2" id="treatment-address-table">
                                     <thead>
@@ -2363,15 +2363,15 @@ d-inline-table color-GrayscaleBlue w-90">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 border-color bg-white py-10 px-15 radius-4 mb-20">
-                            <div class="form-check mb-20">
-                                <input class="form-check-input" checked="checked" type="checkbox" value=""
+                        <div class="col-12 border-color bg-white py-10 px-15 radius-4 ">
+                            <div class="form-check ">
+                                <input class="form-check-input"  type="checkbox" value=""
                                     id="patient-provided">
                                 <label class="send" for="patient-provided">
                                     Document Provided to Patient / Caregiver
                                 </label>
                             </div>
-                            <div class="align-items-center">
+                            <div class="align-items-center document-provided-box mt-20 " style="display: none;">
 
                                 <p class="mb-10">Recipient</p>
                                 <div class=" ">
@@ -2432,35 +2432,37 @@ d-inline-table color-GrayscaleBlue w-90">
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="row col-12 mt-20">
+                                    <div class="col-6">
+                                        <div class="d-flex justify-content-between">
+                                            <label class="label" for="clinician-provided-doc">Clinician</label>
+                                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#"
+                                                class="link-blue">Add</a>
+                                        </div>
+                                        <select class="single-select input-item" aria-label="Default select example"
+                                            id="clinician-provided-doc-list">
+                                            <option selected>Select</option>
+                                            <option value="2">Agency 1</option>
+                                            <option value="2">Agency 2</option>
+                                            <option value="2">Agency 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6 mb-20">
+                                        <label class="form-label" for="date-provided-doc">Date</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control input-item" id="date-provided-doc"
+                                                placeholder="Select">
+                                            <span class="input-group-text"><img src="images/Calendar.svg"></span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
 
-                            <div class="row col-12 mt-20">
-                                <div class="col-6">
-                                    <div class="d-flex justify-content-between">
-                                        <label class="label" for="clinician-provided-doc">Clinician</label>
-                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#"
-                                            class="link-blue">Add</a>
-                                    </div>
-                                    <select class="single-select input-item" aria-label="Default select example"
-                                        id="clinician-provided-doc-list">
-                                        <option selected>Select</option>
-                                        <option value="2">Agency 1</option>
-                                        <option value="2">Agency 2</option>
-                                        <option value="2">Agency 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-6 mb-20">
-                                    <label class="form-label" for="date-provided-doc">Date</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control input-item" id="date-provided-doc"
-                                            placeholder="Select">
-                                        <span class="input-group-text"><img src="images/Calendar.svg"></span>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
-                        <div class="col-12 border-color bg-white py-10 px-15 radius-4">
+                        <div class="col-12 border-color bg-white py-10 px-15 radius-4 mt-20">
                             <div class="form-check mb-20">
                                 <input class="form-check-input" type="checkbox" value=""
                                     id="discussed-with-patient-poc">
@@ -2897,6 +2899,22 @@ d-inline-table color-GrayscaleBlue w-90">
             })
         })
     </script>
+
+
+<!-- patient-provided -->
+<script>
+    $(document).ready(function () {
+        $('#patient-provided').change(function () {
+            if ($(this).is(':checked')) {
+                $('.document-provided-box').show();
+            }
+            else {
+                $('.document-provided-box').hide();
+
+            }
+        })
+    })
+</script>
 
 </body>
 

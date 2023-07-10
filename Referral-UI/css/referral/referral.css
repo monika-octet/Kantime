@@ -1328,3 +1328,11 @@ padding: .375rem 0;
     color: #181C32;
     border: none;
   }
+
+  .medication-serach-space .multiselect-selected-text{
+    padding-left: 30px !important;
+  }
+
+  #add-new-dual-eligible-payer .dropdown-menu .dropdown-item {
+        white-space: normal;
+}

@@ -1928,3 +1928,12 @@ vertical-align: top;
     /*Without this, clicking will make it sticky*/
     pointer-events: none;
     }
+
+  #add-new-dual-eligible-payer .dropdown-menu .dropdown-item {
+        
+        white-space: normal;
+    }
+
+    .client-status-table .dropdown-menu{
+        z-index: 33;
+    }

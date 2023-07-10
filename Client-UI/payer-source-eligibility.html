@@ -2317,17 +2317,17 @@
                                 </div>
                                 <div class="">
                                     <select class="single-select input-item" aria-label="location"
-                                        id="location-ref-info-2">
+                                        id="override-diagnosis-check">
                                         <option class="d-none" disabled selected>Select</option>
-                                        <option value="1">List 1</option>
-                                        <option value="2">List 2</option>
-                                        <option value="3">List 3</option>
+                                        <option value="1">Plan of Care / ISP</option>
+                                        <option value="2">Use the following</option>
+                                    
                                     </select>
                                 </div>
 
                             </div>
 
-                            <div class="col-4">
+                            <div class="col-4 primary-diganosis-box" style="display: none;">
                                 <div class="form-check mb-2" style="padding-left: 0px;">
 
                                     <label class="form-check-label" for="primary-diagnosis-input">
@@ -2397,23 +2397,27 @@
                                     <select class="single-select input-item" aria-label="service authorization"
                                         id="service-authorization">
                                         <option class="d-none" disabled selected>Select</option>
-                                        <option value="1">List 1</option>
-                                        <option value="2">List 2</option>
-                                        <option value="3">List 3</option>
+                                        <option value="1">Hide Service Authorization Exception Code in EDI</option>
+                                        <option value="2">Print Service Authorization Exception Code in EDI</option>
+                                        
                                     </select>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-4 exception-code-box" style="display: none;">
                                     <label class="label" for="exception-code">Exception Code</label>
                                     <select class="single-select input-item" aria-label="exception code"
                                         id="exception-code">
                                         <option class="d-none" disabled selected>Select</option>
-                                        <option value="1">List 1</option>
-                                        <option value="2">List 2</option>
-                                        <option value="3">List 3</option>
+                                        <option value="1">1- Immediate/Urgent Care</option>
+                                        <option value="2">2- Services rendered in a Retroactive Period</option>
+                                        <option value="3">3- Emergency Care</option>
+                                        <option value="3">4-  Client has temporary Medicaid</option>
+                                        <option value="3">5- Rquest from County for Second Opinion to...</option>
+                                        <option value="3">6- Request for Override Pending</option>
+                                        <option value="3">7- Special Handling</option>
                                     </select>
                                 </div>
                             </div>
-
+<!--  service-authorization exception-code-box -->
 
                         </div>
                     </div>
@@ -2775,17 +2779,17 @@
                                     </label>
                                 </div>
                                 <div class="">
-                                    <select class="single-select input-item" aria-label="override diagnosis" id="">
+                                    <select class="single-select input-item" aria-label="override diagnosis" id="override-diagnosis-tertiary-check">
                                         <option class="d-none" disabled selected>Select</option>
-                                        <option value="1">List 1</option>
-                                        <option value="2">List 2</option>
-                                        <option value="3">List 3</option>
+                                        <option value="1">Plan of Care/ ISP</option>
+                                        <option value="2">Use the following</option>
+                                     
                                     </select>
                                 </div>
 
                             </div>
 
-                            <div class="col-4">
+                            <div class="col-4 override-diagnosis-tertiary-box" style="display: none;">
                                 <div class="form-check mb-2" style="padding-left: 0px;">
 
                                     <label class="form-check-label" for="primary-diagnosis-input-tertiary">
@@ -2850,7 +2854,7 @@
                             </div>
                             <div class="row col-12">
 
-
+<!--service-authorization-tertiary exception-code-tertiary-box  -->
                                 <div class="col-4">
                                     <label class="label" for="service-authorization-tertiary">Service Authorization
                                         Exception
@@ -2858,19 +2862,23 @@
                                     <select class="single-select input-item" aria-label="service authorization"
                                         id="service-authorization-tertiary">
                                         <option class="d-none" disabled selected>Select</option>
-                                        <option value="1">List 1</option>
-                                        <option value="2">List 2</option>
-                                        <option value="3">List 3</option>
+                                        <option value="1">Hide Service Authorization Exception Code in EDI</option>
+                                        <option value="2">Print Service Authorization Exception Code in EDI</option>
                                     </select>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-4 exception-code-tertiary-box" style="display: none;">
                                     <label class="label" for="exception-code-tertiary">Exception Code</label>
                                     <select class="single-select input-item" aria-label="exception code"
                                         id="exception-code-tertiary">
                                         <option class="d-none" disabled selected>Select</option>
-                                        <option value="1">List 1</option>
-                                        <option value="2">List 2</option>
-                                        <option value="3">List 3</option>
+                                       
+                                        <option value="1">1- Immediate/Urgent Care</option>
+                                        <option value="2">2- Services rendered in a Retroactive Period</option>
+                                        <option value="3">3- Emergency Care</option>
+                                        <option value="3">4-  Client has temporary Medicaid</option>
+                                        <option value="3">5- Rquest from County for Second Opinion to...</option>
+                                        <option value="3">6- Request for Override Pending</option>
+                                        <option value="3">7- Special Handling</option>
                                     </select>
                                 </div>
                             </div>
@@ -3080,12 +3088,13 @@
                                 <label class="label" for="payer-primary-invoice">Payer For Primary Invoice</label>
                                 <select class="single-select input-item" aria-label="invoice"
                                     id="payer-primary-invoice">
+                                    <!--  -->
                                     <option class="d-none" disabled selected>Select</option>
                                     <option value="1">Create Invoices and Demand Claims to</option>
-                                    <option value="2">Create Invoices and Demand Claims to</option>
+                                    <option value="2">Bypass TestPayer1 invoice creation and directly create invocies to</option>
                                 </select>
 
-                                <div class="form-check m-2">
+                                <div class="form-check m-2 use-ratebox" style="display: none;">
                                     <input class="form-check-input margin-rt-0" type="checkbox" value=""
                                         id="use-rate-payer">
                                     <label class="send f-500 lh-17" style="color: #4772E0;" for="use-rate-payer">
@@ -3095,16 +3104,16 @@
                             </div>
 
                             <div class="col-4">
-                                <label class="label" for="payer-primary-invoice">Inovice</label>
+                                <label class="label" for="payer-invoice">Inovice</label>
                                 <select class="single-select input-item" aria-label="invoice"
-                                    id="payer-primary-invoice">
+                                    id="payer-invoice">
                                     <option class="d-none" disabled selected>Select</option>
                                     <option value="1">Print Details(as secondary payer) in Primary Payer EDI</option>
                                     <option value="2">Consider as Primary and as Secondary in the Primary Payer EDI
                                     </option>
                                 </select>
 
-                                <div class="form-check m-2">
+                                <div class="form-check m-2 print-invoice-box" style="display: none;">
                                     <input class="form-check-input margin-rt-0" type="checkbox" value=""
                                         id="use-rate-payer">
                                     <label class="send f-500 lh-17" style="color: #4772E0;" for="use-rate-payer">
@@ -3112,6 +3121,7 @@
                                     </label>
                                 </div>
                             </div>
+                           
 
                             <div class="col-4">
                                 <label class="label" for="payer-primary-invoice">Inovice</label>
@@ -3128,7 +3138,7 @@
                         </div>
                     </div>
 
-                    <div class="border-color mb-20">
+                    <div class="border-color mb-20 adjustment-code-box" style="display: none;">
                         <div class="p-3 d-grid grid-line align-items-center bg-lightGrey">
                             <p class="tab-heading">Adjustment code</p>
                             <hr class="modal-line-1">
@@ -5407,5 +5417,108 @@
           crossorigin="anonymous"></script>
       <script type="text/javascript" src="js/custom.js"></script>
   
+
+      <script>
+        function showHideDiv(checkboxId, divId) {
+            var checkbox = document.getElementById(checkboxId);
+            var div = document.getElementById(divId);
+
+            var divs = document.querySelectorAll('div[id^="src"]');
+            for (var i = 0; i < divs.length; i++) {
+                if (divs[i].id === divId) {
+                    divs[i].style.display = checkbox.checked ? "block" : "none";
+                } else {
+                    divs[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".close-covid-notice").click(function () {
+                $(".covid-box").addClass('hidden');
+            });
+        });
+    </script>
+
+
+
+
+<script>
+    $(document).ready(function() {
+      $('#payer-primary-invoice').change(function() {
+        if ($(this).val() === '2') {
+          $('.use-ratebox').show();
+        } else {
+          $('.use-ratebox').hide();
+        }
+      });
+    });
+  </script>
+
+<script>
+    $(document).ready(function() {
+      $('#payer-invoice').change(function() {
+        if ($(this).val() === '2') {
+          $('.print-invoice-box').show();
+          $('.adjustment-code-box').show();
+        } else {
+          $('.print-invoice-box').hide();
+          $('.adjustment-code-box').hide();
+        }
+      });
+    });
+  </script>
+<!--  service-authorization exception-code-box -->
+<script>
+    $(document).ready(function() {
+      $('#service-authorization').change(function() {
+        if ($(this).val() === '2') {
+          $('.exception-code-box').show();
+        } else {
+          $('.exception-code-box').hide();
+        }
+      });
+    });
+  </script>
+<!--service-authorization-tertiary exception-code-tertiary-box  -->
+<script>
+    $(document).ready(function() {
+      $('#service-authorization-tertiary').change(function() {
+        if ($(this).val() === '2') {
+          $('.exception-code-tertiary-box').show();
+        } else {
+          $('.exception-code-tertiary-box').hide();
+        }
+      });
+    });
+  </script>
+
+<script>
+    $(document).ready(function() {
+      $('#override-diagnosis-check').change(function() {
+        if ($(this).val() === '2') {
+          $('.primary-diganosis-box').show();
+        } else {
+          $('.primary-diganosis-box').hide();
+        }
+      });
+    });
+  </script>
+
+<script>
+    $(document).ready(function() {
+      $('#override-diagnosis-tertiary-check').change(function() {
+        if ($(this).val() === '2') {
+          $('.override-diagnosis-tertiary-box').show();
+        } else {
+          $('.override-diagnosis-tertiary-box').hide();
+        }
+      });
+    });
+  </script>
+
+
 </body>
 </html>

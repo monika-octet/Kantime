@@ -484,6 +484,7 @@ item:active {
 
 .dropdown-menu .dropdown-item {
     border-bottom: 1px solid #F1F1F1;
+    white-space: nowrap;
 }
 
 .multiselect-native-select .btn-group .multiselect {
