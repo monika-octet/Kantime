@@ -539,43 +539,50 @@
                                             <label class="label" for="">Search By</label>
                                             <select class="single-select input-item px-30" aria-label=""
                                                 id="medication-dropdown-comp">
-                                                <option class="d-none" disabled >Search By</option>
+                                                <option class="d-none" disabled>Search By</option>
                                                 <option value="1" selected>Intra</option>
                                                 <option value="2">Intramuscular</option>
                                                 <option value="3">Intramuscular injection</option>
                                             </select>
                                             <img src="images/lens.svg" alt="search lens" class="lens"
-                                            style="top: 35px; left: 15px;">
+                                                style="top: 35px; left: 15px;">
                                         </div>
                                         <div class="dropdown medication-drop col-3 px-0">
-                                            <button style="height: 40px; margin-top: 25px;" class="btn btn-secondary dropdown-toggle f500 f-13 lh-17" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <button style="height: 40px; margin-top: 25px;"
+                                                class="btn btn-secondary dropdown-toggle f500 f-13 lh-17" type="button"
+                                                id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
                                                 Medication
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                              <li><a class="dropdown-item" href="#">Medication</a></li>
-                                              <li><a class="dropdown-item" href="#">RX Norms</a></li>
-                                              <li><a class="dropdown-item" href="#">NDC Norms</a></li>
+                                                <li><a class="dropdown-item" href="#">Medication</a></li>
+                                                <li><a class="dropdown-item" href="#">RX Norms</a></li>
+                                                <li><a class="dropdown-item" href="#">NDC Norms</a></li>
                                             </ul>
-                                          </div>
+                                        </div>
 
 
                                     </div>
                                     <!--medication-dropdown-comp   ,dropdown-comp-container-->
 
-                                    <div class="row col-12 dropdown-comp-container" style="display: none;"> 
+                                    <div class="row col-12 dropdown-comp-container" style="display: none;">
                                         <div class="col-4 mb-20">
                                             <label class="label" for="medication-dropdown">Medication</label>
-                                            <input disabled type="text" class="form-control input-item" id="medication-dropdown" placeholder="" aria-label="" value="lorem ipsum">
+                                            <input disabled type="text" class="form-control input-item"
+                                                id="medication-dropdown" placeholder="" aria-label=""
+                                                value="lorem ipsum">
                                         </div>
 
                                         <div class="col-4 mb-20">
                                             <label class="label" for="rx-dropdown">RX Norms</label>
-                                            <input disabled type="text" class="form-control input-item" id="rx-dropdown" placeholder="" aria-label="" value="lorem ipsum">
+                                            <input disabled type="text" class="form-control input-item" id="rx-dropdown"
+                                                placeholder="" aria-label="" value="lorem ipsum">
                                         </div>
 
                                         <div class="col-4 mb-20">
                                             <label class="label" for="ndc-dropdown">NDC Norms</label>
-                                            <input disabled type="text" class="form-control input-item" id="ndc-dropdown" placeholder="" aria-label="" value="lorem ipsum">
+                                            <input disabled type="text" class="form-control input-item"
+                                                id="ndc-dropdown" placeholder="" aria-label="" value="lorem ipsum">
                                         </div>
                                     </div>
 
@@ -833,25 +840,150 @@
                                 <div class="row col-12 admin-pattern hidden mb-20">
                                     <div class="col-4">
                                         <label class="label" for="planned-pattern">Pattern</label>
-                                        <select class="single-select input-item" aria-label="location"
+                                        <select class="single-select input-item" aria-label=""
                                             id="planned-pattern">
                                             <option class="d-none" disabled selected>Select</option>
                                             <option value="1">Every Other Day</option>
                                             <option value="2">Every Week</option>
                                             <option value="3">Every Other Week</option>
-                                            <option value="3">Every Month</option>
-                                            <option value="3">Every Other Month</option>
-                                            <option value="3">Custom Period</option>
-                                            <option value="3">Custom Days</option>
-                                            <option value="3">Custom Weeks</option>
-                                            <option value="3">Custom Months</option>
-                                            <option value="3">Schedule Weekdays</option>
+                                            <option value="4">Every Month</option>
+                                            <option value="5">Every Other Month</option>
+                                            <option value="6">Custom Period</option>
+                                            <option value="7">Custom Days</option>
+                                            <option value="8">Custom Weeks</option>
+                                            <option value="9">Custom Months</option>
+                                            <option value="10">Schedule Weekdays</option>
 
                                         </select>
                                     </div>
+
+                                </div>
+                                <div class="row col-12 custom-date-hide" style="display: none;">
+                                    <div class="col-4 d-flex  align-items-center ">
+                                        <div class="">
+                                            <label class="label" for="custom-period">Period</label>
+                                            <input type="text" class="form-control input-item" id="custom-period"
+                                                placeholder="" aria-label="" value="2">
+                                        </div>
+                                        <span class="cutom-date-w ml-10 mt-20">Days On</span>
+                                        <div class="">
+                                            <label class="label v-none" for="custom-period">hide</label>
+                                            <input type="text" class="form-control input-item" id="custom-period"
+                                                placeholder="" aria-label="" value="2">
+                                        </div>
+                                        <span class="cutom-date-w ml-10 mt-20">Days Off</span>
+                                    </div>
                                 </div>
 
-                                <div class="col-4 mb-20">
+                                <div class=" custom-specific-day-hide" style="display: none;">
+                                    <div class=" d-flex flex-column  ">
+                                        <p class="mb-10">Specific Days</p>
+                                        <div class="d-flex gap-10 align-items-center">
+                                            <p>Every</p>
+                                            <input type="text" class="form-control input-item text-center"
+                                                id="custom-period" placeholder="" aria-label="" value="2"
+                                                style="width: 100px;">
+                                            <p>Days</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class=" custom-specific-week-hide" style="display: none;">
+                                    <div class=" d-flex flex-column  ">
+                                        <p class="mb-10">Specific Weeks</p>
+                                        <div class="d-flex gap-10 align-items-center">
+                                            <p>Every</p>
+                                            <input type="text" class="form-control input-item text-center"
+                                                id="custom-weeks" placeholder="" aria-label="" value="2"
+                                                style="width: 100px;">
+                                            <p>Days</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class=" custom-specific-months-hide" style="display: none;">
+                                    <div class=" d-flex flex-column  ">
+                                        <p class="mb-10">Specific Months</p>
+                                        <div class="d-flex gap-10 align-items-center">
+                                            <p>Every</p>
+                                            <input type="text" class="form-control input-item text-center"
+                                                id="custom-month" placeholder="" aria-label="" value="2"
+                                                style="width: 100px;">
+                                            <p>Days</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="schedule-week-days"style="display: none;" >
+                                    <div class="form-check mb-10">
+                                        <input class="form-check-input" type="radio" name="" id="schedule-all-days"
+                                            value="">
+                                        <label class="form-check-label" for="schedule-all-days">
+                                            All Days
+                                        </label>
+                                    </div>
+                                    <div class="d-flex gap-25">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="schedule-sun">
+                                            <label class="send" for="schedule-sun">
+                                                Sun
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="schedule-mon">
+                                            <label class="send" for="schedule-mon">
+                                                Mon
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="schedule-tue">
+                                            <label class="send" for="schedule-tue">
+                                                Tue
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="schedule-wed">
+                                            <label class="send" for="schedule-wed">
+                                                Wed
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="schedule-thu">
+                                            <label class="send" for="schedule-thu">
+                                                Thu
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="schedule-fri">
+                                            <label class="send" for="schedule-fri">
+                                                Fri
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="schedule-Sat">
+                                            <label class="send" for="schedule-Sat">
+                                                Sat
+                                            </label>
+                                        </div>
+
+
+
+
+                                    </div>
+
+
+                                </div>
+
+
+
+
+                                <div class="col-4 mb-20 mt-20">
                                     <label class="label" for="medicare-time">Time</label>
                                     <input type="text" class="form-control input-item" id="medicare-time"
                                         placeholder="Please enter comma seperated Planned Times" aria-label="time">
@@ -1240,19 +1372,94 @@
     <!--medication-dropdown-comp   ,dropdown-comp-container-->
 
     <script>
-        $(document).ready(function() {
-          $('#medication-dropdown-comp').change(function() {
-            var selectedOption = $(this).val();
-            var divContainer = $('.dropdown-comp-container');
-    
-            if (selectedOption === "3") {
-              divContainer.show(); 
-            } else {
-              divContainer.hide(); 
-            }
-          });
+        $(document).ready(function () {
+            $('#medication-dropdown-comp').change(function () {
+                var selectedOption = $(this).val();
+                var divContainer = $('.dropdown-comp-container');
+
+                if (selectedOption === "3") {
+                    divContainer.show();
+                } else {
+                    divContainer.hide();
+                }
+            });
         });
-      </script>
+    </script>
+
+<script>
+    $(document).ready(function () {
+        $('#planned-pattern').change(function () {
+            var selectedOption = $(this).val();
+            var divContainer = $('.custom-date-hide');
+
+            if (selectedOption === "6") {
+                divContainer.show();
+            } else {
+                divContainer.hide();
+            }
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('#planned-pattern').change(function () {
+            var selectedOption = $(this).val();
+            var divContainer = $('.custom-specific-day-hide');
+
+            if (selectedOption === "7") {
+                divContainer.show();
+            } else {
+                divContainer.hide();
+            }
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('#planned-pattern').change(function () {
+            var selectedOption = $(this).val();
+            var divContainer = $('.custom-specific-week-hide');
+
+            if (selectedOption === "8") {
+                divContainer.show();
+            } else {
+                divContainer.hide();
+            }
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('#planned-pattern').change(function () {
+            var selectedOption = $(this).val();
+            var divContainer = $('.custom-specific-months-hide');
+
+            if (selectedOption === "9") {
+                divContainer.show();
+            } else {
+                divContainer.hide();
+            }
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('#planned-pattern').change(function () {
+            var selectedOption = $(this).val();
+            var divContainer = $('.schedule-week-days');
+
+            if (selectedOption === "10") {
+                divContainer.show();
+            } else {
+                divContainer.hide();
+            }
+        });
+    });
+</script>
 
 
 </body>

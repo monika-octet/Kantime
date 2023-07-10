@@ -117,6 +117,9 @@
 .ml-5{
     margin-left: 5px;
 }
+.ml-10{
+    margin-left: 10px !important;
+}
 .mr-5{
     margin-right: 5px;
 }
@@ -453,6 +456,9 @@ item:active {
 
 .dropdown-menu {
     border: none;
+}
+.max-fit{
+    width: max-content !important;
 }
 
 .dropdown-menu .dropdown-item {

@@ -1336,3 +1336,7 @@ padding: .375rem 0;
   #add-new-dual-eligible-payer .dropdown-menu .dropdown-item {
         white-space: normal;
 }
+
+.cutom-date-w{
+    width: 125px;
+}

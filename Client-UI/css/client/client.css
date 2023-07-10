@@ -1929,7 +1929,8 @@ vertical-align: top;
     pointer-events: none;
     }
 
-  #add-new-dual-eligible-payer .dropdown-menu .dropdown-item {
+  #add-new-dual-eligible-payer .dropdown-menu .dropdown-item,
+  #add-new-tertiary-payer-source .dropdown-menu .dropdown-item {
         
         white-space: normal;
     }
