@@ -510,7 +510,7 @@
                                                         <label class="label"
                                                             for="patient-info-loaction">Location</label>
                                                         <a href="javascript:void(0)" data-bs-toggle="modal"
-                                                            data-bs-target="#" class="link-blue">Change</a>
+                                                            data-bs-target="#change-location" class="link-blue">Change</a>
                                                     </div>
                                                     <select disabled class="single-select input-item"
                                                         aria-label="Default select example" id="patient-info-loaction">
@@ -757,7 +757,7 @@
                                                         <div class="d-flex justify-content-between">
                                                             <label class="label" for="patient-details-lob">LOB</label>
                                                             <a href="javascript:void(0)" data-bs-toggle="modal"
-                                                                data-bs-target="#" class="link-blue">Change</a>
+                                                                data-bs-target="#change" class="link-blue">Change</a>
                                                         </div>
                                                         <select disabled class="single-select input-item"
                                                             aria-label="Default select example"
@@ -836,7 +836,7 @@
                                                             <label class="label"
                                                                 for="language-patient-information">Language</label>
                                                             <a href="javascript:void(0)" data-bs-toggle="modal"
-                                                                data-bs-target="#" class="link-blue">Add</a>
+                                                                data-bs-target="#add-lang" class="link-blue">Add</a>
                                                         </div>
                                                         <select disabled class="single-select input-item"
                                                             aria-label="Default select example"
@@ -854,7 +854,7 @@
                                                                 for="impatient-patient-information">Impatient
                                                                 Facility</label>
                                                             <a href="javascript:void(0)" data-bs-toggle="modal"
-                                                                data-bs-target="#" class="link-blue">Add</a>
+                                                                data-bs-target="#add-impatient" class="link-blue">Add</a>
                                                         </div>
                                                         <select disabled class="single-select input-item"
                                                             aria-label="Default select example"
@@ -871,7 +871,7 @@
                                                             <label class="label"
                                                                 for="religion-patient-information">Religion</label>
                                                             <a href="javascript:void(0)" data-bs-toggle="modal"
-                                                                data-bs-target="#" class="link-blue">Add</a>
+                                                                data-bs-target="#add-religion" class="link-blue">Add</a>
                                                         </div>
                                                         <select disabled class="single-select input-item"
                                                             aria-label="Default select example"
@@ -1215,7 +1215,7 @@
                                                                 to
                                                                 Patient</label>
                                                             <a href="javascript:void(0)" data-bs-toggle="modal"
-                                                                data-bs-target="#" class="link-blue">Add</a>
+                                                                data-bs-target="#add-guarantor" class="link-blue">Add</a>
                                                         </div>
                                                         <select disabled class="single-select input-item"
                                                             aria-label="Default select example"
@@ -1471,7 +1471,7 @@
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" value=""
                                                     id="patient-choose-not-representative">
-                                                <label class="send" for="patient-chose-not-representative">
+                                                <label class="send" for="patient-choose-not-representative">
                                                     Patient chooses not to list a Representative
                                                 </label>
                                             </div>
@@ -4755,13 +4755,13 @@
 
                                 <div class="col-4 mb-20">
                                     <div class="d-flex justify-content-between">
-                                        <label class="label" for="guarantor-relationship">Guarantor Relationship to
+                                        <label class="label" for="guarantor-relationship-edit">Guarantor Relationship to
                                             Patient</label>
-                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#"
+                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-guarantor"
                                             class="link-blue">Add</a>
                                     </div>
                                     <select class="single-select input-item" aria-label="Default select example"
-                                        id="guarantor-relationship">
+                                        id="guarantor-relationship-edit">
                                         <option selected>Select</option>
                                         <option value="2">Agency 1</option>
                                         <option value="2">Agency 2</option>
@@ -9875,6 +9875,439 @@
         </div>
     </div>
 
+    <!-- ADD IMPATIENT FACILITY POPUP -->
+  <div class="modal" tabindex="-1" id="add-impatient">
+    <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">
+            Add Inpatient Facility
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-6 mb-20">
+              <label class="label" for="facility-name-1">Facility Name</label>
+              <input type="text" class="form-control input-item" id="facility-name-1" placeholder="Enter"
+                aria-label="facility name" />
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="phone-extension">Phone (With Extension Number)</label>
+              <input type="text" class="form-control input-item" id="phone-extension" placeholder="Enter"
+                aria-label="Phone (With Extension Number)" />
+            </div>
+
+            <div class="col-6 mb-20">
+              <div class="d-flex justify-content-between">
+                <label class="label" for="location-impatient">Location</label>
+              </div>
+              <select class="single-select input-item" aria-label="location" id="location-impatient">
+                <option class="d-none" disabled selected>Select</option>
+                <option value="1">Horizon Adult Healthcare</option>
+                <option value="2">Agency 1</option>
+                <option value="2">Agency 2</option>
+                <option value="2">Agency 3</option>
+              </select>
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="cell">Cell</label>
+              <input type="text" class="form-control input-item" id="cell" placeholder="Enter"
+                aria-label="patient-id " />
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="address-1">Address 1</label>
+              <input type="text" class="form-control input-item" id="address-1" placeholder="Enter"
+                aria-label="address 1" />
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="address-2">address 2</label>
+              <input type="text" class="form-control input-item" id="address-2" placeholder="Enter"
+                aria-label="address 2" />
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="fax-impatient">Fax</label>
+              <input type="text" class="form-control input-item" id="fax-impatient" placeholder="Enter"
+                aria-label="fax" />
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="email-impatient">Email</label>
+              <input type="email" class="form-control input-item" id="email-impatient" placeholder="Enter"
+                aria-label="email" />
+            </div>
+
+            <div class="col-6 d-flex gap-10 mb-20">
+              <div class="mb-20">
+                <label class="label" for="zip-impatient">Zip</label>
+                <input type="text" class="form-control input-item" id="zip-impatient" placeholder="Enter"
+                  aria-label="zip" />
+              </div>
+              <div class="mb-20">
+                <label class="label" for="city">City</label>
+                <input type="text" class="form-control input-item" id="city" placeholder="Enter" aria-label="city" />
+              </div>
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="state-impatient">State</label>
+              <input type="text" class="form-control input-item" id="state-impatient" placeholder="Enter"
+                aria-label="state" />
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="contact-person">Contact Person</label>
+              <input type="text" class="form-control input-item" id="contact-person" placeholder="Enter"
+                aria-label="contact person" />
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="contact-person-1">Contact Person</label>
+              <input type="text" class="form-control input-item" id="contact-person-1" placeholder="Enter"
+                aria-label="contact person" />
+            </div>
+
+            <div class="">
+              <label class="form-check-label mb-2" for="Volunteer">
+                Initial Order
+              </label>
+              <div class="col-12  bg-white border-color radius-4">
+                <textarea name="" id="add-new-initial-order" cols="" rows="8"
+                  class="input-textarea w-100 border-color border-bottom " placeholder="Type Here"></textarea>
+                <div class="d-flex align-items-center gap-2 py-10 px-15 pointer" data-bs-toggle="modal"
+                  data-bs-target="#quick-notes">
+                  <img src="images/notes.svg" alt="notes icon">
+                  <p class="f-500 f-13 lh-17">Open Quick Notes List</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ADD IMPATIENT FACILITY POPUP END -->
+
+ <!-- quick-notes -->
+ <div class="modal" tabindex="-1" id="quick-notes">
+    <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">
+            Quick Notes
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex justify-content-end mb-15">
+            <button class="btn btn-tertiary" data-bs-toggle="modal" data-bs-target="#intake-notes-add-quick-notes">Add
+              New</button>
+          </div>
+          <div class="row col-12">
+            <div class="col-6 mb-20">
+              <label class="f-500 f-14 lh-19 mb-2" for="intake-notes-location">Location</label>
+              <select class="single-select input-item" aria-label="location" id="intake-notes-location">
+                <option class="d-none" disabled selected>Select</option>
+                <option value="1">List 1</option>
+                <option value="2">List 2</option>
+                <option value="3">List 3</option>
+              </select>
+            </div>
+
+            <div class="col-6 search mb-20">
+              <label class="f-500 f-14 lh-19 mb-2" for="">Search</label>
+              <input type="text" placeholder="Search" class="search-input w-100">
+              <img src="images/lens-dark.svg" alt="search lens" class="lens"
+                style="top: 34px !important; left: 18px !important">
+            </div>
+          </div>
+
+          <table class="table table-type-1 mt-10" id="add-quick-note-table">
+            <thead>
+              <tr>
+                <th class="d-flex">
+                  <input class="form-check-input" type="checkbox" value="" id=""><span>Title</span>
+                </th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td class="d-flex">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <div>
+                    <p>Title line goes here </p>
+                  </div>
+                </td>
+                <td>Description goes here</td>
+              </tr>
+
+              <tr>
+                <td class="d-flex">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <div>
+                    <p>Title line goes here </p>
+                  </div>
+                </td>
+                <td>Description goes here</td>
+              </tr>
+
+              <tr>
+                <td class="d-flex">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <div>
+                    <p>Title line goes here </p>
+                  </div>
+                </td>
+                <td>Description goes here</td>
+              </tr>
+
+              <tr>
+                <td class="d-flex">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <div>
+                    <p>Title line goes here </p>
+                  </div>
+                </td>
+                <td>Description goes here</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+
+
+
+        </div>
+        <div class="modal-footer">
+
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK NOTES POPUP END -->
+
+  <!-- QUICK NOTES SUB NOTES -->
+  <!-- intake-notes-add-quick-notes -->
+
+  <div class="modal" tabindex="-1" id="intake-notes-add-quick-notes">
+    <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">
+            Add new quick notes
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="row col-12">
+            <div class="col-6 mb-20">
+              <label class="f-500 f-14 lh-19 mb-2" for="intake-quick-notes-location">Location</label>
+              <select class="single-select input-item" aria-label="location" id="intake-quick-notes-location">
+                <option class="d-none" disabled selected>Select</option>
+                <option value="1">List 1</option>
+                <option value="2">List 2</option>
+                <option value="3">List 3</option>
+              </select>
+            </div>
+
+            <div class="col-4 mb-20">
+              <label class="label" for="intake-quick-notes-title">Title</label>
+              <input type="text" class="form-control input-item" id="intake-quick-notes-title" placeholder="Enter"
+                aria-label="quick notes">
+            </div>
+
+            <div class="col-12">
+              <label class="label" for="intake-quick-notes-description">Description</label>
+              <textarea name="" id="intake-quick-notes-description" cols="" rows="2" class="input-textarea w-100"
+                placeholder="Type Here"></textarea>
+            </div>
+
+          </div>
+
+
+
+
+
+        </div>
+        <div class="modal-footer">
+
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- ADD RELIGION POPUP -->
+    <div class="modal" tabindex="-1" id="add-religion">
+        <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header bg-greyBlue">
+              <h5 class="modal-title Pinfo color-darkblue">Add Religion</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="add-text">Religion</span>
+                <div class="position-relative">
+                  <input type="text" class="form-control input-item" id="new-religion" placeholder="Enter new relation here"
+                    aria-label="Enter new relation here" style="width: 286px" />
+                  <button class="btn btn-inside">Add to List</button>
+                </div>
+              </div>
+              <div class="border-color radius-4">
+                <div class="bg-greyHeader p-3 d-flex justify-content-between align-items-center">
+                  <p class="f-500 f-13 lh-17 color-greyBlueheader">Relation</p>
+                  <p class="f-500 f-13 lh-17 color-greyBlueheader">Actions</p>
+                </div>
+                <div class="p-3 d-flex justify-content-between align-items-center border-color">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="religion" id="religion-hindu" value="hindu"
+                      checked />
+                    <label class="form-check-label" for="religion-hindu">
+                      Hindu
+                    </label>
+                  </div>
+                  <img src="images/delete_red.svg" alt="delete button" class="pointer delete" />
+                </div>
+                <div class="p-3 d-flex justify-content-between align-items-center border-color">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="religion" id="religion-christian"
+                      value="christian" />
+                    <label class="form-check-label" for="religion-christian">
+                      Christian
+                    </label>
+                  </div>
+                  <img src="images/delete_red.svg" alt="delete button" class="pointer delete" />
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ADD RELIGION POPUP END -->
+
+
+       <!-- ADD LANGUAGE POPUP -->
+  <div class="modal" tabindex="-1" id="add-lang">
+    <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">Add Language</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="add-text">Language</span>
+            <div class="position-relative">
+              <input type="text" class="form-control input-item" id="new-language" placeholder="Enter new relation here"
+                aria-label="Enter new Language here" style="width: 286px" />
+              <button class="btn btn-inside">Add to List</button>
+            </div>
+          </div>
+          <div class="border-color radius-4">
+            <div class="bg-greyHeader p-3 d-flex justify-content-between align-items-center">
+              <p class="f-500 f-13 lh-17 color-greyBlueheader">Relation</p>
+              <p class="f-500 f-13 lh-17 color-greyBlueheader">Actions</p>
+            </div>
+            <div class="p-3 d-flex justify-content-between align-items-center border-color">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="language" id="lang-eng" value="English" checked />
+                <label class="form-check-label" for="lang-eng">
+                  English
+                </label>
+              </div>
+              <img src="images/delete_red.svg" alt="delete button" class="pointer delete" />
+            </div>
+            <div class="p-3 d-flex justify-content-between align-items-center border-color">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="language" id="lang-spa" value="Spanish" />
+                <label class="form-check-label" for="lang-spa">
+                  Spanish
+                </label>
+              </div>
+              <img src="images/delete_red.svg" alt="delete button" class="pointer delete" />
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ADD LANGUAGE POPUP END -->
+
+    <!-- ADD GUARANTOR RELATION POPUP -->
+    <div class="modal" tabindex="-1" id="add-guarantor">
+        <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header bg-greyBlue">
+              <h5 class="modal-title Pinfo color-darkblue">
+                Add Guarantor Relation
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="add-text">Guarantor Relation</span>
+                <div class="position-relative">
+                  <input type="text" class="form-control input-item" id="new-religion" placeholder="Enter new relation here"
+                    aria-label="Enter new relation here" style="width: 286px" />
+                  <button class="btn btn-inside">Add to List</button>
+                </div>
+              </div>
+              <div class="border-color radius-4">
+                <div class="bg-greyHeader p-3 d-flex justify-content-between align-items-center">
+                  <p class="f-500 f-13 lh-17 color-greyBlueheader">Relation</p>
+                  <p class="f-500 f-13 lh-17 color-greyBlueheader">Actions</p>
+                </div>
+                <div class="p-3 d-flex justify-content-between align-items-center border-color">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="relation" id="relation-father" value="hindu"
+                      checked />
+                    <label class="form-check-label" for="relation-father">
+                      Father
+                    </label>
+                  </div>
+                  <img src="images/delete_red.svg" alt="delete button" class="pointer delete" />
+                </div>
+                <div class="p-3 d-flex justify-content-between align-items-center border-color">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="relation" id="relation-mother" value="christian" />
+                    <label class="form-check-label" for="relation-mother">
+                      Mother
+                    </label>
+                  </div>
+                  <img src="images/delete_red.svg" alt="delete button" class="pointer delete" />
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- ADD GUARANTOR RELATION POPUP END -->
 
     <!-- JavaScript -->
     <script type="text/javascript" src="js/jquery.min.js"></script>

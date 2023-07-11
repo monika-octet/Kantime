@@ -1312,6 +1312,7 @@ span.client-status.recent-due {
 
 .outer {
     position: relative;
+    overflow: hidden;
 }
 
 .outer table td {
@@ -1942,4 +1943,37 @@ vertical-align: top;
         z-index: 33;
     }
 
-    
+    .client-status-table.table thead th {
+       
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        
+       
+      }
+    .client-status-table.table thead th:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 2;
+      }
+
+    .client-status-table.table thead th:last-child {
+        position: sticky;
+        right: 0;
+        z-index: 2;
+      }
+
+    .client-status-table.table tbody th {
+        position: sticky;
+        left: 0;
+        background: white;
+        z-index: 1;
+      }
+
+
+      .client-status-table td:last-child {
+       position: absolute;
+       right: 14px;
+       /* top: 35px; */
+       height: 60px;
+      }
