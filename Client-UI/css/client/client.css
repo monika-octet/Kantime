@@ -1968,6 +1968,8 @@ vertical-align: top;
         background: white;
         z-index: 1;
       }
+
+      
       .modal-backdrop {
         display: none;
       }
