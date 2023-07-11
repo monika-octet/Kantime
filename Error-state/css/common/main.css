@@ -504,6 +504,7 @@ item:active {
     line-height: 16px;
     letter-spacing: 0.01em;
     /* color: #181C32; */
+    white-space: normal;
 
 }
 
