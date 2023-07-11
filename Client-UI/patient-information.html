@@ -1837,7 +1837,7 @@
                                         <div class="col-4 mb-20">
                                             <div class="d-flex justify-content-between">
                                                 <label class="label" for="hospital-name">Hospital</label>
-                                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#"
+                                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-hospital"
                                                     class="link-blue">Add</a>
                                             </div>
 
@@ -7136,6 +7136,219 @@
         </div>
     </div>
     <!-- ADD NEW HOSPITAL -->
+      <!-- HOSPITAL LIST POPUP -->
+  <div class="modal" tabindex="-1" id="add-hospital">
+    <div class="modal-dialog custom-modal-2  modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">Hospital List</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+
+
+          <div class="col-4 mb-20">
+            <label class="label" for="hospital-list-location">Location</label>
+            <select class="single-select input-item" aria-label="location" id="hospital-list-location">
+              <option class="d-none" disabled selected>Select</option>
+              <option value="1">List 1</option>
+              <option value="2">List 2</option>
+              <option value="3">List 3</option>
+            </select>
+
+          </div>
+
+
+          <div>
+            <div class="d-flex gap-10 align-items-center mb-15">
+              <p class="color-greyScale f-500 f-13 lh-17">
+                Hospital
+              </p>
+              <div class="d-flex">
+                <img src="images/plus-icon.svg" alt="plus sign">
+                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-new-hospital-details"
+                  class="text-decoration-none f-600 f-13 lh-17">Add new</a>
+              </div>
+            </div>
+            <table class="table table-type-1 mt-20" id="additional-pharmacy-add-hospital-table">
+              <thead>
+                <tr>
+                  <th>
+                    Hospital Name
+                  </th>
+                  <th>Contact Name</th>
+                  <th>Phone</th>
+                  <th>Fax</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>
+                    Christian Medical College
+                  </td>
+                  <td>(236) 548-8556</td>
+                  <td>(236) 548-8556</td>
+                  <td>(236) 548-8556</td>
+                  <td>
+                    <div class="d-flex gap-10">
+                      <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                      <button type="button" class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                        data-bs-toggle="modal" data-bs-target="">
+                        <img src="images/edit-icon.svg" alt="edit">
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    Christian Medical College
+                  </td>
+                  <td>(236) 548-8556</td>
+                  <td>(236) 548-8556</td>
+                  <td>(236) 548-8556</td>
+                  <td>
+                    <div class="d-flex gap-10">
+                      <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                      <button type="button" class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                        data-bs-toggle="modal" data-bs-target="">
+                        <img src="images/edit-icon.svg" alt="edit">
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+
+                <tr>
+                  <td>
+                    Christian Medical College
+                  </td>
+                  <td>(236) 548-8556</td>
+                  <td>(236) 548-8556</td>
+                  <td>(236) 548-8556</td>
+                  <td>
+                    <div class="d-flex gap-10">
+                      <img src="images/delete_red.svg" alt="delete button" class="pointer delete">
+                      <button type="button" class="btn table-btn-icon d-flex justify-content-center align-items-center"
+                        data-bs-toggle="modal" data-bs-target="">
+                        <img src="images/edit-icon.svg" alt="edit">
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+
+
+
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ADD NEW HOSPITAL LIST DETAILS -->
+  <div class="modal" tabindex="-1" id="add-new-hospital-details">
+    <div class="modal-dialog custom-modal-5  modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">Add New Hospital </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="row col-12">
+            <div class="col-6 mb-20">
+              <label class="label" for="add-new-hospital-name">Hospital name</label>
+              <input type="text" class="form-control input-item" id="add-new-hospital-name" placeholder="Enter"
+                aria-label="Name">
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="add-new-hospital-contact">Contact Name</label>
+              <input type="text" class="form-control input-item" id="add-new-hospital-contact" placeholder="Enter"
+                aria-label="Phone">
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="add-new-hospital-address-1">Address 1</label>
+              <input type="text" class="form-control input-item" id="add-new-hospital-address-1" placeholder="Enter"
+                aria-label="address">
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="add-new-hospital-address-2">Address 2</label>
+              <input type="text" class="form-control input-item" id="add-new-hospital-address-2" placeholder="Enter"
+                aria-label="address">
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="add-new-hospital-email">Email</label>
+              <input type="text" class="form-control input-item" id="add-new-hospital-email" placeholder="Enter"
+                aria-label="Email">
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="add-new-hospital-phone">Phone(With Extension Number)</label>
+              <input type="text" class="form-control input-item" id="add-new-hospital-phone" placeholder="Enter"
+                aria-label="phone">
+            </div>
+
+            <div class="col-6">
+              <label class="label" for="add-new-hospital-location">Location</label>
+              <select class="single-select input-item" aria-label="location" id="add-new-hospital-location">
+                <option class="d-none" disabled selected>Select</option>
+                <option value="1">List 1</option>
+                <option value="2">List 2</option>
+                <option value="3">List 3</option>
+              </select>
+
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="add-new-hospital-fax">Fax</label>
+              <input type="text" class="form-control input-item" id="add-new-hospital-fax" placeholder="Enter"
+                aria-label="fax">
+            </div>
+
+            <div class="col-6 d-flex gap-10 ">
+              <div class="">
+                <label class="label" for="add-new-hospital-zip">Zip</label>
+                <input type="text" class="form-control input-item" id="add-new-hospital-zip" placeholder="Enter"
+                  aria-label="zip">
+              </div>
+              <div class="">
+                <label class="label" for="add-new-hospital-city">City</label>
+                <input type="text" class="form-control input-item" id="add-new-hospital-city" placeholder="Enter"
+                  aria-label="city">
+              </div>
+            </div>
+
+            <div class="col-6">
+              <label class="label" for="add-new-hospital-state">State</label>
+              <input type="text" class="form-control input-item" id="add-new-hospital-state" placeholder="Enter"
+                aria-label="state">
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- HOSPITAL LIST POPUP END -->
     <!-- add-hospital-details -->
 
     <div class="modal" tabindex="-1" id="add-hospital-details">
@@ -7251,7 +7464,7 @@
                             <div class="col-6 mb-20">
                                 <div class="d-flex justify-content-between">
                                     <label class="label" for="add-new-emergency-contact-realtion">Relation</label>
-                                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#"
+                                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add-rela"
                                         class="link-blue">Add</a>
                                 </div>
                                 <select class="single-select input-item" aria-label="Default select example"
@@ -10310,6 +10523,643 @@
     
       <!-- ADD GUARANTOR RELATION POPUP END -->
 
+        <!-- ADD NEW CATEGORY -->
+  <div class="modal" tabindex="-1" id="physician-category">
+    <div class="modal-dialog custom-modal-3 modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">Add New Category</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex flex-column mb-1">
+            <label class="label add-text" for="add-new-category">Category</label>
+            <input type="text" class="form-control input-item" id="add-new-category" placeholder="Enter new category"
+              aria-label="new category" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADD NEW CATEGORY END -->
+
+  <!-- ADD NEW SPECIALIZATION -->
+  <!-- physician-specialization -->
+  <div class="modal" tabindex="-1" id="physician-specialization">
+    <div class="modal-dialog custom-modal-3 modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">
+            Add New Specialization
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex flex-column mb-1">
+            <label class="label add-text" for="add-new-specialization">Specialization</label>
+            <input type="text" class="form-control input-item" id="add-new-specialization"
+              placeholder="Enter new Specialization" aria-label="new Specialization" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADD NEW SPECIALIZATION END -->
+
+  <!-- ORDER DELIVERY METHOD -->
+  <div class="modal" tabindex="-1" id="add-order-delivery">
+    <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">
+            Order Delivery Method
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="add-text">New delivery Method</span>
+            <div class="position-relative">
+              <input type="text" class="form-control input-item" id="new-language" placeholder="Enter new relation here"
+                aria-label="Enter new Language here" style="width: 286px" />
+              <button class="btn btn-inside">Add to List</button>
+            </div>
+          </div>
+          <div class="border-color radius-4">
+            <div class="bg-greyHeader p-3 d-flex justify-content-between align-items-center">
+              <p class="f-500 f-13 lh-17 color-greyBlueheader">Relation</p>
+              <p class="f-500 f-13 lh-17 color-greyBlueheader">Actions</p>
+            </div>
+            <div class="p-3 d-flex justify-content-between align-items-center border-color">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="order delivery" id="order-delivery-fax" value="Fax"
+                  checked />
+                <label class="form-check-label" for="order-delivery-fax">
+                  Fax
+                </label>
+              </div>
+              <img src="images/delete_red.svg" alt="delete button" class="pointer delete" />
+            </div>
+            <div class="p-3 d-flex justify-content-between align-items-center border-color">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="order delivery" id="order-delivery-email"
+                  value="Email" />
+                <label class="form-check-label" for="order-delivery-email">
+                  Email
+                </label>
+              </div>
+              <img src="images/delete_red.svg" alt="delete button" class="pointer delete" />
+            </div>
+
+            <div class="p-3 d-flex justify-content-between align-items-center border-color">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="order delivery" id="order-delivery-mail"
+                  value="Mail" />
+                <label class="form-check-label" for="order-delivery-mail">
+                  Mail
+                </label>
+              </div>
+              <img src="images/delete_red.svg" alt="delete button" class="pointer delete" />
+            </div>
+
+            <div class="p-3 d-flex justify-content-between align-items-center border-color">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="order delivery" id="order-delivery-hand-carry"
+                  value="hand carry" />
+                <label class="form-check-label" for="order-delivery-hand-carry">
+                  Hand carry
+                </label>
+              </div>
+              <img src="images/delete_red.svg" alt="delete button" class="pointer delete" />
+            </div>
+
+            <div class="p-3 d-flex justify-content-between align-items-center border-color">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="order delivery" id="order-delivery-special-fax"
+                  value="special fax" />
+                <label class="form-check-label" for="order-delivery-special-fax">
+                  Special Fax
+                </label>
+              </div>
+              <img src="images/delete_red.svg" alt="delete button" class="pointer delete" />
+            </div>
+
+            <div class="p-3 d-flex justify-content-between align-items-center border-color">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="order delivery" id="order-delivery-USPS"
+                  value="USPS" />
+                <label class="form-check-label" for="order-delivery-USPS">
+                  USPS
+                </label>
+              </div>
+              <img src="images/delete_red.svg" alt="delete button" class="pointer delete" />
+            </div>
+
+            <div class="p-3 d-flex justify-content-between align-items-center border-color">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="order delivery" id="order-delivery-suture-sign"
+                  value="suture sign" />
+                <label class="form-check-label" for="order-delivery-suture-sign">
+                  Suture Sign
+                </label>
+              </div>
+              <img src="images/delete_red.svg" alt="delete button" class="pointer delete" />
+            </div>
+
+            <div class="p-3 d-flex justify-content-between align-items-center border-color">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="order delivery" id="order-delivery-other"
+                  value="other" />
+                <label class="form-check-label" for="order-delivery-other">
+                  Other
+                </label>
+              </div>
+              <img src="images/delete_red.svg" alt="delete button" class="pointer delete" />
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ORDER DELIVERY METHOD END -->
+
+  <!-- ADD PHYSICIANS CONTACT -->
+  <div class="modal" tabindex="-1" id="add-physician-contact">
+    <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+      <div class="modal-content">
+        <div iv class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">
+            Add Physician Contact
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-20">
+            <span class="text-title">Physician : </span>
+            <span class="text-description">Abastillas,Rento</span>
+          </div>
+          <div class="">
+            <div class="row col-12">
+              <div class="col-6 mb-20">
+                <label class="label" for="add-physician-title">Title</label>
+                <select class="single-select input-item" aria-label="Title" id="add-physician-title">
+                  <option class="d-none" disabled selected>Select</option>
+                  <option value="1">List 1</option>
+                  <option value="2">List 2</option>
+                  <option value="3">List 3</option>
+                </select>
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="add-physician-designation">Designation</label>
+                <input type="text" class="form-control input-item" id="add-physician-designation" placeholder="Enter"
+                  aria-label="designation" />
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="f-500 f-14 lh-19" for="add-physician-first-name">First name</label>
+                <div class="input-group custom-dropdown">
+                  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Mr
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">Mr</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Mrs</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Ms</a>
+                    </li>
+                  </ul>
+                  <input type="text" class="form-control input-item" id="add-physician-first-name"
+                    placeholder="Enter first name" aria-label="" />
+                </div>
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="add-physician-last-name">Last Name</label>
+                <input type="text" class="form-control input-item" id="add-physician-last-name" placeholder="Enter"
+                  aria-label="last name" />
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="add-physician-phone">Phone (With Extension Number)</label>
+                <select class="single-select input-item" aria-label="phone" id="add-physician-phone">
+                  <option class="d-none" disabled selected>Select</option>
+                  <option value="1">List 1</option>
+                  <option value="2">List 2</option>
+                  <option value="3">List 3</option>
+                </select>
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="add-physician-cell">Cell</label>
+                <input type="text" class="form-control input-item" id="add-physician-cell" placeholder="Enter"
+                  aria-label="Cell" />
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="add-physician-sales">Sales Person/Marketer</label>
+                <select class="single-select input-item" aria-label="sales" id="add-physician-sales">
+                  <option class="d-none" disabled selected>Select</option>
+                  <option value="1">List 1</option>
+                  <option value="2">List 2</option>
+                  <option value="3">List 3</option>
+                </select>
+              </div>
+
+              <div class="mb-20">
+                <label class="form-check-label mb-2" for="Volunteer">
+                  Initial Order
+                </label>
+                <div class="col-12 mb-20 bg-white border-color radius-4">
+                  <textarea name="" id="add-new-contact-physician" cols="" rows="8"
+                    class="input-textarea w-100 border-color border-bottom " placeholder="Type Here"></textarea>
+                  <div class="d-flex align-items-center gap-2 py-10 px-15 pointer" data-bs-toggle="modal"
+                    data-bs-target="#quick-notes">
+                    <img src="images/notes.svg" alt="notes icon">
+                    <p class="f-500 f-13 lh-17">Open Quick Notes List</p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADD PHYSICIANS CONTACT END -->
+
+  <!-- ADD PHYSICIANS OFFICE -->
+
+  <div class="modal" tabindex="-1" id="add-physician-office">
+    <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+      <div class="modal-content">
+        <div iv class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">
+            Add New Physician Office
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <div class="row col-12">
+              <div class="col-6 mb-20">
+                <label class="label" for="physician-office-sales-person">Sales Person</label>
+                <input type="text" class="form-control input-item" id="physician-office-sales-person"
+                  placeholder="Enter " aria-label="Sales Person" />
+              </div>
+            </div>
+            <div class="row col-12">
+              <div class="col-6">
+                <label class="label" for="physician-office-location">Location</label>
+                <select class="single-select input-item" aria-label="location" id="physician-office-location">
+                  <option class="d-none" disabled selected>Select</option>
+                  <option value="1">List 1</option>
+                  <option value="2">List 2</option>
+                  <option value="3">List 3</option>
+                </select>
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="physician-office-name">Office Name</label>
+                <input type="text" class="form-control input-item" id="physician-office-name" placeholder="Enter "
+                  aria-label="Office name" />
+              </div>
+
+              <div class="col-6">
+                <label class="label" for="physician-office-phone">Phone (With Extension Number)</label>
+                <select class="single-select input-item" aria-label="Phone" id="physician-office-phone">
+                  <option class="d-none" disabled selected>Select</option>
+                  <option value="1">List 1</option>
+                  <option value="2">List 2</option>
+                  <option value="3">List 3</option>
+                </select>
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="physician-office-email">Email</label>
+                <input type="email" class="form-control input-item" id="physician-office-email" placeholder="Enter "
+                  aria-label="Email" />
+              </div>
+
+              <div class="col-6">
+                <label class="label" for="physician-office-address-1">Address 1</label>
+                <select class="single-select input-item" aria-label="address" id="physician-office-address-1">
+                  <option class="d-none" disabled selected>Select</option>
+                  <option value="1">List 1</option>
+                  <option value="2">List 2</option>
+                  <option value="3">List 3</option>
+                </select>
+              </div>
+
+              <div class="col-6 mb-20">
+                <label class="label" for="physician-office-address-2">Address 2</label>
+                <input type="text" class="form-control input-item" id="physician-office-address-2" placeholder="Enter "
+                  aria-label="address" />
+              </div>
+
+              <div class="col-6 d-flex gap-10">
+                <div class="">
+                  <label class="label" for="physician-office-zip">Zip</label>
+                  <input type="text" class="form-control input-item" id="physician-office-zip" placeholder="Enter"
+                    aria-label="zip" />
+                </div>
+                <div class="">
+                  <label class="label" for="physician-office-city">City</label>
+                  <input type="text" class="form-control input-item" id="physician-office-city" placeholder="Enter"
+                    aria-label="city" />
+                </div>
+              </div>
+
+              <div class="col-6">
+                <label class="label" for="physician-office-state">State</label>
+                <input type="text" class="form-control input-item" id="physician-office-state" placeholder="Enter"
+                  aria-label="state" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ADD PHYSICIANS OFFICE END -->
+
+  <!-- ATTACH TO OFFICE POPUP -->
+  <!-- data-bs-toggle="modal" data-bs-target="#attach-to-office" -->
+  <div class="modal" tabindex="-1" id="attach-to-office">
+    <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+      <div class="modal-content">
+        <div iv class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">Attach To Office</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row col-12">
+            <div class="col-6 mb-20">
+              <label class="label" for="attach-to-office-field">Office</label>
+              <select class="single-select input-item" aria-label="location" id="attach-to-office-field">
+                <option class="d-none" disabled selected>Select</option>
+                <option value="1">List 1</option>
+                <option value="2">List 2</option>
+                <option value="3">List 3</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row col-12">
+            <div class="col-6 mb-20">
+              <label class="label" for="attach-to-office-name">Office Name</label>
+              <select class="single-select input-item" aria-label="office name" id="attach-to-office-name">
+                <option class="d-none" disabled selected>Select</option>
+                <option value="1">List 1</option>
+                <option value="2">List 2</option>
+                <option value="3">List 3</option>
+              </select>
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="attach-to-office-state">State</label>
+              <input type="text" class="form-control input-item" id="attach-to-office-state" placeholder="Enter"
+                aria-label="state" />
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="attach-to-office-phone">Phone (With Extension Number)</label>
+              <select class="single-select input-item" aria-label="phone" id="attach-to-office-phone">
+                <option class="d-none" disabled selected>Select</option>
+                <option value="1">List 1</option>
+                <option value="2">List 2</option>
+                <option value="3">List 3</option>
+              </select>
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="attach-to-office-fax">Fax</label>
+              <input type="text" class="form-control input-item" id="attach-to-office-fax" placeholder="Enter"
+                aria-label="fax" />
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="attach-to-office-address-1">Address 1
+              </label>
+              <select class="single-select input-item" aria-label="address " id="attach-to-office-address-1">
+                <option class="d-none" disabled selected>Select</option>
+                <option value="1">List 1</option>
+                <option value="2">List 2</option>
+                <option value="3">List 3</option>
+              </select>
+            </div>
+
+            <div class="col-6 mb-20">
+              <label class="label" for="attach-to-office-address-2">Address 2</label>
+              <input type="text" class="form-control input-item" id="attach-to-office-address-2" placeholder="Enter"
+                aria-label="address" />
+            </div>
+
+            <div class="col-6 d-flex gap-10">
+              <div class="">
+                <label class="label" for="attach-to-office-zip">Zip</label>
+                <input type="text" class="form-control input-item" id="attach-to-office-zip" placeholder="Enter"
+                  aria-label="zip" />
+              </div>
+              <div class="">
+                <label class="label" for="attach-to-office-city">City</label>
+                <input type="text" class="form-control input-item" id="attach-to-office-city" placeholder="Enter"
+                  aria-label="city" />
+              </div>
+            </div>
+
+            <div class="col-6">
+              <label class="label" for="attach-to-office-email">Email</label>
+              <input type="email" class="form-control input-item" id="attach-to-office-email" placeholder="Enter"
+                aria-label="email" />
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Save</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ATTACH TO OFFICE POPUP END -->
+
+  <div class="modal" tabindex="-1" id="quick-notes">
+    <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">
+            Quick Notes
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex justify-content-end mb-15">
+            <button class="btn btn-tertiary" data-bs-toggle="modal" data-bs-target="#intake-notes-add-quick-notes">Add
+              New</button>
+          </div>
+          <div class="row col-12">
+            <div class="col-6 mb-20">
+              <label class="f-500 f-14 lh-19 mb-2" for="intake-notes-location">Location</label>
+              <select class="single-select input-item" aria-label="location" id="intake-notes-location">
+                <option class="d-none" disabled selected>Select</option>
+                <option value="1">List 1</option>
+                <option value="2">List 2</option>
+                <option value="3">List 3</option>
+              </select>
+            </div>
+
+            <div class="col-6 search mb-20">
+              <label class="f-500 f-14 lh-19 mb-2" for="">Search</label>
+              <input type="text" placeholder="Search" class="search-input w-100">
+              <img src="images/lens-dark.svg" alt="search lens" class="lens"
+                style="top: 34px !important; left: 18px !important">
+            </div>
+          </div>
+
+          <table class="table table-type-1 mt-10" id="add-quick-note-table">
+            <thead>
+              <tr>
+                <th class="d-flex">
+                  <input class="form-check-input" type="checkbox" value="" id=""><span>Title</span>
+                </th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td class="d-flex">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <div>
+                    <p>Title line goes here </p>
+                  </div>
+                </td>
+                <td>Description goes here</td>
+              </tr>
+
+              <tr>
+                <td class="d-flex">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <div>
+                    <p>Title line goes here </p>
+                  </div>
+                </td>
+                <td>Description goes here</td>
+              </tr>
+
+              <tr>
+                <td class="d-flex">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <div>
+                    <p>Title line goes here </p>
+                  </div>
+                </td>
+                <td>Description goes here</td>
+              </tr>
+
+              <tr>
+                <td class="d-flex">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <div>
+                    <p>Title line goes here </p>
+                  </div>
+                </td>
+                <td>Description goes here</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+
+
+
+        </div>
+        <div class="modal-footer">
+
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK NOTES POPUP END -->
+
+  <!-- QUICK NOTES SUB NOTES -->
+  <!-- intake-notes-add-quick-notes -->
+
+  <div class="modal" tabindex="-1" id="intake-notes-add-quick-notes">
+    <div class="modal-dialog custom-modal-1 modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-greyBlue">
+          <h5 class="modal-title Pinfo color-darkblue">
+            Add new quick notes
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="row col-12">
+            <div class="col-6 mb-20">
+              <label class="f-500 f-14 lh-19 mb-2" for="intake-quick-notes-location">Location</label>
+              <select class="single-select input-item" aria-label="location" id="intake-quick-notes-location">
+                <option class="d-none" disabled selected>Select</option>
+                <option value="1">List 1</option>
+                <option value="2">List 2</option>
+                <option value="3">List 3</option>
+              </select>
+            </div>
+
+            <div class="col-4 mb-20">
+              <label class="label" for="intake-quick-notes-title">Title</label>
+              <input type="text" class="form-control input-item" id="intake-quick-notes-title" placeholder="Enter"
+                aria-label="quick notes">
+            </div>
+
+            <div class="col-12">
+              <label class="label" for="intake-quick-notes-description">Description</label>
+              <textarea name="" id="intake-quick-notes-description" cols="" rows="2" class="input-textarea w-100"
+                placeholder="Type Here"></textarea>
+            </div>
+
+          </div>
+
+
+
+
+
+        </div>
+        <div class="modal-footer">
+
+          <a href="#" class="btn btn-primary btn-modal-submit ms-3">Add</a>
+        </div>
+      </div>
+    </div>
+  </div>
       
 
     <!-- JavaScript -->
