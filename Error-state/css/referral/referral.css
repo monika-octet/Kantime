@@ -1447,3 +1447,11 @@ transition: all;
 .fit-content-dropdown .dropdown-menu {
     min-width: max-content;
 }
+
+.modal-backdrop {
+    display: none;
+  }
+  
+  .modal {
+    background: rgba(0, 0, 0, 0.5);
+  }

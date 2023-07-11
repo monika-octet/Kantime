@@ -1312,7 +1312,6 @@ span.client-status.recent-due {
 
 .outer {
     position: relative;
-    overflow: hidden;
 }
 
 .outer table td {
@@ -1969,11 +1968,10 @@ vertical-align: top;
         background: white;
         z-index: 1;
       }
-
-
-      .client-status-table td:last-child {
-       position: absolute;
-       right: 14px;
-       /* top: 35px; */
-       height: 60px;
+      .modal-backdrop {
+        display: none;
+      }
+      
+      .modal {
+        background: rgba(0, 0, 0, 0.5);
       }
