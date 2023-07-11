@@ -115,7 +115,9 @@ h3 {
 .grid-4{
     grid-template-columns: repeat(4,1fr);
 }
-
+.grid-dropdown{
+    grid-template-columns: 20% auto;
+}
 
 .icon-container {
     display: flex;
@@ -1337,4 +1339,8 @@ padding: .375rem 0;
 
 .cutom-date-w{
     width: 125px;
+}
+
+.fit-content-dropdown .dropdown-menu {
+    min-width: max-content;
 }

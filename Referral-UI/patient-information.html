@@ -345,25 +345,15 @@
                       <div class="row col-12">
                         <div class="col-4 mb-20">
                           <label class="label" for="f-name-Pinfo">First name</label>
-                          <div class="input-group custom-dropdown">
-                            <button class="btn btn-outline-secondary dropdown-toggle" type="button"
-                              data-bs-toggle="dropdown" aria-expanded="false">
-                              Mr
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li>
-                                <a class="dropdown-item" href="#">Mr</a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">Mrs</a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">Ms</a>
-                              </li>
-                            </ul>
-                            <input type="text" class="form-control input-item" id="f-name-Pinfo"
-                              placeholder="Enter first name" aria-label="Text input with dropdown button" />
-                          </div>
+                          <div class="d-grid grid-dropdown fit-content-dropdown">
+                          <select class="single-select input-item" aria-label="Default select example" id="client-info">
+                            <option value="0" selected>Mr</option>
+                            <option value="1">Mrs</option>
+                            <option value="2">Ms</option>
+                          </select>
+                          <input type="text" placeholder="Search" class="search-input" id="f-name-Pinfo">
+                        </div>
+
                         </div>
 
                         <div class="col-4 mb-20">
@@ -472,9 +462,9 @@
                             <option class="d-none" disabled selected>
                               Select
                             </option>
-                            <option value="2">Agency 1</option>
+                            <option value="1">Agency 1</option>
                             <option value="2">Agency 2</option>
-                            <option value="2">Agency 3</option>
+                            <option value="3">Agency 3</option>
                           </select>
                         </div>
 
@@ -1012,7 +1002,8 @@
                         <div class="col-4 mb-20">
                           <label class="form-label" for="SOC-Ref-info">Requested SOC Date</label>
                           <div class="input-group">
-                            <input type="text" class="form-control input-item" name="dates" id="SOC-Ref-info" placeholder="Select" />
+                            <input type="text" class="form-control input-item" name="dates" id="SOC-Ref-info"
+                              placeholder="Select" />
                             <span class="input-group-text"><img src="images/Calendar.svg" /></span>
                           </div>
                         </div>
@@ -3950,7 +3941,8 @@
                 <div class="col-4"></div>
                 <div class="col-4 mb-20">
                   <div class="input-group">
-                    <input type="text" class="form-control input-item" name="dates" id="" placeholder="" value="01/02/1992">
+                    <input type="text" class="form-control input-item" name="dates" id="" placeholder=""
+                      value="01/02/1992">
                     <span class="input-group-text"><img src="images/Calendar.svg"></span>
                   </div>
                 </div>
@@ -4802,8 +4794,8 @@
             <div class="col-4 mb-20">
               <label class="form-label" for="non-admit-date">Date</label>
               <div class="input-group">
-                <input type="text" class="form-control input-item" name="dates" id="non-admit-date" placeholder="Select Date"
-                  value="01/20/1992">
+                <input type="text" class="form-control input-item" name="dates" id="non-admit-date"
+                  placeholder="Select Date" value="01/20/1992">
                 <span class="input-group-text"><img src="images/Calendar.svg"></span>
               </div>
             </div>
@@ -5789,7 +5781,8 @@
                 <div class="col-3">
                   <label class="form-label" for="intake-ref-info-1">Intake Date</label>
                   <div class="input-group">
-                    <input type="text" class="form-control input-item" name="dates" id="intake-ref-info-1" placeholder="Select" />
+                    <input type="text" class="form-control input-item" name="dates" id="intake-ref-info-1"
+                      placeholder="Select" />
                     <span class="input-group-text"><img src="images/Calendar.svg" /></span>
                   </div>
                 </div>
@@ -8001,7 +7994,8 @@
                   <div class="col-6 mb-20">
                     <label class="form-label" for="completed-on">Completed on</label>
                     <div class="input-group">
-                      <input type="text" class="form-control input-item" name="dates" id="completed-on" placeholder="01/02/1998">
+                      <input type="text" class="form-control input-item" name="dates" id="completed-on"
+                        placeholder="01/02/1998">
                       <span class="input-group-text"><img src="images/Calendar.svg"></span>
                     </div>
                   </div>
@@ -8009,7 +8003,8 @@
                   <div class="col-6 mb-20">
                     <label class="form-label" for="last-followed">Last Followed on</label>
                     <div class="input-group">
-                      <input type="text" class="form-control input-item" name="dates" id="last-followed" placeholder="01/02/1998">
+                      <input type="text" class="form-control input-item" name="dates" id="last-followed"
+                        placeholder="01/02/1998">
                       <span class="input-group-text"><img src="images/Calendar.svg"></span>
                     </div>
                   </div>
@@ -9012,8 +9007,7 @@
           <div class="row col-12">
             <div class="col-12 ">
               <label class="label" for="non-admit-reason">Non Admit Reason</label>
-              <input type="text" class="form-control input-item" id="non-admit-reason" placeholder=""
-                aria-label="">
+              <input type="text" class="form-control input-item" id="non-admit-reason" placeholder="" aria-label="">
             </div>
           </div>
 

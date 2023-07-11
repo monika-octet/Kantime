@@ -115,7 +115,9 @@ h3 {
 .grid-4{
     grid-template-columns: repeat(4,1fr);
 }
-
+.grid-dropdown{
+    grid-template-columns: 25% auto;
+}
 
 .icon-container {
     display: flex;
@@ -1440,4 +1442,8 @@ transition: all;
 .accordion-button:not(.collapsed)::after {
    
     transform: rotate(90deg);
+}
+
+.fit-content-dropdown .dropdown-menu {
+    min-width: max-content;
 }

@@ -119,6 +119,9 @@ h3 {
     grid-template-columns: repeat(4, 1fr);
 }
 
+.grid-dropdown{
+    grid-template-columns: 25% auto;
+}
 
 .icon-container {
     display: flex;
@@ -1938,3 +1941,5 @@ vertical-align: top;
     .client-status-table .dropdown-menu{
         z-index: 33;
     }
+
+    

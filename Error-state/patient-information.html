@@ -502,25 +502,15 @@
                       <div class="row col-12">
                         <div class="col-4 mb-20">
                           <label class="label" for="f-name-Pinfo">First name</label>
-                          <div class="input-group custom-dropdown">
-                            <button class="btn btn-outline-secondary dropdown-toggle" type="button"
-                              data-bs-toggle="dropdown" aria-expanded="false">
-                              Mr
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li>
-                                <a class="dropdown-item" href="#">Mr</a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">Mrs</a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">Ms</a>
-                              </li>
-                            </ul>
-                            <input type="text" class="form-control input-item" id="f-name-Pinfo"
-                              placeholder="Enter first name" aria-label="Text input with dropdown button" />
-                          </div>
+                          <div class="d-grid grid-dropdown fit-content-dropdown">
+                          <select class="single-select input-item" aria-label="Default select example" id="client-info">
+                            <option value="0" selected>Mr</option>
+                            <option value="1">Mrs</option>
+                            <option value="2">Ms</option>
+                          </select>
+                          <input type="text" placeholder="Search" class="search-input" id="f-name-Pinfo">
+                        </div>
+
                         </div>
 
                         <div class="col-4 mb-20">
