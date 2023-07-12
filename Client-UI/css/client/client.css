@@ -1956,6 +1956,11 @@ vertical-align: top;
         top: 0;
         z-index: 1;
       }
+       #treatment-address-table.table thead th:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 2;
+      }
     .client-status-table.table thead th:first-child {
         position: sticky;
         left: 0;
