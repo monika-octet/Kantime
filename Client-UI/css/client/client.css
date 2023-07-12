@@ -1950,6 +1950,12 @@ vertical-align: top;
         
        
       }
+
+      #treatment-address-table.table thead th{
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
     .client-status-table.table thead th:first-child {
         position: sticky;
         left: 0;
